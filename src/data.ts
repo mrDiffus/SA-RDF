@@ -81,10 +81,16 @@ function normalizeEquipmentClass(rawType: string | undefined, type: string): str
   return 'Equipment';
 }
 
+function resolveDataPath(path: string): string {
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${normalizedPath}`;
+}
+
 async function fetchGraphFromFile<T>(path: string): Promise<T[]> {
-  const response = await fetch(path);
+  const resolvedPath = resolveDataPath(path);
+  const response = await fetch(resolvedPath);
   if (!response.ok) {
-    throw new Error(`Failed to fetch ${path}: ${response.status} ${response.statusText}`);
+    throw new Error(`Failed to fetch ${resolvedPath}: ${response.status} ${response.statusText}`);
   }
   const data: RawGraphContainer<T> = await response.json();
   return asArray(data['@graph']);
@@ -119,7 +125,7 @@ function mapFeature(raw: RawFeature) {
 }
 
 export async function fetchSpells(): Promise<Spell[]> {
-  const response = await fetch('/data/spells.json');
+  const response = await fetch(resolveDataPath('/data/spells.json'));
   const data = await response.json();
   const spellList = data['@graph'].find((g: any) => g['@id'] === 'sa:spellList');
 
@@ -140,7 +146,7 @@ export async function fetchSpells(): Promise<Spell[]> {
 }
 
 export async function fetchArchetypes(): Promise<Archetype[]> {
-  const response = await fetch('/data/archetypes.json');
+  const response = await fetch(resolveDataPath('/data/archetypes.json'));
   const data: RawGraphContainer<RawArchetype> = await response.json();
 
   if (Array.isArray(data['@graph']) && data['@graph'].length > 0) {
@@ -162,7 +168,7 @@ export async function fetchArchetypes(): Promise<Archetype[]> {
 }
 
 export async function fetchRaces(): Promise<Race[]> {
-  const response = await fetch('/data/races.json');
+  const response = await fetch(resolveDataPath('/data/races.json'));
   const data: RawGraphContainer<RawRace> = await response.json();
 
   const overviewRaces = asArray(data['@graph']);

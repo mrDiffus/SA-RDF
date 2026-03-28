@@ -36,11 +36,16 @@ interface SettingData {
   organizations: Organization[];
 }
 
+function resolveDataPath(path: string): string {
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${normalizedPath}`;
+}
+
 async function fetchSettingData(): Promise<SettingData> {
   const [arrur, arcech, armanitech] = await Promise.all([
-    fetch('/data/Setting/Planets/Arrur/arrur.json').then(r => r.json()),
-    fetch('/data/Setting/Planets/Arcech/arcech.json').then(r => r.json()),
-    fetch('/data/Setting/Organizations/Armanitech/armanitech.json').then(r => r.json()),
+    fetch(resolveDataPath('/data/Setting/Planets/Arrur/arrur.json')).then(r => r.json()),
+    fetch(resolveDataPath('/data/Setting/Planets/Arcech/arcech.json')).then(r => r.json()),
+    fetch(resolveDataPath('/data/Setting/Organizations/Armanitech/armanitech.json')).then(r => r.json()),
   ]);
 
   const toPlanet = (raw: Record<string, unknown>, placesPath?: string): Planet => {
@@ -71,7 +76,7 @@ async function fetchSettingData(): Promise<SettingData> {
   });
 
   return {
-    planets: [toPlanet(arrur, '/data/Setting/Planets/Arrur/Places/'), toPlanet(arcech)],
+    planets: [toPlanet(arrur, resolveDataPath('/data/Setting/Planets/Arrur/Places/')), toPlanet(arcech)],
     organizations: [toOrg(armanitech)],
   };
 }
