@@ -35,6 +35,8 @@ jobs:
         run: npm test
 
       - name: Build site
+        env:
+          VITE_CUSTOM_DOMAIN: stellar-arcana.org
         run: npm run build
 
       - name: Upload Pages artifact
