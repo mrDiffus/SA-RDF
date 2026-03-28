@@ -22,6 +22,14 @@ export default defineConfig(({mode}) => {
   return {
     base,
     plugins: [react(), tailwindcss()],
+    build: {
+      rollupOptions: {
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          notFound: path.resolve(__dirname, '404.html'),
+        },
+      },
+    },
     test: {
       environment: 'node',
     },
