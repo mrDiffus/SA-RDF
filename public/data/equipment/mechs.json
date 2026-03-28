@@ -1,0 +1,437 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:PoweredArmorList",
+      "@type": "sa:Equipment",
+      "rdfs:label": "Power Armor",
+      "sa:items": [
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Tactical armor-plated exoskeleton, TAEX",
+          "sa:description": "A mass-produced full exosuit that comes with integrated communications gear, camera that broadcasts on an encrypted network, a Friend/Foe indicator that displays in the heads-up display on other armors on the same network. A favorite of Ares company elite troops.",
+          "sa:size": "medium",
+          "sa:armorClass": 16,
+          "sa:maxDexterity": 2,
+          "sa:damageAbsorption": 15,
+          "sa:hardness": 4,
+          "sa:hardpoints": [
+            "1 shoulder"
+          ],
+          "sa:strengthScore": 14,
+          "sa:dexterityScore": 14,
+          "sa:baseSpeed": 30,
+          "sa:weight": 350,
+          "sa:cost": 25000,
+          "sa:culture": "Terran"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Shevarash initiate power armor",
+          "sa:description": "The armors given to Shevaashi when they leave the folly to go on their quest to prove themselves to the order",
+          "sa:size": "Medium",
+          "sa:armorClass": 14,
+          "sa:maxDexterity": 2,
+          "sa:damageAbsorption": 10,
+          "sa:hardness": 3,
+          "sa:hardpoints": [
+            "1 arm"
+          ],
+          "sa:strengthScore": 14,
+          "sa:dexterityScore": 14,
+          "sa:baseSpeed": 30,
+          "sa:weight": 300,
+          "sa:specialProperties": "Wearing one of these when not a member of Shevarash's crusade will cause the tiny spirit of vengeance imbued in the armor to start heating the armor until it becomes unbearable for the user. Fatigue after 1 minute, 1d6 fire damage every round after.",
+          "sa:culture": "Elven"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Ballista",
+          "sa:description": "Long-range support armor capable of supporting several heavy weapons.",
+          "sa:size": "Medium",
+          "sa:armorClass": 16,
+          "sa:damageAbsorption": 40,
+          "sa:hardness": 8,
+          "sa:hardpoints": [
+            "2 arms",
+            "2 shoulders"
+          ],
+          "sa:strengthScore": 10,
+          "sa:dexterityScore": 14,
+          "sa:charismaModifier": 2,
+          "sa:baseSpeed": 20,
+          "sa:weight": 900,
+          "sa:specialProperties": "Double range on all mounted system weapons. Adds 200 pounds to carry capacity for weapons and ammunition",
+          "sa:cost": 499999,
+          "sa:powerLevel": 6,
+          "sa:culture": "Terran"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Breacher",
+          "sa:description": "Heavy armored suit intended for breaching actions. Left arm comes with boarding shield (already included in armor score).",
+          "sa:size": "Medium",
+          "sa:armorClass": 19,
+          "sa:maxDexterity": 2,
+          "sa:damageAbsorption": 60,
+          "sa:hardness": 12,
+          "sa:hardpoints": [
+            "1 arm",
+            "1 shoulder"
+          ],
+          "sa:strengthScore": 18,
+          "sa:dexterityScore": 14,
+          "sa:charismaModifier": 4,
+          "sa:baseSpeed": 40,
+          "sa:weight": 1100,
+          "sa:cost": 449000,
+          "sa:powerLevel": 6,
+          "sa:culture": "Terran"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Recon armor",
+          "sa:description": "Scout suit designed to enable the wearer to move quickly from objective to objective while carrying a significant amount of weaponry.",
+          "sa:size": "Medium",
+          "sa:armorClass": 16,
+          "sa:maxDexterity": 3,
+          "sa:damageAbsorption": 40,
+          "sa:hardness": 10,
+          "sa:hardpoints": [
+            "2 arms"
+          ],
+          "sa:strengthScore": 16,
+          "sa:dexterityScore": 18,
+          "sa:charismaModifier": 2,
+          "sa:baseSpeed": 50,
+          "sa:weight": 750,
+          "sa:cost": 389000,
+          "sa:powerLevel": 6,
+          "sa:culture": "Terran"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Sy-tel-quessir",
+          "sa:description": "A scout suit that enables the user to move quickly and silently while blending into woodlands with little effort.",
+          "sa:size": "Medium",
+          "sa:armorClass": 15,
+          "sa:maxDexterity": 5,
+          "sa:damageAbsorption": 30,
+          "sa:hardness": 8,
+          "sa:hardpoints": [
+            "2 shoulder"
+          ],
+          "sa:strengthScore": 14,
+          "sa:dexterityScore": 18,
+          "sa:charismaModifier": 2,
+          "sa:baseSpeed": 60,
+          "sa:weight": 600,
+          "sa:specialProperties": "Gain advantage on stealth checks in wooded areas",
+          "sa:cost": 389000,
+          "sa:culture": "Elven"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Cormanthor",
+          "sa:description": "A magically fortified elven frontline armor designed to assist the wearer in avoiding most sustained fire.",
+          "sa:size": "Medium",
+          "sa:armorClass": 18,
+          "sa:maxDexterity": 4,
+          "sa:damageAbsorption": 50,
+          "sa:hardness": 8,
+          "sa:hardpoints": [
+            "1 arm",
+            "1 shoulder"
+          ],
+          "sa:strengthScore": 16,
+          "sa:dexterityScore": 16,
+          "sa:charismaModifier": 4,
+          "sa:baseSpeed": 40,
+          "sa:weight": 900,
+          "sa:specialProperties": "As long as you have absorb left, non-AOE attacks against you have a 20% miss chance and no single attacks can do more than 25 damage. Attacks that deal more than 150 damage are not affected by this ability (also GM fiat: a railgun mounted on a dreadnought-class spaceship should not be stopped). For this effect, burst attacks do not count as a single attack.",
+          "sa:cost": 449000,
+          "sa:culture": "Elven"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Solonor",
+          "sa:description": "Elven weapons platform capable of powering energy weapons from the surging magical energies bound in the armor.",
+          "sa:size": "Medium",
+          "sa:armorClass": 14,
+          "sa:maxDexterity": 4,
+          "sa:damageAbsorption": 20,
+          "sa:hardness": 5,
+          "sa:hardpoints": [
+            "2 shoulder"
+          ],
+          "sa:strengthScore": 16,
+          "sa:dexterityScore": 14,
+          "sa:charismaModifier": 2,
+          "sa:baseSpeed": 30,
+          "sa:weight": 650,
+          "sa:specialProperties": "Weapons that normally use power packs can be connected directly to the armor if they are elven-made. Energy weapons from other cultures can be adapted to use the armor as a power source by a DC 15 repair check. When the wearer takes damage and the armor is out of absorb, magical energies lash out, damaging nearby tiles and creatures within them for 2d6 energy damage. Roll 1d8 to determine which 5-foot square is targeted. DC 14 Reflex save to avoid.",
+          "sa:cost": 529000,
+          "sa:culture": "Elven"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Glaurach",
+          "sa:description": "Elven power armor made by elven warmages looking to perfect the application of destructive magic in warfare. Unlike most power armor, the additional absorb gained from this armor is not ablative plating but a magical shield that recharges after 8 continuous hours of non-use.",
+          "sa:size": "Medium",
+          "sa:armorClass": 16,
+          "sa:maxDexterity": 3,
+          "sa:damageAbsorption": 60,
+          "sa:hardness": 4,
+          "sa:hardpoints": [
+            "1 arm",
+            "1 shoulder"
+          ],
+          "sa:strengthScore": 16,
+          "sa:dexterityScore": 14,
+          "sa:charismaModifier": 2,
+          "sa:baseSpeed": 40,
+          "sa:weight": 700,
+          "sa:specialProperties": "Increases the DC of damaging spells cast by 1. Increases spellstrike damage done by wielded weapons from 1d4 per proficiency bonus to 1d6 per proficiency bonus. Spend a bonus action to move up to proficiency bonus points from absorb to spell point pool or from spell point pool to absorb. This cannot increase absorb or spell pool above its normal maximum.",
+          "sa:cost": 435000,
+          "sa:culture": "Elven"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Erevan",
+          "sa:description": "A lithe elven armor that cloaks the user in an illusion, hiding the wearer's true nature.",
+          "sa:size": "Medium",
+          "sa:armorClass": 13,
+          "sa:maxDexterity": 6,
+          "sa:damageAbsorption": 20,
+          "sa:hardness": 2,
+          "sa:hardpoints": [],
+          "sa:strengthScore": 10,
+          "sa:dexterityScore": 14,
+          "sa:charismaModifier": 2,
+          "sa:baseSpeed": 40,
+          "sa:weight": 450,
+          "sa:specialProperties": "Lets the user benefit from disguise self hiding the wearer and all his worn gear from casual inspection",
+          "sa:cost": 297000,
+          "sa:culture": "Elven"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Matriarch",
+          "sa:description": "Powerful 4-armed drow armor made by binding the essence of a deceased Draegloth, usually purchased from demonic powers by offering a powerful force for good in return.",
+          "sa:size": "Medium",
+          "sa:armorClass": 18,
+          "sa:maxDexterity": 3,
+          "sa:damageAbsorption": 60,
+          "sa:hardness": 10,
+          "sa:hardpoints": [
+            "4 arm",
+            "2 of which must mount melee weapons or use claw attacks"
+          ],
+          "sa:strengthScore": 18,
+          "sa:dexterityScore": 14,
+          "sa:charismaModifier": 4,
+          "sa:baseSpeed": 40,
+          "sa:weight": 1300,
+          "sa:specialProperties": "The armor sports two sets of powerful arms; the larger pair can only mount melee weapons. For anyone but the matron of a drow house favored by Lolth to wear this armor is seen as blasphemy by all of Lolth's faithful. Grants +1 DC on charm and domination spells cast by the wearer and 14 spell resistance or +4 to existing spell resistance. Integrated claw weapons deal 2d6 damage and have the finesse property.",
+          "sa:cost": 799000,
+          "sa:culture": "Drow"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Progeny",
+          "sa:description": "Powered armor usually awarded to promising young members of a house.",
+          "sa:size": "Medium",
+          "sa:armorClass": 14,
+          "sa:maxDexterity": 2,
+          "sa:damageAbsorption": 30,
+          "sa:hardness": 5,
+          "sa:hardpoints": [
+            "2 arm"
+          ],
+          "sa:strengthScore": 14,
+          "sa:dexterityScore": 14,
+          "sa:baseSpeed": 30,
+          "sa:weight": 700,
+          "sa:specialProperties": "Gain 1 vitality every time you deal damage to a target capable of feeling pain. You cannot increase your vitality over your maximum vitality.",
+          "sa:cost": 299000,
+          "sa:culture": "Drow"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Dominator",
+          "sa:description": "Powered armor given to the high-ranking enforcers of a house.",
+          "sa:size": "Medium",
+          "sa:armorClass": 15,
+          "sa:maxDexterity": 3,
+          "sa:damageAbsorption": 40,
+          "sa:hardness": 6,
+          "sa:hardpoints": [
+            "1 arm",
+            "1 shoulder",
+            "1 arm fixed with HF bladed whip"
+          ],
+          "sa:strengthScore": 16,
+          "sa:dexterityScore": 14,
+          "sa:baseSpeed": 30,
+          "sa:weight": 850,
+          "sa:specialProperties": "As a bonus action, the wearer can make a Charisma (Intimidation) check DC 15 and cause all targets within 15 feet to be shaken for 1 round when they deal wound damage with the mounted bladed whip.",
+          "sa:cost": 375000,
+          "sa:culture": "Drow"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Stalker",
+          "sa:description": "Powered armor that cloaks itself and the wearer in magical shadows.",
+          "sa:size": "Medium",
+          "sa:armorClass": 13,
+          "sa:maxDexterity": 6,
+          "sa:damageAbsorption": 20,
+          "sa:hardness": 3,
+          "sa:hardpoints": [
+            "1 arm"
+          ],
+          "sa:strengthScore": 14,
+          "sa:dexterityScore": 14,
+          "sa:charismaModifier": 2,
+          "sa:baseSpeed": 40,
+          "sa:weight": 500,
+          "sa:specialProperties": "As a bonus action, the wearer can hide in plain sight whenever they are in dim light or darkness.",
+          "sa:cost": 315000,
+          "sa:culture": "Drow"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Clangeddin",
+          "sa:description": "A suit of armor that embodies the dwarven approach to combat: big, powerful, and nearly impossible to shut down without resorting to massive amounts of firepower.",
+          "sa:size": "Medium",
+          "sa:armorClass": 10,
+          "sa:damageAbsorption": 60,
+          "sa:hardness": 12,
+          "sa:hardpoints": [
+            "1 arm",
+            "1 shoulder"
+          ],
+          "sa:strengthScore": 16,
+          "sa:dexterityScore": 10,
+          "sa:baseSpeed": 15,
+          "sa:weight": 1800,
+          "sa:specialProperties": "Regenerates absorb equal to 1 + the number of attacks that dealt absorb damage the previous round (up to a maximum of 10 absorb per round). For this ability, every extra die from burst attacks that target the wearer counts as an extra attack. Comes pre-fitted with a plasteel tower shield, already included in armor score.",
+          "sa:cost": 349000,
+          "sa:culture": "Dwarf"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Hordebreaker",
+          "sa:description": "The dwarven answer to invading hordes of goblinoids. Made to order for wading through masses of foes.",
+          "sa:size": "Medium",
+          "sa:armorClass": 8,
+          "sa:maxDexterity": 1,
+          "sa:damageAbsorption": 50,
+          "sa:hardness": 8,
+          "sa:hardpoints": [
+            "1 shoulder"
+          ],
+          "sa:strengthScore": 16,
+          "sa:dexterityScore": 10,
+          "sa:baseSpeed": 20,
+          "sa:weight": 1500,
+          "sa:specialProperties": "Comes pre-fitted with one fold-out chainaxe on one arm hardpoint and one plasteel shield on the other arm hardpoint.",
+          "sa:cost": 349000,
+          "sa:culture": "Dwarf"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Bastion",
+          "sa:description": "An essential part of any dwarven siege force. Made for digging fortifications and trenches and holding the fortifications once they are built.",
+          "sa:size": "Medium",
+          "sa:armorClass": 19,
+          "sa:damageAbsorption": 50,
+          "sa:hardness": 8,
+          "sa:hardpoints": [
+            "1 shoulder",
+            "2 non-weapon chest"
+          ],
+          "sa:strengthScore": 16,
+          "sa:baseSpeed": 20,
+          "sa:weight": 1900,
+          "sa:specialProperties": "Arms come pre-fitted with the two halves of an extra-large plasteel tower shield. By spending a bonus action, the wearer can join the two shield parts together and take cover behind them, gaining half cover from attacks coming through one of them in addition to the normal effects from the shield, and sets the wearer's movement speed to 0. The wearer can spend another bonus action to dismantle the shield, lose the shield bonus and cover, and regain their previous movement speed. Can double as a small excavator, moving up to one 5-foot cube of dirt, sand, or soft stone every 10 minutes. Due to the arm-mounted shields, the hands on this armor are not suited for wielding weapons or other shields, leaving the shoulder hardpoint as the only offensive mount on the armor.",
+          "sa:cost": 349000,
+          "sa:culture": "Dwarf"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Tengu Aerial Combat Armor",
+          "sa:description": "Light-armored aerial mech suit that enables the wearer to fly for short periods of time. Flight is only possible in planetary atmospheres.",
+          "sa:size": "Medium",
+          "sa:armorClass": 7,
+          "sa:maxDexterity": 4,
+          "sa:damageAbsorption": 35,
+          "sa:hardness": 12,
+          "sa:hardpoints": [
+            "2 arms",
+            "1 dorsal"
+          ],
+          "sa:strengthScore": 12,
+          "sa:dexterityScore": 16,
+          "sa:charismaModifier": 4,
+          "sa:baseSpeed": 40,
+          "sa:weight": 1000,
+          "sa:specialProperties": "500-foot fly speed; can fly for up to 40 minutes measured in minute increments. Can refuel as an action, dispensing the fuel canister via breach-catapult. New fuel canisters can be dropped in via orbital drop pods, support mortars, or similar delivery systems.",
+          "sa:cost": 549000,
+          "sa:powerLevel": 7,
+          "sa:culture": "Terran"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Storm Surface Combat Armor",
+          "sa:description": "This well-armored mech is surprisingly agile yet heavily armed. It has been developed for surface warfare, ranging from urban areas to open engagement zones. It comes equipped with a limited jetpack and powerful arms, which can be used to hold several types of weapons.",
+          "sa:size": "Large",
+          "sa:armorClass": 8,
+          "sa:maxDexterity": 2,
+          "sa:damageAbsorption": 200,
+          "sa:hardness": 20,
+          "sa:hardpoints": [
+            "2 arms",
+            "1 shoulder"
+          ],
+          "sa:strengthScore": 16,
+          "sa:dexterityScore": 10,
+          "sa:charismaModifier": 4,
+          "sa:baseSpeed": 40,
+          "sa:weight": 8000,
+          "sa:specialProperties": "100-foot fly speed (clumsy); can fly a maximum of 1000 feet before expending all fuel. Counts as huge-sized. Has a slam attack that deals 2d6 bludgeoning damage (+ STR modifier). Can open its pilot compartment, allowing the pilot to jump in and out as an action. While the pilot is absent, the suit remains in the general area where the pilot disembarked unless instructed otherwise. While in independent mode, the suit can be recalled by an authorized user, which makes it retreat.",
+          "sa:cost": 549000,
+          "sa:culture": "Terran"
+        },
+        {
+          "@type": "sa:PoweredArmor",
+          "rdfs:label": "Tenno Shock Assault Armor",
+          "sa:description": "Heavily armored suit intended for pan-spectrum warfare. The Tenno can mount several weapons and deal devastating damage, as well as operate in most terrains and climates (including space).",
+          "sa:size": "Large",
+          "sa:armorClass": 10,
+          "sa:maxDexterity": 2,
+          "sa:damageAbsorption": 100,
+          "sa:hardness": 20,
+          "sa:hardpoints": [
+            "2 arms",
+            "2 shoulder",
+            "2 dorsal"
+          ],
+          "sa:strengthScore": 20,
+          "sa:dexterityScore": 18,
+          "sa:charismaModifier": 4,
+          "sa:baseSpeed": 30,
+          "sa:weight": 12000,
+          "sa:specialProperties": "Equipped with thrusters, enabling limited movement in space. Huge size. Regenerates d4 absorb each turn. If at full absorption, the Tenno can perform an atmospheric entry just like a drop pod.",
+          "sa:cost": 16900000,
+          "sa:powerLevel": 8,
+          "sa:culture": "Terran"
+        }
+      ]
+    }
+  ]
+}

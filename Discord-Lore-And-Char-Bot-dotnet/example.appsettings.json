@@ -1,0 +1,16 @@
+{
+  "Bot": {
+    "DiscordToken": "YOUR_DISCORD_BOT_TOKEN_HERE",
+    "DiscordApplicationId": "YOUR_DISCORD_APPLICATION_ID_HERE",
+    "DiscordGuildId": "YOUR_DISCORD_GUILD_ID_HERE",
+    "GeminiApiKey": "YOUR_GEMINI_API_KEY_HERE",
+    "GeminiModel": "gemini-3.1-flash-lite-preview",
+    "AutoRegisterCommands": true,
+    "EnableMessageContentIntent": true,
+    "EnableGoogleSearchRetrieval": true,
+    "DataRoot": "../public/data",
+    "ProfileStorePath": "./storage/profiles.json",
+    "PersonaPath": "./persona.md",
+    "AssetManifestPath": "./assets_manifest.json"
+  }
+}

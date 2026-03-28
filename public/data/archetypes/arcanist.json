@@ -1,0 +1,581 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/",
+    "spell": "https://stellararcana.org/spell#",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Arcanist",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Arcanist",
+      "archetype:description": [
+        "Exert your will on reality without the use of mundane things like tools and physical interaction. Most are easily convinced magic is real when you throw a fireball at them.",
+        "Spellcasters in Stellar Arcana can use spells from DnD 5th edition. Arcanists can cast spells from the Arcane spell lists. Additional spells can be found in the Arcanist spell list."
+      ],
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Spellcraft"
+          },
+          {
+            "archetype:Skill": "Arcane knowledge"
+          },
+          {
+            "archetype:Skill": "Planar knowledge"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Simple"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "None"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Int"
+          },
+          {
+            "archetype:Save": "Wis"
+          }
+        ]
+      },
+      "archetype:spellcasting": "Arcanists regain the spellpoints after a long rest. To be able to cast a spell or ritual an arcanist must have the spell in question in their spellbooks or similar spell repositories. After a long rest the arcanist can prepare their selection of spells for the day. Unless a spell is cast as a ritual an arcanist can only cast spells in their selected daily allotment.\nThe number of spells an arcanist can prepare depends on the skill and aptitude of the arcanist. An arcanist can prepare a number of spells equal to 1 + casting ability modifier. Gaining new features arcanist features can increase the number of spells an arcanist can prepare. A prepared spell can be cast at any level the arcanist can cast spells at as long as the arcanist has available spellpoints.\nFor example a journeyman arcanist with 18 int and 2 proficiency bonus can prepare 4 + 2 spells, which can be cast as up to level 3 spells. To prepare a spell an arcanist needs to have it available in one of their spell repositories.",
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Initiate arcanist",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Gain the ability to cast Arcanist Cantrips. Gain the ability to cast level 1 arcane spells and rituals. Select either Charisma or Intelligence as your casting ability. This choice cannot be changed after being made. Gain Spellpoints equal to your Proficiency bonus. As your proficiency bonus increases your spellpoints increase as well. Gain a spellbook and select 1 + Ability modifier cantrips and 2 + ability modifier level 1 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+          ],
+          "sa:cost": "3 xp Free for arcanist archetypes"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Apprentice arcanist",
+          "sa:prerequisites": [
+            "Initiate arcanist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 2 arcane spells and rituals. Gain 4 spellpoints. You can prepare an additional 3 spells. Select and 2 level 2 spells and add them to your spellbook."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Journeyman arcanist",
+          "sa:prerequisites": [
+            "Apprentice arcanist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 3 arcane spells and rituals. Gain 6 spellpoints. You can prepare an additional 3 spells. Select and 2 level 3 spells and add them to your spellbook."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Expert arcanist",
+          "sa:prerequisites": [
+            "Journeyman arcanist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 4 arcane spells and rituals. Gain 8 spellpoints. You can prepare an additional 4 spells. Select and 2 level 4 spells and add them to your spellbook."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Master arcanist",
+          "sa:prerequisites": [
+            "Expert arcanist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 5 arcane spells and rituals. Gain 10 spellpoints. You can prepare an additional 5 spells. Select and 2 level 5 spells and add them to your spellbook."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Grand Master arcanist",
+          "sa:prerequisites": [
+            "Master arcanist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 6 spells and rituals. Gain 12 spellpoints. Select and 2 level 6 spells and add them to your spellbook."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Exemplar arcanist",
+          "sa:prerequisites": [
+            "Grand Master arcanist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 7 spells and rituals. Gain 15 spellpoints. Select and 2 level 7 spells and add them to your spellbook."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Grand Exemplar arcanist",
+          "sa:prerequisites": [
+            "Exemplar arcanist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 8 spells and rituals. Gain 17 spellpoints. Select and 2 level 8 spells and add them to your spellbook."
+          ],
+          "sa:cost": "5 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Princeps of magicae",
+          "sa:prerequisites": [
+            "Grand Exemplar arcanist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 9 spells and rituals. Gain 20 spellpoints. Select and 2 level 9 spells and add them to your spellbook."
+          ],
+          "sa:cost": "5 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Favored spell",
+          "sa:prerequisites": [
+            "Initiate arcanist"
+          ],
+          "sa:description": [
+            "Select one level 1 spell you can cast. Add your intelligence modifier to damage rolls made with the spell.Select one level 1 spell you need to concentrate to maintain, gain advantage on maintaining concentration on the chosen spell."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Controller",
+          "sa:prerequisites": [
+            "Apprentice arcanist"
+          ],
+          "sa:description": [
+            "When saving against your spells that inflict condition changes, targets gain disadvantage. For example targets saving vs a web spell that cause the grappled condition gain disadvantage.You can use this ability a number of times equal to half your proficiency bonus rounded down, you regain your uses after a long rest."
+          ],
+          "sa:cost": "5 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Arcanist's path - Seer",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Path choice: this feature is mutually exclusive with Arcanist's path - Elementalist and Arcanist's path - Sage. Once you select this path you cannot select another Arcanist's path feature. Being around you and experiencing your manipulation of chance and randomness causes creatures to feel like they are being swept away by the tides of fate as if their actions are already decided for them. When preparing spells after a long rest, roll a D20 and keep the roll. Before the end of your next long rest you can replace any d20 roll made by you, other players or NPC's with the saved roll. Gain +2 on Initiative checks."
+          ],
+          "sa:cost": "Free for Arcanist archetype 4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Arcanist's path - Elementalist",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Path choice: this feature is mutually exclusive with Arcanist's path - Seer and Arcanist's path - Sage. Once you select this path you cannot select another Arcanist's path feature. The temperature around you varies with your mood, cold calculated hatred could cause the temperature to drop and small crystals of frost to congeal out of the air around you, becoming angry or provoked can cause the air around you to shimmer as if by a heat haze. Once per short rest you can add a number of extra damage dice to a spell that deal elemental damage equal to your proficiency bonus. For example an Arcanist casting fireball with 4 proficiency adds 4d6 to the damage done by the fireball. Choose an elemental damage. Once per short rest you can ignore resistances targets have to the damage dealt by one spell."
+          ],
+          "sa:cost": "Free for Arcanist archetype 4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Arcanist's path - Sage",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Path choice: this feature is mutually exclusive with Arcanist's path - Seer and Arcanist's path - Elementalist. Once you select this path you cannot select another Arcanist's path feature. Spend 2 spellpoints to add 1d4 to any knowledge or research check. Gain an additional knowledge proficiency."
+          ],
+          "sa:cost": "Free for Arcanist archetype 4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Seasoned Arcanist - Seer",
+          "sa:prerequisites": [
+            "Arcanist's path - Seer",
+            "Expert arcanist"
+          ],
+          "sa:description": [
+            "When preparing spells after a long rest, roll an additional D20 and keep the roll. Gain advantage on initiative checks. Spend 1d6 spellpoints to gain 4 AC, gain advantage on a save or a non knowledge ability check made before the end of your next turn. If you would spend more spellpoints than you have left using this ability you take the difference as damage. For example if you have 2 spellpoints and roll a 5 you take 3 damage."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Seasoned Arcanist - Elementalist",
+          "sa:prerequisites": [
+            "Arcanist's path - Elementalist",
+            "Expert arcanist"
+          ],
+          "sa:description": [
+            "You can add your proficiency bonus times 1d6 to the damage of an elemental spell once more pr short rest. As an action you can spend 1 spellpoint surround yourself in a shroud of your chosen elemental energy causing creatures adjacent to you to take 1d6 times your proficiency bonus damage of your chosen damage type. The shroud lasts until the start of your next round, you can expend 2 spellpoints at the start of your next round to keep the shroud active. While the shroud is active you take no damage from your chosen damage type."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Seasoned Arcanist - Sage",
+          "sa:prerequisites": [
+            "Arcanist's path - Sage",
+            "Expert arcanist"
+          ],
+          "sa:description": [
+            "Books and other repositories of knowledge twitch with barely noticeable tiny movements when you are near. This movement is never enough to move the item in any specific direction. Spend 4 spellpoints to add 2d4 to any knowledge or research check. Gain an additional knowledge proficiency. Spend 10 spellpoints to summon a spirit of knowledge and reroll a knowledge check you have previously failed with a 2d6 bonus. Summoning the spirit takes 10 minutes and you need access to a room with a clear area on the floor where you can draw a summoning circle with a radius of at least 10 ft."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Arcane mastery - Enhanced damage",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Choose an Arcanist spell that does damage. When you cast this spell calculate the damage it inflicts as if it was cast at 2 levels higher. In effect if you cast a level 3 spell as a level 5 spell calculate all effects as if you cast it as a level 7 spell.",
+            "Special: This feature can be bought several times, but no spell can be chosen for the same effect more than once."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Arcane mastery - Overwhelming conditions",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Choose an Arcanist spell that causes targets to gain a condition. A number of targets up to your proficiency bonus gain disadvantage on the save against the spell.",
+            "Special: This feature can be bought several times, but no spell can be chosen for the same effect more than once."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Arcane mastery - Efficient casting",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Choose a spell. Casting it costs you half the number of spellpoints, rounded up, that it normally costs you to cast a spell of its level.",
+            "If you can and do prepare the spell as a level 1 spell, you can cast it a number of times equal to your proficiency bonus between long rests before you have to pay spellpoints to cast it.",
+            "Special: This feature can be bought several times, but no spell can be chosen for the same effect more than once."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Arcane mastery - Extended range",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Choose a spell that has a range other than touch. Triple the range of the spell when you cast it.",
+            "Special: This feature can be bought several times, but no spell can be chosen for the same effect more than once."
+          ],
+          "sa:cost": "3 xp"
+        }
+      ],
+      "spell-level-0": [
+        {
+          "@id": "spell:Bladeward",
+          "@type": "spell:Spell",
+          "rdfs:label": "Bladeward"
+        },
+        {
+          "@id": "spell:Firebolt",
+          "@type": "spell:Spell",
+          "rdfs:label": "Firebolt"
+        },
+        {
+          "@id": "spell:Mageblade",
+          "@type": "spell:Spell",
+          "rdfs:label": "Mageblade"
+        },
+        {
+          "@id": "spell:Light",
+          "@type": "spell:Spell",
+          "rdfs:label": "Light"
+        },
+        {
+          "@id": "spell:Lightningtouch",
+          "@type": "spell:Spell",
+          "rdfs:label": "Lightning Touch"
+        },
+        {
+          "@id": "spell:Truestrike",
+          "@type": "spell:Spell",
+          "rdfs:label": "True Strike"
+        }
+      ],
+      "spell-level-1": [
+        {
+          "@id": "spell:Identify",
+          "@type": "spell:Spell",
+          "rdfs:label": "Identify"
+        },
+        {
+          "@id": "spell:Abundantammunition",
+          "@type": "spell:Spell",
+          "rdfs:label": "Abundant Ammunition"
+        },
+        {
+          "@id": "spell:Burninghands",
+          "@type": "spell:Spell",
+          "rdfs:label": "Burning Hands"
+        },
+        {
+          "@id": "spell:Charmperson",
+          "@type": "spell:Spell",
+          "rdfs:label": "Charm Person"
+        },
+        {
+          "@id": "spell:ChromaticOrb",
+          "@type": "spell:Spell",
+          "rdfs:label": "Chromatic Orb"
+        },
+        {
+          "@id": "spell:Detectmagic",
+          "@type": "spell:Spell",
+          "rdfs:label": "Detect Magic"
+        },
+        {
+          "@id": "spell:Disguiseself",
+          "@type": "spell:Spell",
+          "rdfs:label": "Disguise Self"
+        },
+        {
+          "@id": "spell:Etheralblades",
+          "@type": "spell:Spell",
+          "rdfs:label": "Ethereal Blades"
+        },
+        {
+          "@id": "spell:Energizedtouch",
+          "@type": "spell:Spell",
+          "rdfs:label": "Energized Touch"
+        },
+        {
+          "@id": "spell:Featherfall",
+          "@type": "spell:Spell",
+          "rdfs:label": "Feather Fall"
+        },
+        {
+          "@id": "spell:Grease",
+          "@type": "spell:Spell",
+          "rdfs:label": "Grease"
+        },
+        {
+          "@id": "spell:Hex",
+          "@type": "spell:Spell",
+          "rdfs:label": "Hex"
+        },
+        {
+          "@id": "spell:MagicID",
+          "@type": "spell:Spell",
+          "rdfs:label": "Magic ID"
+        },
+        {
+          "@id": "spell:Magicmissile",
+          "@type": "spell:Spell",
+          "rdfs:label": "Magic Missile"
+        },
+        {
+          "@id": "spell:Phantomsteed",
+          "@type": "spell:Spell",
+          "rdfs:label": "Phantom Steed"
+        },
+        {
+          "@id": "spell:Phaseblade",
+          "@type": "spell:Spell",
+          "rdfs:label": "Phase Blade"
+        },
+        {
+          "@id": "spell:Shield",
+          "@type": "spell:Spell",
+          "rdfs:label": "Shield"
+        },
+        {
+          "@id": "spell:Rayofsickness",
+          "@type": "spell:Spell",
+          "rdfs:label": "Ray of Sickness"
+        },
+        {
+          "@id": "spell:Summon",
+          "@type": "spell:Spell",
+          "rdfs:label": "Summon"
+        },
+        {
+          "@id": "spell:Floatingdisk",
+          "@type": "spell:Spell",
+          "rdfs:label": "Floating Disk"
+        },
+        {
+          "@id": "spell:Thunderblast",
+          "@type": "spell:Spell",
+          "rdfs:label": "Thunder Blast"
+        },
+        {
+          "@id": "spell:Witcharch",
+          "@type": "spell:Spell",
+          "rdfs:label": "Witch Arch"
+        },
+        {
+          "@id": "spell:Wreckingorb",
+          "@type": "spell:Spell",
+          "rdfs:label": "Wrecking Orb"
+        }
+      ],
+      "spell-level-2": [
+        {
+          "@id": "spell:Armorofthedamned",
+          "@type": "spell:Spell",
+          "rdfs:label": "Armor of the Damned"
+        },
+        {
+          "@id": "spell:Bindelements",
+          "@type": "spell:Spell",
+          "rdfs:label": "Bind Elements"
+        },
+        {
+          "@id": "spell:Burglar'sbuddy",
+          "@type": "spell:Spell",
+          "rdfs:label": "Burglar's Buddy"
+        },
+        {
+          "@id": "spell:Blur",
+          "@type": "spell:Spell",
+          "rdfs:label": "Blur"
+        },
+        {
+          "@id": "spell:Counterspell",
+          "@type": "spell:Spell",
+          "rdfs:label": "Counterspell"
+        },
+        {
+          "@id": "spell:Crownofmadness",
+          "@type": "spell:Spell",
+          "rdfs:label": "Crown of Madness"
+        },
+        {
+          "@id": "spell:Darkness",
+          "@type": "spell:Spell",
+          "rdfs:label": "Darkness"
+        },
+        {
+          "@id": "spell:Faeriefire",
+          "@type": "spell:Spell",
+          "rdfs:label": "Faerie Fire"
+        },
+        {
+          "@id": "spell:Protectionfrombullets",
+          "@type": "spell:Spell",
+          "rdfs:label": "Protection from Bullets"
+        },
+        {
+          "@id": "spell:Steelsense",
+          "@type": "spell:Spell",
+          "rdfs:label": "Steel Sense"
+        }
+      ],
+      "spell-level-3": [
+        {
+          "@id": "spell:Animatedead",
+          "@type": "spell:Spell",
+          "rdfs:label": "Animate Dead"
+        },
+        {
+          "@id": "spell:Displacement",
+          "@type": "spell:Spell",
+          "rdfs:label": "Displacement"
+        },
+        {
+          "@id": "spell:Fireball",
+          "@type": "spell:Spell",
+          "rdfs:label": "Fireball"
+        },
+        {
+          "@id": "spell:Firelance",
+          "@type": "spell:Spell",
+          "rdfs:label": "Fire Lance"
+        },
+        {
+          "@id": "spell:Fly",
+          "@type": "spell:Spell",
+          "rdfs:label": "Fly"
+        },
+        {
+          "@id": "spell:Frozenblast",
+          "@type": "spell:Spell",
+          "rdfs:label": "Frozen Blast"
+        },
+        {
+          "@id": "spell:Icestorm",
+          "@type": "spell:Spell",
+          "rdfs:label": "Ice Storm"
+        },
+        {
+          "@id": "spell:Shutdown",
+          "@type": "spell:Spell",
+          "rdfs:label": "Shutdown"
+        }
+      ],
+      "spell-level-4": [
+        {
+          "@id": "spell:Arc",
+          "@type": "spell:Spell",
+          "rdfs:label": "Arc"
+        },
+        {
+          "@id": "spell:Blacktentacles",
+          "@type": "spell:Spell",
+          "rdfs:label": "Black Tentacles"
+        },
+        {
+          "@id": "spell:Conjurespellfighter",
+          "@type": "spell:Spell",
+          "rdfs:label": "Conjure Spellfighter"
+        },
+        {
+          "@id": "spell:Dimensiondoor",
+          "@type": "spell:Spell",
+          "rdfs:label": "Dimension Door"
+        },
+        {
+          "@id": "spell:Wirewalk",
+          "@type": "spell:Spell",
+          "rdfs:label": "Wirewalk"
+        }
+      ],
+      "spell-level-5": [
+        {
+          "@id": "spell:Firestorm",
+          "@type": "spell:Spell",
+          "rdfs:label": "Firestorm"
+        },
+        {
+          "@id": "spell:Heartsqueeze",
+          "@type": "spell:Spell",
+          "rdfs:label": "Heart Squeeze"
+        },
+        {
+          "@id": "spell:IM-Teleport",
+          "@type": "spell:Spell",
+          "rdfs:label": "IM-Teleport"
+        },
+        {
+          "@id": "spell:Premonition",
+          "@type": "spell:Spell",
+          "rdfs:label": "Premonition"
+        },
+        {
+          "@id": "spell:Starfall",
+          "@type": "spell:Spell",
+          "rdfs:label": "Starfall"
+        }
+      ],
+      "spell-level-6": [
+        {
+          "@id": "spell:Meteor",
+          "@type": "spell:Spell",
+          "rdfs:label": "Meteor"
+        }
+      ]
+    }
+  ]
+}

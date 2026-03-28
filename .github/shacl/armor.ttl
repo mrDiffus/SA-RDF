@@ -1,0 +1,80 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+sa:ArmorShape
+  a sh:NodeShape ;
+  sh:targetClass sa:Armor ;
+  rdfs:comment "LLM generation instruction: produce armor entries with a clear category (Light/Medium/Heavy/Shield), an armor value, and practical description. Prefer numeric armorClass when possible; string armorClass is only for shield-style notation such as '+2 AC'." ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:category ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "Light" "Medium" "Heavy" "Shield" ) ;
+  ] ;
+  sh:property [
+    sh:path sa:description ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:armorClass ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:or (
+      [ sh:datatype xsd:integer ]
+      [ sh:datatype xsd:string ]
+    ) ;
+  ] ;
+  sh:property [
+    sh:path sa:maxDexterity ;
+    sh:maxCount 1 ;
+    sh:or (
+      [ sh:datatype xsd:integer ]
+      [ sh:datatype xsd:string ]
+    ) ;
+  ] ;
+  sh:property [
+    sh:path sa:damageAbsorption ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:hardness ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:hardpoints ;
+    sh:datatype xsd:string ;
+  ] ;
+  sh:property [
+    sh:path sa:baseSpeed ;
+    sh:maxCount 1 ;
+    sh:or (
+      [ sh:datatype xsd:integer ]
+      [ sh:datatype xsd:string ]
+    ) ;
+  ] ;
+  sh:property [
+    sh:path sa:specialProperties ;
+    sh:datatype xsd:string ;
+  ] ;
+  sh:property [
+    sh:path sa:cost ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:powerLevel ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+  ] .

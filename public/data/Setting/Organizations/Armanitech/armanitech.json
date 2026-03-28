@@ -1,0 +1,129 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "spell": "https://stellararcana.org/spell#",
+    "sa": "https://stellararcana.org/",
+    "label": "rdfs:label",
+    "description": "spell:description",
+    "requiredRenown": "sa:requiredRenown",
+    "prerequisites": "sa:prerequisites",
+    "role": "sa:role",
+    "type": "@type"
+  },
+  "type": "sa:Organization",
+  "label": "Armanitech",
+  "description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sector\u2019s leading employer of technical talent and fields a feared wet-work division. The company is governed by a board of directors\u2014humans from Old Earth\u2014rumored to have achieved immortality to perpetuate their wealth.",
+  "role": [
+    {
+      "type": "sa:Role",
+      "label": "Sales Clerk",
+      "requiredRenown": 3,
+      "prerequisites": "Facilitated notable merchandise sales.",
+      "description": [
+        "Can negotiate deals on behalf of Armanitech",
+        "Earns a 5% commission",
+        "Receives an entry-level Armanitech suit (AC 12) that does not require armor proficiency"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Junior Wetwork Consultant",
+      "requiredRenown": 3,
+      "prerequisites": "Completed at least one covert mission for Armanitech.",
+      "description": [
+        "Receives contracts on request",
+        "Equipped with Armanitech Suit, undercover vest, silenced .45 Falcon Pistol (4 clips), and High-Frequency dagger"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Department Head",
+      "requiredRenown": 10,
+      "prerequisites": "Promotion from lower-tier roles and demonstration of leadership.",
+      "description": [
+        "Leads an Armanitech department",
+        "Can mobilize 1d6 spies with 2mm Assault Rifles or 2d6 commoners skilled in persuasion and tech"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Senior Wetwork Consultant",
+      "requiredRenown": 10,
+      "prerequisites": "Promotion from Junior Wetwork Consultant, successful high-stakes missions.",
+      "description": [
+        "Handles off-world and high-stakes assignments",
+        "Can requisition up to 100,000 credits of equipment per contract",
+        "Must return company-issued gear after mission",
+        "Assets acquired must enhance personal capability or be returned"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Marketing Executive",
+      "requiredRenown": 10,
+      "prerequisites": "Promotion from Sales Clerk and demonstrated marketing success.",
+      "description": [
+        "Earns 10% commission on sales",
+        "Access to 100,000 credits worth of demonstration wares",
+        "Can replenish demonstration inventory at Armanitech warehouse"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Principal Engineer",
+      "requiredRenown": 15,
+      "prerequisites": "Expertise in Armanitech technology and major product contributions.",
+      "description": [
+        "Personal laboratory",
+        "Custom Armanitech suit (AC 14\u201317)",
+        "1d4 junior engineers under command"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Operations Strategist",
+      "requiredRenown": 15,
+      "prerequisites": "Must have served as Department Head or Senior Consultant",
+      "description": [
+        "Access to both sales and covert resources",
+        "Requisition up to 250,000 credits in gear",
+        "Direct communication with the Board"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Wetwork Division Chief",
+      "requiredRenown": 20,
+      "prerequisites": "Led multiple successful black operations",
+      "description": [
+        "Personal command vessel (stealthed)",
+        "Access to experimental weaponry",
+        "Autonomous lethal operation approval"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Sector Executive",
+      "requiredRenown": 20,
+      "prerequisites": "Demonstrated major commercial or tactical success",
+      "description": [
+        "Commands an entire system's operations",
+        "Owns company shares",
+        "Orbital residence with security detail",
+        "Vote on war declarations"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Ghost Director",
+      "requiredRenown": 25,
+      "prerequisites": "Invitation only",
+      "description": [
+        "Direct influence on company-wide strategic goals",
+        "Unknown\u2014rumors include mind upload or immortality"
+      ]
+    }
+  ]
+}

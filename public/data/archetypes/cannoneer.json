@@ -1,0 +1,174 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Cannoneer",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Cannoneer",
+      "archetype:description": "If brute force isn't solving your problems, here's what I do: apply more force.",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Artillery"
+          },
+          {
+            "archetype:Skill": "Heavy Weapons"
+          },
+          {
+            "archetype:Skill": "Ballistics"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Heavy weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Medium armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Str"
+          },
+          {
+            "archetype:Save": "Con"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Firing stance",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Spend a bonus action to gain the special firing stance condition. It halves your movespeed and lets you increase the maximum burst damage of wielded weapons as if it is 2 dice higher. When making arc attacks, calculate damage as if it was a burst attack with 1 extra die. For example using arc fire with a 3d6 weapon will do 4d6 damage when in firing stance. Being forcefully moved, grappled or knocked prone will cause you to lose firing stance. Exit firing stance by spending a bonus action."
+          ],
+          "sa:cost": "Free for Cannoneer archetype 3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Massive defence",
+          "sa:prerequisites": [
+            "Firing stance"
+          ],
+          "sa:description": [
+            "When you have the firing stance condition you can fire large or larger ranged weapons while threatened in melee without gaining disadvantage."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Strong back",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Speed is never reduced due to the weight of worn armor, wielded weapons or ammunition in or connected to wielded weapons."
+          ],
+          "sa:cost": "Free for Cannoneer archetype. 3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Making it rain",
+          "sa:prerequisites": [
+            "Firing stance"
+          ],
+          "sa:description": [
+            "When in firing stance you can take a bonus action to make an extra attack with a wielded weapon with the burst or automatic tag."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Unbreakable back",
+          "sa:prerequisites": [
+            "Strong back"
+          ],
+          "sa:description": [
+            "As long as its size is huge or smaller you can mount a single system weapon on a power armor that is at least medium size that has two free hardpoints available. The system weapons weight does not count against your carrying capacity. The system weapons RoF and ammo capacity is reduced to 1, unless it has the automatic tag in which case it keeps it RoF and ammo capacity. Reloading your system weapon takes one full round. This can be done by someone other than you, enabling you to fire every round."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "My own cover",
+          "sa:prerequisites": [
+            "Massive defence"
+          ],
+          "sa:description": [
+            "When you are wielding large ranged weapons you can also wear a shield on one of you arms and gain its defensive description.Overwatch is no longer broken when you are forcibly moved, unless you are also knocked prone."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Hold your ground",
+          "sa:prerequisites": [
+            "Firing stance"
+          ],
+          "sa:description": [
+            "When you are in firing stance and you take the overwatch action cover a range twice what you normally do."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Reload!",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Reload a wielded weapon by spending a action if its normal reload time is a full round."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Shred armor",
+          "sa:prerequisites": [
+            "Firing stance"
+          ],
+          "sa:description": [
+            "When in firing stance you can discard extra dice gained from burst attacks to reduce a targets DR by 1 for every 3 dice discarded. The reduction lasts until repairs can be made or if the target is biological it is healed to full health."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Pin down",
+          "sa:prerequisites": [
+            "Hold your ground"
+          ],
+          "sa:description": [
+            "Creatures that move in the area you cover with Overwatch must pay double the movement cost it would normally pay to move through the area unless it makes a wisdom save versus your Ranged weapon DC. Moving through normal terrain would cost double and moving through already difficult terrain would cost quadruple. If you are using a brutal or horrifying weapon each square costs triple instead of double movement."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Heavy weapon induced horror",
+          "sa:prerequisites": [
+            "Hold your ground"
+          ],
+          "sa:description": [
+            "When you are using Overwatch with an autocannon, flamethrower or gatling type weapon, targets in your overwatch area have to make a wisdom save versus your ranged ability DC. Targets that fail gain the frightened condition for 3 rounds. If you are using a brutal or horrifying weapon the save is made with disadvantage."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Slag armor",
+          "sa:prerequisites": [
+            "Unbreakable back"
+          ],
+          "sa:description": [
+            "When firing a system weapon with the semi or single tags, ignore up to 2 DR. If the weapon you are firing already ignores DR, this bonus stacks with the DR the weapon already ignores."
+          ],
+          "sa:cost": "4 xp"
+        }
+      ]
+    }
+  ]
+}

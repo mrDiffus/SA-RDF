@@ -1,0 +1,202 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:MartialArtist",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Martial Artist",
+      "archetype:description": "Yes, it's true. A lot of classic martial arts focus on mystic inner strength and enlightenment. I don't subscribe to that, what makes me good is hard work, dedication and willingness to suffer broken bones, bullet wounds and worse. Because anyone can pick up a gun and start blasting, I take pride in being able to get the same result with the flick of a wrist.",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Unarmed Combat"
+          },
+          {
+            "archetype:Skill": "Acrobatics"
+          },
+          {
+            "archetype:Skill": "Meditation"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Simple weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Light armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Str"
+          },
+          {
+            "archetype:Save": "Dex"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Hardened",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "When you are wearing no armor your AC is equal to 10 + your constitution modifier + your dexterity modifier. Your base move speed is 40 ft."
+          ],
+          "sa:cost": "Free for Martial artist archetypes else 2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Always armed",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "As long as you are not helpless or immobilized and have free limbs, arms, legs, elbows, etc., you can make unarmed melee attacks. Unarmed damage increased from 1d4 to 1d6. When you take the attack action using a weapon you are proficient with or an unarmed strike, you can make an additional unarmed strike as a bonus action."
+          ],
+          "sa:cost": "Free for Martial artist archetypes else 3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Inner focus",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Gain 3 + Proficiency Ki points. You can regain up to proficiency bonus ki points on a short rest and once per long rest. All ki points are regained on a long rest. As long as you have more than 0 ki points left, your unarmed attacks strike as if they were magical. Spend 1 Ki point to gain advantage on athletics and acrobatics checks for as many rounds as your proficiency bonus."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Quick feet",
+          "sa:prerequisites": [
+            "Inner focus"
+          ],
+          "sa:description": [
+            "Gain 2 Ki points. As long as you have more than 0 ki points left, your land move speed is increased by 10 ft. Spend 1 ki point to gain an additional 20 ft move speed."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Hamatula strike",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Spend 1 Ki point to let attacks with your unarmed attacks ignore 1 DR and Hardness equal to your proficiency bonus."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Flurry of blows",
+          "sa:prerequisites": [
+            "Inner focus"
+          ],
+          "sa:description": [
+            "Gain 2 Ki points. You can spend a Ki point and make two additional attacks using your unarmed strikes when you use the attack action this round."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Touch and go",
+          "sa:prerequisites": [
+            "Inner focus"
+          ],
+          "sa:description": [
+            "Gain 1 Ki point. Spend a Ki point to disengage as a bonus action."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Puppeteers dance",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "When already grappling an opponent, you can replace an attack gained from your attack action with a Strength (Athletics) contest against their Strength (Athletics) or Dexterity (Acrobatics) check. If you succeed, you can either use the opponent's body as a shield (+2 AC and advantage on dex saves) or use their weapon for an attack with disadvantage. To use this feature, you need to have an additional free hand in addition to the hand you are already using to grapple your opponent; in effect, you need both your hands to use this feature."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Puppet Master",
+          "sa:prerequisites": [
+            "Puppeteers dance"
+          ],
+          "sa:description": [
+            "When already grappling an opponent, you can replace an attack gained from your attack action with a Strength (Athletics) contest against their Strength (Athletics) or Dexterity (Acrobatics) check. You can either use the opponent's body as a shield (+2 AC and advantage on dex saves) or use their weapon for an attack with disadvantage. Using this feature does not require you to have an additional free hand, effectively letting you control two grappled opponents if you have enough additional attacks from various sources."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "ECC Distract",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "You can give one of your allies advantage on their next attack against a target you have damaged with unarmed attacks during your round."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "ECC Disarm",
+          "sa:prerequisites": [
+            "ECC Distract"
+          ],
+          "sa:description": [
+            "When you hit with an unarmed attack, you can also disarm your target. The target makes a dexterity save against your melee ability DC to avoid being disarmed. You can use this ability a number of times equal to your proficiency bonus. All uses are regained on a short rest. On a natural 20, you can opt to grab the weapon and immediately count as wielding the weapon and make an attack with the weapon with disadvantage."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "ECC Takedown",
+          "sa:prerequisites": [
+            "ECC Disarm"
+          ],
+          "sa:description": [
+            "Once per round, when making a hit with unarmed attacks, you can as a free action start a Strength (Athletics) or Dexterity (Acrobatics) contest, your choice. If you win, you knock your target prone. Losing will never knock you prone."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Open hand",
+          "sa:prerequisites": [
+            "Inner focus"
+          ],
+          "sa:description": [
+            "Whenever you hit a target with flurry of blows, you can elect to either knock them back 15 ft or knock them prone by spending 1 additional ki point. The target makes a dexterity save against your melee ability DC to avoid the effect."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Telling blows",
+          "sa:prerequisites": [
+            "Always armed",
+            "Inner focus"
+          ],
+          "sa:description": [
+            "Gain 1 ki point. Spend 1 ki point to give your unarmed attacks the cleaving, heavy, or horrifying tag until the start of your next round. Unarmed damage increases from 1d6 to 1d8."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Fists of fury",
+          "sa:prerequisites": [
+            "Telling blows"
+          ],
+          "sa:description": [
+            "Gain 1 ki point. Unarmed damage increases from 1d8 to 1d10. Spend 2 ki points to add 1d6 force damage to all unarmed attacks until the end of your turn."
+          ],
+          "sa:cost": "4 xp"
+        }
+      ]
+    }
+  ]
+}

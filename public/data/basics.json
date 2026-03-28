@@ -1,0 +1,237 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:basics-0",
+      "@type": "sa:Section",
+      "rdfs:label": "Abilities",
+      "sa:content": [
+        {
+          "@type": "sa:Paragraph",
+          "sa:text": "An ability can never be raised higher than 20 without bonuses from magic or equipment."
+        },
+        {
+          "@type": "sa:Paragraph",
+          "sa:text": "All characters have the following abilities:"
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Strength",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "Lets you swing that hammer harder or lift those big weights."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Dexterity",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "What lets you do those sweet parkour moves and hit that kid waay over there with a snowball."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Constitution",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "What keeps you going when everyone else fall over drunk out of their minds or crying like sissies complaining that 'we've been walking, like forever' when you've only been marching for 7 hours."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Intelligence",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "What makes your friends invite you along for quiz night. Knowing that a tomato is a fruit."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Wisdom",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "Knowing that even though a tomato might be a fruit it does not go in the fruit salad."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Charisma",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "Convince the rest of the party that the fruit salad the smart guy made using tomatoes actually is a really, really good idea."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "@id": "sa:basics-1",
+      "@type": "sa:Section",
+      "rdfs:label": "Derived statistics",
+      "sa:content": [
+        {
+          "@type": "sa:Header",
+          "sa:text": "Wounds",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "Equal to your constitution score. Loose all these to damage and you gain the unconscious condition and start / continue bleeding out. Maximum wounds is not reduced or increased by temporary or magical increases to constitution. Once you lose half your wounds you fall prone and cannot stand up unassisted before regaining enough enough wounds to take you over half your maximum wounds."
+            },
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "When you have less than half your wounds remaining you gain disadvantage and a -5 penalty on all checks except death checks."
+            },
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "When you reach 0 wounds you gain the unconscious condition and you start making death saves, a DC 10 con save. If you fail 3 death saves you die, if you succeed on 3 saves you stabilize."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Hit points",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "Starts at 6 + con mod. Increases every time you gain another hit dice. When you take damage in combat hit points is reduced before wounds and once your hit points are reduced to 0 you start taking wound damage. If there is left over damage from an attack that reduces you to 0 hit points you take the remainder as wound damage. When you gain a new hit points multiplier your hit points increases to your (hit points base + your con mod) * number of hit dice"
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Absorb",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "Normally gained from equipment. Grants the player access to an extra hp pool that is subtracted before the player takes hit point damage from attacks. For example taking 5 damage when wearing an armor with 2 absorb will cause the armor to remove 2 damage from the attack but offers no further protection from additional attacks. Absorbs is depleted once it removes damage and can only be replaced by repairing the armor by replacing ceramic plates or ballistic cloth etc. Hardness and DR are both applied before applying damage to absorb. Some rare and powerful pieces of equipment can regain absorb on its own."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Sanity",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "equal to your wisdom score. Lose all of this and you go more than a bit loopy."
+            },
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "If your sanity is reduced to 0, your maximum sanity is permanently reduced by 2 and you gain the confused status effect until you regain 1 sanity or lose consciousness. If your maximum sanity is reduced to 0 you become catatonic and loose all agency, become unable to take actions and can only move if pushed or guided by others."
+            },
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "Reduced maximum sanity can be regained at a rate of 2 pr. week of care or by powerful magic."
+            },
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "When maximum sanity is reduced to 0, three weeks of care is needed before you can start regaining sanity or by powerful magic."
+            },
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "Your maximum Sanity is not reduced or increased by temporary or magical increases to wisdom. When you have taken sanity damage equal to your maximum sanity you gain disadvantage on charisma, intelligence and wisdom saves. Sanity heals at 1 point / 8 hours of rest."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Renown",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "equal to your proficiency bonus."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Melee ability DC",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "based on your str or dex, whichever is higher and if you are proficient with the weapon you are wielding, you also add your proficiency bonus."
+            },
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "In effect 8 + Str / Dex - mod + Proficiency bonus."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Ranged ability DC",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "based on your dex and if you are proficient with the weapon you are wielding, you also add your proficiency bonus."
+            },
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "In effect 8 + dex mod + Proficiency bonus"
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Spell DC",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "based on your casting ability modifier and your proficiency bonus."
+            },
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "In effect 8 + Casting ability mod + Proficiency bonus"
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Hardness",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "Gained from features or equipment. Subtract this number from any damage taken. For example taking 5 damage while having hardness 3 will reduce the damage taken to 2. If your hardness exceeds the damage roll of the attack that hit you, you take no damage."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "DR",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "Gained from features or equipment. Subtract a number of damage dice from any damage roll affecting you, starting with the highest roll. For example you are hit by a attack with a damage roll of 2d6 + 1d4 while you have 2 DR and the rolls are 4 6 3 you remove the 4 and the 6 reducing the damage roll from 4 + 6 +3 to 3. Hardness is applied after DR. If DR reduced the number of damage dice rolled to 0, then the attack does 0 damage. DR is a rare bonus for players and is mostly reserved for large armored vehicles, buildings or the realy big monsters."
+            }
+          ]
+        },
+        {
+          "@type": "sa:Header",
+          "sa:text": "Experience",
+          "sa:content": [
+            {
+              "@type": "sa:Paragraph",
+              "sa:text": "Every character gains the increases to a few base statistics based on the total amount of experience in their total xp earned pool. See step 4 under Character creation and advancement"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

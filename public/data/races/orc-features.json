@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:orc",
+      "@type": "sa:Race",
+      "rdfs:label": "Orc",
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Description",
+          "sa:description": "Orcs are a primal force in the sector, born of survival, honed by battle, and governed by a simple truth: the strong rule, and the weak get eaten. They are a culture of trials, scars, and tribal cunning, where respect is earned through endurance and conquest. Few orcs die peacefully—most meet glorious or violent ends, but those who grow old become terrifyingly wise. Ancient orcs are revered and feared, their minds sharpened by lifetimes of surviving chaos. Orcs are not mindless brutes; they are brutal pragmatists who revere strength, loyalty, and the cold clarity of conflict."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Ability score increases",
+          "sa:description": "+4 Str, +2 Con, -2 Int, -2 Cha"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Proficiencies",
+          "sa:description": "Archaic weapons, light and medium armor"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Darkvision",
+          "sa:description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Rugged",
+          "sa:description": "8 additional hit points"
+        }
+      ],
+      "sa:relationFeatures": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Human relations",
+          "sa:description": "Orcs see humans as useful but inconsistent. Their adaptability is respected, but their emotional decision-making is seen as a flaw. Orcs enjoy competing with humans—especially when it comes to war, leadership, or engineering—but rarely trust them fully."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Drow relations",
+          "sa:description": "Drow are hated but occasionally admired by orcs. Their ruthlessness is familiar, but their penchant for betrayal and manipulation is considered weak-minded cowardice. When orcs ally with drow, it is always temporary and always tense."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Halfling relations",
+          "sa:description": "Halflings confuse most orcs. Their optimism and cheerfulness seem like denial of reality. Still, orcs acknowledge halflings' survival skills in space and respect their ability to endure adversity—just not their refusal to embrace violence as the solution."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Dwarf relations",
+          "sa:description": "Dwarves are one of the few races orcs consistently respect. Their tenacity, craftsmanship, and commitment to principle align with orcish values—though orcs think dwarves overcomplicate honor with too many laws. Orc-dwarf grudges often span generations, and every fight between them is a lesson in strength."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Elf relations",
+          "sa:description": "Orcs see elves as decadent and out of touch. Their obsession with beauty and legacy disgusts orcs, who believe worth must be earned through risk and blood. Still, some orcs are fascinated by elven longevity and secretly envy their arcane mastery."
+        }
+      ]
+    }
+  ]
+}

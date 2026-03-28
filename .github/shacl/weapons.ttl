@@ -1,0 +1,93 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+sa:WeaponShape
+  a sh:NodeShape ;
+  sh:targetClass sa:Weapon ;
+  rdfs:comment "LLM generation instruction: create weapons as rule-ready stat blocks. Always provide core combat fields (damage, type, critical, size, proficiency). Add range/clip/burst only for ranged profiles; avoid forcing ranged-only fields onto melee weapons." ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:description ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:damage ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:damageType ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:criticalModifier ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:size ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:burstDamage ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:clipSize ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:rangeMeters ;
+    sh:maxCount 1 ;
+    sh:node sa:RangeMetersShape ;
+  ] ;
+  sh:property [
+    sh:path sa:specialProperties ;
+    sh:datatype xsd:string ;
+  ] ;
+  sh:property [
+    sh:path sa:weight ;
+    sh:maxCount 1 ;
+    sh:or (
+      [ sh:datatype xsd:integer ]
+      [ sh:datatype xsd:decimal ]
+    ) ;
+  ] ;
+  sh:property [
+    sh:path sa:cost ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:powerLevel ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:tags ;
+    sh:datatype xsd:string ;
+  ] ;
+  sh:property [
+    sh:path sa:proficiency ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "Simple" "Archaic" "Martial" "Exotic" "System" ) ;
+  ] .

@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    }
+  },
+  "type": "Place",
+  "label": "Thakza\u2019s Grin",
+  "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke across the highlands. Said to be Zugthak's laughter made liquid.",
+  "@id": "https://stellararcana.org/place/thakzas-grin",
+  "containedInPlace": "https://stellararcana.org/place/arrur"
+}

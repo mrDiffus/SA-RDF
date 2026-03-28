@@ -1,0 +1,231 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Gunslinger",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Gunslinger",
+      "archetype:description": "Sure it's a dangerous job. I shoot people! But if people like me didn't do what we do you would have to hire some psycho with a sharp stick",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Firearms"
+          },
+          {
+            "archetype:Skill": "Quick Draw"
+          },
+          {
+            "archetype:Skill": "Marksmanship"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Firearms"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Light armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Dex"
+          },
+          {
+            "archetype:Save": "Wis"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Quick hands",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "If you have both hands free, draw and fire a ranged weapon as a bonus action or as a reaction to someone targeting you or your allies with an attack before you have acted in a combat."
+          ],
+          "sa:cost": "Free for gunslinger. 3  xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "True grit",
+          "sa:prerequisites": [
+            "Quick hands"
+          ],
+          "sa:description": [
+            "If you are wielding a ranged weapon that you fired this round or the previous round you can press the warm barrel or focus if it's a laser weapon against a bleeding wound on yourself or an adjacent creature to stop a bleed effect. You can fire a ranged weapon as part of an intimidate action, gaining advantage on the intimidate action."
+          ],
+          "sa:cost": "Free for gunslinger. 2  xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Sharp eyes",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Targets with anything other than full cover have the bonus to their AC from cover reduced by 2 to a minimum of 0."
+          ],
+          "sa:cost": "Free for gunslinger. 3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Keen ears",
+          "sa:prerequisites": [
+            "Sharp eyes"
+          ],
+          "sa:description": [
+            "Targets that have miss chance due to concealment have 10% less miss chance if they are within 30 feet and you can hear their movements. For example, neither of you are free floating in vacuum."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Ranged execution",
+          "sa:prerequisites": [
+            "Sharp eyes"
+          ],
+          "sa:description": [
+            "If you are prone, wielding a weapon with a deployed tripod / bipod or other similar feature then you can start lining up a ranged execution. To line up a ranged execution you need to keep an unaware target in your sights for 5 consecutive rounds. To keep the target in your sights you need to hit an AC of 9 + the number of rounds you have been keeping the target in your sights and spend your attack. Add any AC from cover your target has to the AC you need to hit to keep your target in your sights. Once you have kept the target in your sights for 5 consecutive rounds you can either spend a bonus action to make an attack that is an automatical critical hit.The AC to keep the target in your sights does not surpass 15. This only works when firing a single shot from a rifle type weapon.Failing to keep the target in your sights does not cause the target to become alerted to your presence. Keeping the target unaware might necessitate stealth checks or similar actions, up to DM\u2019s discretion."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Hail of bullets",
+          "sa:prerequisites": [
+            "Quick hands"
+          ],
+          "sa:description": [
+            "When you take the attack action you can spend a bonus action to make a single extra attack with a wielded ranged weapon."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Hair trigger",
+          "sa:prerequisites": [
+            "Quick hands"
+          ],
+          "sa:description": [
+            "Treat wielded one-handed ranged weapons as if their maximum burst damage is one die higher than normal. When wielding one-handed ranged weapons that have clips or magazines measured in a number of attacks, spend an additional attack in order to deal 1 extra die of damage."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Hammer the point",
+          "sa:prerequisites": [
+            "Hail of bullets"
+          ],
+          "sa:description": [
+            "Each additional hit after the first you land on a target in a round ignores 2 hardness. This feature stacks with itself."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Answering shot",
+          "sa:prerequisites": [
+            "Quick hands"
+          ],
+          "sa:description": [
+            "If you are targeted by a ranged attack by someone you can see you can spend your reaction to fire a single shot back at them."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "More. Bullets.",
+          "sa:prerequisites": [
+            "Quick hands"
+          ],
+          "sa:description": [
+            "Spend a bonus action to reload a wielded non-system ranged weapon."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Focused bursts",
+          "sa:prerequisites": [
+            "Hammer the point"
+          ],
+          "sa:description": [
+            "Ignore 2 hardness when calculating the effects of your burst attacks on targets with hardness."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Calm in action",
+          "sa:prerequisites": [
+            "True grit"
+          ],
+          "sa:description": [
+            "Instead of making the additional attacks gained from extra attack and similar features, roll all your attacks at once against a single target and add the weapon's base damage for each additional hit you roll. Add ability bonuses and extra bonuses from other sources only once. Subtract hardness and DR only once. Cannot be used firing single shots with weapons with the semi or single tags. This feature does not gain any bonus from the extra attacks gained when using dual wielding."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Menacing shot",
+          "sa:prerequisites": [
+            "True grit"
+          ],
+          "sa:description": [
+            "Fire a weapon at the same time as you make an intimidate check to gain advantage on the check."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Pistoleer",
+          "sa:prerequisites": [
+            "Quick hands"
+          ],
+          "sa:description": [
+            "When dual wielding pistols, revolvers, or other 1-handed ranged weapons, add your dexterity modifier to the damage done with the bonus attack gained from dual wielding."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Up close and deadly",
+          "sa:prerequisites": [
+            "Pistoleer"
+          ],
+          "sa:description": [
+            "When attacking targets within 30 ft using pistols, deal an additional 1d6 precision damage on a successful attack when not making burst or full auto attacks."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Rifleman",
+          "sa:prerequisites": [
+            "Sharp eyes"
+          ],
+          "sa:description": [
+            "Spend a bonus action to increase the range of rifles or similar weapons by 1/2. Does not affect shotguns."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Steady aim",
+          "sa:prerequisites": [
+            "Rifleman"
+          ],
+          "sa:description": [
+            "When using the attack action with rifles or similar weapons increase crit range by 1."
+          ],
+          "sa:cost": "4 xp"
+        }
+      ]
+    }
+  ]
+}

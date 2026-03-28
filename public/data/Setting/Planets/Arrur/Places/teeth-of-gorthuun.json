@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    }
+  },
+  "type": "Place",
+  "label": "Teeth of Gorthuun",
+  "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails in their presence.",
+  "@id": "https://stellararcana.org/place/teeth-of-gorthuun",
+  "containedInPlace": "https://stellararcana.org/place/arrur"
+}

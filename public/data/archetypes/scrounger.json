@@ -1,0 +1,108 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Scrounger",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Scrounger",
+      "archetype:description": "A bit of electricity, a few actuators, a crystal memory store and a logic board. It could take away your job, or maybe make it easier, yeah? But watch, I add a metal wedge and this crude jet and you got yourself a fiercely loyal companion with a bite worse than its bark. And, remember, the jet is pretty noisy.",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Scavenging"
+          },
+          {
+            "archetype:Skill": "Improvisation"
+          },
+          {
+            "archetype:Skill": "Bartering"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Simple weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Light armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Dex"
+          },
+          {
+            "archetype:Save": "Wis"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Spares!",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "You can remove the broken condition from an item by giving another item of the same type the broken condition or if it is already broken, destroy the item. For example, if you have two broken laser rifles, you can destroy one and remove the broken condition from the other. The time needed depends largely on the type of item. A firearm for medium-sized characters usually takes one minute. A spaceship might take weeks but can usually be shortened by finding and fixing the broken components instead of the spaceship as a whole."
+          ],
+          "sa:cost": "4 xp, free for scrounger"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Useful and valuable bits",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "You can sort through destroyed items and objects to find salvageable bits and pieces. The time needed to scavenge a certain item or object is determined on an item-by-item basis by the GM. A crashed spaceship would likely demand more time than finding salvageable pieces of a destroyed handgun. The value of the items you find and scavenge are usually worth 1/10th of their usual value, but this can vary from item to item as decided by your GM. A cracked diamond might not lose as much value, and the scattered remains of a crashed spaceship will likely only be worth the weight you can find in scrap metal."
+          ],
+          "sa:cost": "4 xp, free for scrounger"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Faithful little bot",
+          "sa:prerequisites": [
+            "Useful and valuable bits"
+          ],
+          "sa:description": [
+            "Gain a MK 1 Scrounger drone. If the drone is destroyed, you can build a new one if you have access to the remains of your old drone or $500 worth of generic materials and a basic electrical or mechanical workshop by spending 4 hours. You can rebuild your drone by spending 2 hours in a basic electrical or mechanical workshop. This lets you replace your drone's chosen action."
+          ],
+          "sa:cost": "3 xp, free for scrounger"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Good as new!",
+          "sa:prerequisites": [
+            "Useful and valuable bits"
+          ],
+          "sa:description": [
+            "Selling items with the broken condition does not take the full price penalty for selling broken items. Normal selling price for broken items is 1/5 of original value. A character with this feature can sell broken items at 1/3 of original value."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Supersede drone parameters",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "You are able to exceed the safety parameters of most drones and can make them perform in excess of their normal functions. Barrier Drone: When you use the Projected Shield, you can choose to overload the Projected Shield mechanism, causing arcing electrical discharge to pour from the drone. Add your proficiency bonus to the temporary hit points the target gains. Perception checks made to see or detect electrical currents around the target or the drone are made with advantage. Emergency Response Drone: When you use the Pillar of Life function, you can instead choose any simple form that fills the same volume as the original pillar shape. Examples of simple forms are a sphere, a cube, etc. Repair Drone: Repair drones you control gain a new action, Ablate. Ablate: Target a destroyed armor or other piece of equipment. The drone's repair reservoir regains 1d10 points. The item is slowly eaten away by nanobots. Broken armor or other pieces of equipment lets the drone regain 2d8 points. This can only be used on unattended items. At the GM's discretion, an item can be blown to so many small bits that no salvageable material can be gained."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Kamikaze drone",
+          "sa:prerequisites": [
+            "Supersede drone parameters"
+          ],
+          "sa:description": [
+            "You can overload a flying drone's motors and security parameters, causing it to fly into a target at speeds far exceeding its normal speed. The base damage done is based on drone size: tiny deals 1d4 damage, small deals 1d6 damage, large deals 1d8 damage, and huge deals 2d6 damage. The overloaded drone triples its move speed. If you move the drone into a creature's square, it takes damage equal to the drone's base damage times the number of 5-ft squares the drone moved in a straight line towards the target. Regardless of whether you crash the drone into a target, the drone becomes destroyed when it has either spent its move, when it has completed the commands you gave it, or when it enters a creature's area. The drone cannot take the Dash action in the same round as you order it to take this action."
+          ],
+          "sa:cost": "1 xp"
+        }
+      ]
+    }
+  ]
+}

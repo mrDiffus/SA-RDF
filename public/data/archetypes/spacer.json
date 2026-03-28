@@ -1,0 +1,152 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Spacer",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Spacer",
+      "archetype:description": "We climbed down from the trees because the open plains offered a better life. We climbed out of the gravity well because open space offered infinite possibilities for growth!",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Zero-G Navigation"
+          },
+          {
+            "archetype:Skill": "Spacecraft Systems"
+          },
+          {
+            "archetype:Skill": "Environmental Suit Operation"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Simple weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Light armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Dex"
+          },
+          {
+            "archetype:Save": "Con"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Zero G maneuvering",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Maneuver as if you had perfect flying when you are in a space station or spaceship whenever you are within arm's reach of a wall. As long as you are within arm's reach of a wall, recoil from firearms will not negatively impact your maneuvering. Special: Stargazer elves retain the benefit from Zero G Maneuvering even if they move away from walls until the start of their next turn."
+          ],
+          "sa:cost": "1 xp, free for Spacer"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Spacelegs",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Never become nauseated by zero-g or due to maneuvering in a spaceship. Never gain disadvantage on perception checks due to no traditional concept of up and down when in zero-g or freefall."
+          ],
+          "sa:cost": "1 xp, free for Spacer"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Confusing target",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Opportunity attacks made against you in a round where you have moved or are moving are made with disadvantage when you are in zero-g or micro gravity."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Steady eyes",
+          "sa:prerequisites": [
+            "Spacelegs"
+          ],
+          "sa:description": [
+            "Never gain disadvantage when spacewalking due to vertigo. Normally when a character is spacewalking and looks off into the void, he or she starts suffering from vertigo and gains disadvantage on all checks until he or she makes a DC 10 Wisdom save and then a DC 10 Constitution save."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Void adapt",
+          "sa:prerequisites": [
+            "Spacelegs"
+          ],
+          "sa:description": [
+            "Gain resistance to cold, radiation, and damage taken due to exposure to space."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Slam",
+          "sa:prerequisites": [
+            "Zero G maneuvering"
+          ],
+          "sa:description": [
+            "Use the jets in your spacesuit, jetpack, or similar to slam into a target. Double the damage done by a single melee attack when charging while flying in zero-g. Use the thrusters on your armor, spacesuit, or similar to slam down at least 15 ft to double the damage done from a single melee attack."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Adapted",
+          "sa:prerequisites": [
+            "Zero G maneuvering"
+          ],
+          "sa:description": [
+            "When you use acrobatics in zero-g or microgravity, gain advantage on the check."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Shipborn",
+          "sa:prerequisites": [
+            "Zero G maneuvering"
+          ],
+          "sa:description": [
+            "Select one ship class: Ultralight, Light, Standard, Heavy, or Superheavy. Gain proficiency to all checks made when firing weapons mounted on or repairing your selected ship class. Gain advantage on pilot checks made with your selected ship class."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Speak ship",
+          "sa:prerequisites": [
+            "Shipborn"
+          ],
+          "sa:description": [
+            "When you are piloting a ship or otherwise using equipment controlled by the ship's information system of your selected ship class, nodes in the ship's information system gain 5 extra HP. You are alerted when someone gains read access to any node but a public node in the information system. You gain advantage on information system attacks versus targets that have caused alerts in the information system on the ship you are piloting or otherwise operating parts of the information system, as long as the ship belongs to your selected ship class."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Braced",
+          "sa:prerequisites": [
+            "Zero G maneuvering"
+          ],
+          "sa:description": [
+            "Do not gain disadvantage on attacks made when free floating without a propulsion harness or similar in zero-g or microgravity. You can move and make burst attacks without gaining disadvantage in zero-g."
+          ],
+          "sa:cost": "4 xp"
+        }
+      ]
+    }
+  ]
+}

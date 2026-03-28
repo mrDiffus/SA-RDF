@@ -1,0 +1,41 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:feyri",
+      "@type": "sa:Race",
+      "rdfs:label": "Fey'ri",
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Description",
+          "sa:description": "The descendants of stargazer elves that in the distant past bargained for great magical power in order to power their enormous star-bound citadels and ships. Their once mighty empire has long since faded and only rumors remain of their once mighty citadels and moon sized ships.\n\nFey'ri have pale pearl like skin, long slender horns that curve back along their skulls and atrophied legs that are unable to hold their weight in anything but negligible gravity. What looks like shimmering wings sprout from their backs, but in reality its a fan of magical fronds that exert a field that lets the Fey'ri fly by magical means with perfect maneuverability at 30 ft speed while in zero g or micro gravity. In a gravity well their wings are only able to hold them hovering just above ground level. If a Fey'ri enters a antimagic field while in a gravity well they fall prone until they are removed from the antimagic field."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Ability score increase",
+          "sa:description": "+1 dex, +2 int"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Mental shield",
+          "sa:description": "Fey'ri project a shield powered by their mental prowess. After completing a long rest a Fey'ri gain an absorb shield equal to their intelligence score, this absorb gets removed before any other sources of absorption. Whenever the Fey'ri spends hit dice to regain vitality the shield is reset to its original strength. As long as the shield has at least 1 point of absorb left the Fey'ri gains 2 deflection AC."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Carry capacity",
+          "sa:description": "Carry capacity calculated using int, instead of str. All armors count against carry capacity, including power armors. Unless the fey'ri has the armor fused to his or her nervous system in order to properly make use of the armors legs in which case the Fey'ri likely loses his or her fly speed, unless it could carry its load with the weight of the armor included, and gains the move speed specified in the powered armor."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Movement",
+          "sa:description": "No move speed from legs. 30 ft fly(perfect, magical) speed."
+        }
+      ]
+    }
+  ]
+} 

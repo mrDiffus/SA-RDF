@@ -1,0 +1,33 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+sa:RangeMetersShape
+  a sh:NodeShape ;
+  rdfs:comment "LLM generation instruction: when generating a ranged weapon profile, set sa:rangeMeters.normal and sa:rangeMeters.maximum as positive integers, and keep maximum >= normal." ;
+  sh:property [
+    sh:path sa:normal ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:maximum ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+  ] .
+
+sa:EquipmentCollectionShape
+  a sh:NodeShape ;
+  sh:targetSubjectsOf sa:items ;
+  rdfs:comment "LLM generation instruction: create one list node per source file, include rdfs:label, and include sa:items pointing only to fully valid class instances for that file domain." ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:items ;
+    sh:minCount 1 ;
+  ] .

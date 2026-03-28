@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    }
+  },
+  "type": "Place",
+  "label": "Ashcross",
+  "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock.",
+  "@id": "https://stellararcana.org/place/ashcross",
+  "containedInPlace": "https://stellararcana.org/place/arrur"
+}

@@ -1,0 +1,191 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Ace",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Ace",
+      "archetype:description": "When you absolutely think that the best solution to any problem in the sector is a spaceship, plane, car or other vehicle piloted by the very best.",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Pilot"
+          },
+          {
+            "archetype:Skill": "Navigate"
+          },
+          {
+            "archetype:Skill": "Fly"
+          },
+          {
+            "archetype:Skill": "Drive"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "2 ranged weapons"
+          },
+          {
+            "archetype:Weapon": "2 weapon systems"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Light armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Dex"
+          },
+          {
+            "archetype:Save": "Int"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Faster, harder, safer?",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Increase the tactical speed of all vehicles, planes, bikes or spaceships by 10%. Round down to nearest multiple.When you crash a vehicle, take 1d6 less damage for each proficiency bonus you have. Subtract from the damage taken before subtracting for successful saves etc."
+          ],
+          "sa:cost": "3 xp. Free for Ace archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Anything you can do",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Any time you are involved in a skill contest involving spacecraft, vehicles or bikes, roll with advantage. For example, someone claims to know more trivia about the Mark II Calth Hoverbikes air intake in humid cold weather than you, you then roll your Knowledge Technology or Deception check with advantage."
+          ],
+          "sa:cost": "3 xp. Free for Ace archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Pinpoint accuracy",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "When you announce a bombard attack you can spend a bonus action to immediately take a targeting action to improve the accuracy of the bombard attack."
+          ],
+          "sa:cost": "3 xp. Free for Ace archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Definitely faster, definitely harder, not at all safer.",
+          "sa:prerequisites": [
+            "Faster, harder, safer?"
+          ],
+          "sa:description": [
+            "When accelerating, you can increase the DC of your pilot check by 5 and double your rate of acceleration. Failing the check causes the acceleration to be applied randomly to the ship's vector. For example instead of changing your vector to 0,4,0 from 0,2,0 it may be changed to 1,2,1."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Nudge",
+          "sa:prerequisites": [
+            "Faster, harder, safer?"
+          ],
+          "sa:description": [
+            "When intentionally ramming another vehicle, treat the DR of your vehicle as if it was 2 higher or 2 if your vehicle has no DR."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Shake rattle and roll",
+          "sa:prerequisites": [
+            "Faster, harder, safer?"
+          ],
+          "sa:description": [
+            "Spend a bonus action to gain a bonus to defence until the start of your next turn when piloting a ship. The defence bonus is equal to your proficiency bonus. Due to the violent maneuvering characters aboard the ship all gain disadvantage on all attacks made with the ships weapons or aboard the ship for as long as your ship gains the defence bonus."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "On my boat?",
+          "sa:prerequisites": [
+            "Shake rattle and roll"
+          ],
+          "sa:description": [
+            "Spend a bonus action to shake and maneuver your ship erratically and force all other characters on your ship to roll all checks made before the start of your next turn with disadvantage. You can designate up to a number of characters equal to your proficiency bonus to avoid this effect.Non physical characters are not affected by this feature. For example a ghost or an AI hosted in securely mounted hardware in the ship."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Keeping it steady",
+          "sa:prerequisites": [
+            "Definitely faster, definitely harder, not at all safer."
+          ],
+          "sa:description": [
+            "Attack rolls you make with system weapons mounted on starships you are piloting that are Standard or smaller or any airplane you are piloting are made with advantage when attacking something larger than the starship or plane you are piloting.You also gain the benefit of this feature if you are piloting an ultralight craft and targeting a gargantuan or larger creature."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "With great ships comes great fun",
+          "sa:prerequisites": [
+            "Faster, harder, safer?"
+          ],
+          "sa:description": [
+            "When piloting Heavy or larger starships you have learned to maneuver in a continual rolling and weaving path. Calculate the DR of any heavy or larger ship you pilot as if it was 2 higher and its hardness as if it was 5 higher."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Under the radar",
+          "sa:prerequisites": [
+            "Keeping it steady"
+          ],
+          "sa:description": [
+            "Gain advantage on stealth checks made when piloting light or smaller Starships"
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Armed to the teeth",
+          "sa:prerequisites": [
+            "Keeping it steady"
+          ],
+          "sa:description": [
+            "If you oversee the installation of drone bays in starships that are Standard size or smaller, increase the number of drones your bays can hold by one extra drone for every two drone bays your ship has, minimum 1 extra drone. For example the drow skirmisher ship Lex Talionis has a total of 10 heavy drone bays, when if the ace piloting the ship gets to oversee the installation of the drone bays and drones they can fit a total of 25 Heavy drones on the ship. If anyone without this feature pilots a ship with overloaded drone bays half the drones aboard, rounded down, will not be able to launch."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Glasser",
+          "sa:prerequisites": [
+            "Pinpoint accuracy"
+          ],
+          "sa:description": [
+            "When you make bombardment attacks you deal double damage to immobile targets and structures."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Awesome moves",
+          "sa:prerequisites": [
+            "Anything you can do"
+          ],
+          "sa:description": [
+            "Whenever you maneuver your ship in a way that normally does not require a pilot check, you can make an unnecessarily difficult maneuver to accomplish the same result. If you succeed at a DC 10 Pilot check, everyone watching your maneuver is mightily impressed. The first persuasion check anyone on your boat makes when interacting with them is made with advantage. If you fail the check, you crash. Hopefully you weren't going too fast? Everyone finds you rather silly, the first persuasion check you make with anyone watching is made at a disadvantage."
+          ],
+          "sa:cost": "1 xp"
+        }
+      ]
+    }
+  ]
+}

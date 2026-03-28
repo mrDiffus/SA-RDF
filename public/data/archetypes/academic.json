@@ -1,0 +1,187 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Academic",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Academic",
+      "archetype:description": "When knowing more is always the correct solution. Academics are proficient with a large number of skills and gain access to features that lets them analyze new and exciting situations.",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Research"
+          },
+          {
+            "archetype:Skill": "Analysis"
+          },
+          {
+            "archetype:Skill": "Teaching"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Simple weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "None"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Int"
+          },
+          {
+            "archetype:Save": "Wis"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Learned",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Select one knowledge skill. When you would normally need a library or similar source of knowledge you can make a knowledge check without one.If you fail your knowledge check you can retry as soon as you get access to an online knowledge base."
+          ],
+          "sa:cost": "3 xp Free for Academic archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Antagonize plebs",
+          "sa:prerequisites": [
+            "Learned"
+          ],
+          "sa:description": [
+            "You can substitute a knowledge check for an intimidate or persuasion check when you attempt to antagonize or otherwise make someone uneducated angry. In this context, \"Uneducated\" means anyone you deem less knowledgeable than you on a subject."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Part of Academia",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "If you have access to online messaging services and message boards you can call in a favour from fellow academics and post a question to the boards. Every hour there is a 50% chance that someone with the right skillset sees and tries to answer your question. Roll a knowledge check with a total bonus of +4 and the results are available to you as soon as you are able to check for results. All communication is anonymous."
+          ],
+          "sa:cost": "3 xp Free for Academic archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Educated guess",
+          "sa:prerequisites": [
+            "Learned"
+          ],
+          "sa:description": [
+            "Normally research checks need access to a fully stocked laboratory and / or a source of knowledge like a library. You can make research checks in 10 minutes without access to a laboratory or library assuming that the DC is not higher than 24."
+          ],
+          "sa:cost": "3 xp Free for Academic archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Analyze creature.",
+          "sa:prerequisites": [
+            "Educated guess"
+          ],
+          "sa:description": [
+            "Spend 1 hour analyzing and dismantling a creature. Make a research check DC 14, if you make the check you add the creatures type to your list of analyzed creatures. The creature does not have to be dead when you start this process and if you spend 5 hours instead of 1 it does not need to be dead at the end of the process either. You need to be able to move freely adjacent to the creature so most wild or hostile creatures need to be restrained or immobilized. Special or unique creatures can have higher research DCs. You know all resistances and vulnerabilities all creatures on your analyzed list have. Whenever you encounter a creature that is on your analyzed list you can make a DC 12 research check as an attack action and for the next 2 rounds allies within 10 ft of you ignore one resistance of your choice the creature has."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Analyze structure",
+          "sa:prerequisites": [
+            "Educated guess"
+          ],
+          "sa:description": [
+            "If you have access to a library and the complete blueprints of a structure (Building, spaceship, space station etc.) you can spend 1 hour and make a DC 14 research check. If you make the check add the structure to your list of analyzed structures. Special, unique or particularly large structures may have higher research DCs. If you spend a minute with someone aiming system weapons at a structure you have analyzed the first shot they fire does double damage. If you enter a structure on your analyzed list you always know the layout of the default configuration of the structure. You are unaware of any aftermarket or custom modifications to the building that deviate from the blueprints you have analyzed. You gain advantage on identifying any aftermarket modifications made to any structure you have analyzed, such as hidden turret ports or new escape tunnels."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Published",
+          "sa:prerequisites": [
+            "Part of academia"
+          ],
+          "sa:description": [
+            "Every time you discover a rare object or creature that you have at least 10 minutes to document, film, pictures, study etc, you can then later spend 1 hour collecting and preparing data on the new discovery and publish it. You gain 500 credits times your proficiency bonus and 1 renown for each published collection of information.Information about structures or creatures of particular interest that you have analyzed with the Analyze Creature or Analyze structure can be published. You gain 1000 credits times your proficiency bonus and 1 renown for each piece of published information on structures or creatures you've analyzed. Examples of rare objects might be any non-standard weapon or armor, any named magical item, spaceships of nonstandard construction and advanced or unique creatures.At the GM's discretion the credits and renown bonus might be higher than normal for particularly intriguing specimens.Attempting to publish further information on the same item / topic will reduce the credits bonus by half each time and give no renown.Tracking published information on your character sheet is important, as it affects other features.In order to publish information you need to be connected to a global network."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Meritocrat",
+          "sa:prerequisites": [
+            "Part of academia"
+          ],
+          "sa:description": [
+            "Treat people that work in fields you have published information on as if they were one step friendlier when asking for favours or information.Most people will also give you a souvenir from their work in the field you've contributed to, it can range from working weapons to models of spaceships. Will normally not exceed double the credits you earned from publishing the information, but might be higher at the GM's discretion.For example an armor manufacturer is likely to be more willing to share information if you have published information regarding the secrets of Drow armor manufacture."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Cumulative knowledge",
+          "sa:prerequisites": [
+            "Published. 4 collections of information, at least 2 in the same field."
+          ],
+          "sa:description": [
+            "Once every 1d4 days people following your research send you 1d4 information packages containing random interesting tidbits of information. You can spend these tidbits of information to decrease the initial research check for Analyze Structure or Analyze creature by 1 per tidbit spent. Once a tidbit of information is spent to reduce the research DC for a specific structure or creature, you treat it as one lower for subsequent attempts if you fail your initial attempt. You can also spend the tidbits of information when you make knowledge checks relevant to any of the fields you have published works. This feature cannot reduce a DC lower than 10."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Fighting smart",
+          "sa:prerequisites": [
+            "Learned"
+          ],
+          "sa:description": [
+            "Choose one type of weapon, 1 handed ranged, 1 handed melee, 2 handed ranged or 2 handed melee, attack rolls made with the chosen weapon group use your intelligence modifier instead of the ability modifier normally used."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Knowledge is power",
+          "sa:prerequisites": [
+            "Fighting smart"
+          ],
+          "sa:description": [
+            "When rolling damage rolls with the weapon group chosen in the Fighting smart feature, use your intelligence modifier instead of the ability modifier normally used."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Expert in your field",
+          "sa:prerequisites": [
+            "Learned"
+          ],
+          "sa:description": [
+            "Choose two skill proficiencies. Whenever you make an ability check using these proficiencies you gain double your proficiency bonus."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Paragon of knowledge",
+          "sa:prerequisites": [
+            "Expert in your field"
+          ],
+          "sa:description": [
+            "Choose two skill proficiencies. Whenever you make an ability check using these proficiencies you gain double your proficiency bonus. You cannot choose the same skills you chose in the Expert in your field feature."
+          ],
+          "sa:cost": "4 xp"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:ArmorList",
+      "@type": "sa:Equipment",
+      "rdfs:label": "Armor",
+      "sa:items": [
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Outer Tactical Vest",
+          "sa:category": "Heavy",
+          "sa:description": "The bread and butter armor for most modern armies",
+          "sa:armorClass": 16,
+          "sa:maxDexterity": 1,
+          "sa:damageAbsorption": 10,
+          "sa:hardness": 4,
+          "sa:hardpoints": [],
+          "sa:baseSpeed": "As user",
+          "sa:specialProperties": "Integrated communication gear lets user communicate without any external gear",
+          "sa:cost": 900,
+          "sa:powerLevel": 5
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Undercover vest",
+          "sa:category": "Light",
+          "sa:description": "Concealable armor",
+          "sa:armorClass": 12,
+          "sa:damageAbsorption": 5,
+          "sa:hardpoints": [],
+          "sa:baseSpeed": "As user",
+          "sa:specialProperties": "Gain advantage when trying to conceal that you are wearing armor",
+          "sa:cost": 900,
+          "sa:powerLevel": 5
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Boarding shield",
+          "sa:category": "Shield",
+          "sa:description": "Large hand held shield used in boarding actions. Shields the user from area of effect effects.",
+          "sa:armorClass": "+2 AC",
+          "sa:maxDexterity": 2,
+          "sa:hardpoints": [],
+          "sa:specialProperties": "+2 on reflex saves vs AoE effects",
+          "sa:cost": 350,
+          "sa:powerLevel": 5
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Outer Tactical exoskeleton",
+          "sa:category": "Heavy",
+          "sa:description": "The bread and butter armor for most modern armies, with a little extra.",
+          "sa:armorClass": 16,
+          "sa:damageAbsorption": 10,
+          "sa:hardness": 4,
+          "sa:hardpoints": [
+            "1 shoulder (Medium or smaller equipment)"
+          ],
+          "sa:baseSpeed": 30,
+          "sa:specialProperties": "Integrated communication gear lets user communicate without any external gear. \"Google Glass\" like functionality.",
+          "sa:cost": 7500,
+          "sa:powerLevel": 6
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Scale mail armor",
+          "sa:category": "Medium",
+          "sa:description": "Armor made from overlapping metal scales",
+          "sa:armorClass": 14,
+          "sa:maxDexterity": 2,
+          "sa:damageAbsorption": 5,
+          "sa:hardness": 2,
+          "sa:hardpoints": [],
+          "sa:baseSpeed": 25,
+          "sa:cost": 300,
+          "sa:powerLevel": 4
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Full plate",
+          "sa:category": "Heavy",
+          "sa:description": "Full plate mail covering most of the wearer, usually made to order to fit a spesific individual",
+          "sa:armorClass": 18,
+          "sa:hardness": 4,
+          "sa:hardpoints": [],
+          "sa:baseSpeed": 20,
+          "sa:cost": 900,
+          "sa:powerLevel": 4
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Leather armor",
+          "sa:category": "Light",
+          "sa:description": "A light armor made from cured leather",
+          "sa:armorClass": 13,
+          "sa:hardpoints": [],
+          "sa:baseSpeed": "As user",
+          "sa:cost": 50,
+          "sa:powerLevel": 3
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "\"Dragon\" Scale",
+          "sa:category": "Medium",
+          "sa:description": "A light armor made from modern day materials.",
+          "sa:armorClass": 13,
+          "sa:maxDexterity": 3,
+          "sa:damageAbsorption": 5,
+          "sa:hardness": 1,
+          "sa:hardpoints": [],
+          "sa:cost": 1500
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "\"Dragon\" Plate",
+          "sa:category": "Medium",
+          "sa:description": "A plate armor made from modern day materials. Covers most of the torso leaving the extremities free.",
+          "sa:armorClass": 15,
+          "sa:maxDexterity": 2,
+          "sa:damageAbsorption": 10,
+          "sa:hardness": 2,
+          "sa:hardpoints": [],
+          "sa:cost": 2500
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Plasteel shield",
+          "sa:category": "Shield",
+          "sa:description": "Modern materials for an archaic purpose. A classic shield made with spaceage materials",
+          "sa:armorClass": "+2 AC",
+          "sa:maxDexterity": 2,
+          "sa:hardpoints": [],
+          "sa:cost": 650
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Heavy shield",
+          "sa:category": "Shield",
+          "sa:description": "The classic, made from wood or metal.",
+          "sa:armorClass": "+2 AC",
+          "sa:maxDexterity": 1,
+          "sa:hardpoints": [],
+          "sa:cost": 200
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Light shield",
+          "sa:category": "Shield",
+          "sa:description": "The lighter classic, made from wood or metall.",
+          "sa:armorClass": "+1 AC",
+          "sa:hardpoints": [],
+          "sa:cost": 100
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Tower shield",
+          "sa:category": "Shield",
+          "sa:description": "The towering classic",
+          "sa:armorClass": "+3 AC",
+          "sa:maxDexterity": "0",
+          "sa:hardpoints": [],
+          "sa:specialProperties": "Advantage on reflex saves  versus aoe effects. - 10 movespeed",
+          "sa:cost": 300
+        },
+        {
+          "@type": "sa:Armor",
+          "rdfs:label": "Plasteel towershield",
+          "sa:category": "Shield",
+          "sa:description": "A high tech version of the towering classic",
+          "sa:armorClass": "+3 AC",
+          "sa:maxDexterity": "0",
+          "sa:hardpoints": [],
+          "sa:specialProperties": "Advantage on reflex saves  versus aoe effects -5 movespeed",
+          "sa:cost": 1200
+        }
+      ]
+    }
+  ]
+}

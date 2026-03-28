@@ -1,0 +1,248 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sa:     <https://stellararcana.org/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Planet lore document  (type: schema:CreativeWork)
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:PlanetShape
+    a sh:NodeShape ;
+    sh:targetClass schema:CreativeWork ;
+    sh:description "A planet lore document in the Stellar Arcana setting." ;
+
+    # Canonical name — required, single value
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The canonical name of the planet." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Narrative description — required, single value
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "A narrative overview of the planet." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Genre / tonal descriptors — optional
+    sh:property [
+        sh:path     schema:genre ;
+        sh:name     "genre" ;
+        sh:description "Descriptive genre tags conveying the planet's tone and feel." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Thematic keywords — optional, repeatable
+    sh:property [
+        sh:path     schema:keywords ;
+        sh:name     "keywords" ;
+        sh:description "Thematic keywords associated with the planet." ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    # Canonical URL — optional
+    sh:property [
+        sh:path     schema:url ;
+        sh:name     "url" ;
+        sh:description "Canonical lore page URL for the planet." ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Language tag — optional
+    sh:property [
+        sh:path     schema:inLanguage ;
+        sh:name     "inLanguage" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Creation date — optional
+    sh:property [
+        sh:path     schema:dateCreated ;
+        sh:name     "dateCreated" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Stable document identifier — optional
+    sh:property [
+        sh:path     schema:identifier ;
+        sh:name     "identifier" ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Author — optional, typed Person node
+    sh:property [
+        sh:path     schema:author ;
+        sh:name     "author" ;
+        sh:class    schema:Person ;
+        sh:node     sa:PersonShape ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Planet Place reference (self-description) — optional
+    sh:property [
+        sh:path     schema:about ;
+        sh:name     "about" ;
+        sh:description "A Place node describing the planet itself." ;
+        sh:class    schema:Place ;
+        sh:node     sa:PlaceRefShape ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Primary location associated with this document — optional
+    sh:property [
+        sh:path     schema:locationCreated ;
+        sh:name     "locationCreated" ;
+        sh:description "A notable Place on the planet where this lore was authored." ;
+        sh:class    schema:Place ;
+        sh:node     sa:PlaceRefShape ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Notable places that belong to this planet — optional, repeatable
+    sh:property [
+        sh:path     schema:hasPart ;
+        sh:name     "hasPart" ;
+        sh:description "Places that are part of this planet." ;
+        sh:class    schema:Place ;
+        sh:node     sa:PlaceRefShape ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Inline Place reference  (embedded in hasPart / about / locationCreated)
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:PlaceRefShape
+    a sh:NodeShape ;
+    sh:description "A lightweight place reference node embedded in a planet document." ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     schema:description ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Person node  (author attribution)
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:PersonShape
+    a sh:NodeShape ;
+    sh:class schema:Person ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Planet place document  (type: schema:Place, standalone file)
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:PlanetPlaceShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Place ;
+    sh:description "A detailed place document for a location on a planet in the Stellar Arcana setting." ;
+
+    # Canonical name — required
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The canonical name of the place." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Description — required; may be a single string or a list of paragraphs
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "Narrative description. May be a single string or an ordered list of paragraphs." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+
+    # Back-link to the parent planet — required
+    sh:property [
+        sh:path     schema:containedInPlace ;
+        sh:name     "containedInPlace" ;
+        sh:description "IRI of the planet this place belongs to." ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern  "^https://stellararcana\\.org/place/" ;
+    ] ;
+
+    # Sub-locations within this place — optional, repeatable
+    sh:property [
+        sh:path     schema:containsPlace ;
+        sh:name     "containsPlace" ;
+        sh:description "Named sub-locations within this place (e.g. districts, landmarks)." ;
+        sh:node     sa:SubPlaceShape ;
+    ] ;
+
+    # Flavour / attitude lines — optional, repeatable
+    sh:property [
+        sh:path     sa:attitude ;
+        sh:name     "attitude" ;
+        sh:description "Short attitude or flavour lines describing this place's character." ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    # Ordered description segments — optional, repeatable
+    sh:property [
+        sh:path     sa:descriptionSegment ;
+        sh:name     "descriptionSegment" ;
+        sh:description "Ordered alternative description paragraphs." ;
+        sh:datatype xsd:string ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Sub-place node  (containsPlace entries, e.g. districts inside a city)
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:SubPlaceShape
+    a sh:NodeShape ;
+    sh:description "A named location within a larger place." ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     schema:description ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .

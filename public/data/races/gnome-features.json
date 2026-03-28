@@ -1,0 +1,82 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:gnome",
+      "@type": "sa:Race",
+      "rdfs:label": "Gnome",
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Description",
+          "sa:description": "Gnomes are brilliant tinkerers, eccentric inventors, and whimsical survivors who thrive in cluttered workshops and zero-G crawlspaces. Inhabiting orbital warrens and engine-warmed maintenance decks, gnomes bring joy, madness, and ingenuity to every corner of the sector. They are notorious for pushing machinery, magic, and social etiquette to the brink in pursuit of a better gadget or a more poetic design. While not always taken seriously by larger or grimmer races, gnomes wield technical genius and unshakable optimism like weapons—and their inventions have changed the course of more than one war."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Ability score increase",
+          "sa:description": "+2 intelligence"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Speed",
+          "sa:description": "Your base walking speed is 25 ft"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Gnome Cunning",
+          "sa:description": "You have advantage on all Intelligence, Wisdom, and Charisma Saving Throws against magic."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Size",
+          "sa:description": "Small"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Proficiencies",
+          "sa:description": "Repair and any two craft skills."
+        },{
+          "@type": "sa:Feature",
+          "rdfs:label": "Subraces",
+          "sa:description": "Gnomes take on different traits based on their environment and obsessions. While these variations are real, few gnomes are rude enough to point them out in polite company. Choose one subrace to gain additional features."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subrace: Rock Gnome",
+          "sa:description": "Rock Gnomes are naturally inventive and a bit more rugged than their kin, often found hunched over humming contraptions in asteroid labs or maintenance tunnels.\n\n- +1 Constitution\n- **Artificer's Lore**: When making an Intelligence (History) check related to magic items, alchemical objects, or technological devices, add twice your proficiency bonus instead of once.\n- **Tinker**: You have proficiency with tinker’s tools. You can spend 1 hour and 10 gp of materials to build a Tiny clockwork device (AC 5, 1 hp). It stops working after 24 hours unless maintained. You can have up to 3 active at once. Choose from:\n  - **Clockwork Toy**: Moves 5 feet randomly per turn and makes appropriate noises.\n  - **Fire Starter**: Produces a flame to light small objects.\n  - **Music Box**: Plays a single song until stopped or closed."
+        }
+      ],
+      "sa:relationFeatures": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Human relations",
+          "sa:description": "Gnomes are fascinated by humans, they are so much like gnomes when it comes to their seemingly insatiable curiosity but other humans are so driven that they are simply frightening."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Halfling relations",
+          "sa:description": "Halflings are like gnomes! They just tend to like parties and a good drink better than a well tuned clockwork automaton. Not that parties are bad, automatons are just better."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Orc relations",
+          "sa:description": "Orcs are big, they like to break the carefully made creations of gnomes. Gnomes could do well without Orcs."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Dwarf relations",
+          "sa:description": "Dwarves are wonderful artisans, if only they cared as much for beauty as they do function."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Elf relations",
+          "sa:description": "Elves are dreamy and tall. They make and build very wondrous things but they can get a bit caught up in the artwork."
+        }
+      ]
+    }
+  ]
+}

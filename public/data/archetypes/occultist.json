@@ -1,0 +1,474 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/",
+    "spell": "https://stellararcana.org/spell#",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Occultist",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Occultist",
+      "archetype:description": [
+        "True power is never given, it is taken. My conviction enabled me to take a glimmer of power from the universe. The eye behind the veil saw this and took from me as I took from the universe, and as it did, it enabled me to take more than I had ever hoped to dare. Now my candle burns magnesium bright in the gloom with my master slowly but surely draining me, but I will take, I will grow, and I will conquer all. When all has fallen, my master's power will be mine to take, and my flame will set the very cosmos alight.",
+        "Spellcasters in Stellar Arcana can use spells from D&D 5th edition. Occultists can cast spells from the Warlock spelllist. Additional spells can be found in the Occult spelllist."
+      ],
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Occult Knowledge"
+          },
+          {
+            "archetype:Skill": "Ritual Magic"
+          },
+          {
+            "archetype:Skill": "Forbidden Lore"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Simple weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "None"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Int"
+          },
+          {
+            "archetype:Save": "Wis"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Patron",
+          "sa:prerequisites": [
+            "Initiate Occultist"
+          ],
+          "sa:description": [
+            "Choose one of the following patrons. Your patron is the source of your occult power and will affect how several of the Occultist features behave. Elder Being: Your patron is a wholly ineffable being with the exception of an overwhelming desire to own and possess all that it senses through you. Whenever you cast a spell or use a feature gained from the Occultist archetype, the air around you is filled with strange barely audible whispers. Every now and then, the whispers seem that they could almost make sense before suddenly devolving into gibberish once again. The whispers normally last for at least one minute for each level of the spell cast or one minute when using abilities gained from occultist features. You can cause your cantrips to do entropy damage. When you cause entropy damage to targets, you can expend your focus and force all damaged targets to make a Charisma save versus your spell DC; those who fail are stunned until the end of your next turn. Targets affected by this feature cannot be affected until you have completed a long rest. Chthonic: Creatures close to you feel all their urges uncomfortably strongly. Your patron embodies the violent urges of all sentient creatures in the sector that they keep hidden as deeply inside as they can. The very focus of your power are things best left buried and forgotten. Whenever you cause magical fire damage, you can expend your focus to force all targets who took damage to catch fire unless they make a dex save versus your spell DC. Those who catch fire take 1d6 / your proficiency bonus fire damage on the start of their turn until they succeed on a dex save vs your spell DC. Spending a full round to drop prone and roll gives burning targets advantage on the save. Eldritch God: Your power stems from a godling that is hidden to the universe but very much present and plotting its ascent using you and your kindred from its prison in the shattered remains of Nilaama. Damage you do with your cantrips causes ethereal chains to shoot out from targets you damage, seemingly to anchor in mid-air around the target, in effect reducing their move speed by 5 ft for rounds equal to your proficiency bonus. Consecutive hits extend the duration of the effect. Creatures with active divination effects looking at affected creatures or being affected themselves will experience fleeting sights, smells, and sounds from the surface of Nilaama."
+          ],
+          "sa:cost": "Free for Occultist Archetype. 3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Promised to patron",
+          "sa:prerequisites": [
+            "Initiate Occultist Patron"
+          ],
+          "sa:description": [
+            "Your patron shields you from the negative effects of sanity loss. You still take sanity damage. If you are reduced to 0 sanity, you are stunned for 1d3 + 1 rounds, and instead of the normal effects, your patron takes control over you, and you in effect become an NPC under the control of the GM that will continue working on your patron's goals unless you succeed on a DC 25 Charisma save. If it/you have the ability, the NPC will normally attempt to leave in the fastest possible way in order to make sure your allies will not stop it from completing your patron's nefarious schemes. For example, if you can teleport, it will likely teleport to the location where it can do the most to further your patron's agenda. Your well-being is not a priority for the controlling consciousness; if the most effective way to do your patron's work is to ignite yourself in a flame of eldritch power that burns an arcology to the ground, that is likely going to be its course of action. If your patron sees no value in possessing your body when you are reduced to 0 sanity, you simply fall limply to the ground and take all the penalties and effects normally associated with being reduced to 0 sanity. This effect can be removed with either a Restoration spell or similar effects, which will restore 1 sanity and let you start healing normally."
+          ],
+          "sa:cost": "4 xp, free for Occultist Archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Initiate Occultist",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Gain the ability to cast Occultist Cantrips. Gain the ability to cast level 1 Occultist spells and rituals. Charisma is used for spellcasting. Gain 1 spellslot. You can cast any spell you know by spending one spellslot. Spellslots are regained after a short rest. Rituals do not expend a spellslot. You can cast your spells at level 1. Learn 2 level 1 spells. Learn 2 Occultist cantrips."
+          ],
+          "sa:cost": "Free for Occultist archetypes. 2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Apprentice Occultist",
+          "sa:prerequisites": [
+            "Initiate Occultist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 2 Occultist spells and rituals. Gain 1 additional spellslot. You can cast your spells at level 2. Learn 1 additional spell up to level 2."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Journeyman Occultist",
+          "sa:prerequisites": [
+            "Apprentice Occultist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 3 Occultist spells and rituals. Gain 1 additional spellslot. You can cast your spells at level 3. Learn 1 additional spell up to level 3."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Expert Occultist",
+          "sa:prerequisites": [
+            "Journeyman Occultist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 4 Occultist spells and rituals. Gain 1 additional spellslot. You can cast your spells at level 4. Learn 1 additional spell up to level 4."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Master Occultist",
+          "sa:prerequisites": [
+            "Expert Occultist"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 5 Occultist spells and rituals. Gain 1 additional spellslot. You can cast your spells at level 5. Learn 2 additional spells up to level 5."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Grand Master Occultist",
+          "sa:prerequisites": [
+            "Master Occultist caster"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 6 and higher rituals. Gain 2 additional spellslots. You can cast your spells at level 6. Learn 2 additional spells up to level 6."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Nova Verax",
+          "sa:prerequisites": [
+            "Grand Master Occultist",
+            "4 proficiency bonus"
+          ],
+          "sa:description": [
+            "Choose a single level 7 spell; you can cast this spell once per long rest. When you reach 5 proficiency, choose a single level 8 spell; you can cast that spell once per long rest. When you reach 6 proficiency, choose a single level 9 spell; you can cast that spell once per long rest."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Focused blasts",
+          "sa:prerequisites": [
+            "Initiate Occultist"
+          ],
+          "sa:description": [
+            "Select one damaging cantrip you can cast. Add your Charisma modifier to damage done to hit points or wounds for the cantrip."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Protected",
+          "sa:prerequisites": [
+            "Patron"
+          ],
+          "sa:description": [
+            "If you have the focused condition, you can choose to lose it as a reaction to getting hit by an attack, damaging effect, or an effect that causes status changes or causes you to gain a condition, and gain DR 2 against that damaging attack or effect or advantage on the save versus that effect. Depending on your patron, also gain one of the following: Elder Being: Advantage on saves against all mind-affecting effects until the start of your next turn. Chthonic: Gain 5 hardness or add 5 hardness to any existing hardness you have until the start of your next turn. Eldritch God: Advantage on all checks made to cancel conditions or break out of grapples until the start of your next turn. Advantage on all contests due to being grappled until the start of your next turn."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Empowered",
+          "sa:prerequisites": [
+            "Patron",
+            "Expert Occultist"
+          ],
+          "sa:description": [
+            "Depending on your patron, gain one of the following: Elder Being - Unmake Creature: Spend an attack action or instead of an attack gained from the attack action, target a creature within 30 ft and inflict 5d10 entropy damage to the target. Start a Cha contest; you add your proficiency bonus to the check. If you win the contest, the target is incapacitated for 1 round and takes 1d10 entropy damage for each point of sanity you are missing. If you lose the contest, the target takes half damage and is not incapacitated. As part of the attack action, you can choose to take up to 2 sanity damage. Chthonic - Deepest, Darkest Secrets: As part of a persuasion, intimidate, perform, or sense motive check, target one creature affected or involved in the check. If you succeed in a Charisma contest against your chosen target, you know exactly what the creature wishes to gain from the situation, and the target takes 1 sanity damage and is aware of neither the contest nor the source of the damage. If you win the contest, you can choose to take 1 sanity damage and replace the target's motivation or goal with a motivation or goal of your choice. The target then acts according to its new goal or motivation for 1 minute. If the new goals or motivations differ extremely from the original ones, the effect instead lasts for 2 rounds. An example of an extreme difference in goals may be changing 'protect the city' to 'burning the city' or 'protecting the president' to 'murdering the president.' You cannot use this ability again before you have completed a short or long rest. Eldritch God - See Nilaama: As an action, target one creature within 60 ft. That creature disappears with a slight pop and is dragged through the shattered core of Nilaama, taking 5d10 psychic damage, and reappears in a spot within 60 ft of its original position at the end of your next turn. If the space is occupied, the target is shunted to the closest available space. When the target reappears, resolve a Cha contest with the target. If you win, the target takes 1d10 / proficiency bonus additional psychic damage. You can choose to take 1 sanity damage and cause the target not to reappear until another round has passed, in effect extending the duration to two rounds. You can choose to take 1 sanity damage to extend the range in which you can cause the target to reappear in by 120 ft. You can choose to take 2 sanity damage and both extend the duration and the range. You cannot use this ability again before you have completed a short or long rest."
+          ],
+          "sa:cost": "4 xp"
+        }
+      ],
+      "spell-level-0": [
+        {
+          "@id": "spell:Eldrichtblade",
+          "@type": "spell:Spell",
+          "rdfs:label": "Eldritch Blade"
+        },
+        {
+          "@id": "spell:Firebolt",
+          "@type": "spell:Spell",
+          "rdfs:label": "Firebolt"
+        },
+        {
+          "@id": "spell:Light",
+          "@type": "spell:Spell",
+          "rdfs:label": "Light"
+        },
+        {
+          "@id": "spell:Lightningtouch",
+          "@type": "spell:Spell",
+          "rdfs:label": "Lightning Touch"
+        },
+        {
+          "@id": "spell:Mindblast",
+          "@type": "spell:Spell",
+          "rdfs:label": "Mind Blast"
+        },
+        {
+          "@id": "spell:Patron'scaress",
+          "@type": "spell:Spell",
+          "rdfs:label": "Patron's Caress"
+        },
+        {
+          "@id": "spell:Truestrike",
+          "@type": "spell:Spell",
+          "rdfs:label": "True Strike"
+        }
+      ],
+      "spell-level-1": [
+        {
+          "@id": "spell:Affliction",
+          "@type": "spell:Spell",
+          "rdfs:label": "Affliction"
+        },
+        {
+          "@id": "spell:Anticipateperil",
+          "@type": "spell:Spell",
+          "rdfs:label": "Anticipate Peril"
+        },
+        {
+          "@id": "spell:Bane",
+          "@type": "spell:Spell",
+          "rdfs:label": "Bane"
+        },
+        {
+          "@id": "spell:Burninghands",
+          "@type": "spell:Spell",
+          "rdfs:label": "Burning Hands"
+        },
+        {
+          "@id": "spell:Charmperson",
+          "@type": "spell:Spell",
+          "rdfs:label": "Charm Person"
+        },
+        {
+          "@id": "spell:ChromaticOrb",
+          "@type": "spell:Spell",
+          "rdfs:label": "Chromatic Orb"
+        },
+        {
+          "@id": "spell:Damned",
+          "@type": "spell:Spell",
+          "rdfs:label": "Damned"
+        },
+        {
+          "@id": "spell:Etheralblades",
+          "@type": "spell:Spell",
+          "rdfs:label": "Ethereal Blades"
+        },
+        {
+          "@id": "spell:Featherfall",
+          "@type": "spell:Spell",
+          "rdfs:label": "Feather Fall"
+        },
+        {
+          "@id": "spell:Frozenarmor",
+          "@type": "spell:Spell",
+          "rdfs:label": "Frozen Armor"
+        },
+        {
+          "@id": "spell:Hex",
+          "@type": "spell:Spell",
+          "rdfs:label": "Hex"
+        },
+        {
+          "@id": "spell:Malediction",
+          "@type": "spell:Spell",
+          "rdfs:label": "Malediction"
+        },
+        {
+          "@id": "spell:Mindsear",
+          "@type": "spell:Spell",
+          "rdfs:label": "Mind Sear"
+        },
+        {
+          "@id": "spell:Phantomsteed",
+          "@type": "spell:Spell",
+          "rdfs:label": "Phantom Steed"
+        },
+        {
+          "@id": "spell:Phaseblade",
+          "@type": "spell:Spell",
+          "rdfs:label": "Phase Blade"
+        },
+        {
+          "@id": "spell:Shield",
+          "@type": "spell:Spell",
+          "rdfs:label": "Shield"
+        },
+        {
+          "@id": "spell:Rayofsickness",
+          "@type": "spell:Spell",
+          "rdfs:label": "Ray of Sickness"
+        },
+        {
+          "@id": "spell:Summon",
+          "@type": "spell:Spell",
+          "rdfs:label": "Summon"
+        },
+        {
+          "@id": "spell:Thunderblast",
+          "@type": "spell:Spell",
+          "rdfs:label": "Thunder Blast"
+        },
+        {
+          "@id": "spell:Witcharch",
+          "@type": "spell:Spell",
+          "rdfs:label": "Witch Arch"
+        },
+        {
+          "@id": "spell:Wreckingorb",
+          "@type": "spell:Spell",
+          "rdfs:label": "Wrecking Orb"
+        }
+      ],
+      "spell-level-2": [
+        {
+          "@id": "spell:Armorofthedamned",
+          "@type": "spell:Spell",
+          "rdfs:label": "Armor of the Damned"
+        },
+        {
+          "@id": "spell:Blur",
+          "@type": "spell:Spell",
+          "rdfs:label": "Blur"
+        },
+        {
+          "@id": "spell:Counterspell",
+          "@type": "spell:Spell",
+          "rdfs:label": "Counterspell"
+        },
+        {
+          "@id": "spell:Crownofmadness",
+          "@type": "spell:Spell",
+          "rdfs:label": "Crown of Madness"
+        },
+        {
+          "@id": "spell:Darkness",
+          "@type": "spell:Spell",
+          "rdfs:label": "Darkness"
+        },
+        {
+          "@id": "spell:Infernalcloak",
+          "@type": "spell:Spell",
+          "rdfs:label": "Infernal Cloak"
+        },
+        {
+          "@id": "spell:Protectionfrombullets",
+          "@type": "spell:Spell",
+          "rdfs:label": "Protection from Bullets"
+        },
+        {
+          "@id": "spell:Puppteer",
+          "@type": "spell:Spell",
+          "rdfs:label": "Puppeteer"
+        }
+      ],
+      "spell-level-3": [
+        {
+          "@id": "spell:Animatedead",
+          "@type": "spell:Spell",
+          "rdfs:label": "Animate Dead"
+        },
+        {
+          "@id": "spell:Culling",
+          "@type": "spell:Spell",
+          "rdfs:label": "Culling"
+        },
+        {
+          "@id": "spell:Displacement",
+          "@type": "spell:Spell",
+          "rdfs:label": "Displacement"
+        },
+        {
+          "@id": "spell:Fireball",
+          "@type": "spell:Spell",
+          "rdfs:label": "Fireball"
+        },
+        {
+          "@id": "spell:Fly",
+          "@type": "spell:Spell",
+          "rdfs:label": "Fly"
+        },
+        {
+          "@id": "spell:Frozenblast",
+          "@type": "spell:Spell",
+          "rdfs:label": "Frozen Blast"
+        },
+        {
+          "@id": "spell:Icestorm",
+          "@type": "spell:Spell",
+          "rdfs:label": "Ice Storm"
+        },
+        {
+          "@id": "spell:Incinerate",
+          "@type": "spell:Spell",
+          "rdfs:label": "Incinerate"
+        },
+        {
+          "@id": "spell:Unwillingshield",
+          "@type": "spell:Spell",
+          "rdfs:label": "Unwilling Shield"
+        }
+      ],
+      "spell-level-4": [
+        {
+          "@id": "spell:Arc",
+          "@type": "spell:Spell",
+          "rdfs:label": "Arc"
+        },
+        {
+          "@id": "spell:Blacktentacles",
+          "@type": "spell:Spell",
+          "rdfs:label": "Black Tentacles"
+        },
+        {
+          "@id": "spell:Conjurespellfighter",
+          "@type": "spell:Spell",
+          "rdfs:label": "Conjure Spellfighter"
+        },
+        {
+          "@id": "spell:Dimensiondoor",
+          "@type": "spell:Spell",
+          "rdfs:label": "Dimension Door"
+        },
+        {
+          "@id": "spell:Meatreceptacle",
+          "@type": "spell:Spell",
+          "rdfs:label": "Meat Receptacle"
+        }
+      ],
+      "spell-level-5": [
+        {
+          "@id": "spell:Heartsqueeze",
+          "@type": "spell:Spell",
+          "rdfs:label": "Heart Squeeze"
+        },
+        {
+          "@id": "spell:Premonition",
+          "@type": "spell:Spell",
+          "rdfs:label": "Premonition"
+        },
+        {
+          "@id": "spell:Starfall",
+          "@type": "spell:Spell",
+          "rdfs:label": "Starfall"
+        }
+      ],
+      "spell-level-6": [
+        {
+          "@id": "spell:Patronaspect",
+          "@type": "spell:Spell",
+          "rdfs:label": "Patron Aspect"
+        },
+        {
+          "@id": "spell:Eldrichtportal",
+          "@type": "spell:Spell",
+          "rdfs:label": "Eldritch Portal"
+        }
+      ]
+    }
+  ]
+}

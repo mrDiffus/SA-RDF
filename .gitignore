@@ -1,0 +1,24 @@
+node_modules/
+build/
+dist/
+coverage/
+.DS_Store
+*.log
+.env*
+
+# .NET / C# project build outputs
+bin/
+obj/
+.vs/
+*.user
+*.dll
+*.exe
+packages/
+.vscode/
+*.csproj.user
+.idea/
+
+# Configuration files with secrets
+appsettings.json
+appsettings.*.json
+!example.appsettings.json

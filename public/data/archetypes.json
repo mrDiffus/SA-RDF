@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "archetype:members": [
+    "arcanist",
+    "devotee",
+    "occultist",
+    "technician",
+    "spacer",
+    "scrounger",
+    "recon",
+    "primitive",
+    "personality",
+    "medical-personnel",
+    "martial-artist",
+    "gunslinger",
+    "cannoneer",
+    "armsman",
+    "ace",
+    "academic"
+  ]
+} 

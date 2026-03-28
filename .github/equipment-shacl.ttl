@@ -1,0 +1,13 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sa: <https://stellararcana.org/> .
+
+sa:EquipmentShaclBundle
+  a owl:Ontology ;
+  rdfs:label "Equipment SHACL Bundle" ;
+  rdfs:comment "Entry-point ontology for modular SHACL files. Load only the module(s) needed for smaller LLM context windows." ;
+  owl:imports <./shacl/shared.ttl> ;
+  owl:imports <./shacl/armor.ttl> ;
+  owl:imports <./shacl/powered-armor.ttl> ;
+  owl:imports <./shacl/weapons.ttl> ;
+  owl:imports <./shacl/wondrous.ttl> .

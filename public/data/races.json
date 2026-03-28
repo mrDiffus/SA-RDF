@@ -1,0 +1,39 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:gnome",
+      "@type": "sa:Race",
+      "rdfs:label": "Gnome",
+      "sa:features": [
+        { "rdfs:label": "Description", "sa:description": "Gnomes are brilliant tinkerers, eccentric inventors, and whimsical survivors who thrive in cluttered workshops and zero-G crawlspaces." },
+        { "rdfs:label": "Ability score increase", "sa:description": "+2 intelligence" },
+        { "rdfs:label": "Gnome Cunning", "sa:description": "You have advantage on all Intelligence, Wisdom, and Charisma Saving Throws against magic." }
+      ]
+    },
+    {
+      "@id": "sa:orc",
+      "@type": "sa:Race",
+      "rdfs:label": "Orc",
+      "sa:features": [
+        { "rdfs:label": "Description", "sa:description": "Orcs are a primal force in the sector, born of survival, honed by battle, and governed by a simple truth: the strong rule, and the weak get eaten." },
+        { "rdfs:label": "Ability score increases", "sa:description": "+4 Str, +2 Con, -2 Int, -2 Cha" },
+        { "rdfs:label": "Rugged", "sa:description": "8 additional hit points" }
+      ]
+    },
+    {
+      "@id": "sa:elf",
+      "@type": "sa:Race",
+      "rdfs:label": "Elf",
+      "sa:features": [
+        { "rdfs:label": "Description", "sa:description": "Elves are graceful, long-lived beings who blend arcane mastery with high art and elevated ideals." },
+        { "rdfs:label": "Ability score increase", "sa:description": "Your Dexterity increases by 2." },
+        { "rdfs:label": "Keen eyes", "sa:description": "You gain proficiency in Perception." }
+      ]
+    }
+  ]
+}

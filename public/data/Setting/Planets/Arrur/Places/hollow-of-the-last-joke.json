@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    }
+  },
+  "type": "Place",
+  "label": "Hollow of the Last Joke",
+  "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza\u2019s Grin, said to originate from his shattered, still-living heart deep underground.",
+  "@id": "https://stellararcana.org/place/hollow-of-the-last-joke",
+  "containedInPlace": "https://stellararcana.org/place/arrur"
+}

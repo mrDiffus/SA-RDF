@@ -1,0 +1,62 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+sa:WonderousItemShape
+  a sh:NodeShape ;
+  sh:targetClass sa:WonderousItem ;
+  rdfs:comment "Compatibility shape for datasets that use the WonderousItem spelling. Constrains the same social-context fields expected for wondrous-item style records." ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:description ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:commonUsage ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+  ] ;
+  sh:property [
+    sh:path [ sh:alternativePath ( sa:societalImpact societalImpact ) ] ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "Provide exactly one societal impact field. Prefer sa:societalImpact for new data." ;
+  ] ;
+  sh:property [
+    sh:path sa:rarity ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "common" "uncommon" "rare" "very-rare" "legendary" "artifact" ) ;
+  ] ;
+  sh:property [
+    sh:path sa:cost ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:legalStatus ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "legal" "restricted" "illegal" ) ;
+  ] ;
+  sh:property [
+    sh:path sa:origin ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+  ] ;
+  sh:property [
+    sh:path sa:manufacturer ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+  ] .

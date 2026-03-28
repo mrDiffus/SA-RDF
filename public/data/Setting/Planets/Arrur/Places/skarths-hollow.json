@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    }
+  },
+  "type": "Place",
+  "label": "Skarth\u2019s Hollow",
+  "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone palisades.",
+  "@id": "https://stellararcana.org/place/skarths-hollow",
+  "containedInPlace": "https://stellararcana.org/place/arrur"
+}

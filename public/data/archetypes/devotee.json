@@ -1,0 +1,500 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/",
+    "spell": "https://stellararcana.org/spell#",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Devotee",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Devotee",
+      "archetype:description": [
+        "Arcanists draw their power from the universe and occultists are self-aggrandizing parasites latched to genuine powers in order to let themselves undertake great feats, but they usually lack the faith to commit to a cause that will only come to fruition generations after they are gone and forgotten. That our cause happens to be at odds with your wish that the universe conform to your strange morals matters not at all. My faith is absolute. The truth of the Ever living empress will sweep away all doubt, can you not see the beauty of it?",
+        "Spellcasters in Stellar Arcana can use spells from DnD 5th edition. Devotees can use the Ritual skill to cast rituals from the Divine spelllist. Additional spells can be found in the Devotee spelllist."
+      ],
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Sense motive"
+          },
+          {
+            "archetype:Skill": "Persuasion"
+          },
+          {
+            "archetype:Skill": "Spellcraft"
+          },
+          {
+            "archetype:Skill": "Knowledge Religion"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Simple weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Light armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Wis"
+          },
+          {
+            "archetype:Save": "Cha"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Path of the Crusader",
+          "sa:description": [
+            "Gain access to the extra attack features as if you had the Armsman archetype. Whenever you inflict damage with a spell or spell-like ability, you gain temporary hit points equal to your proficiency bonus (up to your hit point maximum). These temporary hit points last 10 minutes and renew when you trigger the effect again.",
+            "Gain proficiency with 1 melee weapon and 1 ranged weapon. Gain proficiency with shields and medium armor.",
+            "You can cast the Malediction spell as a Devotee spell even if you do not know it. Your Malediction spell deals radiant damage instead of necrotic damage. Damaging a target affected by your Malediction grants temporary hit points as described above.",
+            "Choosing the Crusader path locks your casting ability for Devotee spells to Charisma.",
+            "Whenever you gain spell points from Devotee features, you gain 1 fewer than normal."
+          ],
+          "sa:prerequisites": [
+            "Must not have chosen another Path feature"
+          ],
+          "sa:cost": "4 xp, Free for Devotee archetypes"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Path of the Witch",
+          "sa:description": [
+            "Gain a familiar.",
+            "Once per long rest, regain half your spell points after a short rest.",
+            "Gain access to 1 Arcane or Occult spell per spell level you can cast. This choice is fixed except when gaining a new feature in a caster chain (Initiate Devotee, Initiate Arcanist, etc)."
+          ],
+          "sa:prerequisites": [
+            "Must not have chosen another Path feature"
+          ],
+          "sa:cost": "4 xp, Free for Devotee archetypes"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Path of the Clergy",
+          "sa:description": [
+            "Gain 2 extra spell points for each feature you gain in a caster chain (Initiate Devotee, Initiate Arcanist, etc).",
+            "Gain a silver symbol of your power, usable as an implement for 3 cantrips of your choice. Once chosen, only obtaining a new symbol allows changes.",
+            "A symbol of power is any item that can be wielded or held. It follows implement rules and increases in cost per the implement table. Add this cost to the base item (e.g., an Elven Silver Sword +2 implement would cost X + Y).",
+            "The symbol should reflect your patron\u2019s style: a devotee to Lolth might choose a tool of torment; one to ArmaniTech might pick a stylish watch or glasses."
+          ],
+          "sa:prerequisites": [
+            "Must not have chosen another Path feature"
+          ],
+          "sa:cost": "4 xp, Free for Devotee archetypes"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Path of the Inquisitor",
+          "sa:description": [
+            "Gain your proficiency bonus as an additional bonus when tracking, gathering information about, or using persuasion or intimidation on your appointed target.",
+            "If you are already proficient, gain this bonus again.",
+            "To appoint a creature as your target, you must know its identity (by name or detail) and have a justification (divine order, legal warrant, or personal motivation such as revenge or greed). Personal motives may not be lawful.",
+            "Gain proficiency with at least 1 martial melee and 1 martial ranged weapon. If not already proficient, you gain these proficiencies.",
+            "Once per short rest, you may gain advantage on one check made to justify your methods."
+          ],
+          "sa:prerequisites": [
+            "Must not have chosen another Path feature"
+          ],
+          "sa:cost": "4 xp, Free for Devotee archetypes"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Initiate Devotee",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Gain the ability to cast Devotee Cantrips. Gain the ability to cast level 1 Devotee spells and rituals. Select either Charisma or Wisdom as your casting ability. This choice cannot be changed after being made. To cast a spell you must spend its spellpoint cost, normally equal to its level. Rituals do not cost spellpoints. Gain Spellpoints equal to your Proficiency bonus. As your proficiency bonus increases your spellpoints increase as well. To cast a spell or ritual you need to have it in your spellbook."
+          ],
+          "sa:cost": "2 xp Free for Devotee archetypes"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Apprentice Devotee",
+          "sa:prerequisites": [
+            "Initiate Devotee"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 2 Devotee spells and rituals. Gain 3 spellpoints. Select and 2 level 2 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Journeyman Devotee",
+          "sa:prerequisites": [
+            "Apprentice Devotee"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 3 Devotee spells and rituals. Gain 5 spellpoints. Select and 2 level 3 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Expert Devotee",
+          "sa:prerequisites": [
+            "Journeyman Devotee"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 4 Devotee spells and rituals. Gain 7 spellpoints. Select and 2 level 4 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Master Devotee",
+          "sa:prerequisites": [
+            "Expert Devotee"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 5 Devotee spells and rituals. Gain 8 spellpoints. Select and 2 level 5 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Grand Master Devotee",
+          "sa:prerequisites": [
+            "Master Devotee"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 6 and higher rituals. Gain 10 spellpoints. Select and 2 level 6 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Exemplar Devotee",
+          "sa:prerequisites": [
+            "Grand Master Devotee"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 7 and higher rituals. Gain 12 spellpoints. Select and 2 level 7 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Grand Exemplar Devotee",
+          "sa:prerequisites": [
+            "Exemplar Devotee"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 8 and higher rituals. Gain 14 spellpoints. Select and 2 level 8 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "The cause incarnate",
+          "sa:prerequisites": [
+            "Grand Exemplar Devotee"
+          ],
+          "sa:description": [
+            "Gain the ability to cast level 9 and higher rituals. Gain 16 spellpoints. Select and 2 level 9 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Turn undead",
+          "sa:prerequisites": [
+            "Initiate Devotee"
+          ],
+          "sa:description": [
+            "Spend an attack action and up to your proficiency bonus in spellpoints and force all undead within 60 ft that you have line of effect to save against your spell DC or take 1d6 damage for each spellpoint you spent. Undead killed by this damage are reduced completely to a fine dust that drifts directly away from you, as if carried by a gentle breeze."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Cure wounds",
+          "sa:prerequisites": [
+            "Apprentice Devotee"
+          ],
+          "sa:description": [
+            "Spend 1 hour and make a casting check equal to 10 + the amount of wounds you want to heal. If you make the check, heal the wanted amount of wounds suffered by a single target by spending 2 spellpoints for each wound healed. Spend 1 minute, make a casting check DC 15 and spend 3 spellpoints and cure 1 wound. Spend 1 round, make a casting check DC 15 and spend 5 spellpoints and cure 1 wound. As a reaction, make a casting DC 15 check, spend 5 spellpoints, and cure 1 wound from a target you can touch while taking 1 wound yourself."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Touch of grace",
+          "sa:prerequisites": [
+            "Initiate Devotee"
+          ],
+          "sa:description": [
+            "Spend a bonus action to make an undead creature within 90 ft that you have line of effect to fall to its knees, be rooted to the ground (speed set to 0) for a number of rounds equal to your proficiency bonus and take 1d6 radiant damage. The target can make a wisdom save vs your casting DC to avoid the speed reduction. Damage from any source other than this feature automatically makes the target save vs the speed reduction."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Paragon of the faith - Crusader",
+          "sa:prerequisites": [
+            "Expert Devotee",
+            "Path of the Crusader"
+          ],
+          "sa:description": [
+            "Path choice: this feature is mutually exclusive with Paragon of the faith - Witch, Paragon of the faith - Inquisitor, and Paragon of the faith - Clergy. Once you select this feature you cannot select another Paragon of the faith feature. Judgment - Whenever you make an attack roll with a weapon you are attuned to, add your Charisma modifier to the damage roll in addition to the STR or DEX mod. If you do not have access to a magical weapon that needs attunement you can spend 4 hours meditating with a weapon of your choice. During the meditation, you etch the weapon with the symbols of your faith. If the weapon is used to deal damage against someone of your own faith, the bonus disappears until you have atoned for your actions, regardless of whether you wielding the weapon at the time. Judgment does not stack with Arcane Strike. You can as a bonus action cause a target to make a Wisdom save against 8 + your CHA bonus + your proficiency bonus. Failure means that the target is immobilized until the start of your next turn. The visual effect varies from faith to faith. A Crusader of Lolth could bind his target with shadowy webs while a Crusader devoted to the powers of Nilaama could cause an ethereal prison to spring into being around the target."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Paragon of the faith - Witch",
+          "sa:prerequisites": [
+            "Expert Devotee",
+            "Path of the Witch"
+          ],
+          "sa:description": [
+            "Path choice: this feature is mutually exclusive with Paragon of the faith - Crusader, Paragon of the faith - Inquisitor, and Paragon of the faith - Clergy. Once you select this feature you cannot select another Paragon of the faith feature. Gain access to an additional Arcane or Occult spell per spell level. Evil Eye - As a bonus action cause a target within 30 ft to gain disadvantage on the next save it makes within 2 rounds. Evil eye can be used a number of times equal to your proficiency bonus per short rest. Imbue Abode - You can cause your home to gain a limited sentience. Whatever building, ship or part of a building or ship you call a home is permanently covered by an alarm spell that alerts you when creatures other than the ones specified by you enter it. Your home will prepare meals for when you come home, adjust the heating, water plants and do other menial household chores by means of an animated ethereal servant. To move the effect to a new home you have to sleep at least 7 nights in it and spend the 8th morning completing a 1 hour ritual where you walk from room to room and fix a mental image of how you want your home to present itself."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Paragon of the faith - Inquisitor",
+          "sa:prerequisites": [
+            "Expert Devotee",
+            "Path of the Inquisitor"
+          ],
+          "sa:description": [
+            "Path choice: this feature is mutually exclusive with Paragon of the faith - Crusader, Paragon of the faith - Witch, and Paragon of the faith - Clergy. Once you select this feature you cannot select another Paragon of the faith feature. Gain the Stainless Personality feature. As long as your faith is present in the society you're interacting with, you can gain advantage on ability checks made to justify your methods a number of times equal to your proficiency bonus + 2 per short rest. Creatures your faith has designated as enemies of your faith gain disadvantage on all saves vs fear effects you cause."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Paragon of the faith - Clergy",
+          "sa:prerequisites": [
+            "Expert Devotee",
+            "Path of the Clergy"
+          ],
+          "sa:description": [
+            "Path choice: this feature is mutually exclusive with Paragon of the faith - Crusader, Paragon of the faith - Witch, and Paragon of the faith - Inquisitor. Once you select this feature you cannot select another Paragon of the faith feature. Gain one additional spellpoint for each feature you gain in a caster chain. When casting cantrips that use your holy symbol as an implement that require an attack roll, gain +1 on the attack roll. When casting cantrips that use your holy symbol as an implement that requires the target to make a saving throw, treat your spell DC as 1 higher."
+          ],
+          "sa:cost": "3 xp"
+        }
+      ],
+      "spell-level-0": [
+        {
+          "@id": "spell:Toolsoftheblessed",
+          "@type": "spell:Spell",
+          "rdfs:label": "Tools of the Blessed"
+        },
+        {
+          "@id": "spell:Createwater",
+          "@type": "spell:Spell",
+          "rdfs:label": "Create Water"
+        },
+        {
+          "@id": "spell:Holybolt",
+          "@type": "spell:Spell",
+          "rdfs:label": "Holy Bolt"
+        },
+        {
+          "@id": "spell:Light",
+          "@type": "spell:Spell",
+          "rdfs:label": "Light"
+        },
+        {
+          "@id": "spell:Sacredflame",
+          "@type": "spell:Spell",
+          "rdfs:label": "Sacred Flame"
+        },
+        {
+          "@id": "spell:Thaumaturgy",
+          "@type": "spell:Spell",
+          "rdfs:label": "Thaumaturgy"
+        }
+      ],
+      "spell-level-1": [
+        {
+          "@id": "spell:Abundantammunition",
+          "@type": "spell:Spell",
+          "rdfs:label": "Abundant Ammunition"
+        },
+        {
+          "@id": "spell:Bane",
+          "@type": "spell:Spell",
+          "rdfs:label": "Bane"
+        },
+        {
+          "@id": "spell:Bless",
+          "@type": "spell:Spell",
+          "rdfs:label": "Bless"
+        },
+        {
+          "@id": "spell:Charmperson",
+          "@type": "spell:Spell",
+          "rdfs:label": "Charm Person"
+        },
+        {
+          "@id": "spell:Damned",
+          "@type": "spell:Spell",
+          "rdfs:label": "Damned"
+        },
+        {
+          "@id": "spell:Favoured",
+          "@type": "spell:Spell",
+          "rdfs:label": "Favoured"
+        },
+        {
+          "@id": "spell:Guidingbolt",
+          "@type": "spell:Spell",
+          "rdfs:label": "Guiding Bolt"
+        },
+        {
+          "@id": "spell:Healingword",
+          "@type": "spell:Spell",
+          "rdfs:label": "Healing Word"
+        },
+        {
+          "@id": "spell:Inflictwounds",
+          "@type": "spell:Spell",
+          "rdfs:label": "Inflict Wounds"
+        },
+        {
+          "@id": "spell:Phantomsteed",
+          "@type": "spell:Spell",
+          "rdfs:label": "Phantom Steed"
+        },
+        {
+          "@id": "spell:Refreshvitality",
+          "@type": "spell:Spell",
+          "rdfs:label": "Refresh Vitality"
+        },
+        {
+          "@id": "spell:Sanctuary",
+          "@type": "spell:Spell",
+          "rdfs:label": "Sanctuary"
+        },
+        {
+          "@id": "spell:Sacredshield",
+          "@type": "spell:Spell",
+          "rdfs:label": "Sacred Shield"
+        },
+        {
+          "@id": "spell:Summon",
+          "@type": "spell:Spell",
+          "rdfs:label": "Summon"
+        },
+        {
+          "@id": "spell:Floatingdisk",
+          "@type": "spell:Spell",
+          "rdfs:label": "Floating Disk"
+        },
+        {
+          "@id": "spell:Thunderusslam",
+          "@type": "spell:Spell",
+          "rdfs:label": "Thunderus Slam"
+        }
+      ],
+      "spell-level-2": [
+        {
+          "@id": "spell:Armorofthefaithfull",
+          "@type": "spell:Spell",
+          "rdfs:label": "Armor of the Faithful"
+        },
+        {
+          "@id": "spell:Createundeath",
+          "@type": "spell:Spell",
+          "rdfs:label": "Create Undeath"
+        },
+        {
+          "@id": "spell:Darkness",
+          "@type": "spell:Spell",
+          "rdfs:label": "Darkness"
+        },
+        {
+          "@id": "spell:Faeriefire",
+          "@type": "spell:Spell",
+          "rdfs:label": "Faerie Fire"
+        },
+        {
+          "@id": "spell:Resistance",
+          "@type": "spell:Spell",
+          "rdfs:label": "Resistance"
+        },
+        {
+          "@id": "spell:Sanctified",
+          "@type": "spell:Spell",
+          "rdfs:label": "Sanctified"
+        },
+        {
+          "@id": "spell:Shieldother",
+          "@type": "spell:Spell",
+          "rdfs:label": "Shield Other"
+        }
+      ],
+      "spell-level-3": [
+        {
+          "@id": "spell:Animatedead",
+          "@type": "spell:Spell",
+          "rdfs:label": "Animate Dead"
+        },
+        {
+          "@id": "spell:Incinerate",
+          "@type": "spell:Spell",
+          "rdfs:label": "Incinerate"
+        },
+        {
+          "@id": "spell:Restoration",
+          "@type": "spell:Spell",
+          "rdfs:label": "Restoration"
+        }
+      ],
+      "spell-level-4": [
+        {
+          "@id": "spell:Barrier",
+          "@type": "spell:Spell",
+          "rdfs:label": "Barrier"
+        },
+        {
+          "@id": "spell:Conjurespellfighter",
+          "@type": "spell:Spell",
+          "rdfs:label": "Conjure Spellfighter"
+        },
+        {
+          "@id": "spell:Raisedead",
+          "@type": "spell:Spell",
+          "rdfs:label": "Raise Dead"
+        },
+        {
+          "@id": "spell:Recharge",
+          "@type": "spell:Spell",
+          "rdfs:label": "Recharge"
+        }
+      ],
+      "spell-level-5": [
+        {
+          "@id": "spell:Starfall",
+          "@type": "spell:Spell",
+          "rdfs:label": "Starfall"
+        },
+        {
+          "@id": "spell:Attunedtotheuniverse",
+          "@type": "spell:Spell",
+          "rdfs:label": "Attuned to the Universe"
+        }
+      ],
+      "spell-level-6": [
+        {
+          "@id": "spell:Armyofthedead",
+          "@type": "spell:Spell",
+          "rdfs:label": "Army of the Dead"
+        }
+      ]
+    }
+  ]
+}

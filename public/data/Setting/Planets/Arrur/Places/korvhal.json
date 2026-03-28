@@ -1,0 +1,17 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    }
+  },
+  "type": "Place",
+  "label": "Korvhal",
+  "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through the highlands.",
+  "@id": "https://stellararcana.org/place/korvhal",
+  "containedInPlace": "https://stellararcana.org/place/arrur"
+}

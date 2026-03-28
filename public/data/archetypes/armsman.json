@@ -1,0 +1,225 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Armsman",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Armsman",
+      "archetype:description": "Swords, hammers and pikes served humanity for thousands of years, why go against tradition? Pistols need bullets and lasers need batteries. All you need is a length of sharpened or weighted steel and the world is your oyster.",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Athletics"
+          },
+          {
+            "archetype:Skill": "Intimidate"
+          },
+          {
+            "archetype:Skill": "Survival"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "All martial melee weapons"
+          },
+          {
+            "archetype:Weapon": "Archaic weapons"
+          },
+          {
+            "archetype:Weapon": "Simple"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Heavy armor"
+          },
+          {
+            "archetype:Armor": "Medium armor"
+          },
+          {
+            "archetype:Armor": "Light armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Str"
+          },
+          {
+            "archetype:Save": "Dex"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Extra effort",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Gain a number of effort dice equal to your proficiency modifier. An effort die is by default a D8. When you take a short rest you regain 1 effort die. Whenever you do damage to a target with a melee weapon or ability you can spend an effort die to add the effort die result to the damage done. If you deal damage to several targets with one attack, choose one target that takes the extra damage. Regain all effort dice on a long rest."
+          ],
+          "sa:cost": "Free for Armsman Archetype or 1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Elegance",
+          "sa:prerequisites": [
+            "Extra effort"
+          ],
+          "sa:description": [
+            "When you attack using a melee weapon with the finesse or elegant tag, add 2 to the damage roll"
+          ],
+          "sa:cost": "Free for Armsman Archetype 2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Brute",
+          "sa:prerequisites": [
+            "Extra effort"
+          ],
+          "sa:description": [
+            "When you attack using a melee weapon that is at least medium size or has the Heavy tag, add 2 to damage roll"
+          ],
+          "sa:cost": "Free for Armsman Archetype 2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Riposte",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "If you are wielding a melee weapon, spend your reaction to turn a melee attack against you into a melee attack contest. The winner inflicts damage to the loser as if they landed a normal attack. You can use this ability a number of times equal to your proficiency bonus. You regain 1 use on a short rest and all uses on a long rest."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Heavy handed",
+          "sa:prerequisites": [
+            "Extra effort",
+            "Brute"
+          ],
+          "sa:description": [
+            "Gain 1 extra effort die. Once per round when making a melee weapon attack using a melee weapon with the heavy tag, you can spend an effort die and add the result to the damage done and force any target or targets you damage with the melee attack to make a DEX or STR save vs your melee ability DC or be knocked prone."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Fine form",
+          "sa:prerequisites": [
+            "Brute or Elegance"
+          ],
+          "sa:description": [
+            "Once per round you can initiate a melee weapon attack contest with a target you just hit with a melee weapon attack. If you win the contest deal your normal melee damage to the target. If the target is not wielding a melee weapon, you automatically win the contest. If you are dual wielding, deal damage with both wielded weapons, but only add your STR or DEX mod once. If you lose the contest your target deals damage to you equal to its proficiency bonus. You can choose to spend an effort die when using Fine Form. If you do add roll an additional die and add the total to the damage done."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Exquisite form",
+          "sa:prerequisites": [
+            "Brute or Elegance"
+          ],
+          "sa:description": [
+            "You can use Fine Form one additional time per round. When you spend effort dice to add damage to the damage done by Fine Form, increase the die by one step, d8 to d10 and so on."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Reaperman",
+          "sa:prerequisites": [
+            "Brute",
+            "Extra effort"
+          ],
+          "sa:description": [
+            "Gain 1 extra effort die. Spend one effort die to treat any heavy melee weapon you are wielding as if it had the cleaving tag and add the result of the effort die to the damage you deal on your next melee attack."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Crush",
+          "sa:prerequisites": [
+            "Brute",
+            "Heavy handed"
+          ],
+          "sa:description": [
+            "You can spend a bonus action to gain an attack against a target you have just knocked prone or reduced to 0 hit points. This attack does double damage."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Dance of death",
+          "sa:prerequisites": [
+            "Elegance"
+          ],
+          "sa:description": [
+            "Gain 1 extra effort die. Spend one effort die to gain 20 additional movement. Moving at least 5 ft before making an attack adds +2 to your next melee damage roll. This stacks with itself, so moving 5 ft landing 1 attack, moving 5 ft landing an attack and moving another 5 ft and landing a third attack grants you a total of +4 damage on the last attack. Opportunity attacks provoked by your movement made by targets you attack are made with disadvantage."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Free the blood",
+          "sa:prerequisites": [
+            "Elegance",
+            "Extra effort"
+          ],
+          "sa:description": [
+            "Gain 1 extra effort die. Spend an effort die to mark a target. Target remains marked until the start of your next turn. When you land an attack with a melee weapon with the finesse or elegance tag on your marked target inflict 2 bleed damage to your target. Bleed damage from consecutive attacks stack up to your proficiency bonus plus your dexterity modifier. The duration of the bleed effect is equal to a number of rounds equal to your proficiency bonus, but the duration is refreshed when you apply a new bleeding effect on your target from any source but only the most damaging bleed effect does damage. If your target is suffering 5 bleed damage from this feature and you apply a new bleed effect that does 2 damage, the new bleed effect is ignored but the duration of the bleed effect from this feature is reset to a number of rounds equal to your proficiency bonus."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Blood in your eyes",
+          "sa:prerequisites": [
+            "Elegance"
+          ],
+          "sa:description": [
+            "Targets you inflict a bleed effect on must make a dexterity save vs DC 8 + your proficiency bonus + your DEX modifier or gain disadvantage on the next attack roll they make."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Duelist",
+          "sa:prerequisites": [
+            "Elegance"
+          ],
+          "sa:description": [
+            "When you are wielding a melee weapon in one hand and no weapon in the other gain +2 on damage rolls with your wielded weapon."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Massive weapons",
+          "sa:prerequisites": [
+            "Brute"
+          ],
+          "sa:description": [
+            "When you roll damage with a heavy melee weapon or wielding a melee weapon with two hands, reroll 1's and 2's. You have to use the new roll even if it is a 1 or a 2."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Monkey grip",
+          "sa:prerequisites": [
+            "Brute"
+          ],
+          "sa:description": [
+            "You can wield melee weapons that normally need two hands in a single hand. When wielding large weapons this way you do not get the additional STR bonus from the Brute feature. If your other hand is free, gripping your weapon with both hands can be done as part of making an attack or as a free action."
+          ],
+          "sa:cost": "3 xp"
+        }
+      ]
+    }
+  ]
+}

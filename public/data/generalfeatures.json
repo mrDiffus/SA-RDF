@@ -1,0 +1,321 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "D8 Hit dice",
+      "sa:prerequisites": ["D6 hit dice"],
+      "sa:description": [
+        "Your Hit dice increases from D6 to D8. Either reroll your entire HP pool or add 1 hp for each HD you have.",
+        "If you gain other hit dice features from the free features in an archetype use the better one when calculating your hp."
+      ],
+      "sa:cost": "1 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "D10 Hit dice",
+      "sa:prerequisites": ["D8 Hit dice"],
+      "sa:description": [
+        "Your Hit dice increases from D8 to D10. Either reroll your entire HP pool or add 1 hp for each HD you have.",
+        "If you gain other hit dice features from the free features in an archetype use the better one when calculating your hp."
+      ],
+      "sa:cost": "2 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "D12 Hit dice",
+      "sa:prerequisites": ["D10 Hit dice"],
+      "sa:description": [
+        "Your Hit dice increases from D10 to D12. Either reroll your entire HP pool or add 1 hp for each HD you have.",
+        "If you gain other hit dice features from the free features in an archetype use the better one when calculating your hp."
+      ],
+      "sa:cost": "4 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Weapon Proficiency",
+      "sa:prerequisites": [],
+      "sa:description": [
+        "Gain proficiency with a weapon type"
+      ],
+      "sa:cost": "1 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Save Proficiency",
+      "sa:prerequisites": [],
+      "sa:description": [
+        "Gain proficiency with 1 save.",
+        "Can be taken several times, cost increases by 2 xp for each additional time taken."
+      ],
+      "sa:cost": "4 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Skill proficiency",
+      "sa:prerequisites": [],
+      "sa:description": [
+        "Gain proficiency with 1 skill",
+        "Can be taken several times, cost increases by 1 xp for each additional time taken"
+      ],
+      "sa:cost": "2 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Increased ability",
+      "sa:prerequisites": [],
+      "sa:description": [
+        "Increase the maximum ability for one of your abilities by 2 up to a maximum of 24.",
+        "Increase the same ability by 2 up to your maximum ability modifier.",
+        "Can be taken several times, costs increase by 2 xp for each additional time taken."
+      ],
+      "sa:cost": "4 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Ace pilot",
+      "sa:prerequisites": ["Proficient with Pilot or Fly"],
+      "sa:description": [
+        "Select one specific aircraft or spacecraft. Add your proficiency bonus twice on pilot checks made using the chosen aircraft.",
+        "You can choose a new aircraft or spacecraft for this feature by spending at least 1 week flying it and only it."
+      ],
+      "sa:cost": "1 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Great Captain",
+      "sa:prerequisites": ["Proficient with Leadership"],
+      "sa:description": [
+        "Spending your action to make a Charisma(Leadership) check lets a single member of your crew gain advantage on a single skill check, save or attack using your ship depending on your result. For example your pilot can gain advantage on his pilot check and your gunner gain advantage on his weapon systems attack rolls. If your crew members do not make a roll you can give advantage on by the start of your next turn the ability is wasted.",
+        "Alternatively you can cause an attack targeting your ship to gain disadvantage instead of giving one of your crew advantage on a roll. This can alternative can only be used once each turn and only against attacks that you are aware of.",
+        "IF your leadership check is 10 or higher you can choose two crew members, for every 5 points higher your check is over 10 you can designate another crew member to gain advantage on a check.",
+        "You have to be able to communicate your orders to your crew in order to use this ability."
+      ],
+      "sa:cost": "2 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Light armor proficiency",
+      "sa:prerequisites": [],
+      "sa:description": [
+        "Gain light armor proficiency"
+      ],
+      "sa:cost": "1 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Medium armor proficiency",
+      "sa:prerequisites": ["Light armor proficiency"],
+      "sa:description": [
+        "Gain Medium armor proficiency"
+      ],
+      "sa:cost": "1 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Heavy armor proficiency",
+      "sa:prerequisites": ["Medium armor proficiency"],
+      "sa:description": [
+        "Gain Heavy armor proficiency"
+      ],
+      "sa:cost": "1 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Powered armor proficiency",
+      "sa:prerequisites": ["Heavy armor proficiency"],
+      "sa:description": [
+        "Gain Powered armor proficiency"
+      ],
+      "sa:cost": "1 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Unarmored master",
+      "sa:prerequisites": [],
+      "sa:description": [
+        "Gain resistance to spell damage and advantage on saves versus spell effects when you are wearing no armor.",
+        "Gain +1 dex or + 1 con"
+      ],
+      "sa:cost": "4 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Light armor mastery",
+      "sa:prerequisites": ["Light armor proficiency"],
+      "sa:description": [
+        "Gain +1 Str or Dex",
+        "Increase max dex bonus of all light armors by 2 and decrease effective weight of worn light armors by 20 kilos to minimum of 0."
+      ],
+      "sa:cost": "4 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Medium armor mastery",
+      "sa:prerequisites": ["Medium armor proficiency"],
+      "sa:description": [
+        "Gain +1 str or Con",
+        "Increase max dex bonus of all medium armors by 1 and never gain disadvantage on stealth, athletics, acrobatics, fly or ride due to wearing medium armors."
+      ],
+      "sa:cost": "4 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Heavy armor mastery",
+      "sa:prerequisites": ["Heavy armor proficiency"],
+      "sa:description": [
+        "Gain +1 str or Con",
+        "When you are wearing heavy armor the damage you take from nonmagical physical damage is reduced by 3.",
+        "When you are wearing magical heavy armor the damage you take from all physical damage is reduced by 3"
+      ],
+      "sa:cost": "4 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Power armor mastery",
+      "sa:prerequisites": ["Power armor proficiency"],
+      "sa:description": [
+        "Gain +1 str or Con",
+        "When you are wearing non-magical powerarmor you gain resistance to all nonmagical physical damage.",
+        "When you are wearing magical powerarmor you gain resistance to all physical damage."
+      ],
+      "sa:cost": "4 xp"
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Extra attack",
+      "sa:prerequisites": ["Proficient with at least 1 weapon", "Proficiency bonus 3"],
+      "sa:description": [
+        "You can attack twice instead of once when you take the attack action on your turn.",
+        "If you are wielding more than one weapon and spend a bonus action to make attack to gain an extra attack from multi attack, you now gain two extra attacks instead of one neither of which gain your ability bonus as extra damage."
+      ],
+      "sa:cost": "4 xp",
+      "sa:archetypes": ["Gunslinger", "Cannoneer", "Martial artist", "Armsman"]
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Extra attack 2",
+      "sa:prerequisites": ["Extra attack", "Proficiency bonus 4"],
+      "sa:description": [
+        "You can attack three times instead of two times when you take the attack action on your turn."
+      ],
+      "sa:cost": "4 xp",
+      "sa:archetypes": ["Gunslinger", "Cannoneer", "Martial artist", "Armsman"]
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Close quarters",
+      "sa:prerequisites": ["Proficient with one or more ranged weapons"],
+      "sa:description": [
+        "You can use a ranged weapon to good effect in melee and even manage an defence against deadly melee attacks.",
+        "Deal increased damage when using your ranged weapon as an improvised melee weapon. Damage depends on the size of your weapon: Tiny 1d4, Small 1d6, Medium 1d8, Large 1d10, Huge 1d12, no extra damage on criticals.",
+        "Once pr short rest you can choose to count as if you are wielding a melee weapon when targeted by a melee ability as long as you are wielding a ranged weapon."
+      ],
+      "sa:cost": "1 xp",
+      "sa:archetypes": ["Gunslinger", "Cannoneer"]
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Sword and shield style",
+      "sa:prerequisites": ["Proficient with at least 1 one handed weapon", "Shields"],
+      "sa:description": [
+        "Your shield is just another of the weapons in your arsenal.",
+        "You can make make an attack using your wielded shield by spending a bonus action. The shield slam attack deals 1d6 + str mod damage, crit 19-20 +1.",
+        "Shields you wield count as a wielded one handed weapon.",
+        "Even though the name of this feature is Sword and shield style it can be used with any 1 handed weapon and a shield"
+      ],
+      "sa:cost": "3 xp",
+      "sa:archetypes": ["Armsman", "Gunslinger", "Primitive"]
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Rage",
+      "sa:prerequisites": ["D8 HD", "Proficient with a melee weapon"],
+      "sa:description": [
+        "Your anger lends your strengt.",
+        "A rage lasts 1 minute. You can rage a number of times between each long rest equal to your proficiency bonus. Once you reach 7 proficiency bonus your rages last until you willingly exit them and you can rage an unlimited number of times between long rests.",
+        "When raging you gain a damage bonus to melee attack equal to your proficiency -1 and resistance to slashing, piercing, bludgeoning and ballistic damage.",
+        "You can enter a rage as a bonus action. Leaving a rage is a free action.",
+        "When raging you cannot use any skills with the exception of athletics, acrobatics and intimidate",
+        "If you can cast spells you can't cast them or concentrate on them while raging."
+      ],
+      "sa:cost": "3 xp",
+      "sa:archetypes": ["Primitive", "Armsman", "Martial artist"]
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Frenzy",
+      "sa:prerequisites": ["Rage", "D12 HD"],
+      "sa:description": [
+        "Your anger burns white hot turning you into a whirlwind of melee attacks.",
+        "When you rage you can also choose to enter a frenzy, when you do you can make an extra melee attack as a bonus action whenever you take the attack action.",
+        "If you hit with a melee attack gained from spending a bonus action to gain an extra attack using dual wielding while in a frenzy you can choose to deal extra damage equal to the weapon damage from both weapons. For example if you are wielding a longsword and a shortsword you can choose to deal 1d8 + 1d6 extra damage if both attacks hit.",
+        "Upon exiting a frezy you gain a level of exhaustion."
+      ],
+      "sa:cost": "4 xp",
+      "sa:archetypes": ["Primitive", "Armsman", "Martial artist"]
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Manually propelled shrapnel and other bits",
+      "sa:prerequisites": ["Proficiency with 1 or more melee weapons with the heavy or cleaving tag"],
+      "sa:description": [
+        "When you kill you kill with overwhelming damage and power propelling bone and armor into adjacent targets.",
+        "When you kill a target using a heavy or cleaving melee weapon, you can choose to inflict your proficiency bonus plus your str or dex bonus, whichever was used to make the attack, as damage to 1 target adjacent to the target you just damaged."
+      ],
+      "sa:cost": "2 xp",
+      "sa:archetypes": ["Armsman", "Martial artist", "Primitive"]
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Shrapnel blasts",
+      "sa:prerequisites": ["Proficiency with 1 or more heavy ranged weapons", "Proficiency with 1 or more system weapons"],
+      "sa:description": [
+        "As you fill your targets with bullets and munitions, shrapnel and ricochets hit adjacency targets.",
+        "When you kill a target or destroy a vehicle or building you can inflict your proficiency bonus plus your dexterity bonus to targets adjacent to or inside the target you just killed or destroyed. You cannot pick and choose targets, either all adjacent targets take damage or none do.",
+        "This damage is in addition to any damage targets inside vehicles or structures may take from their destruction and likely collapse."
+      ],
+      "sa:cost": "2 xp",
+      "sa:archetypes": ["Cannoneer", "Gunslinger"]
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Dismissed",
+      "sa:prerequisites": ["Always armed", "Elegance or Brute"],
+      "sa:description": [
+        "As your foes reel from your attacks you seize upon their loss of balance and drive home your advantage.",
+        "Whenever you roll damage equal to your maximum damage on a melee attack you can cause your next attack against the target to if it hits to deal damage as if it was a critical hit. This attack can also trigger the fear effect part of the Execute action.",
+        "If the damage of your melee weapon uses two or more dice you gain the benefit of dismissed whenever you deal damage equal to 1 lower than your maximum damage for each additional dice after the first. In effect rolls of 11 and 12 for 2d6 qualify and rolls of 10,11 and 12 qualify for 3d4."
+      ],
+      "sa:cost": "3 xp",
+      "sa:archetypes": ["Armsman", "Martial artist"]
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Flurry of steel",
+      "sa:prerequisites": ["Flurry of blows", "Proficiency with at least 1 melee weapon"],
+      "sa:description": [
+        "You can extend the benefit from your flurry of blows to benefit a single type of melee weapon.",
+        "Choose one melee weapon you are proficient with, you can use this weapon with the flurry of blows feature.",
+        "This feature can be gained more than once, but applies to a new weapon each time."
+      ],
+      "sa:cost": "4 xp",
+      "sa:archetypes": ["Martial Artist"]
+    },
+    {
+      "@type": "sa:Feature",
+      "rdfs:label": "Guarder shooter",
+      "sa:prerequisites": ["Proficient with unarmed attacks", "Proficient with at least 1 ranged weapon"],
+      "sa:description": [
+        "You can keep your cool and your shots still hit their mark when the swords or claws are flying at your face.",
+        "Do not gain disadvantage when you attack using a ranged weapon when you are within melee reach of hostile creatures."
+      ],
+      "sa:cost": "3 xp",
+      "sa:archetypes": ["Martial artist AND either of", "Gunslinger or Recon"]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "description": "https://schema.org/description",
+    "containsPlace": {
+      "@id": "https://schema.org/containsPlace",
+      "@container": "@list"
+    },
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    },
+    "attitude": "https://stellararcana.org/attitude",
+    "descriptionSegment": {
+      "@id": "https://stellararcana.org/descriptionSegment",
+      "@container": "@list"
+    }
+  },
+  "type": "Place",
+  "label": "Bloodrift",
+  "description": [
+    "A vertical fortress-city carved into the cliffs of a massive canyon on Arrur, central to war and trade.",
+    "Population: ~30,000 hardened souls. Mostly orcs, a scattering of halflings, dwarves, and a few desperate humans.",
+    "Geography: Built into cliff walls and along crumbling ledges descending into the Bloodrift canyon \u2014 vertical living is a necessity.",
+    "Economy: Imports high-end weaponry, magic artifacts, and atmospheric processors. Exports war material, mercenary contracts, and scavenged ancient tech.",
+    "Culture: Aggressive pragmatism. Honor is measured in how much you can haul up from the Rift and how many times you climb back down again."
+  ],
+  "@id": "https://stellararcana.org/place/bloodrift",
+  "containedInPlace": "https://stellararcana.org/place/arrur",
+  "containsPlace": [
+    {
+      "label": "The Mawport",
+      "description": "The spaceport plateau \u2014 fortified, heavily militarized, ringed with anti-orbital guns."
+    },
+    {
+      "label": "The Chainmarkets",
+      "description": "Suspended markets built into iron scaffolding along the cliffs. You buy and sell midair."
+    },
+    {
+      "label": "The Clutch",
+      "description": "The dense, tangled lower city where the poorest dwell in nets, cages, and shanties."
+    },
+    {
+      "label": "The Redsteel Hall",
+      "description": "The main gathering hall for mercenary companies \u2014 contracts are fought over with ritualized knife duels."
+    },
+    {
+      "label": "The Blackcradle",
+      "description": "Deepest known cavern accessible from Bloodrift, rumored to house an entire forgotten race \u2014 or worse."
+    }
+  ],
+  "attitude": [
+    "Bloodrift doesn't apologize.",
+    "Bloodrift doesn't beg.",
+    "Bloodrift trades blood for steel and laughter for guns.",
+    "To survive here, you climb higher than your enemies and cut the ropes behind you."
+  ]
+}

@@ -1,0 +1,186 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "sa:description": "sa:description",
+    "sa:commonUsage": "sa:commonUsage",
+    "societalImpact": "sa:societalImpact",
+    "sa:rarity": "sa:rarity",
+    "sa:cost": "sa:cost",
+    "sa:legalStatus": "sa:legalStatus",
+    "type": "@type",
+    "origin": "sa:origin",
+    "manufacturer": "sa:manufacturer"
+  },
+  "@graph": [
+    {
+      "@id": "sa:WondrousItemList",
+      "@type": "sa:WondrousItem",
+      "rdfs:label": "Wondrous Items",
+      "sa:items": [
+        {
+          "@type": "sa:WondrousItem",
+          "rdfs:label": "Glyphthread Undergarments",
+          "sa:description": "Breathable underlayers woven with hygienic glyphs. They prevent odor, repair themselves, and adjust to temperature changes.",
+          "sa:commonUsage": "Worn by citizens across all climates, professions, and stations.",
+          "sa:societalImpact": "Has virtually eliminated sweat and laundry from everyday life, shifting cleanliness standards and class signals.",
+          "sa:rarity": "common",
+          "sa:cost": 120,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "@type": "sa:WondrousItem",
+          "rdfs:label": "Whispering Contacts",
+          "sa:description": "Disposable magical lenses that allow subvocal communication within 1 km of another paired user.",
+          "sa:commonUsage": "Used by professionals, students, lovers, and criminals.",
+          "sa:societalImpact": "Redefined how people argue, cheat, or conspire — now done with barely a twitch.",
+          "sa:rarity": "common",
+          "sa:cost": 180,
+          "sa:legalStatus": "restricted"
+        },
+        {
+          "@type": "sa:WondrousItem",
+          "rdfs:label": "Soulmark Authenticator",
+          "sa:description": "A personal magic ID embedded in jewelry or subdermal crystals, tied to your soul's magical signature.",
+          "sa:commonUsage": "Used for personal security, unlocking devices, and accessing bank accounts.",
+          "sa:societalImpact": "Has replaced keys and passwords. Also allows state or corporate tracking — a concern in surveillance-heavy societies.",
+          "sa:rarity": "common",
+          "sa:cost": 150,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "@type": "sa:WondrousItem",
+          "rdfs:label": "Arcanodex",
+          "sa:description": "A portable device housing knowledge-spirits, capable of answering questions, casting simple diagnostics, or streaming spells.",
+          "sa:commonUsage": "Carried by students, mages, mechanics, and bureaucrats.",
+          "sa:societalImpact": "Encourages magical literacy but fosters dependence. Known to cause 'arcanodex rot' — a decline in deep magical understanding.",
+          "sa:rarity": "common",
+          "sa:cost": 190,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "@type": "sa:AlchemicalSubstance",
+          "rdfs:label": "Nullbrick Paint",
+          "sa:description": "A magical paint additive that blocks teleportation, scrying, and phase intrusion through walls.",
+          "sa:commonUsage": "Applied in homes, boardrooms, vaults, and panic rooms.",
+          "sa:societalImpact": "Standard in modern construction. Also weaponized by criminals to hide from leyline surveillance.",
+          "sa:rarity": "common",
+          "sa:cost": 160,
+          "sa:legalStatus": "restricted"
+        },
+        {
+          "@type": "sa:WondrousItem",
+          "rdfs:label": "Mourning Candle",
+          "sa:description": "A grief-absorbing candle that eases emotional trauma and preserves emotional echoes of the departed.",
+          "sa:commonUsage": "Used in funerals, hospice care, and front-line barracks.",
+          "sa:societalImpact": "Helps emotional healing but has led to reliance and emotional numbing in some cultures.",
+          "sa:rarity": "common",
+          "sa:cost": 60,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "@type": "sa:WondrousItem",
+          "rdfs:label": "Snapshade Halo",
+          "sa:description": "A stylish circlet that subtly alters facial expressions, tone, and appearance using illusion magic.",
+          "sa:commonUsage": "Popular with influencers, job-seekers, and the socially anxious.",
+          "sa:societalImpact": "Blurs the line between truth and presentation, affecting trust in social interactions.",
+          "sa:rarity": "common",
+          "sa:cost": 140,
+          "sa:legalStatus": "restricted"
+        },
+        {
+          "@type": "sa:ArcanoTech",
+          "rdfs:label": "Leywave Charger",
+          "sa:description": "A flat platform that charges magical or hybrid devices using ambient ley energy.",
+          "sa:commonUsage": "Standard fixture in homes, vehicles, and cafes.",
+          "sa:societalImpact": "Provides near-universal power access — and an opportunity for leyline siphoning and power theft.",
+          "sa:rarity": "common",
+          "sa:cost": 100,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "@type": "sa:BoundConstruct",
+          "rdfs:label": "Civic Familiar",
+          "sa:description": "A state-issued micro-familiar that delivers alerts, guidance, and public information.",
+          "sa:commonUsage": "Given to citizens upon registration or birth.",
+          "sa:societalImpact": "Balances helpful services with intrusive surveillance. Abused by authoritarian regimes and protective parents alike.",
+          "sa:rarity": "common",
+          "sa:cost": 0,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "@type": "sa:AlchemicalItem",
+          "rdfs:label": "Sundraft Sachet",
+          "sa:description": "A single-use climate pouch that warms or cools a small room for an hour.",
+          "sa:commonUsage": "Thrown at dinner parties, work meetings, and commuter pods.",
+          "sa:societalImpact": "Climate control is ritualized and cultural. Known to be used romantically and politically.",
+          "sa:rarity": "common",
+          "sa:cost": 30,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "type": "sa:WondrousItem",
+          "rdfs:label": "Whispershade Mantle",
+          "sa:description": "A sleek, shimmering cloak that muffles your movements and cloaks your outline in soft shadow. Grants advantage on Stealth checks in dim light or darker.",
+          "sa:commonUsage": "Favored by spies, thieves, and diplomatic bodyguards.",
+          "societalImpact": "Often used by corporate agents and rogue influencers. Wearing one is both a fashion statement and a warning.",
+          "sa:rarity": "uncommon",
+          "sa:cost": 850,
+          "sa:legalStatus": "restricted"
+        },
+        {
+          "type": "sa:WondrousItem",
+          "rdfs:label": "Mnemonic Prism",
+          "sa:description": "A small crystal cube that passively records the last minute of your conscious sensory experience. Once per sleep cycle, you can activate it to replay a 60-second scene with perfect clarity. Grants advantage on Insight or Investigation rolls when referencing the memory.",
+          "sa:commonUsage": "Used by detectives, students, and courtroom witnesses.",
+          "societalImpact": "Trust in human memory is fading. Some cultures require the use of mnemonic recordings during testimony.",
+          "sa:rarity": "uncommon",
+          "sa:cost": 500,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "type": "sa:WondrousItem",
+          "rdfs:label": "Oathbrand Ring",
+          "sa:description": "A forged loop of alloyed mithglass and runestone that burns a sigil into the back of your hands and forehead when you break a spoken promise. While worn, you have advantage on Persuasion checks when vowing to complete something.",
+          "sa:commonUsage": "Given to envoys, arbitrators, and oathbound warriors.",
+          "societalImpact": "Cultures that value honor use these as lie detectors. Refusing to wear one may be considered an insult.",
+          "sa:rarity": "uncommon",
+          "sa:cost": 600,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "type": "sa:ArcanoTech",
+          "rdfs:label": "Pulseweave Gloves",
+          "sa:description": "Fingerless gloves that sync with your biofield. Once per rest cycle, you can channel energy through them to stabilize a dying creature or deal +1d6 force damage on a successful melee hit.",
+          "sa:commonUsage": "Popular among field medics and melee spellcasters.",
+          "societalImpact": "Their dual-purpose nature makes them popular among both healers and brawlers. Some cultures see their use as ethically complex.",
+          "sa:rarity": "uncommon",
+          "sa:cost": 1200,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "type": "sa:WondrousItem",
+          "rdfs:label": "Tuning Spike",
+          "sa:description": "A collapsible tuning fork carved from dragonbone and aethersteel. When planted in the ground and activated, it emits a low hum that disrupts chaotic magical effects. Grants advantage on saving throws against wild magic or environmental spell effects within 10 ft (once per sleep cycle).",
+          "sa:commonUsage": "Used by expedition teams and planar surveyors.",
+          "societalImpact": "Standard issue for those traveling through unstable zones. Sometimes seen as a warding charm or good-luck ritual.",
+          "sa:rarity": "uncommon",
+          "sa:cost": 1750,
+          "sa:legalStatus": "restricted"
+        },
+        {
+          "type": "sa:WondrousItem",
+          "rdfs:label": "Gilded Mirrorbadge",
+          "sa:description": "A decorative insignia that reflects both light and intent. Once per day, when targeted by a charm, you may reflect the effect back to the caster as a reaction. Also grants a +1 bonus to saves against Enchantment effects.",
+          "sa:commonUsage": "Worn by noble courtiers, dueling diplomats, and counter-espionage agents.",
+          "societalImpact": "Symbol of status and paranoia in high circles. Knockoffs abound but don’t function properly.",
+          "sa:rarity": "uncommon",
+          "sa:cost": 2000,
+          "sa:legalStatus": "restricted"
+        }
+      ]
+    }
+  ]
+}

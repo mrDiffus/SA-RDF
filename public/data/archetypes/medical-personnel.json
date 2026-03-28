@@ -1,0 +1,150 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:MedicalPersonnel",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Medical Personnel",
+      "archetype:description": "Any idiot with a sharpened stick can open a jugular, crush bone or lop off an arm, despite what the stick wielders might tell you. Sure magicians and the so called devotees can close the wound, but true skill comes in closing it up again and not only fully restoring function but sending your patient back as a better version of itself that it was before using nothing but one's own hands, ingenuity and a high tech medical drone.",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Medicine"
+          },
+          {
+            "archetype:Skill": "First Aid"
+          },
+          {
+            "archetype:Skill": "Diagnosis"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Simple weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Light armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Wis"
+          },
+          {
+            "archetype:Save": "Con"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Stuff that wound",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "As long as you have one hand free and can concentrate, you can stop a target within your reach from taking bleeding damage or stop failing death saves. This does not count as succeeding on a death save; it merely postpones the checks. If your concentration is broken or you move out of reach from the target, the target immediately takes bleed damage and starts bleeding again. To move at the same time as the target, one of you has to delay your turn to match the other's initiative."
+          ],
+          "sa:cost": "Free for medical personnel. 2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Body repair man",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "When you perform surgery, you can make a special surgery check that takes 1 minute to complete. During the surgery, any bleed effects the target is suffering are suspended. At the end of the check, make a Medicine skill check against DC 15. If you make the check, the target loses all effects that cause bleeding and stabilizes."
+          ],
+          "sa:cost": "Free for medical personnel. 3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Medical Drone Expert",
+          "sa:prerequisites": [
+            "Body repair man"
+          ],
+          "sa:description": [
+            "When commanding a medical drone using bandwidth or verbal commands to lock onto a target using its Medispray and artery clamps action, the drone causes the target to immediately gain one death save success. Further death saves are automatic successes. The controlling medical personnel can guide untrained characters to perform first aid using the medical personnel's skill bonus if the drone is connected to the target needing first aid. The medical personnel does not need to be in any other contact with the patient or the character giving the first aid other than a datalink to the drone."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Mechanized Medic",
+          "sa:prerequisites": [
+            "Medical Drone Expert"
+          ],
+          "sa:description": [
+            "If you have more than 1 bandwidth from other sources, gain 2 bandwidth that can be used to command Medical Drones."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Quality work",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Surgery you perform to either change someone's appearance or implant covert implants is made with such skill and care that visual checks and cursory physical checks made to detect such alterations are made with disadvantage."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Trained eye",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Make a sense motive check versus your target's passive deception skill. If you succeed, you immediately know if your target is under the effect of any chemical substance. If you have knowledge of the substance in question, you recognize it without a check. If not, make a DC 15 Technological Knowledge check to identify it."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "We shall rebuild him.",
+          "sa:prerequisites": [
+            "Quality work"
+          ],
+          "sa:description": [
+            "When you perform surgery to install replacement cybernetics, your patient is ready for action as soon as the procedure is over. Normally the patient makes all checks, saves, and attacks with disadvantage for 1 day for each replacement installed after completing surgery."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Nature did good, we can do better.",
+          "sa:prerequisites": [
+            "Quality work"
+          ],
+          "sa:description": [
+            "You can perform a special kind of surgery that raises a character's maximum ability score by 2. The surgery itself takes 18 hours to perform and needs an array of special materials and a fully stocked high-quality laboratory and medical facilities. Before the surgery can be started, you need to cultivate stem cells from the patient in order to make the improved muscles, organs, or tissues needed for the surgery. This takes 2 weeks in a fully stocked laboratory and needs 4 hours of work every day and costs 20,000 credits in raw materials. You can choose if the result is overt or covert. Overt patients wind up with bulging muscles. Covert patients look almost like everyone else, and only a DC 25 perception check notices that something is not as it seems."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "No rest for the wicked",
+          "sa:prerequisites": [
+            "Quality work"
+          ],
+          "sa:description": [
+            "You can take a special surgery action that lets a creature regain wounds equal to 1d8 + your proficiency bonus. This action needs a high-tech surgery kit and takes 1 action to complete. The regained wounds are temporary and disappear after 8 hours; this can cause the creature to die. If the creature is undertaking a long rest when the temporary wounds disappear and the loss would cause it to drop to 0 wounds, it is instead reduced to 1 wound. A creature cannot be the target of this action again before it has completed a long rest."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Reanimator",
+          "sa:prerequisites": [
+            "No rest for the wicked"
+          ],
+          "sa:description": [
+            "You can use your No rest for the wicked on targets that have failed 3 death saves as long as they have not been dead for more than 10 minutes for each of your proficiency bonus. This special use of the No rest for the wicked leaves the target creature mentally ravaged and it takes 2 sanity damage. Alternatively, you can instead of restoring the creature to life, reanimate it as a reanimation, a technological zombie. This use needs you to install a Lazarus implant in the dead creature. As you are making the check, you decide if the creature reanimates as a free-willed creature, slaved to you but sentient or mindless."
+          ],
+          "sa:cost": "4 xp"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Personality",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Personality",
+      "archetype:description": "What? Do you honestly think someone will believe you when you claim that I walked into your 24 Hour convenience store with the just now conveniently broken security camera at 4 in the morning wanting to buy duct tape, a box of 9mm ammo, 12 beers and a Slurpee? Take my money and smile. Oh, and could I have the key for the restroom? I think this blood is starting to soak into my polo shirt",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Persuasion"
+          },
+          {
+            "archetype:Skill": "Deception"
+          },
+          {
+            "archetype:Skill": "Insight"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Simple weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "None"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Cha"
+          },
+          {
+            "archetype:Save": "Wis"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Me!",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Spend an attack action to captivate an intelligent target that can understand you (Int 3 or higher). The target has to make a Wisdom save equal to 8 + your Cha mod + your proficiency bonus. If the target fails the save, it gains the incapacitated condition as you have its complete attention until the start of your next turn. If anyone attacks or threatens the target, the effect ends. If you can make more than one attack as part of an attack action, you can replace one of the attacks with a use of this feature. Your Renown is equal to your proficiency bonus plus your Charisma bonus."
+          ],
+          "sa:cost": "2 xp, free for personality archetype."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Captivating visage",
+          "sa:prerequisites": [
+            "Me"
+          ],
+          "sa:description": [
+            "As an action, captivate creatures that can see you. Allies that have spent more than a week in your company are immune to this effect. Targets that have line of sight to you that you have no concealment from must make a Wisdom save equal to 8 plus your renown score or make you aware of them by sputtering and gawping due to your fame. In effect, hidden creatures become visible. Creatures that are invisible or similar due to magical effects do not become visible but make enough noise that a DC 10 perception check can pinpoint the square they are occupying. Mindless creatures and creatures with an Int score lower than 5 are immune to this effect. Use common sense; a target has to have actually heard of you for this to work. For example, they must have access to some sort of medium connected to your claim to fame. For example, to lure the orcs from hiding, it is possible that their clan chief has heard the tale of how you and your party wiped out a neighboring tribe. To make the gang of thugs lurking in a maintenance tunnel in one of the terran archeologies, you may have appeared in a series of soap operas."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Stupefying visage",
+          "sa:prerequisites": [
+            "Captivating visage"
+          ],
+          "sa:description": [
+            "Targets that are affected by your captivating visage take a -1 penalty to attacks against you and up to 1 + 1/2 proficiency bonus of your allies, designated by you when you use captivating visage. This penalty lasts until the start of your next turn. As a bonus action after using captivating visage, you can increase the duration to 3 + 1 round / proficiency bonus and increase the penalty to 1d4 for all affected targets. Once you've used this bonus action, you need to take a short rest before you can use it again."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Favor",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Treat anyone as being one step friendlier when asking for a favor or using persuasion to convince someone to do something for you."
+          ],
+          "sa:cost": "2 xp, free for personality archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Muse",
+          "sa:prerequisites": [
+            "Inspirational"
+          ],
+          "sa:description": [
+            "Spend an action to inspire yourself and any allies within 60 ft that can see and hear you. Inspired characters gain a bonus 1d4 on saves until the end of your next round. You can use this ability a number of times equal to your renown score. You regain all uses after a long rest."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Inspirational",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "You can inspire others through stirring words or music. To do so, you use a bonus action on your turn to choose one creature other than yourself within 60 feet of you who can hear you. That creature gains one Inspiration die, a d6. Once within the next 10 minutes, the creature can roll the die and add the number rolled to one ability check, attack roll, or saving throw it makes. The creature can wait until after it rolls the d20 before deciding to use the Inspiration die, but must decide before the GM says whether the roll succeeds or fails. Once the Inspiration die is rolled, it is lost. A creature can have only one Inspiration die at a time. You can use this feature a number of times equal to your Charisma modifier (a minimum of once). You regain any expended uses when you finish a long rest. Your Inspiration die changes when you reach certain levels of proficiency. The die becomes a d8 at 3 proficiency, a d10 at 4 proficiency, and a d12 at 5 proficiency. Once you reach 4 proficiency, you regain expended uses whenever you take a short rest."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Stainless",
+          "sa:prerequisites": [
+            "Inspirational"
+          ],
+          "sa:description": [
+            "Gain your charisma bonus as a bonus on saves. You must be conscious to gain this bonus"
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Spotless",
+          "sa:prerequisites": [
+            "Inspirational"
+          ],
+          "sa:description": [
+            "When you are wearing no armor, your AC is equal to 10 + your dexterity modifier + your Charisma modifier."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Stainless aura",
+          "sa:prerequisites": [
+            "Stainless"
+          ],
+          "sa:description": [
+            "Spend a bonus action to expand the effect of your Stainless feature to friendly creatures within 10 ft until the end of your next turn. Targets must be conscious to gain this bonus. When your proficiency bonus reaches 4, this feature affects friendly creatures within 30 ft."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Taunt",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Spend an attack action to infuriate a target within 50 ft that can see, hear, and understand you. If the target fails a Charisma save vs a DC equal to 8 + your renown, the target drops any ranged weapons or other wielded equipment, unless it is a melee weapon, and charges towards you and tries to attack you in melee at its earliest possible opportunity. The effect lasts for 2 rounds or until the target makes a melee attack against you."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "I. Am. Famous!",
+          "sa:prerequisites": [
+            "Favour",
+            "Me!"
+          ],
+          "sa:description": [
+            "If you are caught in the process of a criminal act, make a renown check based on the severity of your crime. If you make the check, you are immediately released. Repeated abuse of this privilege is likely to get you deported or made an example of by frustrated law enforcement. Class 5 Crime - DC 10. Examples include disturbing the peace, drunk and disorderly, etc. Lasting effects: -2 penalty on further renown checks and persuasion checks involving characters involved in the episode. Class 4 Crime - DC 13. Examples include possession of a controlled substance, causing a traffic accident resulting in serious injury, assault without a deadly weapon, operating a starship without the proper licenses. Lasting effects: -5 penalty on further renown checks and persuasion checks involving characters involved in the episode. Class 3 Crime - DC 16. Examples include attempting to bribe a prominent public official, grand theft auto/spaceship, assault with a deadly weapon, possession of a concealed deadly weapon without a license. Lasting effects: -10 penalty on further renown checks and persuasion checks involving characters involved in the episode. Class 2 Crime - DC 20. Examples include murder or manslaughter, smuggling, assault against a public official. Lasting effects: Deportation within 2d6 hours or at first possible time. Class 1 Crime - DC 25. Examples include conspiring to bring down the local government, assassination of a public official, sabotaging public utilities. Lasting effects: Detention pending action by high ranking officials. Likely immediate deportation and permanent re-entry ban. Special: The above are guidelines. Some societies are likely to chuck you out the airlock no matter your claim to fame, and some will figuratively worship the ground you walk on for that one role you had in that low-budget soap 5 years ago. In effect, if the GM feels that the above do not fit the society in question, the GM should change the lasting effects and DCs as seen fit."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Promote product",
+          "sa:prerequisites": [
+            "Me!"
+          ],
+          "sa:description": [
+            "Make a renown check when interacting with a trader or manufacturer, and if the trader or manufacturer fails a Wisdom save against the result of your check, he agrees to lend you one item for promotional purposes. The target gets a bonus based on the cost of the item determined by the GM. For example, a can of soda will likely not gain the target a bonus, maybe even a penalty, but a small starship will need you to have Elvis Presley-style fame to even have a chance. If the trader or manufacturer cannot see any benefit from lending you the item, there is no chance for you getting one. For example, the trader would want to be able to claim that the famous Shepard defeated the evil rampaging Orcs using only the very best hardware, Murderware Inc. guns and ammunition. If you manage to kill a creature larger than you, appear on TV or similar transmissions, pose for photos or be filmed at a place of exceptional beauty or significance, pose with a massively famous character or similar while wearing or otherwise wearing the promoted product while being filmed or taken a picture of that is distributed widely, you gain 1 renown and advantage on your next renown check to get new material to promote. Do not abuse it, and your GM will probably let you keep your toys."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Entourage",
+          "sa:prerequisites": [
+            "Me!"
+          ],
+          "sa:description": [
+            "Extend the description of your 'I Am. Famous!' and 'Promote Product' features to a number of allies equal to your renown. You still make the renown checks, not your allies. You make checks for your allies at -3 to your normal check. This does not grant your allies access to 'I Am. Famous!' and 'Promote Product."
+          ],
+          "sa:cost": "4 xp"
+        }
+      ]
+    }
+  ]
+}

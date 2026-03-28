@@ -1,0 +1,78 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:elf",
+      "@type": "sa:Race",
+      "rdfs:label": "Elf",
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Description",
+          "sa:description": "Elves are graceful, long-lived beings who blend arcane mastery with high art and elevated ideals. To elves, life is a canvas for expression, discipline, and legacy—every movement and decision a brushstroke in their personal myth. While they are often seen as aloof or arrogant by shorter-lived races, elves carry the burden of vast memories and cosmic responsibilities. Whether as wandering artisans, militant purifiers, or stargazing visionaries, elves play the long game across the stars, building beauty where others see only conflict or utility."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Ability score increase",
+          "sa:description": "Your Dexterity increases by 2."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Keen eyes",
+          "sa:description": "You gain proficiency in Perception."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subraces",
+          "sa:description": "Elves are divided into subcultures refined by art, warfare, and the stars. Choose one to gain its additional features."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subrace: High Elf",
+          "sa:description": "The High Elves are artisans and visionaries, wielding arcane precision with aesthetic mastery.\n\n- +1 Intelligence\n- Proficiency with the elven sliver sword, Magus rifle, and sliver submachine gun"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subrace: Shevarashi",
+          "sa:description": "Shevarashi are militant purifiers dedicated to eradicating the drow and ghoul threats from the sector.\n\n- +1 Strength\n- Proficiency with Power Armor, 2mm and 10mm Autocannons, and Chainsword\n- Begins with a Shevarash Initiate Power Armor"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subrace: Stargazer",
+          "sa:description": "Stargazer elves dwell entirely in the void, drifting through life aboard magnificent spacefaring citadels.\n\n- Proficiency in Pilot and with all ship-mounted weapon systems\n- Perfect flyspeed (50) in zero or low gravity when within arm's reach of a surface\n- Immune to zero-G sickness and spacewalk status effects\n- Project a mental shield after a long rest: gain (Proficiency Bonus + Intelligence modifier - 10) absorb. This absorb is depleted before other sources. While active, gain +2 deflection AC"
+        }
+      ],
+      "sa:relationFeatures": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Halfling relations",
+          "sa:description": "Elves admire how halflings continually strive to perform, seeing them as artists at life. Their short lifespans are seen as tragic but poetically intense. Elves occasionally sponsor or 'adopt' halfling muses or apprentices."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Orc relations",
+          "sa:description": "Orcs are a nuisance—brutish, short-lived, and tragically unsophisticated. Elves consider them a living metaphor for entropy. Some elven scholars study orcs the way one might study a wildfire: dangerous, primitive, but full of strange lessons about willpower and decay."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Dwarf relations",
+          "sa:description": "Elves find dwarves rigid, overly obsessed with contracts, and artistically bankrupt. The two races have coexisted (and competed) for millennia. While elves mock dwarves for lacking vision, they quietly admire dwarven engineering—particularly when it supports elven architecture."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Human relations",
+          "sa:description": "Humans are a whirlwind of brilliance and self-destruction. Elves see them as dangerously ambitious children—capable of great innovation but blind to consequences. Still, elves often keep human diplomats, scientists, or performers close, treating them like fleeting flames to be admired before they burn out."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Drow relations",
+          "sa:description": "Drow are the elves' eternal shame. Once kin, now corrupted by forbidden pacts and violent chaos, they embody everything elves fear becoming. Some elven cultures advocate extermination, others quiet sorrow and containment. A few whisper that the drow merely adapted first to a changing galaxy."
+        }
+      ]
+    }
+  ]
+}

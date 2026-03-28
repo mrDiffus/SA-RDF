@@ -1,0 +1,179 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Technician",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Technician",
+      "archetype:description": "The light sensors on the Armanitech edition Spacefarers are notorious for breaking if the user gets flashbanged. When I tried talking to the design lead of the project he claimed that \"flashbangs aren't a part of civilian life, and the Spacefarers sunshades are intended for the civilian market\". Give it here. if we replace it with a off the shelf Terrivorm light sensor intended for automatically dimming shuttle windows and adjust the embedded code just so, and it doesn't just not die on you when you happen to stand near a flashbang, but it will actually filter out the light. The noise is still going to be a bitch though.",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Engineering"
+          },
+          {
+            "archetype:Skill": "Electronics"
+          },
+          {
+            "archetype:Skill": "Mechanics"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Simple weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Light armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Int"
+          },
+          {
+            "archetype:Save": "Dex"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Skilled",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Select 2 types of toolkit. Gain double proficiency bonus when making skill checks using the selected type of toolkit."
+          ],
+          "sa:cost": "2 xp, Free for Technician archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Disrupt movement",
+          "sa:prerequisites": [
+            "Skilled"
+          ],
+          "sa:description": [
+            "When you make an information system attack against an information system embedded in a creature or an information system that makes up a robot and your attack completely depletes a node of HP, you can choose to inflict the incapacitated condition until the end of your next turn on the creature if it fails an Intelligence save versus 8 + your proficiency bonus + your Int modifier."
+          ],
+          "sa:cost": "3 xp, Free for technician"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Plug and Play!",
+          "sa:prerequisites": [
+            "Skilled"
+          ],
+          "sa:description": [
+            "Change an arm, leg or other external replacement cybernetic limb as a special action taking 1 minute, instead of 1 hour."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Master cyberneticist",
+          "sa:prerequisites": [
+            "Plug and Play",
+            "Just Physics"
+          ],
+          "sa:description": [
+            "Choose one implant you currently have implanted or mounted. It does not contribute to increased spellcost penalties. A new implant can be designated for this skill after a 4 hour work session where you finely tune the implant."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "The flesh is weak, the machine is strong.",
+          "sa:prerequisites": [
+            "Plug and play"
+          ],
+          "sa:description": [
+            "Implants you implant are not vulnerable to electrical damage. Characters you implant implants in can also choose to gain: Gain 10 hit points for each implant you have implanted. Gain 3 wounds for each implant you have implanted. Lose 1 sanity. For every 3 sanity lost due to this feature, gain 1 hardness versus sanity damage. You also gain these bonuses for each implant you have implanted, regardless of who actually does the work."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Grokk magic",
+          "sa:prerequisites": [
+            "Skilled"
+          ],
+          "sa:description": [
+            "If you have access to a large, high-quality laboratory and spellbooks containing rituals, you can cast any ritual in a spellbook you have access to."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Find technical flaws",
+          "sa:prerequisites": [
+            "Jury rigger"
+          ],
+          "sa:description": [
+            "Whenever you are using a weapon you have jury rigged with the armor penetrating tag, ignore resistance to physical damage and up to 1 DR in your target."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Lockdown",
+          "sa:prerequisites": [
+            "Disrupt movement"
+          ],
+          "sa:description": [
+            "When you reduce a node in an information system embedded in a creature or an information system that is part of a robot, you can choose to inflict the stunned condition until the end of your next turn on the creature if it fails an Intelligence save versus 8 + your proficiency bonus + your Intelligence modifier."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Lockout",
+          "sa:prerequisites": [
+            "Skilled"
+          ],
+          "sa:description": [
+            "When you reduce a node in a vehicle, aircraft, or spaceship information system to 0 HP, you can force the pilot or driver to make a DC 15 Int check in order to use digital or computerized controls until the end of your next turn."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Stealthy control",
+          "sa:prerequisites": [
+            "Lockout"
+          ],
+          "sa:description": [
+            "Spend a bonus action to cause one node you have gained read access to act as if you had write access until the end of your turn. This looks like a system malfunction, not a hostile takeover as the result of a hack. If there is a sentient operator using the targeted system, the operator can make an Intelligence (Perception) check with disadvantage against your Intelligence (Stealth) check."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Delay alerts",
+          "sa:prerequisites": [
+            "Stealthy control"
+          ],
+          "sa:description": [
+            "When you gain write access to a node, you can instead choose to postpone gaining write access until you spend a bonus action to finalize the takeover. Postponing the write access this way causes no alerts to be raised. If you have several postponed write accesses waiting, you can complete any number of them when you spend a bonus action to gain the write access. Spending a bonus action to gain postponed write accesses always alerts the target of the incursion. Once you've spent a bonus action to gain postponed write accesses, you have to complete a short rest before you can spend another bonus action to gain more postponed write accesses."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Root",
+          "sa:prerequisites": [
+            "Stealthy control"
+          ],
+          "sa:description": [
+            "On your turn, designate a node you have read access to and gain write access to the node instead. You need to complete a short rest before you can use this ability again."
+          ],
+          "sa:cost": "3 xp"
+        }
+      ]
+    }
+  ]
+}

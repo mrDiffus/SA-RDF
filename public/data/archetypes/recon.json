@@ -1,0 +1,157 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Recon",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Recon",
+      "archetype:description": "A specialist in gathering intelligence and operating behind enemy lines.",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Stealth"
+          },
+          {
+            "archetype:Skill": "Survival"
+          },
+          {
+            "archetype:Skill": "Observation"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Simple weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Light armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Dex"
+          },
+          {
+            "archetype:Save": "Wis"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Quick and silent",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "You can spend a bonus action to move up to your speed. This does not impose a penalty on your stealth."
+          ],
+          "sa:cost": "3 xp, Free for recon archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Out of sight",
+          "sa:prerequisites": [
+            "Quick and silent"
+          ],
+          "sa:description": [
+            "Hide as a bonus action"
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Quick eyes",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "You can make a perception check as a bonus action. Normally an action."
+          ],
+          "sa:cost": "3 xp, Free for recon archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Hidden attacker",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Spend a bonus action to gain advantage on any stealth checks you make after making a weapon attack until the start of your next round. Unless this is used with a silent weapon, it normally just negates the disadvantage from making a stealth check after attacking. Cannot be used with loud weapons."
+          ],
+          "sa:cost": "3 xp, Free for recon archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Covert communications",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Discovering wireless communications you initiate or host has its computer use DC increased by 5. Any public nodes you control have 5 higher AC than normal."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Listen in",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "You deal 1d6 extra damage when attacking public nodes or nodes controlling sensors or transmitters."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Report encryption",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "If you spend 1 hour with a person, you can create a personal verbal encryption that the two of you can use. For example, you can have a seemingly innocent phone call but actually report back that the guards are off duty and the vault is full. If the other person also has this feature, reduce the time to 10 minutes. Several people with this feature can share the same code. Each person involved has their own variation on the code so that each individual is identifiable to the others. A character with this feature can only keep working memory of a number of personalized codes equal to their proficiency bonus."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Discrete acrobatics",
+          "sa:prerequisites": [
+            "Quick and silent"
+          ],
+          "sa:description": [
+            "Jumping, tumbling, or otherwise using the acrobatics skill do not cause you to gain disadvantage on hide checks."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Powerful acrobatics",
+          "sa:prerequisites": [
+            "Quick and silent"
+          ],
+          "sa:description": [
+            "Whenever you spend a bonus action to gain additional move when hiding also gain advantage on one acrobatics check made this round."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Soft spots",
+          "sa:prerequisites": [
+            "Quick eyes"
+          ],
+          "sa:description": [
+            "When you are using a weapon with the armor penetrating tag ignore any resistance against physical damage your target has."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Sneak attack",
+          "sa:prerequisites": [
+            "Quick and silent"
+          ],
+          "sa:description": [
+            "When you attack a target from stealth, a target that is unaware of you, one or more of your allies threaten your target, or on attacks you have advantage on, you deal extra damage equal to 1d6 / Proficiency bonus. If you make the attack with a ranged weapon, you can only fire a single shot per attack, in effect no bursts and autofire. If you use a ranged weapon, you cannot be outside the normal range of the weapon. You can only deal this extra damage once per turn."
+          ],
+          "sa:cost": "2 xp"
+        }
+      ]
+    }
+  ]
+}

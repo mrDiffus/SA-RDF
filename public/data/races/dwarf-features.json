@@ -1,0 +1,83 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:dwarf",
+      "@type": "sa:Race",
+      "rdfs:label": "Dwarf",
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Description",
+          "sa:description": "Dwarves are stout, disciplined beings known for their unshakable sense of ownership, craftsmanship, and the law. From asteroid-citadels to fortified hillholds, they carve out domains defined by contracts, loyalty, and grudges. Dwarves believe anything truly worth having should be fought for, earned, and registered. Their society is governed by an intricate legal code, and their memory for debts—both fiscal and personal—is legendary. Though slow to trust, they are fierce allies and even fiercer enemies when betrayed."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Ability score increases",
+          "sa:description": "+2 con"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Darkvision",
+          "sa:description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Speed",
+          "sa:description": "Base speed 25 ft, as long as you are not over your maximum carrying capacity you are not slowed due to heavy loads or wearing armor."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Hardy",
+          "sa:description": "You gain advantage on saves vs poison effects"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Cultural works",
+          "sa:description": "Proficiency with one of the following toolkits: Brewer kits, miner tools or metalworkers tools."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subraces",
+          "sa:description": "Choose one of the following dwarf subraces to gain additional traits based on heritage and environment."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subrace: Void Miner",
+          "sa:description": "Void Miners live and work in asteroid belts and microgravity colonies.\n\n- +1 Wisdom\n- Advantage on skill checks made to build or mine in zero-G\n- Proficiency with miner tools and metalworkers tools in zero-G\n- Gain Pilot proficiency when operating ships size Light or larger\n- Always treated as proficient when using mining equipment aboard Light+ ships\n- Can go two additional days without food before suffering fatigue"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subrace: Hilldigger",
+          "sa:description": "Hilldiggers tame mountain strongholds and rocky valleys on high-gravity worlds.\n\n- +2 Strength\n- Proficiency with Medium Armor\n- Proficiency with HF Axe, Breaker, Boarding Shield, and Combat Shotgun"
+        }
+      ],
+      "sa:relationFeatures": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Human relations",
+          "sa:description": "Dwarves see humans as industrious and productive but terribly short lived, fickle and unwilling to dedicate themselves to something bigger than themselves. All in all they get along great, because a dwarf investor can always outlast the human competition."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Drow relations",
+          "sa:description": "Drow dont respect laws and bargains. That fact tells a dwarf everything he would need to know about drow. The only thing worse than a lawbreaker is a dealbreaker."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Halfling relations",
+          "sa:description": "Halflings and dwarves agree on the importanse of good food and drink, not much else."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Elf relations",
+          "sa:description": "Elves are to vain, too concerned with art and too conviced of their own superiority. All in all very bothersome, they can even outlast dwarves.\n\nDwarf traits"
+        }
+      ]
+    }
+  ]
+}

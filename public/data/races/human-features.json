@@ -1,0 +1,68 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:human",
+      "@type": "sa:Race",
+      "rdfs:label": "Human",
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Description",
+          "sa:description": "Humans are the sector’s great improvisers—driven, chaotic, and endlessly adaptable. Though short-lived and often seen as immature by elder species, humanity's relentless curiosity and capacity for reinvention have made them one of the galaxy’s most unpredictable forces. Whether exploring ancient ruins, sparking revolutions, or industrializing entire moons in a generation, humans bring innovation and volatility in equal measure. Their diversity of belief and culture makes them difficult to define and impossible to fully prepare for."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Speed",
+          "sa:description": "30 ft"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Ability score increase",
+          "sa:description": "+1 to all abilities."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Diverse human heritage",
+          "sa:description": "1 to two abilities and gain one archetype feature marked as free for archetype in an archetype that is not one of your selected archetypes or a non archetype feature you meet the prerequisites for with the proficiencies of features you gain from your archetypes.. For example if your chosen archetypes are Devotee and Occultist you can choose \"Brute\" from armsman or a general feature that grants armor proficiency. You still have to meet hard prerequisites for features chosen. For example you cannot choose power armor proficiency without already being proficient with heavy armor."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subraces",
+          "sa:description": "Human variants:\nChoose one of the next two features"
+        }
+      ],
+      "sa:relationFeatures": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Elf relations",
+          "sa:description": "Elves see humans as rash, impatient and yet quite useful because of their enormous numbers and willingness to get involved in everyone elses business."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Drow relations",
+          "sa:description": "Drow see humans a fantastic untapped resource of slave labour, but tend underestimate the amount of, well, silly and often suicidal practices humanity find perfectly normal and struggle to get a handle on the newcomers."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Halfling relations",
+          "sa:description": "Halflings view humanity as a strange yet welcome addition to the sector. Halflings pair surprisingly well with the wanderlust and childlike wonder humans tend to look at the horrors of the sector."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Orc relations",
+          "sa:description": "Orcs view humans as they do all the other soft and whimpering races they share the sector with. Though orcs that have witnessed humanities love and unparalleled capability for large scale destruction wrought by fire, flying metal and nuclear firestorms have a strange admiration for human scientists, viewing them as fantastic and unreal bringers of new amazing forms of war."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Dwarf relations",
+          "sa:description": "Dwarves are skeptical towards most humans but once the trade gets going they almost welcome humans as honorary dwarves. Assuming, of course, that they are not tall, skinny and bald and beardless.\n\nHumans traits"
+        }
+      ]
+    }
+  ]
+}

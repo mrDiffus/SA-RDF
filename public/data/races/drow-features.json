@@ -1,0 +1,78 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:drow",
+      "@type": "sa:Race",
+      "rdfs:label": "Drow",
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Description",
+          "sa:description": "Drow are a spacefaring, authoritarian offshoot of elvenkind, known for their cruelty, cunning, and technological sorcery. Operating from shadowed void-cities and vast slave fleets, they see the galaxy as a grand chessboard of conquest and subjugation. Obsessed with status, bloodline, and control, drow breed both their weapons and their people for highly specialized roles in a brutally efficient hierarchy. Their culture blends high art with casual atrocity, and their charm only thinly veils their appetite for domination."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Ability score increase",
+          "sa:description": "+1 Dex"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Darkvision",
+          "sa:description": "You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You can’t discern color in darkness, only shades of gray."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Proficiencies",
+          "sa:description": "Proficiency with HF Katana, HF Bladed Whip, High Pressure Flamer"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subraces",
+          "sa:description": "Due to selective breeding, drow are divided into distinct subraces. Choose one and gain its features in addition to those listed above."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subrace: Highborne",
+          "sa:description": "Highborne drow make up the leadership of clans and houses. They are bred for magical prowess and social dominance.\n\n- Gain 1 spell point and the ability to cast 1 Arcanist cantrip and 1 level 1 Arcanist spell. Spells are cast using Charisma.\n- If you later gain the Arcanist feature and choose Intelligence as your casting ability, track these spells and points separately. If you use Charisma, add them to your total.\n- Gain spell resistance equal to 8 + your proficiency bonus.\n- +2 Charisma."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Subrace: Darkchild",
+          "sa:description": "Darkchild drow are bred to dominate the battlefield, especially in the cold darkness of space.\n\n- See perfectly in darkness, including magical darkness.\n- Gain proficiency in Stealth.\n- Gain advantage on Stealth checks in dim or darker light conditions.\n- +2 Strength."
+        }
+      ],
+      "sa:relationFeatures": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Human relations",
+          "sa:description": "Drow love humanity. They are better slaves than goblins and there are so many of them."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Halfling relations",
+          "sa:description": "Halfling slaves are very useful when you need to get detail work done that can't be trusted to goblins."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Orc relations",
+          "sa:description": "Orcs make fantastic shock troops. You can enthrall and abduct an entire tribe and as long as you can keep them docile on the voyage, you can drop them off anywhere you want a war to happen."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Dwarf relations",
+          "sa:description": "Dwarves are way too stubborn. If one could figure out a way to consistently subjugate them..."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Elf relations",
+          "sa:description": "Elves are too fragile, high-minded, and reproduce too slowly to be good slave stock. They make for fun hunting though.\n\nDrow notables:\n— *Drow for the Ethical Treatment of Humanoids (DETH)*: A humanitarian organization that euthanizes the poor and the suffering. Quite indiscriminately. \nPromotes lifting social standards by eliminating poverty—through eliminating the impoverished."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "archetype": "https://stellararcana.org/archetype/"
+  },
+  "@graph": [
+    {
+      "@id": "archetype:Primitive",
+      "@type": "archetype:Archetype",
+      "rdfs:label": "Primitive",
+      "archetype:description": "Yes, I come from a culture and a civilization you would deem primitive. Contrary to what you think of me and my people, the only difference between us is that we have not forgotten that we are all animals and the strong rule and the weak get eaten and I intend to stay strong and grow stronger and to do so I intend to eat.",
+      "archetype:proficiencies": {
+        "archetype:Skills": [
+          {
+            "archetype:Skill": "Survival"
+          },
+          {
+            "archetype:Skill": "Tracking"
+          },
+          {
+            "archetype:Skill": "Nature Lore"
+          }
+        ],
+        "archetype:Weapons": [
+          {
+            "archetype:Weapon": "Primitive weapons"
+          }
+        ],
+        "archetype:Armor": [
+          {
+            "archetype:Armor": "Light armor"
+          }
+        ],
+        "archetype:Saves": [
+          {
+            "archetype:Save": "Str"
+          },
+          {
+            "archetype:Save": "Con"
+          }
+        ]
+      },
+      "sa:features": [
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Rugged",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "You do not get sick from eating raw or under cooked meats or plant material that would cause sickness in others. If the effect causes a save vs a DC higher than 15, save as normal, but with a +3 bonus."
+          ],
+          "sa:cost": "2 xp, free for primitive archetype."
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Animal affinity",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "You can gain the trust of an animal and have it follow you as a loyal companion. It can gain the general features, the armor proficiency and mastery features, extra attack and cyborg features. The animal gains experience equal to a quarter, rounded down, of the experience you gain. The animal follows simple verbal commands like attack, stay, heel, guard, fetch and so on. To gain an animal's trust, you must first find it and approach it without it attacking and first spend 1 minute calming it and a further 1 day training it. Your animal companion gains a variety of descriptions while it is linked to you. The animal companion loses its Multiattack action, if it has one. The companion obeys your commands as best it can. It rolls for initiative like any other creature, but you determine its actions, decisions, attitudes, and so on. If you are incapacitated or absent, your companion acts on its own. Your animal companion has abilities and game statistics determined in part by your level. Your companion uses your proficiency bonus rather than its own. In addition to the areas where it normally uses its proficiency bonus, an animal companion also adds its proficiency bonus to its AC and to its damage rolls. Your animal companion gains proficiency in two skills of your choice. It also becomes proficient with all saving throws. For each HD you gain, your animal companion gains an additional hit die and increases its hit points accordingly. Whenever you gain the Ability Score Improvement class feature, your companion's abilities also improve. Your companion can increase one ability score of your choice by 2, or it can increase two ability scores of your choice by 1. As normal, your companion can't increase an ability score above 20 using this feature unless its description specifies otherwise. Your companion shares your alignment. Your companion shares your ideal, and its bond is always, 'The character who travels with me is a beloved companion for whom I would gladly give my life.'"
+          ],
+          "sa:cost": "4 xp, free for primitive archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Improvised arms",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Never gain disadvantage due to wielding an improvised weapon."
+          ],
+          "sa:cost": "2 xp, free for primitive archetype"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Luddite",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Gain advantage on saves vs effects originating from technological equipment. For example, you would gain advantage on a Wisdom save versus the subliminal messages hidden in a video stream or the Con save versus the nauseating effect from a sick stick."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Superstition",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Choose one save you are proficient with. Gain advantage on saves of that type you make against spell effects."
+          ],
+          "sa:cost": "3 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Forager",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "As long as you spend 8 hours in the wilderness or rural area you can feed up to a number of people equal to your proficiency bonus by foraging."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "This old thing?",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Armors made from bone, wood, and other materials that normally have inferior hardness and protection when compared to steel act as if they were made from steel when you wear them. For example, a bone breastplate which has both lower defense and will shatter when you are hit by a critical hit will act like a steel breastplate when worn by you."
+          ],
+          "sa:cost": "1 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Iron guts",
+          "sa:prerequisites": [],
+          "sa:description": [
+            "Gain advantage on saves vs ingested poison and diseases."
+          ],
+          "sa:cost": "2 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Distrust magic and technology",
+          "sa:prerequisites": [
+            "Superstition",
+            "Luddite"
+          ],
+          "sa:description": [
+            "Gain hardness 5 vs magical damage.Ignore 5 hardness when trying to damage weapons or equipment without the archaic tag. Ignore 5 hardness and 2 DR when trying to damage vehicles, spaceships or airplanes when using a melee weapon."
+          ],
+          "sa:cost": "4 xp"
+        },
+        {
+          "@type": "sa:Feature",
+          "rdfs:label": "Magic eater",
+          "sa:prerequisites": [
+            "Superstition"
+          ],
+          "sa:description": [
+            "Gain 1d8 + Con mod hit points every time you save against a magic effect, even if you take damage from the magic effect. Add the regained hit points before you subtract any damage taken from the spell."
+          ],
+          "sa:cost": "4 xp"
+        }
+      ]
+    }
+  ]
+}

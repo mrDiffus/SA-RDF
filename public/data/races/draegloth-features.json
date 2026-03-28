@@ -1,0 +1,69 @@
+{
+    "@context": {
+      "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "sa": "https://stellararcana.org/"
+    },
+    "@graph": [
+      {
+        "@id": "sa:draegloth",
+        "@type": "sa:Race",
+        "rdfs:label": "Draegloth",
+        "sa:features": [
+          {
+            "@type": "sa:Feature",
+            "rdfs:label": "Description",
+            "sa:description": "Draegloths are hulking, four-armed horrors born of dark pacts between drow priestesses and demonic entities. Standing over eight feet tall with claws like sabers and a constant aura of menace, they are bred for violence and domination. Though often mistaken for mindless beasts, Draegloths possess a cruel cunning and an instinctive understanding of power dynamics. They serve dark cults or carve their own brutal empires among the void-born and forgotten."
+          },
+          {
+            "@type": "sa:Feature",
+            "rdfs:label": "Claws",
+            "sa:description": "Unarmed attacks deal 1d6 slashing damage. As a bonus action after taking the attack action, you can attack once using your unarmed strike."
+          },
+          {
+            "@type": "sa:Feature",
+            "rdfs:label": "Ability score increase",
+            "sa:description": "+2 Str, +1 Con"
+          },
+          {
+            "@type": "sa:Feature",
+            "rdfs:label": "Speed",
+            "sa:description": "50 base speed"
+          }
+        ],
+        "sa:relationFeatures": [
+          {
+            "@type": "sa:Feature",
+            "rdfs:label": "Human relations",
+            "sa:description": "Tolerated only as pawns or sacrifices. Their unpredictability is amusing, and short lives cement them as disposable."
+          },
+          {
+            "@type": "sa:Feature",
+            "rdfs:label": "Elf relations",
+            "sa:description": "Detested for their arrogance and ancient judgments. Killing an elf is seen as a sacred act of defiance."
+          },
+          {
+            "@type": "sa:Feature",
+            "rdfs:label": "Drow relations",
+            "sa:description": "Considered 'mother-kin'—the only beings shown respect, and even then, only if they demonstrate cruelty and dominance. A weak drow is a disgrace."
+          },
+          {
+            "@type": "sa:Feature",
+            "rdfs:label": "Dwarf relations",
+            "sa:description": "Hunted for sport. Their resilience and armor make them worthy prey. Draegloths take great pleasure in breaking dwarven lines."
+          },
+          {
+            "@type": "sa:Feature",
+            "rdfs:label": "Halfling relations",
+            "sa:description": "Appetizers. Their terror is intoxicating. Some Draegloths believe halfling screams are musically blessed."
+          },
+          {
+            "@type": "sa:Feature",
+            "rdfs:label": "Orc relations",
+            "sa:description": "Sometimes spared—briefly—for strength duels or gladiatorial rituals. Orc ferocity is admired, but only as a challenge to overcome."
+          }
+        ]
+      }
+    ]
+  }
+  

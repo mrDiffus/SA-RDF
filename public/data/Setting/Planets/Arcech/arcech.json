@@ -1,0 +1,99 @@
+{
+    "@context": {
+      "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+      "label": "rdfs:label",
+      "type": "@type",
+      "CreativeWork": "https://schema.org/CreativeWork",
+      "Place": "https://schema.org/Place",
+      "Person": "https://schema.org/Person",
+      "author": {
+        "@type": "@id"
+      },
+      "about": {
+        "@type": "@id"
+      },
+      "locationCreated": {
+        "@type": "@id"
+      },
+      "hasPart": {
+        "@container": "@list",
+        "@type": "@id"
+      }
+    },
+    "type": "CreativeWork",
+    "label": "Arcech",
+    "description": "Arcech is a world of stark contrasts, where immense Hive cities rise from the surface into low orbit, crowned with satellites and tethered by vast space elevators. The planet features pristine oceans, dense jungles, and towering mountains, but most life is concentrated in vertical megacities. Magic and technology fuse seamlessly, especially through the work of Manfucators—rare magicians who transform raw materials into high-end goods. Competition between cities is fierce, and the wilderness teems with strange and dangerous life.",
+    "genre": "Mythic Futurism, Arcane Industrialism, Vertical Megacity Drama, Xenobiological Frontier",
+    "keywords": [
+      "manfucators",
+      "hive cities",
+      "space elevators",
+      "Skyhaven",
+      "Ironhold",
+      "Blackwater",
+      "Emerald Heights",
+      "Starfall",
+      "Arcech-Sylandris",
+      "magitech economy",
+      "urban mysticism"
+    ],
+    "url": "https://stellararcana.org/arcech",
+    "author": {
+      "type": "Person",
+      "label": "Your Name or Alias"
+    },
+    "about": {
+      "type": "Place",
+      "label": "Arcech",
+      "description": "A vivid, high-contrast world defined by vertical urbanity and magical-technological integration. Known for its sky-piercing Hive cities, airborne trade, and the rare, powerful Manfucators. The planet is both a marvel of modern infrastructure and a source of ancient mysteries.",
+      "@id": "https://stellararcana.org/place/arcech"
+    },
+    "locationCreated": {
+      "type": "Place",
+      "label": "Skyhaven",
+      "description": "A prestigious Hive city rising into low orbit, with carved, ancient Pillars of unknown origin. It blends luxury, magic, and cutting-edge infrastructure with sacred reverence for its unreachable foundation.",
+      "@id": "https://stellararcana.org/place/skyhaven"
+    },
+    "hasPart": [
+      {
+        "type": "Place",
+        "label": "Skyhaven",
+        "description": "An elite city atop mysterious ancient pillars, symbol of magical excellence and economic status.",
+        "@id": "https://stellararcana.org/place/skyhaven"
+      },
+      {
+        "type": "Place",
+        "label": "Ironhold",
+        "description": "An industrial Hive city centered around freight, trade, and efficient orbital cargo flow.",
+        "@id": "https://stellararcana.org/place/ironhold"
+      },
+      {
+        "type": "Place",
+        "label": "Blackwater",
+        "description": "A gritty, graffiti-covered city with hidden smuggling routes and dual economies of trade and crime.",
+        "@id": "https://stellararcana.org/place/blackwater"
+      },
+      {
+        "type": "Place",
+        "label": "Emerald Heights",
+        "description": "A research-focused city integrated into lush forests, home to scientific and magical exploration.",
+        "@id": "https://stellararcana.org/place/emerald-heights"
+      },
+      {
+        "type": "Place",
+        "label": "Starfall",
+        "description": "A crystalline-pillar city acting as the largest interstellar port and cultural exchange center.",
+        "@id": "https://stellararcana.org/place/starfall"
+      },
+      {
+        "type": "Place",
+        "label": "Arcech-Sylandris",
+        "description": "The commercial and cultural capital, brimming with markets, embassies, and towering orbital links.",
+        "@id": "https://stellararcana.org/place/arcech-sylandris"
+      }
+    ],
+    "inLanguage": "en",
+    "dateCreated": "2025-05-05",
+    "identifier": "arcech-lore-complete"
+  }
+  

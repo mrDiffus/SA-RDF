@@ -1,0 +1,862 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:WeaponList",
+      "@type": "sa:Equipment",
+      "rdfs:label": "Ranged weapons",
+      "sa:items": [
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": ".45 Falcon Pistol",
+          "sa:damage": "1d8",
+          "sa:damageType": "Ballistic",
+          "sa:criticalModifier": "20 + 1",
+          "sa:clipSize": "15 attacks",
+          "sa:rangeMeters": {
+            "normal": 15,
+            "maximum": 150
+          },
+          "sa:size": "Small",
+          "sa:weight": 1,
+          "sa:cost": 249,
+          "sa:powerLevel": 5,
+          "sa:description": "An efficiently manufactured, reliable in use, cheap to buy and easy to get a hold of pistol.",
+          "sa:tags": [
+            "Light",
+            "semiautomatic"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "10mm Autocannon",
+          "sa:damage": "2d6",
+          "sa:damageType": "Ballistic",
+          "sa:burstDamage": "6d6",
+          "sa:criticalModifier": "19-20 +1",
+          "sa:clipSize": "24 dice",
+          "sa:rangeMeters": {
+            "normal": 45,
+            "maximum": 450
+          },
+          "sa:size": "Large",
+          "sa:description": "A rotary cannon capable of sustained rapid fire. Favored by military forces and combat drone operators for its balance of firepower and reliability.",
+          "sa:specialProperties": "Can be mounted on a shoulder or arm slot in power armor or drones with hardpoints",
+          "sa:weight": 16,
+          "sa:cost": 4990,
+          "sa:powerLevel": 6,
+          "sa:tags": [
+            "heavy",
+            "automatic",
+            "brutal"
+          ],
+          "sa:proficiency": "System"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "10mm Automatic Rifle",
+          "sa:damage": "1d8",
+          "sa:damageType": "Ballistic",
+          "sa:burstDamage": "3d8",
+          "sa:criticalModifier": "20 +2",
+          "sa:clipSize": "12 dice",
+          "sa:rangeMeters": {
+            "normal": 42,
+            "maximum": 420
+          },
+          "sa:size": "Large",
+          "sa:description": "The standard issue assault rifle for modern military forces. Reliable, accurate, and adaptable for mounting on combat platforms. Countless variants exist across different cultures.",
+          "sa:specialProperties": "Can be mounted on a shoulder or arm slot in powered armor or drones with hardpoints",
+          "sa:weight": 6,
+          "sa:cost": 1549,
+          "sa:powerLevel": 6,
+          "sa:tags": [
+            "medium",
+            "automatic",
+            "burst"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "10mm Hellfire Autocannon",
+          "sa:damage": "3d6",
+          "sa:damageType": "Ballistic",
+          "sa:burstDamage": "8d6",
+          "sa:criticalModifier": "19-20 +2",
+          "sa:clipSize": "32 dice",
+          "sa:rangeMeters": {
+            "normal": 45,
+            "maximum": 450
+          },
+          "sa:size": "Large",
+          "sa:description": "An upgraded rotary cannon with enhanced fire rate and damage output. The 'Hellfire' designation reflects its devastating capability and the scorching heat of sustained fire. Typically reserved for elite units.",
+          "sa:specialProperties": "Can be mounted on a shoulder or arm slot in power armor or drones with hardpoints",
+          "sa:weight": 23,
+          "sa:cost": 14990,
+          "sa:powerLevel": 7,
+          "sa:tags": [
+            "heavy",
+            "automatic",
+            "brutal"
+          ],
+          "sa:proficiency": "System"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "10mm Snub gun",
+          "sa:damage": "1d8",
+          "sa:damageType": "Ballistic",
+          "sa:criticalModifier": "20 +1",
+          "sa:clipSize": "6 attacks",
+          "sa:rangeMeters": {
+            "normal": 12,
+            "maximum": 120
+          },
+          "sa:size": "Medium",
+          "sa:weight": 2,
+          "sa:cost": 459,
+          "sa:powerLevel": 5,
+          "sa:description": "A big cluncky revolver. If it does not work, you can always hit him with it.",
+          "sa:tags": [
+            "Light",
+            "semiautomatic"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "2mm Automatic Rifle",
+          "sa:damage": "1d6",
+          "sa:damageType": "Ballistic",
+          "sa:burstDamage": "3d6",
+          "sa:criticalModifier": "20 +2",
+          "sa:clipSize": "15 dice",
+          "sa:rangeMeters": {
+            "normal": 30,
+            "maximum": 300
+          },
+          "sa:size": "Large",
+          "sa:description": "A lightweight assault rifle firing small caliber rounds at high velocity. Popular among scouts and mobile units who prioritize speed over raw damage. Efficient ammunition consumption makes it economical.",
+          "sa:specialProperties": "Can be mounted on a shoulder or arm slot in powered armor or drones with hardpoints",
+          "sa:weight": 4,
+          "sa:cost": 549,
+          "sa:powerLevel": 6,
+          "sa:tags": [
+            "medium",
+            "automatic",
+            "burst"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "2mm Mini-Autocannon",
+          "sa:damage": "1d6",
+          "sa:damageType": "Ballistic",
+          "sa:burstDamage": "4d6",
+          "sa:criticalModifier": "19-20 +1",
+          "sa:clipSize": "20 dice",
+          "sa:rangeMeters": {
+            "normal": 36,
+            "maximum": 360
+          },
+          "sa:size": "Medium",
+          "sa:description": "A compact rotary cannon optimized for drone and power armor integration. Delivers continuous suppressing fire without excessive weight penalties. Maintenance is straightforward in field conditions.",
+          "sa:specialProperties": "Must be mounted on shoulder or arm slot in power armor or drone hardpoints.",
+          "sa:weight": 4,
+          "sa:cost": 990,
+          "sa:powerLevel": 6,
+          "sa:tags": [
+            "medium",
+            "automatic",
+            "brutal"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "2mm SubMachine gun",
+          "sa:damage": "1d6",
+          "sa:damageType": "Ballistic",
+          "sa:burstDamage": "2d6",
+          "sa:criticalModifier": "20+2",
+          "sa:clipSize": "6 dice",
+          "sa:rangeMeters": {
+            "normal": 18,
+            "maximum": 180
+          },
+          "sa:size": "Medium",
+          "sa:weight": 2,
+          "sa:cost": 699,
+          "sa:powerLevel": 6,
+          "sa:description": "A handheld rapid-fire weapon designed for close-quarters engagements. Compact and easy to wield, though accuracy suffers at extended ranges. Preferred by boarding teams and urban combat specialists.",
+          "sa:tags": [
+            "light",
+            "automatic"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "40 MM Selectable Shell Propeller SSP-40 Thumper",
+          "sa:damage": "3d6",
+          "sa:damageType": "Ballistic",
+          "sa:criticalModifier": "20 + 3",
+          "sa:clipSize": "15 dice / 5 attacks",
+          "sa:rangeMeters": {
+            "normal": 60,
+            "maximum": 600
+          },
+          "sa:size": "Large",
+          "sa:description": "A versatile 40mm grenade launcher capable of loading different shell types. The 'SSP-40' designation refers to its selectable shell propulsion system. Powerful against armor but limited ammo capacity.",
+          "sa:specialProperties": "Ignores 1 DR and 5 hardness",
+          "sa:weight": 7,
+          "sa:cost": 7700,
+          "sa:powerLevel": 5,
+          "sa:tags": [
+            "Heavy",
+            "semi automatic",
+            "brutal"
+          ],
+          "sa:proficiency": "System"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "40mm Recoilless cannon",
+          "sa:damage": "Depends on shells fired",
+          "sa:damageType": "Depends on ammo",
+          "sa:criticalModifier": "By ammo",
+          "sa:clipSize": "5 Clip / Belt fed if mounted",
+          "sa:rangeMeters": {
+            "normal": 90,
+            "maximum": 900
+          },
+          "sa:size": "Huge",
+          "sa:description": "A shoulder-mounted recoilless cannon platform that accepts various munitions. Effective for specialized roles, including anti-armor and support fire. The absence of recoil makes it suitable for power armor mounting.",
+          "sa:specialProperties": "Can be mounted on a shoulder slot in powered armor or on drones with hardpoints",
+          "sa:weight": 20,
+          "sa:cost": 9000,
+          "sa:powerLevel": 6,
+          "sa:tags": [
+            "Heavy",
+            "semi automatic",
+            "brutal"
+          ],
+          "sa:proficiency": "System"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "80 MM Selectable Shell Propeller, SSP-80 Pulverizer",
+          "sa:damage": "4d8",
+          "sa:damageType": "Ballistic",
+          "sa:criticalModifier": "20 + 3",
+          "sa:clipSize": "20 dice / 5 attacks",
+          "sa:rangeMeters": {
+            "normal": 90,
+            "maximum": 900
+          },
+          "sa:size": "Large",
+          "sa:description": "The larger cousin of the Thumper, the 'Pulverizer' is a devastating 80mm launcher designed for extreme firepower. Heavy enough to require mounting on combat platforms, it lives up to its name when unleashed.",
+          "sa:specialProperties": "Ignores 1 DR and 8 Hardness",
+          "sa:weight": 22,
+          "sa:cost": 19000,
+          "sa:powerLevel": 6,
+          "sa:tags": [
+            "Heavy",
+            "semi automatic",
+            "brutal"
+          ],
+          "sa:proficiency": "System"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Cold laser",
+          "sa:damage": "1d8",
+          "sa:damageType": "Cold",
+          "sa:criticalModifier": "19-20+2",
+          "sa:clipSize": "20 dice",
+          "sa:rangeMeters": {
+            "normal": 39,
+            "maximum": 390
+          },
+          "sa:size": "Large",
+          "sa:description": "A laser weapon that projects frigid energy rather than heat. Effective at freezing targets and creating environmental hazards. Often preferred in close quarters where heat-based weapons pose risks.",
+          "sa:specialProperties": "Brr.",
+          "sa:weight": 9,
+          "sa:cost": 4700,
+          "sa:powerLevel": 7,
+          "sa:tags": [
+            "Silent",
+            "semi automatic"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Concusser",
+          "sa:damage": "2d8",
+          "sa:damageType": "Concussive",
+          "sa:criticalModifier": "20+2",
+          "sa:clipSize": "10 attacks",
+          "sa:rangeMeters": {
+            "normal": 12,
+            "maximum": 120
+          },
+          "sa:size": "Large",
+          "sa:specialProperties": "Can be mounted on shoulder or arm hardpoints.Half damage against targets protected by mage armor or similar armor spells",
+          "sa:weight": 7,
+          "sa:cost": 19000,
+          "sa:powerLevel": 8,
+          "sa:description": "Fires highly focused points of gravity tearing at the soft flesh hiding in the hard steel.",
+          "sa:tags": [
+            "Large",
+            "silent"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Dual 10mm Autocannon",
+          "sa:damage": "3d6",
+          "sa:damageType": "Ballistic",
+          "sa:burstDamage": "10d6",
+          "sa:criticalModifier": "19-20 +1",
+          "sa:clipSize": "40 dice",
+          "sa:rangeMeters": {
+            "normal": 45,
+            "maximum": 450
+          },
+          "sa:size": "Huge",
+          "sa:specialProperties": "Can be mounted on a shoulder or arm slot in power armor or drones with hardpoints",
+          "sa:weight": 32,
+          "sa:cost": 24000,
+          "sa:powerLevel": 6,
+          "sa:description": "A tripod moutned dual autocannon. Will shred most of everything at the price of hundreds of expensive bullets at the click of a button",
+          "sa:tags": [
+            "heavy",
+            "automatic",
+            "brutal"
+          ],
+          "sa:proficiency": "System"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Dual 10mm Hellfire Autocannon",
+          "sa:damage": "4d6",
+          "sa:damageType": "Ballistic",
+          "sa:burstDamage": "15d6",
+          "sa:criticalModifier": "19-20 +2",
+          "sa:clipSize": "40 dice",
+          "sa:rangeMeters": {
+            "normal": 45,
+            "maximum": 450
+          },
+          "sa:size": "Huge",
+          "sa:specialProperties": "Can be mounted on a shoulder or arm slot in power armor or drones with hardpoints",
+          "sa:weight": 32,
+          "sa:cost": 58000,
+          "sa:powerLevel": 7,
+          "sa:description": "A tripod moutned dual autocannon. Will shred most of everything at the price of hundreds of expensive bullets at the click of a button",
+          "sa:tags": [
+            "heavy",
+            "automatic",
+            "brutal"
+          ],
+          "sa:proficiency": "System"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Ez Shoot shotgun",
+          "sa:damage": "1d6",
+          "sa:damageType": "Ballistic",
+          "sa:criticalModifier": "19-20+1",
+          "sa:clipSize": "5 attacks",
+          "sa:rangeMeters": {
+            "normal": 12,
+            "maximum": 120
+          },
+          "sa:size": "Large",
+          "sa:weight": 3,
+          "sa:cost": 600,
+          "sa:powerLevel": 5,
+          "sa:description": "An easy handle and operate semi automatic shotgun",
+          "sa:tags": [
+            "Semiautomatic"
+          ],
+          "sa:proficiency": "Simple"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Ez Shot Pistol",
+          "sa:damage": "1d4",
+          "sa:damageType": "Ballistic",
+          "sa:criticalModifier": "20+1",
+          "sa:clipSize": "10 attacks",
+          "sa:rangeMeters": {
+            "normal": 12,
+            "maximum": 120
+          },
+          "sa:size": "small",
+          "sa:weight": 0.4,
+          "sa:cost": 230,
+          "sa:powerLevel": 5,
+          "sa:description": "A small and easy to handle pistol with little recoil",
+          "sa:tags": [
+            "Semiautomatic"
+          ],
+          "sa:proficiency": "Simple"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Flame thrower",
+          "sa:damage": "3d6",
+          "sa:damageType": "Fire",
+          "sa:criticalModifier": "17-20 +2",
+          "sa:clipSize": "10 attacks",
+          "sa:size": "Large",
+          "sa:description": "A portable incendiary projector that engulfs targets in flame. Effective area denial weapon. The psychological impact is often as important as the actual damage. Heavily regulated in civilian areas.",
+          "sa:specialProperties": "Targets in area save vs your ranged ability dc for half damage",
+          "sa:weight": 16,
+          "sa:cost": 900,
+          "sa:powerLevel": 5,
+          "sa:tags": [
+            "horrifying"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Heavy gatling laser",
+          "sa:damage": "2d8",
+          "sa:damageType": "Fire",
+          "sa:burstDamage": "6d8",
+          "sa:criticalModifier": "19-20 +1",
+          "sa:clipSize": "40 dice",
+          "sa:rangeMeters": {
+            "normal": 45,
+            "maximum": 450
+          },
+          "sa:size": "Large",
+          "sa:description": "A heavy energy weapon using rotary optics to deliver sustained laser fire. Capable of melting through obstacles and armor. Power requirements limit its use to military forces and well-equipped operators.",
+          "sa:specialProperties": "Can be mounted on a shoulder or arm slot in power armor or drones with hardpoints",
+          "sa:weight": 16,
+          "sa:cost": 4990,
+          "sa:powerLevel": 7,
+          "sa:tags": [
+            "heavy",
+            "automatic",
+            "brutal"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "High Pressure Flamer",
+          "sa:damage": "4d6",
+          "sa:damageType": "fire",
+          "sa:criticalModifier": "18-20 +1",
+          "sa:clipSize": "5 attacks / 20 dice",
+          "sa:size": "medium",
+          "sa:description": "An upgraded flame projector using pressurized fuel systems to achieve greater range and intensity. Designed for power armor integration. Creates devastating infernos in confined spaces.",
+          "sa:specialProperties": "Can be mounted in powerarmor hardpoints. Targets in affected area save vs your ranged ability dc for half damage",
+          "sa:weight": 5,
+          "sa:cost": 2200,
+          "sa:powerLevel": 6,
+          "sa:tags": [
+            "horrifying"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Holdout plasma pistol",
+          "sa:damage": "1d12",
+          "sa:damageType": "Plasma",
+          "sa:criticalModifier": "20 +2",
+          "sa:clipSize": "12 attacks",
+          "sa:rangeMeters": {
+            "normal": 15,
+            "maximum": 150
+          },
+          "sa:size": "Medium",
+          "sa:specialProperties": "On a natural 1 it misfires and needs 1 additional round to cool of before it can be fired again.",
+          "sa:weight": 2,
+          "sa:cost": 7800,
+          "sa:powerLevel": 8,
+          "sa:description": "A relativly small weapon that lets a combatant without powerarmor realisticly inflict damage on a powerarmor wearing target.",
+          "sa:tags": [
+            "Light",
+            "plasma"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Light gatling laser",
+          "sa:damage": "1d6",
+          "sa:damageType": "Fire",
+          "sa:burstDamage": "4d6",
+          "sa:criticalModifier": "19-20 +1",
+          "sa:clipSize": "40 dice",
+          "sa:rangeMeters": {
+            "normal": 36,
+            "maximum": 360
+          },
+          "sa:size": "Medium",
+          "sa:description": "A compact energy weapon delivering consistent laser fire with minimal weight. Ideal for drone platforms and combat suits where weight is a concern. Efficient power consumption extends operational range.",
+          "sa:specialProperties": "Must be mounted on shoulder or arm slot in power armor or drone hardpoints.",
+          "sa:weight": 4,
+          "sa:cost": 1200,
+          "sa:powerLevel": 6,
+          "sa:tags": [
+            "medium",
+            "automatic",
+            "brutal"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Light Laser rifle",
+          "sa:damage": "2d8",
+          "sa:damageType": "Fire",
+          "sa:burstDamage": "3d8",
+          "sa:criticalModifier": "20 +2",
+          "sa:clipSize": "20 dice",
+          "sa:rangeMeters": {
+            "normal": 30,
+            "maximum": 300
+          },
+          "sa:size": "Large",
+          "sa:description": "A precision energy rifle optimized for accuracy and efficiency. Quieter than ballistic alternatives and leaves minimal trace. Popular with special operations teams and covert operatives.",
+          "sa:specialProperties": "Can be mounted on a shoulder or arm slot in powered armor or drones with hardpoints",
+          "sa:weight": 3,
+          "sa:cost": 3500,
+          "sa:powerLevel": 7,
+          "sa:tags": [
+            "automatic",
+            "silent",
+            "covert",
+            "burst"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Magus rifle",
+          "sa:damage": "2d8",
+          "sa:damageType": "Ballistic",
+          "sa:burstDamage": "3d8",
+          "sa:criticalModifier": "19-20+2",
+          "sa:clipSize": "9 dice",
+          "sa:rangeMeters": {
+            "normal": 45,
+            "maximum": 450
+          },
+          "sa:size": "Large",
+          "sa:specialProperties": "Counts as magic for overcoming damage reductiong and penetrating magical defences",
+          "sa:weight": 4,
+          "sa:cost": 19500,
+          "sa:powerLevel": 7,
+          "sa:description": "Heavily enchanted elven assaultrifle",
+          "sa:tags": [
+            "burst"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Missile launcher",
+          "sa:damage": "By missile",
+          "sa:damageType": "-",
+          "sa:criticalModifier": "-",
+          "sa:clipSize": "1 attack",
+          "sa:rangeMeters": {
+            "normal": 360,
+            "maximum": 1800
+          },
+          "sa:size": "Huge",
+          "sa:specialProperties": "Can hit targets that are not in your line of sight if target linked ally has line of sight to target and a clear path to the target exists and the patch contains no turns tighter than 45 degrees. No turn on the missiles path can be less than 10 squares apart.",
+          "sa:weight": 12,
+          "sa:cost": 12000,
+          "sa:description": "A missile launcher system intended for easy to move artilliery like support",
+          "sa:proficiency": "System"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Naridon Marksman Rifle",
+          "sa:damage": "2d10",
+          "sa:damageType": "Ballistic",
+          "sa:criticalModifier": "20 +6",
+          "sa:clipSize": "20 dice / 10 attacks",
+          "sa:rangeMeters": {
+            "normal": 90,
+            "maximum": 900
+          },
+          "sa:size": "Large",
+          "sa:description": "A precision long-range weapon built for accuracy and lethality. The Naridon is favored by military snipers and assassins alike. Its high critical modifier and scoped design make it devastating in trained hands.",
+          "sa:specialProperties": "Scoped",
+          "sa:weight": 5,
+          "sa:cost": 1500,
+          "sa:powerLevel": 6,
+          "sa:tags": [
+            "Covert"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "OT Shoulder firing tube",
+          "sa:damage": "By rocket",
+          "sa:damageType": "-",
+          "sa:criticalModifier": "-",
+          "sa:clipSize": "1 attack",
+          "sa:rangeMeters": {
+            "normal": 240,
+            "maximum": 1800
+          },
+          "sa:size": "Large",
+          "sa:specialProperties": "A one time launcher for Ultralight rockets. Roll attack as usual, ignore spread in bombard description.",
+          "sa:weight": 2,
+          "sa:cost": 400,
+          "sa:description": "A single use rocket launcher",
+          "sa:proficiency": "Simple"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "PDW Submachine gun",
+          "sa:damage": "1d8",
+          "sa:damageType": "Ballistic",
+          "sa:burstDamage": "2d8",
+          "sa:criticalModifier": "20+2",
+          "sa:clipSize": "6 dice",
+          "sa:rangeMeters": {
+            "normal": 18,
+            "maximum": 180
+          },
+          "sa:size": "Medium",
+          "sa:weight": 0.9,
+          "sa:cost": 2200,
+          "sa:powerLevel": 6,
+          "sa:description": "A hightech submachine gun. Noisy but effective",
+          "sa:tags": [
+            "Automatic",
+            "burst",
+            "loud"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Plasma spear",
+          "sa:damage": "2d12",
+          "sa:damageType": "Plasma",
+          "sa:criticalModifier": "20+1",
+          "sa:clipSize": "5 attacks",
+          "sa:size": "Medium",
+          "sa:description": "An exotic weapon projecting superheated plasma in the shape of a spear. Designed for extreme close-quarters combat, it carves through armor and flesh with equal ease. Requires power armor mounting for safe use.",
+          "sa:specialProperties": "Mounts on powerarmor hardpoints",
+          "sa:weight": 7,
+          "sa:cost": 19000,
+          "sa:powerLevel": 8,
+          "sa:tags": [
+            "loud",
+            "brutal"
+          ],
+          "sa:proficiency": "Exotic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Polaris HIL Cannon",
+          "sa:damage": "5d8",
+          "sa:damageType": "Fire",
+          "sa:criticalModifier": "20 + 3",
+          "sa:clipSize": "5 attacks",
+          "sa:rangeMeters": {
+            "normal": 90,
+            "maximum": 900
+          },
+          "sa:size": "Large",
+          "sa:description": "The Polaris HIL (High Intensity Laser) Cannon delivers devastating sustained energy beams. Mounted on military-grade power armor, it's a statement of force. Few targets survive direct engagement with this weapon.",
+          "sa:specialProperties": "Mounts on shoulder, arms and other hardpoints.",
+          "sa:weight": 30,
+          "sa:cost": 19750,
+          "sa:powerLevel": 7,
+          "sa:tags": [
+            "Heavy",
+            "brutal",
+            "loud",
+            "armor penetrating"
+          ],
+          "sa:proficiency": "Exotic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Railgun",
+          "sa:damage": "4d12",
+          "sa:damageType": "Ballistic",
+          "sa:criticalModifier": "20 + 4",
+          "sa:clipSize": "1",
+          "sa:rangeMeters": {
+            "normal": 300,
+            "maximum": 3000
+          },
+          "sa:size": "Huge",
+          "sa:specialProperties": "Ignores 3 DR and 10 Hardness. Draw a line between attacker and target. Everything in front of the attacker withing 20 ft of the line takes 2d6 sonic damage that ignores all hardness.",
+          "sa:weight": 120,
+          "sa:cost": 48000,
+          "sa:description": "A tripod-mounted kinetic accelerator that fires projectiles at hypersonic velocities. The sheer force punches through virtually any defense, leaving a path of destruction in its wake. Reserved for military installations and extreme threats.",
+          "sa:tags": [
+            "Brutal",
+            "loud",
+            "armorpenetrating"
+          ],
+          "sa:proficiency": "System"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Rocket launcher",
+          "sa:damage": "By rocket",
+          "sa:damageType": "-",
+          "sa:criticalModifier": "-",
+          "sa:clipSize": "1 attack",
+          "sa:rangeMeters": {
+            "normal": 240,
+            "maximum": 1800
+          },
+          "sa:size": "Large",
+          "sa:specialProperties": "Roll attack as usual, ignore spread in bombard description",
+          "sa:weight": 4,
+          "sa:cost": 2500,
+          "sa:description": "A multiple use rocket launcher",
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Shotgun, auto",
+          "sa:damage": "2d8",
+          "sa:damageType": "Ballistic",
+          "sa:burstDamage": "4d8",
+          "sa:criticalModifier": "17-20 + 1",
+          "sa:clipSize": "8 dice",
+          "sa:rangeMeters": {
+            "normal": 9,
+            "maximum": 45
+          },
+          "sa:size": "Large",
+          "sa:description": "A semi-automatic shotgun with rapid-fire capability. Devastating in close quarters, the spread of buckshot makes precision unnecessary. Popular with law enforcement and urban combat specialists.",
+          "sa:specialProperties": "Half maximum range. Can not cause criticals outside range. DR and Hardness is doubly effective against shotguns",
+          "sa:weight": 6,
+          "sa:cost": 3700,
+          "sa:powerLevel": 7,
+          "sa:tags": [
+            "loud",
+            "brutal"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "shotgun, combat",
+          "sa:damage": "2d8",
+          "sa:damageType": "Ballistic",
+          "sa:criticalModifier": "16-20 + 1",
+          "sa:clipSize": "6 attacks",
+          "sa:rangeMeters": {
+            "normal": 9,
+            "maximum": 45
+          },
+          "sa:size": "Large",
+          "sa:description": "A combat-oriented shotgun designed for tactical operations. Lighter than its automatic cousin, it sacrifices rate of fire for portability and handling. Favored by special forces and boarding teams.",
+          "sa:specialProperties": "Half maximum range. Can not cause criticals outside range. DR and Hardness is doubly effective against shotguns",
+          "sa:weight": 4,
+          "sa:cost": 1500,
+          "sa:powerLevel": 7,
+          "sa:tags": [
+            "loud"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Sliver submachine gun",
+          "sa:damage": "1d4",
+          "sa:damageType": "Slashing",
+          "sa:burstDamage": "4d4",
+          "sa:criticalModifier": "20+2",
+          "sa:clipSize": "12 dice",
+          "sa:rangeMeters": {
+            "normal": 12,
+            "maximum": 120
+          },
+          "sa:size": "Tiny",
+          "sa:specialProperties": "Specialization 1 xp You inflict 2d4 bleed damage when you damage a biological target with a burst attack using at least 2 damage dice using sliver submachine guns",
+          "sa:weight": 1.5,
+          "sa:cost": 2790,
+          "sa:powerLevel": 6,
+          "sa:description": "A small compact machinegun. Its magazine is a spool of tungsten wire which is snipped of in needlelike pieces before being launched.",
+          "sa:tags": [
+            "light",
+            "automatic"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Tight focus plasma cannon",
+          "sa:damage": "3d10",
+          "sa:damageType": "Plasma",
+          "sa:burstDamage": "5d10",
+          "sa:criticalModifier": "20 + 3",
+          "sa:clipSize": "10 dice",
+          "sa:rangeMeters": {
+            "normal": 90,
+            "maximum": 900
+          },
+          "sa:size": "Huge",
+          "sa:description": "An advanced plasma weapon using optical focusing arrays to concentrate superheated plasma into a narrow beam. Each hit degrades target armor and defenses, making it effective against heavily armored opponents.",
+          "sa:specialProperties": "Mounts on shoulder, arms and other hardpoints. For each hit against a target reduce ac by 1 and hardness by 2. This effect can be removed by conducting repairs.",
+          "sa:weight": 45,
+          "sa:cost": 19750,
+          "sa:powerLevel": 8,
+          "sa:tags": [
+            "Heavy",
+            "brutal",
+            "loud"
+          ],
+          "sa:proficiency": "Exotic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "XS-1 Plasma dispenser",
+          "sa:damage": "3d10",
+          "sa:damageType": "Plasma",
+          "sa:criticalModifier": "20+4",
+          "sa:clipSize": "1 attack",
+          "sa:rangeMeters": {
+            "normal": 135,
+            "maximum": 1350
+          },
+          "sa:size": "Large",
+          "sa:description": "A precision plasma rifle designed for extreme range engagement. The 'XS-1' designation refers to its extra-small discharge profile combined with extraordinary range. A weapon for specialists with steady hands.",
+          "sa:specialProperties": "Scoped.",
+          "sa:weight": 9,
+          "sa:cost": 16700,
+          "sa:powerLevel": 8,
+          "sa:tags": [
+            "Brutal",
+            "loud",
+            "armorpenetrating"
+          ],
+          "sa:proficiency": "Martial"
+        }
+      ]
+    }
+  ]
+}

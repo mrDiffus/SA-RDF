@@ -1,0 +1,111 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "CreativeWork": "https://schema.org/CreativeWork",
+    "Place": "https://schema.org/Place",
+    "Person": "https://schema.org/Person",
+    "author": {
+      "@type": "@id"
+    },
+    "about": {
+      "@type": "@id"
+    },
+    "locationCreated": {
+      "@type": "@id"
+    },
+    "hasPart": {
+      "@container": "@list",
+      "@type": "@id"
+    }
+  },
+  "type": "CreativeWork",
+  "label": "Arrur",
+  "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and massive geological violence. It features sheer cliffs dropping into furious oceans, high-altitude deserts, volcanic plains, and myth-laden landmarks. Society revolves around strength, survival, and fortified cities like Bloodrift, which import destructive tech and export mercenaries, war materials, and magical arms.",
+  "genre": "God-Scarred Mythology, Highland Brutalism, Mercenary Frontier, Volcanic War Epic",
+  "keywords": [
+    "orc homeworld",
+    "vertical cities",
+    "bitten world myth",
+    "Bloodrift",
+    "Teeth of Gorthuun",
+    "Thakza\u2019s Grin",
+    "Zugthak the Laughing Scar",
+    "Hollow of the Last Joke",
+    "Gorthuun",
+    "Varrkul",
+    "Korvhal",
+    "mercenary culture"
+  ],
+  "url": "https://stellararcana.org/arrur",
+  "author": {
+    "type": "Person",
+    "label": "Your Name or Alias"
+  },
+  "about": {
+    "type": "Place",
+    "label": "Arrur",
+    "description": "A high-gravity planet with extreme vertical geography, hostile oceans, and a culture built on war, survival, and myth. Ancient gods are said to have physically shaped the planet by biting it, leaving massive cliffs, frozen peaks, and cursed rivers.",
+    "@id": "https://stellararcana.org/place/arrur"
+  },
+  "locationCreated": {
+    "type": "Place",
+    "label": "Bloodrift",
+    "description": "A vertical fortress-city carved into the cliff walls of a massive canyon. Imports destructive technology via spaceport and exports war goods, mercenaries, and enchanted arms. Features include the Mawport, Chainmarkets, Clutch, Redsteel Hall, and Blackcradle.",
+    "@id": "https://stellararcana.org/place/bloodrift"
+  },
+  "hasPart": [
+    {
+      "type": "Place",
+      "label": "Bloodrift",
+      "description": "A militarized trade hub and vertical city, central to Arrur's economy and warfare culture.",
+      "@id": "https://stellararcana.org/place/bloodrift"
+    },
+    {
+      "type": "Place",
+      "label": "Teeth of Gorthuun",
+      "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails in their presence.",
+      "@id": "https://stellararcana.org/place/teeth-of-gorthuun"
+    },
+    {
+      "type": "Place",
+      "label": "Hollow of the Last Joke",
+      "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza\u2019s Grin, said to originate from his shattered, still-living heart deep underground.",
+      "@id": "https://stellararcana.org/place/hollow-of-the-last-joke"
+    },
+    {
+      "type": "Place",
+      "label": "Thakza\u2019s Grin",
+      "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke across the highlands. Said to be Zugthak's laughter made liquid.",
+      "@id": "https://stellararcana.org/place/thakzas-grin"
+    },
+    {
+      "type": "Place",
+      "label": "Korvhal",
+      "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through the highlands.",
+      "@id": "https://stellararcana.org/place/korvhal"
+    },
+    {
+      "type": "Place",
+      "label": "Skarth\u2019s Hollow",
+      "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone palisades.",
+      "@id": "https://stellararcana.org/place/skarths-hollow"
+    },
+    {
+      "type": "Place",
+      "label": "Ashcross",
+      "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock.",
+      "@id": "https://stellararcana.org/place/ashcross"
+    },
+    {
+      "type": "Place",
+      "label": "Drowned Bastion",
+      "description": "Storm-battered cliffside city used as a penal colony and pirate port.",
+      "@id": "https://stellararcana.org/place/drowned-bastion"
+    }
+  ],
+  "inLanguage": "en",
+  "dateCreated": "2025-05-05",
+  "identifier": "arrur-lore-complete"
+}

@@ -1,0 +1,83 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:CharacterCreation",
+      "@type": "sa:Basic",
+      "rdfs:label": "Character Creation",
+      "sa:steps": [
+        {
+          "@type": "sa:Step",
+          "rdfs:label": "Choose Two Archetypes",
+          "sa:description": "Choose two archetypes that support the character concept you envision. The archetypes you select determine which features you can purchase at their base cost. You may also acquire features from other archetypes, though they cost 1.5 times the standard amount.\n\nMost archetypes include features that are free if the archetype is chosen. These free features are granted at character creation."
+        },
+        {
+          "@type": "sa:Step",
+          "rdfs:label": "Choose a Race",
+          "sa:description": "Choose a race for your character. Each race offers unique bonuses and abilities. Select one that fits your character's background or concept."
+        },
+        {
+          "@type": "sa:Step",
+          "rdfs:label": "Determine Ability Scores",
+          "sa:description": "The core abilities in Stellar Arcana are Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma.\n\nYou may use the standard array (15, 14, 13, 12, 10, 8) or customize your scores using the point buy system:\n\nStart with 27 points. Spend them according to the Point Buy Table.\n\nYou may not lower a score below 8 to gain points. You may not spend more than 9 points to raise a score above 15.",
+          "sa:pointBuyTable": {
+            "@type": "sa:Table",
+            "rdfs:label": "Point Buy Costs",
+            "sa:headers": ["Score", "Cost"],
+            "sa:rows": [
+              [8, 0],
+              [9, 1],
+              [10, 2],
+              [11, 3],
+              [12, 4],
+              [13, 5],
+              [14, 7],
+              [15, 9]
+            ]
+          }
+        },
+        {
+          "@type": "sa:Step",
+          "rdfs:label": "Calculate Final Statistics",
+          "sa:description": "Apply racial bonuses to your ability scores. Record any features and proficiencies granted by your archetypes.\n\nYour character gains:\n- Wounds equal to Constitution score\n- Hit Points equal to Constitution modifier + 6\n- Sanity equal to Wisdom score\n- Spell Points as specified by your archetypes (if any)\n- Renown equal to Proficiency Bonus\n- Proficiency Bonus of 2\n\nAbility DCs:\n- Melee: 8 + Proficiency Bonus + Strength or Dexterity modifier\n- Ranged: 8 + Proficiency Bonus + Dexterity modifier\n- Spell: 8 + Proficiency Bonus + Casting Ability modifier"
+        },
+        {
+          "@type": "sa:Step",
+          "rdfs:label": "Advancement",
+          "sa:description": "As your character completes quests and overcomes challenges, they earn experience. Experience is spent to purchase features—either archetype features, cross-archetype features, or general features.\n\nYou must have earned enough unspent experience through gameplay to purchase a feature. Features from archetypes you do not possess cost 1.5 times their base experience cost.\n\nExample: Bob the Armsman/Arcanist wants to acquire the 'Quick and Silent' feature from the Recon archetype. Since he does not belong to that archetype, it costs him 4 experience (3 base + 1 extra)."
+        }
+      ],
+      "sa:progressionTable": {
+        "@type": "sa:Table",
+        "rdfs:label": "Character Progression",
+        "sa:headers": ["Total Experience", "Proficiency Bonus", "HD", "Special"],
+        "sa:rows": [
+          [0, 2, 1, ""],
+          [2, 2, 2, ""],
+          [4, 2, 3, ""],
+          [6, 2, 4, "+1 to two different abilities"],
+          [9, 3, 5, ""],
+          [12, 3, 6, ""],
+          [15, 3, 7, ""],
+          [19, 3, 8, "+1 to two different abilities"],
+          [23, 4, 9, ""],
+          [27, 4, 10, ""],
+          [32, 4, 11, ""],
+          [37, 4, 12, "+1 to two different abilities"],
+          [42, 5, 13, ""],
+          [48, 5, 14, ""],
+          [54, 5, 15, ""],
+          [69, 6, 16, "+1 to two different abilities"],
+          [67, 6, 17, ""],
+          [74, 6, 18, ""],
+          [81, 6, 19, ""],
+          [89, 7, 20, "+1 to two different abilities"]
+        ]
+      }
+    }
+  ]
+}

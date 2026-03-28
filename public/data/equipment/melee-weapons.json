@@ -1,0 +1,467 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:WeaponList",
+      "@type": "sa:Equipment",
+      "rdfs:label": "Melee weapons",
+      "sa:items": [
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Broadsword",
+          "sa:damage": "1d8",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "19-20 + 2",
+          "sa:size": "Medium",
+          "sa:description": "A classic broad-bladed sword designed for both slashing and blunt force. The versatile design allows one-handed or two-handed use, making it a favorite of knights and mercenaries across cultures.",
+          "sa:specialProperties": "Versatile(1d10) Specialization 1 xp deal bludgenoning or slashing whichever is the most benefitial for you",
+          "sa:weight": 4,
+          "sa:cost": 600,
+          "sa:tags": [
+            "Heavy"
+          ],
+          "sa:proficiency": "Archaic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Chain Axe",
+          "sa:damage": "4d4",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "19-20 + 3",
+          "sa:size": "Large",
+          "sa:description": "A grotesque weapon consisting of a chain-driven rotating blade. Favored by brutal warriors and considered horrifying by civilized societies. Exceptionally effective against armored opponents.",
+          "sa:specialProperties": "Double damage against targets with no hardness or against targets that have their hardness ignored or completly mitigated. Do not double the number of dice, double the values of the rolled dice",
+          "sa:weight": 8,
+          "sa:cost": 649,
+          "sa:tags": [
+            "Horrifying",
+            "knockdown",
+            "cleaver",
+            "loud"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Chain sword",
+          "sa:damage": "3d4",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "18-20 +2",
+          "sa:size": "Large",
+          "sa:description": "A high-frequency vibrating blade with rotating chain elements. Less brutal than its axe cousin but still considered horrifying. The constant noise of operation announces the wielder's presence.",
+          "sa:specialProperties": "Double damage against targets with no hardness or against targets that have their hardness ignored or completly mitigated. Do not double the number of dice, double the values of the rolled dice",
+          "sa:weight": 7,
+          "sa:cost": 650,
+          "sa:tags": [
+            "Horrific",
+            "loud"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Elven Sliver Sword",
+          "sa:damage": "1d6",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "18-20 +1",
+          "sa:size": "Medium",
+          "sa:specialProperties": "Finesse. Never add Str to damage. Cannot be used to knockdown, trip or disarm",
+          "sa:weight": 1,
+          "sa:cost": 24900,
+          "sa:description": "A hilt that projects a 3-4ft long wormhole sliver that slices trough matter with ease",
+          "sa:tags": [
+            "Elegant",
+            "finesse"
+          ],
+          "sa:proficiency": "Exotic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Enegrized axe",
+          "sa:damage": "2d8",
+          "sa:damageType": "slashing / Plasma",
+          "sa:criticalModifier": "20 + 3",
+          "sa:size": "Medium",
+          "sa:description": "An axe blade wrapped in superheated plasma technology. Combines traditional melee design with modern energy systems. Effective against both organic and mechanical targets.",
+          "sa:weight": 5,
+          "sa:cost": 4500,
+          "sa:tags": [
+            "Cleaver"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Energized Claws",
+          "sa:damage": "2d6",
+          "sa:damageType": "slashing / Plasma",
+          "sa:criticalModifier": "18-20 +2",
+          "sa:size": "Medium",
+          "sa:description": "Mounted claw weapons that project plasma edges. Designed for power armor integration, they provide rapid strikes with both cleaving and penetration capabilities.",
+          "sa:specialProperties": "Occupies both hands or both arm hardpoints on powerarmors. Does not deal decreased damage when cleaving. Weight is pr claw",
+          "sa:weight": 3,
+          "sa:cost": 4700,
+          "sa:tags": [
+            "brutal",
+            "cleaver",
+            "finesse"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Energized great sword",
+          "sa:damage": "4d6",
+          "sa:damageType": "slashing / Plasma",
+          "sa:criticalModifier": "19-20 + 1",
+          "sa:size": "Large",
+          "sa:description": "A massive plasma-infused greatsword capable of devastating area attacks. The energy discharge creates a cone of destruction with each swing. Requires significant strength to wield effectively.",
+          "sa:specialProperties": "Does damage in 10ft cone. Cone attack recharges in 1d3 rounds.",
+          "sa:weight": 9,
+          "sa:cost": 4900,
+          "sa:tags": [
+            "Cleaver",
+            "heavy"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Energized katana",
+          "sa:damage": "2d8",
+          "sa:damageType": "slashing / Plasma",
+          "sa:criticalModifier": "18 - 20 + 2",
+          "sa:size": "Large",
+          "sa:description": "A modern interpretation of the traditional katana, enhanced with plasma technology. Maintains the elegant design of its archaic predecessor while delivering contemporary lethality.",
+          "sa:specialProperties": "Specialization 1 xp Use katanas one handed",
+          "sa:weight": 4,
+          "sa:cost": 4800,
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Energized maul",
+          "sa:damage": "3d12",
+          "sa:damageType": "Force",
+          "sa:criticalModifier": "20 + 3",
+          "sa:size": "Large",
+          "sa:description": "A two-handed maul generating kinetic force fields. Crushes both armor and bone with equal efficiency. The shockwave from each impact creates area denial effects.",
+          "sa:specialProperties": "Does damage in 10ft cone. Cone attack recharges in 1d3 rounds. +1d4 on knockdown checks.",
+          "sa:weight": 25,
+          "sa:cost": 9500,
+          "sa:tags": [
+            "Brutal",
+            "horrifying",
+            "heavy",
+            "knockdown"
+          ],
+          "sa:proficiency": "Exotic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Greataxe",
+          "sa:damage": "1d12",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "20 + 3",
+          "sa:size": "Large",
+          "sa:description": "A massive two-handed axe passed down through generations. The defining weapon of elite warriors and barbarian champions. Requires both strength and skill to use effectively in combat.",
+          "sa:cost": 300,
+          "sa:tags": [
+            "Archaic",
+            "heavy"
+          ],
+          "sa:proficiency": "Archaic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Greatsword",
+          "sa:damage": "2d6",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "19-20+3",
+          "sa:size": "Large",
+          "sa:description": "A long, straight blade designed for both sweeping slashes and powerful thrusts. The classic weapon of knights and professional soldiers. Balanced between control and devastating power.",
+          "sa:cost": 300,
+          "sa:tags": [
+            "Archaic",
+            "heavy"
+          ],
+          "sa:proficiency": "Archaic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Grind flail",
+          "sa:damage": "3d4",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "20 + 4",
+          "sa:size": "Large",
+          "sa:description": "A rotating flail weapon originating from orcish cultures. Deals both slashing and blunt trauma with each strike. Considered barbaric and horrifying by most civilized societies. Extremely difficult to control.",
+          "sa:specialProperties": "Does half slashing and half bludgenoing damage. Costs 12k outside of orcish colonies. Treated as a martial weapon by orcs and half-orcs. Most armed forces frown upon the use of this weapon. Attacks made with a Grindflail have 10 ft reach",
+          "sa:cost": 650,
+          "sa:tags": [
+            "Horrifying",
+            "knockdown",
+            "loud"
+          ],
+          "sa:proficiency": "Exotic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "HF Axe",
+          "sa:damage": "1d10",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "20 +3",
+          "sa:size": "Medium",
+          "sa:description": "A high-frequency vibrating axe that cuts through material with molecular precision. Effective and straightforward—a tool as much as a weapon. Popular with soldiers and laborers alike.",
+          "sa:specialProperties": "Its an axe. Chop stuff.",
+          "sa:weight": 2,
+          "sa:cost": 269,
+          "sa:tags": [
+            "Heavy",
+            "cleaver"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "HF Bladed whip",
+          "sa:damage": "2d6",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "17-20+2",
+          "sa:size": "Medium",
+          "sa:description": "A weapon of prestige and authority among drow nobility. The high-frequency blade edges along a flexible whip enable devastating strikes from surprising distances. Ownership often indicates rank and favor.",
+          "sa:specialProperties": "Classic drow weapon, often used to indicate rank and standing. Usually available for a lower price for Highborne drow in a drow settlement of sufficient size. Can attack targets in within 15 ft reach",
+          "sa:weight": 1.5,
+          "sa:cost": 19000,
+          "sa:tags": [
+            "horrifying",
+            "finesse"
+          ],
+          "sa:proficiency": "Exotic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "HF Dagger",
+          "sa:damage": "1d6",
+          "sa:damageType": "Piercing / Slashing",
+          "sa:criticalModifier": "18-20+2",
+          "sa:size": "Tiny",
+          "sa:specialProperties": "Finesse. Thrown.",
+          "sa:weight": 0.15,
+          "sa:cost": 249,
+          "sa:description": "A small high-frequency blade useful for both melee and ranged combat. The vibrating edge makes it effective at finding gaps in armor. Favored by assassins and infiltrators.",
+          "sa:tags": [
+            "covert"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "HF Rapier",
+          "sa:damage": "1d8",
+          "sa:damageType": "Piercing",
+          "sa:criticalModifier": "19-20 +2",
+          "sa:size": "Medium",
+          "sa:description": "An elegant high-frequency thrusting weapon. The precision of the blade's vibration ensures penetration with minimal effort. Preferred by duelists and courtiers who value finesse over brute force.",
+          "sa:specialProperties": "Finesse.",
+          "sa:weight": 2,
+          "sa:cost": 349,
+          "sa:tags": [
+            "Elegant"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "HF Stiletto",
+          "sa:damage": "1d4",
+          "sa:damageType": "Piercing",
+          "sa:criticalModifier": "16-20 +2",
+          "sa:size": "Small",
+          "sa:description": "A thin, needle-like blade that vibrates at high frequency. Specifically designed to exploit weaknesses in armor and ignore damage reduction. A weapon of assassins and armor specialists.",
+          "sa:specialProperties": "Spezialisation 1 xp Ignore 1 DR and 5 hardness.",
+          "sa:weight": 0.2,
+          "sa:cost": 249,
+          "sa:tags": [
+            "Armorpenetrating"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "High Frequency Katana",
+          "sa:damage": "1d10",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "18-20 +2",
+          "sa:size": "Large",
+          "sa:description": "A high-frequency variant of the traditional katana. The vibrating blade allows single-handed use despite the weapon's length. Combines ancient martial philosophy with modern technology.",
+          "sa:specialProperties": "Spezialication 1 xp You can use katanas 1 handed",
+          "sa:weight": 4,
+          "sa:cost": 650,
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Impact mace",
+          "sa:damage": "1d10",
+          "sa:damageType": "Bludgenoning",
+          "sa:criticalModifier": "20 + 1",
+          "sa:size": "Medium",
+          "sa:description": "A heavy striking weapon that concentrates impact force to defeat armor. Effective against hardened targets where slashing fails. Preferred by armor-breakers and siege weapon operators.",
+          "sa:specialProperties": "Specialization 1 xp Ignore 5 hardness when using maces",
+          "sa:weight": 3,
+          "sa:cost": 800,
+          "sa:tags": [
+            "Heavy",
+            "archaic"
+          ],
+          "sa:proficiency": "Archaic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Katana",
+          "sa:damage": "1d8",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "18-20 + 2",
+          "sa:size": "Large",
+          "sa:description": "A curved single-edge blade refined over centuries of martial tradition. The balance of the weapon allows skilled practitioners to wield it with surprising grace. A symbol of honor and discipline.",
+          "sa:specialProperties": "Spezialication 1xp you can use katanas 1 handed",
+          "sa:weight": 3,
+          "sa:cost": 900,
+          "sa:proficiency": "Archaic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Longbow",
+          "sa:damage": "1d8",
+          "sa:damageType": "Piercing",
+          "sa:criticalModifier": "20 +3",
+          "sa:size": "Large",
+          "sa:description": "A tall bow capable of delivering arrows with impressive force and accuracy. The weapon of choice for hunters and ranged combatants. Requires years of practice to use effectively.",
+          "sa:weight": 2,
+          "sa:cost": 275,
+          "sa:tags": [
+            "Archaic"
+          ],
+          "sa:proficiency": "Archaic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Mace",
+          "sa:damage": "1d8",
+          "sa:damageType": "Bludgenoning",
+          "sa:criticalModifier": "20 +1",
+          "sa:size": "Medium",
+          "sa:description": "A straightforward blunt weapon consisting of a weighted head on a haft. Effective against both unarmored and armored opponents. Simple to use and maintain, making it popular among soldiers and militia.",
+          "sa:specialProperties": "Specialization 1 xp Ignore 5 hardness when using maces, hammers og mauls",
+          "sa:weight": 2.5,
+          "sa:cost": 80,
+          "sa:tags": [
+            "Archaic",
+            "heavy"
+          ],
+          "sa:proficiency": "Simple"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Maul",
+          "sa:damage": "1d12",
+          "sa:damageType": "Bludgenoning",
+          "sa:criticalModifier": "20+1",
+          "sa:size": "Large",
+          "sa:description": "An enormous two-handed hammer designed to crush through defenses. The sheer weight guarantees knockdown effects. Favored by barbarians, giants, and siege weapon operators.",
+          "sa:specialProperties": "Specialization 1 xp Ignore 5 hardness when using maces, hammers og mauls",
+          "sa:weight": 8,
+          "sa:cost": 120,
+          "sa:tags": [
+            "Brutal",
+            "heavy",
+            "knockdown"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Plasma Dagger",
+          "sa:damage": "1d10",
+          "sa:damageType": "Plasma / Piercing",
+          "sa:criticalModifier": "18 - 20 +1",
+          "sa:size": "Tiny",
+          "sa:description": "A small blade wrapped in plasma energy. Deadly despite its size, capable of being thrown or used in close combat. The superheated edge makes it effective armor penetration tool.",
+          "sa:specialProperties": "Finesse. Thrown. Can remain active or 10 minutes in inc.s of 1 minute  per power pack.",
+          "sa:weight": 1,
+          "sa:cost": 9800,
+          "sa:tags": [
+            "Armorpenetrating",
+            "loud"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Power fist",
+          "sa:damage": "3d12 (1d12)",
+          "sa:damageType": "Bludgeoning / Electical",
+          "sa:criticalModifier": "18-20 +2",
+          "sa:size": "Medium",
+          "sa:description": "A power-assisted gauntlet that drives a fist with electromagnetic force. Devastating in close quarters, it combines blunt force with electrical damage. Requires cooling time between maximum-power strikes.",
+          "sa:specialProperties": "Cools down in 1d3 rounds or spend an action to rapidly cool the weapon",
+          "sa:cost": 17859,
+          "sa:tags": [
+            "Brutal",
+            "knockdown"
+          ],
+          "sa:proficiency": "Martial"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Rapier",
+          "sa:damage": "1d6",
+          "sa:damageType": "Slashing / Piercing",
+          "sa:criticalModifier": "18-20 +1",
+          "sa:size": "Medium",
+          "sa:description": "A light, agile blade designed for precision striking. The weapon of choice for duelers and swordmasters. Requires technique and timing rather than brute strength.",
+          "sa:cost": 250,
+          "sa:tags": [
+            "Archaic",
+            "finesse"
+          ],
+          "sa:proficiency": "Archaic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Scimitar",
+          "sa:damage": "1d6",
+          "sa:damageType": "Slashing",
+          "sa:criticalModifier": "18-20 +1",
+          "sa:size": "Medium",
+          "sa:description": "A curved blade originating from desert cultures. The curved design allows flowing, sweeping motions. Effective for mounted combat and group formations. A classic weapon of cavalry and nomadic warriors.",
+          "sa:cost": 275,
+          "sa:tags": [
+            "Archaic"
+          ],
+          "sa:proficiency": "Archaic"
+        },
+        {
+          "@type": "sa:Weapon",
+          "rdfs:label": "Sick stick",
+          "sa:damage": "1",
+          "sa:damageType": "Bludgeoing",
+          "sa:criticalModifier": "20+1",
+          "sa:size": "Small",
+          "sa:description": "A non-lethal weapon designed to incapacitate without killing. Strikes induce nausea and disorientation. Used by peacekeepers and law enforcement to subdue targets without permanent harm.",
+          "sa:specialProperties": "Targets that take damage from this weapon must take a DC 10 con save or become nauseated",
+          "sa:cost": 49,
+          "sa:tags": [
+            "Silent",
+            "covert"
+          ],
+          "sa:proficiency": "Simple"
+        }
+      ]
+    }
+  ]
+}
