@@ -1,4 +1,8 @@
+## Disclaimer
 This is a almost completely vibe coded project and nothing in it should be viewed as good practice.
+
+## What is it
+The thing that matters is in the folder public/data, where the source material for what started as a DnD 5th Edition campaing setting. This repo is me experimenting with agentic workflows and vibe coding solutions for presenting RDF content as webpages.
 
 ## Run Locally
 
