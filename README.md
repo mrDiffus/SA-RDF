@@ -1,3 +1,5 @@
+This is a almost completely vibe coded project and nothing in it should be viewed as good practice.
+
 ## Run Locally
 
 **Prerequisites:**  Node.js
