@@ -9,6 +9,7 @@ coverage/
 # .NET / C# project build outputs
 bin/
 obj/
+TestResults/
 .vs/
 *.user
 *.dll
