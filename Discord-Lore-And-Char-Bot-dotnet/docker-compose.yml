@@ -1,0 +1,24 @@
+services:
+  discord-lore-bot:
+    build:
+      context: ..
+      dockerfile: Discord-Lore-And-Char-Bot-dotnet/Dockerfile
+    restart: unless-stopped
+    env_file:
+      - .env
+    environment:
+      DOTNET_ENVIRONMENT: Production
+      Bot__DiscordToken: ${DISCORD_TOKEN}
+      Bot__DiscordApplicationId: ${DISCORD_APPLICATION_ID}
+      Bot__DiscordGuildId: ${DISCORD_GUILD_ID:-}
+      Bot__GeminiApiKey: ${GEMINI_API_KEY}
+      Bot__GeminiModel: ${GEMINI_MODEL:-gemini-2.5-flash}
+      Bot__AutoRegisterCommands: ${AUTO_REGISTER_COMMANDS:-true}
+      Bot__EnableMessageContentIntent: ${ENABLE_MESSAGE_CONTENT_INTENT:-false}
+      Bot__EnableGoogleSearchRetrieval: ${ENABLE_GOOGLE_SEARCH_RETRIEVAL:-true}
+      Bot__DataRoot: /app/public/data
+      Bot__ProfileStorePath: /app/storage/profiles.json
+      Bot__PersonaPath: /app/persona.md
+      Bot__AssetManifestPath: /app/storage/assets_manifest.json
+    volumes:
+      - ./storage:/app/storage

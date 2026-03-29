@@ -1,0 +1,20 @@
+services:
+  discord-lore-bot:
+    image: ghcr.io/your-org/discord-lore-bot:latest
+    restart: unless-stopped
+    environment:
+      DOTNET_ENVIRONMENT: Production
+      Bot__DiscordToken: ${Bot__DiscordToken}
+      Bot__DiscordApplicationId: ${Bot__DiscordApplicationId}
+      Bot__DiscordGuildId: ${Bot__DiscordGuildId:-}
+      Bot__GeminiApiKey: ${Bot__GeminiApiKey}
+      Bot__GeminiModel: ${Bot__GeminiModel:-gemini-2.5-flash}
+      Bot__AutoRegisterCommands: ${Bot__AutoRegisterCommands:-true}
+      Bot__EnableMessageContentIntent: ${Bot__EnableMessageContentIntent:-false}
+      Bot__EnableGoogleSearchRetrieval: ${Bot__EnableGoogleSearchRetrieval:-true}
+      Bot__DataRoot: /app/public/data
+      Bot__ProfileStorePath: /app/storage/profiles.json
+      Bot__PersonaPath: /app/persona.md
+      Bot__AssetManifestPath: /app/storage/assets_manifest.json
+    volumes:
+      - ./storage:/app/storage

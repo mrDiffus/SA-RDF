@@ -12,6 +12,12 @@ C# reimplementation of the Discord lore/character bot using Discord.Net and Gemi
 2. Edit `appsettings.json` and fill in the `Bot` section values.
 3. Run: `dotnet run`
 
+## Docker / Compose
+- Local build/run via Docker Compose: `docker compose up -d --build`
+- Komodo-oriented image pull Compose file: `docker-compose.komodo.yml`
+  - Set `Bot__*` variables in Komodo stack environment/secrets.
+  - Replace `ghcr.io/your-org/discord-lore-bot:latest` with your published image.
+
 You can also override any `Bot:*` value using environment variables.
 Use `__` for nested keys, for example: `Bot__EnableMessageContentIntent=true`.
 
