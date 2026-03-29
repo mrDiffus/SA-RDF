@@ -180,7 +180,8 @@ internal sealed class GeminiService
         var contextText = string.Join("\n\n", context.Select((chunk, i) =>
         {
             var trimmed = chunk.Text.Length > 1200 ? chunk.Text[..1200] + "..." : chunk.Text;
-            return $"Source {i + 1}: {chunk.Title} ({chunk.SourcePath})\n{trimmed}";
+            var sourceRef = chunk.HostedUrl ?? chunk.ResourceIri ?? chunk.SourcePath;
+            return $"Source {i + 1}: {chunk.Title} ({sourceRef})\n{trimmed}";
         }));
 
         var sb = new StringBuilder();
@@ -194,7 +195,8 @@ internal sealed class GeminiService
         sb.AppendLine("Output requirements:");
         sb.AppendLine("- Give a direct answer first.");
         sb.AppendLine("- For levelup/trope intents, include 2-4 concrete next-step options.");
-        sb.AppendLine("- Include a short Evidence section citing source titles used.");
+        sb.AppendLine("- Include a short Evidence section citing source titles used with direct URLs when provided.");
+        sb.AppendLine("- Prefer hosted resource links on https://stellar-arcana.org/ in Evidence references.");
         sb.AppendLine("- If unsupported, say so clearly and ask one follow-up question.");
         return sb.ToString();
     }

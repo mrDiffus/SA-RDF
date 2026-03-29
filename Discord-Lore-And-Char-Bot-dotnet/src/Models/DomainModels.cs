@@ -32,6 +32,8 @@ internal sealed class KnowledgeChunk
     public required string SourcePath { get; init; }
     public required string Title { get; init; }
     public required string Text { get; init; }
+    public string? ResourceIri { get; init; }
+    public string? HostedUrl { get; init; }
 }
 
 internal sealed class KnowledgeBase

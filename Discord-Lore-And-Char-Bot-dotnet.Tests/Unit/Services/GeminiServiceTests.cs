@@ -71,7 +71,13 @@ public sealed class GeminiServiceTests
                     UpdatedAt = string.Empty
                 }
             },
-            [new KnowledgeChunk { SourcePath = "rules.json", Title = "Rules", Text = "Local canon." }],
+                [new KnowledgeChunk
+                {
+                  SourcePath = "rules.json",
+                  Title = "Rules",
+                  Text = "Local canon.",
+                  HostedUrl = "https://stellar-arcana.org/archetype/Academic"
+                }],
             CancellationToken.None);
 
         Assert.Equal("Grounded answer", answer);
@@ -89,7 +95,9 @@ public sealed class GeminiServiceTests
         Assert.Equal(2, parts.GetArrayLength());
         Assert.Equal("application/json", parts[0].GetProperty("file_data").GetProperty("mime_type").GetString());
         Assert.Equal("https://example.test/file", parts[0].GetProperty("file_data").GetProperty("file_uri").GetString());
-        Assert.Contains("What do the records say?", parts[1].GetProperty("text").GetString(), StringComparison.Ordinal);
+        var prompt = parts[1].GetProperty("text").GetString();
+        Assert.Contains("What do the records say?", prompt, StringComparison.Ordinal);
+        Assert.Contains("https://stellar-arcana.org/archetype/Academic", prompt, StringComparison.Ordinal);
     }
 
     [Fact]

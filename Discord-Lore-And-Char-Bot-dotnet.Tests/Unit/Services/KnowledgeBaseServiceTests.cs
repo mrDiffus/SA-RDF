@@ -17,8 +17,12 @@ public sealed class KnowledgeBaseServiceTests
 
             await File.WriteAllTextAsync(Path.Combine(dataRoot, "graph.json"), """
 {
+    "@context": {
+        "archetype": "https://stellararcana.org/archetype/"
+    },
   "@graph": [
     {
+            "@id": "archetype:AcePilot",
       "rdfs:label": "Ace Pilot",
       "description": "Fast ship specialist",
       "level": 3
@@ -48,6 +52,8 @@ public sealed class KnowledgeBaseServiceTests
             Assert.Equal("graph.json", aceChunk.SourcePath);
             Assert.Contains("Fast ship specialist", aceChunk.Text, StringComparison.Ordinal);
             Assert.Contains("3", aceChunk.Text, StringComparison.Ordinal);
+            Assert.Equal("https://stellararcana.org/archetype/AcePilot", aceChunk.ResourceIri);
+            Assert.Equal("https://stellar-arcana.org/archetype/AcePilot", aceChunk.HostedUrl);
 
             var humanChunk = Assert.Single(knowledgeBase.Chunks, chunk => chunk.Title == "Human");
             Assert.Equal("single.json", humanChunk.SourcePath);
@@ -124,6 +130,40 @@ public sealed class KnowledgeBaseServiceTests
         Assert.Equal("First", unmatchedResults[0].Title);
         Assert.Equal("Second", unmatchedResults[1].Title);
     }
+
+        [Fact]
+        [Trait("Category", "Unit")]
+        public async Task BuildAsync_PreservesAlreadyHostedAbsoluteResourceIri()
+        {
+                var tempDir = CreateTempDir();
+                try
+                {
+                        var dataRoot = Path.Combine(tempDir, "data");
+                        Directory.CreateDirectory(dataRoot);
+
+                        await File.WriteAllTextAsync(Path.Combine(dataRoot, "resource.json"), """
+{
+    "@graph": [
+        {
+            "@id": "https://stellar-arcana.org/archetype/Academic",
+            "rdfs:label": "Academic",
+            "description": "Scholarly specialist"
+        }
+    ]
+}
+""");
+
+                        var knowledgeBase = await KnowledgeBaseService.BuildAsync(dataRoot);
+
+                        var chunk = Assert.Single(knowledgeBase.Chunks, c => c.Title == "Academic");
+                        Assert.Equal("https://stellar-arcana.org/archetype/Academic", chunk.ResourceIri);
+                        Assert.Equal("https://stellar-arcana.org/archetype/Academic", chunk.HostedUrl);
+                }
+                finally
+                {
+                        Directory.Delete(tempDir, recursive: true);
+                }
+        }
 
     private static string CreateTempDir()
     {

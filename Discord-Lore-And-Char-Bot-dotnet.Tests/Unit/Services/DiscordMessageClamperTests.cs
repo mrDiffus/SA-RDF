@@ -72,4 +72,26 @@ public sealed class DiscordMessageClamperTests
         Assert.All(sections, section => Assert.True(section.Length <= 10));
         Assert.Equal(text, string.Concat(sections));
     }
+
+    [Fact]
+    [Trait("Category", "Unit")]
+    public void NormalizeLinksForDiscord_UnwrapsMarkdownAutolinksAndNormalizesHost()
+    {
+        const string input = "Arcanist: [https://stellar-arcana.org/archetype/Arcanist](https://stellararcana.org/archetype/Arcanist)";
+
+        var result = DiscordMessageClamper.NormalizeLinksForDiscord(input);
+
+        Assert.Equal("Arcanist: https://stellar-arcana.org/archetype/Arcanist", result);
+    }
+
+    [Fact]
+    [Trait("Category", "Unit")]
+    public void NormalizeLinksForDiscord_ConvertsLabeledMarkdownLinksToClickableFormat()
+    {
+        const string input = "Evidence: [Arcanist page](https://stellararcana.org/archetype/Arcanist)";
+
+        var result = DiscordMessageClamper.NormalizeLinksForDiscord(input);
+
+        Assert.Equal("Evidence: Arcanist page: https://stellar-arcana.org/archetype/Arcanist", result);
+    }
 }

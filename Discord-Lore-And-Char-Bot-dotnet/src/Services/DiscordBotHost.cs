@@ -370,7 +370,7 @@ internal sealed class DiscordBotHost
         };
 
         var answer = await _gemini.AnswerAsync(askRequest, context, cancellationToken);
-        return answer;
+        return DiscordMessageClamper.NormalizeLinksForDiscord(answer);
     }
 
     internal static string? GetMentionValidationError(string question)
@@ -398,7 +398,8 @@ internal sealed class DiscordBotHost
         };
 
         var answer = await _gemini.AnswerAsync(askRequest, context, cancellationToken);
-        return DiscordMessageClamper.Clamp(answer);
+        var normalized = DiscordMessageClamper.NormalizeLinksForDiscord(answer);
+        return DiscordMessageClamper.Clamp(normalized);
     }
 
     internal async Task ProcessMentionRequestAsync(

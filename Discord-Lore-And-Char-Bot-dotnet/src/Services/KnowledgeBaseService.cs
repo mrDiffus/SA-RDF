@@ -75,6 +75,8 @@ internal static class KnowledgeBaseService
 
     private static IEnumerable<KnowledgeChunk> GraphToChunks(string sourcePath, JsonElement root)
     {
+        var contextPrefixes = ReadContextPrefixes(root);
+
         if (root.ValueKind == JsonValueKind.Object
             && root.TryGetProperty("@graph", out var graph)
             && graph.ValueKind == JsonValueKind.Array)
@@ -83,7 +85,7 @@ internal static class KnowledgeBaseService
             foreach (var node in graph.EnumerateArray())
             {
                 index += 1;
-                var chunk = ToChunk(sourcePath, node, index);
+                var chunk = ToChunk(sourcePath, node, index, contextPrefixes);
                 if (chunk is not null)
                 {
                     yield return chunk;
@@ -93,19 +95,26 @@ internal static class KnowledgeBaseService
             yield break;
         }
 
-        var single = ToChunk(sourcePath, root, 1);
+        var single = ToChunk(sourcePath, root, 1, contextPrefixes);
         if (single is not null)
         {
             yield return single;
         }
     }
 
-    private static KnowledgeChunk? ToChunk(string sourcePath, JsonElement node, int index)
+    private static KnowledgeChunk? ToChunk(
+        string sourcePath,
+        JsonElement node,
+        int index,
+        IReadOnlyDictionary<string, string> contextPrefixes)
     {
         var title = ReadProperty(node, "rdfs:label")
             ?? ReadProperty(node, "name")
             ?? ReadProperty(node, "@id")
             ?? $"{Path.GetFileName(sourcePath)}#{index}";
+
+        var resourceIri = ResolveResourceIri(node, contextPrefixes);
+        var hostedUrl = ToHostedResourceUrl(resourceIri);
 
         var text = string.Join(' ', ExtractText(node)).Trim();
         if (string.IsNullOrWhiteSpace(text))
@@ -117,8 +126,91 @@ internal static class KnowledgeBaseService
         {
             SourcePath = sourcePath,
             Title = title,
-            Text = text
+            Text = text,
+            ResourceIri = resourceIri,
+            HostedUrl = hostedUrl
         };
+    }
+
+    private static IReadOnlyDictionary<string, string> ReadContextPrefixes(JsonElement root)
+    {
+        var prefixes = new Dictionary<string, string>(StringComparer.Ordinal);
+        if (root.ValueKind != JsonValueKind.Object
+            || !root.TryGetProperty("@context", out var context)
+            || context.ValueKind != JsonValueKind.Object)
+        {
+            return prefixes;
+        }
+
+        foreach (var prop in context.EnumerateObject())
+        {
+            if (prop.Value.ValueKind != JsonValueKind.String)
+            {
+                continue;
+            }
+
+            var prefixBase = prop.Value.GetString();
+            if (string.IsNullOrWhiteSpace(prefixBase))
+            {
+                continue;
+            }
+
+            prefixes[prop.Name] = prefixBase;
+        }
+
+        return prefixes;
+    }
+
+    private static string? ResolveResourceIri(JsonElement node, IReadOnlyDictionary<string, string> contextPrefixes)
+    {
+        var id = ReadProperty(node, "@id");
+        if (string.IsNullOrWhiteSpace(id))
+        {
+            return null;
+        }
+
+        if (Uri.TryCreate(id, UriKind.Absolute, out var absolute)
+            && (absolute.Scheme.Equals(Uri.UriSchemeHttp, StringComparison.OrdinalIgnoreCase)
+                || absolute.Scheme.Equals(Uri.UriSchemeHttps, StringComparison.OrdinalIgnoreCase)))
+        {
+            return absolute.ToString();
+        }
+
+        var splitIndex = id.IndexOf(':');
+        if (splitIndex <= 0 || splitIndex >= id.Length - 1)
+        {
+            return null;
+        }
+
+        var prefix = id[..splitIndex];
+        var localName = id[(splitIndex + 1)..];
+        if (!contextPrefixes.TryGetValue(prefix, out var prefixBase))
+        {
+            return null;
+        }
+
+        return prefixBase + localName;
+    }
+
+    private static string? ToHostedResourceUrl(string? resourceIri)
+    {
+        if (string.IsNullOrWhiteSpace(resourceIri)
+            || !Uri.TryCreate(resourceIri, UriKind.Absolute, out var uri))
+        {
+            return null;
+        }
+
+        if (!uri.Host.Equals("stellararcana.org", StringComparison.OrdinalIgnoreCase))
+        {
+            return uri.ToString();
+        }
+
+        var builder = new UriBuilder(uri)
+        {
+            Host = "stellar-arcana.org"
+        };
+
+        return builder.Uri.ToString();
     }
 
     private static string? ReadProperty(JsonElement element, string propertyName)
