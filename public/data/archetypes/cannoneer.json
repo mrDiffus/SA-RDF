@@ -13,13 +13,13 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Artillery"
+            "archetype:Skill": "Repair"
           },
           {
-            "archetype:Skill": "Heavy Weapons"
+            "archetype:Skill": "Perception"
           },
           {
-            "archetype:Skill": "Ballistics"
+            "archetype:Skill": "Drive"
           }
         ],
         "archetype:Weapons": [

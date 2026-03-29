@@ -20,6 +20,12 @@
           },
           {
             "archetype:Skill": "Insight"
+          },
+          {
+            "archetype:Skill": "Intimidate"
+          },
+          {
+            "archetype:Skill": "Perform"
           }
         ],
         "archetype:Weapons": [

@@ -13,13 +13,16 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Scavenging"
+            "archetype:Skill": "Repair"
           },
           {
-            "archetype:Skill": "Improvisation"
+            "archetype:Skill": "Knowledge technology"
           },
           {
-            "archetype:Skill": "Bartering"
+            "archetype:Skill": "Demolitions"
+          },
+          {
+            "archetype:Skill": "Appraise"
           }
         ],
         "archetype:Weapons": [
@@ -30,6 +33,9 @@
         "archetype:Armor": [
           {
             "archetype:Armor": "Light armor"
+          },
+          {
+            "archetype:Armor": "Medium armor"
           }
         ],
         "archetype:Saves": [

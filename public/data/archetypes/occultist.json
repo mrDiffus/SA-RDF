@@ -18,13 +18,13 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Occult Knowledge"
+            "archetype:Skill": "Knowledge planes"
           },
           {
-            "archetype:Skill": "Ritual Magic"
+            "archetype:Skill": "Spellcraft"
           },
           {
-            "archetype:Skill": "Forbidden Lore"
+            "archetype:Skill": "Leadership"
           }
         ],
         "archetype:Weapons": [

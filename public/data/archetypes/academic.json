@@ -16,10 +16,7 @@
             "archetype:Skill": "Research"
           },
           {
-            "archetype:Skill": "Analysis"
-          },
-          {
-            "archetype:Skill": "Teaching"
+            "archetype:Skill": "Any 4 knowledge skills"
           }
         ],
         "archetype:Weapons": [

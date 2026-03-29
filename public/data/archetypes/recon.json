@@ -19,7 +19,10 @@
             "archetype:Skill": "Survival"
           },
           {
-            "archetype:Skill": "Observation"
+            "archetype:Skill": "Perception"
+          }, 
+          {
+            "archetype:Skill": "Computer Use"
           }
         ],
         "archetype:Weapons": [

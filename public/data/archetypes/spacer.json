@@ -13,13 +13,13 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Zero-G Navigation"
+            "archetype:Skill": "Navigation"
           },
           {
-            "archetype:Skill": "Spacecraft Systems"
+            "archetype:Skill": "Pilot"
           },
           {
-            "archetype:Skill": "Environmental Suit Operation"
+            "archetype:Skill": "Knowledge astroengineering"
           }
         ],
         "archetype:Weapons": [

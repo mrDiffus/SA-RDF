@@ -13,13 +13,13 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Firearms"
+            "archetype:Skill": "Perception"
           },
           {
-            "archetype:Skill": "Quick Draw"
+            "archetype:Skill": "Intimidate"
           },
           {
-            "archetype:Skill": "Marksmanship"
+            "archetype:Skill": "Acrobatics"
           }
         ],
         "archetype:Weapons": [

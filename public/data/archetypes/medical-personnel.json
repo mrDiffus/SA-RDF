@@ -13,13 +13,19 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Medicine"
+            "archetype:Skill": "Knowledge Medicine"
           },
           {
             "archetype:Skill": "First Aid"
           },
           {
-            "archetype:Skill": "Diagnosis"
+            "archetype:Skill": "Knowledge technology"
+          },
+          {
+            "archetype:Skill": "Sense motive"
+          },
+          {
+            "archetype:Skill": "Persuasion"
           }
         ],
         "archetype:Weapons": [

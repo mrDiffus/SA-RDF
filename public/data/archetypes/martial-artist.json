@@ -13,13 +13,16 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Unarmed Combat"
+            "archetype:Skill": "Athletics"
           },
           {
             "archetype:Skill": "Acrobatics"
           },
           {
-            "archetype:Skill": "Meditation"
+            "archetype:Skill": "Stealth"
+          },
+          {
+            "archetype:Skill": "Intimidate"
           }
         ],
         "archetype:Weapons": [
