@@ -13,16 +13,16 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Athletics"
+            "@id": "sa:skill-athletics"
           },
           {
-            "archetype:Skill": "Acrobatics"
+            "@id": "sa:skill-acrobatics"
           },
           {
-            "archetype:Skill": "Stealth"
+            "@id": "sa:skill-stealth"
           },
           {
-            "archetype:Skill": "Intimidate"
+            "@id": "sa:skill-intimidate"
           }
         ],
         "archetype:Weapons": [

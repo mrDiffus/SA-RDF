@@ -13,13 +13,13 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Navigation"
+            "@id": "sa:skill-navigation"
           },
           {
-            "archetype:Skill": "Pilot"
+            "@id": "sa:skill-pilot"
           },
           {
-            "archetype:Skill": "Knowledge astroengineering"
+            "@id": "sa:skill-knowledge-astroengineering"
           }
         ],
         "archetype:Weapons": [

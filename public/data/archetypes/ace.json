@@ -13,16 +13,16 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Pilot"
+            "@id": "sa:skill-pilot"
           },
           {
-            "archetype:Skill": "Navigate"
+            "@id": "sa:skill-navigate"
           },
           {
-            "archetype:Skill": "Fly"
+            "@id": "sa:skill-fly"
           },
           {
-            "archetype:Skill": "Drive"
+            "@id": "sa:skill-drive"
           }
         ],
         "archetype:Weapons": [

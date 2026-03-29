@@ -13,13 +13,13 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Perception"
+            "@id": "sa:skill-perception"
           },
           {
-            "archetype:Skill": "Intimidate"
+            "@id": "sa:skill-intimidate"
           },
           {
-            "archetype:Skill": "Acrobatics"
+            "@id": "sa:skill-acrobatics"
           }
         ],
         "archetype:Weapons": [
@@ -89,7 +89,7 @@
             "Sharp eyes"
           ],
           "sa:description": [
-            "If you are prone, wielding a weapon with a deployed tripod / bipod or other similar feature then you can start lining up a ranged execution. To line up a ranged execution you need to keep an unaware target in your sights for 5 consecutive rounds. To keep the target in your sights you need to hit an AC of 9 + the number of rounds you have been keeping the target in your sights and spend your attack. Add any AC from cover your target has to the AC you need to hit to keep your target in your sights. Once you have kept the target in your sights for 5 consecutive rounds you can either spend a bonus action to make an attack that is an automatical critical hit.The AC to keep the target in your sights does not surpass 15. This only works when firing a single shot from a rifle type weapon.Failing to keep the target in your sights does not cause the target to become alerted to your presence. Keeping the target unaware might necessitate stealth checks or similar actions, up to DM\u2019s discretion."
+            "If you are prone, wielding a weapon with a deployed tripod / bipod or other similar feature then you can start lining up a ranged execution. To line up a ranged execution you need to keep an unaware target in your sights for 5 consecutive rounds. To keep the target in your sights you need to hit an AC of 9 + the number of rounds you have been keeping the target in your sights and spend your attack. Add any AC from cover your target has to the AC you need to hit to keep your target in your sights. Once you have kept the target in your sights for 5 consecutive rounds you can either spend a bonus action to make an attack that is an automatical critical hit.The AC to keep the target in your sights does not surpass 15. This only works when firing a single shot from a rifle type weapon.Failing to keep the target in your sights does not cause the target to become alerted to your presence. Keeping the target unaware might necessitate stealth checks or similar actions, up to DM’s discretion."
           ],
           "sa:cost": "4 xp"
         },

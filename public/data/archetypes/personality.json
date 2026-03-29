@@ -13,19 +13,19 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Persuasion"
+            "@id": "sa:skill-persuasion"
           },
           {
-            "archetype:Skill": "Deception"
+            "@id": "sa:skill-deception"
           },
           {
-            "archetype:Skill": "Insight"
+            "@id": "sa:skill-insight"
           },
           {
-            "archetype:Skill": "Intimidate"
+            "@id": "sa:skill-intimidate"
           },
           {
-            "archetype:Skill": "Perform"
+            "@id": "sa:skill-perform"
           }
         ],
         "archetype:Weapons": [

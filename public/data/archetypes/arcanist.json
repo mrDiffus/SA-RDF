@@ -18,13 +18,13 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Spellcraft"
+            "@id": "sa:skill-spellcraft"
           },
           {
-            "archetype:Skill": "Arcane knowledge"
+            "@id": "sa:skill-arcane-knowledge"
           },
           {
-            "archetype:Skill": "Planar knowledge"
+            "@id": "sa:skill-planar-knowledge"
           }
         ],
         "archetype:Weapons": [

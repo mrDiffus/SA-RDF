@@ -5,7 +5,7 @@ coverage/
 .DS_Store
 *.log
 .env*
-
+sourcedata/
 # .NET / C# project build outputs
 bin/
 obj/

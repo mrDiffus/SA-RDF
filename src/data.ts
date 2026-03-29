@@ -35,11 +35,19 @@ function normalizeFeatureDescription(description: string | string[] | undefined)
   return [];
 }
 
-function normalizeArchetypeProficiency(values: any[] | undefined, key: string): string[] {
+function normalizeArchetypeProficiency(values: any[] | undefined, key: string, skillIdMap?: Map<string, string>): string[] {
   return asArray(values)
     .map((entry) => {
       if (typeof entry === 'string') return entry;
-      if (entry && typeof entry === 'object' && typeof entry[key] === 'string') return entry[key];
+      if (entry && typeof entry === 'object') {
+        // Handle @id references for skills
+        if (entry['@id'] && key === 'archetype:Skill' && skillIdMap) {
+          const label = skillIdMap.get(entry['@id']);
+          return label || null;
+        }
+        // Handle legacy nested-key format
+        if (typeof entry[key] === 'string') return entry[key];
+      }
       return null;
     })
     .filter((entry): entry is string => typeof entry === 'string' && entry.trim().length > 0);
@@ -123,7 +131,7 @@ async function fetchGraphFromFile<T>(path: string): Promise<T[]> {
   return asArray(data['@graph']);
 }
 
-function mapArchetype(raw: RawArchetype & Record<string, any>): Archetype {
+function mapArchetype(raw: RawArchetype & Record<string, any>, skillIdMap?: Map<string, string>): Archetype {
   const spellLevels = extractSpellLevels(raw);
 
   return {
@@ -131,7 +139,7 @@ function mapArchetype(raw: RawArchetype & Record<string, any>): Archetype {
     label: raw['rdfs:label'],
     description: raw['archetype:description'],
     proficiencies: {
-      skills: normalizeArchetypeProficiency(raw['archetype:proficiencies']?.['archetype:Skills'], 'archetype:Skill'),
+      skills: normalizeArchetypeProficiency(raw['archetype:proficiencies']?.['archetype:Skills'], 'archetype:Skill', skillIdMap),
       weapons: normalizeArchetypeProficiency(raw['archetype:proficiencies']?.['archetype:Weapons'], 'archetype:Weapon'),
       armor: normalizeArchetypeProficiency(raw['archetype:proficiencies']?.['archetype:Armor'], 'archetype:Armor'),
       saves: normalizeArchetypeProficiency(raw['archetype:proficiencies']?.['archetype:Saves'], 'archetype:Save')
@@ -174,12 +182,26 @@ export async function fetchSpells(): Promise<Spell[]> {
 }
 
 export async function fetchArchetypes(): Promise<Archetype[]> {
+  // Build skill ID → label map from skills.json for resolving archetype skill proficiencies
+  let skillIdMap: Map<string, string> | undefined;
+  try {
+    const skillsData = await fetch(resolveDataPath('/data/skills.json')).then(r => r.json());
+    skillIdMap = new Map();
+    for (const node of asArray(skillsData['@graph'])) {
+      if (node['@type'] === 'sa:Skill' && node['@id'] && node['rdfs:label']) {
+        skillIdMap.set(node['@id'], node['rdfs:label']);
+      }
+    }
+  } catch (e) {
+    console.warn('Could not load skills.json for archetype skill resolution', e);
+  }
+
   const response = await fetch(resolveDataPath('/data/archetypes.json'));
   const data: RawGraphContainer<RawArchetype> = await response.json();
 
   if (Array.isArray(data['@graph']) && data['@graph'].length > 0) {
     return sortByLabel(
-      data['@graph'].map((raw) => mapArchetype(raw as RawArchetype & Record<string, any>))
+      data['@graph'].map((raw) => mapArchetype(raw as RawArchetype & Record<string, any>, skillIdMap))
     );
   }
 
@@ -191,7 +213,7 @@ export async function fetchArchetypes(): Promise<Archetype[]> {
   return sortByLabel(
     archetypeGraphs
       .flat()
-      .map((raw) => mapArchetype(raw as RawArchetype & Record<string, any>))
+      .map((raw) => mapArchetype(raw as RawArchetype & Record<string, any>, skillIdMap))
   );
 }
 

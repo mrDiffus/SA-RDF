@@ -13,16 +13,16 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Repair"
+            "@id": "sa:skill-repair"
           },
           {
-            "archetype:Skill": "Knowledge technology"
+            "@id": "sa:skill-knowledge-technology"
           },
           {
-            "archetype:Skill": "Demolitions"
+            "@id": "sa:skill-demolitions"
           },
           {
-            "archetype:Skill": "Appraise"
+            "@id": "sa:skill-appraise"
           }
         ],
         "archetype:Weapons": [

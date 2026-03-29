@@ -18,16 +18,16 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Sense motive"
+            "@id": "sa:skill-sense-motive"
           },
           {
-            "archetype:Skill": "Persuasion"
+            "@id": "sa:skill-persuasion"
           },
           {
-            "archetype:Skill": "Spellcraft"
+            "@id": "sa:skill-spellcraft"
           },
           {
-            "archetype:Skill": "Knowledge Religion"
+            "@id": "sa:skill-knowledge-religion"
           }
         ],
         "archetype:Weapons": [
@@ -85,7 +85,7 @@
             "Gain 2 extra spell points for each feature you gain in a caster chain (Initiate Devotee, Initiate Arcanist, etc).",
             "Gain a silver symbol of your power, usable as an implement for 3 cantrips of your choice. Once chosen, only obtaining a new symbol allows changes.",
             "A symbol of power is any item that can be wielded or held. It follows implement rules and increases in cost per the implement table. Add this cost to the base item (e.g., an Elven Silver Sword +2 implement would cost X + Y).",
-            "The symbol should reflect your patron\u2019s style: a devotee to Lolth might choose a tool of torment; one to ArmaniTech might pick a stylish watch or glasses."
+            "The symbol should reflect your patron’s style: a devotee to Lolth might choose a tool of torment; one to ArmaniTech might pick a stylish watch or glasses."
           ],
           "sa:prerequisites": [
             "Must not have chosen another Path feature"

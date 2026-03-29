@@ -13,10 +13,10 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Research"
+            "@id": "sa:skill-research"
           },
           {
-            "archetype:Skill": "Any 4 knowledge skills"
+            "@id": "sa:skill-any-4-knowledge-skills"
           }
         ],
         "archetype:Weapons": [

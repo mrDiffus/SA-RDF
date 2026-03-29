@@ -13,13 +13,13 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Survival"
+            "@id": "sa:skill-survival"
           },
           {
-            "archetype:Skill": "Handke animal"
+            "@id": "sa:skill-handle-animal"
           },
           {
-            "archetype:Skill": "Ride"
+            "@id": "sa:skill-ride"
           }
         ],
         "archetype:Weapons": [

@@ -13,13 +13,13 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Knowledge Engineering"
+            "@id": "sa:skill-knowledge-engineering"
           },
           {
-            "archetype:Skill": "Knowledge Electronics"
+            "@id": "sa:skill-knowledge-electronics"
           },
           {
-            "archetype:Skill": "Knowledge Mechanics"
+            "@id": "sa:skill-knowledge-mechanics"
           }
         ],
         "archetype:Weapons": [

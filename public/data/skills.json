@@ -1,0 +1,1121 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:skill-list",
+      "@type": "sa:SkillCollection",
+      "rdfs:label": "Skills",
+      "sa:items": [
+        {
+          "@id": "sa:skill-acrobatics"
+        },
+        {
+          "@id": "sa:skill-appraise"
+        },
+        {
+          "@id": "sa:skill-arcane-summoning"
+        },
+        {
+          "@id": "sa:skill-attraction"
+        },
+        {
+          "@id": "sa:skill-bluff"
+        },
+        {
+          "@id": "sa:skill-climb"
+        },
+        {
+          "@id": "sa:skill-computer-use"
+        },
+        {
+          "@id": "sa:skill-concentration"
+        },
+        {
+          "@id": "sa:skill-condition"
+        },
+        {
+          "@id": "sa:skill-craft"
+        },
+        {
+          "@id": "sa:skill-deception"
+        },
+        {
+          "@id": "sa:skill-defense"
+        },
+        {
+          "@id": "sa:skill-demolitions"
+        },
+        {
+          "@id": "sa:skill-diplomacy"
+        },
+        {
+          "@id": "sa:skill-drive"
+        },
+        {
+          "@id": "sa:skill-escape-artist"
+        },
+        {
+          "@id": "sa:skill-fly"
+        },
+        {
+          "@id": "sa:skill-handle-animal"
+        },
+        {
+          "@id": "sa:skill-handle-device"
+        },
+        {
+          "@id": "sa:skill-intimidate"
+        },
+        {
+          "@id": "sa:skill-knowledge"
+        },
+        {
+          "@id": "sa:skill-leadership"
+        },
+        {
+          "@id": "sa:skill-linguistics"
+        },
+        {
+          "@id": "sa:skill-martial-melee"
+        },
+        {
+          "@id": "sa:skill-martial-body"
+        },
+        {
+          "@id": "sa:skill-martial-ranged"
+        },
+        {
+          "@id": "sa:skill-martial-crew-weapon"
+        },
+        {
+          "@id": "sa:skill-martial-weapon-system"
+        },
+        {
+          "@id": "sa:skill-mechanics-use"
+        },
+        {
+          "@id": "sa:skill-navigate"
+        },
+        {
+          "@id": "sa:skill-perception"
+        },
+        {
+          "@id": "sa:skill-perform"
+        },
+        {
+          "@id": "sa:skill-profession"
+        },
+        {
+          "@id": "sa:skill-repair"
+        },
+        {
+          "@id": "sa:skill-research"
+        },
+        {
+          "@id": "sa:skill-ride"
+        },
+        {
+          "@id": "sa:skill-sense-motive"
+        },
+        {
+          "@id": "sa:skill-spellcraft"
+        },
+        {
+          "@id": "sa:skill-stealth"
+        },
+        {
+          "@id": "sa:skill-survival"
+        },
+        {
+          "@id": "sa:skill-swim"
+        },
+        {
+          "@id": "sa:skill-treat-injury"
+        },
+        {
+          "@id": "sa:skill-any-4-knowledge-skills"
+        },
+        {
+          "@id": "sa:skill-pilot"
+        },
+        {
+          "@id": "sa:skill-arcane-knowledge"
+        },
+        {
+          "@id": "sa:skill-planar-knowledge"
+        },
+        {
+          "@id": "sa:skill-athletics"
+        },
+        {
+          "@id": "sa:skill-persuasion"
+        },
+        {
+          "@id": "sa:skill-knowledge-religion"
+        },
+        {
+          "@id": "sa:skill-knowledge-medicine"
+        },
+        {
+          "@id": "sa:skill-first-aid"
+        },
+        {
+          "@id": "sa:skill-knowledge-technology"
+        },
+        {
+          "@id": "sa:skill-knowledge-planes"
+        },
+        {
+          "@id": "sa:skill-insight"
+        },
+        {
+          "@id": "sa:skill-navigation"
+        },
+        {
+          "@id": "sa:skill-knowledge-astroengineering"
+        },
+        {
+          "@id": "sa:skill-knowledge-engineering"
+        },
+        {
+          "@id": "sa:skill-knowledge-electronics"
+        },
+        {
+          "@id": "sa:skill-knowledge-mechanics"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-acrobatics",
+      "@type": "sa:Skill",
+      "rdfs:label": "Acrobatics",
+      "sa:description": "Jump, vault, tumble and maneuver better. Used for reflex saves",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        },
+        {
+          "@id": "sa:ability-strength",
+          "rdfs:label": "Strength"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-appraise",
+      "@type": "sa:Skill",
+      "rdfs:label": "Appraise",
+      "sa:description": "Use your merchant's knowledge to determine the value of items and sell them in the right places.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-arcane-summoning",
+      "@type": "sa:Skill",
+      "rdfs:label": "Arcane Summoning",
+      "sa:description": "Form connections with strange beings known as outsiders and summon them to you.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        },
+        {
+          "@id": "sa:ability-appearance",
+          "rdfs:label": "Appearance"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-bluff",
+      "@type": "sa:Skill",
+      "rdfs:label": "Bluff",
+      "sa:description": "Mislead or lie to people.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        },
+        {
+          "@id": "sa:ability-appearance",
+          "rdfs:label": "Appearance"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-climb",
+      "@type": "sa:Skill",
+      "rdfs:label": "Climb",
+      "sa:description": "Excel at climbing on difficult surfaces.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-strength",
+          "rdfs:label": "Strength"
+        },
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-computer-use",
+      "@type": "sa:Skill",
+      "rdfs:label": "Computer use",
+      "sa:description": "",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-concentration",
+      "@type": "sa:Skill",
+      "rdfs:label": "Concentration",
+      "sa:description": "Keep it together.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-constitution",
+          "rdfs:label": "Constitution"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-condition",
+      "@type": "sa:Skill",
+      "rdfs:label": "Condition",
+      "sa:description": "Become fit and earn a good physical condition. Used for fortitude saves",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-constitution",
+          "rdfs:label": "Constitution"
+        },
+        {
+          "@id": "sa:ability-appearance",
+          "rdfs:label": "Appearance"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-craft",
+      "@type": "sa:Skill",
+      "rdfs:label": "Craft",
+      "sa:description": "Build items from raw resources.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-strength",
+          "rdfs:label": "Strength"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-deception",
+      "@type": "sa:Skill",
+      "rdfs:label": "Deception",
+      "sa:description": "Mislead or lie to people through false documentation, disguise and illusions.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-defense",
+      "@type": "sa:Skill",
+      "rdfs:label": "Defense",
+      "sa:description": "Become better at defense.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        },
+        {
+          "@id": "sa:ability-constitution",
+          "rdfs:label": "Constitution"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-demolitions",
+      "@type": "sa:Skill",
+      "rdfs:label": "Demolitions",
+      "sa:description": "Become proficient with the use of demolitions equipment.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-diplomacy",
+      "@type": "sa:Skill",
+      "rdfs:label": "Diplomacy",
+      "sa:description": "Treat with people, gain their trust and service.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        },
+        {
+          "@id": "sa:ability-appearance",
+          "rdfs:label": "Appearance"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-drive",
+      "@type": "sa:Skill",
+      "rdfs:label": "Drive",
+      "sa:description": "Drive most kinds of surface-based vehicles, such as cars, boats and armored vehicles.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        },
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-escape-artist",
+      "@type": "sa:Skill",
+      "rdfs:label": "Escape Artist",
+      "sa:description": "Escape from tricky situations or get into tricky spaces.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        },
+        {
+          "@id": "sa:ability-strength",
+          "rdfs:label": "Strength"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-fly",
+      "@type": "sa:Skill",
+      "rdfs:label": "Fly",
+      "sa:description": "Earn proficiency with flying Lightfliers, gliders and dirigibles.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        },
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-handle-animal",
+      "@type": "sa:Skill",
+      "rdfs:label": "Handle animal",
+      "sa:description": "Handle creatures of animal intelligece. Creatures with an intelligence score at 3 or lower. Creatures with no intelligece score cannot be affected",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        },
+        {
+          "@id": "sa:ability-appearance",
+          "rdfs:label": "Appearance"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-handle-device",
+      "@type": "sa:Skill",
+      "rdfs:label": "Handle Device",
+      "sa:description": "Work with traps, locks and similarly intricate mechanisms... with delicacy.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        },
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-intimidate",
+      "@type": "sa:Skill",
+      "rdfs:label": "Intimidate",
+      "sa:description": "Threaten or coax people, gain their service, but not their trust.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        },
+        {
+          "@id": "sa:ability-strength",
+          "rdfs:label": "Strength"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-knowledge",
+      "@type": "sa:Skill",
+      "rdfs:label": "Knowledge",
+      "sa:description": "Become an expert authority on a specific field of knowledge.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-leadership",
+      "@type": "sa:Skill",
+      "rdfs:label": "Leadership",
+      "sa:description": "Increase your ability to lead, whether it is a squad or a corporation.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        },
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-linguistics",
+      "@type": "sa:Skill",
+      "rdfs:label": "Linguistics",
+      "sa:description": "Learn additional languages to expand what information you can gain.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-martial-melee",
+      "@type": "sa:Skill",
+      "rdfs:label": "Martial (Melee)",
+      "sa:description": "Develop proficiency with melee weapons and physical prowess.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-strength",
+          "rdfs:label": "Strength"
+        },
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-martial-body",
+      "@type": "sa:Skill",
+      "rdfs:label": "Martial (Body)",
+      "sa:description": "Become a living weapon and perform special maneuvers.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-strength",
+          "rdfs:label": "Strength"
+        },
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-martial-ranged",
+      "@type": "sa:Skill",
+      "rdfs:label": "Martial (Ranged)",
+      "sa:description": "Develop proficiency with firearms and other ranged weapons.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-martial-crew-weapon",
+      "@type": "sa:Skill",
+      "rdfs:label": "Martial Crew Weapon",
+      "sa:description": "Operate a crew weapon and deal some damage.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        },
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-martial-weapon-system",
+      "@type": "sa:Skill",
+      "rdfs:label": "Martial Weapon System",
+      "sa:description": "Operate a weapon system, such a s a missile launch system or a battery of cannons.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-mechanics-use",
+      "@type": "sa:Skill",
+      "rdfs:label": "Mechanics Use",
+      "sa:description": "Become proficient with mechanical systems.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-navigate",
+      "@type": "sa:Skill",
+      "rdfs:label": "Navigate",
+      "sa:description": "Find the best routes, discover strange locations and make detailed maps.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-perception",
+      "@type": "sa:Skill",
+      "rdfs:label": "Perception",
+      "sa:description": "Notice things that others would miss.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        },
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-perform",
+      "@type": "sa:Skill",
+      "rdfs:label": "Perform",
+      "sa:description": "Become skilled at dancing, singing, oration, miming, instruments or presentations, whichever suits your fancy.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        },
+        {
+          "@id": "sa:ability-appearance",
+          "rdfs:label": "Appearance"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-profession",
+      "@type": "sa:Skill",
+      "rdfs:label": "Profession",
+      "sa:description": "Become a professional in a specific field.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        },
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-repair",
+      "@type": "sa:Skill",
+      "rdfs:label": "Repair",
+      "sa:description": "Make simple repairs on general items or more complete repairs on items you are knowledgeable with.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-research",
+      "@type": "sa:Skill",
+      "rdfs:label": "Research",
+      "sa:description": "Gain the ability to craft items from higher PL's",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-ride",
+      "@type": "sa:Skill",
+      "rdfs:label": "Ride",
+      "sa:description": "Just ride. Ride any anymal that can bear your weight.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        },
+        {
+          "@id": "sa:ability-strength",
+          "rdfs:label": "Strength"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-sense-motive",
+      "@type": "sa:Skill",
+      "rdfs:label": "Sense Motive",
+      "sa:description": "Intuitively sense underlying issues about people. Used for will saves",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        },
+        {
+          "@id": "sa:ability-appearance",
+          "rdfs:label": "Appearance"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-spellcraft",
+      "@type": "sa:Skill",
+      "rdfs:label": "Spellcraft",
+      "sa:description": "Become skilled at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-stealth",
+      "@type": "sa:Skill",
+      "rdfs:label": "Stealth",
+      "sa:description": "Avoid detection by moving silently and hiding.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-survival",
+      "@type": "sa:Skill",
+      "rdfs:label": "Survival",
+      "sa:description": "Increase your ability to survive in most kinds of locations.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        },
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-swim",
+      "@type": "sa:Skill",
+      "rdfs:label": "Swim",
+      "sa:description": "Become a better swimmer and conduct amphibious travel.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-strength",
+          "rdfs:label": "Strength"
+        },
+        {
+          "@id": "sa:ability-constitution",
+          "rdfs:label": "Constitution"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-treat-injury",
+      "@type": "sa:Skill",
+      "rdfs:label": "Treat Injury",
+      "sa:description": "Heal people by performing surgery or similar medical attention.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        },
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-any-4-knowledge-skills",
+      "@type": "sa:Skill",
+      "rdfs:label": "Any 4 knowledge skills",
+      "sa:description": "Choose any four specialized knowledge skills.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-pilot",
+      "@type": "sa:Skill",
+      "rdfs:label": "Pilot",
+      "sa:description": "Operate aircraft and spacecraft under varied conditions.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        },
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-arcane-knowledge",
+      "@type": "sa:Skill",
+      "rdfs:label": "Arcane knowledge",
+      "sa:description": "Recall and interpret arcane lore and magical theory.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-planar-knowledge",
+      "@type": "sa:Skill",
+      "rdfs:label": "Planar knowledge",
+      "sa:description": "Understand planes, extraplanar entities, and related phenomena.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-athletics",
+      "@type": "sa:Skill",
+      "rdfs:label": "Athletics",
+      "sa:description": "Perform feats of strength, endurance, and demanding movement.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-strength",
+          "rdfs:label": "Strength"
+        },
+        {
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-persuasion",
+      "@type": "sa:Skill",
+      "rdfs:label": "Persuasion",
+      "sa:description": "Influence others through reason, tact, and social pressure.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-charisma",
+          "rdfs:label": "Charisma"
+        },
+        {
+          "@id": "sa:ability-appearance",
+          "rdfs:label": "Appearance"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-knowledge-religion",
+      "@type": "sa:Skill",
+      "rdfs:label": "Knowledge Religion",
+      "sa:description": "Recall doctrines, traditions, and practices of religions.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-knowledge-medicine",
+      "@type": "sa:Skill",
+      "rdfs:label": "Knowledge Medicine",
+      "sa:description": "Recall medical theory, diagnosis, and treatment knowledge.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-first-aid",
+      "@type": "sa:Skill",
+      "rdfs:label": "First Aid",
+      "sa:description": "Provide urgent treatment to stabilize and assist the injured.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        },
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-knowledge-technology",
+      "@type": "sa:Skill",
+      "rdfs:label": "Knowledge technology",
+      "sa:description": "Recall information about technology, systems, and applications.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-knowledge-planes",
+      "@type": "sa:Skill",
+      "rdfs:label": "Knowledge planes",
+      "sa:description": "Recall information about planes and extraplanar geography.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-insight",
+      "@type": "sa:Skill",
+      "rdfs:label": "Insight",
+      "sa:description": "Read motives and detect emotional or conversational subtext.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        },
+        {
+          "@id": "sa:ability-appearance",
+          "rdfs:label": "Appearance"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-navigation",
+      "@type": "sa:Skill",
+      "rdfs:label": "Navigation",
+      "sa:description": "Chart courses and determine reliable routes and bearings.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-knowledge-astroengineering",
+      "@type": "sa:Skill",
+      "rdfs:label": "Knowledge astroengineering",
+      "sa:description": "Recall principles of spacecraft and large-scale space engineering.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-knowledge-engineering",
+      "@type": "sa:Skill",
+      "rdfs:label": "Knowledge Engineering",
+      "sa:description": "Recall engineering principles for design and construction.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-knowledge-electronics",
+      "@type": "sa:Skill",
+      "rdfs:label": "Knowledge Electronics",
+      "sa:description": "Recall theory and practice of electronic systems and circuits.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    },
+    {
+      "@id": "sa:skill-knowledge-mechanics",
+      "@type": "sa:Skill",
+      "rdfs:label": "Knowledge Mechanics",
+      "sa:description": "Recall principles of mechanics and machine function.",
+      "sa:keyAbility": [
+        {
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
+        },
+        {
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
+        }
+      ]
+    }
+  ]
+}

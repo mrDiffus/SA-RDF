@@ -13,16 +13,16 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Stealth"
+            "@id": "sa:skill-stealth"
           },
           {
-            "archetype:Skill": "Survival"
+            "@id": "sa:skill-survival"
           },
           {
-            "archetype:Skill": "Perception"
-          }, 
+            "@id": "sa:skill-perception"
+          },
           {
-            "archetype:Skill": "Computer Use"
+            "@id": "sa:skill-computer-use"
           }
         ],
         "archetype:Weapons": [

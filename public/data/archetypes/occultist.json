@@ -18,13 +18,13 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Knowledge planes"
+            "@id": "sa:skill-knowledge-planes"
           },
           {
-            "archetype:Skill": "Spellcraft"
+            "@id": "sa:skill-spellcraft"
           },
           {
-            "archetype:Skill": "Leadership"
+            "@id": "sa:skill-leadership"
           }
         ],
         "archetype:Weapons": [

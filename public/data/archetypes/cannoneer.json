@@ -13,13 +13,13 @@
       "archetype:proficiencies": {
         "archetype:Skills": [
           {
-            "archetype:Skill": "Repair"
+            "@id": "sa:skill-repair"
           },
           {
-            "archetype:Skill": "Perception"
+            "@id": "sa:skill-perception"
           },
           {
-            "archetype:Skill": "Drive"
+            "@id": "sa:skill-drive"
           }
         ],
         "archetype:Weapons": [
