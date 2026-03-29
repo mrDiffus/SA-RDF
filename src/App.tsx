@@ -5,6 +5,7 @@ import ArchetypeList from './components/ArchetypeList';
 import RaceList from './components/RaceList';
 import RuleList from './components/RuleList';
 import EquipmentList from './components/EquipmentList';
+import GeneralFeaturesList from './components/GeneralFeaturesList';
 import SettingView from './components/SettingView';
 import { fetchEquipment, fetchRaces, fetchRules } from './data';
 import { AppRoute, AppTab, curieToRelativeIri, getCollectionHref, getCurrentRelativeIri, parseBrowserRoute } from './rdfNavigation';
@@ -124,6 +125,8 @@ export default function App() {
         return <SpellList selectedResourceId={route.resourceId} onNavigate={(resourceId) => navigateTo(resourceId ? { tab: 'spells', resourceId } : { tab: 'spells' })} />;
       case 'equipment':
         return <EquipmentList selectedResourceId={route.resourceId} onNavigate={(resourceId) => navigateTo(resourceId ? { tab: 'equipment', resourceId } : { tab: 'equipment' })} />;
+      case 'general-features':
+        return <GeneralFeaturesList />;
       case 'lore':
         return <SettingView />;
       default:
@@ -163,9 +166,6 @@ export default function App() {
             <span className="text-sm font-bold text-zinc-600 uppercase tracking-widest">Stellar Arcana &copy; 2026</span>
           </div>
           <div className="flex gap-8 text-[10px] uppercase font-bold tracking-widest text-zinc-700">
-            <a href="#" className="hover:text-zinc-400 transition-colors">Privacy Protocol</a>
-            <a href="#" className="hover:text-zinc-400 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-zinc-400 transition-colors">System Status</a>
           </div>
         </div>
       </footer>

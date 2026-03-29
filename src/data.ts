@@ -1,5 +1,5 @@
 import { 
-  Spell, Archetype, Race, Equipment, RuleSection, RuleContent,
+  Spell, Archetype, Race, Equipment, RuleSection, RuleContent, Feature,
   RawSpell, RawArchetype, RawRace, RawEquipment, RawRuleSection, RawFeature, RawRuleContent
 } from './types';
 
@@ -43,6 +43,33 @@ function normalizeArchetypeProficiency(values: any[] | undefined, key: string): 
       return null;
     })
     .filter((entry): entry is string => typeof entry === 'string' && entry.trim().length > 0);
+}
+
+const archetypeLabelToCurie: Record<string, string> = {
+  'academic': 'archetype:Academic',
+  'ace': 'archetype:Ace',
+  'arcanist': 'archetype:Arcanist',
+  'armsman': 'archetype:Armsman',
+  'cannoneer': 'archetype:Cannoneer',
+  'devotee': 'archetype:Devotee',
+  'gunslinger': 'archetype:Gunslinger',
+  'martial artist': 'archetype:MartialArtist',
+  'medical personnel': 'archetype:MedicalPersonnel',
+  'occultist': 'archetype:Occultist',
+  'personality': 'archetype:Personality',
+  'primitive': 'archetype:Primitive',
+  'recon': 'archetype:Recon',
+  'scrounger': 'archetype:Scrounger',
+  'spacer': 'archetype:Spacer',
+  'technician': 'archetype:Technician'
+};
+
+function normalizeArchetypeReference(value: string): string {
+  const trimmed = value.trim();
+  if (trimmed.startsWith('archetype:')) return trimmed;
+
+  const normalized = trimmed.toLowerCase();
+  return archetypeLabelToCurie[normalized] || trimmed;
 }
 
 function extractSpellLevels(raw: Record<string, any>): Record<string, { id: string; label: string }[]> | undefined {
@@ -120,7 +147,8 @@ function mapFeature(raw: RawFeature) {
     label: raw['rdfs:label'],
     description: normalizeFeatureDescription(raw['sa:description'] as any),
     cost: raw['sa:cost'] || '',
-    prerequisites: raw['sa:prerequisites'] || []
+    prerequisites: raw['sa:prerequisites'] || [],
+    archetypes: asArray(raw['sa:archetypes']).map(normalizeArchetypeReference)
   };
 }
 
@@ -422,4 +450,9 @@ export async function fetchEquipment(): Promise<Equipment[]> {
   });
   
   return sortByLabel(Array.from(dedupedItems.values()));
+}
+
+export async function fetchGeneralFeatures(): Promise<Feature[]> {
+  const rawFeatures = await fetchGraphFromFile<RawFeature>('/data/generalfeatures.json');
+  return sortByLabel(rawFeatures.map(mapFeature));
 }

@@ -34,6 +34,7 @@ export interface Feature {
   prerequisites: string[];
   description: string[];
   cost: string;
+  archetypes?: string[];
   benefits?: string[];
 }
 
@@ -133,6 +134,7 @@ export interface RawFeature {
   'sa:description': string[];
   'sa:cost'?: string;
   'sa:prerequisites'?: string[];
+  'sa:archetypes'?: string[];
 }
 
 export interface RawRace {
