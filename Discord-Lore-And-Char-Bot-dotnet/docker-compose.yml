@@ -12,7 +12,7 @@ services:
       Bot__DiscordApplicationId: ${DISCORD_APPLICATION_ID}
       Bot__DiscordGuildId: ${DISCORD_GUILD_ID:-}
       Bot__GeminiApiKey: ${GEMINI_API_KEY}
-      Bot__GeminiModel: ${GEMINI_MODEL:-gemini-2.5-flash}
+      Bot__GeminiModel: ${GEMINI_MODEL:-gemini-3.1-flash-lite-preview}
       Bot__AutoRegisterCommands: ${AUTO_REGISTER_COMMANDS:-true}
       Bot__EnableMessageContentIntent: ${ENABLE_MESSAGE_CONTENT_INTENT:-false}
       Bot__EnableGoogleSearchRetrieval: ${ENABLE_GOOGLE_SEARCH_RETRIEVAL:-true}
