@@ -17,7 +17,7 @@ The thing that matters is in the folder public/data, where the source material f
 ## Deploy To GitHub Pages
 
 1. Confirm `homepage` in `package.json` matches your Pages URL:
-   `https://mrdiffus.github.io/SA-Rdf-Frontend/`
+   `https://<ghuser>.github.io/SA-Rdf-Frontend/`
 2. Push to `main`.
 3. In your GitHub repository settings:
    - Open **Settings -> Pages**
