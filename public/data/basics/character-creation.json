@@ -13,17 +13,17 @@
         {
           "@type": "sa:Step",
           "rdfs:label": "Choose Two Archetypes",
-          "sa:description": "Choose two archetypes that support the character concept you envision. The archetypes you select determine which features you can purchase at their base cost. You may also acquire features from other archetypes, though they cost 1.5 times the standard amount.\n\nMost archetypes include features that are free if the archetype is chosen. These free features are granted at character creation."
+          "sa:description": "Select two archetypes that support your character concept. These choices grant you access to archetype features at their base cost, plus any free features defined by those archetypes. You may also purchase features from other archetypes, but they cost 1.5 times the standard price, rounded up to the nearest whole number (e.g., a 3-point feature costs 5 experience when purchased out-of-archetype)."
         },
         {
           "@type": "sa:Step",
           "rdfs:label": "Choose a Race",
-          "sa:description": "Choose a race for your character. Each race offers unique bonuses and abilities. Select one that fits your character's background or concept."
+          "sa:description": "Select a race that fits your character's concept. Each race grants unique bonuses and abilities."
         },
         {
           "@type": "sa:Step",
           "rdfs:label": "Determine Ability Scores",
-          "sa:description": "The core abilities in Stellar Arcana are Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma.\n\nYou may use the standard array (15, 14, 13, 12, 10, 8) or customize your scores using the point buy system:\n\nStart with 27 points. Spend them according to the Point Buy Table.\n\nYou may not lower a score below 8 to gain points. You may not spend more than 9 points to raise a score above 15.",
+          "sa:description": "Assign scores to the six core abilities: Strength, Dexterity, Constitution, Intelligence, Wisdom, and Charisma. You may use the standard array (15, 14, 13, 12, 10, 8) or the point buy system, which starts you with 27 points to distribute according to the Point Buy Table. Constraints: You may not lower a score below 8 or spend more than 9 points on a single ability.",
           "sa:pointBuyTable": {
             "@type": "sa:Table",
             "rdfs:label": "Point Buy Costs",
@@ -43,12 +43,12 @@
         {
           "@type": "sa:Step",
           "rdfs:label": "Calculate Final Statistics",
-          "sa:description": "Apply racial bonuses to your ability scores. Record any features and proficiencies granted by your archetypes.\n\nYour character gains:\n- Wounds equal to Constitution score\n- Hit Points equal to Constitution modifier + 6\n- Sanity equal to Wisdom score\n- Spell Points as specified by your archetypes (if any)\n- Renown equal to Proficiency Bonus\n- Proficiency Bonus of 2\n\nAbility DCs:\n- Melee: 8 + Proficiency Bonus + Strength or Dexterity modifier\n- Ranged: 8 + Proficiency Bonus + Dexterity modifier\n- Spell: 8 + Proficiency Bonus + Casting Ability modifier"
+          "sa:description": "Apply racial bonuses to your ability scores and record archetype features and proficiencies. Then calculate your character's derived statistics:\n\nHealth & Resources:\n- Wounds = Constitution score\n- Hit Points = Constitution modifier + 6\n- Sanity = Wisdom score\n- Spell Points (as specified by your archetypes, if any)\n- Renown = Proficiency Bonus\n\nFixed Values:\n- Proficiency Bonus = 2\n\nAbility DCs (difficulty for checks made against your character):\n- Melee: 8 + Proficiency Bonus + Strength or Dexterity modifier\n- Ranged: 8 + Proficiency Bonus + Dexterity modifier\n- Spell: 8 + Proficiency Bonus + Casting Ability modifier"
         },
         {
           "@type": "sa:Step",
           "rdfs:label": "Advancement",
-          "sa:description": "As your character completes quests and overcomes challenges, they earn experience. Experience is spent to purchase features—either archetype features, cross-archetype features, or general features.\n\nYou must have earned enough unspent experience through gameplay to purchase a feature. Features from archetypes you do not possess cost 1.5 times their base experience cost.\n\nExample: Bob the Armsman/Arcanist wants to acquire the 'Quick and Silent' feature from the Recon archetype. Since he does not belong to that archetype, it costs him 4 experience (3 base + 1 extra)."
+          "sa:description": "You earn experience by completing quests and challenges. Spend this experience immediately to purchase features—archetype features, cross-archetype features, or general features—as you earn it rather than saving it for \"later\" opportunities. You must have earned the experience through gameplay to be eligible to purchase; out-of-archetype features cost 1.5 times their base price.\n\nExample: An Armsman/Arcanist purchases 'Quick and Silent' from the Recon archetype (which they do not possess). Base cost is 3 experience; the 1.5× multiplier increases it to 4 experience total."
         }
       ],
       "sa:progressionTable": {

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xjBuM6sgQTA=",
+  "dgSpecHash": "chQzEwEeua0=",
   "success": true,
-  "projectFilePath": "C:\\workshops\\SA-Rdf-Frontend\\Discord-Lore-And-Char-Bot-dotnet\\Discord-Lore-And-Char-Bot-dotnet.csproj",
+  "projectFilePath": "C:\\workspaces\\SA-RDF\\Discord-Lore-And-Char-Bot-dotnet\\Discord-Lore-And-Char-Bot-dotnet.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\arnem\\.nuget\\packages\\discord.net\\3.18.0\\discord.net.3.18.0.nupkg.sha512",
     "C:\\Users\\arnem\\.nuget\\packages\\discord.net.commands\\3.18.0\\discord.net.commands.3.18.0.nupkg.sha512",

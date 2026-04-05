@@ -12,7 +12,7 @@
           "@type": "sa:Action",
           "rdfs:label": "Attack",
           "sa:actionType": "Attack action",
-          "sa:description": "Make an attack with a wielded weapon. If you are proficient with the weapon, the attack roll is 1d20 + Proficiency Bonus + Ability Modifier + Miscellaneous Bonuses. Ranged weapons use your Dexterity modifier; melee weapons use your Strength modifier. Melee weapons with the finesse tag let you use either your Dexterity or Strength modifier.\nDamage is Weapon Dice (W) + Ability Modifier. For example, a longsword attack by a character with 14 Strength deals 1d8 + 2 damage. An attack with a .45 Falcon Pistol by a character with 16 Dexterity deals 1d8 + 3 damage.\nWeapons with clips or magazines defined by dice expend a number of dice equal to their base damage or the number used in a burst.\nWeapons with clips or magazines defined by number of attacks expend one attack per attack roll.\nIf a weapon has fewer dice remaining in its magazine than its base damage, it only deals damage equal to the number of dice remaining.\nIf you reduce a target to 0 wounds or fewer, you may choose to incapacitate and render them unconscious with 1 wound remaining instead of killing them.\nYou may not choose to spare the target if using a brutal or horrifying weapon."
+          "sa:description": "Make a weapon attack. If proficient with the weapon, roll 1d20 + Proficiency Bonus + Ability Modifier + Miscellaneous Bonuses.\n\nAbility Modifier Selection: Ranged weapons use Dexterity modifier; melee weapons use Strength modifier. Melee weapons with the finesse tag let you use either Dexterity or Strength modifier (your choice).\n\nDamage Calculation: Weapon Dice + Ability Modifier. Examples: longsword (1d8 + 2 with 14 STR); .45 Falcon Pistol (1d8 + 3 with 16 DEX).\n\nAmmunition Consumption: Weapons with dice-based ammunition expend dice equal to weapon base damage (or amount used in Burst). Weapons with number-based ammunition expend one attack per attack roll. If a weapon has fewer dice remaining in its magazine than its base damage, damage is reduced to match available dice.\n\nMercy Rule: When reducing a target to 0 wounds or below, you may choose to incapacitate them instead, leaving them unconscious with 1 wound remaining. Exception: You cannot use mercy with brutal or horrifying weapons."
         },
         {
           "@type": "sa:Action",
@@ -25,20 +25,20 @@
           "rdfs:label": "Ambush",
           "sa:actionType": "Part of",
           "sa:requirements": "Ranged attack",
-          "sa:description": "As part of a single attack roll with one weapon, roll a Stealth check at disadvantage. If successful, you remain in Stealth after the attack. Weapons with the covert tag negate this disadvantage.\nThis action cannot be used with weapons that have the loud tag.\nIf you use this action, you can only make one attack, even if you normally make more."
+          "sa:description": "As part of a single attack roll with one weapon, roll a Stealth check at disadvantage. If successful, you remain in Stealth after the attack.\n\nWeapon Tag Interactions: Covert tag negates the disadvantage on your Stealth check. Loud tag: This action cannot be used with weapons bearing this tag.\n\nLimitations: You can only make one attack with this action, even if you normally make multiple attacks."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Defensive Move",
           "sa:actionType": "Action",
-          "sa:description": "Declare this action before moving and spend your action. During your move, you may designate one attack against you that you gain +5 AC against. If you enter an area covered by an overwatch action, gain advantage on your Dexterity save."
+          "sa:description": "Declare this action and spend your action before moving. During that move, designate one attack against you to gain +5 bonus to AC against that attack.\n\nOverwatch Interaction: If you enter an area covered by an Overwatch action during your move, gain advantage on your Dexterity save."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Burst",
           "sa:actionType": "Modifies",
           "sa:requirements": "A ranged attack gained from an Attack action",
-          "sa:description": "When making your first burst attack of the round, declare whether you intend to move or forfeit your move. If you combine a burst attack with movement, your burst attacks are made at disadvantage.\nBurst attacks can exceed base damage but not the weapon’s maximum burst damage. They consume additional dice from the weapon’s clip or magazine.\nPrecision damage is never added to burst attacks."
+          "sa:description": "When making your first Burst attack of the round, declare whether you will move or forfeit your move. If you combine Burst attacks with movement, your attacks are made at disadvantage.\n\nDamage Limits: Burst attacks can exceed the weapon's base damage but cannot exceed its maximum burst damage. They consume additional dice from the weapon's clip or magazine.\n\nPrecision Damage: Never added to Burst attacks (e.g., Sneak Attack and similar effects are excluded)."
         },
         {
           "@type": "sa:Action",
@@ -51,75 +51,75 @@
           "rdfs:label": "Arc Attack",
           "sa:actionType": "Attack action",
           "sa:requirements": "An autocannon, gatling weapon, or flamethrower-type weapon",
-          "sa:description": "Designate a cone from your square, up to 45 degrees wide. The cone is blocked by line-of-sight/effect obstacles and extends up to half your weapon’s range (minimum 30 yards).\nSpend double your weapon’s maximum burst dice in ammo. If the magazine is insufficient, you cannot make an Arc Attack.\nMake an attack roll with all bonuses. All entities in the cone take normal damage as if hit.\nYou cannot move after declaring an Arc Attack.\nPrecision damage is never added to Arc Attacks."
+          "sa:description": "Designate a cone from your square, up to 45 degrees wide, extending to half your weapon's range (minimum 30 yards). The cone is blocked by line-of-sight and line-of-effect obstacles.\n\nRequirements: You must spend double your weapon's maximum burst dice in ammo. If the magazine contains insufficient ammunition, you cannot make an Arc Attack.\n\nAttack and Damage: Make an attack roll with all bonuses. All entities in the cone take normal damage as if hit by the attack.\n\nRestrictions: You cannot move after declaring Arc Attack. Precision damage is never added to Arc Attacks."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Cleave",
           "sa:actionType": "Modifies",
           "sa:requirements": "An attack from an Attack action",
-          "sa:description": "If multiple adjacent enemies are within reach, roll one melee attack and damage roll. Choose the primary target; subtract 2 damage for each additional target and apply to all. Weapons with the Cleaver tag do not subtract damage."
+          "sa:description": "If multiple adjacent enemies are within reach of your melee weapon, roll one attack and damage roll. Choose a primary target; damage is reduced by 2 for each additional target hit by this attack.\n\nCleaver Weapons: Weapons with the Cleaver tag do not reduce damage for additional targets."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Focus Energies",
           "sa:actionType": "Attack action",
-          "sa:description": "Gain the Focused condition. Calm your mind to focus on a spell, magical effect, or similar.\nThis affects various spells and features.\nTaking damage requires a Constitution save (DC = 8 + damage taken) to maintain the Focused condition."
+          "sa:description": "Spend your action to gain the Focused condition. You calm your mind to focus on a spell, magical effect, or similar ability.\n\nEffect: The Focused condition affects various spells and features throughout the game.\n\nMaintaining Focus: Taking damage while Focused requires a Constitution save (DC = 8 + damage taken) to maintain the condition. Failure removes the Focused condition."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Execute",
           "sa:actionType": "Full round",
-          "sa:description": "If within melee reach of a paralyzed, unconscious, helpless (GM discretion), or heavily wounded target, you can kill it with a critical strike.\nIf done with a horrifying weapon, all witnesses must make a Wisdom save vs fear (DC 8 + Proficiency + Charisma mod). Failure imposes disadvantage on attacks against you until someone hits you."
+          "sa:description": "If you are within melee reach of a paralyzed, unconscious, helpless (GM discretion), or heavily wounded target, you can kill it with an automatic critical strike.\n\nHorrifying Weapon Response: If you use a horrifying weapon, all witnesses must make a Wisdom save vs. fear (DC = 8 + Proficiency Bonus + Charisma modifier) or become frightened. Frightened creatures have disadvantage on attacks against you until you are successfully hit by an attack."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Help",
           "sa:actionType": "Action",
-          "sa:description": "Assist another creature with a task. The target gains advantage on their next relevant ability check made before your next turn.\nAlternatively, aid an ally attacking a creature within 5 feet of you. If you can make multiple attacks, grant advantage on the same number of ally attacks. Feint or distract to help your ally hit."
+          "sa:description": "Assist with Ability Check: Assist another creature with a task. The target gains advantage on their next relevant ability check made before your next turn.\n\nAssist with Attack (Alternative): Aid an ally attacking a creature within 5 feet of you. If you can make multiple attacks, grant advantage on the same number of ally attacks (using feints or distractions to help your ally hit)."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Multi-Attack",
           "sa:actionType": "Attack action",
-          "sa:description": "If wielding more than one weapon, spend a bonus action to make attacks with an additional weapon. Only one weapon adds your ability modifier—choose it before rolling.\nCan be combined with Burst, Cleave, and Knockdown.\nSecondary weapons must be light or mounted.\nExample: A gunslinger with two pistols can make 2 attacks using an action and a bonus action."
+          "sa:description": "If wielding more than one weapon, spend a bonus action to make attacks with an additional weapon. Only one weapon adds your ability modifier — choose which weapon before rolling.\n\nWeapon Restrictions: Secondary weapons must be light or mounted.\n\nCombinations: Can be combined with Burst, Cleave, and Knockdown.\n\nExample: A gunslinger with two pistols uses their action for one attack and bonus action for attacks with the second pistol."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Reload",
           "sa:actionType": "Attack action",
-          "sa:description": "Reload a wielded martial weapon.\nFull-round action: Reload a system weapon.\nSome system and crew weapons have specific reload rules."
+          "sa:description": "Martial Weapons: Reload as part of your action (standard reload).\n\nSystem Weapons: Reload requires a full-round action.\n\nSpecial Rules: Some system and crew weapons have unique reload mechanics—consult the weapon's description."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Information System Attack",
           "sa:actionType": "Action",
-          "sa:description": "Make an Information System Attack: 1d20 + Proficiency Bonus + Int Modifier + Equipment Bonus. Damage is based on the program or hack used. Requires a hacking kit.\nDouble proficiency with hacking kits grants double bonus.\nOnce you start, make additional attacks until bandwidth is spent."
+          "sa:description": "Make an Information System Attack using the following formula: 1d20 + Proficiency Bonus + Intelligence Modifier + Equipment Bonus.\n\nDamage: Based on the program or hack used (consult program description).\n\nRequirements: A hacking kit is required.\n\nProficiency Benefit: If you gain double proficiency with hacking kits, add double your Proficiency Bonus to the attack roll.\n\nMultiple Attacks: Once you begin making Information System Attacks, you may continue making additional attacks until your bandwidth is spent (subject to your available bandwidth pool)."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Command Drones or Computers Using Bandwidth",
           "sa:actionType": "Action",
-          "sa:description": "Spend up to your bandwidth to issue orders to drones or computers under your command.\nEven with extra bandwidth, a drone can only take 1 action and move once per round."
+          "sa:description": "Spend up to your available bandwidth to issue orders to drones or computers under your command.\n\nAction Limitations: Regardless of bandwidth spent, each drone can take only 1 action and move once per round."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Grapple",
           "sa:actionType": "Action",
           "sa:requirements": "At least one hand free",
-          "sa:description": "Target a creature within reach. Win an opposed Athletics check; the target may use Acrobatics instead.\nYou do not become grappled.\nGrappled condition:\n• Speed becomes 0 and cannot benefit from speed bonuses.\n• Ends if the grappler is incapacitated.\n• Ends if an effect moves the grappled creature away (e.g., Thunderwave).\nYou can move the grappled target with you."
+          "sa:description": "Target a creature within reach and make an opposed check: your Athletics vs. their Athletics or Acrobatics (their choice). If you win, the target becomes Grappled.\n\nGrappler Status: You are not grappled (only the target is).\n\nGrappled Condition Effects:\n• Speed becomes 0; speed bonuses do not apply\n• Ends if you (the grappler) become incapacitated\n• Ends if any effect moves the grappled creature away (e.g., Thunderwave)\n\nMovement: You can move, dragging the grappled creature with you, but your speed is halved unless the creature is two or more sizes smaller than you."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Shove",
           "sa:actionType": "Action",
-          "sa:description": "Make a special melee attack to knock a creature prone or push it away. Must be within reach and no more than one size larger.\nMake a Strength (Athletics) check opposed by the target’s Strength (Athletics) or Dexterity (Acrobatics).\nIf unarmed and the target is armed, you roll at disadvantage, and a failed shove grants the target a free melee attack."
+          "sa:description": "Make a special melee attack against a creature within reach and no more than one size category larger. Choose one of two outcomes: knock the target prone or push it away.\n\nAttack Roll: Make a Strength (Athletics) check opposed by the target's Strength (Athletics) or Dexterity (Acrobatics) [target chooses].\n\nUnarmed vs. Armed Penalty: If you are unarmed and the target is armed, you roll your Athletics check at disadvantage. If your check fails, the target may make a free melee attack against you."
         },
         {
           "@type": "sa:Action",
           "rdfs:label": "Cast a Spell",
           "sa:actionType": "Action",
-          "sa:description": "Devotee/Arcanist: Spend spell points equal to spell level.\nExample: Magic Missile at level 3 requires 3 points.\nOccultist: Spend a spell slot.\nIf you take ongoing damage or are damaged via reaction/ready while casting, make a casting check (Casting Ability + Proficiency vs 10 + spell point cost). Failure loses points.\nReaction spells bypass this check. If Focused, you may choose to lose the condition for advantage on the check."
+          "sa:description": "Spell Point/Slot Costs:\n• Devotee/Arcanist: Spend spell points equal to spell level (e.g., Magic Missile at level 3 costs 3 points)\n• Occultist: Spend a spell slot\n\nCasting Interruption: If you take ongoing damage or are damaged via reaction/ready action while casting, make a casting check (Casting Ability + Proficiency Bonus vs. DC 10 + spell point cost). If you fail, you lose the spell points.\n\nExceptions:\n• Reaction spells are not subject to interruption checks\n• If you have the Focused condition, you may abandon it as a reaction to gain advantage on a casting or concentration check"
         }
       ]
     }
