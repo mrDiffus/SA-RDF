@@ -1,4 +1,5 @@
 using Discord;
+using Discord.Net;
 using Discord.WebSocket;
 using DiscordLoreAndCharBotDotnet.Config;
 using DiscordLoreAndCharBotDotnet.Models;
@@ -166,7 +167,16 @@ internal sealed class DiscordBotHost
             return;
         }
 
-        await command.DeferAsync();
+        try
+        {
+            await command.DeferAsync();
+        }
+        catch (HttpException ex) when ((int?)ex.DiscordCode == 40060)
+        {
+            // Discord retried the interaction delivery before we could acknowledge it.
+            // The duplicate invocation already deferred; skip processing this one.
+            return;
+        }
 
         var userId = command.User.Id.ToString();
         if (!TryBeginSlashRequest(userId))
