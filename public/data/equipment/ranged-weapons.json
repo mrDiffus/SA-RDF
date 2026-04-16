@@ -25,7 +25,7 @@
           "sa:weight": 1,
           "sa:cost": 249,
           "sa:powerLevel": 5,
-          "sa:description": "An efficiently manufactured, reliable in use, cheap to buy and easy to get a hold of pistol.",
+          "sa:description": "A mass-produced pistol renowned for reliability and affordability. Difficult to trace and readily available on black markets, making it a common choice for budget-conscious operatives and civilian acquisition.",
           "sa:tags": [
             "Light",
             "semiautomatic"
@@ -122,7 +122,7 @@
           "sa:weight": 2,
           "sa:cost": 459,
           "sa:powerLevel": 5,
-          "sa:description": "A big cluncky revolver. If it does not work, you can always hit him with it.",
+          "sa:description": "A robust, reliable revolver with reduced recoil, designed for dependable performance in demanding conditions. Its durability makes it a solid backup option.",
           "sa:tags": [
             "Light",
             "semiautomatic"
@@ -313,7 +313,7 @@
           "sa:weight": 7,
           "sa:cost": 19000,
           "sa:powerLevel": 8,
-          "sa:description": "Fires highly focused points of gravity tearing at the soft flesh hiding in the hard steel.",
+          "sa:description": "A concussive weapon that emits focused gravitational pulses capable of bypassing armor plating. Designed to disable armored targets by disrupting internal systems and inflicting blunt-force trauma.",
           "sa:tags": [
             "Large",
             "silent"
@@ -337,7 +337,7 @@
           "sa:weight": 32,
           "sa:cost": 24000,
           "sa:powerLevel": 6,
-          "sa:description": "A tripod moutned dual autocannon. Will shred most of everything at the price of hundreds of expensive bullets at the click of a button",
+          "sa:description": "A tripod-mounted dual-autocannon system delivering devastating suppressive fire. Highly destructive but requires significant ammunition supply for sustained operations.",
           "sa:tags": [
             "heavy",
             "automatic",
@@ -362,7 +362,7 @@
           "sa:weight": 32,
           "sa:cost": 58000,
           "sa:powerLevel": 7,
-          "sa:description": "A tripod moutned dual autocannon. Will shred most of everything at the price of hundreds of expensive bullets at the click of a button",
+          "sa:description": "An upgraded tripod-mounted dual-autocannon system with enhanced fire rate and penetration. Devastating in capable hands, but demands precision handling and substantial ammunition reserves.",
           "sa:tags": [
             "heavy",
             "automatic",
@@ -385,7 +385,7 @@
           "sa:weight": 3,
           "sa:cost": 600,
           "sa:powerLevel": 5,
-          "sa:description": "An easy handle and operate semi automatic shotgun",
+          "sa:description": "A semi-automatic shotgun designed for intuitive handling and minimal training. Ideal for operators prioritizing reliability and ease of use over precision." ,
           "sa:tags": [
             "Semiautomatic"
           ],
@@ -406,7 +406,7 @@
           "sa:weight": 0.4,
           "sa:cost": 230,
           "sa:powerLevel": 5,
-          "sa:description": "A small and easy to handle pistol with little recoil",
+          "sa:description": "A lightweight pistol engineered for novice operators and civilian self-defense. Minimal recoil and intuitive controls make it accessible to untrained hands, though raw damage output remains limited.",
           "sa:tags": [
             "Semiautomatic"
           ],
@@ -485,11 +485,11 @@
             "maximum": 150
           },
           "sa:size": "Medium",
-          "sa:specialProperties": "On a natural 1 it misfires and needs 1 additional round to cool of before it can be fired again.",
+          "sa:specialProperties": "On a natural 1 it misfires and needs 1 additional round to cool off before it can be fired again.",
           "sa:weight": 2,
           "sa:cost": 7800,
           "sa:powerLevel": 8,
-          "sa:description": "A relativly small weapon that lets a combatant without powerarmor realisticly inflict damage on a powerarmor wearing target.",
+          "sa:description": "A compact plasma pistol that enables unarmored combatants to threaten power-armor-equipped opponents. High power output compensates for its limited size and range disadvantage.",
           "sa:tags": [
             "Light",
             "plasma"
@@ -564,7 +564,7 @@
           "sa:weight": 4,
           "sa:cost": 19500,
           "sa:powerLevel": 7,
-          "sa:description": "Heavily enchanted elven assaultrifle",
+          "sa:description": "A masterwork elven assault rifle enchanted to function as a magical weapon. Designed to overcome magical defenses and penetrate supernatural resistances through arcane enhancement.",
           "sa:tags": [
             "burst"
           ],
@@ -585,7 +585,7 @@
           "sa:specialProperties": "Can hit targets that are not in your line of sight if target linked ally has line of sight to target and a clear path to the target exists and the patch contains no turns tighter than 45 degrees. No turn on the missiles path can be less than 10 squares apart.",
           "sa:weight": 12,
           "sa:cost": 12000,
-          "sa:description": "A missile launcher system intended for easy to move artilliery like support",
+          "sa:description": "A portable missile platform designed for mobile artillery support. Capable of striking distant targets with advanced targeting systems and indirect fire capabilities.",
           "sa:proficiency": "System"
         },
         {
@@ -625,7 +625,7 @@
           "sa:specialProperties": "A one time launcher for Ultralight rockets. Roll attack as usual, ignore spread in bombard description.",
           "sa:weight": 2,
           "sa:cost": 400,
-          "sa:description": "A single use rocket launcher",
+          "sa:description": "A single-use shoulder-mounted rocket launcher for light anti-armor and fire support roles.",
           "sa:proficiency": "Simple"
         },
         {
@@ -644,7 +644,7 @@
           "sa:weight": 0.9,
           "sa:cost": 2200,
           "sa:powerLevel": 6,
-          "sa:description": "A hightech submachine gun. Noisy but effective",
+          "sa:description": "A high-tech submachine gun optimized for rapid close-quarters combat. High fire rate and mobility offset its audible signature and shorter effective range.",
           "sa:tags": [
             "Automatic",
             "burst",
@@ -800,7 +800,7 @@
           "sa:weight": 1.5,
           "sa:cost": 2790,
           "sa:powerLevel": 6,
-          "sa:description": "A small compact machinegun. Its magazine is a spool of tungsten wire which is snipped of in needlelike pieces before being launched.",
+          "sa:description": "A compact machine gun using a novel tungsten-wire magazine system. The magazine is precisely cut into needle-like projectiles before each burst, enabling specialized penetration mechanisms.",
           "sa:tags": [
             "light",
             "automatic"
