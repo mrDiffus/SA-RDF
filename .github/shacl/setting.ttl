@@ -1,0 +1,310 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix schema: <https://schema.org/> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sa:     <https://stellararcana.org/> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Organization (e.g., Armanitech, factions, companies)
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:OrganizationShape
+    a sh:NodeShape ;
+    sh:targetClass sa:Organization ;
+    sh:description "An organization, faction, company, or institutional entity in the Stellar Arcana setting." ;
+
+    # Canonical name — required, single value
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The canonical name of the organization." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Narrative description — required, single value
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "A detailed narrative describing the organization, its purpose, culture, and influence." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Organization roles — optional, repeatable
+    sh:property [
+        sh:path     sa:role ;
+        sh:name     "role" ;
+        sh:description "Character roles and positions available within this organization." ;
+        sh:class    sa:Role ;
+        sh:node     sa:RoleShape ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Role (position or membership level in an organization)
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:RoleShape
+    a sh:NodeShape ;
+    sh:description "A position or membership tier within an organization, granting benefits and access." ;
+
+    # Canonical name — required
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The title or name of this role." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Required renown/standing — required
+    sh:property [
+        sh:path     sa:requiredRenown ;
+        sh:name     "requiredRenown" ;
+        sh:description "Minimum renown or standing required to attain this role." ;
+        sh:datatype xsd:integer ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Prerequisites — required
+    sh:property [
+        sh:path     sa:prerequisites ;
+        sh:name     "prerequisites" ;
+        sh:description "Specific requirements or accomplishments needed before qualifying for this role." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Role benefits and description — required, may have multiple bullet points
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "Benefits, capabilities, and responsibilities granted by this role. May be a single string or list of bullet points." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Planet lore document (type: schema:CreativeWork)
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:PlanetLoreShape
+    a sh:NodeShape ;
+    sh:targetClass schema:CreativeWork ;
+    sh:description "A creative work document describing a planet in the Stellar Arcana setting." ;
+
+    # Canonical name — required, single value
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The canonical name of the planet." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Narrative description — required, single value
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "A comprehensive narrative overview of the planet's geography, culture, and significance." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Genre / tonal descriptors — optional
+    sh:property [
+        sh:path     schema:genre ;
+        sh:name     "genre" ;
+        sh:description "Thematic genre tags conveying the planet's dominant tone and feel." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Thematic keywords — optional, repeatable
+    sh:property [
+        sh:path     schema:keywords ;
+        sh:name     "keywords" ;
+        sh:description "Thematic keywords, place names, and cultural references associated with the planet." ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    # Canonical URL — optional
+    sh:property [
+        sh:path     schema:url ;
+        sh:name     "url" ;
+        sh:description "Canonical lore page URL for the planet." ;
+        sh:nodeKind sh:IRI ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Language tag — optional
+    sh:property [
+        sh:path     schema:inLanguage ;
+        sh:name     "inLanguage" ;
+        sh:description "The language of the lore content." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Creation date — optional
+    sh:property [
+        sh:path     schema:dateCreated ;
+        sh:name     "dateCreated" ;
+        sh:description "Date when this lore was created." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Stable document identifier — optional
+    sh:property [
+        sh:path     schema:identifier ;
+        sh:name     "identifier" ;
+        sh:description "Stable unique identifier for this lore document." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Author — optional, typed Person node
+    sh:property [
+        sh:path     schema:author ;
+        sh:name     "author" ;
+        sh:description "The author or creator of this lore." ;
+        sh:class    schema:Person ;
+        sh:node     sa:PersonShape ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Planet Place reference (self-description) — optional
+    sh:property [
+        sh:path     schema:about ;
+        sh:name     "about" ;
+        sh:description "A Place node describing the planet's physical and geographical characteristics." ;
+        sh:class    schema:Place ;
+        sh:node     sa:PlanetPlaceRefShape ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Primary location associated with this document — optional
+    sh:property [
+        sh:path     schema:locationCreated ;
+        sh:name     "locationCreated" ;
+        sh:description "A notable Place on the planet where this lore was authored or inspired." ;
+        sh:class    schema:Place ;
+        sh:node     sa:PlanetPlaceRefShape ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Notable places that belong to this planet — optional, repeatable
+    sh:property [
+        sh:path     schema:hasPart ;
+        sh:name     "hasPart" ;
+        sh:description "Places and locations that are part of or contained within this planet." ;
+        sh:class    schema:Place ;
+        sh:node     sa:PlanetPlaceRefShape ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Planet Place reference (embedded in planet lore documents)
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:PlanetPlaceRefShape
+    a sh:NodeShape ;
+    sh:description "A lightweight place reference node embedded in a planet lore document." ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The name of the place." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "A brief description of the place." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Standalone Place document (detailed location in a planet)
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:StandalonePlace
+    a sh:NodeShape ;
+    sh:targetClass schema:Place ;
+    sh:description "A detailed place document describing a specific location on a planet." ;
+
+    # Canonical name — required
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The canonical name of the place." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Description — required
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "Narrative description of the place. May be a single string or a list of paragraphs." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+    ] ;
+
+    # Back-link to parent planet or containing place — required
+    sh:property [
+        sh:path     schema:containedInPlace ;
+        sh:name     "containedInPlace" ;
+        sh:description "IRI of the planet or parent place containing this location." ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern  "^https://stellararcana\\.org/place/" ;
+    ] ;
+
+    # Unique identifier — required
+    sh:property [
+        sh:path     schema:identifier ;
+        sh:name     "@id" ;
+        sh:description "Unique IRI identifier for this place." ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:pattern  "^https://stellararcana\\.org/place/" ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Person node (author attribution)
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:PersonShape
+    a sh:NodeShape ;
+    sh:class schema:Person ;
+    sh:description "A person associated with lore creation or authorship." ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The name or alias of the person." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .

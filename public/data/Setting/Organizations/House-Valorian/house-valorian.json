@@ -1,0 +1,78 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "requiredRenown": "sa:requiredRenown",
+    "prerequisites": "sa:prerequisites",
+    "role": "sa:role",
+    "type": "@type"
+  },
+  "type": "sa:Organization",
+  "label": "House Valorian",
+  "description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's founding. House Valorian controls vast urban real estate, major financial institutions, and the cultural prestige apparatus of the capital city. They quietly shape policy through wealth, patronage, and strategic marriages. They fund the arts, universities, and temples—buying legitimacy and soft power. Their public face is one of magnanimous stewardship; their private operations include loan-sharking, land seizures, and manipulation of legal systems. They view corporate entities like Armanitech as crass nouveaux riches, and they consider the Forge Syndicate an unstable threat to property rights. House Valorian does not compete; House Valorian persists.",
+  "role": [
+    {
+      "type": "sa:Role",
+      "label": "Financial Steward",
+      "requiredRenown": 3,
+      "prerequisites": "Family connection or adopted into House Valorian; passed financial background check; sworn to house loyalty.",
+      "description": [
+        "Management authority over assigned properties, estates, or financial portfolios (50,000–500,000 credits)",
+        "Right of first refusal on House loans (favorable terms: 10% interest vs. market 20%)",
+        "Invitation to House social events and cultural patronage (access to elite networks)",
+        "House protection: legal support and hired defense if challenged or threatened",
+        "Stipend: 500 credits monthly as house retainer"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Estate Manager",
+      "requiredRenown": 8,
+      "prerequisites": "Steward for five years, demonstrated loyalty and administrative competence, appointed by House council.",
+      "description": [
+        "Autonomous management of major properties (1d4 cityblocks, apartment towers, or commercial districts)",
+        "Authority to collect rents, negotiate leases, and enforce house rights on all managed properties",
+        "Discretionary budget: 50,000 credits annually for property maintenance and improvements",
+        "Command 1d4 house guards and administrative staff under your direct control",
+        "Commission: 2% of net rent collected (significant passive income: 5,000–15,000 credits monthly)",
+        "Political leverage: represent House interests in city council and regulatory boards"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Council Financier",
+      "requiredRenown": 14,
+      "prerequisites": "Estate Manager for six years, grew House holdings by 20%+, elected to House council.",
+      "description": [
+        "Seat on House Valorian Council; direct input on financial strategy, political alliances, and major investments",
+        "Authority to approve/deny loans, investments, and major purchases on behalf of House (up to 1 million credits)",
+        "Control multiple major estates and financial portfolios totaling 2+ million credits in assets",
+        "Commission: 5% of net returns on House holdings (30,000–100,000 credits monthly)",
+        "Authority to negotiate with external entities (corps, syndicates, governments) on House behalf",
+        "Command 2d6 house guards, administrators, and operatives",
+        "Veto power over property seizures or aggressive collections (House maintains 'respectable' facade)"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Valorian Patriarch/Matriarch",
+      "requiredRenown": 20,
+      "prerequisites": "Councilor for eight years, blood relation to founding Valorian line or massive demonstration of loyalty and success.",
+      "description": [
+        "Executive authority over all House Valorian operations and policy",
+        "Direct influence on Arcech-Sylandris government; ability to sway policy through patronage and pressure",
+        "Control of House treasure vault (estimated 50+ million credits in liquid and illiquid assets)",
+        "Authority to arrange marriages, adoptions, and succession; shape family destiny",
+        "Command all house guards, operatives, and administrative staff (100+ individuals)",
+        "Diplomatic authority: negotiate with rival houses, corporations, and planetary governments",
+        "Passive income: 500,000+ credits monthly from diversified House holdings",
+        "Ability to call in 'favors' from politicians, judges, merchants, and minor nobles across the sector"
+      ]
+    }
+  ]
+}

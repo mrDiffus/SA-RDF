@@ -1,4 +1,4 @@
-export type AppTab = 'home' | 'rules' | 'races' | 'archetypes' | 'spells' | 'equipment' | 'general-features' | 'lore';
+export type AppTab = 'home' | 'rules' | 'races' | 'archetypes' | 'spells' | 'equipment' | 'general-features' | 'character-sheet' | 'lore';
 
 export type AppRoute = {
   tab: AppTab;
@@ -18,6 +18,7 @@ const collectionPaths: Record<AppTab, string> = {
   spells: '/spells',
   equipment: '/equipment',
   'general-features': '/general-features',
+  'character-sheet': '/character-sheet',
   lore: '/lore'
 };
 

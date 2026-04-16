@@ -7,6 +7,7 @@ import RuleList from './components/RuleList';
 import EquipmentList from './components/EquipmentList';
 import GeneralFeaturesList from './components/GeneralFeaturesList';
 import SettingView from './components/SettingView';
+import CharacterSheet from './components/CharacterSheet';
 import { fetchEquipment, fetchRaces, fetchRules } from './data';
 import { AppRoute, AppTab, curieToRelativeIri, getCollectionHref, getCurrentRelativeIri, parseBrowserRoute } from './rdfNavigation';
 import { Shield, Zap, Star, ChevronRight } from 'lucide-react';
@@ -127,6 +128,8 @@ export default function App() {
         return <EquipmentList selectedResourceId={route.resourceId} onNavigate={(resourceId) => navigateTo(resourceId ? { tab: 'equipment', resourceId } : { tab: 'equipment' })} />;
       case 'general-features':
         return <GeneralFeaturesList />;
+      case 'character-sheet':
+        return <CharacterSheet />;
       case 'lore':
         return <SettingView />;
       default:
@@ -213,11 +216,7 @@ function Home({ onExplore, onLore }: { onExplore: () => void; onLore: () => void
       </section>
 
       <section className="grid grid-cols-1 md:grid-cols-3 gap-8">
-        {[
-          // { icon: Shield, title: "Tactical Combat", desc: "Deep rules for cover, overwatch, and high-frequency melee combat." },
-          // { icon: Zap, title: "Arcane Tech", desc: "Spells integrated with technology, from hacking ghosts to plasma fireballs." },
-          // { icon: Star, title: "Diverse Races", desc: "Play as Void-mining Dwarves, Stargazer Elves, or primal Orc warriors." }
-        ].map((feature, i) => (
+        {([] as { icon: typeof Shield; title: string; desc: string }[]).map((feature, i) => (
           <div key={i} className="bg-zinc-900/40 border border-zinc-800 p-8 rounded-2xl hover:border-zinc-700 transition-colors">
             <feature.icon className="w-10 h-10 text-orange-500 mb-6" />
             <h3 className="text-xl font-bold text-white uppercase tracking-tight mb-4">{feature.title}</h3>

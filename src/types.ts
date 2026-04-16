@@ -14,6 +14,11 @@ export interface Spell {
   levelScaling?: string;
 }
 
+export interface Skill {
+  id: string;
+  label: string;
+}
+
 export interface Archetype {
   id: string;
   label: string;
@@ -143,6 +148,71 @@ export interface RawRace {
   'sa:features': RawFeature[];
 }
 
+// Character Sheet Data
+export interface AbilityScores {
+  strength: number;
+  dexterity: number;
+  constitution: number;
+  intelligence: number;
+  wisdom: number;
+  charisma: number;
+}
+
+export interface CharacterResources {
+  wounds: number;
+  hitPoints: number;
+  sanity: number;
+  spellPoints?: number;
+  renown: number;
+}
+
+export interface CharacterSkill {
+  name: string;
+  ability: keyof AbilityScores;
+  proficient: boolean;
+  miscModifier?: number;
+}
+
+export interface CharacterFeature {
+  name: string;
+  description: string;
+}
+
+export interface CharacterEquipment {
+  name: string;
+  category: 'armor' | 'weapon' | 'equipment';
+  quantity?: number;
+}
+
+export interface CharacterSpell {
+  name: string;
+  level: number;
+}
+
+export interface CharacterAttack {
+  name: string;
+  abilityModifier: number;
+  weaponBonus?: number;
+  damageDie: string;
+  damageAbilityModifier: number;
+  damageBonuses?: number;
+}
+
+export interface Character {
+  id: string;
+  name: string;
+  race: string;
+  archetypes: [string, string]; // Exactly two archetypes
+  totalExperience: number;
+  abilityScores: AbilityScores;
+  racialBonuses?: Partial<AbilityScores>;
+  features?: CharacterFeature[];
+  skills?: CharacterSkill[];
+  equipment?: CharacterEquipment[];
+  spells?: CharacterSpell[];
+  attacks?: CharacterAttack[];
+}
+
 export interface RawRuleSection {
   '@id': string;
   'rdfs:label': string;
@@ -166,3 +236,31 @@ export interface RawEquipment {
   'sa:cost'?: number;
   'sa:description'?: string;
 }
+
+// Character Sheet Interfaces
+export interface CharacterStats {
+  totalSkillCount: number;
+  totalFeatureCost: number;
+  selectedFeatureCount: number;
+  autoPopulatedFeatureCount: number;
+  archetypeSkillCount: number;
+  [key: string]: number | string | boolean;
+}
+
+export interface CharacterSheet {
+  id: string;
+  name: string;
+  raceId: string | null;
+  archetypeId: string | null;
+  selectedSkillIds: string[];
+  selectedFeatureIds: string[];
+  selectedSpellIds: string[];
+  selectedEquipmentIds: string[];
+  autoPopulatedFeatureIds: string[];
+  calculatedStats: CharacterStats;
+  customNotes: string;
+  createdAt: number;
+  updatedAt: number;
+}
+
+export type CharacterSheetInput = Omit<CharacterSheet, 'id' | 'createdAt' | 'updatedAt' | 'calculatedStats'>;

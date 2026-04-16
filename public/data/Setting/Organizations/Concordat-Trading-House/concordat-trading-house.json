@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "requiredRenown": "sa:requiredRenown",
+    "prerequisites": "sa:prerequisites",
+    "role": "sa:role",
+    "type": "@type"
+  },
+  "type": "sa:Organization",
+  "label": "The Concordat Trading House",
+  "description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominates commerce through Starfall, Arcech's largest off-world port. The Concordat controls trade routes, tariff negotiations, shipping insurance, and the flow of exotic goods between worlds. They are politically neutral by charter (they profit from whoever is in power) and ruthlessly efficient. The Concordat's wealth is incomparable, but its power is soft—they lean on economic pressure, regulatory cooperation, and the simple fact that every city needs their ships and goods. They view all territorial disputes as inefficient distractions from profit.",
+  "role": [
+    {
+      "type": "sa:Role",
+      "label": "Trade Agent",
+      "requiredRenown": 3,
+      "prerequisites": "Employed by a Concordat merchant house; passed bonding and background verification; completed apprenticeship.",
+      "description": [
+        "Authority to negotiate and close trade deals up to 50,000 credits on behalf of your house",
+        "Access to Concordat secure cargo handling and shipping logistics",
+        "Commission: 2% of deal value for brokered transactions",
+        "Insurance: Concordat guarantees safe passage or replacement value on goods you broker",
+        "Network access: introduction to other Concordat agents, merchants, and ship captains across the sector"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "House Merchant",
+      "requiredRenown": 8,
+      "prerequisites": "Trade Agent for five years, demonstrated business acumen, personal capital of 100,000 credits contributed to house.",
+      "description": [
+        "Personal trading authority up to 500,000 credits per transaction",
+        "Seat on house council; voting voice in tariff strategies and route negotiations",
+        "Commission increased to 5% on all transactions; earnings from house profits (1–3% annually)",
+        "Authority to recruit and train junior Trade Agents under your banner",
+        "Access to futures market: speculate on commodity prices and secure favorable contracts in advance",
+        "Can requisition up to 3 trade ships for personal ventures per year (Concordat maintains vessels)"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Master Trader",
+      "requiredRenown": 15,
+      "prerequisites": "House Merchant for six years, orchestrated multi-planetary trade networks, accumulated personal wealth of 500,000+ credits.",
+      "description": [
+        "Seat on Concordat High Council; direct input into tariff policy, route licensing, and off-world relations",
+        "Trading authority: unlimited (acts as de facto diplomat for commercial interests)",
+        "Commission: 10% on all brokered deals; percentage stake in house profits (5%+)",
+        "Command authority: direct 2d4 House Merchants and 4d6 Trade Agents in coordinated ventures",
+        "Negotiate trade treaties between Concordat and external powers (planets, corporations, governments)",
+        "Authority to approve/deny shipping permits for Starfall (massive leverage)",
+        "Personal wealth accumulation: 50,000–200,000 credits monthly from passive holdings"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Concordat Legate",
+      "requiredRenown": 20,
+      "prerequisites": "Master Trader for eight years, personal fortune exceeding 2 million credits, unanimous council election.",
+      "description": [
+        "Strategic leadership of Concordat policy; executive authority over all member houses",
+        "Negotiate directly with planetary governments, corporations, and rival trading consortiums",
+        "Control over tariff structures, port fees, and trade regulations across Arcech system",
+        "Authority to charter new routes, approve major shipping ventures, and set market prices",
+        "Command authority: direct all Concordat military assets (50+ armed merchant vessels, 2d4 strike teams)",
+        "Diplomatic immunity across all Arcech hive cities",
+        "Personal income: 200,000+ credits monthly from diversified holdings; access to Concordat treasure vault"
+      ]
+    }
+  ]
+}

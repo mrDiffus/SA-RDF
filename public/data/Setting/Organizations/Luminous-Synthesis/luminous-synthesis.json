@@ -1,0 +1,73 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "requiredRenown": "sa:requiredRenown",
+    "prerequisites": "sa:prerequisites",
+    "role": "sa:role",
+    "type": "@type"
+  },
+  "type": "sa:Organization",
+  "label": "The Luminous Synthesis",
+  "description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven. The Synthesis controls the licensing, training, and output of all Manfuctors within the city—wielding both economic and political power through their monopoly on high-end magical goods production. They are protective of their secrets, contemptuous of inferior craftwork, and deeply territorial. Membership is by invitation only, and the Synthesis brooks no competition. They view Armanitech's attempts to industrialize and hybridize magic with technology as a fundamental corruption of the craft.",
+  "role": [
+    {
+      "type": "sa:Role",
+      "label": "Apprentice Artificer",
+      "requiredRenown": 3,
+      "prerequisites": "Demonstrated aptitude for transmutation magic and acceptance into a Synthesis mentor's workshop.",
+      "description": [
+        "Access to rare alchemical components and raw materials at cost + 10%",
+        "Permitted to craft mid-tier magical items under mentor supervision",
+        "Invitation to quarterly Synthesis symposia (valuable for networking and rumor-gathering)",
+        "Protection from Synthesis enforcement against poaching of apprentices"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Certified Manfuctor",
+      "requiredRenown": 8,
+      "prerequisites": "Completion of apprenticeship and creation of a signature masterwork artifact approved by Synthesis council.",
+      "description": [
+        "Licensed to operate an independent workshop or join a collective studio within Skyhaven",
+        "Access to exclusive material suppliers offering 20% discount on rare components",
+        "Right to take apprentices and thus grow personal influence within the Synthesis",
+        "Entitled to bid on Synthesis commissions (lucrative city contracts for nobility and institutions)",
+        "Voting rights in annual craft standards meetings"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Master Crafter",
+      "requiredRenown": 12,
+      "prerequisites": "Ten years as Certified Manfuctor, creation of multiple legendary-tier artifacts, demonstrated innovation in technique.",
+      "description": [
+        "Personal laboratory provided by Synthesis at no cost (prestigious location in High Arcanum district)",
+        "Commission rates increase; can charge premium prices for work",
+        "Voice in Synthesis governance; sit on craft standards council",
+        "Can sponsor new Manfuctors directly (bypass normal apprenticeship for exceptional talent)",
+        "Access to restricted grimoires and formulae locked away in Synthesis vault",
+        "1d4 apprentices may work under you free of rival poaching"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Arcane Chancellor",
+      "requiredRenown": 18,
+      "prerequisites": "Master Crafter status, devotion to Synthesis ideology, creation of world-altering or salvific artifacts.",
+      "description": [
+        "Seat on Synthesis High Council; direct influence over policy, new materials, and external relations",
+        "Authority to deny or revoke licenses from rival craftspeople (act as enforcer)",
+        "Unlimited access to Synthesis vault and restricted knowledge",
+        "Can commission other Master Crafters for personal projects at 75% cost",
+        "Political leverage in Skyhaven government (Synthesis is consulted on magical regulation)",
+        "2d6 Synthesis enforcers (skilled battle-mages) at your disposal for protection or enforcement"
+      ]
+    }
+  ]
+}

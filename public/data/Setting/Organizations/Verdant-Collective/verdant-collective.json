@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "requiredRenown": "sa:requiredRenown",
+    "prerequisites": "sa:prerequisites",
+    "role": "sa:role",
+    "type": "@type"
+  },
+  "type": "sa:Organization",
+  "label": "The Verdant Collective",
+  "description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to understanding and cultivating the xenobiological wonders that surround their city. The Collective balances scientific curiosity with environmental stewardship—they believe the jungle is not a resource to exploit but a partner to understand. They control all major biotech patents, genetic research, and xenobiology contracts in the region. They are idealistic but not naive; they refuse partnerships with those who demonstrate clear disregard for ecological balance. Armanitech sees them as naive obstacles; the Collective sees Armanitech as existential threat.",
+  "role": [
+    {
+      "type": "sa:Role",
+      "label": "Field Researcher",
+      "requiredRenown": 2,
+      "prerequisites": "Advanced degree in biology, xenobiology, ecology, or equivalent demonstrated expertise; background check passed.",
+      "description": [
+        "Full Collective membership; access to library and lab facilities",
+        "Equipment stipend: 500 credits quarterly for field gear, samples, and consumables",
+        "Authorization to conduct independent research within approved ecological zones",
+        "Publication rights in Collective journals (builds reputation)",
+        "Protection and rescue coordination if injured or lost in field work"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Senior Researcher",
+      "requiredRenown": 8,
+      "prerequisites": "Five years as Field Researcher, published significant xenobiology findings, elected by Collective council.",
+      "description": [
+        "Personal lab space and 2d4 Field Researchers under your project direction",
+        "Equipment budget increased to 2,000 credits quarterly",
+        "Lead major research initiatives; pursue grant funding from Collective endowments (50,000–200,000 credits)",
+        "Voting seat on research ethics committee (gate-keeping power over projects)",
+        "Authority to deny Collective resources to projects deemed ecologically harmful"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Project Lead",
+      "requiredRenown": 12,
+      "prerequisites": "Senior Researcher for four years, landmark discoveries, demonstrated scientific integrity and ecological philosophy.",
+      "description": [
+        "Direct 3d6 researchers and technicians on major multi-year initiatives",
+        "Budget up to 500,000 credits annually for projects",
+        "Represent Collective in external partnerships, licensing agreements, and knowledge exchanges",
+        "Authority to commission expeditions into deep jungle (Collective funds 2d4 specialist teams)",
+        "Negotiate biotech licensing deals with external parties (personal 2% royalty cuts)",
+        "Veto power over any project that violates Collective environmental standards"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Archon of Equilibrium",
+      "requiredRenown": 18,
+      "prerequisites": "Project Lead for six years, transformative research, elected to Collective High Council unanimously.",
+      "description": [
+        "Strategic leadership of Collective research direction and external relations",
+        "Control over 50,000+ credits in annual discretionary research funding",
+        "Authority to ban external organizations or individuals from Collective work (including Armanitech subsidiaries)",
+        "Direct negotiation with city government on ecological policy and land use",
+        "Command authority: request 2d6 armed field teams for jungle expeditions or defensive operations",
+        "Access to restricted xenobiological samples and genetic materials in Collective vault",
+        "Influence over regulatory framework for biotech across Emerald Heights"
+      ]
+    }
+  ]
+}

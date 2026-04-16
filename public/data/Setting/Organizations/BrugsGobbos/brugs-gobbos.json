@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "requiredRenown": "sa:requiredRenown",
+    "prerequisites": "sa:prerequisites",
+    "role": "sa:role",
+    "type": "@type"
+  },
+  "type": "sa:Organization",
+  "label": "Brug's Gobbos",
+  "description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that infests every hive city across Arcech. They have no true territory—they are impossible to eradicate because they don't compete for power; they feed off everyone else's power. Brug is the perpetual hive-mind—not one goblin, but a distributed collective intelligence with physical anchors (Brug-nodes) hidden in every city's underbelly. Where there is conflict, trade, salvage, or a need for deniable work, the Gobbos appear. They are the friction in every machine, the leak in every organization, the unexpected competitor at every deal. Other powers can slow them, but never stop them. Brug remembers every coin, every score, and every slight. The Gobbos expand like a fungal infection—persistent, profitable, and perpetually growing.",
+  "role": [
+    {
+      "type": "sa:Role",
+      "label": "Associate",
+      "requiredRenown": 3,
+      "prerequisites": "Demonstrated ability to consistently secure currency, equipment, ammunition, or valuable salvage for the clan.",
+      "description": [
+        "Authorized to conduct independent jobs on behalf of the Gobbos with Brug's implicit backing",
+        "Can requisition 2d6 armed goblins as reinforcements for high-reward operations",
+        "Access to an extensive (and constantly replenished) black-market arsenal of explosives and ordnance—no questions asked, payment in credits or trade",
+        "Named directly in Brug's ledger; your reputation precedes you at trading posts and black markets across the sector"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Trusted Associate",
+      "requiredRenown": 10,
+      "prerequisites": "Brought substantial wealth, rare equipment, weapons, or strategic assets into the clan's coffers. Demonstrated unwavering loyalty and sound judgment in representing the Gobbos.",
+      "description": [
+        "You have earned a direct audience line to one of Brug's many ears—a physical mouth-piece of the collective intelligence that speaks on matters only you need know",
+        "Can petition Brug for elite strike teams: 3d6 goblin soldiers armed with plasma-converted salvaged shotguns (1d10 energy damage, 18–20 crit range, 40/120 range) and combat veterans",
+        "Brug will loan hirelings for major contracts without penalty—consider Brug's mercenaries expendable, but know that turning them against the clan is a declaration of war",
+        "Exclusive access to one of Brug's personal intermediary contacts; Brug will broker the introduction if you guarantee a sizable kickback (typically 25% of contract value) on all resulting business",
+        "Priority access to rare salvage and experimental ordnance before being offered to other contractors"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Honorary Gobbo",
+      "requiredRenown": 30,
+      "prerequisites": "Brought immense wealth, power, and strategic advantage to the clan. If you were goblinoid, you would have been subsumed into Brug's collective mind cycles ago. No non-goblinoid has ever done what you have done for the Gobbos.",
+      "description": [
+        "Brug no longer tolerates distance between you and the collective—you are treated as a limb of the organization, with all attendant privileges and dangers",
+        "Command authority over elite goblin force: 5d6 battle-hardened goblin soldiers (plasma shotguns 1d10 energy damage, combat armor AC 16) plus 1d4 goblin bomb-specialists wielding volatile charges (8d6 fire damage in 30-foot burst, Reflex DC 15 half damage)",
+        "Brug provides these forces at no cost—he simply expects a kickback. Fail to deliver, and the debt becomes blood-debt",
+        "Direct strategic consultation with Brug himself on matters affecting the clan's interests and expansion",
+        "Access to Brug's personal vault of exotic salvage, weapons of mass destructive potential, and technology of unknown provenance",
+        "The Gobbos will hunt anyone who betrays you. Brug's vengeance is creative, thorough, and eternal"
+      ]
+    }
+  ]
+}

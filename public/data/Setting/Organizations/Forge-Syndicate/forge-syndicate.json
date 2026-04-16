@@ -1,0 +1,74 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "requiredRenown": "sa:requiredRenown",
+    "prerequisites": "sa:prerequisites",
+    "role": "sa:role",
+    "type": "@type"
+  },
+  "type": "sa:Organization",
+  "label": "Forge Syndicate",
+  "description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundries, and factories of Ironhold. Born from worker rebellions against corporate exploitation, the Syndicate now wields power through collective action, supply-chain monopoly, and ruthless protection of worker interests and collective profits. They negotiate with suppliers, set wage standards, and hold veto power over all major manufacturing contracts in the city. Their philosophy: labor creates value, and labor decides who profits. They are neither gentle nor forgiving with those who undercut wages or break solidarity.",
+  "role": [
+    {
+      "type": "sa:Role",
+      "label": "Floor Worker (Union Member)",
+      "requiredRenown": 2,
+      "prerequisites": "Sworn into the Syndicate via union initiation; committed to collective wage standards.",
+      "description": [
+        "Guaranteed minimum wage (15 credits/day) and standard 8-hour shifts",
+        "Representation in wage disputes and workplace safety violations",
+        "Access to Syndicate mutual-aid fund in times of hardship or injury",
+        "Right to participate in strike votes and collective decisions",
+        "Discounts (15%) on tools, equipment, and goods sold through union suppliers"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Shift Supervisor",
+      "requiredRenown": 5,
+      "prerequisites": "Five years as floor worker, demonstrated leadership and Syndicate loyalty, elected by peers.",
+      "description": [
+        "Earn 25 credits/day; oversee 2d6 workers on your shift",
+        "Authority to enforce Syndicate safety protocols and wage standards on your floor",
+        "Attend monthly Syndicate steward meetings; voice in local labor decisions",
+        "Requisition small batches of high-quality materials for personal projects at cost",
+        "Represent Syndicate interests in negotiations with factory management"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Syndicate Steward",
+      "requiredRenown": 10,
+      "prerequisites": "Shift Supervisor for three years, demonstrated oratory and political skill, elected to Syndicate council.",
+      "description": [
+        "Earn 40 credits/day as steward; maintain voting power as worker",
+        "Council seat; direct input on Syndicate-wide wage negotiation, strike calls, and supply contracts",
+        "Authority to mediate labor disputes across multiple floors and factories",
+        "Access to Syndicate legal fund for defense against corporate retaliation",
+        "Can call 2d6 workers for solidarity actions or walkouts when needed",
+        "Potential to negotiate directly with factory owners on behalf of workers"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Executive Coordinator",
+      "requiredRenown": 15,
+      "prerequisites": "Steward for five years, led successful negotiations, unanimous council endorsement.",
+      "description": [
+        "Senior leadership role; negotiate master contracts between Syndicate and major manufacturers",
+        "Control over supply agreements; can approve or veto raw material sources",
+        "Command authority: mobilize 3d6 solidarity picketers or 2d4 coordinated work stoppages across factories",
+        "Seat at highest Syndicate council; strategic decision-making power",
+        "Authority to enforce Syndicate discipline and expulsion for scab behavior",
+        "Direct leverage over wages, conditions, and profit-sharing across the city"
+      ]
+    }
+  ]
+}

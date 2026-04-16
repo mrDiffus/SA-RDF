@@ -1,0 +1,51 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "description": "https://schema.org/description",
+    "containsPlace": {
+      "@id": "https://schema.org/containsPlace",
+      "@container": "@list"
+    },
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    }
+  },
+  "type": "Place",
+  "label": "Arcech-Sylandris",
+  "description": [
+    "The commercial and cultural capital of Arcech, a sprawling metropolis of mixed fortunes where power brokers, merchants, entertainers, and politicians negotiate the fate of the world. Arcech-Sylandris is the official seat of the planetary council and the home of old money—but it is also the stage for every ambitious enterprise seeking legitimacy and influence.",
+    "Population: ~150,000 residents. Highest concentration of wealth inequality on Arcech. Wealthy districts gleam; poor districts fester. Wide species diversity; class-based segregation strict.",
+    "Geography: Complex urban sprawl with distinct tiers. Lower city is commercial, artisan, and service worker areas. Middle city is mixed residential and business. Upper city is palatial estates, government buildings, and cultural institutions. Orbital platform for secondary trade (less prestigious than Starfall).",
+    "Economy: Banking, real estate, politics, and culture. House Valorian controls land and finance; other interests compete for influence. Imports luxury goods and artisan materials; exports banking services, cultural products, and political influence.",
+    "Culture: Status-obsessed, tradition-bound, politically complex. Power comes from ancestry, wealth, education, and connections. Legitimate authority competes with shadow networks. Public propriety masks private cutthroat competition.",
+    "Dominant Power: House Valorian (banking dynasty controlling real estate and finance). Other presences: Armanitech (corporate offices and government liaison), Concordat Trading House (secondary embassy), Velvet Mask (shadow economy operations), Exodian Church (growing presence among lower classes), Brug's Gobbos (everywhere, unavoidable)."
+  ],
+  "@id": "https://stellararcana.org/place/arcech-sylandris",
+  "containedInPlace": "https://stellararcana.org/place/arcech",
+  "containsPlace": [
+    {
+      "label": "The Palace Quarter",
+      "description": "Palatial estates and administrative buildings. Home of House Valorian and planetary council. Guarded, exclusive, seat of formal power."
+    },
+    {
+      "label": "The Commerce Ring",
+      "description": "Banking and trading district. Where money flows, where investments are made, where financial power resides. Heavily secured."
+    },
+    {
+      "label": "The Cultural Mile",
+      "description": "Museums, galleries, theaters, and academies. Center of Arcech's intellectual and artistic life. Where high society displays sophistication."
+    },
+    {
+      "label": "The Common Markets",
+      "description": "Major commercial district with merchant stalls, craftsperson shops, and service vendors. Where commoners conduct business. Vital but looked down upon by elites."
+    },
+    {
+      "label": "The Twilight Districts",
+      "description": "Mixed legality zones where legitimate businesses blend with black-market operations. Epicenter of shadow economy and political intrigue."
+    }
+  ]
+}

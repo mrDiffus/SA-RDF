@@ -1,0 +1,51 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "description": "https://schema.org/description",
+    "containsPlace": {
+      "@id": "https://schema.org/containsPlace",
+      "@container": "@list"
+    },
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    }
+  },
+  "type": "Place",
+  "label": "Skyhaven",
+  "description": [
+    "An elite hive city rising from ancient, mysterious pillars of unknown origin—Pillars so old and inscribed with forgotten runes that no engineer claims to understand their construction or material. The city sits atop these foundations, reaching into low orbit with crystalline spires and levitating gardens.",
+    "Population: ~50,000 of the sector's most privileged and accomplished. Mostly humans, elves, and wealthy member races seeking prestige and magical excellence.",
+    "Geography: Vertical city built upward from the Pillars; lowest levels are sacred chambers (untouched for millennia), mid-levels are residential and commercial, upper spires are arcane academies and Manfuctor workshops. Connected to orbit via space elevator.",
+    "Economy: Magical goods manufacturing, arcane education, luxury services, and interstellar prestige. Imports raw materials; exports high-end enchanted artifacts. Manfuctor-driven economy controls pricing across the sector.",
+    "Culture: Reverent, competitive, exclusive. Status is measured by magical achievement, Manfuctor affiliation, and proximity to the city's mysteries. The Luminous Synthesis holds absolute cultural and economic authority.",
+    "Dominant Power: The Luminous Synthesis (Manfuctor cabal and arcane authority). Other presences: Armanitech (satellite research office), Concordat Trading House (embassy and luxury goods distribution), freelance Manfuctors."
+  ],
+  "@id": "https://stellararcana.org/place/skyhaven",
+  "containedInPlace": "https://stellararcana.org/place/arcech",
+  "containsPlace": [
+    {
+      "label": "The Sacred Vaults",
+      "description": "The lowest, oldest levels built directly into the Pillars. Sealed chambers rumored to contain pre-city technology and ancient texts. Entry forbidden except by Synthesis decree."
+    },
+    {
+      "label": "The Arcane Quarter",
+      "description": "Mid-city district containing Manfuctor workshops, enchantment studios, and arcane academies. Center of magical research and production."
+    },
+    {
+      "label": "The Merchant Promenade",
+      "description": "A district of luxury shops, galleries, and trading houses. Where the wealthy acquire rare goods and the Synthesis displays masterwork artifacts."
+    },
+    {
+      "label": "The Celestial Spire",
+      "description": "The highest residential and administrative district. Home to Synthesis leadership and the wealthiest inhabitants. Direct connection to the space elevator terminus."
+    },
+    {
+      "label": "The Observatory Ring",
+      "description": "Orbital observation stations and satellite docking facilities surrounding Skyhaven. Research centers for magical and technological study of the cosmos."
+    }
+  ]
+}

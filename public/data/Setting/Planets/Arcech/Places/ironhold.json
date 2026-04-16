@@ -1,0 +1,51 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "description": "https://schema.org/description",
+    "containsPlace": {
+      "@id": "https://schema.org/containsPlace",
+      "@container": "@list"
+    },
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    }
+  },
+  "type": "Place",
+  "label": "Ironhold",
+  "description": [
+    "A brutal industrial hive city built around massive underground ore deposits and surface-level refineries. Ironhold is perpetual motion—furnaces roar, pneumatic lifts scream, and cargo shuttles arc overhead 24/7. The city is a machine for converting raw materials into processed goods and shipping them off-world.",
+    "Population: ~120,000 workers, engineers, and support staff. Majority are dwarves, humans, and goblinoids adapted to industrial labor. Low social strata; high turnover due to workplace hazards.",
+    "Geography: Lower city is mining and processing (geothermal-powered, brutally hot). Mid-city is worker housing and supply distribution (utilitarian, crowded). Upper city is administrative and freight hubs (extensive cargo aerodock for off-world shipping).",
+    "Economy: Ore extraction and refinement, industrial fabrication, freight logistics. Exports processed metals, refined components, and bulk goods. Imports luxury goods (rarely), replacement machinery, and migrant labor.",
+    "Culture: Pragmatic, hierarchical, union-dominated. Status is measured by skill, safety record, and tenure. Work defines identity; leisure is brief and often involves gambling or black-market substances.",
+    "Dominant Power: Forge Syndicate (labor union with absolute veto over production). Other presences: Armanitech (procurement office and equipment sales), Brug's Gobbos (shadows on every dock, black-market supplies), independent salvagers."
+  ],
+  "@id": "https://stellararcana.org/place/ironhold",
+  "containedInPlace": "https://stellararcana.org/place/arcech",
+  "containsPlace": [
+    {
+      "label": "The Thermite Pits",
+      "description": "Underground mining and open-pit excavations extracting ore directly. Geothermal vents power the deepest refineries. Dangerous, relentless work."
+    },
+    {
+      "label": "The Forge District",
+      "description": "Massive industrial furnaces and smelting operations. The air reeks of metal and sulfur. This is the economic heart."
+    },
+    {
+      "label": "Worker's Haven",
+      "description": "Dense lower residential district. Cheap, utilitarian housing blocks stacked vertically. Syndicate union halls and communal dining centers."
+    },
+    {
+      "label": "The Cargo Towers",
+      "description": "Massive freight elevator shafts and aerodock facilities connecting to orbital freighters. Where processed goods are loaded for off-world shipment."
+    },
+    {
+      "label": "The Undercity",
+      "description": "Black-market district hidden within abandoned mining shafts and tunnel networks. Where gray-market goods change hands and Syndicate discipline doesn't reach."
+    }
+  ]
+}

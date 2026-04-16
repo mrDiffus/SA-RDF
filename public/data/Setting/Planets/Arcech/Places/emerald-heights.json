@@ -1,0 +1,51 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "description": "https://schema.org/description",
+    "containsPlace": {
+      "@id": "https://schema.org/containsPlace",
+      "@container": "@list"
+    },
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    }
+  },
+  "type": "Place",
+  "label": "Emerald Heights",
+  "description": [
+    "A research-focused hive city integrated into lush jungle canopy, where ancient trees rise taller than the city spires. Emerald Heights is dedicated to understanding and cultivating xenobiology, ecological engineering, and magical botany. The city is a living laboratory—every plant is catalogued, every organism studied, every ecosystem connected to human inquiry.",
+    "Population: ~60,000 scientists, researchers, graduate students, and support staff. Diverse species composition; merit-based social hierarchy (education = status). High population of elves and forest-adapted races.",
+    "Geography: Vertical city woven into jungle canopy. Research facilities built into ancient trees and artificial platforms. Lower levels blend into wild forest. Upper levels are dominated by laboratories, greenhouses, and observatory platforms. Extensive bridge networks crossing above the jungle floor.",
+    "Economy: Biotech research, genetic patents, xenobiology contracts, and ecological consulting. Imports research funding and equipment; exports genetic breakthroughs, organism samples, and environmental reports. Substantial endowment from philanthropic institutions.",
+    "Culture: Academically driven, idealistic, protective of ecological integrity. Status measured by published research, discoveries, and reputation for scientific rigor. Strong anti-corporate bias. Collaborative but competitive peer networks.",
+    "Dominant Power: The Verdant Collective (research consortium with veto over biotech projects). Other presences: Corporately-funded research subsidiaries (tolerated but scrutinized), freelance scientists and poachers (hunted), Brug's Gobbos (shadow ecosystem traders)."
+  ],
+  "@id": "https://stellararcana.org/place/emerald-heights",
+  "containedInPlace": "https://stellararcana.org/place/arcech",
+  "containsPlace": [
+    {
+      "label": "The Canopy Laboratories",
+      "description": "Primary research facilities built into massive tree structures and elevated platforms. Climate-controlled, vault-secured, houses cutting-edge xenobiology work."
+    },
+    {
+      "label": "The Specimen Gardens",
+      "description": "Living collections of extraterrestrial organisms, hybrid flora, and dangerous xenolife maintained under strict observation. Dangerous zone; research permits required."
+    },
+    {
+      "label": "The Academic Quarter",
+      "description": "University campus, graduate research centers, lecture halls. Hub of intellectual life and publishing. Where reputations are made and theories debated."
+    },
+    {
+      "label": "The Greenhouse Rings",
+      "description": "Massive transparent domes cultivating rare plants, fungi, and genetic experiments. Climate engineered to mimic alien worlds."
+    },
+    {
+      "label": "The Wild Margin",
+      "description": "Interface zone between controlled city and untamed jungle. Field research staging area; jungle survival training; occasional dangerous creature incursions."
+    }
+  ]
+}

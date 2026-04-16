@@ -1,0 +1,51 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "description": "https://schema.org/description",
+    "containsPlace": {
+      "@id": "https://schema.org/containsPlace",
+      "@container": "@list"
+    },
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    }
+  },
+  "type": "Place",
+  "label": "Starfall",
+  "description": [
+    "The largest off-world port in the Arcech system, built around multiple massive space elevators and orbital docking facilities. Starfall is the nexus of interstellar trade—it is where cultures collide, commerce flows, and fortunes are made or lost. The city is perpetually busy with traders, diplomats, adventurers, and merchants from across known space.",
+    "Population: ~100,000 transient and permanent residents. The most cosmopolitan city on Arcech—every species, culture, and wealth class represented. High turn-over; constant influx of off-worlders.",
+    "Geography: Massive orbital-connected spires anchoring space elevators. Lower city is warehouse and dock districts (cargo, legitimate and otherwise). Mid-city is markets, trading houses, and caravanserais. Upper city is luxury hotels, embassy districts, and orbital control facilities.",
+    "Economy: Interstellar trade, shipping, commodity broking, tourism, and diplomatic services. Imports goods from across the galaxy; exports Arcech-produced goods and raw materials. Operates as 'neutral' trade hub—all powers welcome if they respect trade laws.",
+    "Culture: Cosmopolitan, deal-oriented, pragmatic. Status measured by wealth, connections, and successful negotiations. Trust is temporary; contracts are sacred. Languages: at least five major languages spoken daily.",
+    "Dominant Power: The Concordat Trading House (merchant republic controlling tariffs and shipping). Other presences: Armanitech (corporate import-export subsidiary), House Valorian (embassy representing capital interests), Deeprunners Union (sub-city smuggling networks), Exodian Church (recruiting among transients), Brug's Gobbos (everywhere—dealing information and contraband)."
+  ],
+  "@id": "https://stellararcana.org/place/starfall",
+  "containedInPlace": "https://stellararcana.org/place/arcech",
+  "containsPlace": [
+    {
+      "label": "The Elevator Spires",
+      "description": "Massive orbital connection hubs. Docking facilities for deep-space vessels, transfer stations for gravity-bound trade. Highest security zone."
+    },
+    {
+      "label": "The Merchant Quarter",
+      "description": "Commercial district dominated by trading houses, commodity brokers, and negotiation halls. Where deals worth millions are struck daily."
+    },
+    {
+      "label": "The Docks",
+      "description": "Warehouse districts and cargo terminals. Constant movement of goods. Mix of legitimate and black-market activity."
+    },
+    {
+      "label": "The Bazaar of Worlds",
+      "description": "Open market where traders from all cultures sell exotic goods, rare artifacts, and off-world merchandise. Chaotic, dangerous, endlessly fascinating."
+    },
+    {
+      "label": "The Expat Districts",
+      "description": "Luxury hotels, embassy buildings, and consulate compounds. Home to diplomatic staff and wealthy travelers. Heavily patrolled and secured."
+    }
+  ]
+}

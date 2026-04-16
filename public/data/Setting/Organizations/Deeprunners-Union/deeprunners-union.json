@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "requiredRenown": "sa:requiredRenown",
+    "prerequisites": "sa:prerequisites",
+    "role": "sa:role",
+    "type": "@type"
+  },
+  "type": "sa:Organization",
+  "label": "Deeprunners Union",
+  "description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and underground engineers who navigate the vast sub-city infrastructure beneath Arcech's hive cities. The Deeprunners control sewers, utility tunnels, abandoned subway systems, and forgotten cargo routes that predate current cities. They answer to no single city authority, operate across multiple hive cities independently, and maintain a code of honor: the tunnels are neutral ground. They will work for anyone—corporations, syndicates, individuals—as long as payment is fair. They are the glue holding black markets together; they know every secret passage, every dead drop, and every route to escape city authority.",
+  "role": [
+    {
+      "type": "sa:Role",
+      "label": "Tunnel Runner",
+      "requiredRenown": 2,
+      "prerequisites": "Proven navigation ability in sub-city tunnels; passed Deeprunners hazing ritual; sworn to tunnel code.",
+      "description": [
+        "Unrestricted access to all known Deeprunner tunnel networks across Arcech",
+        "Right to use Deeprunner safe-houses and supply caches (free bed, food, basic supplies)",
+        "Access to Deeprunner job board: semi-regular courier, salvage, and guide contracts (300–1,000 credits per job)",
+        "Protection from rival tunnel gangs; Deeprunners enforce territorial truce in tunnels",
+        "Right to call emergency Deeprunner assistance if trapped or in danger (rescue up to 2d4 runners respond)"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Lead Guide",
+      "requiredRenown": 7,
+      "prerequisites": "Tunnel Runner for three years, mapped new tunnel sections, proven ability to navigate blindfolded, elected by peers.",
+      "description": [
+        "Authority to lead expedition parties through complex tunnel networks; charge escort fees (1,000–5,000 credits per contract)",
+        "Map authority: maintain and update tunnel charts; sell copies to other runners",
+        "Maintain and upgrade assigned tunnel sector (repair pipes, improve markers, clear debris)",
+        "Command 1d4 Tunnel Runners on guide expeditions or salvage operations",
+        "Discover and negotiate rights to new tunnel discoveries or abandoned caches",
+        "Earn finder's fees on all salvage recovered in your sector (10% of value)"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Sector Boss",
+      "requiredRenown": 12,
+      "prerequisites": "Lead Guide for five years, discovered major new routes, resolved significant disputes between Runners, elected by Deeprunners Council.",
+      "description": [
+        "Authority over all Deeprunner operations in assigned sector (typically 1–2 hive cities' worth of tunnels)",
+        "Strategic control: approve or deny external access to 'your' tunnels",
+        "Negotiate with external organizations (smugglers, corporations, syndicates) for tunnel access and services",
+        "Command 2d6 Lead Guides and up to 4d6 Tunnel Runners for major operations",
+        "Discretionary budget: 50,000 credits annually for tunnel maintenance and improvement",
+        "Authority to enforce tunnel code; punish rule-breakers (exile from tunnels, theft of supplies)",
+        "Earn percentage cut of all work conducted through your sector: 5,000–20,000 credits monthly"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "High Tunneler",
+      "requiredRenown": 17,
+      "prerequisites": "Sector Boss for six years, connected entire tunnel network, elected to Deeprunners High Council unanimously.",
+      "description": [
+        "Seat on Deeprunners Council; strategic input on union-wide policy and inter-city tunnel coordination",
+        "Authority over multiple sectors; oversight of sub-city infrastructure across 3+ hive cities",
+        "Command 4d6 Sector Bosses and operational authority over hundreds of Tunnel Runners",
+        "Access to Deeprunners High Archives: complete tunnel maps, historical schematics, and pre-city construction records",
+        "Coordinate with other High Tunnelers to maintain neutral trade routes across all of Arcech",
+        "Negotiation authority: set tunnel toll prices, brokering agreements with all major city powers",
+        "Passive income: percentage cut of all tunnel trade across your domain (50,000+ credits monthly)"
+      ]
+    }
+  ]
+}

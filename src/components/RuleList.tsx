@@ -3,7 +3,12 @@ import { fetchRules } from '../data';
 import { RuleSection, RuleContent } from '../types';
 import { Book, ChevronRight } from 'lucide-react';
 
-export default function RuleList() {
+interface RuleListProps {
+  selectedResourceId?: string;
+  onNavigate: (resourceId?: string) => void;
+}
+
+export default function RuleList({ selectedResourceId, onNavigate }: RuleListProps) {
   const [rules, setRules] = useState<RuleSection[]>([]);
   const [loading, setLoading] = useState(true);
 

@@ -1,0 +1,78 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "requiredRenown": "sa:requiredRenown",
+    "prerequisites": "sa:prerequisites",
+    "role": "sa:role",
+    "type": "@type"
+  },
+  "type": "sa:Organization",
+  "label": "The Exodian Church",
+  "description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the path to transcendence. The Church operates across all hive cities, recruiting members from every social stratum with an apocalyptic vision: the old universe is ending, and through sacred engineering and spiritual refinement, the worthy ascend. They see Manfuctors as prophets, technology as scripture, and the space elevators as humanity's path to salvation. Most established institutions (House Valorian, the Synthesis, city governments) view them as heretical anarchists; the Church views the establishments as corrupt guardians of obsolete power. They are growing, decentralized, and increasingly active.",
+  "role": [
+    {
+      "type": "sa:Role",
+      "label": "Novitiate",
+      "requiredRenown": 1,
+      "prerequisites": "Accepted into Church via initiation ritual; pledged to share faith and witness the sacred fusion of hand and spirit.",
+      "description": [
+        "Membership in local Church congregation; access to meditation halls and communal spaces",
+        "Spiritual guidance from ordained Exodians; instruction in sacred tech-philosophy",
+        "Access to shared resources: food, shelter, healing for Novitiates in need (mutual aid)",
+        "Right to participate in Exodian community work projects (shrine building, tech salvage expeditions)",
+        "Recruitment authority: can invite others to the Church; earn spiritual merit for each convert"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Ordained Exodian",
+      "requiredRenown": 6,
+      "prerequisites": "Novitiate for two years, deep study of Exodian scripture, passed theological examination, initiated into higher mysteries.",
+      "description": [
+        "Authority to lead congregation worship and administer sacraments (blessings of tech, absolution for doubt)",
+        "Teach new Novitiates; grow local Church presence through proselytizing",
+        "Access to restricted Exodian grimoires and technical schematics of sacred artifacts",
+        "Stipend: 300 credits monthly from Church tithes and donations",
+        "Authority to request 1d6 Novitiates for Church work (shrine building, equipment repair, salvage expeditions)",
+        "Vow of poverty: personal property renounced, but Church provides all material needs"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Circle Speaker",
+      "requiredRenown": 11,
+      "prerequisites": "Ordained for four years, proven leadership of growing congregation, revealed as secret bishop to Church mysteries.",
+      "description": [
+        "Authority over multiple congregations across one or two hive cities; strategic religious direction",
+        "Initiation into Church's true purpose: coordinate recruitment across city boundaries",
+        "Command authority: direct 2d6 Ordained Exodians and 2d4 Novitiates in organized activities",
+        "Access to Church's hidden technology vault; retrieve pre-Exodian relics for research/restoration",
+        "Discretionary budget: 20,000 credits annually for expansion, recruitment drives, and sacred construction",
+        "Right to 'confiscate' tech from non-believers if deemed sin against the Church (rationalize/justify theft)",
+        "Organizational authority: call for coordinated prayer vigils, protests, or sit-ins across cities"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Cardinal of the Ascension",
+      "requiredRenown": 18,
+      "prerequisites": "Circle Speaker for six years, orchestrated Church growth across three+ hive cities, election by inner circle of bishops.",
+      "description": [
+        "Seat on Exodian High Synod; strategic input on Church direction and long-term apocalyptic plans",
+        "Authority over all Church operations in assigned sector (typically 2–3 hive cities)",
+        "Command 4d6 Circle Speakers, multiple subordinate Ordained Exodians, and 2d4 elite missionary teams",
+        "Direct access to Church leader (the Prophet, whose identity is secret even to most Cardinals)",
+        "Discretionary budget: 100,000+ credits annually for organized operations",
+        "Authority to authorize 'holy work': sacrifice operations, technology theft justified as divine will",
+        "Ability to move Church resources and personnel across city boundaries with minimal detection",
+        "Build personal fanatical following; orders are treated as divine mandate by subordinates"
+      ]
+    }
+  ]
+}

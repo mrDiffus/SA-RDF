@@ -1,0 +1,75 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "requiredRenown": "sa:requiredRenown",
+    "prerequisites": "sa:prerequisites",
+    "role": "sa:role",
+    "type": "@type"
+  },
+  "type": "sa:Organization",
+  "label": "The Velvet Mask",
+  "description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, theft, black-market trade, extortion, and corruption. The Velvet Mask operates with velvet gloves and steel underneath—their power rests not on crude violence but on leverage, secrets, and mutually profitable arrangements. To outsiders, the Mask seems invisible; to insiders, it is inescapable. The organization neither advertises nor recruits; you must be invited, and the Mask knows everything about you before you are invited. Their leader—known only as 'Vex'—has never been seen in person.",
+  "role": [
+    {
+      "type": "sa:Role",
+      "label": "Street Asset",
+      "requiredRenown": 3,
+      "prerequisites": "Approached by Mask representative; proved reliability through completed small jobs; demonstrated discretion.",
+      "description": [
+        "Receive payments for passive intelligence (gossip, cargo movements, schedule variations)",
+        "Access to Mask safe houses and supply caches scattered throughout Blackwater",
+        "Introduction to Mask fence network; can offload stolen goods at fair value plus 10% finder's fee",
+        "Plausible deniability: the Mask takes fall for your crimes if caught working 'deniable' jobs",
+        "Protection from street-level predators; Mask will retaliate against muggings or exploitation"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Specialist",
+      "requiredRenown": 8,
+      "prerequisites": "Years as Street Asset, demonstrated expertise (theft, forgery, assassination, or hacking), one major score for the Mask.",
+      "description": [
+        "Contracted directly for high-value jobs; earn 5,000–20,000 credits per assignment",
+        "Access to Mask quartermaster: lockpicks, forged documents, hacking tools, poisons, safe houses",
+        "Anonymity guaranteed: the Mask will misdirect authorities and rival crews hunting you",
+        "Right to freelance between contracts without Mask interference (so long as you don't expose Mask operations)",
+        "Can request 1d4 Street Assets for backup on approved jobs (minimal overhead paid by Mask)"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Operative",
+      "requiredRenown": 12,
+      "prerequisites": "Specialist for five years, executed flawless high-stakes operations, proven judgment and loyalty.",
+      "description": [
+        "Earn 15,000–50,000 credits per contract, often with negotiated cut of scores",
+        "Authority to hire and direct smaller specialists for complex operations",
+        "Access to Mask's encrypted communication network; can request dossiers on marks/rivals",
+        "Protection expands: Mask's lawyers, enforcers, and corrupt officials can bail you out",
+        "Clearance to know the identity of 1–2 other Operatives (network building)",
+        "Can requisition equipment worth up to 25,000 credits per job"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Hand of Vex",
+      "requiredRenown": 18,
+      "prerequisites": "Operative for eight years, orchestrated multi-city operations, earned Vex's direct confidence and trust.",
+      "description": [
+        "Direct strategic relationship with Vex; receive orders via secure channels only",
+        "Authority over all lower ranks in your theater of operations",
+        "Command 2d6 Operatives or 3d6 Specialists for major operations",
+        "Discretion to approve/veto external operations that might affect Mask interests",
+        "Access to Mask's deep vault of blackmail, secrets, and leverage over city officials",
+        "Earn percentage points on Mask's profits across your region; passive income (5,000–15,000 credits/month)",
+        "Can arrange disappearances, frame jobs, and political assassinations at Vex's discretion"
+      ]
+    }
+  ]
+}
