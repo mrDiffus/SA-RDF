@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { fetchRaces, fetchArchetypes } from '../data';
-import { generateCharacterId, getDefaultAbilities, calculateRacialBonuses } from '../utils/characterCreation';
+import { generateCharacterId, getDefaultAbilities, calculateRacialBonuses, extractFreeFeatures, findExclusiveFeatureGroups } from '../utils/characterCreation';
 import { NameStep } from './CharacterCreationSteps/NameStep';
 import { AbilityGenerationStep } from './CharacterCreationSteps/AbilityGenerationStep';
 import { RaceSelectionStep } from './CharacterCreationSteps/RaceSelectionStep';
 import { ArchetypeSelectionStep } from './CharacterCreationSteps/ArchetypeSelectionStep';
+import { ExclusiveFeatureSelectionStep } from './CharacterCreationSteps/ExclusiveFeatureSelectionStep';
 import { ReviewStep } from './CharacterCreationSteps/ReviewStep';
 import './CharacterCreation.css';
 import type { Character, AbilityScores, Race, Archetype } from '../types';
@@ -18,6 +19,7 @@ export default function CharacterCreation() {
   const [archetypes, setArchetypes] = useState<string[]>([]);
   const [races, setRaces] = useState<Race[]>([]);
   const [archetypeList, setArchetypeList] = useState<Archetype[]>([]);
+  const [exclusiveSelections, setExclusiveSelections] = useState<Record<string, string>>({});
 
   useEffect(() => {
     Promise.all([fetchRaces(), fetchArchetypes()]).then(([r, a]) => {
@@ -31,6 +33,7 @@ export default function CharacterCreation() {
       alert('Please fill all fields before creating character');
       return;
     }
+    const freeFeatures = extractFreeFeatures(archetypes, archetypeList, exclusiveSelections);
     const character: Character = {
       id: generateCharacterId(),
       name,
@@ -39,14 +42,16 @@ export default function CharacterCreation() {
       totalExperience: 0,
       abilityScores,
       racialBonuses: calculateRacialBonuses(race),
-      features: [],
+      features: freeFeatures,
       skills: [],
       equipment: [],
       spells: [],
-      attacks: []
+      attacks: [],
+      exclusiveFeatureSelections: exclusiveSelections
     };
     // Encode character into URL hash (char:<base64>) — same pattern as sharable links
-    const encoded = btoa(JSON.stringify(character));
+    // Use encodeURIComponent to handle UTF-8 characters properly
+    const encoded = btoa(unescape(encodeURIComponent(JSON.stringify(character))));
     window.history.pushState({}, '', `/character-sheet#char:${encoded}`);
     window.dispatchEvent(new PopStateEvent('popstate'));
   };
@@ -90,11 +95,30 @@ export default function CharacterCreation() {
             archetypes={archetypes}
             archetypeList={archetypeList}
             onArchetypesChange={setArchetypes}
-            onNext={() => setStep(5)}
+            onNext={() => {
+              // Check if there are exclusive features to select
+              const exclusiveGroups = findExclusiveFeatureGroups(archetypes, archetypeList);
+              if (exclusiveGroups.length > 0) {
+                setStep(5);
+              } else {
+                setStep(6);
+              }
+            }}
             onBack={() => setStep(3)}
           />
         );
       case 5:
+        return (
+          <ExclusiveFeatureSelectionStep
+            archetypes={archetypes}
+            archetypeList={archetypeList}
+            selections={exclusiveSelections}
+            onSelectionsChange={setExclusiveSelections}
+            onNext={() => setStep(6)}
+            onBack={() => setStep(4)}
+          />
+        );
+      case 6:
         return (
           <ReviewStep
             character={{
@@ -108,7 +132,10 @@ export default function CharacterCreation() {
             races={races}
             archetypeList={archetypeList}
             onSubmit={submit}
-            onBack={() => setStep(4)}
+            onBack={() => {
+              const exclusiveGroups = findExclusiveFeatureGroups(archetypes, archetypeList);
+              setStep(exclusiveGroups.length > 0 ? 5 : 4);
+            }}
           />
         );
       default:
@@ -119,7 +146,7 @@ export default function CharacterCreation() {
   return (
     <div style={{ maxWidth: '1000px', margin: '2rem auto', padding: '0 2rem', color: 'rgb(212, 212, 216)' }}>
       <h1 style={{ color: 'rgb(161, 140, 0)', fontSize: '2.5rem', marginBottom: '0.5rem' }}>Character Creation</h1>
-      <p style={{ color: 'rgb(161, 140, 0)', marginBottom: '2rem' }}>Step {step} of 5</p>
+      <p style={{ color: 'rgb(161, 140, 0)', marginBottom: '2rem' }}>Step {step} of 6</p>
 
       <div
         style={{
@@ -129,7 +156,7 @@ export default function CharacterCreation() {
           justifyContent: 'space-between'
         }}
       >
-        {[1, 2, 3, 4, 5].map((s) => (
+        {[1, 2, 3, 4, 5, 6].map((s) => (
           <div
             key={s}
             style={{

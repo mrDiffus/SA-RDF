@@ -147,7 +147,8 @@ export default function App() {
         let sheetCharacter: Character | undefined;
         if (route.resourceId?.startsWith('char:')) {
           try {
-            sheetCharacter = JSON.parse(atob(route.resourceId.slice('char:'.length))) as Character;
+            const decoded = decodeURIComponent(escape(atob(route.resourceId.slice('char:'.length))));
+            sheetCharacter = JSON.parse(decoded) as Character;
           } catch {
             sheetCharacter = undefined;
           }

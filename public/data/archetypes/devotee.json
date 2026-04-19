@@ -53,6 +53,7 @@
         {
           "@type": "sa:Feature",
           "rdfs:label": "Path of the Crusader",
+          "sa:exclusivityGroup": "devotee-paths",
           "sa:description": [
             "Gain access to the extra attack features as if you had the Armsman archetype. Whenever you inflict damage with a spell or spell-like ability, you gain temporary hit points equal to your proficiency bonus (up to your hit point maximum). These temporary hit points last 10 minutes and renew when you trigger the effect again.",
             "Gain proficiency with 1 melee weapon and 1 ranged weapon. Gain proficiency with shields and medium armor.",
@@ -68,6 +69,7 @@
         {
           "@type": "sa:Feature",
           "rdfs:label": "Path of the Witch",
+          "sa:exclusivityGroup": "devotee-paths",
           "sa:description": [
             "Gain a familiar.",
             "Once per long rest, regain half your spell points after a short rest.",
@@ -81,6 +83,7 @@
         {
           "@type": "sa:Feature",
           "rdfs:label": "Path of the Clergy",
+          "sa:exclusivityGroup": "devotee-paths",
           "sa:description": [
             "Gain 2 extra spell points for each feature you gain in a caster chain (Initiate Devotee, Initiate Arcanist, etc).",
             "Gain a silver symbol of your power, usable as an implement for 3 cantrips of your choice. Once chosen, only obtaining a new symbol allows changes.",
@@ -95,6 +98,7 @@
         {
           "@type": "sa:Feature",
           "rdfs:label": "Path of the Inquisitor",
+          "sa:exclusivityGroup": "devotee-paths",
           "sa:description": [
             "Gain your proficiency bonus as an additional bonus when tracking, gathering information about, or using persuasion or intimidation on your appointed target.",
             "If you are already proficient, gain this bonus again.",
@@ -240,6 +244,7 @@
         {
           "@type": "sa:Feature",
           "rdfs:label": "Paragon of the faith - Crusader",
+          "sa:exclusivityGroup": "devotee-paragons",
           "sa:prerequisites": [
             "Expert Devotee",
             "Path of the Crusader"
@@ -252,6 +257,7 @@
         {
           "@type": "sa:Feature",
           "rdfs:label": "Paragon of the faith - Witch",
+          "sa:exclusivityGroup": "devotee-paragons",
           "sa:prerequisites": [
             "Expert Devotee",
             "Path of the Witch"
@@ -264,6 +270,7 @@
         {
           "@type": "sa:Feature",
           "rdfs:label": "Paragon of the faith - Inquisitor",
+          "sa:exclusivityGroup": "devotee-paragons",
           "sa:prerequisites": [
             "Expert Devotee",
             "Path of the Inquisitor"
@@ -276,6 +283,7 @@
         {
           "@type": "sa:Feature",
           "rdfs:label": "Paragon of the faith - Clergy",
+          "sa:exclusivityGroup": "devotee-paragons",
           "sa:prerequisites": [
             "Expert Devotee",
             "Path of the Clergy"

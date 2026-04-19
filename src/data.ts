@@ -156,7 +156,8 @@ function mapFeature(raw: RawFeature) {
     description: normalizeFeatureDescription(raw['sa:description'] as any),
     cost: raw['sa:cost'] || '',
     prerequisites: raw['sa:prerequisites'] || [],
-    archetypes: asArray(raw['sa:archetypes']).map(normalizeArchetypeReference)
+    archetypes: asArray(raw['sa:archetypes']).map(normalizeArchetypeReference),
+    exclusivityGroup: raw['sa:exclusivityGroup']
   };
 }
 

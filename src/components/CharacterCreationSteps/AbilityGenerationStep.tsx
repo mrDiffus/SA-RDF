@@ -4,9 +4,9 @@ import type { AbilityScores } from '../../types';
 
 interface AbilityGenerationStepProps {
   scores: AbilityScores;
-  method: 'pointBuy' | 'roll4d6' | 'default';
+  method: 'pointBuy' | 'roll4d6' | 'default' | 'prerolled';
   onScoresChange: (scores: AbilityScores) => void;
-  onMethodChange: (method: 'pointBuy' | 'roll4d6' | 'default') => void;
+  onMethodChange: (method: 'pointBuy' | 'roll4d6' | 'default' | 'prerolled') => void;
   onNext: () => void;
   onBack: () => void;
 }
@@ -20,6 +20,7 @@ export const AbilityGenerationStep: React.FC<AbilityGenerationStepProps> = ({
   onBack
 }) => {
   const [pointBuyScores, setPointBuyScores] = useState<AbilityScores>(scores);
+  const [prerolledScores, setPrerolledScores] = useState<AbilityScores>(scores);
 
   const calculatePointBuyCost = (testScores: AbilityScores): number => {
     let total = 0;
@@ -54,7 +55,7 @@ export const AbilityGenerationStep: React.FC<AbilityGenerationStepProps> = ({
       <p style={{ color: 'rgb(212, 212, 216)', marginBottom: '1.5rem' }}>Choose how to generate your ability scores.</p>
 
       <div style={{ display: 'flex', gap: '1rem', marginBottom: '2rem' }}>
-        {(['pointBuy', 'roll4d6', 'default'] as const).map((m) => (
+        {(['pointBuy', 'roll4d6', 'prerolled', 'default'] as const).map((m) => (
           <button
             key={m}
             onClick={() => {
@@ -74,7 +75,7 @@ export const AbilityGenerationStep: React.FC<AbilityGenerationStepProps> = ({
               fontWeight: '600'
             }}
           >
-            {m === 'pointBuy' ? 'Point Buy' : m === 'roll4d6' ? 'Roll 4d6' : 'Default'}
+            {m === 'pointBuy' ? 'Point Buy' : m === 'roll4d6' ? 'Roll 4d6' : m === 'prerolled' ? 'Prerolled' : 'Default'}
           </button>
         ))}
       </div>
@@ -113,6 +114,40 @@ export const AbilityGenerationStep: React.FC<AbilityGenerationStepProps> = ({
                     {POINT_BUY_COSTS[score]} pts
                   </span>
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {method === 'prerolled' && (
+        <div style={{ background: 'rgb(39, 39, 42)', padding: '1rem', borderRadius: '6px', marginBottom: '1.5rem' }}>
+          <p style={{ color: 'rgb(212, 212, 216)', marginBottom: '1rem' }}>Enter your prerolled ability scores:</p>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(2, 1fr)', gap: '1rem' }}>
+            {(Object.entries(prerolledScores) as [keyof AbilityScores, number][]).map(([ability, score]) => (
+              <div key={ability}>
+                <label style={{ color: 'rgb(212, 212, 216)', display: 'block', marginBottom: '0.5rem' }}>
+                  {ability.toUpperCase()}
+                </label>
+                <input
+                  type="number"
+                  min="1"
+                  max="20"
+                  value={score}
+                  onChange={(e) => {
+                    const updated = { ...prerolledScores, [ability]: parseInt(e.target.value) || 10 };
+                    setPrerolledScores(updated);
+                    onScoresChange(updated);
+                  }}
+                  style={{
+                    width: '100%',
+                    padding: '0.5rem',
+                    background: 'rgb(24, 24, 27)',
+                    border: '1px solid rgb(82, 82, 89)',
+                    borderRadius: '4px',
+                    color: 'rgb(212, 212, 216)'
+                  }}
+                />
               </div>
             ))}
           </div>

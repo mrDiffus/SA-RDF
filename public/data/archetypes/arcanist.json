@@ -170,6 +170,7 @@
         {
           "@type": "sa:Feature",
           "rdfs:label": "Arcanist's path - Seer",
+          "sa:exclusivityGroup": "arcanist-paths",
           "sa:prerequisites": [],
           "sa:description": [
             "Path choice: this feature is mutually exclusive with Arcanist's path - Elementalist and Arcanist's path - Sage. Once you select this path you cannot select another Arcanist's path feature. Being around you and experiencing your manipulation of chance and randomness causes creatures to feel like they are being swept away by the tides of fate as if their actions are already decided for them. When preparing spells after a long rest, roll a D20 and keep the roll. Before the end of your next long rest you can replace any d20 roll made by you, other players or NPC's with the saved roll. Gain +2 on Initiative checks."
@@ -179,6 +180,7 @@
         {
           "@type": "sa:Feature",
           "rdfs:label": "Arcanist's path - Elementalist",
+          "sa:exclusivityGroup": "arcanist-paths",
           "sa:prerequisites": [],
           "sa:description": [
             "Path choice: this feature is mutually exclusive with Arcanist's path - Seer and Arcanist's path - Sage. Once you select this path you cannot select another Arcanist's path feature. The temperature around you varies with your mood, cold calculated hatred could cause the temperature to drop and small crystals of frost to congeal out of the air around you, becoming angry or provoked can cause the air around you to shimmer as if by a heat haze. Once per short rest you can add a number of extra damage dice to a spell that deal elemental damage equal to your proficiency bonus. For example an Arcanist casting fireball with 4 proficiency adds 4d6 to the damage done by the fireball. Choose an elemental damage. Once per short rest you can ignore resistances targets have to the damage dealt by one spell."
@@ -188,6 +190,7 @@
         {
           "@type": "sa:Feature",
           "rdfs:label": "Arcanist's path - Sage",
+          "sa:exclusivityGroup": "arcanist-paths",
           "sa:prerequisites": [],
           "sa:description": [
             "Path choice: this feature is mutually exclusive with Arcanist's path - Seer and Arcanist's path - Elementalist. Once you select this path you cannot select another Arcanist's path feature. Spend 2 spellpoints to add 1d4 to any knowledge or research check. Gain an additional knowledge proficiency."

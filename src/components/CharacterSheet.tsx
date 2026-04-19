@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Character, AbilityScores, CharacterSkill, CharacterEquipment, CharacterSpell, CharacterAttack } from '../types';
-import { fetchRaces, fetchArchetypes } from '../data';
+import { fetchRaces, fetchArchetypes, fetchEquipment } from '../data';
+import { getProgressionFromXP } from '../utils/progression';
+import { calculateEquipmentAC } from '../utils/equipment';
 import './CharacterSheet.css';
 
 // Ability modifier calculation: (score - 10) / 2, rounded down
@@ -134,12 +136,13 @@ const AttackRow: React.FC<AttackRowProps> = ({ attack, proficiencyBonus }) => {
 
 interface SavingThrowRowProps {
   ability: string;
+  abilityKey: 'strength' | 'dexterity' | 'constitution' | 'intelligence' | 'wisdom' | 'charisma';
   modifier: number;
   proficiencyBonus: number;
-  proficient: boolean;
+  proficient?: boolean;
 }
 
-const SavingThrowRow: React.FC<SavingThrowRowProps> = ({ ability, modifier, proficiencyBonus, proficient }) => {
+const SavingThrowRow: React.FC<SavingThrowRowProps> = ({ ability, modifier, proficiencyBonus, proficient = false }) => {
   const profBonus = proficient ? proficiencyBonus : 0;
   const total = modifier + profBonus;
   
@@ -164,15 +167,26 @@ const PassiveSkillRow: React.FC<PassiveSkillRowProps> = ({ name, value }) => (
   </div>
 );
 
-export const CharacterSheet: React.FC<{ character?: Character }> = ({ character: propCharacter }) => {
+export const CharacterSheet: React.FC<{ character?: Character; onChange?: (character: Character) => void }> = ({ character: propCharacter, onChange }) => {
+  // State
   const [editMode, setEditMode] = useState(false);
-  const character = propCharacter ?? sampleCharacter;
+  const [totalXP, setTotalXP] = useState(propCharacter?.totalExperience ?? 0);
+  const [raceLabel, setRaceLabel] = useState(propCharacter?.race ?? '');
+  const [archetypeLabels, setArchetypeLabels] = useState<string[]>(propCharacter?.archetypes ?? []);
+  const [equipmentData, setEquipmentData] = useState<any[]>([]);
+  
+  const character = { ...(propCharacter ?? sampleCharacter), totalExperience: totalXP };
 
-  const [raceLabel, setRaceLabel] = useState(character.race);
-  const [archetypeLabels, setArchetypeLabels] = useState<string[]>(character.archetypes);
-
+  // Notify parent of changes when XP updates
   useEffect(() => {
-    Promise.all([fetchRaces(), fetchArchetypes()]).then(([races, archetypes]) => {
+    if (onChange && totalXP !== propCharacter?.totalExperience) {
+      onChange(character);
+    }
+  }, [totalXP, onChange, character, propCharacter?.totalExperience]);
+
+  // Fetch and update race/archetype labels
+  useEffect(() => {
+    Promise.all([fetchRaces(), fetchArchetypes(), fetchEquipment()]).then(([races, archetypes, equipment]) => {
       const race = races.find(r => r.id === character.race);
       if (race) setRaceLabel(race.label);
 
@@ -181,6 +195,7 @@ export const CharacterSheet: React.FC<{ character?: Character }> = ({ character:
         return found ? found.label : id;
       });
       setArchetypeLabels(labels);
+      setEquipmentData(equipment);
     });
   }, [character.race, character.archetypes]);
 
@@ -204,8 +219,10 @@ export const CharacterSheet: React.FC<{ character?: Character }> = ({ character:
     charisma: calculateModifier(finalScores.charisma),
   };
 
-  // Fixed values from character creation
-  const proficiencyBonus = 2;
+  // Get progression data from XP - use totalXP state directly 
+  const progression = getProgressionFromXP(totalXP);
+  const proficiencyBonus = progression.proficiencyBonus;
+  const hitDice = progression.hitDice;
 
   // Calculate DCs
   const meleedc = 8 + proficiencyBonus + Math.max(modifiers.strength, modifiers.dexterity);
@@ -214,16 +231,19 @@ export const CharacterSheet: React.FC<{ character?: Character }> = ({ character:
 
   // Calculate resources
   const wounds = finalScores.constitution;
-  const hitPoints = modifiers.constitution + 6;
+  // HP: First HD = 6 + CON mod, each additional HD = 3.5 average + CON mod
+  const hitPoints = Math.floor(6 + (hitDice - 1) * 3.5 + hitDice * modifiers.constitution);
   const sanity = finalScores.wisdom;
   const renown = proficiencyBonus;
 
   // New derived stats
-  // 1. Armor Class (AC) - base 10 + dex, or armor AC + dex bonus
-  const baseAC = 10 + modifiers.dexterity;
-  const armorAC = character.equipment?.some(e => e.category === 'armor' && e.name === 'Plate Armor')
-    ? 18 + (character.equipment?.some(e => e.name === 'Shield') ? 2 : 0)
-    : baseAC;
+  // 1. Armor Class (AC) - calculate from equipment
+  const equipmentAC = character.equipment && equipmentData.length > 0 
+    ? calculateEquipmentAC(character.equipment, equipmentData)
+    : { ac: 10, maxDexterity: undefined };
+  
+  const maxDexBonus = equipmentAC.maxDexterity ? Math.min(modifiers.dexterity, equipmentAC.maxDexterity as number) : modifiers.dexterity;
+  const armorAC = equipmentAC.ac + maxDexBonus;
 
   // 2. Saving Throws (no proficiency by default, can be added to character data)
   const savingThrows = {
@@ -294,9 +314,18 @@ export const CharacterSheet: React.FC<{ character?: Character }> = ({ character:
             <span className="label">Archetypes:</span>
             <span className="value">{archetypeLabels.join(' / ')}</span>
           </div>
-          <div className="info-item">
+          <div className="info-item info-xp">
             <span className="label">Experience:</span>
-            <span className="value">{character.totalExperience}</span>
+            <input
+              type="number"
+              className="xp-input"
+              value={totalXP}
+              onChange={(e) => {
+                const newXP = e.target.value === '' ? 0 : Math.max(0, parseInt(e.target.value, 10) || 0);
+                setTotalXP(newXP);
+              }}
+              title="Click to edit XP. Stats update automatically."
+            />
           </div>
         </div>
       </div>
@@ -430,12 +459,12 @@ export const CharacterSheet: React.FC<{ character?: Character }> = ({ character:
           <section className="saves-section">
             <h2>Saving Throws</h2>
             <div className="saves-list">
-              <SavingThrowRow ability="STR" modifier={savingThrows.strength} proficiencyBonus={proficiencyBonus} proficient={false} />
-              <SavingThrowRow ability="DEX" modifier={savingThrows.dexterity} proficiencyBonus={proficiencyBonus} proficient={false} />
-              <SavingThrowRow ability="CON" modifier={savingThrows.constitution} proficiencyBonus={proficiencyBonus} proficient={false} />
-              <SavingThrowRow ability="INT" modifier={savingThrows.intelligence} proficiencyBonus={proficiencyBonus} proficient={false} />
-              <SavingThrowRow ability="WIS" modifier={savingThrows.wisdom} proficiencyBonus={proficiencyBonus} proficient={false} />
-              <SavingThrowRow ability="CHA" modifier={savingThrows.charisma} proficiencyBonus={proficiencyBonus} proficient={false} />
+              <SavingThrowRow ability="STR" abilityKey="strength" modifier={savingThrows.strength} proficiencyBonus={proficiencyBonus} proficient={character.savingThrowProficiencies?.strength ?? false} />
+              <SavingThrowRow ability="DEX" abilityKey="dexterity" modifier={savingThrows.dexterity} proficiencyBonus={proficiencyBonus} proficient={character.savingThrowProficiencies?.dexterity ?? false} />
+              <SavingThrowRow ability="CON" abilityKey="constitution" modifier={savingThrows.constitution} proficiencyBonus={proficiencyBonus} proficient={character.savingThrowProficiencies?.constitution ?? false} />
+              <SavingThrowRow ability="INT" abilityKey="intelligence" modifier={savingThrows.intelligence} proficiencyBonus={proficiencyBonus} proficient={character.savingThrowProficiencies?.intelligence ?? false} />
+              <SavingThrowRow ability="WIS" abilityKey="wisdom" modifier={savingThrows.wisdom} proficiencyBonus={proficiencyBonus} proficient={character.savingThrowProficiencies?.wisdom ?? false} />
+              <SavingThrowRow ability="CHA" abilityKey="charisma" modifier={savingThrows.charisma} proficiencyBonus={proficiencyBonus} proficient={character.savingThrowProficiencies?.charisma ?? false} />
             </div>
           </section>
 

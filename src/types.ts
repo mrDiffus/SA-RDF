@@ -43,6 +43,7 @@ export interface Feature {
   cost: string;
   archetypes?: string[];
   benefits?: string[];
+  exclusivityGroup?: string;
 }
 
 export interface Race {
@@ -150,6 +151,7 @@ export interface RawFeature {
   'sa:cost'?: string;
   'sa:prerequisites'?: string[];
   'sa:archetypes'?: string[];
+  'sa:exclusivityGroup'?: string;
 }
 
 export interface RawRace {
@@ -214,13 +216,16 @@ export interface Character {
   race: string;
   archetypes: [string, string]; // Exactly two archetypes
   totalExperience: number;
+  hitDice?: number; // Hit dice count (derived from totalExperience progression, if not stored)
   abilityScores: AbilityScores;
   racialBonuses?: Partial<AbilityScores>;
+  savingThrowProficiencies?: Partial<Record<'strength' | 'dexterity' | 'constitution' | 'intelligence' | 'wisdom' | 'charisma', boolean>>;
   features?: CharacterFeature[];
   skills?: CharacterSkill[];
   equipment?: CharacterEquipment[];
   spells?: CharacterSpell[];
   attacks?: CharacterAttack[];
+  exclusiveFeatureSelections?: Record<string, string>; // Maps group name (e.g., "Path") to selected feature label
 }
 
 export interface RawRuleSection {

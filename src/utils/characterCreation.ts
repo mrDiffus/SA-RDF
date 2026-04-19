@@ -1,4 +1,5 @@
-import { AbilityScores } from '../types';
+import { AbilityScores, Archetype, CharacterFeature } from '../types';
+import { getProgressionFromXP } from './progression';
 
 export const POINT_BUY_COSTS: Record<number, number> = {
   8: 0, 9: 1, 10: 2, 11: 3, 12: 4, 13: 5, 14: 7, 15: 9
@@ -69,7 +70,7 @@ export function applyRacialBonuses(scores: AbilityScores, raceId: string): Abili
   };
 }
 
-export function calculateDerivedStats(scores: AbilityScores) {
+export function calculateDerivedStats(scores: AbilityScores, totalXP: number = 0) {
   const modifiers = {
     strength: calculateModifier(scores.strength),
     dexterity: calculateModifier(scores.dexterity),
@@ -79,15 +80,19 @@ export function calculateDerivedStats(scores: AbilityScores) {
     charisma: calculateModifier(scores.charisma)
   };
 
-  const proficiencyBonus = 2;
+  // Get progression data from XP
+  const progression = getProgressionFromXP(totalXP);
+  const proficiencyBonus = progression.proficiencyBonus;
+  const hitDice = progression.hitDice;
 
   return {
     modifiers,
     proficiencyBonus,
+    hitDice,
     ac: 10 + modifiers.dexterity,
     initiative: modifiers.dexterity,
     wounds: scores.constitution,
-    hitPoints: 6 + modifiers.constitution,
+    hitPoints: Math.floor(6 + (hitDice - 1) * 3.5 + hitDice * modifiers.constitution),
     savingThrows: {
       strength: proficiencyBonus + modifiers.strength,
       dexterity: proficiencyBonus + modifiers.dexterity,
@@ -103,6 +108,52 @@ export function generateCharacterId(): string {
   return `char_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
 }
 
+/**
+ * Represents a group of mutually exclusive features
+ */
+export interface ExclusiveFeatureGroup {
+  groupName: string; // e.g., "Path"
+  features: Array<{ label: string; description: string }>;
+}
+
+/**
+ * Find groups of mutually exclusive free features
+ * @param archetypeIds Array of selected archetype IDs
+ * @param archetypeList Full list of available archetypes
+ * @returns Array of exclusive feature groups
+ */
+export function findExclusiveFeatureGroups(
+  archetypeIds: string[],
+  archetypeList: Archetype[]
+): ExclusiveFeatureGroup[] {
+  const groups: Record<string, ExclusiveFeatureGroup> = {};
+
+  for (const archetypeId of archetypeIds) {
+    const archetype = archetypeList.find((a) => a.id === archetypeId);
+    if (!archetype) continue;
+
+    const freeArchetypeFeatures = archetype.features.filter(
+      (feature) => feature.cost.toLowerCase().includes('free for')
+    );
+
+    for (const feature of freeArchetypeFeatures) {
+      // Check if feature has exclusivityGroup field (e.g., "devotee-paths", "arcanist-paths")
+      if (feature.exclusivityGroup) {
+        const groupName = feature.exclusivityGroup;
+        if (!groups[groupName]) {
+          groups[groupName] = { groupName, features: [] };
+        }
+        groups[groupName].features.push({
+          label: feature.label,
+          description: feature.description.join(' ')
+        });
+      }
+    }
+  }
+
+  return Object.values(groups).filter((g) => g.features.length > 1); // Only return groups with multiple options
+}
+
 export function pointBuyValidator(scores: AbilityScores): { valid: boolean; remainingPoints: number } {
   let spent = 0;
   const abilities = [scores.strength, scores.dexterity, scores.constitution, scores.intelligence, scores.wisdom, scores.charisma];
@@ -112,4 +163,66 @@ export function pointBuyValidator(scores: AbilityScores): { valid: boolean; rema
   }
   const remainingPoints = 27 - spent;
   return { valid: spent <= 27 && remainingPoints >= 0, remainingPoints };
+}
+
+/**
+ * Extract features marked as "Free for this archetype" for the selected archetypes
+ * @param archetypeIds Array of selected archetype IDs
+ * @param archetypeList Full list of available archetypes
+ * @param exclusiveSelections Map of group name to selected feature label for exclusive groups
+ * @returns Array of CharacterFeature objects for free features
+ */
+export function extractFreeFeatures(
+  archetypeIds: string[],
+  archetypeList: Archetype[],
+  exclusiveSelections?: Record<string, string>
+): CharacterFeature[] {
+  const freeFeatures: CharacterFeature[] = [];
+  const seenFeatures = new Set<string>();
+  const exclusiveLabels = new Set<string>();
+
+  // Identify which features are part of exclusive groups
+  const exclusiveGroups = findExclusiveFeatureGroups(archetypeIds, archetypeList);
+  for (const group of exclusiveGroups) {
+    for (const feature of group.features) {
+      exclusiveLabels.add(feature.label);
+    }
+  }
+
+  for (const archetypeId of archetypeIds) {
+    const archetype = archetypeList.find((a) => a.id === archetypeId);
+    if (!archetype) continue;
+
+    const freeArchetypeFeatures = archetype.features.filter(
+      (feature) => feature.cost.toLowerCase().includes('free for')
+    );
+
+    for (const feature of freeArchetypeFeatures) {
+      // Skip if it's part of an exclusive group (not selected) or already added
+      if (seenFeatures.has(feature.label)) continue;
+
+      if (exclusiveLabels.has(feature.label)) {
+        // Only add if it's the selected one for this group
+        const selectedInGroup = exclusiveSelections
+          ? Object.entries(exclusiveSelections).some(([, selected]) => selected === feature.label)
+          : false;
+        if (selectedInGroup) {
+          seenFeatures.add(feature.label);
+          freeFeatures.push({
+            name: feature.label,
+            description: feature.description.join(' ')
+          });
+        }
+      } else {
+        // Not exclusive, add it
+        seenFeatures.add(feature.label);
+        freeFeatures.push({
+          name: feature.label,
+          description: feature.description.join(' ')
+        });
+      }
+    }
+  }
+
+  return freeFeatures;
 }

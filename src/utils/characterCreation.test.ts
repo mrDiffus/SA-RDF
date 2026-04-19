@@ -168,7 +168,7 @@ describe('Character Creation Utilities', () => {
         charisma: 10
       };
 
-      const stats = calculateDerivedStats(scores);
+      const stats = calculateDerivedStats(scores, 0);
       expect(stats.ac).toBe(12); // 10 + 2 (DEX mod)
     });
 
@@ -182,11 +182,11 @@ describe('Character Creation Utilities', () => {
         charisma: 10
       };
 
-      const stats = calculateDerivedStats(scores);
+      const stats = calculateDerivedStats(scores, 0);
       expect(stats.initiative).toBe(2); // DEX modifier
     });
 
-    it('should calculate HP correctly', () => {
+    it('should calculate HP correctly at 0 XP (level 1, HD=1)', () => {
       const scores = {
         strength: 10,
         dexterity: 10,
@@ -196,11 +196,27 @@ describe('Character Creation Utilities', () => {
         charisma: 10
       };
 
-      const stats = calculateDerivedStats(scores);
-      expect(stats.hitPoints).toBe(8); // 6 + 2 (CON mod)
+      const stats = calculateDerivedStats(scores, 0);
+      expect(stats.hitPoints).toBe(8); // 6 + (1-1)*3.5 + 1*2 = 6 + 0 + 2
+      expect(stats.hitDice).toBe(1);
     });
 
-    it('should include proficiency bonus', () => {
+    it('should calculate HP correctly at 9 XP (level 5, HD=5)', () => {
+      const scores = {
+        strength: 10,
+        dexterity: 10,
+        constitution: 14,
+        intelligence: 10,
+        wisdom: 10,
+        charisma: 10
+      };
+
+      const stats = calculateDerivedStats(scores, 9);
+      expect(stats.hitPoints).toBe(30); // 6 + (5-1)*3.5 + 5*2 = 6 + 14 + 10
+      expect(stats.hitDice).toBe(5);
+    });
+
+    it('should include proficiency bonus of 2 at 0 XP', () => {
       const scores = {
         strength: 10,
         dexterity: 10,
@@ -210,8 +226,36 @@ describe('Character Creation Utilities', () => {
         charisma: 10
       };
 
-      const stats = calculateDerivedStats(scores);
+      const stats = calculateDerivedStats(scores, 0);
       expect(stats.proficiencyBonus).toBe(2);
+    });
+
+    it('should include proficiency bonus of 3 at 9 XP', () => {
+      const scores = {
+        strength: 10,
+        dexterity: 10,
+        constitution: 10,
+        intelligence: 10,
+        wisdom: 10,
+        charisma: 10
+      };
+
+      const stats = calculateDerivedStats(scores, 9);
+      expect(stats.proficiencyBonus).toBe(3);
+    });
+
+    it('should include proficiency bonus of 4 at 23 XP', () => {
+      const scores = {
+        strength: 10,
+        dexterity: 10,
+        constitution: 10,
+        intelligence: 10,
+        wisdom: 10,
+        charisma: 10
+      };
+
+      const stats = calculateDerivedStats(scores, 23);
+      expect(stats.proficiencyBonus).toBe(4);
     });
   });
 
