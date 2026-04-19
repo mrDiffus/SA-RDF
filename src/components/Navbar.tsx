@@ -1,6 +1,6 @@
 import React from 'react';
 import { AppTab } from '../rdfNavigation';
-import { Shield, Zap, Users, Book, Sword, Globe, Building2, Star, ScrollText } from 'lucide-react';
+import { Shield, Zap, Users, Book, Sword, Globe, Building2, Star, ScrollText, BookOpen } from 'lucide-react';
 
 interface NavbarProps {
   activeTab: AppTab;
@@ -12,9 +12,10 @@ const GAME_TABS = [
   { id: 'races' as AppTab, label: 'Races', icon: Users },
   { id: 'archetypes' as AppTab, label: 'Archetypes', icon: Zap },
   { id: 'general-features' as AppTab, label: 'Features', icon: Star },
+  { id: 'skills' as AppTab, label: 'Skills', icon: BookOpen },
   { id: 'spells' as AppTab, label: 'Spells', icon: Zap },
   { id: 'equipment' as AppTab, label: 'Equipment', icon: Sword },
-  // { id: 'character-sheet' as AppTab, label: 'Character', icon: ScrollText },
+  { id: 'character-sheet' as AppTab, label: 'Character', icon: ScrollText },
 ];
 
 const LORE_TABS = [

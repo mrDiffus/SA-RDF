@@ -1,4 +1,4 @@
-export type AppTab = 'home' | 'rules' | 'races' | 'archetypes' | 'spells' | 'equipment' | 'general-features' | 'character-sheet' | 'lore';
+export type AppTab = 'home' | 'rules' | 'races' | 'archetypes' | 'spells' | 'equipment' | 'general-features' | 'character-sheet' | 'skills' | 'lore';
 
 export type AppRoute = {
   tab: AppTab;
@@ -19,6 +19,7 @@ const collectionPaths: Record<AppTab, string> = {
   equipment: '/equipment',
   'general-features': '/general-features',
   'character-sheet': '/character-sheet',
+  skills: '/skills',
   lore: '/lore'
 };
 
@@ -44,6 +45,17 @@ export function curieToRelativeIri(resourceId: string): string | null {
 
   if (resourceId.startsWith('archetype:')) {
     return `/archetype/${encodeURIComponent(resourceId.slice('archetype:'.length))}`;
+  }
+
+  if (resourceId.startsWith('planet:')) {
+    return `/lore/planet/${encodeURIComponent(resourceId.slice('planet:'.length))}`;
+  }
+
+  if (resourceId.startsWith('place:')) {
+    const placeParts = resourceId.slice('place:'.length).split('/');
+    if (placeParts.length === 2) {
+      return `/lore/planet/${encodeURIComponent(placeParts[0])}/place/${encodeURIComponent(placeParts[1])}`;
+    }
   }
 
   if (resourceId.startsWith('sa:')) {
@@ -74,6 +86,17 @@ export function relativeIriToCurie(relativeIri: string): string | null {
     return `archetype:${decodeURIComponent(relativeIri.slice('/archetype/'.length))}`;
   }
 
+  // Handle /lore/planet/{planet}/place/{place}
+  const placeMatch = relativeIri.match(/^\/lore\/planet\/([^/]+)\/place\/(.+)$/);
+  if (placeMatch) {
+    return `place:${decodeURIComponent(placeMatch[1])}/${decodeURIComponent(placeMatch[2])}`;
+  }
+
+  // Handle /lore/planet/{planet}
+  if (relativeIri.startsWith('/lore/planet/')) {
+    return `planet:${decodeURIComponent(relativeIri.slice('/lore/planet/'.length))}`;
+  }
+
   return `sa:${decodeURI(relativeIri.slice(1))}`;
 }
 
@@ -87,6 +110,13 @@ export function parseBrowserRoute(pathname: string, hash = ''): ParsedBrowserRou
   if (pathname.startsWith('/equipment/') && pathname.length > '/equipment/'.length) {
     return {
       collectionTab: 'equipment',
+      resourceId: relativeIriToCurie(pathname)
+    };
+  }
+
+  if (pathname.startsWith('/lore/planet/') && pathname.length > '/lore/planet/'.length) {
+    return {
+      collectionTab: 'lore',
       resourceId: relativeIriToCurie(pathname)
     };
   }

@@ -17,6 +17,8 @@ export interface Spell {
 export interface Skill {
   id: string;
   label: string;
+  description: string;
+  keyAbility?: { id: string; label: string }[];
 }
 
 export interface Archetype {
@@ -119,6 +121,14 @@ export interface RawSpell {
   'sa:damage'?: string;
   'sa:damageType'?: string;
   'sa:levelScaling'?: string;
+}
+
+export interface RawSkill {
+  '@id': string;
+  '@type': string;
+  'rdfs:label': string;
+  'sa:description': string;
+  'sa:keyAbility'?: any[];
 }
 
 export interface RawArchetype {

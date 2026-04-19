@@ -789,6 +789,315 @@
   }
 }
 
+/* Defense Values Section */
+.defense-values-section {
+  background: rgb(39, 39, 42);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid rgb(39, 39, 42);
+}
+
+.defense-values-section h2 {
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+  border-bottom: 1px solid rgb(39, 39, 42);
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.defense-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.defense-item {
+  background: rgb(24, 24, 27);
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(39, 39, 42);
+  transition: all 0.2s ease;
+}
+
+.defense-item:hover {
+  border-color: rgb(82, 82, 89);
+}
+
+.defense-label {
+  font-weight: 500;
+  color: rgb(212, 212, 216);
+  font-size: 0.9rem;
+}
+
+.defense-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: rgb(251, 146, 60);
+}
+
+/* Saving Throws Section */
+.saves-section {
+  background: rgb(39, 39, 42);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid rgb(39, 39, 42);
+}
+
+.saves-section h2 {
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+  border-bottom: 1px solid rgb(39, 39, 42);
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.saves-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.saving-throw-row {
+  background: rgb(24, 24, 27);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  display: grid;
+  grid-template-columns: 60px 1fr 40px;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid rgb(39, 39, 42);
+  transition: all 0.2s ease;
+}
+
+.saving-throw-row:hover {
+  border-color: rgb(82, 82, 89);
+}
+
+.save-ability {
+  font-weight: 600;
+  color: rgb(161, 140, 0);
+  font-size: 0.85rem;
+}
+
+.save-total {
+  color: rgb(148, 163, 247);
+  font-weight: 700;
+  text-align: center;
+  font-size: 1rem;
+  background: rgba(148, 163, 247, 0.15);
+  border-radius: 3px;
+  padding: 0.25rem;
+  border: 1px solid rgba(148, 163, 247, 0.3);
+}
+
+.save-prof {
+  color: rgb(134, 239, 172);
+  font-weight: 700;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Passive Skills Section */
+.passive-skills-section {
+  background: rgb(39, 39, 42);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid rgb(39, 39, 42);
+}
+
+.passive-skills-section h2 {
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+  border-bottom: 1px solid rgb(39, 39, 42);
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.passive-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.passive-row {
+  background: rgb(24, 24, 27);
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(39, 39, 42);
+  transition: all 0.2s ease;
+}
+
+.passive-row:hover {
+  border-color: rgb(82, 82, 89);
+}
+
+.passive-name {
+  color: rgb(212, 212, 216);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.passive-value {
+  color: rgb(134, 239, 172);
+  font-weight: 700;
+  text-align: center;
+  font-size: 1rem;
+  background: rgba(134, 239, 172, 0.15);
+  border-radius: 3px;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid rgba(134, 239, 172, 0.3);
+  min-width: 40px;
+}
+
+/* Movement Section */
+.movement-section {
+  background: rgb(39, 39, 42);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid rgb(39, 39, 42);
+}
+
+.movement-section h2 {
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+  border-bottom: 1px solid rgb(39, 39, 42);
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.movement-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.movement-item {
+  background: rgb(24, 24, 27);
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(39, 39, 42);
+  transition: all 0.2s ease;
+}
+
+.movement-item:hover {
+  border-color: rgb(82, 82, 89);
+}
+
+.movement-label {
+  font-weight: 500;
+  color: rgb(212, 212, 216);
+  font-size: 0.9rem;
+}
+
+.movement-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(187, 134, 252);
+}
+
+/* Spellcasting Section */
+.spellcasting-section {
+  background: rgb(39, 39, 42);
+  padding: 1rem;
+  border-radius: 6px;
+  border: 1px solid rgb(39, 39, 42);
+}
+
+.spellcasting-section h2 {
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+  border-bottom: 1px solid rgb(39, 39, 42);
+  padding-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.spellcasting-section h3 {
+  margin: 1rem 0 0.5rem 0;
+  color: rgb(161, 140, 0);
+  font-size: 1rem;
+  border-bottom: 1px solid rgb(39, 39, 42);
+  padding-bottom: 0.3rem;
+}
+
+.casting-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.casting-item {
+  background: rgb(24, 24, 27);
+  padding: 1rem;
+  border-radius: 4px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid rgb(39, 39, 42);
+  transition: all 0.2s ease;
+}
+
+.casting-item:hover {
+  border-color: rgb(82, 82, 89);
+}
+
+.casting-label {
+  font-weight: 500;
+  color: rgb(212, 212, 216);
+  font-size: 0.9rem;
+}
+
+.casting-value {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: rgb(188, 207, 254);
+}
+
+.spell-slots {
+  background: rgb(24, 24, 27);
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid rgb(39, 39, 42);
+}
+
+.slots-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+  gap: 0.5rem;
+}
+
+.slot-item {
+  background: rgb(39, 39, 42);
+  padding: 0.5rem;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  border: 1px solid rgb(39, 39, 42);
+}
+
+.slot-label {
+  font-size: 0.75rem;
+  color: rgb(212, 212, 216);
+  font-weight: 500;
+}
+
+.slot-count {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: rgb(188, 207, 254);
+}
+
 @media (max-width: 480px) {
   .character-sheet {
     padding: 0.5rem;

@@ -26,9 +26,22 @@ describe('rdfNavigation', () => {
     expect(relativeIriToCurie('/archetype/Arcanist')).toBe('archetype:Arcanist');
   });
 
+  it('maps planet CURIEs to planet paths', () => {
+    expect(curieToRelativeIri('planet:Arrur')).toBe('/lore/planet/Arrur');
+    expect(curieToRelativeIri('planet:Arcech')).toBe('/lore/planet/Arcech');
+    expect(relativeIriToCurie('/lore/planet/Arrur')).toBe('planet:Arrur');
+    expect(relativeIriToCurie('/lore/planet/Arcech')).toBe('planet:Arcech');
+  });
+
+  it('maps place CURIEs to place paths', () => {
+    expect(curieToRelativeIri('place:Arrur/Ashcross')).toBe('/lore/planet/Arrur/place/Ashcross');
+    expect(relativeIriToCurie('/lore/planet/Arrur/place/Ashcross')).toBe('place:Arrur/Ashcross');
+  });
+
   it('keeps collection routes as collections when there is no fragment', () => {
     expect(parseBrowserRoute('/rules')).toEqual({ collectionTab: 'rules', resourceId: null });
     expect(parseBrowserRoute('/equipment')).toEqual({ collectionTab: 'equipment', resourceId: null });
+    expect(parseBrowserRoute('/lore')).toEqual({ collectionTab: 'lore', resourceId: null });
   });
 
   it('treats collection routes with fragments as resource links', () => {
@@ -42,6 +55,20 @@ describe('rdfNavigation', () => {
     expect(parseBrowserRoute('/equipment/broadsword')).toEqual({
       collectionTab: 'equipment',
       resourceId: 'equipment:broadsword'
+    });
+  });
+
+  it('treats lore routes with planet path segments as resource links', () => {
+    expect(parseBrowserRoute('/lore/planet/Arrur')).toEqual({
+      collectionTab: 'lore',
+      resourceId: 'planet:Arrur'
+    });
+  });
+
+  it('treats lore routes with place path segments as resource links', () => {
+    expect(parseBrowserRoute('/lore/planet/Arrur/place/Ashcross')).toEqual({
+      collectionTab: 'lore',
+      resourceId: 'place:Arrur/Ashcross'
     });
   });
 

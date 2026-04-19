@@ -131,6 +131,38 @@ const AttackRow: React.FC<AttackRowProps> = ({ attack, proficiencyBonus }) => {
   );
 };
 
+interface SavingThrowRowProps {
+  ability: string;
+  modifier: number;
+  proficiencyBonus: number;
+  proficient: boolean;
+}
+
+const SavingThrowRow: React.FC<SavingThrowRowProps> = ({ ability, modifier, proficiencyBonus, proficient }) => {
+  const profBonus = proficient ? proficiencyBonus : 0;
+  const total = modifier + profBonus;
+  
+  return (
+    <div className="saving-throw-row">
+      <div className="save-ability">{ability}</div>
+      <div className="save-total">{total > 0 ? '+' : ''}{total}</div>
+      <div className="save-prof">{profBonus > 0 ? 'P' : ''}</div>
+    </div>
+  );
+};
+
+interface PassiveSkillRowProps {
+  name: string;
+  value: number;
+}
+
+const PassiveSkillRow: React.FC<PassiveSkillRowProps> = ({ name, value }) => (
+  <div className="passive-row">
+    <div className="passive-name">{name}</div>
+    <div className="passive-value">{value}</div>
+  </div>
+);
+
 export const CharacterSheet: React.FC<{ character?: Character }> = ({ character = sampleCharacter }) => {
   const [editMode, setEditMode] = useState(false);
 
@@ -167,6 +199,61 @@ export const CharacterSheet: React.FC<{ character?: Character }> = ({ character 
   const hitPoints = modifiers.constitution + 6;
   const sanity = finalScores.wisdom;
   const renown = proficiencyBonus;
+
+  // New derived stats
+  // 1. Armor Class (AC) - base 10 + dex, or armor AC + dex bonus
+  const baseAC = 10 + modifiers.dexterity;
+  const armorAC = character.equipment?.some(e => e.category === 'armor' && e.name === 'Plate Armor')
+    ? 18 + (character.equipment?.some(e => e.name === 'Shield') ? 2 : 0)
+    : baseAC;
+
+  // 2. Saving Throws (no proficiency by default, can be added to character data)
+  const savingThrows = {
+    strength: modifiers.strength,
+    dexterity: modifiers.dexterity,
+    constitution: modifiers.constitution,
+    intelligence: modifiers.intelligence,
+    wisdom: modifiers.wisdom,
+    charisma: modifiers.charisma,
+  };
+
+  // 3. Initiative
+  const initiative = modifiers.dexterity;
+
+  // 4. Passive Skills (10 + modifier)
+  const getSkillModifier = (skillName: string): number => {
+    const skill = character.skills?.find(s => s.name === skillName);
+    if (!skill) return 0;
+    const abilityMod = modifiers[skill.ability];
+    const profBonus = skill.proficient ? proficiencyBonus : 0;
+    const miscBonus = skill.miscModifier || 0;
+    return abilityMod + profBonus + miscBonus;
+  };
+
+  const passivePerception = 10 + getSkillModifier('Perception');
+  const passiveInvestigation = 10 + getSkillModifier('Investigation');
+  const passiveInsight = 10 + getSkillModifier('Insight');
+
+  // 5. Speed (base 30 feet + racial bonuses)
+  const baseSpeed = 30;
+  const speed = baseSpeed; // Can add racial speed bonuses here
+
+  // 6. Spell Slots (basic calculation based on highest spell level)
+  const hasSpells = character.spells && character.spells.length > 0;
+  const highestSpellLevel = hasSpells 
+    ? Math.max(...character.spells.map(s => s.level || 0))
+    : 0;
+
+  // Spell slots per level (simplified: 2 per spell level known)
+  const spellSlots: Record<number, number> = {};
+  if (hasSpells) {
+    for (let level = 1; level <= highestSpellLevel; level++) {
+      spellSlots[level] = 2 + Math.floor(proficiencyBonus / 2);
+    }
+  }
+
+  // 7. Concentration DC (8 + proficiency + constitution modifier)
+  const concentrationDC = 8 + proficiencyBonus + modifiers.constitution;
 
   return (
     <div className="character-sheet">
@@ -303,6 +390,88 @@ export const CharacterSheet: React.FC<{ character?: Character }> = ({ character 
               </div>
             </div>
           </section>
+        </div>
+
+        {/* AC and Initiative Section */}
+        <div className="sheet-columns">
+          <section className="defense-values-section">
+            <h2>Defense</h2>
+            <div className="defense-grid">
+              <div className="defense-item">
+                <div className="defense-label">Armor Class</div>
+                <div className="defense-value">{armorAC}</div>
+              </div>
+              <div className="defense-item">
+                <div className="defense-label">Initiative</div>
+                <div className="defense-value">{initiative > 0 ? '+' : ''}{initiative}</div>
+              </div>
+            </div>
+          </section>
+
+          {/* Saving Throws Section */}
+          <section className="saves-section">
+            <h2>Saving Throws</h2>
+            <div className="saves-list">
+              <SavingThrowRow ability="STR" modifier={savingThrows.strength} proficiencyBonus={proficiencyBonus} proficient={false} />
+              <SavingThrowRow ability="DEX" modifier={savingThrows.dexterity} proficiencyBonus={proficiencyBonus} proficient={false} />
+              <SavingThrowRow ability="CON" modifier={savingThrows.constitution} proficiencyBonus={proficiencyBonus} proficient={false} />
+              <SavingThrowRow ability="INT" modifier={savingThrows.intelligence} proficiencyBonus={proficiencyBonus} proficient={false} />
+              <SavingThrowRow ability="WIS" modifier={savingThrows.wisdom} proficiencyBonus={proficiencyBonus} proficient={false} />
+              <SavingThrowRow ability="CHA" modifier={savingThrows.charisma} proficiencyBonus={proficiencyBonus} proficient={false} />
+            </div>
+          </section>
+
+          {/* Passive Skills Section */}
+          <section className="passive-skills-section">
+            <h2>Passive Skills</h2>
+            <div className="passive-list">
+              <PassiveSkillRow name="Perception" value={passivePerception} />
+              <PassiveSkillRow name="Investigation" value={passiveInvestigation} />
+              <PassiveSkillRow name="Insight" value={passiveInsight} />
+            </div>
+          </section>
+        </div>
+
+        {/* Movement and Spellcasting Section */}
+        <div className="sheet-columns">
+          <section className="movement-section">
+            <h2>Movement</h2>
+            <div className="movement-grid">
+              <div className="movement-item">
+                <div className="movement-label">Speed</div>
+                <div className="movement-value">{speed} ft</div>
+              </div>
+            </div>
+          </section>
+
+          {hasSpells && (
+            <section className="spellcasting-section">
+              <h2>Spellcasting</h2>
+              <div className="casting-grid">
+                <div className="casting-item">
+                  <div className="casting-label">Concentration DC</div>
+                  <div className="casting-value">{concentrationDC}</div>
+                </div>
+                <div className="casting-item">
+                  <div className="casting-label">Spell Save DC</div>
+                  <div className="casting-value">{spelldc}</div>
+                </div>
+              </div>
+              {Object.keys(spellSlots).length > 0 && (
+                <div className="spell-slots">
+                  <h3>Spell Slots</h3>
+                  <div className="slots-grid">
+                    {Object.entries(spellSlots).map(([level, slots]) => (
+                      <div key={level} className="slot-item">
+                        <div className="slot-label">Level {level}</div>
+                        <div className="slot-count">{slots}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </section>
+          )}
         </div>
 
         {/* Attacks Row */}

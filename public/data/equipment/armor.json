@@ -52,7 +52,7 @@
         },
         {
           "@type": "sa:Armor",
-          "rdfs:label": "Outer Tactical exoskeleton",
+          "rdfs:label": "Tactical Exoskeleton",
           "sa:category": "Heavy",
           "sa:description": "Advanced tactical exoskeleton combining armor and wearable tech. Features integrated communication, visual enhancement systems, and equipment mounting hardpoints.",
           "sa:armorClass": 16,
@@ -105,7 +105,7 @@
         },
         {
           "@type": "sa:Armor",
-          "rdfs:label": "\"Dragon\" Scale",
+          "rdfs:label": "Synthetic Dragon Scale",
           "sa:category": "Medium",
           "sa:description": "Advanced synthetic scale armor using modern composite materials. Maintains the protective coverage of traditional scales while improving mobility and durability.",
           "sa:armorClass": 13,
@@ -117,7 +117,7 @@
         },
         {
           "@type": "sa:Armor",
-          "rdfs:label": "\"Dragon\" Plate",
+          "rdfs:label": "Synthetic Dragon Plate",
           "sa:category": "Medium",
           "sa:description": "Contemporary plate armor using advanced composite materials. Focuses protection on vital organs while leaving limbs free for mobility and action.",
           "sa:armorClass": 15,
@@ -125,7 +125,8 @@
           "sa:damageAbsorption": 10,
           "sa:hardness": 2,
           "sa:hardpoints": [],
-          "sa:cost": 2500
+          "sa:cost": 2500,
+          "sa:powerLevel": 5
         },
         {
           "@type": "sa:Armor",
@@ -135,7 +136,8 @@
           "sa:armorClass": "+2 AC",
           "sa:maxDexterity": 2,
           "sa:hardpoints": [],
-          "sa:cost": 650
+          "sa:cost": 650,
+          "sa:powerLevel": 5
         },
         {
           "@type": "sa:Armor",
@@ -162,10 +164,11 @@
           "sa:category": "Shield",
           "sa:description": "Large protective barrier providing exceptional coverage. Offers superior defense against projectiles and area-of-effect attacks, but significantly reduces movement speed.",
           "sa:armorClass": "+3 AC",
-          "sa:maxDexterity": "0",
+          "sa:maxDexterity": 0,
           "sa:hardpoints": [],
-          "sa:specialProperties": "Advantage on reflex saves  versus aoe effects. - 10 movespeed",
-          "sa:cost": 300
+          "sa:specialProperties": "Advantage on reflex saves versus AoE effects. Movement speed reduced by 10.",
+          "sa:cost": 300,
+          "sa:powerLevel": 5
         },
         {
           "@type": "sa:Armor",
@@ -173,10 +176,11 @@
           "sa:category": "Shield",
           "sa:description": "Advanced composite tower shield combining high-tech materials with classic design. Delivers exceptional area-of-effect defense with less movement penalty than traditional tower shields.",
           "sa:armorClass": "+3 AC",
-          "sa:maxDexterity": "0",
+          "sa:maxDexterity": 0,
           "sa:hardpoints": [],
-          "sa:specialProperties": "Advantage on reflex saves  versus aoe effects -5 movespeed",
-          "sa:cost": 1200
+          "sa:specialProperties": "Advantage on reflex saves versus AoE effects. Movement speed reduced by 5.",
+          "sa:cost": 1200,
+          "sa:powerLevel": 6
         }
       ]
     }

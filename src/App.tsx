@@ -6,7 +6,10 @@ import RaceList from './components/RaceList';
 import RuleList from './components/RuleList';
 import EquipmentList from './components/EquipmentList';
 import GeneralFeaturesList from './components/GeneralFeaturesList';
+import SkillList from './components/SkillList';
 import SettingView from './components/SettingView';
+import PlanetView from './components/PlanetView';
+import PlaceView from './components/PlaceView';
 import CharacterSheet from './components/CharacterSheet';
 import { fetchEquipment, fetchRaces, fetchRules } from './data';
 import { AppRoute, AppTab, curieToRelativeIri, getCollectionHref, getCurrentRelativeIri, parseBrowserRoute } from './rdfNavigation';
@@ -47,6 +50,8 @@ export default function App() {
     const resolveRouteForResource = async (resourceId: string): Promise<AppRoute | null> => {
       if (resourceId.startsWith('spell:')) return { tab: 'spells', resourceId };
       if (resourceId.startsWith('archetype:')) return { tab: 'archetypes', resourceId };
+      if (resourceId.startsWith('planet:')) return { tab: 'lore', resourceId };
+      if (resourceId.startsWith('place:')) return { tab: 'lore', resourceId };
 
       const [races, rules, equipment] = await Promise.all([
         fetchRaces(),
@@ -128,10 +133,38 @@ export default function App() {
         return <EquipmentList selectedResourceId={route.resourceId} onNavigate={(resourceId) => navigateTo(resourceId ? { tab: 'equipment', resourceId } : { tab: 'equipment' })} />;
       case 'general-features':
         return <GeneralFeaturesList />;
+      case 'skills':
+        return <SkillList selectedResourceId={route.resourceId} onNavigate={(resourceId) => navigateTo(resourceId ? { tab: 'skills', resourceId } : { tab: 'skills' })} />;
       case 'character-sheet':
         return <CharacterSheet />;
-      case 'lore':
-        return <SettingView />;
+      case 'lore': {
+        if (route.resourceId?.startsWith('planet:')) {
+          const planetName = route.resourceId.slice('planet:'.length);
+          return (
+            <PlanetView 
+              planetName={planetName}
+              onNavigateToPlace={(planet, place) => navigateTo({ tab: 'lore', resourceId: `place:${planet}/${place}` })}
+            />
+          );
+        }
+        if (route.resourceId?.startsWith('place:')) {
+          const parts = route.resourceId.slice('place:'.length).split('/');
+          if (parts.length === 2) {
+            return (
+              <PlaceView 
+                planetName={parts[0]}
+                placeName={parts[1]}
+                onBack={() => navigateTo({ tab: 'lore', resourceId: `planet:${parts[0]}` })}
+              />
+            );
+          }
+        }
+        return (
+          <SettingView 
+            onNavigateToPlanet={(planetName) => navigateTo({ tab: 'lore', resourceId: `planet:${planetName}` })}
+          />
+        );
+      }
       default:
         return <Home onExplore={() => navigateTo({ tab: 'rules' })} onLore={() => navigateTo({ tab: 'lore' })} />;
     }

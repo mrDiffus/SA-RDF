@@ -1,6 +1,6 @@
 import { 
-  Spell, Archetype, Race, Equipment, RuleSection, RuleContent, Feature,
-  RawSpell, RawArchetype, RawRace, RawEquipment, RawRuleSection, RawFeature, RawRuleContent
+  Spell, Archetype, Race, Equipment, RuleSection, RuleContent, Feature, Skill,
+  RawSpell, RawArchetype, RawRace, RawEquipment, RawRuleSection, RawFeature, RawRuleContent, RawSkill
 } from './types';
 
 type RawGraphContainer<T = any> = {
@@ -477,4 +477,23 @@ export async function fetchEquipment(): Promise<Equipment[]> {
 export async function fetchGeneralFeatures(): Promise<Feature[]> {
   const rawFeatures = await fetchGraphFromFile<RawFeature>('/data/generalfeatures.json');
   return sortByLabel(rawFeatures.map(mapFeature));
+}
+
+export async function fetchSkills(): Promise<Skill[]> {
+  const response = await fetch(resolveDataPath('/data/skills.json'));
+  const data = await response.json();
+  
+  const skills = asArray(data['@graph'])
+    .filter((item: any) => item['@type'] === 'sa:Skill')
+    .map((raw: RawSkill) => ({
+      id: raw['@id'],
+      label: raw['rdfs:label'],
+      description: raw['sa:description'],
+      keyAbility: asArray(raw['sa:keyAbility']).map((ability: any) => ({
+        id: ability['@id'],
+        label: ability['rdfs:label']
+      }))
+    }));
+  
+  return sortByLabel(skills);
 }

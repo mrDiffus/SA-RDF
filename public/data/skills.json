@@ -80,21 +80,6 @@
           "@id": "sa:skill-linguistics"
         },
         {
-          "@id": "sa:skill-martial-melee"
-        },
-        {
-          "@id": "sa:skill-martial-body"
-        },
-        {
-          "@id": "sa:skill-martial-ranged"
-        },
-        {
-          "@id": "sa:skill-martial-crew-weapon"
-        },
-        {
-          "@id": "sa:skill-martial-weapon-system"
-        },
-        {
           "@id": "sa:skill-mechanics-use"
         },
         {
@@ -135,9 +120,6 @@
         },
         {
           "@id": "sa:skill-treat-injury"
-        },
-        {
-          "@id": "sa:skill-any-4-knowledge-skills"
         },
         {
           "@id": "sa:skill-pilot"
@@ -193,7 +175,7 @@
       "@id": "sa:skill-acrobatics",
       "@type": "sa:Skill",
       "rdfs:label": "Acrobatics",
-      "sa:description": "Jump, vault, tumble and maneuver better. Used for reflex saves",
+      "sa:description": "Jump, vault, tumble, and maneuver. Used for Reflex saves.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-dexterity",
@@ -209,7 +191,7 @@
       "@id": "sa:skill-appraise",
       "@type": "sa:Skill",
       "rdfs:label": "Appraise",
-      "sa:description": "Use your merchant's knowledge to determine the value of items and sell them in the right places.",
+      "sa:description": "Determine item value and barter effectively.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-intelligence",
@@ -232,8 +214,8 @@
           "rdfs:label": "Charisma"
         },
         {
-          "@id": "sa:ability-appearance",
-          "rdfs:label": "Appearance"
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
         }
       ]
     },
@@ -248,8 +230,8 @@
           "rdfs:label": "Charisma"
         },
         {
-          "@id": "sa:ability-appearance",
-          "rdfs:label": "Appearance"
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
         }
       ]
     },
@@ -273,7 +255,7 @@
       "@id": "sa:skill-computer-use",
       "@type": "sa:Skill",
       "rdfs:label": "Computer use",
-      "sa:description": "",
+      "sa:description": "Operate and troubleshoot computer systems and technology.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-intelligence",
@@ -289,7 +271,7 @@
       "@id": "sa:skill-concentration",
       "@type": "sa:Skill",
       "rdfs:label": "Concentration",
-      "sa:description": "Keep it together.",
+      "sa:description": "Maintain focus during distracting or demanding situations.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-constitution",
@@ -305,15 +287,15 @@
       "@id": "sa:skill-condition",
       "@type": "sa:Skill",
       "rdfs:label": "Condition",
-      "sa:description": "Become fit and earn a good physical condition. Used for fortitude saves",
+      "sa:description": "Develop physical fitness and endurance. Used for Fortitude saves.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-constitution",
           "rdfs:label": "Constitution"
         },
         {
-          "@id": "sa:ability-appearance",
-          "rdfs:label": "Appearance"
+          "@id": "sa:ability-strength",
+          "rdfs:label": "Strength"
         }
       ]
     },
@@ -353,7 +335,7 @@
       "@id": "sa:skill-defense",
       "@type": "sa:Skill",
       "rdfs:label": "Defense",
-      "sa:description": "Become better at defense.",
+      "sa:description": "Improve defensive capabilities and damage mitigation.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-dexterity",
@@ -392,8 +374,8 @@
           "rdfs:label": "Charisma"
         },
         {
-          "@id": "sa:ability-appearance",
-          "rdfs:label": "Appearance"
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
         }
       ]
     },
@@ -449,15 +431,15 @@
       "@id": "sa:skill-handle-animal",
       "@type": "sa:Skill",
       "rdfs:label": "Handle animal",
-      "sa:description": "Handle creatures of animal intelligece. Creatures with an intelligence score at 3 or lower. Creatures with no intelligece score cannot be affected",
+      "sa:description": "Influence creatures with animal intelligence (Intelligence 3 or lower). Creatures with no Intelligence score cannot be affected.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-charisma",
           "rdfs:label": "Charisma"
         },
         {
-          "@id": "sa:ability-appearance",
-          "rdfs:label": "Appearance"
+          "@id": "sa:ability-wisdom",
+          "rdfs:label": "Wisdom"
         }
       ]
     },
@@ -465,7 +447,7 @@
       "@id": "sa:skill-handle-device",
       "@type": "sa:Skill",
       "rdfs:label": "Handle Device",
-      "sa:description": "Work with traps, locks and similarly intricate mechanisms... with delicacy.",
+      "sa:description": "Disable traps, pick locks, and manipulate intricate mechanisms.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-dexterity",
@@ -513,7 +495,7 @@
       "@id": "sa:skill-leadership",
       "@type": "sa:Skill",
       "rdfs:label": "Leadership",
-      "sa:description": "Increase your ability to lead, whether it is a squad or a corporation.",
+      "sa:description": "Lead groups ranging from small squads to large organizations.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-charisma",
@@ -538,86 +520,6 @@
         {
           "@id": "sa:ability-charisma",
           "rdfs:label": "Charisma"
-        }
-      ]
-    },
-    {
-      "@id": "sa:skill-martial-melee",
-      "@type": "sa:Skill",
-      "rdfs:label": "Martial (Melee)",
-      "sa:description": "Develop proficiency with melee weapons and physical prowess.",
-      "sa:keyAbility": [
-        {
-          "@id": "sa:ability-strength",
-          "rdfs:label": "Strength"
-        },
-        {
-          "@id": "sa:ability-dexterity",
-          "rdfs:label": "Dexterity"
-        }
-      ]
-    },
-    {
-      "@id": "sa:skill-martial-body",
-      "@type": "sa:Skill",
-      "rdfs:label": "Martial (Body)",
-      "sa:description": "Become a living weapon and perform special maneuvers.",
-      "sa:keyAbility": [
-        {
-          "@id": "sa:ability-strength",
-          "rdfs:label": "Strength"
-        },
-        {
-          "@id": "sa:ability-dexterity",
-          "rdfs:label": "Dexterity"
-        }
-      ]
-    },
-    {
-      "@id": "sa:skill-martial-ranged",
-      "@type": "sa:Skill",
-      "rdfs:label": "Martial (Ranged)",
-      "sa:description": "Develop proficiency with firearms and other ranged weapons.",
-      "sa:keyAbility": [
-        {
-          "@id": "sa:ability-dexterity",
-          "rdfs:label": "Dexterity"
-        },
-        {
-          "@id": "sa:ability-wisdom",
-          "rdfs:label": "Wisdom"
-        }
-      ]
-    },
-    {
-      "@id": "sa:skill-martial-crew-weapon",
-      "@type": "sa:Skill",
-      "rdfs:label": "Martial Crew Weapon",
-      "sa:description": "Operate a crew weapon and deal some damage.",
-      "sa:keyAbility": [
-        {
-          "@id": "sa:ability-charisma",
-          "rdfs:label": "Charisma"
-        },
-        {
-          "@id": "sa:ability-dexterity",
-          "rdfs:label": "Dexterity"
-        }
-      ]
-    },
-    {
-      "@id": "sa:skill-martial-weapon-system",
-      "@type": "sa:Skill",
-      "rdfs:label": "Martial Weapon System",
-      "sa:description": "Operate a weapon system, such a s a missile launch system or a battery of cannons.",
-      "sa:keyAbility": [
-        {
-          "@id": "sa:ability-intelligence",
-          "rdfs:label": "Intelligence"
-        },
-        {
-          "@id": "sa:ability-wisdom",
-          "rdfs:label": "Wisdom"
         }
       ]
     },
@@ -673,15 +575,15 @@
       "@id": "sa:skill-perform",
       "@type": "sa:Skill",
       "rdfs:label": "Perform",
-      "sa:description": "Become skilled at dancing, singing, oration, miming, instruments or presentations, whichever suits your fancy.",
+      "sa:description": "Master performance arts such as dancing, singing, and instrumental music.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-charisma",
           "rdfs:label": "Charisma"
         },
         {
-          "@id": "sa:ability-appearance",
-          "rdfs:label": "Appearance"
+          "@id": "sa:ability-dexterity",
+          "rdfs:label": "Dexterity"
         }
       ]
     },
@@ -705,7 +607,7 @@
       "@id": "sa:skill-repair",
       "@type": "sa:Skill",
       "rdfs:label": "Repair",
-      "sa:description": "Make simple repairs on general items or more complete repairs on items you are knowledgeable with.",
+      "sa:description": "Repair damaged items, with expertise in familiar equipment.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-intelligence",
@@ -737,7 +639,7 @@
       "@id": "sa:skill-ride",
       "@type": "sa:Skill",
       "rdfs:label": "Ride",
-      "sa:description": "Just ride. Ride any anymal that can bear your weight.",
+      "sa:description": "Ride any animal you can control that bears your weight.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-dexterity",
@@ -753,15 +655,15 @@
       "@id": "sa:skill-sense-motive",
       "@type": "sa:Skill",
       "rdfs:label": "Sense Motive",
-      "sa:description": "Intuitively sense underlying issues about people. Used for will saves",
+      "sa:description": "Detect deception and read emotional subtext. Used for Will saves.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-wisdom",
           "rdfs:label": "Wisdom"
         },
         {
-          "@id": "sa:ability-appearance",
-          "rdfs:label": "Appearance"
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
         }
       ]
     },
@@ -769,7 +671,7 @@
       "@id": "sa:skill-spellcraft",
       "@type": "sa:Skill",
       "rdfs:label": "Spellcraft",
-      "sa:description": "Become skilled at the art of casting spells, identifying magic items, crafting magic items, and identifying spells as they are being cast.",
+      "sa:description": "Cast spells, identify magic, and detect active spellcasting.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-intelligence",
@@ -842,22 +744,6 @@
         {
           "@id": "sa:ability-intelligence",
           "rdfs:label": "Intelligence"
-        }
-      ]
-    },
-    {
-      "@id": "sa:skill-any-4-knowledge-skills",
-      "@type": "sa:Skill",
-      "rdfs:label": "Any 4 knowledge skills",
-      "sa:description": "Choose any four specialized knowledge skills.",
-      "sa:keyAbility": [
-        {
-          "@id": "sa:ability-intelligence",
-          "rdfs:label": "Intelligence"
-        },
-        {
-          "@id": "sa:ability-wisdom",
-          "rdfs:label": "Wisdom"
         }
       ]
     },
@@ -936,8 +822,8 @@
           "rdfs:label": "Charisma"
         },
         {
-          "@id": "sa:ability-appearance",
-          "rdfs:label": "Appearance"
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
         }
       ]
     },
@@ -1032,8 +918,8 @@
           "rdfs:label": "Wisdom"
         },
         {
-          "@id": "sa:ability-appearance",
-          "rdfs:label": "Appearance"
+          "@id": "sa:ability-intelligence",
+          "rdfs:label": "Intelligence"
         }
       ]
     },

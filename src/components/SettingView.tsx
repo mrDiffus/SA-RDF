@@ -1,28 +1,12 @@
 import React, { useEffect, useState } from 'react';
-import { Globe, Building2, MapPin, ChevronRight } from 'lucide-react';
+import { Globe, Building2, ChevronRight, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
-
-interface SettingPlace {
-  label: string;
-  description: string;
-  id?: string;
-}
-
-interface PlaceDetail {
-  label: string;
-  description: string | string[];
-  subPlaces?: { label: string; description: string }[];
-  attitude?: string[];
-}
 
 interface Planet {
   label: string;
   description: string;
   genre?: string;
   keywords?: string[];
-  about?: SettingPlace;
-  places?: SettingPlace[];
-  placesPath?: string;
 }
 
 interface Organization {
@@ -42,28 +26,33 @@ function resolveDataPath(path: string): string {
 }
 
 async function fetchSettingData(): Promise<SettingData> {
-  const [arrur, arcech, armanitech] = await Promise.all([
+  const orgFolders = {
+    'Armanitech': 'armanitech',
+    'BrugsGobbos': 'brugs-gobbos',
+    'Concordat-Trading-House': 'concordat-trading-house',
+    'Deeprunners-Union': 'deeprunners-union',
+    'Exodian-Church': 'exodian-church',
+    'Forge-Syndicate': 'forge-syndicate',
+    'House-Valorian': 'house-valorian',
+    'Luminous-Synthesis': 'luminous-synthesis',
+    'Velvet-Mask': 'velvet-mask',
+    'Verdant-Collective': 'verdant-collective',
+  } as const;
+
+  const [arrur, arcech, ...orgs] = await Promise.all([
     fetch(resolveDataPath('/data/Setting/Planets/Arrur/arrur.json')).then(r => r.json()),
     fetch(resolveDataPath('/data/Setting/Planets/Arcech/arcech.json')).then(r => r.json()),
-    fetch(resolveDataPath('/data/Setting/Organizations/Armanitech/armanitech.json')).then(r => r.json()),
+    ...Object.entries(orgFolders).map(([folder, filename]) =>
+      fetch(resolveDataPath(`/data/Setting/Organizations/${folder}/${filename}.json`)).then(r => r.json()).catch(() => null)
+    ),
   ]);
 
-  const toPlanet = (raw: Record<string, unknown>, placesPath?: string): Planet => {
-    const hasPart = raw['hasPart'] as Record<string, unknown>[] | undefined;
-    return {
-      label: raw['label'] as string,
-      description: (raw['description'] as string) ?? '',
-      genre: raw['genre'] as string | undefined,
-      keywords: raw['keywords'] as string[] | undefined,
-      about: raw['about'] as SettingPlace | undefined,
-      places: hasPart?.map((p) => ({
-        label: p['label'] as string,
-        description: p['description'] as string ?? '',
-        id: p['@id'] as string | undefined,
-      })),
-      placesPath,
-    };
-  };
+  const toPlanet = (raw: Record<string, unknown>): Planet => ({
+    label: raw['label'] as string,
+    description: (raw['description'] as string) ?? '',
+    genre: raw['genre'] as string | undefined,
+    keywords: raw['keywords'] as string[] | undefined,
+  });
 
   const toOrg = (raw: Record<string, unknown>): Organization => ({
     label: raw['label'] as string,
@@ -76,54 +65,29 @@ async function fetchSettingData(): Promise<SettingData> {
   });
 
   return {
-    planets: [toPlanet(arrur, resolveDataPath('/data/Setting/Planets/Arrur/Places/')), toPlanet(arcech)],
-    organizations: [toOrg(armanitech)],
+    planets: [toPlanet(arrur), toPlanet(arcech)],
+    organizations: orgs.filter((org) => org !== null).map(toOrg),
   };
 }
 
-export default function SettingView() {
+interface SettingViewProps {
+  onNavigateToPlanet: (planetName: string) => void;
+}
+
+export default function SettingView({ onNavigateToPlanet }: SettingViewProps) {
   const [data, setData] = useState<SettingData | null>(null);
-  const [selectedPlanet, setSelectedPlanet] = useState<Planet | null>(null);
   const [selectedOrg, setSelectedOrg] = useState<Organization | null>(null);
-  const [selectedPlace, setSelectedPlace] = useState<SettingPlace | null>(null);
-  const [placeDetail, setPlaceDetail] = useState<PlaceDetail | null>(null);
 
   useEffect(() => {
     fetchSettingData().then(setData);
   }, []);
-
-  const handlePlaceClick = async (e: React.MouseEvent, place: SettingPlace) => {
-    e.stopPropagation();
-    setSelectedPlace(place);
-    setPlaceDetail(null);
-    if (selectedPlanet?.placesPath && place.id) {
-      const slug = place.id.split('/').pop();
-      try {
-        const res = await fetch(`${selectedPlanet.placesPath}${slug}.json`);
-        if (res.ok) {
-          const raw = await res.json();
-          setPlaceDetail({
-            label: raw['label'] as string,
-            description: raw['description'] as string | string[],
-            subPlaces: (raw['containsPlace'] as Record<string, string>[] | undefined)?.map((p) => ({
-              label: p['label'],
-              description: p['description'],
-            })),
-            attitude: raw['attitude'] as string[] | undefined,
-          });
-        }
-      } catch {
-        // Place detail not available; modal shows basic info from hasPart
-      }
-    }
-  };
 
   if (!data) {
     return <div className="text-zinc-500 animate-pulse">Accessing Lore Archives...</div>;
   }
 
   return (
-    <div className="space-y-16">
+    <div className="space-y-16 pb-12">
       {/* Header */}
       <div className="space-y-3">
         <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-900 border border-purple-800 text-[10px] uppercase font-bold tracking-[0.2em] text-purple-400">
@@ -146,7 +110,7 @@ export default function SettingView() {
               key={planet.label}
               type="button"
               whileHover={{ scale: 1.01 }}
-              onClick={() => setSelectedPlanet(planet)}
+              onClick={() => onNavigateToPlanet(planet.label)}
               className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 text-left hover:border-purple-800 transition-colors group space-y-4"
             >
               <div className="flex items-start justify-between gap-4">
@@ -217,161 +181,7 @@ export default function SettingView() {
         </div>
       </section>
 
-      {/* Planet detail modal */}
-      <AnimatePresence>
-        {selectedPlanet && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => setSelectedPlanet(null)}
-              className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[60]"
-            />
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-3xl max-h-[90vh] overflow-y-auto bg-zinc-900 border border-zinc-800 rounded-xl p-8 z-[70] shadow-2xl"
-            >
-              <div className="flex justify-between items-start gap-4 mb-6">
-                <div className="space-y-1">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800 border border-purple-800 text-[10px] uppercase tracking-widest font-bold text-purple-400">
-                    <Globe className="w-3 h-3" /> Planet
-                  </div>
-                  <h3 className="text-4xl font-bold text-white uppercase tracking-tighter">{selectedPlanet.label}</h3>
-                  {selectedPlanet.genre && (
-                    <p className="text-[10px] text-purple-400 uppercase font-bold tracking-widest">{selectedPlanet.genre}</p>
-                  )}
-                </div>
-                <button
-                  type="button"
-                  onClick={() => setSelectedPlanet(null)}
-                  className="text-zinc-500 hover:text-white transition-colors text-2xl leading-none"
-                >
-                  ×
-                </button>
-              </div>
-
-              <p className="text-zinc-300 leading-relaxed mb-8">{selectedPlanet.description}</p>
-
-              {selectedPlanet.places && selectedPlanet.places.length > 0 && (
-                <section className="space-y-4">
-                  <h4 className="text-sm text-zinc-500 uppercase font-bold tracking-widest border-b border-zinc-800 pb-2 flex items-center gap-2">
-                    <MapPin className="w-4 h-4" /> Notable Places
-                  </h4>
-                  <div className="space-y-3">
-                    {selectedPlanet.places.map((place) => (
-                      <motion.button
-                        key={place.label}
-                        type="button"
-                        whileHover={{ scale: 1.01 }}
-                        onClick={(e) => handlePlaceClick(e, place)}
-                        className="w-full bg-zinc-800/40 border border-zinc-800 rounded-lg p-4 text-left hover:border-purple-700 transition-colors group"
-                      >
-                        <div className="flex items-center justify-between gap-2">
-                          <h5 className="text-sm font-bold text-white uppercase tracking-tight mb-1 group-hover:text-purple-300 transition-colors">{place.label}</h5>
-                          <ChevronRight className="w-3 h-3 text-zinc-600 group-hover:text-purple-400 transition-colors shrink-0" />
-                        </div>
-                        <p className="text-sm text-zinc-400 leading-relaxed">{place.description}</p>
-                      </motion.button>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {selectedPlanet.keywords && selectedPlanet.keywords.length > 0 && (
-                <div className="mt-6 pt-6 border-t border-zinc-800 flex flex-wrap gap-2">
-                  {selectedPlanet.keywords.map((kw) => (
-                    <span key={kw} className="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-1 rounded border border-zinc-700 uppercase tracking-wider">
-                      {kw}
-                    </span>
-                  ))}
-                </div>
-              )}
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-
-      {/* Place detail modal */}
-      <AnimatePresence>
-        {selectedPlace && (
-          <>
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              onClick={() => { setSelectedPlace(null); setPlaceDetail(null); }}
-              className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[80]"
-            />
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-2xl max-h-[85vh] overflow-y-auto bg-zinc-950 border border-zinc-700 rounded-xl p-8 z-[90] shadow-2xl"
-            >
-              <div className="flex justify-between items-start gap-4 mb-6">
-                <div className="space-y-1">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800 border border-zinc-600 text-[10px] uppercase tracking-widest font-bold text-zinc-300">
-                    <MapPin className="w-3 h-3" /> Place
-                  </div>
-                  <h3 className="text-3xl font-bold text-white uppercase tracking-tighter">{selectedPlace.label}</h3>
-                </div>
-                <button
-                  type="button"
-                  onClick={() => { setSelectedPlace(null); setPlaceDetail(null); }}
-                  className="text-zinc-500 hover:text-white transition-colors text-2xl leading-none"
-                >
-                  ×
-                </button>
-              </div>
-
-              {(() => {
-                const desc = placeDetail?.description ?? selectedPlace.description;
-                return Array.isArray(desc) ? (
-                  <div className="space-y-3 mb-8">
-                    {desc.map((line, i) => (
-                      <p key={i} className="text-zinc-300 leading-relaxed">{line}</p>
-                    ))}
-                  </div>
-                ) : (
-                  <p className="text-zinc-300 leading-relaxed mb-8">{desc}</p>
-                );
-              })()}
-
-              {placeDetail?.subPlaces && placeDetail.subPlaces.length > 0 && (
-                <section className="space-y-4 mb-6">
-                  <h4 className="text-sm text-zinc-500 uppercase font-bold tracking-widest border-b border-zinc-800 pb-2 flex items-center gap-2">
-                    <MapPin className="w-4 h-4" /> Locations
-                  </h4>
-                  <div className="space-y-3">
-                    {placeDetail.subPlaces.map((sub) => (
-                      <div key={sub.label} className="bg-zinc-800/40 border border-zinc-800 rounded-lg p-4">
-                        <h5 className="text-sm font-bold text-white uppercase tracking-tight mb-1">{sub.label}</h5>
-                        <p className="text-sm text-zinc-400 leading-relaxed">{sub.description}</p>
-                      </div>
-                    ))}
-                  </div>
-                </section>
-              )}
-
-              {placeDetail?.attitude && placeDetail.attitude.length > 0 && (
-                <section className="mt-6 pt-6 border-t border-zinc-800">
-                  <h4 className="text-sm text-zinc-500 uppercase font-bold tracking-widest mb-3">Attitude</h4>
-                  <div className="space-y-1">
-                    {placeDetail.attitude.map((line, i) => (
-                      <p key={i} className="text-sm text-zinc-400 italic leading-relaxed">{line}</p>
-                    ))}
-                  </div>
-                </section>
-              )}
-            </motion.div>
-          </>
-        )}
-      </AnimatePresence>
-
-      {/* Org detail modal */}
+      {/* Organization Detail Modal */}
       <AnimatePresence>
         {selectedOrg && (
           <>
@@ -383,59 +193,58 @@ export default function SettingView() {
               className="fixed inset-0 bg-black/80 backdrop-blur-sm z-[60]"
             />
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[calc(100%-2rem)] max-w-3xl max-h-[90vh] overflow-y-auto bg-zinc-900 border border-zinc-800 rounded-xl p-8 z-[70] shadow-2xl"
+              initial={{ opacity: 0, scale: 0.95 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.95 }}
+              transition={{ duration: 0.2 }}
+              className="fixed left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl bg-zinc-900 border border-zinc-800 rounded-xl p-8 z-[70] shadow-2xl max-h-[90vh] overflow-y-auto"
             >
-              <div className="flex justify-between items-start gap-4 mb-6">
-                <div className="space-y-1">
-                  <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-800 border border-orange-800 text-[10px] uppercase tracking-widest font-bold text-orange-400">
-                    <Building2 className="w-3 h-3" /> Organization
-                  </div>
-                  <h3 className="text-4xl font-bold text-white uppercase tracking-tighter">{selectedOrg.label}</h3>
+              <div className="flex justify-between items-start mb-6">
+                <div>
+                  <h3 className="text-3xl font-bold text-white uppercase tracking-tighter mb-2">{selectedOrg.label}</h3>
+                  {selectedOrg.roles && (
+                    <span className="text-[10px] text-orange-500 uppercase font-bold tracking-widest">
+                      {selectedOrg.roles.length} roles available
+                    </span>
+                  )}
                 </div>
                 <button
-                  type="button"
                   onClick={() => setSelectedOrg(null)}
-                  className="text-zinc-500 hover:text-white transition-colors text-2xl leading-none"
+                  className="text-zinc-500 hover:text-white transition-colors p-2 bg-zinc-800 rounded-full"
                 >
-                  ×
+                  <X className="w-6 h-6" />
                 </button>
               </div>
 
-              <p className="text-zinc-300 leading-relaxed mb-8">{selectedOrg.description}</p>
-
-              {selectedOrg.roles && selectedOrg.roles.length > 0 && (
+              <div className="space-y-8">
                 <section className="space-y-4">
-                  <h4 className="text-sm text-zinc-500 uppercase font-bold tracking-widest border-b border-zinc-800 pb-2">Membership Roles</h4>
-                  <div className="space-y-3">
-                    {selectedOrg.roles.map((role) => (
-                      <div key={role.label} className="bg-zinc-800/40 border border-zinc-800 rounded-lg p-4 space-y-2">
-                        <div className="flex items-center justify-between">
-                          <h5 className="text-sm font-bold text-white uppercase tracking-tight">{role.label}</h5>
-                          {role.requiredRenown != null && (
-                            <span className="text-[10px] text-orange-400 border border-orange-800 rounded px-2 py-0.5 uppercase font-bold tracking-wider">
-                              Renown {role.requiredRenown}
-                            </span>
-                          )}
-                        </div>
-                        {Array.isArray(role.description) ? (
-                          <ul className="space-y-1">
-                            {role.description.map((line, i) => (
-                              <li key={i} className="text-sm text-zinc-400 leading-relaxed flex items-start gap-2">
-                                <span className="text-orange-600 mt-1">›</span> {line}
-                              </li>
-                            ))}
-                          </ul>
-                        ) : (
-                          <p className="text-sm text-zinc-400 leading-relaxed">{role.description}</p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
+                  <h4 className="text-sm text-zinc-500 uppercase font-bold tracking-widest border-b border-zinc-800 pb-2">Description</h4>
+                  <p className="text-zinc-300 leading-relaxed">{selectedOrg.description}</p>
                 </section>
-              )}
+
+                {selectedOrg.roles && selectedOrg.roles.length > 0 && (
+                  <section className="space-y-4">
+                    <h4 className="text-sm text-zinc-500 uppercase font-bold tracking-widest border-b border-zinc-800 pb-2">Roles</h4>
+                    <div className="space-y-4">
+                      {selectedOrg.roles.map((role, idx) => (
+                        <div key={idx} className="bg-zinc-800/50 p-4 rounded-lg border border-zinc-800">
+                          <div className="flex justify-between items-start mb-2">
+                            <h5 className="font-bold text-white text-lg">{role.label}</h5>
+                            {role.requiredRenown !== undefined && (
+                              <span className="text-[10px] bg-orange-900/30 text-orange-400 px-2 py-1 rounded border border-orange-800/50 uppercase font-bold tracking-widest">
+                                Renown {role.requiredRenown}+
+                              </span>
+                            )}
+                          </div>
+                          <p className="text-sm text-zinc-400 leading-relaxed">
+                            {Array.isArray(role.description) ? role.description.join(' ') : role.description}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
+              </div>
             </motion.div>
           </>
         )}
