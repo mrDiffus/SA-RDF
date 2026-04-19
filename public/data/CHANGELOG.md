@@ -20,6 +20,21 @@ All notable changes to the Stellar Arcana data repository are documented here.
 - **Spells Data**: Minor mechanical adjustments and clarifications to spell entries.
 - **Spell Descriptions (5 Spells)**: Comprehensive mechanical clarifications and expanded rulings for Eldricht Blade, Eldricht Portal, Meat Receptacle, Thunder Blast, and Tools of the Blessed. Added missing casting times, ranges, durations, target specifications, and damage mechanics. Eldricht Portal downgraded from Ritual to Action casting time. Tools of the Blessed reduced to Bonus action for faster combat resolution.
 
+- **Archetype Exclusivity Groups**: Added explicit `sa:exclusivityGroup` metadata to mutually exclusive features across Arcanist, Devotee, and Occultist archetypes. Clarifies that selecting one path/patron prevents selection of alternatives (e.g., Arcanist's path - Seer, Elementalist, Sage are mutually exclusive within arcanist-paths group).
+- **Occultist Patron System Restructuring**: Refactored Occultist patron selection into discrete, mutually exclusive features (Patron - Elder Being, Patron - Chthonic, Patron - Eldritch God) with individual descriptions. Patron-dependent abilities (Protected, Empowered) now explicitly reference chosen patron prerequisites, improving mechanical clarity and preventing feature conflicts.
+- **Spell Mechanical Clarifications (13 entries)**: Enhanced spell descriptions with precise mechanics, damage calculations, and action economy details:
+  - **Chromatic Orb**: Clarified spellpoint scaling (damage increases by 1d8 per additional spellpoint).
+  - **Counterspell**: Simplified resolution rules—automatic success with matching spellpoint spend, DC 10 + spell level check otherwise.
+  - **Detect Magic**: Expanded passive detection mechanic to 30 feet with active aura perception option; clarified divination immunity interactions.
+  - **Ethereal Blades**: Added cone geometry (15 ft), melee spell attack mechanics, and spellpoint damage scaling.
+  - **Guiding Bolt**: Specified damage (3d6 radiant), attack roll requirement, and advantage-granting mechanism for next attack.
+  - **Malediction**: Clarified 1d6 necrotic damage trigger (on hit with any attack, not just spells).
+  - **Mind Sear**: Added saving throw mechanism (Wisdom DC), psychic damage (2d6), and frightened condition.
+  - **Phantom Steed**: Specified conjuration rules (AC 13, 15 HP, 60 ft speed), capacity (1 Medium or 2 Small), action economy, and dismissal timing.
+  - **Shield**: Clarified +5 AC bonus duration (1 round), magic missile interaction (blocks up to 5 missiles).
+  - **Shutdown**: Added burst area (20 ft), saving throw mechanism (Intelligence DC), and device interaction rules; clarified magical device immunity.
+  - **Thaumaturgy**: Expanded effect options (tremors, voice amplification, visual effects) with range and duration specifications.
+
 ### Fixed
 - **Skills Cleanup**: Removed 19 outdated skill entries originally scraped from deprecated site version. Consolidated disparate skill references into canonical core skill set, improving data integrity and eliminating redundancy.
 
