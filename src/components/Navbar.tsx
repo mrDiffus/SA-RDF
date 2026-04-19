@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppTab } from '../rdfNavigation';
+import { AppTab, getCollectionHref } from '../rdfNavigation';
 import { Shield, Zap, Users, Book, Sword, Globe, Building2, Star, ScrollText, BookOpen } from 'lucide-react';
 
 interface NavbarProps {
@@ -35,13 +35,13 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
-            <div
-              className="flex items-center gap-2 cursor-pointer"
-              onClick={() => setActiveTab('home')}
+            <a
+              href={getCollectionHref('home')}
+              className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <Shield className="w-8 h-8 text-orange-500" />
               <span className="text-xl font-bold tracking-tighter text-white uppercase">Stellar Arcana</span>
-            </div>
+            </a>
             <div className="hidden md:flex items-baseline space-x-4">
               {isLoreMode && (
                 <span className="text-[10px] uppercase font-bold tracking-widest text-purple-500 mr-2 border border-purple-800 rounded px-2 py-1">
@@ -49,9 +49,9 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
                 </span>
               )}
               {tabs.map((tab) => (
-                <button
+                <a
                   key={tab.label}
-                  onClick={() => setActiveTab(tab.id)}
+                  href={getCollectionHref(tab.id)}
                   className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
                     activeTab === tab.id
                       ? 'bg-zinc-800 text-white'
@@ -60,7 +60,7 @@ export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
                 >
                   <tab.icon className="w-4 h-4" />
                   {tab.label}
-                </button>
+                </a>
               ))}
             </div>
           </div>
