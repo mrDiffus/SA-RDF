@@ -1,0 +1,48 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+# Character Skill shape - used as a nested property constraint in Character shape
+# Represents a single skill entry (name, ability, proficiency status, optional misc modifier)
+# Reusable for multiple skills in character.skills array
+
+sa:CharacterSkillShape
+  a sh:NodeShape ;
+  rdfs:comment "Character skill shape: validates individual skill entries. Includes skill name (enum), governing ability (enum), proficiency flag, and optional misc modifier." ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in (
+      "Acrobatics" "Animal Handling" "Arcana" "Athletics" "Deception"
+      "History" "Insight" "Intimidation" "Investigation" "Medicine"
+      "Nature" "Perception" "Performance" "Persuasion" "Religion"
+      "Sleight of Hand" "Stealth" "Survival"
+    ) ;
+    rdfs:comment "Skill name. Must be one of the 18 standard skills." ;
+  ] ;
+  sh:property [
+    sh:path sa:ability ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in (
+      "strength" "dexterity" "constitution" "intelligence" "wisdom" "charisma"
+    ) ;
+    rdfs:comment "Governing ability for this skill. Determines if Constitution save, Dexterity save, etc. applies." ;
+  ] ;
+  sh:property [
+    sh:path sa:proficient ;
+    sh:datatype xsd:boolean ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Whether character is proficient in this skill. If true, add proficiency bonus to skill check." ;
+  ] ;
+  sh:property [
+    sh:path sa:miscModifier ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional miscellaneous modifier to skill check (from feats, equipment, etc). If absent, defaults to 0." ;
+  ] .

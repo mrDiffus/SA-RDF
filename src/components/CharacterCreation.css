@@ -1,0 +1,339 @@
+/* Character Creation Wizard Styles */
+
+/* Dark theme colors from CharacterSheet.css */
+:root {
+  --bg-main: rgb(24, 24, 27);
+  --bg-card: rgb(39, 39, 42);
+  --text-primary: rgb(212, 212, 216);
+  --accent-gold: rgb(161, 140, 0);
+  --accent-purple: rgb(187, 134, 252);
+  --accent-orange: rgb(251, 146, 60);
+  --accent-green: rgb(134, 239, 172);
+  --accent-blue: rgb(148, 163, 247);
+  --border-color: rgb(82, 82, 89);
+}
+
+.character-creation-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+  color: var(--text-primary);
+}
+
+.character-creation-header {
+  margin-bottom: 2rem;
+}
+
+.character-creation-title {
+  color: var(--accent-gold);
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+.character-creation-step-indicator {
+  color: var(--accent-gold);
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* Progress bar */
+.progress-bar {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+  justify-content: space-between;
+}
+
+.progress-segment {
+  flex: 1;
+  height: 8px;
+  background: var(--bg-card);
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+.progress-segment.active {
+  background: var(--accent-gold);
+}
+
+/* Step container */
+.step-container {
+  background: var(--bg-main);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+}
+
+.step-container h2 {
+  color: var(--accent-gold);
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.step-container p {
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+/* Input fields */
+.character-input {
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+  transition: border-color 0.2s ease;
+}
+
+.character-input:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+}
+
+.character-input-label {
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+/* Button styles */
+.button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-right: 1rem;
+}
+
+.button-primary {
+  background: var(--accent-gold);
+  color: var(--bg-main);
+}
+
+.button-primary:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.button-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.button-secondary {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+}
+
+.button-secondary:hover {
+  background: var(--border-color);
+}
+
+.button-success {
+  background: var(--accent-green);
+  color: var(--bg-main);
+  margin-right: 0;
+}
+
+.button-success:hover {
+  opacity: 0.9;
+}
+
+/* Card grid for selections */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.card {
+  background: var(--bg-card);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  padding: 1rem;
+  cursor: pointer;
+  color: var(--text-primary);
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.card:hover {
+  border-color: var(--accent-purple);
+}
+
+.card.selected {
+  border-color: var(--accent-gold);
+  background: rgba(161, 140, 0, 0.1);
+}
+
+.card.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.card-title {
+  color: var(--accent-gold);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Ability scores display */
+.ability-scores-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.ability-score-box {
+  background: var(--bg-card);
+  padding: 0.75rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-color);
+  text-align: center;
+}
+
+.ability-label {
+  color: var(--accent-gold);
+  font-size: 0.9rem;
+  margin-bottom: 0.25rem;
+}
+
+.ability-value {
+  color: var(--accent-orange);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Method selection buttons */
+.method-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.method-button {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border: 2px solid var(--border-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.method-button.active {
+  background: var(--accent-gold);
+  color: var(--bg-main);
+  border-color: var(--accent-gold);
+}
+
+/* Point buy display */
+.point-buy-info {
+  background: var(--bg-card);
+  padding: 1rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.point-buy-budget {
+  color: var(--accent-gold);
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.point-buy-over {
+  color: var(--accent-orange);
+  margin-bottom: 1rem;
+}
+
+.point-buy-inputs {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .character-creation-container {
+    padding: 0 1rem;
+  }
+
+  .character-creation-title {
+    font-size: 2rem;
+  }
+
+  .step-container {
+    padding: 1.5rem;
+  }
+
+  .card-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+
+  .button {
+    margin-right: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .method-buttons {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .point-buy-inputs {
+    grid-template-columns: 1fr;
+  }
+
+  .ability-scores-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .character-creation-container {
+    margin: 1rem auto;
+    padding: 0 0.5rem;
+  }
+
+  .character-creation-title {
+    font-size: 1.5rem;
+  }
+
+  .step-container {
+    padding: 1rem;
+    border-radius: 6px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ability-scores-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .button {
+    display: block;
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+}

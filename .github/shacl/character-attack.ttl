@@ -1,0 +1,59 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+# Character Attack Shape - PLACEHOLDER FOR FUTURE EXPANSION
+# Represents a single attack/weapon entry with ability modifier, bonus, and damage
+# Complex nested shape with multiple derived components
+# To be integrated into character.ttl as a nested shape for attack lists
+
+sa:CharacterAttackShape
+  a sh:NodeShape ;
+  rdfs:comment "FUTURE: Character attack shape. Validates attack entries with name, ability modifier, weapon bonus, damage die, and damage modifiers. Nested shape for complex attack definitions." ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Attack name (e.g., 'Longsword', 'Shortbow', 'Unarmed Strike')." ;
+  ] ;
+  sh:property [
+    sh:path sa:abilityModifier ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Ability modifier applied to attack roll (e.g., STR mod for melee, DEX mod for ranged)." ;
+  ] ;
+  sh:property [
+    sh:path sa:weaponBonus ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional weapon/equipment bonus to attack roll (e.g., +1 magical weapon)." ;
+  ] ;
+  sh:property [
+    sh:path sa:damageDie ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Damage die rolled (e.g., '1d8', '2d6', '1d4')." ;
+  ] ;
+  sh:property [
+    sh:path sa:damageAbilityModifier ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Ability modifier added to damage roll (usually same as attack ability modifier)." ;
+  ] ;
+  sh:property [
+    sh:path sa:damageBonus ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional damage bonus (e.g., from magical weapon, feature, or equipment)." ;
+  ] ;
+  sh:property [
+    sh:path sa:damageType ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional damage type (e.g., 'slashing', 'piercing', 'bludgeoning', 'fire')." ;
+  ] .

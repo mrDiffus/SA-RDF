@@ -8,9 +8,11 @@ import EquipmentList from './components/EquipmentList';
 import GeneralFeaturesList from './components/GeneralFeaturesList';
 import SkillList from './components/SkillList';
 import SettingView from './components/SettingView';
+import type { Character } from './types';
 import PlanetView from './components/PlanetView';
 import PlaceView from './components/PlaceView';
 import CharacterSheet from './components/CharacterSheet';
+import CharacterCreation from './components/CharacterCreation';
 import ChangelogView from './components/ChangelogView';
 import { fetchEquipment, fetchRaces, fetchRules } from './data';
 import { AppRoute, AppTab, curieToRelativeIri, getCollectionHref, getCurrentRelativeIri, parseBrowserRoute } from './rdfNavigation';
@@ -49,6 +51,7 @@ export default function App() {
         .replace(/\s+/g, ' ');
 
     const resolveRouteForResource = async (resourceId: string): Promise<AppRoute | null> => {
+      if (resourceId.startsWith('char:')) return { tab: 'character-sheet', resourceId };
       if (resourceId.startsWith('spell:')) return { tab: 'spells', resourceId };
       if (resourceId.startsWith('archetype:')) return { tab: 'archetypes', resourceId };
       if (resourceId.startsWith('planet:')) return { tab: 'lore', resourceId };
@@ -138,8 +141,19 @@ export default function App() {
         return <GeneralFeaturesList />;
       case 'skills':
         return <SkillList selectedResourceId={route.resourceId} onNavigate={(resourceId) => navigateTo(resourceId ? { tab: 'skills', resourceId } : { tab: 'skills' })} />;
-      case 'character-sheet':
-        return <CharacterSheet />;
+      case 'character-creation':
+        return <CharacterCreation />;
+      case 'character-sheet': {
+        let sheetCharacter: Character | undefined;
+        if (route.resourceId?.startsWith('char:')) {
+          try {
+            sheetCharacter = JSON.parse(atob(route.resourceId.slice('char:'.length))) as Character;
+          } catch {
+            sheetCharacter = undefined;
+          }
+        }
+        return <CharacterSheet character={sheetCharacter} />;
+      }
       case 'lore': {
         if (route.resourceId?.startsWith('planet:')) {
           const planetName = route.resourceId.slice('planet:'.length);

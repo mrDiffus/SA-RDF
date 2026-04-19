@@ -1,0 +1,60 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+@prefix spell: <https://stellararcana.org/spell#> .
+
+# Character Spell Shape - PLACEHOLDER FOR FUTURE EXPANSION
+# Represents a single spell known/prepared by the character
+# Links to spell definitions in public/data/spells.json or spell references
+# To be integrated into character.ttl as a nested shape for spell lists
+
+sa:CharacterSpellShape
+  a sh:NodeShape ;
+  rdfs:comment "FUTURE: Character spell shape. Validates individual spell entries. Placeholder for expansion to include spell level, casting time, damage type constraints, range, target." ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Spell name (e.g., 'Magic Missile', 'Fireball')." ;
+  ] ;
+  sh:property [
+    sh:path sa:spellLevel ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 9 ;
+    rdfs:comment "Spell level (0-9). 0 = cantrip, 1-9 = spell levels per tradition." ;
+  ] ;
+  sh:property [
+    sh:path spell:castingtime ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional casting time (e.g., '1 action', '1 bonus action', '1 reaction')." ;
+  ] ;
+  sh:property [
+    sh:path spell:range ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional range (e.g., 'Self', '60 feet', '300 feet')." ;
+  ] ;
+  sh:property [
+    sh:path spell:target ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional target description (e.g., 'One creature', 'Creatures in a 15-foot cube')." ;
+  ] ;
+  sh:property [
+    sh:path sa:damage ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional damage roll (e.g., '2d6', '4d8 cold')." ;
+  ] ;
+  sh:property [
+    sh:path sa:damageType ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional damage type (e.g., 'fire', 'cold', 'psychic')." ;
+  ] .

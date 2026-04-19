@@ -1,0 +1,67 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+# Ability Scores shape - used as a nested property constraint in Character shape
+# Represents the 6 core ability scores (STR, DEX, CON, INT, WIS, CHA)
+# All values must be integers between 3 and 20 (base score range)
+# Note: Temporary or magical increases are not constrained here (enforced at application layer)
+
+sa:AbilityScoresShape
+  a sh:NodeShape ;
+  rdfs:comment "Ability scores nested shape: all abilities (strength, dexterity, constitution, intelligence, wisdom, charisma) must be integers in range 3-20. Derived ability modifiers are calculated as (score - 10) / 2, floored." ;
+  sh:property [
+    sh:path sa:strength ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:minInclusive 3 ;
+    sh:maxInclusive 20 ;
+    rdfs:comment "Strength ability score. Affects melee attack bonus, carrying capacity, damage rolls of melee weapons." ;
+  ] ;
+  sh:property [
+    sh:path sa:dexterity ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:minInclusive 3 ;
+    sh:maxInclusive 20 ;
+    rdfs:comment "Dexterity ability score. Affects ranged attack bonus, armor class, initiative, sleight of hand." ;
+  ] ;
+  sh:property [
+    sh:path sa:constitution ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:minInclusive 3 ;
+    sh:maxInclusive 20 ;
+    rdfs:comment "Constitution ability score. Affects hit points, wounds (equals CON score), perseverance saves." ;
+  ] ;
+  sh:property [
+    sh:path sa:intelligence ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:minInclusive 3 ;
+    sh:maxInclusive 20 ;
+    rdfs:comment "Intelligence ability score. Affects spell damage/DCs (if int-based caster), knowledge checks, investigation." ;
+  ] ;
+  sh:property [
+    sh:path sa:wisdom ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:minInclusive 3 ;
+    sh:maxInclusive 20 ;
+    rdfs:comment "Wisdom ability score. Affects perception, insight, will saves, sanity (equals WIS score)." ;
+  ] ;
+  sh:property [
+    sh:path sa:charisma ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:minInclusive 3 ;
+    sh:maxInclusive 20 ;
+    rdfs:comment "Charisma ability score. Affects persuasion, deception, performance, spell DCs (if cha-based caster)." ;
+  ] .

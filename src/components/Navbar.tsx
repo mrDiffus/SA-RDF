@@ -15,6 +15,7 @@ const GAME_TABS = [
   { id: 'skills' as AppTab, label: 'Skills', icon: BookOpen },
   { id: 'spells' as AppTab, label: 'Spells', icon: Zap },
   { id: 'equipment' as AppTab, label: 'Equipment', icon: Sword },
+  { id: 'character-creation' as AppTab, label: 'Create Character', icon: Users },
   { id: 'character-sheet' as AppTab, label: 'Character', icon: ScrollText },
 ];
 

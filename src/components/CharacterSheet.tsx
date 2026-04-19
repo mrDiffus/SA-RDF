@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Character, AbilityScores, CharacterSkill, CharacterEquipment, CharacterSpell, CharacterAttack } from '../types';
+import { fetchRaces, fetchArchetypes } from '../data';
 import './CharacterSheet.css';
 
 // Ability modifier calculation: (score - 10) / 2, rounded down
@@ -163,8 +164,25 @@ const PassiveSkillRow: React.FC<PassiveSkillRowProps> = ({ name, value }) => (
   </div>
 );
 
-export const CharacterSheet: React.FC<{ character?: Character }> = ({ character = sampleCharacter }) => {
+export const CharacterSheet: React.FC<{ character?: Character }> = ({ character: propCharacter }) => {
   const [editMode, setEditMode] = useState(false);
+  const character = propCharacter ?? sampleCharacter;
+
+  const [raceLabel, setRaceLabel] = useState(character.race);
+  const [archetypeLabels, setArchetypeLabels] = useState<string[]>(character.archetypes);
+
+  useEffect(() => {
+    Promise.all([fetchRaces(), fetchArchetypes()]).then(([races, archetypes]) => {
+      const race = races.find(r => r.id === character.race);
+      if (race) setRaceLabel(race.label);
+
+      const labels = character.archetypes.map(id => {
+        const found = archetypes.find(a => a.id === id);
+        return found ? found.label : id;
+      });
+      setArchetypeLabels(labels);
+    });
+  }, [character.race, character.archetypes]);
 
   // Apply racial bonuses to ability scores
   const finalScores: AbilityScores = {
@@ -270,11 +288,11 @@ export const CharacterSheet: React.FC<{ character?: Character }> = ({ character 
         <div className="character-info">
           <div className="info-item">
             <span className="label">Race:</span>
-            <span className="value">{character.race}</span>
+            <span className="value">{raceLabel}</span>
           </div>
           <div className="info-item">
             <span className="label">Archetypes:</span>
-            <span className="value">{character.archetypes.join(' / ')}</span>
+            <span className="value">{archetypeLabels.join(' / ')}</span>
           </div>
           <div className="info-item">
             <span className="label">Experience:</span>

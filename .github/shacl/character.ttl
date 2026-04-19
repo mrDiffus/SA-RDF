@@ -1,0 +1,285 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+@prefix character: <https://stellararcana.org/character/> .
+@prefix archetype: <https://stellararcana.org/archetype/> .
+
+# Main Character Shape
+# Validates core character properties and derived statistics
+# Scope: Core properties + derived stats (AC, initiative, saving throws, passive skills, spell slots, concentration DC)
+# Future expansion: nested shapes for equipment, spells, attacks (placeholder comments included)
+
+character:CharacterShape
+  a sh:NodeShape ;
+  sh:targetClass character:Character ;
+  rdfs:comment "LLM generation instruction: create complete, rules-usable characters with core ability scores, derived combat stats (AC, initiative, DCs), derived passive skill values, and spellcasting details. Always include character name, race, exactly 2 archetypes, and all 6 ability scores (3-20 range). Include derived stats as computed values post-creation." ;
+  
+  # CORE PROPERTIES (Required)
+  
+  sh:property [
+    sh:path sa:characterId ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Unique identifier for character. Format TBD (UUID or IRI)." ;
+  ] ;
+  
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Character name. Display label for UI and reference." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:race ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in (
+      "sa:human" "sa:dwarf" "sa:elf" "sa:gnome" "sa:orc"
+      "sa:draegloth" "sa:drow" "sa:feyri" "sa:halfling"
+    ) ;
+    rdfs:comment "Character race. Must be a valid race IRI from public/data/races.json. Available races: Human, Dwarf, Elf, Gnome, Orc, Draegloth, Drow, Feyri, Halfling." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:archetype ;
+    sh:datatype xsd:string ;
+    sh:minCount 2 ;
+    sh:maxCount 2 ;
+    sh:in (
+      "archetype:arcanist" "archetype:devotee" "archetype:occultist" "archetype:technician"
+      "archetype:spacer" "archetype:scrounger" "archetype:recon" "archetype:primitive"
+      "archetype:personality" "archetype:medical-personnel" "archetype:martial-artist"
+      "archetype:gunslinger" "archetype:cannoneer" "archetype:armsman" "archetype:ace"
+      "archetype:academic"
+    ) ;
+    rdfs:comment "Character archetypes. Exactly 2 required; each must be a valid archetype IRI. Note: duplicate detection not enforced in SHACL (apply at application layer if needed)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:totalExperience ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Total experience points earned. Non-negative integer. Determines proficiency bonus and other XP-based progression (TBD)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:abilityScores ;
+    sh:node sa:AbilityScoresShape ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Character ability scores (STR, DEX, CON, INT, WIS, CHA). Nested shape validates each ability as integer 3-20." ;
+  ] ;
+  
+  # OPTIONAL PROPERTIES
+  
+  sh:property [
+    sh:path sa:racialBonus ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 6 ;
+    rdfs:comment "Optional racial bonuses to abilities. One integer per ability type (strength, dexterity, etc). Applied as final adjustments to abilityScores." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:feature ;
+    sh:datatype xsd:string ;
+    sh:maxCount 999 ;
+    rdfs:comment "Character features/traits (future expansion: may require nested shape with name, description, cost). Currently treated as simple string list." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:skill ;
+    sh:node sa:CharacterSkillShape ;
+    sh:maxCount 18 ;
+    rdfs:comment "Character skills. Optional; if present, uses nested CharacterSkillShape for validation. Max 18 standard skills (can be extended)." ;
+  ] ;
+  
+  # DERIVED STATISTICS (Computed, validated post-creation)
+  
+  sh:property [
+    sh:path sa:proficiencyBonus ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Proficiency bonus. Fixed at 2 initially; may scale with XP/level in future. Derived from totalExperience (TBD: define XP=>proficiency table)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:armorClass ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Armor Class. Derived from equipment (e.g., Plate Armor 18 + Shield +2, or base 10 + DEX mod). Read-only; computed post-creation." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:initiative ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Initiative bonus. Derived as DEX modifier. Positive or negative integer. Read-only." ;
+  ] ;
+  
+  # Saving Throws (one per ability, optional)
+  sh:property [
+    sh:path sa:savingThrowStrength ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Strength saving throw. Derived: STR modifier (+ proficiency if proficient, TBD: store proficiency separately)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:savingThrowDexterity ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Dexterity saving throw. Derived: DEX modifier (+ proficiency if proficient)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:savingThrowConstitution ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Constitution saving throw. Derived: CON modifier (+ proficiency if proficient)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:savingThrowIntelligence ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Intelligence saving throw. Derived: INT modifier (+ proficiency if proficient)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:savingThrowWisdom ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Wisdom saving throw. Derived: WIS modifier (+ proficiency if proficient)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:savingThrowCharisma ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Charisma saving throw. Derived: CHA modifier (+ proficiency if proficient)." ;
+  ] ;
+  
+  # Passive Skills
+  sh:property [
+    sh:path sa:passivePerception ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Passive Perception. Derived: 10 + Perception skill total (ability modifier + proficiency bonus if proficient + misc modifiers)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:passiveInvestigation ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Passive Investigation. Derived: 10 + Investigation skill total." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:passiveInsight ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Passive Insight. Derived: 10 + Insight skill total." ;
+  ] ;
+  
+  # Resource Pool Stats
+  sh:property [
+    sh:path sa:wounds ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Wounds pool. Derived: equals CON score. Losing all wounds causes unconsciousness and bleeding out. Max wounds not affected by temporary/magical CON increases." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:hitPoints ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Hit Points. Derived: 6 + CON modifier (base); increases with hit dice/level. Damage reduces HP before wounds." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:sanity ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Sanity pool. Derived: equals WIS score. Losing sanity causes confusion and long-term penalties. Max sanity not affected by temporary/magical WIS increases." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:renown ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Renown. Derived: equals proficiency bonus (base 2)." ;
+  ] ;
+  
+  # Offensive DCs
+  sh:property [
+    sh:path sa:meleeDC ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Melee attack DC. Derived: 8 + proficiency + max(STR mod, DEX mod)." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:rangedDC ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Ranged attack DC. Derived: 8 + proficiency + DEX mod." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:spellDC ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    rdfs:comment "Spell save DC. Derived: 8 + proficiency + casting ability modifier (typically INT, may vary by archetype)." ;
+  ] ;
+  
+  # Movement
+  sh:property [
+    sh:path sa:speed ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Movement speed in feet. Derived: base 30 + racial bonuses (TBD: expand for racial speed variants). Read-only." ;
+  ] ;
+  
+  # Spellcasting (conditional: only if character has spells)
+  sh:property [
+    sh:path sa:concentrationDC ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Concentration DC to maintain spells. Derived: 8 + proficiency + CON modifier. Read-only; conditional if hasSpells = true." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:spellSlot ;
+    sh:datatype xsd:string ;
+    sh:maxCount 999 ;
+    rdfs:comment "Spell slots per spell level. Format TBD (e.g., 'level-1:2, level-2:3', or separate properties). Derived: 2 + (proficiency/2) per spell level known. Conditional on hasSpells." ;
+  ] ;
+  
+  # FUTURE EXPANSION PLACEHOLDERS
+  
+  sh:property [
+    sh:path sa:equipment ;
+    sh:datatype xsd:string ;
+    sh:maxCount 999 ;
+    rdfs:comment "FUTURE: Character equipment. Placeholder for nested EquipmentShape (name, category: armor/weapon/equipment, quantity, AC/damage mods). Not yet validated." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:spell ;
+    sh:datatype xsd:string ;
+    sh:maxCount 999 ;
+    rdfs:comment "FUTURE: Character known spells. Placeholder for nested SpellShape (name, level, casting time, description, damage if applicable). Not yet validated." ;
+  ] ;
+  
+  sh:property [
+    sh:path sa:attack ;
+    sh:datatype xsd:string ;
+    sh:maxCount 999 ;
+    rdfs:comment "FUTURE: Character attacks. Placeholder for nested AttackShape (name, ability modifier, weapon bonus, damage die, damage modifiers, etc). Not yet validated." ;
+  ] .

@@ -1,4 +1,4 @@
-export type AppTab = 'home' | 'rules' | 'races' | 'archetypes' | 'spells' | 'equipment' | 'general-features' | 'character-sheet' | 'skills' | 'lore' | 'changelog';
+export type AppTab = 'home' | 'rules' | 'races' | 'archetypes' | 'spells' | 'equipment' | 'general-features' | 'character-creation' | 'character-sheet' | 'skills' | 'lore' | 'changelog';
 
 export type AppRoute = {
   tab: AppTab;
@@ -18,6 +18,7 @@ const collectionPaths: Record<AppTab, string> = {
   spells: '/spells',
   equipment: '/equipment',
   'general-features': '/general-features',
+  'character-creation': '/character-creation',
   'character-sheet': '/character-sheet',
   skills: '/skills',
   lore: '/lore',
@@ -36,6 +37,10 @@ export function getCollectionTab(pathname: string): AppTab | null {
 }
 
 export function curieToRelativeIri(resourceId: string): string | null {
+  if (resourceId.startsWith('char:')) {
+    return `/character-sheet#${resourceId}`;
+  }
+
   if (resourceId.startsWith('spell:')) {
     return `/spell#${encodeURIComponent(resourceId.slice('spell:'.length))}`;
   }
@@ -69,6 +74,10 @@ export function curieToRelativeIri(resourceId: string): string | null {
 export function relativeIriToCurie(relativeIri: string): string | null {
   if (!relativeIri || relativeIri === '/') {
     return null;
+  }
+
+  if (relativeIri.startsWith('/character-sheet#char:')) {
+    return relativeIri.slice('/character-sheet#'.length);
   }
 
   if (relativeIri.startsWith('/spell#')) {

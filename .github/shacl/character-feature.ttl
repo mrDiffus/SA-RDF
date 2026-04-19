@@ -1,0 +1,38 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+# Character Feature Shape - PLACEHOLDER FOR FUTURE EXPANSION
+# Represents a single feature/trait/ability entry on a character
+# To be integrated into character.ttl as a nested shape when features become first-class data
+
+sa:CharacterFeatureShape
+  a sh:NodeShape ;
+  rdfs:comment "FUTURE: Character feature/trait shape. Validates individual feature entries. Placeholder for expansion to include name, description, cost, prerequisites, benefits." ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Feature name." ;
+  ] ;
+  sh:property [
+    sh:path sa:description ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Feature description and rules text." ;
+  ] ;
+  sh:property [
+    sh:path sa:cost ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional feature cost (e.g., '2 feat points', 'archetype exclusive')." ;
+  ] ;
+  sh:property [
+    sh:path sa:prerequisites ;
+    sh:datatype xsd:string ;
+    sh:maxCount 999 ;
+    rdfs:comment "Optional prerequisites (e.g., 'Strength 13', 'Proficiency with martial weapons')." ;
+  ] .

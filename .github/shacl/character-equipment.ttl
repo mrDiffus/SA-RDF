@@ -1,0 +1,51 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+# Character Equipment Shape - PLACEHOLDER FOR FUTURE EXPANSION
+# Represents a single equipment entry (armor, weapon, or gear)
+# To be integrated into character.ttl as a nested shape when equipment becomes structured data
+
+sa:CharacterEquipmentShape
+  a sh:NodeShape ;
+  rdfs:comment "FUTURE: Character equipment shape. Validates individual equipment entries. Placeholder for expansion to include category constraints, quantity, AC/damage modifiers, weight." ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    rdfs:comment "Equipment name (e.g., 'Longsword', 'Plate Armor', 'Rope 50ft')." ;
+  ] ;
+  sh:property [
+    sh:path sa:category ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "armor" "weapon" "equipment" ) ;
+    rdfs:comment "Equipment category: armor, weapon, or general equipment." ;
+  ] ;
+  sh:property [
+    sh:path sa:quantity ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Quantity of this item carried. Defaults to 1 if absent." ;
+  ] ;
+  sh:property [
+    sh:path sa:armorClass ;
+    sh:datatype xsd:nonNegativeInteger ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional AC bonus this equipment provides (for armor)." ;
+  ] ;
+  sh:property [
+    sh:path sa:damage ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional damage die this equipment provides (for weapons, e.g., '1d8')." ;
+  ] ;
+  sh:property [
+    sh:path sa:weight ;
+    sh:datatype xsd:decimal ;
+    sh:maxCount 1 ;
+    rdfs:comment "Optional weight in pounds." ;
+  ] .
