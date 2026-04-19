@@ -18,13 +18,14 @@ All notable changes to the Stellar Arcana data repository are documented here.
   - Skyhaven: ~50,000 → ~120 million (elite city)
 - **Armor Equipment Data**: Refined and deduplicated armor definitions and specifications.
 - **Spells Data**: Minor mechanical adjustments and clarifications to spell entries.
+- **Spell Descriptions (5 Spells)**: Comprehensive mechanical clarifications and expanded rulings for Eldricht Blade, Eldricht Portal, Meat Receptacle, Thunder Blast, and Tools of the Blessed. Added missing casting times, ranges, durations, target specifications, and damage mechanics. Eldricht Portal downgraded from Ritual to Action casting time. Tools of the Blessed reduced to Bonus action for faster combat resolution.
 
 ### Fixed
 - **Skills Cleanup**: Removed 19 outdated skill entries originally scraped from deprecated site version. Consolidated disparate skill references into canonical core skill set, improving data integrity and eliminating redundancy.
 
 ---
 
-**Notes for Publishers**:
+**Notes for players who like lore**:
 - Population updates across Arcech cities establish consistent megacity scale (~2.265 billion total) aligned with planet description of "immense Hive cities" and vertical infrastructure.
 - Arcech-Sylandris descriptions now form a cohesive narrative emphasizing 8D verticality, Aether-Fog atmosphere, material juxtaposition (ancient/modern), and oppressive beauty—all reinforcing the "Grit-meets-Grandeur" aesthetic.
 - Skills consolidation resolves historical data quality issues; no mechanical impact on character creation.
