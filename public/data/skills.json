@@ -17,9 +17,6 @@
           "@id": "sa:skill-appraise"
         },
         {
-          "@id": "sa:skill-arcane-summoning"
-        },
-        {
           "@id": "sa:skill-attraction"
         },
         {
@@ -200,22 +197,6 @@
         {
           "@id": "sa:ability-charisma",
           "rdfs:label": "Charisma"
-        }
-      ]
-    },
-    {
-      "@id": "sa:skill-arcane-summoning",
-      "@type": "sa:Skill",
-      "rdfs:label": "Arcane Summoning",
-      "sa:description": "Form connections with strange beings known as outsiders and summon them to you.",
-      "sa:keyAbility": [
-        {
-          "@id": "sa:ability-charisma",
-          "rdfs:label": "Charisma"
-        },
-        {
-          "@id": "sa:ability-wisdom",
-          "rdfs:label": "Wisdom"
         }
       ]
     },
