@@ -1,4 +1,4 @@
-export type AppTab = 'home' | 'rules' | 'races' | 'archetypes' | 'spells' | 'equipment' | 'general-features' | 'character-sheet' | 'skills' | 'lore';
+export type AppTab = 'home' | 'rules' | 'races' | 'archetypes' | 'spells' | 'equipment' | 'general-features' | 'character-sheet' | 'skills' | 'lore' | 'changelog';
 
 export type AppRoute = {
   tab: AppTab;
@@ -20,7 +20,8 @@ const collectionPaths: Record<AppTab, string> = {
   'general-features': '/general-features',
   'character-sheet': '/character-sheet',
   skills: '/skills',
-  lore: '/lore'
+  lore: '/lore',
+  changelog: '/changelog'
 };
 
 export function getCollectionHref(tab: AppTab): string {

@@ -11,6 +11,7 @@ import SettingView from './components/SettingView';
 import PlanetView from './components/PlanetView';
 import PlaceView from './components/PlaceView';
 import CharacterSheet from './components/CharacterSheet';
+import ChangelogView from './components/ChangelogView';
 import { fetchEquipment, fetchRaces, fetchRules } from './data';
 import { AppRoute, AppTab, curieToRelativeIri, getCollectionHref, getCurrentRelativeIri, parseBrowserRoute } from './rdfNavigation';
 import { Shield, Zap, Star, ChevronRight } from 'lucide-react';
@@ -116,6 +117,8 @@ export default function App() {
 
   const renderContent = () => {
     switch (route.tab) {
+      case 'changelog':
+        return <ChangelogView onBack={() => navigateTo({ tab: 'home' })} />;
       case 'rules':
         return <RuleList selectedResourceId={route.resourceId} onNavigate={(resourceId) => navigateTo(resourceId ? { tab: 'rules', resourceId } : { tab: 'rules' })} />;
       case 'races':
@@ -202,6 +205,12 @@ export default function App() {
             <span className="text-sm font-bold text-zinc-600 uppercase tracking-widest">Stellar Arcana &copy; 2026</span>
           </div>
           <div className="flex gap-8 text-[10px] uppercase font-bold tracking-widest text-zinc-700">
+            <button 
+              onClick={() => navigateTo({ tab: 'changelog' })}
+              className="hover:text-zinc-400 transition-colors"
+            >
+              Changelog
+            </button>
           </div>
         </div>
       </footer>
