@@ -8,7 +8,7 @@ export interface Spell {
   ritual: boolean;
   target: string;
   effect?: string;
-  level?: number;
+  spellLevel: number;
   damage?: string;
   damageType?: string;
   levelScaling?: string;
@@ -33,7 +33,7 @@ export interface Archetype {
   };
   features: Feature[];
   spellcasting?: string;
-  spellLevels?: Record<string, { id: string; label: string }[]>;
+  spellLevelAccess?: number[];
 }
 
 export interface Feature {
@@ -112,7 +112,7 @@ export type RuleContent =
 export interface RawSpell {
   '@id': string;
   'rdfs:label': string;
-  'spell:level'?: number;
+  'sa:spellLevel': number;
   'spell:castingtime': string;
   'spell:description': string;
   'spell:duration': string;
@@ -143,6 +143,7 @@ export interface RawArchetype {
     'archetype:Saves'?: any[];
   };
   'sa:features': RawFeature[];
+  'archetype:spellLevelAccess'?: number[];
 }
 
 export interface RawFeature {
@@ -198,7 +199,7 @@ export interface CharacterEquipment {
 
 export interface CharacterSpell {
   name: string;
-  level: number;
+  spellLevel: number;
 }
 
 export interface CharacterAttack {

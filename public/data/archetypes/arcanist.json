@@ -52,8 +52,9 @@
           "@type": "sa:Feature",
           "rdfs:label": "Initiate arcanist",
           "sa:prerequisites": [],
+          "archetype:grantedSpellLevels": [0, 1],
           "sa:description": [
-            "Gain the ability to cast Arcanist Cantrips. Gain the ability to cast level 1 arcane spells and rituals. Select either Charisma or Intelligence as your casting ability. This choice cannot be changed after being made. Gain Spellpoints equal to your Proficiency bonus. As your proficiency bonus increases your spellpoints increase as well. Gain a spellbook and select 1 + Ability modifier cantrips and 2 + ability modifier level 1 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+            "Select either Charisma or Intelligence as your casting ability. This choice cannot be changed after being made. Gain Spellpoints equal to your Proficiency bonus. As your proficiency bonus increases your spellpoints increase as well. Gain a spellbook and select 1 + Ability modifier cantrips and 2 + ability modifier level 1 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
           ],
           "sa:cost": "3 xp Free for arcanist archetypes"
         },
@@ -63,8 +64,9 @@
           "sa:prerequisites": [
             "Initiate arcanist"
           ],
+          "archetype:grantedSpellLevels": [2],
           "sa:description": [
-            "Gain the ability to cast level 2 arcane spells and rituals. Gain 4 spellpoints. You can prepare an additional 3 spells. Select and 2 level 2 spells and add them to your spellbook."
+            "Gain 4 spellpoints. You can prepare an additional 3 spells. Select 2 level 2 spells and add them to your spellbook."
           ],
           "sa:cost": "2 xp"
         },
@@ -74,8 +76,9 @@
           "sa:prerequisites": [
             "Apprentice arcanist"
           ],
+          "archetype:grantedSpellLevels": [3],
           "sa:description": [
-            "Gain the ability to cast level 3 arcane spells and rituals. Gain 6 spellpoints. You can prepare an additional 3 spells. Select and 2 level 3 spells and add them to your spellbook."
+            "Gain 6 spellpoints. You can prepare an additional 3 spells. Select 2 level 3 spells and add them to your spellbook."
           ],
           "sa:cost": "3 xp"
         },
@@ -85,8 +88,9 @@
           "sa:prerequisites": [
             "Journeyman arcanist"
           ],
+          "archetype:grantedSpellLevels": [4],
           "sa:description": [
-            "Gain the ability to cast level 4 arcane spells and rituals. Gain 8 spellpoints. You can prepare an additional 4 spells. Select and 2 level 4 spells and add them to your spellbook."
+            "Gain 8 spellpoints. You can prepare an additional 4 spells. Select 2 level 4 spells and add them to your spellbook."
           ],
           "sa:cost": "3 xp"
         },
@@ -96,8 +100,9 @@
           "sa:prerequisites": [
             "Expert arcanist"
           ],
+          "archetype:grantedSpellLevels": [5],
           "sa:description": [
-            "Gain the ability to cast level 5 arcane spells and rituals. Gain 10 spellpoints. You can prepare an additional 5 spells. Select and 2 level 5 spells and add them to your spellbook."
+            "Gain 10 spellpoints. You can prepare an additional 5 spells. Select 2 level 5 spells and add them to your spellbook."
           ],
           "sa:cost": "4 xp"
         },
@@ -107,8 +112,9 @@
           "sa:prerequisites": [
             "Master arcanist"
           ],
+          "archetype:grantedSpellLevels": [6],
           "sa:description": [
-            "Gain the ability to cast level 6 spells and rituals. Gain 12 spellpoints. Select and 2 level 6 spells and add them to your spellbook."
+            "Gain 12 spellpoints. Select 2 level 6 spells and add them to your spellbook."
           ],
           "sa:cost": "4 xp"
         },
@@ -118,8 +124,9 @@
           "sa:prerequisites": [
             "Grand Master arcanist"
           ],
+          "archetype:grantedSpellLevels": [7],
           "sa:description": [
-            "Gain the ability to cast level 7 spells and rituals. Gain 15 spellpoints. Select and 2 level 7 spells and add them to your spellbook."
+            "Gain 15 spellpoints. Select 2 level 7 spells and add them to your spellbook."
           ],
           "sa:cost": "4 xp"
         },
@@ -129,8 +136,9 @@
           "sa:prerequisites": [
             "Exemplar arcanist"
           ],
+          "archetype:grantedSpellLevels": [8],
           "sa:description": [
-            "Gain the ability to cast level 8 spells and rituals. Gain 17 spellpoints. Select and 2 level 8 spells and add them to your spellbook."
+            "Gain 17 spellpoints. Select 2 level 8 spells and add them to your spellbook."
           ],
           "sa:cost": "5 xp"
         },
@@ -140,8 +148,9 @@
           "sa:prerequisites": [
             "Grand Exemplar arcanist"
           ],
+          "archetype:grantedSpellLevels": [9],
           "sa:description": [
-            "Gain the ability to cast level 9 spells and rituals. Gain 20 spellpoints. Select and 2 level 9 spells and add them to your spellbook."
+            "Gain 20 spellpoints. Select 2 level 9 spells and add them to your spellbook."
           ],
           "sa:cost": "5 xp"
         },
@@ -578,6 +587,15 @@
           "@type": "spell:Spell",
           "rdfs:label": "Meteor"
         }
+      ],
+      "archetype:spellLevelAccess": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
       ]
     }
   ]

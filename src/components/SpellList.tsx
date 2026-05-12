@@ -44,7 +44,7 @@ export default function SpellList({ selectedResourceId, onNavigate }: SpellListP
   });
 
   const groupedSpells = filteredSpells.reduce<Map<number, Spell[]>>((groups, spell) => {
-    const level = Number.isInteger(spell.level) ? (spell.level as number) : -1;
+    const level = spell.spellLevel;
     const bucket = groups.get(level);
 
     if (bucket) {
@@ -64,7 +64,6 @@ export default function SpellList({ selectedResourceId, onNavigate }: SpellListP
 
   const getLevelLabel = (level: number) => {
     if (level === 0) return 'Cantrips';
-    if (level < 0) return 'Unknown Level';
     return `Level ${level}`;
   };
 
@@ -105,9 +104,12 @@ export default function SpellList({ selectedResourceId, onNavigate }: SpellListP
                 >
                   <div className="flex justify-between items-start mb-2">
                     <h3 className="text-lg font-bold text-white group-hover:text-orange-400 transition-colors">{spell.label}</h3>
-                    {spell.ritual && (
-                      <span className="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-0.5 rounded uppercase tracking-widest font-bold">Ritual</span>
-                    )}
+                    <div className="flex gap-1">
+                      {spell.ritual && (
+                        <span className="text-[10px] bg-zinc-800 text-zinc-400 px-2 py-0.5 rounded uppercase tracking-widest font-bold">Ritual</span>
+                      )}
+                      <span className="text-[10px] bg-purple-950 text-purple-400 px-2 py-0.5 rounded uppercase tracking-widest font-bold">Lvl {spell.spellLevel}</span>
+                    </div>
                   </div>
                   <p className="text-sm text-zinc-400 line-clamp-2 mb-4">{spell.description}</p>
                   <div className="flex flex-wrap gap-3 text-[11px] text-zinc-500 uppercase font-bold tracking-wider">
@@ -151,11 +153,9 @@ export default function SpellList({ selectedResourceId, onNavigate }: SpellListP
                     {selectedSpell.ritual && (
                       <span className="text-xs bg-orange-950 text-orange-400 px-2 py-1 rounded uppercase tracking-widest font-bold border border-orange-900">Ritual</span>
                     )}
-                    {selectedSpell.level !== undefined && (
-                      <span className="text-xs bg-zinc-800 text-zinc-300 px-2 py-1 rounded uppercase tracking-widest font-bold">
-                        {selectedSpell.level === 0 ? 'Cantrip' : `Level ${selectedSpell.level}`}
-                      </span>
-                    )}
+                    <span className="text-xs bg-zinc-800 text-zinc-300 px-2 py-1 rounded uppercase tracking-widest font-bold">
+                      {selectedSpell.spellLevel === 0 ? 'Cantrip' : `Level ${selectedSpell.spellLevel}`}
+                    </span>
                     <span className="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded uppercase tracking-widest font-bold">Spell</span>
                   </div>
                 </div>

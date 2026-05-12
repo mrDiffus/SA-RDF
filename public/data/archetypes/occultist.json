@@ -100,8 +100,9 @@
           "@type": "sa:Feature",
           "rdfs:label": "Initiate Occultist",
           "sa:prerequisites": [],
+          "archetype:grantedSpellLevels": [0, 1],
           "sa:description": [
-            "Gain the ability to cast Occultist Cantrips. Gain the ability to cast level 1 Occultist spells and rituals. Charisma is used for spellcasting. Gain 1 spellslot. You can cast any spell you know by spending one spellslot. Spellslots are regained after a short rest. Rituals do not expend a spellslot. You can cast your spells at level 1. Learn 2 level 1 spells. Learn 2 Occultist cantrips."
+            "Charisma is used for spellcasting. Gain 1 spellslot. You can cast any spell you know by spending one spellslot. Spellslots are regained after a short rest. Rituals do not expend a spellslot. Learn 2 level 1 spells. Learn 2 Occultist cantrips."
           ],
           "sa:cost": "Free for Occultist archetypes. 2 xp"
         },
@@ -111,8 +112,9 @@
           "sa:prerequisites": [
             "Initiate Occultist"
           ],
+          "archetype:grantedSpellLevels": [2],
           "sa:description": [
-            "Gain the ability to cast level 2 Occultist spells and rituals. Gain 1 additional spellslot. You can cast your spells at level 2. Learn 1 additional spell up to level 2."
+            "Gain 1 additional spellslot. Learn 1 additional spell up to level 2."
           ],
           "sa:cost": "3 xp"
         },
@@ -122,8 +124,9 @@
           "sa:prerequisites": [
             "Apprentice Occultist"
           ],
+          "archetype:grantedSpellLevels": [3],
           "sa:description": [
-            "Gain the ability to cast level 3 Occultist spells and rituals. Gain 1 additional spellslot. You can cast your spells at level 3. Learn 1 additional spell up to level 3."
+            "Gain 1 additional spellslot. Learn 1 additional spell up to level 3."
           ],
           "sa:cost": "3 xp"
         },
@@ -133,8 +136,9 @@
           "sa:prerequisites": [
             "Journeyman Occultist"
           ],
+          "archetype:grantedSpellLevels": [4],
           "sa:description": [
-            "Gain the ability to cast level 4 Occultist spells and rituals. Gain 1 additional spellslot. You can cast your spells at level 4. Learn 1 additional spell up to level 4."
+            "Gain 1 additional spellslot. Learn 1 additional spell up to level 4."
           ],
           "sa:cost": "3 xp"
         },
@@ -144,8 +148,9 @@
           "sa:prerequisites": [
             "Expert Occultist"
           ],
+          "archetype:grantedSpellLevels": [5],
           "sa:description": [
-            "Gain the ability to cast level 5 Occultist spells and rituals. Gain 1 additional spellslot. You can cast your spells at level 5. Learn 2 additional spells up to level 5."
+            "Gain 1 additional spellslot. Learn 2 additional spells up to level 5."
           ],
           "sa:cost": "4 xp"
         },
@@ -155,8 +160,9 @@
           "sa:prerequisites": [
             "Master Occultist caster"
           ],
+          "archetype:grantedSpellLevels": [6],
           "sa:description": [
-            "Gain the ability to cast level 6 and higher rituals. Gain 2 additional spellslots. You can cast your spells at level 6. Learn 2 additional spells up to level 6."
+            "Gain 2 additional spellslots. Learn 2 additional spells up to level 6."
           ],
           "sa:cost": "4 xp"
         },
@@ -167,6 +173,7 @@
             "Grand Master Occultist",
             "4 proficiency bonus"
           ],
+          "archetype:grantedSpellLevels": [7, 8, 9],
           "sa:description": [
             "Choose a single level 7 spell; you can cast this spell once per long rest. When you reach 5 proficiency, choose a single level 8 spell; you can cast that spell once per long rest. When you reach 6 proficiency, choose a single level 9 spell; you can cast that spell once per long rest."
           ],
@@ -547,6 +554,15 @@
           "@type": "spell:Spell",
           "rdfs:label": "Eldritch Portal"
         }
+      ],
+      "archetype:spellLevelAccess": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
       ]
     }
   ]

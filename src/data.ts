@@ -81,18 +81,23 @@ function normalizeArchetypeReference(value: string): string {
   return archetypeLabelToCurie[normalized] || trimmed;
 }
 
-function extractSpellLevels(raw: Record<string, any>): Record<string, { id: string; label: string }[]> | undefined {
-  const spellLevels = Object.entries(raw)
-    .filter(([key]) => /^spell-level-\d+$/.test(key))
-    .reduce<Record<string, { id: string; label: string }[]>>((acc, [levelKey, spells]) => {
-      acc[levelKey] = asArray(spells).map((spell: any) => ({
-        id: spell?.['@id'] || spell?.['rdfs:label'] || '',
-        label: spell?.['rdfs:label'] || spell?.['@id'] || ''
-      }));
-      return acc;
-    }, {});
-
-  return Object.keys(spellLevels).length > 0 ? spellLevels : undefined;
+function extractSpellLevelAccess(raw: Record<string, any>): number[] | undefined {
+  // New format: archetype:spellLevelAccess is an array of integers
+  if (raw['archetype:spellLevelAccess'] && Array.isArray(raw['archetype:spellLevelAccess'])) {
+    return raw['archetype:spellLevelAccess'];
+  }
+  
+  // Fallback: extract from old spell-level-X keys (for backward compatibility)
+  const spellLevelKeys = Object.keys(raw).filter(key => /^spell-level-\d+$/.test(key));
+  if (spellLevelKeys.length > 0) {
+    const levels = spellLevelKeys.map(key => {
+      const match = key.match(/spell-level-(\d+)/);
+      return match ? parseInt(match[1], 10) : -1;
+    }).filter(level => level >= 0);
+    return levels.length > 0 ? levels.sort() : undefined;
+  }
+  
+  return undefined;
 }
 
 function normalizeEquipmentType(groupLabel: string, rawType?: string): string {
@@ -133,7 +138,7 @@ async function fetchGraphFromFile<T>(path: string): Promise<T[]> {
 }
 
 function mapArchetype(raw: RawArchetype & Record<string, any>, skillIdMap?: Map<string, string>): Archetype {
-  const spellLevels = extractSpellLevels(raw);
+  const spellLevelAccess = extractSpellLevelAccess(raw);
 
   return {
     id: raw['@id'],
@@ -147,7 +152,7 @@ function mapArchetype(raw: RawArchetype & Record<string, any>, skillIdMap?: Map<
     },
     features: asArray(raw['sa:features']).map(mapFeature),
     spellcasting: raw['archetype:spellcasting'],
-    spellLevels
+    spellLevelAccess
   };
 }
 
@@ -170,7 +175,7 @@ export async function fetchSpells(): Promise<Spell[]> {
   return sortByLabel(spellList['sa:items'].map((raw: RawSpell) => ({
     id: raw['@id'],
     label: raw['rdfs:label'],
-    ...(raw['spell:level'] !== undefined && { level: raw['spell:level'] }),
+    spellLevel: raw['sa:spellLevel'],
     castingTime: raw['spell:castingtime'],
     description: raw['spell:description'],
     duration: raw['spell:duration'],

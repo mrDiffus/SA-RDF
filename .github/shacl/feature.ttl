@@ -1,0 +1,57 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+# Shape for Feature (standalone and nested)
+sa:FeatureShape
+  a sh:NodeShape ;
+  sh:targetClass sa:Feature ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:description "Feature name" ;
+  ] ;
+  sh:property [
+    sh:path sa:description ;
+    sh:minCount 1 ;
+    sh:description "Description of feature; can be string or array of strings" ;
+  ] ;
+  sh:property [
+    sh:path sa:prerequisites ;
+    sh:minCount 0 ;
+    sh:description "Feature prerequisites (text descriptions or IRI references)" ;
+  ] ;
+  sh:property [
+    sh:path sa:cost ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:description "Resource cost to acquire feature (XP, gold, etc.)" ;
+  ] ;
+  sh:property [
+    sh:path sa:source ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:description "IRI reference to archetype or race that grants feature (for traceability)" ;
+  ] ;
+  sh:property [
+    sh:path sa:mechanics ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:description "Mechanical details (flexible object structure)" ;
+  ] ;
+  sh:property [
+    sh:path sa:archetypes ;
+    sh:minCount 0 ;
+    sh:description "Archetype associations (if applicable)" ;
+  ] ;
+  sh:property [
+    sh:path sa:exclusivityGroup ;
+    sh:datatype xsd:string ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:description "Group ID for mutually exclusive features" ;
+  ] .

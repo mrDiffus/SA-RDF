@@ -1,0 +1,42 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+# Shape for Race
+sa:RaceShape
+  a sh:NodeShape ;
+  sh:targetClass sa:Race ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:description "Race name (required, unique)" ;
+  ] ;
+  sh:property [
+    sh:path sa:description ;
+    sh:datatype xsd:string ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:description "Brief description of race (optional)" ;
+  ] ;
+  sh:property [
+    sh:path sa:features ;
+    sh:minCount 0 ;
+    sh:node sa:FeatureShape ;
+    sh:description "Racial features and traits" ;
+  ] ;
+  sh:property [
+    sh:path sa:speed ;
+    sh:datatype xsd:string ;
+    sh:minCount 0 ;
+    sh:maxCount 1 ;
+    sh:description "Base movement speed (e.g., '30 ft')" ;
+  ] ;
+  sh:property [
+    sh:path sa:languages ;
+    sh:minCount 0 ;
+    sh:description "Languages available to race" ;
+  ] .

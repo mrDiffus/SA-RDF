@@ -73,9 +73,10 @@ sa:SpellShape
   ] ;
   sh:property [
     sh:path sa:spellLevel ;
+    sh:datatype xsd:integer ;
+    sh:minCount 1 ;
     sh:maxCount 1 ;
-    sh:or (
-      [ sh:datatype xsd:integer ]
-      [ sh:datatype xsd:string ]
-    ) ;
+    sh:minInclusive 0 ;
+    sh:maxInclusive 9 ;
+    sh:description "Spell level (0-9, required)" ;
   ] .

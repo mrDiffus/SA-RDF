@@ -115,8 +115,9 @@
           "@type": "sa:Feature",
           "rdfs:label": "Initiate Devotee",
           "sa:prerequisites": [],
+          "archetype:grantedSpellLevels": [0, 1],
           "sa:description": [
-            "Gain the ability to cast Devotee Cantrips. Gain the ability to cast level 1 Devotee spells and rituals. Select either Charisma or Wisdom as your casting ability. This choice cannot be changed after being made. To cast a spell you must spend its spellpoint cost, normally equal to its level. Rituals do not cost spellpoints. Gain Spellpoints equal to your Proficiency bonus. As your proficiency bonus increases your spellpoints increase as well. To cast a spell or ritual you need to have it in your spellbook."
+            "Select either Charisma or Wisdom as your casting ability. This choice cannot be changed after being made. To cast a spell you must spend its spellpoint cost, normally equal to its level. Rituals do not cost spellpoints. Gain Spellpoints equal to your Proficiency bonus. As your proficiency bonus increases your spellpoints increase as well. To cast a spell or ritual you need to have it in your spellbook."
           ],
           "sa:cost": "2 xp Free for Devotee archetypes"
         },
@@ -126,8 +127,9 @@
           "sa:prerequisites": [
             "Initiate Devotee"
           ],
+          "archetype:grantedSpellLevels": [2],
           "sa:description": [
-            "Gain the ability to cast level 2 Devotee spells and rituals. Gain 3 spellpoints. Select and 2 level 2 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+            "Gain 3 spellpoints. Select 2 level 2 spells and add them to your spellbook."
           ],
           "sa:cost": "3 xp"
         },
@@ -137,8 +139,9 @@
           "sa:prerequisites": [
             "Apprentice Devotee"
           ],
+          "archetype:grantedSpellLevels": [3],
           "sa:description": [
-            "Gain the ability to cast level 3 Devotee spells and rituals. Gain 5 spellpoints. Select and 2 level 3 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+            "Gain 5 spellpoints. Select 2 level 3 spells and add them to your spellbook."
           ],
           "sa:cost": "3 xp"
         },
@@ -148,8 +151,9 @@
           "sa:prerequisites": [
             "Journeyman Devotee"
           ],
+          "archetype:grantedSpellLevels": [4],
           "sa:description": [
-            "Gain the ability to cast level 4 Devotee spells and rituals. Gain 7 spellpoints. Select and 2 level 4 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+            "Gain 7 spellpoints. Select 2 level 4 spells and add them to your spellbook."
           ],
           "sa:cost": "3 xp"
         },
@@ -159,8 +163,9 @@
           "sa:prerequisites": [
             "Expert Devotee"
           ],
+          "archetype:grantedSpellLevels": [5],
           "sa:description": [
-            "Gain the ability to cast level 5 Devotee spells and rituals. Gain 8 spellpoints. Select and 2 level 5 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+            "Gain 8 spellpoints. Select 2 level 5 spells and add them to your spellbook."
           ],
           "sa:cost": "4 xp"
         },
@@ -170,8 +175,9 @@
           "sa:prerequisites": [
             "Master Devotee"
           ],
+          "archetype:grantedSpellLevels": [6],
           "sa:description": [
-            "Gain the ability to cast level 6 and higher rituals. Gain 10 spellpoints. Select and 2 level 6 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+            "Gain 10 spellpoints. Select 2 level 6 spells and add them to your spellbook."
           ],
           "sa:cost": "4 xp"
         },
@@ -181,8 +187,9 @@
           "sa:prerequisites": [
             "Grand Master Devotee"
           ],
+          "archetype:grantedSpellLevels": [7],
           "sa:description": [
-            "Gain the ability to cast level 7 and higher rituals. Gain 12 spellpoints. Select and 2 level 7 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+            "Gain 12 spellpoints. Select 2 level 7 spells and add them to your spellbook."
           ],
           "sa:cost": "4 xp"
         },
@@ -192,8 +199,9 @@
           "sa:prerequisites": [
             "Exemplar Devotee"
           ],
+          "archetype:grantedSpellLevels": [8],
           "sa:description": [
-            "Gain the ability to cast level 8 and higher rituals. Gain 14 spellpoints. Select and 2 level 8 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+            "Gain 14 spellpoints. Select 2 level 8 spells and add them to your spellbook."
           ],
           "sa:cost": "4 xp"
         },
@@ -203,8 +211,9 @@
           "sa:prerequisites": [
             "Grand Exemplar Devotee"
           ],
+          "archetype:grantedSpellLevels": [9],
           "sa:description": [
-            "Gain the ability to cast level 9 and higher rituals. Gain 16 spellpoints. Select and 2 level 9 spells and add them to your spellbook. To cast a spell or ritual you need to have it in your spellbook."
+            "Gain 16 spellpoints. Select 2 level 9 spells and add them to your spellbook."
           ],
           "sa:cost": "4 xp"
         },
@@ -502,6 +511,15 @@
           "@type": "spell:Spell",
           "rdfs:label": "Army of the Dead"
         }
+      ],
+      "archetype:spellLevelAccess": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
       ]
     }
   ]

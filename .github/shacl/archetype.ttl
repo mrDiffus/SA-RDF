@@ -1,0 +1,82 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix archetype: <https://stellararcana.org/archetype/> .
+@prefix sa: <https://stellararcana.org/> .
+
+# Shape for Archetype
+sa:ArchetypeShape
+  a sh:NodeShape ;
+  sh:targetClass archetype:Archetype ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:description "Archetype name (required, unique)" ;
+  ] ;
+  sh:property [
+    sh:path archetype:description ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:description "Narrative description of archetype" ;
+  ] ;
+  sh:property [
+    sh:path archetype:proficiencies ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:node sa:ProficienciesShape ;
+    sh:description "Proficiency structure (skills, weapons, armor, saves)" ;
+  ] ;
+  sh:property [
+    sh:path sa:features ;
+    sh:minCount 0 ;
+    sh:node sa:FeatureShape ;
+    sh:description "Features granted by archetype" ;
+  ] ;
+  sh:property [
+    sh:path archetype:spellcasting ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:description "Narrative description of spellcasting mechanics (optional)" ;
+  ] ;
+  sh:property [
+    sh:path archetype:spellLevelAccess ;
+    sh:minCount 0 ;
+    sh:node sa:SpellLevelAccessShape ;
+    sh:description "Array of spell levels (0-9) accessible to archetype" ;
+  ] .
+
+# Shape for Proficiencies
+sa:ProficienciesShape
+  a sh:NodeShape ;
+  sh:closed false ;
+  sh:property [
+    sh:path archetype:Skills ;
+    sh:minCount 0 ;
+    sh:description "Skill IRIs (e.g., sa:skill-arcana)" ;
+  ] ;
+  sh:property [
+    sh:path archetype:Weapons ;
+    sh:minCount 0 ;
+    sh:description "Weapon category proficiencies" ;
+  ] ;
+  sh:property [
+    sh:path archetype:Armor ;
+    sh:minCount 0 ;
+    sh:description "Armor category proficiencies" ;
+  ] ;
+  sh:property [
+    sh:path archetype:Saves ;
+    sh:minCount 0 ;
+    sh:description "Saving throw proficiencies (ability names)" ;
+  ] .
+
+# Shape for Spell Level Access array items
+sa:SpellLevelAccessShape
+  a sh:NodeShape ;
+  sh:datatype xsd:integer ;
+  sh:minInclusive 0 ;
+  sh:maxInclusive 9 ;
+  sh:description "Spell level integer (0-9)" .

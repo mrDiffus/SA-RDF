@@ -23,7 +23,7 @@
           "spell:ritual": false,
           "spell:target": "1 weapon",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Affliction",
@@ -39,7 +39,7 @@
           "sa:damageType": "psychic",
           "sa:levelScaling": "per caster level",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Animatedead",
@@ -52,7 +52,7 @@
           "spell:ritual": false,
           "spell:target": "5 corpses per hour of casting",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Anticipateperil",
@@ -65,7 +65,7 @@
           "spell:ritual": false,
           "spell:target": "Caster",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Arc",
@@ -80,7 +80,7 @@
           "sa:damage": "3d6",
           "sa:damageType": "lightning",
           "sa:effect": "",
-          "spell:level": 4
+          "sa:spellLevel": 4
         },
         {
           "@id": "spell:Armorofthedamned",
@@ -93,7 +93,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Armorofthefaithful",
@@ -106,7 +106,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Armyofthedead",
@@ -119,7 +119,7 @@
           "spell:ritual": false,
           "spell:target": "coprses 1 mile radius area",
           "sa:effect": "",
-          "spell:level": 6
+          "sa:spellLevel": 6
         },
         {
           "@id": "spell:Attunedtotheuniverse",
@@ -132,7 +132,7 @@
           "spell:ritual": false,
           "spell:target": "Caster",
           "sa:effect": "",
-          "spell:level": 5
+          "sa:spellLevel": 5
         },
         {
           "@id": "spell:Bane",
@@ -145,7 +145,7 @@
           "spell:ritual": false,
           "spell:target": "Hostile creatures within a 50ft burst from the caster",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Barrier",
@@ -160,7 +160,7 @@
           "sa:damage": "10d10",
           "sa:damageType": "slashing",
           "sa:effect": "",
-          "spell:level": 4
+          "sa:spellLevel": 4
         },
         {
           "@id": "spell:Bindelements",
@@ -175,7 +175,7 @@
           "sa:damage": "1d6",
           "sa:damageType": "variable",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Blacktentacles",
@@ -190,7 +190,7 @@
           "sa:damage": "5d6",
           "sa:damageType": "necrotic",
           "sa:effect": "",
-          "spell:level": 4
+          "sa:spellLevel": 4
         },
         {
           "@id": "spell:Bladeward",
@@ -203,7 +203,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Bless",
@@ -216,7 +216,7 @@
           "spell:ritual": false,
           "spell:target": "Caster and allies within 50 ft burst from caster.",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Blur",
@@ -229,7 +229,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Burglar'sbuddy>",
@@ -242,7 +242,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Burninghands",
@@ -257,7 +257,7 @@
           "sa:damage": "3d6",
           "sa:damageType": "fire",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Charmperson",
@@ -270,7 +270,7 @@
           "spell:ritual": false,
           "spell:target": "1 humanoid",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:ChromaticOrb",
@@ -285,7 +285,7 @@
           "sa:damage": "3d8",
           "sa:damageType": "variable",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Conjurespellfighter",
@@ -298,7 +298,7 @@
           "spell:ritual": false,
           "spell:target": "1 conjured spaceship",
           "sa:effect": "",
-          "spell:level": 4
+          "sa:spellLevel": 4
         },
         {
           "@id": "spell:Counterspell",
@@ -311,7 +311,7 @@
           "spell:ritual": false,
           "spell:target": "1 Creature",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Createundeath",
@@ -324,7 +324,7 @@
           "spell:ritual": false,
           "spell:target": "1 corpse in Touch range per 1 hour of the ritual",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Createwater",
@@ -337,7 +337,7 @@
           "spell:ritual": false,
           "spell:target": "1 point in space",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Crownofmadness",
@@ -350,7 +350,7 @@
           "spell:ritual": false,
           "spell:target": "1 humanoid creature",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Culling",
@@ -365,7 +365,7 @@
           "sa:damage": "4d6",
           "sa:damageType": "necrotic",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Damned",
@@ -380,7 +380,7 @@
           "sa:damage": "4d8",
           "sa:damageType": "necrotic",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Darkness",
@@ -393,7 +393,7 @@
           "spell:ritual": false,
           "spell:target": "Creature or object touched",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Detectmagic",
@@ -406,7 +406,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Dimensiondoor",
@@ -419,7 +419,7 @@
           "spell:ritual": false,
           "spell:target": "One 5 ft square you can see within 500ft",
           "sa:effect": "",
-          "spell:level": 4
+          "sa:spellLevel": 4
         },
         {
           "@id": "spell:Disguiseself",
@@ -432,7 +432,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Displacement",
@@ -445,7 +445,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Eldrichtblade",
@@ -460,7 +460,7 @@
           "sa:damage": "1d6",
           "sa:damageType": "force",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Eldrichtportal",
@@ -473,7 +473,7 @@
           "spell:ritual": false,
           "spell:target": "2 locations (known or scried)",
           "sa:effect": "",
-          "spell:level": 6
+          "sa:spellLevel": 6
         },
         {
           "@id": "spell:Energizedtouch",
@@ -488,7 +488,7 @@
           "sa:damage": "",
           "sa:damageType": "radiant",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Etheralblades",
@@ -503,7 +503,7 @@
           "sa:damage": "As if hit by your weapon + 1d8 per spellpoint spent",
           "sa:damageType": "force",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Faeriefire",
@@ -516,7 +516,7 @@
           "spell:ritual": false,
           "spell:target": "Creature",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Favoured",
@@ -529,7 +529,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Featherfall",
@@ -542,7 +542,7 @@
           "spell:ritual": false,
           "spell:target": "1 target / proficiency bonus",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Fireball",
@@ -557,7 +557,7 @@
           "sa:damage": "",
           "sa:damageType": "fire",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Firebolt",
@@ -572,7 +572,7 @@
           "sa:damage": "1d10",
           "sa:damageType": "fire",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Firelance",
@@ -587,7 +587,7 @@
           "sa:damage": "",
           "sa:damageType": "fire",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Firestorm",
@@ -602,7 +602,7 @@
           "sa:damage": "",
           "sa:damageType": "fire",
           "sa:effect": "",
-          "spell:level": 5
+          "sa:spellLevel": 5
         },
         {
           "@id": "spell:Floatingdisk",
@@ -615,7 +615,7 @@
           "spell:ritual": false,
           "spell:target": "1 free 5 th square",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Fly",
@@ -628,7 +628,7 @@
           "spell:ritual": false,
           "spell:target": "Willing creature",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Frozenarmor",
@@ -641,7 +641,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Frozenblast",
@@ -656,7 +656,7 @@
           "sa:damage": "",
           "sa:damageType": "cold",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Grease",
@@ -669,7 +669,7 @@
           "spell:ritual": false,
           "spell:target": "10 ft square",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Guidingbolt",
@@ -684,7 +684,7 @@
           "sa:damage": "3d6",
           "sa:damageType": "radiant",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Healingword",
@@ -697,7 +697,7 @@
           "spell:ritual": false,
           "spell:target": "1 creature",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Heartsqueeze",
@@ -712,7 +712,7 @@
           "sa:damage": "",
           "sa:damageType": "necrotic",
           "sa:effect": "",
-          "spell:level": 5
+          "sa:spellLevel": 5
         },
         {
           "@id": "spell:Hex",
@@ -725,7 +725,7 @@
           "spell:ritual": false,
           "spell:target": "1 object",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Holybolt",
@@ -740,7 +740,7 @@
           "sa:damage": "",
           "sa:damageType": "radiant",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:IM-Teleport",
@@ -753,7 +753,7 @@
           "spell:ritual": false,
           "spell:target": "Self and up to your proficiency bonus additional creatures",
           "sa:effect": "",
-          "spell:level": 5
+          "sa:spellLevel": 5
         },
         {
           "@id": "spell:Icestorm",
@@ -768,7 +768,7 @@
           "sa:damage": "",
           "sa:damageType": "cold",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Identify",
@@ -781,7 +781,7 @@
           "spell:ritual": false,
           "spell:target": "Object or creature touched",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Incinerate",
@@ -796,7 +796,7 @@
           "sa:damage": "3d6",
           "sa:damageType": "fire",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Infernalcloak",
@@ -809,7 +809,7 @@
           "spell:ritual": false,
           "spell:target": "1 target / proficiency bonus",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Inflictwounds",
@@ -824,7 +824,7 @@
           "sa:damage": "3d6",
           "sa:damageType": "necrotic",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Light",
@@ -837,7 +837,7 @@
           "spell:ritual": false,
           "spell:target": "1 Object",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Lightningtouch",
@@ -852,7 +852,7 @@
           "sa:damage": "",
           "sa:damageType": "lightning",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Mageblade",
@@ -867,7 +867,7 @@
           "sa:damage": "",
           "sa:damageType": "force",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:MagicID",
@@ -880,7 +880,7 @@
           "spell:ritual": false,
           "spell:target": "A piece of paper or plastic roughly the size of the ID you want to replicate",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Magicmissile",
@@ -895,7 +895,7 @@
           "sa:damage": "",
           "sa:damageType": "force",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Malediction",
@@ -908,7 +908,7 @@
           "spell:ritual": false,
           "spell:target": "1 Creature",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Meatreceptacle",
@@ -921,7 +921,7 @@
           "spell:ritual": false,
           "spell:target": "1 creature or corpse",
           "sa:effect": "",
-          "spell:level": 4
+          "sa:spellLevel": 4
         },
         {
           "@id": "spell:Meteor",
@@ -936,7 +936,7 @@
           "sa:damage": "",
           "sa:damageType": "bludgeoning",
           "sa:effect": "",
-          "spell:level": 6
+          "sa:spellLevel": 6
         },
         {
           "@id": "spell:Mindblast",
@@ -951,7 +951,7 @@
           "sa:damage": "",
           "sa:damageType": "psychic",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Mindsear",
@@ -964,7 +964,7 @@
           "spell:ritual": false,
           "spell:target": "1 creature",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Patron'scaress",
@@ -977,7 +977,7 @@
           "spell:ritual": false,
           "spell:target": "1 creature",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Patronaspect",
@@ -990,7 +990,7 @@
           "spell:ritual": false,
           "spell:target": "",
           "sa:effect": "",
-          "spell:level": 6
+          "sa:spellLevel": 6
         },
         {
           "@id": "spell:Phantomsteed",
@@ -1003,7 +1003,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Phaseblade",
@@ -1016,7 +1016,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Premonition",
@@ -1029,7 +1029,7 @@
           "spell:ritual": false,
           "spell:target": "Caster",
           "sa:effect": "",
-          "spell:level": 5
+          "sa:spellLevel": 5
         },
         {
           "@id": "spell:Protectionfrombullets",
@@ -1042,7 +1042,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Puppteer",
@@ -1055,7 +1055,7 @@
           "spell:ritual": false,
           "spell:target": "1 creature",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Raisedead",
@@ -1068,7 +1068,7 @@
           "spell:ritual": false,
           "spell:target": "1 corpse",
           "sa:effect": "",
-          "spell:level": 4
+          "sa:spellLevel": 4
         },
         {
           "@id": "spell:Rayofsickness",
@@ -1083,7 +1083,7 @@
           "sa:damage": "",
           "sa:damageType": "poison",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Recharge",
@@ -1096,7 +1096,7 @@
           "spell:ritual": false,
           "spell:target": "1 Creature",
           "sa:effect": "",
-          "spell:level": 4
+          "sa:spellLevel": 4
         },
         {
           "@id": "spell:Refreshvitality",
@@ -1109,7 +1109,7 @@
           "spell:ritual": false,
           "spell:target": "Creature touched",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Resistance",
@@ -1122,7 +1122,7 @@
           "spell:ritual": false,
           "spell:target": "1 target / proficiency bonus",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Restoration",
@@ -1135,7 +1135,7 @@
           "spell:ritual": false,
           "spell:target": "1 creature",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Sacredflame",
@@ -1150,7 +1150,7 @@
           "sa:damage": "",
           "sa:damageType": "radiant",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Sacredshield",
@@ -1163,7 +1163,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Sanctified",
@@ -1176,7 +1176,7 @@
           "spell:ritual": false,
           "spell:target": "1 target / proficiency bonus",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Sanctuary",
@@ -1189,7 +1189,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Shield",
@@ -1202,7 +1202,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Shieldother",
@@ -1215,7 +1215,7 @@
           "spell:ritual": false,
           "spell:target": "1 willing target",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Shutdown",
@@ -1228,7 +1228,7 @@
           "spell:ritual": false,
           "spell:target": "20 ft burst",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Starfall",
@@ -1243,7 +1243,7 @@
           "sa:damage": "",
           "sa:damageType": "radiant",
           "sa:effect": "",
-          "spell:level": 5
+          "sa:spellLevel": 5
         },
         {
           "@id": "spell:Steelsense",
@@ -1256,7 +1256,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 2
+          "sa:spellLevel": 2
         },
         {
           "@id": "spell:Summon",
@@ -1269,7 +1269,7 @@
           "spell:ritual": false,
           "spell:target": "One or more creatures",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Thaumaturgy",
@@ -1282,7 +1282,7 @@
           "spell:ritual": false,
           "spell:target": "-",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Thunderblast",
@@ -1297,7 +1297,7 @@
           "sa:damage": "1d6",
           "sa:damageType": "thunder",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Thunderusslam",
@@ -1312,7 +1312,7 @@
           "sa:damage": "",
           "sa:damageType": "thunder",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Toolsoftheblessed",
@@ -1325,7 +1325,7 @@
           "spell:ritual": false,
           "spell:target": "Self (1 firearm held)",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Truestrike",
@@ -1338,7 +1338,7 @@
           "spell:ritual": false,
           "spell:target": "Self",
           "sa:effect": "",
-          "spell:level": 0
+          "sa:spellLevel": 0
         },
         {
           "@id": "spell:Unwillingshield",
@@ -1351,7 +1351,7 @@
           "spell:ritual": false,
           "spell:target": "1 creature",
           "sa:effect": "",
-          "spell:level": 3
+          "sa:spellLevel": 3
         },
         {
           "@id": "spell:Wirewalk",
@@ -1364,7 +1364,7 @@
           "spell:ritual": false,
           "spell:target": "1 creature",
           "sa:effect": "",
-          "spell:level": 4
+          "sa:spellLevel": 4
         },
         {
           "@id": "spell:Witcharch",
@@ -1378,7 +1378,7 @@
           "spell:target": "1 Creature",
           "sa:damageType": "lightning",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         },
         {
           "@id": "spell:Wreckingorb",
@@ -1393,7 +1393,7 @@
           "sa:damage": "",
           "sa:damageType": "force",
           "sa:effect": "",
-          "spell:level": 1
+          "sa:spellLevel": 1
         }
       ]
     }

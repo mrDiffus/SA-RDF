@@ -60,10 +60,10 @@ const sampleCharacter: Character = {
     { name: 'Healing Potion', category: 'equipment', quantity: 3 },
   ],
   spells: [
-    { name: 'Magic Missile', level: 1 },
-    { name: 'Shield', level: 1 },
-    { name: 'Mage Armor', level: 1 },
-    { name: 'Fireball', level: 3 },
+    { name: 'Magic Missile', spellLevel: 1 },
+    { name: 'Shield', spellLevel: 1 },
+    { name: 'Mage Armor', spellLevel: 1 },
+    { name: 'Fireball', spellLevel: 3 },
   ],
   attacks: [
     { name: 'Longsword', abilityModifier: 3, weaponBonus: 1, damageDie: '1d8', damageAbilityModifier: 4, damageBonuses: 0 },
@@ -279,7 +279,7 @@ export const CharacterSheet: React.FC<{ character?: Character; onChange?: (chara
   // 6. Spell Slots (basic calculation based on highest spell level)
   const hasSpells = character.spells && character.spells.length > 0;
   const highestSpellLevel = hasSpells 
-    ? Math.max(...character.spells.map(s => s.level || 0))
+    ? Math.max(...character.spells.map(s => s.spellLevel))
     : 0;
 
   // Spell slots per level (simplified: 2 per spell level known)
@@ -680,7 +680,7 @@ export const CharacterSheet: React.FC<{ character?: Character; onChange?: (chara
                 character.spells.map((spell, idx) => (
                   <div key={idx} className="spell-item">
                     <div className="spell-name">{spell.name}</div>
-                    <div className="spell-level">Lvl {spell.level}</div>
+                    <div className="spell-level">Lvl {spell.spellLevel}</div>
                   </div>
                 ))
               ) : (

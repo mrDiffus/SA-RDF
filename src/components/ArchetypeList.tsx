@@ -205,32 +205,43 @@ export default function ArchetypeList({ selectedResourceId, onNavigate }: Archet
                           ))}
                         </div>
                       </div>
-                      {selectedArchetype.spellLevels && (
+                      {selectedArchetype.spellLevelAccess && selectedArchetype.spellLevelAccess.length > 0 && (
                         <div>
-                          <span className="text-[10px] text-zinc-600 uppercase font-bold block mb-2">Spell Levels</span>
-                          <div className="space-y-2">
-                            {(Object.entries(selectedArchetype.spellLevels) as [string, { id: string; label: string }[]][]).map(([level, levelSpells]) => (
-                              <div key={level}>
-                                <span className="text-[10px] text-zinc-500 uppercase tracking-wide block mb-1">{level.replace('spell-level-', 'Level ')}</span>
-                                <div className="flex flex-wrap gap-2">
-                                  {levelSpells.map((spell) => (
-                                    <button
-                                      key={spell.id || spell.label}
-                                      type="button"
-                                      onClick={() => {
-                                        const fullSpell = spell.id
-                                          ? spellCatalog.find((s) => s.id === spell.id) ?? null
-                                          : null;
-                                        setSelectedSpell(fullSpell);
-                                      }}
-                                      className="text-xs bg-zinc-800 text-zinc-300 px-2 py-1 rounded border border-zinc-700 hover:border-orange-500 hover:text-orange-300 transition-colors"
-                                    >
-                                      {spell.label}
-                                    </button>
-                                  ))}
-                                </div>
-                              </div>
+                          <span className="text-[10px] text-zinc-600 uppercase font-bold block mb-2">Accessible Spell Levels</span>
+                          <div className="flex gap-2 flex-wrap">
+                            {selectedArchetype.spellLevelAccess.map((level) => (
+                              <span key={level} className="text-xs bg-purple-900 text-purple-300 px-3 py-1 rounded">
+                                Level {level}
+                              </span>
                             ))}
+                          </div>
+                          <div className="mt-4 space-y-3">
+                            <span className="text-[10px] text-zinc-600 uppercase font-bold block">Available Spells by Level</span>
+                            {selectedArchetype.spellLevelAccess.map((level) => {
+                              const spellsAtLevel = spellCatalog.filter(spell => spell.spellLevel === level);
+                              return (
+                                <div key={level}>
+                                  <span className="text-[10px] text-zinc-500 uppercase tracking-wide block mb-1">
+                                    Level {level} ({spellsAtLevel.length} spells)
+                                  </span>
+                                  <div className="flex flex-wrap gap-2">
+                                    {spellsAtLevel.slice(0, 5).map((spell) => (
+                                      <button
+                                        key={spell.id}
+                                        type="button"
+                                        onClick={() => setSelectedSpell(spell)}
+                                        className="text-xs bg-zinc-800 text-zinc-300 px-2 py-1 rounded border border-zinc-700 hover:border-purple-500 hover:text-purple-300 transition-colors"
+                                      >
+                                        {spell.label}
+                                      </button>
+                                    ))}
+                                    {spellsAtLevel.length > 5 && (
+                                      <span className="text-xs text-zinc-500">+{spellsAtLevel.length - 5} more</span>
+                                    )}
+                                  </div>
+                                </div>
+                              );
+                            })}
                           </div>
                         </div>
                       )}

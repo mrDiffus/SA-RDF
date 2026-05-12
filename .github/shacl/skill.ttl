@@ -1,0 +1,48 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+# Shape for Skill
+sa:SkillShape
+  a sh:NodeShape ;
+  sh:targetClass sa:Skill ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:description "Skill name (required, unique)" ;
+  ] ;
+  sh:property [
+    sh:path sa:ability ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in (
+      "strength"
+      "dexterity"
+      "constitution"
+      "intelligence"
+      "wisdom"
+      "charisma"
+    ) ;
+    sh:description "Primary ability modifier for skill" ;
+  ] ;
+  sh:property [
+    sh:path sa:description ;
+    sh:datatype xsd:string ;
+    sh:minCount 0 ;
+    sh:description "Description of skill and usage" ;
+  ] ;
+  sh:property [
+    sh:path sa:dcExamples ;
+    sh:minCount 0 ;
+    sh:description "Example DC values with task descriptions" ;
+  ] ;
+  sh:property [
+    sh:path sa:commonUsages ;
+    sh:minCount 0 ;
+    sh:description "Common applications or variants of skill" ;
+  ] .
