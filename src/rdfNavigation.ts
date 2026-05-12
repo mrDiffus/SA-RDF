@@ -64,6 +64,13 @@ export function curieToRelativeIri(resourceId: string): string | null {
     }
   }
 
+  if (resourceId.startsWith('character:')) {
+    const charParts = resourceId.slice('character:'.length).split('/');
+    if (charParts.length === 2) {
+      return `/lore/organization/${encodeURIComponent(charParts[0])}/character/${encodeURIComponent(charParts[1])}`;
+    }
+  }
+
   if (resourceId.startsWith('sa:')) {
     return `/${encodeURI(resourceId.slice('sa:'.length))}`;
   }
@@ -102,6 +109,12 @@ export function relativeIriToCurie(relativeIri: string): string | null {
     return `place:${decodeURIComponent(placeMatch[1])}/${decodeURIComponent(placeMatch[2])}`;
   }
 
+  // Handle /lore/organization/{organization}/character/{character}
+  const characterMatch = relativeIri.match(/^\/lore\/organization\/([^/]+)\/character\/(.+)$/);
+  if (characterMatch) {
+    return `character:${decodeURIComponent(characterMatch[1])}/${decodeURIComponent(characterMatch[2])}`;
+  }
+
   // Handle /lore/planet/{planet}
   if (relativeIri.startsWith('/lore/planet/')) {
     return `planet:${decodeURIComponent(relativeIri.slice('/lore/planet/'.length))}`;
@@ -120,6 +133,13 @@ export function parseBrowserRoute(pathname: string, hash = ''): ParsedBrowserRou
   if (pathname.startsWith('/equipment/') && pathname.length > '/equipment/'.length) {
     return {
       collectionTab: 'equipment',
+      resourceId: relativeIriToCurie(pathname)
+    };
+  }
+
+  if (pathname.startsWith('/lore/organization/') && pathname.length > '/lore/organization/'.length) {
+    return {
+      collectionTab: 'lore',
       resourceId: relativeIriToCurie(pathname)
     };
   }

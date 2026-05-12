@@ -14,10 +14,83 @@ import PlaceView from './components/PlaceView';
 import CharacterSheet from './components/CharacterSheet';
 import CharacterCreation from './components/CharacterCreation';
 import ChangelogView from './components/ChangelogView';
-import { fetchEquipment, fetchRaces, fetchRules } from './data';
+import { CharacterDetail } from './components/CharacterDetail';
+import { fetchEquipment, fetchRaces, fetchRules, loadCharacter } from './data';
 import { AppRoute, AppTab, curieToRelativeIri, getCollectionHref, getCurrentRelativeIri, parseBrowserRoute } from './rdfNavigation';
 import { Shield, Zap, Star, ChevronRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
+
+// Character Detail View Component
+interface CharacterDetailViewProps {
+  organizationSlug: string;
+  characterSlug: string;
+  onBack: () => void;
+}
+
+const CharacterDetailView: React.FC<CharacterDetailViewProps> = ({ organizationSlug, characterSlug, onBack }) => {
+  const [character, setCharacter] = useState<any>(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const loadChar = async () => {
+      try {
+        const data = await loadCharacter(organizationSlug, characterSlug);
+        setCharacter(data);
+      } catch (err) {
+        setError(`Failed to load character: ${err instanceof Error ? err.message : 'Unknown error'}`);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadChar();
+  }, [organizationSlug, characterSlug]);
+
+  if (loading) {
+    return <div className="text-center py-12">Loading character...</div>;
+  }
+
+  if (error) {
+    return (
+      <div className="text-center py-12 space-y-4">
+        <p className="text-red-400">{error}</p>
+        <button 
+          onClick={onBack}
+          className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded hover:bg-zinc-800 transition-colors"
+        >
+          Back to Lore
+        </button>
+      </div>
+    );
+  }
+
+  if (!character) {
+    return (
+      <div className="text-center py-12 space-y-4">
+        <p>Character not found</p>
+        <button 
+          onClick={onBack}
+          className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded hover:bg-zinc-800 transition-colors"
+        >
+          Back to Lore
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <div className="space-y-6">
+      <button 
+        onClick={onBack}
+        className="px-4 py-2 bg-zinc-900 border border-zinc-800 rounded hover:bg-zinc-800 transition-colors text-sm"
+      >
+        ← Back to Lore
+      </button>
+      <CharacterDetail character={character} organizationLabel={organizationSlug} />
+    </div>
+  );
+};
 
 export default function App() {
   const [route, setRoute] = useState<AppRoute>({ tab: 'home' });
@@ -56,6 +129,7 @@ export default function App() {
       if (resourceId.startsWith('archetype:')) return { tab: 'archetypes', resourceId };
       if (resourceId.startsWith('planet:')) return { tab: 'lore', resourceId };
       if (resourceId.startsWith('place:')) return { tab: 'lore', resourceId };
+      if (resourceId.startsWith('character:')) return { tab: 'lore', resourceId };
 
       const [races, rules, equipment] = await Promise.all([
         fetchRaces(),
@@ -177,9 +251,23 @@ export default function App() {
             );
           }
         }
+        if (route.resourceId?.startsWith('character:')) {
+          const parts = route.resourceId.slice('character:'.length).split('/');
+          if (parts.length === 2) {
+            const [organizationSlug, characterSlug] = parts;
+            return (
+              <CharacterDetailView 
+                organizationSlug={organizationSlug}
+                characterSlug={characterSlug}
+                onBack={() => navigateTo({ tab: 'lore' })}
+              />
+            );
+          }
+        }
         return (
           <SettingView 
             onNavigateToPlanet={(planetName) => navigateTo({ tab: 'lore', resourceId: `planet:${planetName}` })}
+            onNavigateToCharacter={(orgFolder, charSlug) => navigateTo({ tab: 'lore', resourceId: `character:${orgFolder}/${charSlug}` })}
           />
         );
       }

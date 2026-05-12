@@ -1,6 +1,7 @@
 import { 
   Spell, Archetype, Race, Equipment, RuleSection, RuleContent, Feature, Skill,
-  RawSpell, RawArchetype, RawRace, RawEquipment, RawRuleSection, RawFeature, RawRuleContent, RawSkill
+  RawSpell, RawArchetype, RawRace, RawEquipment, RawRuleSection, RawFeature, RawRuleContent, RawSkill,
+  PersonCharacter
 } from './types';
 
 type RawGraphContainer<T = any> = {
@@ -497,4 +498,22 @@ export async function fetchSkills(): Promise<Skill[]> {
     }));
   
   return sortByLabel(skills);
+}
+
+/**
+ * Load a character file from the Setting/Organizations/{organization}/{character}.json path
+ * Converts organizationSlug and characterSlug to file paths
+ */
+export async function loadCharacter(organizationSlug: string, characterSlug: string): Promise<PersonCharacter> {
+  // Convert slug format to file path: "concordat-trading-house" -> "Concordat-Trading-House" or keep lowercase
+  // For now, assume slug matches directory name (could be normalized differently per org)
+  const filePath = `/data/Setting/Organizations/${organizationSlug}/${characterSlug}.json`;
+  
+  const response = await fetch(resolveDataPath(filePath));
+  if (!response.ok) {
+    throw new Error(`Failed to load character: ${response.statusText}`);
+  }
+
+  const characterData = await response.json() as PersonCharacter;
+  return characterData;
 }

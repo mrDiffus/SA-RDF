@@ -1,23 +1,38 @@
 {
   "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
     "label": "rdfs:label",
-    "description": "https://schema.org/description",
-    "type": "@type",
-    "CreativeWork": "https://schema.org/CreativeWork"
+    "description": "schema:description",
+    "type": "@type"
   },
-  "type": "CreativeWork",
+  "type": "Person",
   "label": "Petra Shinn: The Web Master",
-  "race": "Halfling",
-  "description": [
-    "Petra Shinn is not a trader. She is a machine. She maintains Mira Strand's network of free traders—hundreds of operatives scattered across Arcech and beyond, each one individually insignificant, collectively indispensable. Petra is small enough that people forget she is in the room. This is intentional. Her advantage is not physical—it is informational. She remembers everything. Every contract, every margin, every trader's family situation, every rumor that moved a credit six months ago. She weaponizes this memory with perfect professional courtesy.",
-    "",
-    "Role & Function: Director of Intelligence. Petra manages the free trader network through quarterly sit-downs—civilized dinner meetings aboard The Dividend or careful neutral stations. These are not casual encounters. They are audits conducted over fine wine and contract review. During each meeting, Petra assesses: margins, loss reports, acquisition opportunities that have propagated up the chain, and political chatter from across the sector. Every trader knows the framework: deliver intelligence, maintain profit, check in on schedule. Do these things, and you receive better routes, advance warning of opportunities, and genuine protection from competitors. Fail, and you become subject to Petra's remarkable memory for consequence.",
-    "",
-    "Method & Psychology: Petra does not inspire fear. She inspires calculation. She will sit across from a trader hemorrhaging credits and speak with absolute calm about how their sister's position on Armanitech Station depends on Concordat contract stability. She will discuss exactly which port authority knows about a trader's forged manifests. She will review the numbers on a datapad and deliver the verdict with the tone of someone reading a weather report. The trader will leave with the understanding that compliance is not an option—it is simple mathematics. Mira has not lost a free trader to defection in three years. This is not because traders love Petra. It is because she has engineered a system so precise, so tightly interwoven, that disappearance costs more than loyalty. She is ruthless without raising her voice.",
-    "",
-    "Visual Identity: Petra wears suits that cost more than most traders' annual income. They are perfectly tailored to her small frame, emphasizing precision and control. Her footsteps announce her before she enters a room—click-click-click, the rhythm of heels on deck plating, the sound of unstoppable efficiency. Her hair is always arranged, her nails always managed. She looks expensive and fragile. This is also intentional. Traders who underestimate her for her size or her refinement learn quickly that these qualities are aesthetics layered over something far more durable. She carries herself with the grace of someone who has never needed to raise a hand to enforce compliance—the data does that for her.",
-    "",
-    "Relationship to Mira: Petra serves Mira not out of loyalty, but out of professional alignment. She enjoys the work because the work is elegant. Mira's acquisition machine requires perfect information from a dispersed network, and Petra has engineered a system that produces exactly that. She takes pride in its precision. The paychecks are generous, but more importantly, the problems are *interesting*—how to extract compliance from hundreds of independent traders, how to make rebellion more expensive than obedience, how to transform a collection of self-interested individuals into a functioning information apparatus. For Petra, the system is the reward. She will serve Mira until the system stops being interesting, or until someone offers her a better problem to solve."
+  "sa:race": "Halfling",
+  "sa:identity": {
+    "label": "The Web Master",
+    "description": "Director of Intelligence for the Concordat Trading House. Maintains Mira Strand's network of hundreds of free traders scattered across Arcech. Small enough that people forget she is in the room. Informational advantage through perfect memory and ruthless precision."
+  },
+  "schema:description": "Petra Shinn is not a trader. She is a machine. She maintains Mira Strand's network of free traders—hundreds of operatives scattered across Arcech and beyond, each one individually insignificant, collectively indispensable. Petra is small enough that people forget she is in the room. This is intentional. Her advantage is not physical—it is informational. She remembers everything. Every contract, every margin, every trader's family situation, every rumor that moved a credit six months ago. She weaponizes this memory with perfect professional courtesy.",
+  "sa:nature": {
+    "appearance": "Petra wears suits that cost more than most traders' annual income. They are perfectly tailored to her small frame, emphasizing precision and control. Her footsteps announce her before she enters a room—click-click-click, the rhythm of heels on deck plating, the sound of unstoppable efficiency. Her hair is always arranged, her nails always managed.",
+    "visual_weaponization": "She looks expensive and fragile. This is intentional. Traders who underestimate her for her size or her refinement learn quickly that these qualities are aesthetics layered over something far more durable."
+  },
+  "sa:mechanics": {
+    "network_management": "Petra manages the free trader network through quarterly sit-downs—civilized dinner meetings aboard The Dividend or careful neutral stations. These are not casual encounters. They are audits conducted over fine wine and contract review.",
+    "audit_framework": "During each meeting, Petra assesses: margins, loss reports, acquisition opportunities, and political chatter. Every trader knows the framework: deliver intelligence, maintain profit, check in on schedule. Do these things, and you receive better routes, advance warning, and protection. Fail, and you become subject to Petra's remarkable memory for consequence.",
+    "leverage_methodology": "Petra does not inspire fear. She inspires calculation. She will sit across from a trader and speak with absolute calm about how their relative's position depends on Concordat stability. She will discuss exactly which port authority knows about forged manifests. She will review numbers and deliver verdicts with the tone of someone reading a weather report. The trader will understand that compliance is mathematics."
+  },
+  "sa:relationships": {
+    "mira_strand": "Petra serves Mira not from loyalty, but from professional alignment. She enjoys the work because the work is elegant. Mira's acquisition machine requires perfect information from a dispersed network, and Petra has engineered a system that produces exactly that. She takes pride in its precision.",
+    "trader_network": "Mira has not lost a free trader to defection in three years. This is not because traders love Petra. It is because she has engineered a system so precise, so tightly interwoven, that disappearance costs more than loyalty. She is ruthless without raising her voice."
+  },
+  "sa:quotes": [
+    "The system is the reward.",
+    "Understand: compliance is not an option. It is inevitable."
   ]
 }
+

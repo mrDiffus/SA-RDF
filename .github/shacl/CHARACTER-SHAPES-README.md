@@ -1,7 +1,7 @@
 # Character SHACL Shapes Documentation
 
-**Status:** Phase 1 complete (Core + Derived Stats shape defined)  
-**Date:** April 19, 2026  
+**Status:** Phase 1 complete (Core + Derived Stats shape defined); Phase 2 in progress (Person character narrative profiles)  
+**Date:** April 19, 2026 (updated May 12, 2026)  
 **Scope:** Character validation shapes for SA-RDF project  
 
 ---
@@ -16,13 +16,21 @@ This directory contains SHACL (Shapes Constraint Language) shape definitions for
 - Sub-shapes for reusable validation (ability scores, skills)
 - Placeholder sub-shapes for future expansion (features, equipment, spells, attacks)
 
+**Phase 2 Deliverables (In Progress):**
+- Person character shape for narrative setting entities (NPCs, organization members, antagonists)
+- Person identity sub-shape for role/title + identity statement validation
+
 ---
 
 ## File Structure
 
 ```
 .github/shacl/
-├── character.ttl                      # Main character shape
+├── person-character.ttl               # Person character shape (setting NPCs, organization members)
+│                                       # Validates narrative character profiles
+│                                       # Includes identity (role + statement) + optional thematic sections
+│
+├── character.ttl                      # Main character shape (playable character stats)
 │                                       # Validates core props + derived stats
 │                                       # Includes constraints for AC, initiative, saving throws,
 │                                       # passive skills, resource pools (wounds/HP/sanity),
@@ -69,7 +77,65 @@ All character-related shapes use consistent prefixes:
 
 ## Shape Definitions
 
-### 1. `character:CharacterShape` (Main Shape)
+### 1. `sa:PersonCharacterShape` (Person Character Profile)
+
+**Target Class:** `schema:Person` (or `sa:Person`)
+
+**Purpose:** Validates narrative character profiles for setting entities—organization members, leaders, notable figures, and other NPCs. Distinct from playable character sheets (which use `character:CharacterShape`); focuses on narrative depth, thematic content, and relational dynamics.
+
+**File:** `person-character.ttl`
+
+#### Required Properties
+- `rdfs:label` → xsd:string (character name; primary identifier)
+- `sa:identity` → nested `sa:PersonIdentityShape` (role/title + identity statement)
+- `schema:description` → xsd:string (main narrative description)
+
+#### Optional Properties
+- `sa:race` → xsd:string (race/species; can reference races.json entries)
+- `sa:thematics[]` → xsd:string (thematic keywords/tonal descriptors)
+- `sa:nature{}` → flexible object (appearance, demeanor, essence, psychological profile, etc.)
+- `sa:mechanics{}` → flexible object (philosophy, methods, strategy, capabilities, etc.)
+- `sa:relationships{}` → flexible object (maps character/role names to relational descriptions)
+- `sa:quotes[]` → xsd:string (character quotes, monologues, thematic statements)
+
+**Use Cases:**
+- Setting organization members (e.g., Concordat Trading House Seat-Holders: Mira Strand, Kadesh Morvan, Selene Kross)
+- Cult leaders and antagonists (e.g., Xanthia the Everliving)
+- Distributed entities and hiveminds (e.g., Brug's hivemind consciousness)
+- Notable NPCs in worldbuilding documents
+
+**Example Structure:**
+```json
+{
+  "@context": { /* RDF namespaces */ },
+  "type": "Person",
+  "label": "Character Name",
+  "sa:race": "Elf",
+  "sa:identity": {
+    "label": "Role or Epithet",
+    "description": "Single-sentence identity statement"
+  },
+  "schema:description": "Main narrative paragraph describing character...",
+  "sa:thematics": ["keyword1", "keyword2"],
+  "sa:nature": {
+    "appearance": "...",
+    "psychology": "..."
+  },
+  "sa:mechanics": {
+    "philosophy": "...",
+    "strategy": "..."
+  },
+  "sa:relationships": {
+    "organization_member": "Relationship description...",
+    "ally_character": "Dynamic description..."
+  },
+  "sa:quotes": ["Quote 1", "Quote 2"]
+}
+```
+
+---
+
+### 2. `character:CharacterShape` (Main Character Sheet)
 
 **Target Class:** `character:Character`
 
@@ -127,7 +193,21 @@ All of the following are marked as optional (`sh:maxCount 1` or greater, no `sh:
 
 ---
 
-### 2. `sa:AbilityScoresShape` (Sub-Shape)
+### 2. `sa:PersonIdentityShape` (Sub-Shape)
+
+**Purpose:** Validates the identity sub-structure within PersonCharacter entities, capturing role/title and essential identity statement.
+
+**Constraints:**
+- `rdfs:label` → xsd:string (required; character's title, role, or epithet)
+- `schema:description` → xsd:string (required; single-sentence identity statement)
+
+**Typical Values:**
+- Labels: "The Liquidator", "The Fortress Keeper", "The Vulture", "The Apparatus", "The Everliving"
+- Descriptions: Brief statements establishing primary function or significance (e.g., "Lich-queen achieving godhood through faith", "Chief Acquisition Officer; contract architect")
+
+---
+
+### 3. `sa:AbilityScoresShape` (Sub-Shape)
 
 **Purpose:** Validates ability score values (STR, DEX, CON, INT, WIS, CHA).
 
@@ -143,7 +223,7 @@ All of the following are marked as optional (`sh:maxCount 1` or greater, no `sh:
 
 ---
 
-### 3. `sa:CharacterSkillShape` (Sub-Shape)
+### 4. `sa:CharacterSkillShape` (Sub-Shape)
 
 **Purpose:** Validates individual skill entries (name, ability, proficiency).
 
@@ -164,7 +244,7 @@ Stealth (DEX), Survival (WIS)
 
 ---
 
-### 4. Future Sub-Shapes (Placeholders)
+### 5. Future Sub-Shapes (Placeholders)
 
 #### `sa:CharacterFeatureShape` (character-feature.ttl)
 - `rdfs:label` → Feature name

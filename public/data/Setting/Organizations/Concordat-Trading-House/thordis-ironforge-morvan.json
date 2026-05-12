@@ -1,28 +1,40 @@
 {
   "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
     "label": "rdfs:label",
-    "description": "https://schema.org/description",
-    "type": "@type",
-    "CreativeWork": "https://schema.org/CreativeWork"
+    "description": "schema:description",
+    "type": "@type"
   },
-  "type": "CreativeWork",
+  "type": "Person",
   "label": "Thordis Ironforge-Morvan: The Duchess",
-  "description": [
-    "Thordis is not the power behind the throne. She is the throne itself, and everyone is politely pretending not to notice. She is a dwarven Duchess approaching her 400th year. She is an exceptional wizard specializing in life-extension magic. She has been married to Kadesh Morvan for 107 years. She is the only person in the sector who can keep him alive. This fact shapes every negotiation, every strategic decision, every moment of their shared existence together.",
-    "",
-    "Identity & The Masquerade: Thordis allows—encourages, even—the assumption that she is ornamental. The trophy wife. Beautiful, glamorous, charming, content to stand beside her much-smaller husband and radiate elegant approval while he conducts business. She dresses in elaborate gowns sized for dwarven proportions, wears crowns that would seem garish on anyone less substantial, and performs the role with genuine enjoyment. She is exceptionally good at it. What makes her dangerous is that she is not pretending to be less intelligent than she is—she is genuinely playing a game she finds more amusing than direct power. She has already won the only leverage that matters. Everyone else is just moving tokens around.",
-    "",
-    "The Magical Dependency: Kadesh is 200 years old. He is a halfling in a halfling body, kept alive by archanotech and desperation and love. But the technologies plateau. The rejuvenation treatments reach their limit. Every seven years, Kadesh requires a specific, complex, dangerous spell—a chronomantic ritual that extends his biological timeline, rewrites his cellular degradation, forces his aging back into lower gears. Only Thordis can cast it. She is the only one alive who knows the full procedure. She has never written it down. She refuses to teach it to anyone, even their children. This is not cruelty. This is math. She wants to be irreplaceable. She wants Kadesh dependent on her presence, not just her love. She wants to ensure that he will never leave, never betray, never prioritize anything over their marriage.",
-    "",
-    "Strategic Brilliance: What Kadesh understands intellectually, Thordis understands instinctively: the Morvan family's stability is not built on Kadesh's long-term thinking or his consistent ethics. It is built on the simple fact that Thordis exists and is willing to keep him alive. Every promise Kadesh makes is a promise made by a man who knows his wife could end him with a gesture. Every agreement he honors is honored by someone whose alternatives are death or total submission. The Morvan name carries weight because Thordis has decided it should. She could unmake it tomorrow. She chooses not to. This makes Thordis the most valuable asset the Concordat has ever produced.",
-    "",
-    "The Theater: Despite (or because of) the power dynamics, Kadesh and Thordis genuinely enjoy each other. They have been married 107 years. They speak in codes, dress up for each other, attend Concordat functions as a perfectly coordinated performance—the small, brilliant halfling in his archanotech, the grand dwarven duchess in her ceremonial robes. They trade quips that sound innocuous to outsiders but carry edges only they understand. They are, by any meaningful measure, in love. This love is complicated by the fact that Thordis can end Kadesh's existence with a word, and they both know it, and they have built something beautiful on top of that fundamental truth.",
-    "",
-    "The Crisis of Faith: In recent years, Thordis has noticed something that troubles her more than she admits: Kadesh is tired. He has lived a very long time. The archanotech that once made him proud (visible, beautiful, a statement of technological triumph) now feels to him like a cage. And worse, he has begun asking her about the Faith of the Everliving. What they promise. Whether the spells would be simpler. Whether she might consider converting. Thordis understands what this means: her husband is beginning to wonder if there is an escape from her magic. An escape from her. This thought does not anger her. It frightens her. Not because she fears losing him, but because if he chooses the Faith's promise over her magic, she loses the only thing that has made her feel mortal—the knowledge that someone depends on her absolutely. She has never told Kadesh this. She may never tell him. But it is changing how she looks at the expansion of the Faith. It is changing how she reads intelligence reports. It is changing whether she truly wants Arcech to remain stable, or whether she might benefit from destabilization—a reminder that there are no eternal promises except the ones we bind to each other.",
-    "",
-    "Visual Identity: Thordis dresses as she pleases—which, fortunately, means she dresses beautifully. Her gowns are proportioned for her massive frame and tailored in deep purples, golds, and silvers. She wears her gray hair in elaborate braids adorned with gems and arcane foci. Her hands are calloused from spell-weaving (she refuses to let magic soften her). She moves with the casual certainty of someone who knows she is the largest, most powerful person in any room. Beside Kadesh, she looks like a Duchess escorting a particularly impressive decoration. This is exactly how she wants to appear. In private, when they are alone, she sometimes removes the gowns and the braids and sits with her husband in simple clothes, and in those moments the full weight of what they are to each other becomes visible.",
-    "",
-    "Threat Assessment: Thordis Ironforge-Morvan is potentially the most dangerous asset in the Concordat's employ, though she is not employed by anyone but herself. She is not ambitious in the traditional sense—she does not seek to expand her power or accumulate wealth or reshape the sector. But she is willing to do any of those things if it means preserving her marriage, protecting her husband, or ensuring that Kadesh understands who holds the real power. The Faith of the Everliving offers eternal life to believers. Thordis offers eternal life to one specific halfling on the condition of absolute devotion. Whether those terms remain acceptable to Kadesh—and whether Thordis can tolerate the possibility that they might not—may be the single most destabilizing factor in Arcech's future."
+  "sa:race": "Dwarf",
+  "sa:identity": {
+    "label": "The Duchess",
+    "description": "A dwarven Duchess approaching her 400th year. An exceptional wizard specializing in life-extension magic. Married to Kadesh Morvan for 107 years. The only person in the sector who can keep him alive."
+  },
+  "schema:description": "Thordis is not the power behind the throne. She is the throne itself, and everyone is politely pretending not to notice. She allows—encourages, even—the assumption that she is ornamental. The trophy wife. Beautiful, glamorous, charming, content to stand beside her much-smaller husband and radiate elegant approval while he conducts business. She is exceptionally good at it. What makes her dangerous is that she is not pretending to be less intelligent than she is—she is genuinely playing a game she finds more amusing than direct power. She has already won the only leverage that matters.",
+  "sa:nature": {
+    "appearance": "A dwarven woman, fully 240 centimeters tall, organic, unaugmented, approaching her 400th year with the patient grace of a woman who has watched empires rise and fall. She dresses in elaborate gowns sized for dwarven proportions, wears crowns that would seem garish on anyone less substantial, and performs her role with genuine enjoyment.",
+    "age": "Approaching 400 years old. Ancient by mortal standards. Still in her intellectual and magical prime.",
+    "composition": "Unaugmented. Pure organic. Magical preservation through her own spellcraft."
+  },
+  "sa:mechanics": {
+    "life_extension_magic": "The only person alive who can cast the chronomantic ritual that keeps Kadesh alive. Every seven years, Kadesh requires a specific, complex, dangerous spell that extends his biological timeline, rewrites his cellular degradation, forces his aging back into lower gears. Only Thordis can cast it.",
+    "ritual_dependency": "She has never written the spell down. She refuses to teach it to anyone, even their children. This is not cruelty. This is math. She wants to be irreplaceable. She wants Kadesh dependent on her presence, not just her love.",
+    "magical_specialization": "Chronomancy and life-extension magic. The greatest practitioner in the sector."
+  },
+  "sa:relationships": {
+    "kadesh_morvan": "Married for 107 years. They genuinely enjoy each other. They speak in codes, dress up for each other, attend Concordat functions as a perfectly coordinated performance. They trade quips that sound innocuous to outsiders but carry edges only they understand. They are, by any meaningful measure, in love. This love is complicated by the fact that Thordis can end Kadesh's existence with a word, and they both know it.",
+    "morvan_family": "Wife to Kadesh. Mother to their children. Grandmother training the next generation. Her role is secure. Her power is absolute beneath the veneer of ornament.",
+    "faith_of_everliving": "Kadesh has begun asking her about the Faith. What they promise. Whether the spells would be simpler. Whether she might consider converting. This troubles her more than she admits. If he chooses the Faith's promise over her magic, she loses the only thing that has made her feel mortal—the knowledge that someone depends on her absolutely."
+  },
+  "sa:quotes": [
+    "A clone is as real as it needs to be.",
+    "I keep him alive because I choose to. And that choice—that is where my power lives."
   ]
 }
+

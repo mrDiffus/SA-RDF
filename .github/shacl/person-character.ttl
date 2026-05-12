@@ -1,0 +1,131 @@
+@prefix sh:     <http://www.w3.org/ns/shacl#> .
+@prefix rdfs:   <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa:     <https://stellararcana.org/> .
+@prefix schema: <https://schema.org/> .
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Person Character Shape
+#  Validates narrative character profiles for organizations and setting lore
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:PersonCharacterShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Person ;
+    rdfs:comment "Validates Person character entities with identity, narrative description, and optional thematic/mechanical sections. Primarily used for setting organization members (NPCs, leaders, notable figures). LLM generation instruction: create fully-detailed character profiles with required identity (role/title + brief identity statement) and schema:description (main narrative). Populate optional sections (thematics, nature, mechanics, relationships, quotes) to enrich character depth as appropriate. All prose should be narrative and evocative." ;
+    rdfs:label "Person Character Shape" ;
+
+    # ─────────────────────────────────────────────────────────────────────────
+    #  REQUIRED PROPERTIES
+    # ─────────────────────────────────────────────────────────────────────────
+
+    # Character name — unique identifier
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The character's name, used as primary identifier and display label." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Character identity — role, title, and brief identity statement
+    sh:property [
+        sh:path     sa:identity ;
+        sh:name     "identity" ;
+        sh:description "Structured identity containing the character's role/title and brief identity statement." ;
+        sh:node     sa:PersonIdentityShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Main character description — core narrative
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "Primary narrative description of the character. Establishes personality, background, and significance. May be a single comprehensive paragraph or structured narrative string." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # ─────────────────────────────────────────────────────────────────────────
+    #  OPTIONAL PROPERTIES
+    # ─────────────────────────────────────────────────────────────────────────
+
+    # Race/species — optional
+    sh:property [
+        sh:path     sa:race ;
+        sh:name     "race" ;
+        sh:description "Character's race or species (e.g., Elf, Dwarf, Draegloth). Should match entries in public/data/races.json if referencing canonical races." ;
+        sh:datatype xsd:string ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Thematic keywords/descriptors — optional, repeatable
+    sh:property [
+        sh:path     sa:thematics ;
+        sh:name     "thematics" ;
+        sh:description "Array of thematic keywords or tonal descriptors (e.g., 'immortality', 'predation', 'stability'). Helps categorize character archetype and narrative focus." ;
+        sh:datatype xsd:string ;
+    ] ;
+
+    # Nature section — optional, flexible object
+    sh:property [
+        sh:path     sa:nature ;
+        sh:name     "nature" ;
+        sh:description "Object containing keys describing the character's nature, composition, appearance, psychological profile, and existence. Structure is flexible and context-dependent; examples include 'appearance', 'demeanor', 'essence', 'immortality_mechanism'." ;
+    ] ;
+
+    # Mechanics section — optional, flexible object
+    sh:property [
+        sh:path     sa:mechanics ;
+        sh:name     "mechanics" ;
+        sh:description "Object containing keys describing the character's operational methods, philosophy, strategies, and how they function within their domain. Examples include 'method', 'philosophy', 'long_term_strategy', 'resurrection_capability'." ;
+    ] ;
+
+    # Relationships section — optional, flexible object
+    sh:property [
+        sh:path     sa:relationships ;
+        sh:name     "relationships" ;
+        sh:description "Object mapping character names or roles to descriptions of relational dynamics, allegiances, and connections. Examples include 'family', 'allies', 'enemies', 'dependencies', relationship_name: 'description of dynamic'." ;
+    ] ;
+
+    # Quotes section — optional, repeatable
+    sh:property [
+        sh:path     sa:quotes ;
+        sh:name     "quotes" ;
+        sh:description "Array of character quotes, monologues, or thematic statements in first or third person. Captures voice and philosophical perspective." ;
+        sh:datatype xsd:string ;
+    ] .
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Person Identity Sub-Shape
+#  Validates identity objects with role/title and identity statement
+# ─────────────────────────────────────────────────────────────────────────────
+
+sa:PersonIdentityShape
+    a sh:NodeShape ;
+    rdfs:comment "LLM generation instruction: within sa:identity, create two properties: label (the character's title or role, e.g., 'The Architect' or 'Chief Technician') and description (a single-sentence identity statement capturing their essence or significance)." ;
+    rdfs:label "Person Identity Sub-Shape" ;
+
+    # Role/title — required
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "Character's title, role, or epithet (e.g., 'The Stabilizer', 'The Vulture', 'The Apparatus'). Concise identifier of primary function or archetype." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    # Identity statement — required
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "Single-sentence or brief statement capturing the character's essential nature, role, or significance." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .

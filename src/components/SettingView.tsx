@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Globe, Building2, ChevronRight, X } from 'lucide-react';
+import { Globe, Building2, ChevronRight, X, Users } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface Planet {
@@ -9,10 +9,18 @@ interface Planet {
   keywords?: string[];
 }
 
+interface Character {
+  filename: string;
+  label: string;
+  identity?: { label: string; description: string };
+}
+
 interface Organization {
   label: string;
+  folderName: string;
   description: string;
   roles?: { label: string; description: string | string[]; requiredRenown?: number }[];
+  characters?: Character[];
 }
 
 interface SettingData {
@@ -24,6 +32,22 @@ function resolveDataPath(path: string): string {
   const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
   return `${import.meta.env.BASE_URL}${normalizedPath}`;
 }
+
+// Character files to load for each organization (excluding org definition files)
+const CHARACTER_FILES_BY_ORG: Record<string, string[]> = {
+  'Armanitech': [],
+  'BrugsGobbos': ['brug.json'],
+  'Concordat-Trading-House': ['mira-strand.json', 'thordis-ironforge-morvan.json', 'kadesh-morvan.json', 'dorn-bellisarius.json', 'kael-ironbound.json', 'petra-shinn.json', 'selene-kross.json'],
+  'Cult-of-the-Unbroken': ['xanthia-everliving.json', 'drexl-herald.json'],
+  'Deeprunners-Union': [],
+  'Everliving-Faith': [],
+  'Exodian-Church': [],
+  'Forge-Syndicate': [],
+  'House-Valorian': [],
+  'Luminous-Synthesis': [],
+  'Velvet-Mask': [],
+  'Verdant-Collective': [],
+};
 
 async function fetchSettingData(): Promise<SettingData> {
   const orgFolders = {
@@ -44,8 +68,34 @@ async function fetchSettingData(): Promise<SettingData> {
   const [arrur, arcech, ...orgs] = await Promise.all([
     fetch(resolveDataPath('/data/Setting/Planets/Arrur/arrur.json')).then(r => r.json()),
     fetch(resolveDataPath('/data/Setting/Planets/Arcech/arcech.json')).then(r => r.json()),
-    ...Object.entries(orgFolders).map(([folder, filename]) =>
-      fetch(resolveDataPath(`/data/Setting/Organizations/${folder}/${filename}.json`)).then(r => r.json()).catch(() => null)
+    ...Object.entries(orgFolders).map(([displayName, folderName]) =>
+      fetch(resolveDataPath(`/data/Setting/Organizations/${displayName}/${folderName}.json`))
+        .then(r => r.json())
+        .then(async (orgData) => {
+          // Load character files for this organization
+          const charFiles = CHARACTER_FILES_BY_ORG[displayName] || [];
+          const characters = await Promise.all(
+            charFiles.map(async (charFile) => {
+              try {
+                const charData = await fetch(resolveDataPath(`/data/Setting/Organizations/${displayName}/${charFile}`)).then(r => r.json());
+                return {
+                  filename: charFile.replace('.json', ''),
+                  label: charData['label'] || charData['rdfs:label'] || charFile,
+                  identity: charData['sa:identity'] || charData['sa:identity'],
+                };
+              } catch {
+                return null;
+              }
+            })
+          );
+          
+          return {
+            ...orgData,
+            folderName: displayName,
+            characters: characters.filter((c) => c !== null),
+          };
+        })
+        .catch(() => null)
     ),
   ]);
 
@@ -58,12 +108,14 @@ async function fetchSettingData(): Promise<SettingData> {
 
   const toOrg = (raw: Record<string, unknown>): Organization => ({
     label: raw['label'] as string,
+    folderName: raw['folderName'] as string,
     description: raw['description'] as string ?? '',
     roles: (raw['role'] as Record<string, unknown>[] | undefined)?.map((r) => ({
       label: r['label'] as string,
       description: r['description'] as string | string[],
       requiredRenown: r['requiredRenown'] as number | undefined,
     })),
+    characters: raw['characters'] as Character[] | undefined,
   });
 
   return {
@@ -74,9 +126,10 @@ async function fetchSettingData(): Promise<SettingData> {
 
 interface SettingViewProps {
   onNavigateToPlanet: (planetName: string) => void;
+  onNavigateToCharacter: (organizationName: string, characterSlug: string) => void;
 }
 
-export default function SettingView({ onNavigateToPlanet }: SettingViewProps) {
+export default function SettingView({ onNavigateToPlanet, onNavigateToCharacter }: SettingViewProps) {
   const [data, setData] = useState<SettingData | null>(null);
   const [selectedOrg, setSelectedOrg] = useState<Organization | null>(null);
 
@@ -242,6 +295,40 @@ export default function SettingView({ onNavigateToPlanet }: SettingViewProps) {
                             {Array.isArray(role.description) ? role.description.join(' ') : role.description}
                           </p>
                         </div>
+                      ))}
+                    </div>
+                  </section>
+                )}
+
+                {selectedOrg.characters && selectedOrg.characters.length > 0 && (
+                  <section className="space-y-4">
+                    <h4 className="text-sm text-zinc-500 uppercase font-bold tracking-widest border-b border-zinc-800 pb-2 flex items-center gap-2">
+                      <Users className="w-4 h-4" /> Notable Members
+                    </h4>
+                    <div className="space-y-3">
+                      {selectedOrg.characters.map((char) => (
+                        <motion.button
+                          key={char.filename}
+                          type="button"
+                          whileHover={{ scale: 1.02, x: 4 }}
+                          onClick={() => {
+                            onNavigateToCharacter(selectedOrg.folderName, char.filename);
+                            setSelectedOrg(null);
+                          }}
+                          className="w-full text-left bg-zinc-800/30 hover:bg-zinc-800/60 border border-zinc-800 hover:border-orange-700/50 rounded-lg p-4 transition-colors group"
+                        >
+                          <div className="flex items-center justify-between gap-3">
+                            <div className="flex-1">
+                              <h5 className="font-bold text-white group-hover:text-orange-300 transition-colors">{char.label}</h5>
+                              {char.identity?.label && (
+                                <p className="text-[12px] text-orange-500 uppercase font-bold tracking-widest mt-1">
+                                  {char.identity.label}
+                                </p>
+                              )}
+                            </div>
+                            <ChevronRight className="w-4 h-4 text-zinc-600 group-hover:text-orange-400 transition-colors" />
+                          </div>
+                        </motion.button>
                       ))}
                     </div>
                   </section>

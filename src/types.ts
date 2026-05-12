@@ -279,3 +279,55 @@ export interface CharacterSheet {
 }
 
 export type CharacterSheetInput = Omit<CharacterSheet, 'id' | 'createdAt' | 'updatedAt' | 'calculatedStats'>;
+
+// Narrative Character (NPC/Setting Entities)
+export interface PersonIdentity {
+  label: string; // Role/title (e.g., "The Restructor", "Chief Acquisition Officer")
+  description: string; // Brief identity statement
+}
+
+export interface PersonThematics {
+  [key: string]: string; // Key narrative themes and properties
+}
+
+export interface PersonSection {
+  [key: string]: string | Record<string, string>; // Flexible structure for nature/mechanics/relationships
+}
+
+export interface PersonCharacter {
+  // Required fields (support both expanded and abbreviated property names)
+  'rdfs:label'?: string; // Character name (expanded RDF form)
+  'label'?: string; // Character name (abbreviated form from JSON-LD)
+  'sa:identity': PersonIdentity; // Role/title + identity description
+  'schema:description': string | string[]; // Main narrative description(s)
+  
+  // Optional fields
+  'sa:race'?: string; // Character race
+  'sa:thematics'?: string[]; // Key thematic elements
+  'sa:nature'?: PersonSection; // Nature details (composition, immortality, memory, fear, etc.)
+  'sa:mechanics'?: PersonSection; // Mechanical details (abilities, protocols, resurrection, etc.)
+  'sa:relationships'?: PersonSection; // Relationship descriptions
+  'sa:quotes'?: string[]; // Memorable quotes or statements
+  'sa:affiliatedOrganization'?: string; // Parent organization IRI or slug
+  
+  // Common RDF/JSON-LD fields
+  '@context'?: Record<string, string>;
+  '@id'?: string;
+  'type'?: string;
+}
+
+// Raw JSON-LD representation from fetched files
+export interface RawPersonCharacter {
+  '@context': Record<string, string>;
+  'type': string;
+  'label': string;
+  'description': string | string[] | Record<string, string | string[]>;
+  'identity'?: PersonIdentity;
+  'race'?: string;
+  'thematics'?: string[];
+  'nature'?: Record<string, string | Record<string, string>>;
+  'mechanics'?: Record<string, string | Record<string, string>>;
+  'relationships'?: Record<string, string | Record<string, string>>;
+  'quotes'?: string[];
+  [key: string]: any; // Allow additional RDF properties
+}

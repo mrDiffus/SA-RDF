@@ -1,34 +1,43 @@
 {
   "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
     "label": "rdfs:label",
-    "description": "https://schema.org/description",
-    "type": "@type",
-    "CreativeWork": "https://schema.org/CreativeWork"
+    "description": "schema:description",
+    "type": "@type"
   },
-  "type": "CreativeWork",
+  "type": "Person",
   "label": "Kadesh Morvan: The Fortress Keeper",
-  "description": [
-    "Kadesh Morvan built the Concordat's reputation on something radical: consistency. For 30 years, the Morvan family has been the bedrock against volatility. When markets panic, Morvan stabilizes. When competitors war, Morvan arbitrates. When the sector trembles, Morvan remains. He is not the richest Seat-Holder. He is the one other traders trust when every other hand is reaching for a knife. He is 67 years old. His children are already in secondary command; his grandchildren train in trade theory. The Morvan family will persist long after current Seat-Holders chase their fortunes into the void.",
-    "",
-    "Identity & Philosophy: Kadesh operates on a singular principle: the Concordat exists because it provides stability. Stability creates profit. Profit enables growth. Growth creates dynasty. He was born into a merchant family during the sector's territorial wars. He watched his parents lose everything to a single embargo. He swore he would never build something that could be burned in six months. Every decision he makes is filtered through a 40-year lens. Will this strengthen the family in 2066? Will my grandchildren curse my name for this choice? Only then does it merit consideration.",
-    "",
-    "Current Operations: The Faith of the Everliving expands, but not toward Arcech. Not yet. Kadesh reads the pattern: every stable sector eventually becomes a mission. When the Faith arrives—and it will—Arcech will need a neutral port, a reliable supplier, a broker everyone trusts. Kadesh has positioned the Morvan family as the indispensable lynchpin. He has quietly accumulated insurance contracts, supply agreements, and diplomatic relationships with mining colonies, research stations, and mercenary brigades. When chaos comes, they will come to Morvan. When they come to Morvan, he will have something to sell them.",
-    "",
-    "The Fortress Doctrine: The Steadfast is not a trading vessel—it is an armored repository. Heavily defended, antiquated in some ways, optimized for protection over speed. Morvan understands that in chaos, safety is currency. He operates a guaranteed-delivery contract unlike anything the Concordat offers: Morvan ships your goods, or Morvan pays replacement value in full. No exceptions. No contracts with escape clauses. This costs him. It also makes him the only trader smaller merchants trust with their last shipment when everything else has burned.",
-    "",
-    "The Arrur Question: The Faith of the Everliving's expansion on Arrur troubles Kadesh deeply. Not because it is morally wrong—he does not traffic in moral arguments—but because it is destabilizing. Destabilization is inefficient. Inefficiency spreads. If Arrur burns, refugees will flood Arcech. Arcech will struggle. Concordat trade will suffer. So Morvan is making quiet overtures: If the Faith arrives at Arcech, will they deal with him? Can he broker peace rather than conquest? He is not naive enough to believe in his own proposals (the Faith cannot be negotiated with). But he is pragmatic enough to try. And if negotiation fails, at least he will have established himself as the broker—which is worth something when military forces require logistics.",
-    "",
-    "Legacy & Succession: Morvan's daughter KETHRA heads logistics for the family. His son YAEL oversees diplomatic negotiations. His oldest grandson CORVUS trains in long-term strategy. Each of them knows that they inherit not just credits, but responsibility. The Morvan name carries weight because Morvan fulfills every promise, even the ones that cost money. This is not virtue—it is branding. And the brand is worth more than any single margin.",
-    "",
-    "Visual Identity: Kadesh is visibly, defiantly non-human. At 115 centimeters tall, he is unmistakably halfling. But his body is a masterwork of archanotech—visible filigree implants run down both arms in patterns of polished mother-of-pearl. Synthetic joints articulate with mechanical precision where age would have seized organic ones. His eyes are enhancement-augmented, capable of reading markets across light-years. He dresses impeccably in tailored grays and deep blues that frame his archanotech like jewelry (which, to him, it is). He wears this fusion of flesh and machine with absolute pride. He is 200 years old. He looks like he will live forever—and he has learned that looking like you will live forever is its own kind of armor.",
-    "",
-    "His Wife & Anchor: Kadesh has been married to THORDIS IRONFORGE-MORVAN for 107 years. She is a dwarven Duchess—fully 240 centimeters tall, organic, unaugmented, and approaching her 400th year with the patient grace of a woman who has watched empires rise and fall and decided they were not worth rushing. Where Kadesh is polished steel and calculation, Thordis is ancient granite and power. She is an exceptional wizard, specializing in chronomancy and life-extension magic. She is the only person in the sector capable of casting the spells that keep Kadesh alive. This is not accident. This is by design.",
-    "",
-    "The marriage operates on a sophisticated theater: Thordis allows herself to be cast as the trophy wife—glamorous, beautiful, seemingly ornamental beside her diminutive husband. She dresses in elaborate gowns and crowns crafted for her proportions, plays hostess with lethal grace, and maintains the public fiction that Kadesh is the brain and she is the beauty. In truth, she is the only leverage Kadesh requires. He cannot leave her. He cannot betray her. He cannot survive without her. This makes her the most dangerous member of the Morvan family, which is precisely why she enjoys the theater so much. They both do. They dress up for each other. They speak in coded references about legacy and patience that mean something different when one partner can quite literally end the other partner's extended lifespan with a word.",
-    "",
-    "The Creeping Shadow: Kadesh has spent the last 15 years accumulating intelligence on the Faith of the Everliving. His information networks have reported on Drexl's movements, Xanthia's theology, the expansion patterns. And in those reports, he has encountered a thought that increasingly troubles the ancient halfling: the Faith offers eternal life. Not through technology and desperation and a wife's love-bound magic. Not through rejuvenation treatments costing fortunes every five years. But through conversion. Through faith. Through simple submission. Kadesh does not believe in Xanthia. But he is beginning—quietly, in moments he conceals even from Thordis—to wonder if his entire 200-year strategy has been rendered obsolete by something he cannot buy, cannot trade for, cannot negotiate. This doubt does not change his behavior. It only deepens the color of his eyes when he reads reports about Arrur.",
-    "",
-    "Threat Assessment: Kadesh Morvan is not a threat. He is a stabilizing force, which in a confederation of predators is simultaneously irrelevant and essential. He cannot outpace Mira in profiteering or outmaneuver Selene in leverage-building. But he persists. And when the sector experiences its next major shock, when every other Seat-Holder is scrambling, Morvan will still be here, still accepting contracts, still delivering goods. This persistence is the only thing he guarantees, and it is enough. What complicates this assessment is the growing question of whether Kadesh still believes in his own persistence, or whether he is simply too dependent on Thordis to admit what increasing parts of him already fears: that 200 years of careful planning might be overturned by faith in a single season."
+  "sa:race": "Halfling",
+  "sa:identity": {
+    "label": "The Fortress Keeper",
+    "description": "Built the Concordat's reputation on consistency. For 30 years, Morvan stabilizes markets, arbitrates disputes, and remains steady when others panic. The one other traders trust when hands reach for knives. 67 years old. Grandchildren train in trade theory. The Morvan family will persist long after others chase fortunes into the void."
+  },
+  "schema:description": "Kadesh Morvan is the Concordat's bedrock against volatility. When markets panic, Morvan stabilizes. When competitors war, Morvan arbitrates. When the sector trembles, Morvan remains. He is not the richest Seat-Holder, but he is the one other traders trust absolutely. At 67 years old—though his body appears far younger due to archanotech and life-extension magic—he has built a family empire designed to outlast him. His philosophy is simple: the Concordat exists because it provides stability. Stability creates profit. Profit enables growth. Growth creates dynasty.",
+  "sa:nature": {
+    "age_paradox": "200 years old but appears 60-70 through archanotech implants and regular life-extension rituals. Defiantly non-human at 115 cm tall. His body is a masterwork of archanotech—polished mother-of-pearl filigree implants run down both arms in mechanical patterns. Synthetic joints articulate with precision. Enhancement-augmented eyes capable of reading markets across light-years.",
+    "appearance": "Dressed impeccably in tailored grays and deep blues that frame his archanotech like jewelry. He wears this fusion of flesh and machine with absolute pride—it is a statement that he will outlast ordinary flesh.",
+    "philosophy": "Built during territorial wars; watched parents lose everything to embargo. Swears no quick extinction: Every decision filtered through 40-year lens. Will this strengthen the family in 2066? Only then does it merit consideration.",
+    "psychological_landscape": "Growing existential doubt: the Faith offers eternal life through simple submission. Kadesh's 200-year strategy of careful planning may be rendered obsolete by faith. This doubt does not change behavior—only deepens the color of his eyes when reading reports about Arrur."
+  },
+  "sa:mechanics": {
+    "fortress_doctrine": "The Steadfast is not a trading vessel—it is an armored repository. Heavily defended, prioritizes protection over speed. Operates guaranteed-delivery contracts: Morvan ships goods or pays replacement value in full. No exceptions. No escape clauses. This costs him. This makes him the only trader smaller merchants trust with their final shipment.",
+    "current_operations": "Positioning the Morvan family as indispensable lynchpin before the Faith of the Everliving arrives at Arcech. Quietly accumulating insurance contracts, supply agreements, diplomatic relationships with mining colonies, research stations, mercenary brigades. When chaos comes, they come to Morvan. When they come to Morvan, he has something to sell.",
+    "succession_structure": "Daughter Kethra heads logistics. Son Yael oversees diplomatic negotiations. Oldest grandson Corvus trains in long-term strategy. Each inherits not just credits but responsibility. The Morvan name carries weight because Morvan fulfills every promise, even the expensive ones."
+  },
+  "sa:relationships": {
+    "thordis_ironforge_morvan": "Wife of 107 years. Dwarven Duchess, 240 cm tall, approaching her 400th year. Exceptional chronomancy wizard—the only person capable of casting spells keeping Kadesh alive. This is by design. Theater: cast as trophy wife, ornamental beside diminutive husband. Truth: she is his only leverage. He cannot leave, betray, or survive without her. This makes her the most dangerous member of the family.",
+    "marriage_dynamic": "Operate on sophisticated theater. They dress up for each other. Speak in coded references about legacy and patience that mean different things when one partner controls the other's lifespan. The wife-love-bound magic that extends his years is also a gilded cage.",
+    "competition": "Watches Mira's liquidation with understanding (good for sector destabilization). Watches Selene's positioning with wariness (trying to acquire minority stakes in Morvan operations). Both are problems he must absorb.",
+    "faith_question": "Making quiet overtures to the Faith of the Everliving: If they arrive at Arcech, will they deal with him? Can he broker peace? He is pragmatic enough to try, even knowing negotiation will fail. At least he will establish himself as broker—valuable when militaries require logistics.",
+    "threat_assessment": "The Faith offers eternal life through faith. Kadesh offers it through desperate technology and a wife's love. Which is enough anymore?"
+  },
+  "sa:quotes": [
+    "The Concordat exists because it provides stability. Stability creates profit. Profit enables growth. Growth creates dynasty.",
+    "I cannot outpace Mira in profiteering or outmaneuver Selene in leverage. But I persist. And when the next shock comes, Morvan will still be here.",
+    "My entire 200-year strategy may be rendered obsolete by something I cannot buy, cannot trade for, cannot negotiate."
   ]
 }
