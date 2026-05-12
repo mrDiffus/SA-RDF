@@ -1,4 +1,5 @@
 node_modules/
+old-data/
 build/
 dist/
 coverage/

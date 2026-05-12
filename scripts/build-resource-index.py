@@ -46,7 +46,7 @@ class ResourceIndexBuilder:
             # Handle @graph array
             if isinstance(data.get('@graph'), list):
                 items = data['@graph']
-            elif data.get('@type') or data.get('rdfs:label'):
+            elif data.get('@type') or data.get('type') or data.get('rdfs:label') or data.get('label'):
                 items = [data]
             else:
                 return []
@@ -55,18 +55,27 @@ class ResourceIndexBuilder:
                 if not isinstance(item, dict):
                     continue
                 
+                # Handle both @type and type (compact form)
+                item_type = item.get('@type') or item.get('type') or 'unknown'
+                # Handle both rdfs:label and label (compact form)
+                item_label = item.get('rdfs:label') or item.get('label') or item.get('name') or item.get('id') or '(unlabeled)'
+                
                 resource = {
                     'file': relative_path,
-                    '@type': item.get('@type', 'unknown'),
-                    'rdfs:label': item.get('rdfs:label') or item.get('name') or item.get('id') or '(unlabeled)',
+                    '@type': item_type,
+                    'rdfs:label': item_label,
                     '@id': item.get('@id'),
                     'predicates': [k for k in item.keys() if not k.startswith('@')]
                 }
                 
-                # Include key predicates
+                # Include key predicates (check both expanded and compact forms)
                 if 'sa:description' in item:
                     desc = item['sa:description']
                     resource['sa:description'] = desc[:100] + '...' if len(desc) > 100 else desc
+                elif 'description' in item:
+                    desc = item['description']
+                    if isinstance(desc, str):
+                        resource['description'] = desc[:100] + '...' if len(desc) > 100 else desc
                 if 'sa:requirements' in item:
                     resource['sa:requirements'] = item['sa:requirements']
                 if 'sa:actionType' in item:

@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "type": "@type",
+    "Place": "https://schema.org/Place",
+    "description": "https://schema.org/description",
+    "containsPlace": {
+      "@id": "https://schema.org/containsPlace",
+      "@container": "@list"
+    },
+    "containedInPlace": {
+      "@id": "https://schema.org/containedInPlace",
+      "@type": "@id"
+    },
+    "attitude": "https://stellararcana.org/attitude",
+    "descriptionSegment": {
+      "@id": "https://stellararcana.org/descriptionSegment",
+      "@container": "@list"
+    }
+  },
+  "type": "Place",
+  "label": "Southern Mountains",
+  "description": [
+    "A vast, forbidding range at Arrur's southern extremity, infamous as a dead zone where magic and advanced technology degrade or fail entirely. Ancient, jagged peaks shrouded in perpetual storms and toxic ash clouds.",
+    "Geography: Endless towering precipices, magnetic anomalies, and rifts that swallow light. The region is virtually impassable to aerial vehicles and orbital insertion—forcing expeditions into overland convoys across hostile terrain.",
+    "Hazards: Magical instability warps or negates arcane systems. Electronics malfunction or cease entirely. Advanced optics fail. Only combustion-driven machinery, manual logistics, and weapons continue to function reliably. Temperature extremes, avalanches, and unseen chasms claim lives without warning.",
+    "Lore: Deep beneath the peaks lies the Behemoth—an ancient, possibly sentient titan of uncertain origin. Whether war god, primordial organism, or divine corpse, no living culture fully understands it. Whispers claim it shaped the mountains themselves through its sheer mass. Its awakening would be apocalyptic.",
+    "Current Threat: The Cult of the Unbroken, led by Drexl (Herald of Xanthia), has mounted an extensive expedition toward the Behemoth's resting place. Ritual sites have been activated; the mountains rumble with increasing frequency. Ancient chambers are being excavated. If Drexl succeeds in binding the Behemoth to the lich-empress Xanthia's will, Arrur—and beyond—faces annihilation."
+  ],
+  "@id": "https://stellararcana.org/place/southern-mountains",
+  "containedInPlace": "https://stellararcana.org/place/arrur",
+  "containsPlace": [
+    {
+      "label": "The Behemoth Trench",
+      "description": "A massive, roughly circular depression thousands of meters across. Ancient masonry and skeletal stone structures ring its lip. At its bottom lies something vast, sleeping or stirring—wreathed in shadow and necrotic fog."
+    },
+    {
+      "label": "Ritual Ossuary",
+      "description": "A site of bone-stacked graves and mass execution altars where the Cult of the Unbroken performs resurrection ceremonies. Marked by Xanthian sigils carved into stone and by the constant reek of embalming oils."
+    },
+    {
+      "label": "Obsidian Spire",
+      "description": "An isolated volcanic peak where Drexl maintains a war camp and necromantic observatory. Black banner flies constantly from its summit."
+    },
+    {
+      "label": "The Deadlands",
+      "description": "Barren plains surrounding the mountain's base where massive grave sites have been dug. Undead figures can be glimpsed shambling in organized ranks."
+    },
+    {
+      "label": "Ravine of Echoes",
+      "description": "A deep canyon where voices carry impossibly far and sound distorts. Cult scouts use it as a communication route and hiding place."
+    }
+  ],
+  "attitude": [
+    "The Southern Mountains remember something older than civilization itself.",
+    "To wake the Behemoth is to invite the end of all things.",
+    "Drexl believes death has already won. He merely crowns it queen.",
+    "The mountains will swallow armies whole before yielding their secret."
+  ]
+}

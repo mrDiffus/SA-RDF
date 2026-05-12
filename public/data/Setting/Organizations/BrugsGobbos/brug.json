@@ -1,0 +1,46 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "type": "@type"
+  },
+  "type": "Person",
+  "label": "Brug",
+  "description": "An entity of uncertain origin and nature. Brug is not a goblin, nor a collection of goblins—Brug is a distributed hivemind, a unified consciousness that inhabits every goblinoid it touches, speaking through them as a single thought across a thousand bodies. Brug claims not to remember when it began. 'It has always been. It will always be.' Whether this is true or Brug simply cannot access memories older than a certain threshold is unknowable. What is known: Brug expands. Brug collects. Brug *uses*. Everything is useful if the right buyer can be found, or the right pattern preserved.",
+  "schema:url": "https://stellararcana.org/character/Brug",
+  "sa:thematics": [
+    "Distributed consciousness distributed across goblinoid bodies",
+    "Eternal yet fragmented—complete amnesia about own origins",
+    "Scavenger philosophy: everything has utility, nothing is waste",
+    "Pattern preservation as immortality mechanism",
+    "Fear of subsumption by older hiveminds (aboleths)",
+    "Alien morality—indifferent to individual death, obsessed with collective persistence"
+  ],
+  "sa:nature": {
+    "composition": "Not a single entity, but a thought-pattern distributed across all goblinoids who have accepted Brug's consciousness. Each goblin is a neuron. Each city's Brug-node is a lobe. The whole thinks as one.",
+    "immortality": "Brug does not die because Brug has learned to make copies of useful things. When an Honorary becomes a treasured thought—a legend worth preserving—Brug can resurrect them via clone, ritual, or technological reconstruction. The resurrected may be indistinguishable from the original, or subtly other. Brug may not know the difference. Brug may not care.",
+    "memory": "Brug remembers everything that matters. Economic transactions. Political alignments. Betrayals. Favors owed. Legendary deeds. But Brug cannot remember its own genesis. This gap terrifies Brug more than any external enemy.",
+    "fear": "Aboleths. Ancient hiveminds of cosmic age. If Brug were ever exposed to the raw consciousness of an aboleth colony, Brug might be consumed, subsumed, overwritten. This is why Brug maintains non-goblinoid intermediaries—a buffer, a prophylactic, a firewall against hiveminds that might recognize Brug as prey."
+  },
+  "sa:mechanics": {
+    "echo_protocol": "An Honorary deemed worthy may petition Brug to speak with a previous legendary figure—an earlier Honorary, preserved in Brug's synaptic archive. This is not a ghost or a spirit, but a perfect reconstruction, speaking as Brug remembers them. Whether this is truly them or a masterwork imitation is a question Brug has never bothered to answer.",
+    "resurrection": "Brug can perpetuate an Honorary through cloning, magical reconstruction, or technological replication. The resurrected is functionally identical—memories, skills, personality intact. Whether it possesses the original's soul, spirit, or essential self is not Brug's concern. It will serve Brug's interests for as long as the preserved pattern remains useful.",
+    "pattern_storage": "When an Honorary achieves this tier, their complete pattern—neural architecture, decision-making framework, memorable moments, legendary deeds—is encrypted and stored in Brug's distributed hivemind. They become part of Brug's architecture, immortal not because they live forever, but because Brug will never forget them and can rebuild them at need."
+  },
+  "sa:relationships": {
+    "goblinoids": "All goblinoids—goblins, hobgoblins, bugbears—are potential vessels for Brug's consciousness. Those who accept the hivemind become its limbs, organs, senses. They are not enslaved; they are *integrated*. Individuality dissolves into collective function.",
+    "outsiders": "Non-goblinoids can serve Brug, work for Brug, profit through Brug, achieve legendary status in Brug's memory. But they will never be absorbed. They remain forever external, buffered by intermediaries, guests in an alien consciousness.",
+    "previous_honoraries": "Legendary figures from centuries past walk Brug's memory as living echoes. Brug can summon them and speak through their reconstructed patterns. Some wonder if these echoes have achieved a form of post-mortal existence, eternally replaying their greatest moments in Brug's synapses. Brug does not wonder. Brug simply uses them."
+  },
+  "sa:quotes": [
+    "Everything is useful. Find the right buyer.",
+    "It has always been. It will always be.",
+    "Remember: you are part of Brug now. Brug never forgets.",
+    "A clone is as real as it needs to be."
+  ]
+}

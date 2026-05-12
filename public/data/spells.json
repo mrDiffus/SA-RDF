@@ -569,7 +569,7 @@
           "spell:range": "50 ft",
           "spell:ritual": false,
           "spell:target": "1 creature",
-          "sa:damage": "",
+          "sa:damage": "1d10",
           "sa:damageType": "fire",
           "sa:effect": "",
           "spell:level": 0

@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "description": "https://schema.org/description",
+    "type": "@type",
+    "CreativeWork": "https://schema.org/CreativeWork"
+  },
+  "type": "CreativeWork",
+  "label": "Dorn Bellisarius: The Restructor",
+  "race": "Dwarf",
+  "description": [
+    "Dorn Bellisarius has never forced a negotiation. Every agreement he has reached was already concluded on paper before the parties spoke. He is impeccable—beard trimmed to mathematical precision, suits tailored by someone who understands that fit is power, cologne expensive and subtle. He speaks like a corporate attorney because he *is* one, every word vetted for legal exposure before it leaves his mouth. He is Mira Strand's translator between vision and execution. She identifies what she wants to extract. He finds the contractual architecture that makes extraction not only possible, but inevitable.",
+    "",
+    "Role & Function: Chief Acquisition Officer. Dorn examines the Strand family's dispersed assets, their contractual obligations, their partnerships, and he finds angles—the ambiguous clauses, the leverage points, the buried claims that allow Mira to extract value through restructuring rather than force. When a planetary warehouse is \"sold\" to a competitor, Dorn structured that sale. When a trade route is \"rerouted,\" he dissolved the underlying contract and negotiated new terms with surgical precision. When Mira dissolves agreements with Armanitech, Dorn found the escape clauses, calculated the penalty (and confirmed it cost less than continued compliance), and executed the transition.",
+    "",
+    "Method & Philosophy: Dorn works in deliberation and patience. His analyses are thorough enough to survive legal challenge in any tribunal the Concordat could produce. His restructurings are elegant enough to appear inevitable in retrospect—the kind of financial maneuvering that, once executed, makes people wonder why they did not see it coming. He has engineered dozens of asset liquidations, contract dissolutions, and debt conversions. He has never lost a negotiation because he refuses to enter negotiations he has not already won on paper. His strength is not in rhetoric or persuasion. It is in the architecture of agreements themselves. He finds the flaw in the contract, the loophole in the regulation, the sequence of legal moves that transforms a liability into an asset.",
+    "",
+    "Visual Identity: Dorn is a dwarf who has spent a considerable career moving in human-dominated corporate spaces. He compensates through meticulous presentation. His beard is groomed with military precision. His suits are bespoke, cut to emphasize authority rather than adapt to his frame. His hands are soft—he has not worked stone or metal in decades. He wears jeweled rings that signify his legal credentials and prior victories. He moves slowly, carefully, as if calculating the legal implications of each step. When he speaks, people listen, because he has earned (through relentless professionalism) the assumption that every word carries weight.",
+    "",
+    "Relationship to Mira: Dorn respects Mira in the way a master craftsman respects a patron who understands value. She does not ask him to accomplish the impossible—she asks him to accomplish things that appear impossible until he has already done them. She trusts his judgment on what is structurally achievable. They do not have a personal relationship. They have a professional one of extraordinary clarity. Mira pays him exceptionally well, and in return, Dorn delivers work so meticulous it borders on art. He will remain in her service as long as the problems continue to test his skills. When a position emerges that provides greater intellectual challenge, or when a client offers more interesting legal puzzles, he will depart with professional decorum and no regrets. Until then, he remains indispensable."
+  ]
+}

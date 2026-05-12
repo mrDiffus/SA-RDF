@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-04-05T13:31:35.690984",
+  "generatedAt": "2026-05-12T13:52:07.425646",
   "version": "1.0",
   "resources": [
     {
@@ -932,6 +932,447 @@
       ]
     },
     {
+      "file": "Setting/Organizations/Armanitech/armanitech.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "Armanitech",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sect..."
+    },
+    {
+      "file": "Setting/Organizations/BrugsGobbos/brugs-gobbos.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "Brug's Gobbos",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that ..."
+    },
+    {
+      "file": "Setting/Organizations/Concordat-Trading-House/concordat-trading-house.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "The Concordat Trading House",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominat..."
+    },
+    {
+      "file": "Setting/Organizations/Cult-of-the-Unbroken/cult-of-the-unbroken.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "Cult of the Unbroken",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressi..."
+    },
+    {
+      "file": "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json",
+      "@type": "CreativeWork",
+      "rdfs:label": "Drexl: The Apparatus",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description"
+      ]
+    },
+    {
+      "file": "Setting/Organizations/Cult-of-the-Unbroken/everliving-crusade-overview.json",
+      "@type": "CreativeWork",
+      "rdfs:label": "The Everliving Crusade: Campaign Overview",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description"
+      ]
+    },
+    {
+      "file": "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json",
+      "@type": "CreativeWork",
+      "rdfs:label": "Xanthia the Everliving",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description"
+      ]
+    },
+    {
+      "file": "Setting/Organizations/Deeprunners-Union/deeprunners-union.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "Deeprunners Union",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and un..."
+    },
+    {
+      "file": "Setting/Organizations/Everliving-Faith/everliving-faith.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "Faith of the Everliving",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith pre..."
+    },
+    {
+      "file": "Setting/Organizations/Everliving-Faith/faith-and-fanatics.json",
+      "@type": "CreativeWork",
+      "rdfs:label": "Faith & Fanatics: The Symbiosis",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description"
+      ]
+    },
+    {
+      "file": "Setting/Organizations/Exodian-Church/exodian-church.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "The Exodian Church",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the..."
+    },
+    {
+      "file": "Setting/Organizations/Forge-Syndicate/forge-syndicate.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "Forge Syndicate",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundr..."
+    },
+    {
+      "file": "Setting/Organizations/House-Valorian/house-valorian.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "House Valorian",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's f..."
+    },
+    {
+      "file": "Setting/Organizations/Luminous-Synthesis/luminous-synthesis.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "The Luminous Synthesis",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven...."
+    },
+    {
+      "file": "Setting/Organizations/Velvet-Mask/velvet-mask.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "The Velvet Mask",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, thef..."
+    },
+    {
+      "file": "Setting/Organizations/Verdant-Collective/verdant-collective.json",
+      "@type": "sa:Organization",
+      "rdfs:label": "The Verdant Collective",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "role"
+      ],
+      "description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to underst..."
+    },
+    {
+      "file": "Setting/Planets/Arcech/arcech.json",
+      "@type": "CreativeWork",
+      "rdfs:label": "Arcech",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "genre",
+        "keywords",
+        "url",
+        "author",
+        "about",
+        "locationCreated",
+        "hasPart",
+        "inLanguage",
+        "dateCreated",
+        "identifier"
+      ],
+      "description": "Arcech is a world of stark contrasts, where immense Hive cities rise from the surface into low orbit..."
+    },
+    {
+      "file": "Setting/Planets/Arcech/Places/arcech-sylandris.json",
+      "@type": "Place",
+      "rdfs:label": "Arcech-Sylandris",
+      "@id": "https://stellararcana.org/place/arcech-sylandris",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace",
+        "containsPlace"
+      ]
+    },
+    {
+      "file": "Setting/Planets/Arcech/Places/blackwater.json",
+      "@type": "Place",
+      "rdfs:label": "Blackwater",
+      "@id": "https://stellararcana.org/place/blackwater",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace",
+        "containsPlace"
+      ]
+    },
+    {
+      "file": "Setting/Planets/Arcech/Places/emerald-heights.json",
+      "@type": "Place",
+      "rdfs:label": "Emerald Heights",
+      "@id": "https://stellararcana.org/place/emerald-heights",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace",
+        "containsPlace"
+      ]
+    },
+    {
+      "file": "Setting/Planets/Arcech/Places/ironhold.json",
+      "@type": "Place",
+      "rdfs:label": "Ironhold",
+      "@id": "https://stellararcana.org/place/ironhold",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace",
+        "containsPlace"
+      ]
+    },
+    {
+      "file": "Setting/Planets/Arcech/Places/skyhaven.json",
+      "@type": "Place",
+      "rdfs:label": "Skyhaven",
+      "@id": "https://stellararcana.org/place/skyhaven",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace",
+        "containsPlace"
+      ]
+    },
+    {
+      "file": "Setting/Planets/Arcech/Places/starfall.json",
+      "@type": "Place",
+      "rdfs:label": "Starfall",
+      "@id": "https://stellararcana.org/place/starfall",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace",
+        "containsPlace"
+      ]
+    },
+    {
+      "file": "Setting/Planets/Arrur/arrur.json",
+      "@type": "CreativeWork",
+      "rdfs:label": "Arrur",
+      "@id": null,
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "genre",
+        "keywords",
+        "url",
+        "author",
+        "about",
+        "locationCreated",
+        "hasPart",
+        "inLanguage",
+        "dateCreated",
+        "identifier"
+      ],
+      "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and ma..."
+    },
+    {
+      "file": "Setting/Planets/Arrur/Places/ashcross.json",
+      "@type": "Place",
+      "rdfs:label": "Ashcross",
+      "@id": "https://stellararcana.org/place/ashcross",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace"
+      ],
+      "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock."
+    },
+    {
+      "file": "Setting/Planets/Arrur/Places/bloodrift.json",
+      "@type": "Place",
+      "rdfs:label": "Bloodrift",
+      "@id": "https://stellararcana.org/place/bloodrift",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace",
+        "containsPlace",
+        "attitude"
+      ]
+    },
+    {
+      "file": "Setting/Planets/Arrur/Places/drowned-bastion.json",
+      "@type": "Place",
+      "rdfs:label": "Drowned Bastion",
+      "@id": "https://stellararcana.org/place/drowned-bastion",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace"
+      ],
+      "description": "Storm-battered cliffside city used as a penal colony and pirate port."
+    },
+    {
+      "file": "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json",
+      "@type": "Place",
+      "rdfs:label": "Hollow of the Last Joke",
+      "@id": "https://stellararcana.org/place/hollow-of-the-last-joke",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace"
+      ],
+      "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza\u2019s Gri..."
+    },
+    {
+      "file": "Setting/Planets/Arrur/Places/korvhal.json",
+      "@type": "Place",
+      "rdfs:label": "Korvhal",
+      "@id": "https://stellararcana.org/place/korvhal",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace"
+      ],
+      "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through..."
+    },
+    {
+      "file": "Setting/Planets/Arrur/Places/skarths-hollow.json",
+      "@type": "Place",
+      "rdfs:label": "Skarth\u2019s Hollow",
+      "@id": "https://stellararcana.org/place/skarths-hollow",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace"
+      ],
+      "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone p..."
+    },
+    {
+      "file": "Setting/Planets/Arrur/Places/southern-mountains.json",
+      "@type": "Place",
+      "rdfs:label": "Southern Mountains",
+      "@id": "https://stellararcana.org/place/southern-mountains",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace",
+        "containsPlace",
+        "attitude"
+      ]
+    },
+    {
+      "file": "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json",
+      "@type": "Place",
+      "rdfs:label": "Teeth of Gorthuun",
+      "@id": "https://stellararcana.org/place/teeth-of-gorthuun",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace"
+      ],
+      "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails i..."
+    },
+    {
+      "file": "Setting/Planets/Arrur/Places/thakzas-grin.json",
+      "@type": "Place",
+      "rdfs:label": "Thakza\u2019s Grin",
+      "@id": "https://stellararcana.org/place/thakzas-grin",
+      "predicates": [
+        "type",
+        "label",
+        "description",
+        "containedInPlace"
+      ],
+      "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke..."
+    },
+    {
       "file": "skills.json",
       "@type": "sa:SkillCollection",
       "rdfs:label": "Skills",
@@ -951,7 +1392,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Jump, vault, tumble and maneuver better. Used for reflex saves"
+      "sa:description": "Jump, vault, tumble, and maneuver. Used for Reflex saves."
     },
     {
       "file": "skills.json",
@@ -963,19 +1404,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Use your merchant's knowledge to determine the value of items and sell them in the right places."
-    },
-    {
-      "file": "skills.json",
-      "@type": "sa:Skill",
-      "rdfs:label": "Arcane Summoning",
-      "@id": "sa:skill-arcane-summoning",
-      "predicates": [
-        "rdfs:label",
-        "sa:description",
-        "sa:keyAbility"
-      ],
-      "sa:description": "Form connections with strange beings known as outsiders and summon them to you."
+      "sa:description": "Determine item value and barter effectively."
     },
     {
       "file": "skills.json",
@@ -1011,7 +1440,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": ""
+      "sa:description": "Operate and troubleshoot computer systems and technology."
     },
     {
       "file": "skills.json",
@@ -1023,7 +1452,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Keep it together."
+      "sa:description": "Maintain focus during distracting or demanding situations."
     },
     {
       "file": "skills.json",
@@ -1035,7 +1464,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Become fit and earn a good physical condition. Used for fortitude saves"
+      "sa:description": "Develop physical fitness and endurance. Used for Fortitude saves."
     },
     {
       "file": "skills.json",
@@ -1071,7 +1500,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Become better at defense."
+      "sa:description": "Improve defensive capabilities and damage mitigation."
     },
     {
       "file": "skills.json",
@@ -1143,7 +1572,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Handle creatures of animal intelligece. Creatures with an intelligence score at 3 or lower. Creature..."
+      "sa:description": "Influence creatures with animal intelligence (Intelligence 3 or lower). Creatures with no Intelligen..."
     },
     {
       "file": "skills.json",
@@ -1155,7 +1584,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Work with traps, locks and similarly intricate mechanisms... with delicacy."
+      "sa:description": "Disable traps, pick locks, and manipulate intricate mechanisms."
     },
     {
       "file": "skills.json",
@@ -1191,7 +1620,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Increase your ability to lead, whether it is a squad or a corporation."
+      "sa:description": "Lead groups ranging from small squads to large organizations."
     },
     {
       "file": "skills.json",
@@ -1204,66 +1633,6 @@
         "sa:keyAbility"
       ],
       "sa:description": "Learn additional languages to expand what information you can gain."
-    },
-    {
-      "file": "skills.json",
-      "@type": "sa:Skill",
-      "rdfs:label": "Martial (Melee)",
-      "@id": "sa:skill-martial-melee",
-      "predicates": [
-        "rdfs:label",
-        "sa:description",
-        "sa:keyAbility"
-      ],
-      "sa:description": "Develop proficiency with melee weapons and physical prowess."
-    },
-    {
-      "file": "skills.json",
-      "@type": "sa:Skill",
-      "rdfs:label": "Martial (Body)",
-      "@id": "sa:skill-martial-body",
-      "predicates": [
-        "rdfs:label",
-        "sa:description",
-        "sa:keyAbility"
-      ],
-      "sa:description": "Become a living weapon and perform special maneuvers."
-    },
-    {
-      "file": "skills.json",
-      "@type": "sa:Skill",
-      "rdfs:label": "Martial (Ranged)",
-      "@id": "sa:skill-martial-ranged",
-      "predicates": [
-        "rdfs:label",
-        "sa:description",
-        "sa:keyAbility"
-      ],
-      "sa:description": "Develop proficiency with firearms and other ranged weapons."
-    },
-    {
-      "file": "skills.json",
-      "@type": "sa:Skill",
-      "rdfs:label": "Martial Crew Weapon",
-      "@id": "sa:skill-martial-crew-weapon",
-      "predicates": [
-        "rdfs:label",
-        "sa:description",
-        "sa:keyAbility"
-      ],
-      "sa:description": "Operate a crew weapon and deal some damage."
-    },
-    {
-      "file": "skills.json",
-      "@type": "sa:Skill",
-      "rdfs:label": "Martial Weapon System",
-      "@id": "sa:skill-martial-weapon-system",
-      "predicates": [
-        "rdfs:label",
-        "sa:description",
-        "sa:keyAbility"
-      ],
-      "sa:description": "Operate a weapon system, such a s a missile launch system or a battery of cannons."
     },
     {
       "file": "skills.json",
@@ -1311,7 +1680,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Become skilled at dancing, singing, oration, miming, instruments or presentations, whichever suits y..."
+      "sa:description": "Master performance arts such as dancing, singing, and instrumental music."
     },
     {
       "file": "skills.json",
@@ -1335,7 +1704,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Make simple repairs on general items or more complete repairs on items you are knowledgeable with."
+      "sa:description": "Repair damaged items, with expertise in familiar equipment."
     },
     {
       "file": "skills.json",
@@ -1359,7 +1728,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Just ride. Ride any anymal that can bear your weight."
+      "sa:description": "Ride any animal you can control that bears your weight."
     },
     {
       "file": "skills.json",
@@ -1371,7 +1740,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Intuitively sense underlying issues about people. Used for will saves"
+      "sa:description": "Detect deception and read emotional subtext. Used for Will saves."
     },
     {
       "file": "skills.json",
@@ -1383,7 +1752,7 @@
         "sa:description",
         "sa:keyAbility"
       ],
-      "sa:description": "Become skilled at the art of casting spells, identifying magic items, crafting magic items, and iden..."
+      "sa:description": "Cast spells, identify magic, and detect active spellcasting."
     },
     {
       "file": "skills.json",
@@ -1432,18 +1801,6 @@
         "sa:keyAbility"
       ],
       "sa:description": "Heal people by performing surgery or similar medical attention."
-    },
-    {
-      "file": "skills.json",
-      "@type": "sa:Skill",
-      "rdfs:label": "Any 4 knowledge skills",
-      "@id": "sa:skill-any-4-knowledge-skills",
-      "predicates": [
-        "rdfs:label",
-        "sa:description",
-        "sa:keyAbility"
-      ],
-      "sa:description": "Choose any four specialized knowledge skills."
     },
     {
       "file": "skills.json",
@@ -2156,6 +2513,233 @@
         ]
       }
     ],
+    "https://stellararcana.org/place/arcech-sylandris": [
+      {
+        "file": "Setting/Planets/Arcech/Places/arcech-sylandris.json",
+        "@type": "Place",
+        "rdfs:label": "Arcech-Sylandris",
+        "@id": "https://stellararcana.org/place/arcech-sylandris",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "https://stellararcana.org/place/blackwater": [
+      {
+        "file": "Setting/Planets/Arcech/Places/blackwater.json",
+        "@type": "Place",
+        "rdfs:label": "Blackwater",
+        "@id": "https://stellararcana.org/place/blackwater",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "https://stellararcana.org/place/emerald-heights": [
+      {
+        "file": "Setting/Planets/Arcech/Places/emerald-heights.json",
+        "@type": "Place",
+        "rdfs:label": "Emerald Heights",
+        "@id": "https://stellararcana.org/place/emerald-heights",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "https://stellararcana.org/place/ironhold": [
+      {
+        "file": "Setting/Planets/Arcech/Places/ironhold.json",
+        "@type": "Place",
+        "rdfs:label": "Ironhold",
+        "@id": "https://stellararcana.org/place/ironhold",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "https://stellararcana.org/place/skyhaven": [
+      {
+        "file": "Setting/Planets/Arcech/Places/skyhaven.json",
+        "@type": "Place",
+        "rdfs:label": "Skyhaven",
+        "@id": "https://stellararcana.org/place/skyhaven",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "https://stellararcana.org/place/starfall": [
+      {
+        "file": "Setting/Planets/Arcech/Places/starfall.json",
+        "@type": "Place",
+        "rdfs:label": "Starfall",
+        "@id": "https://stellararcana.org/place/starfall",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "https://stellararcana.org/place/ashcross": [
+      {
+        "file": "Setting/Planets/Arrur/Places/ashcross.json",
+        "@type": "Place",
+        "rdfs:label": "Ashcross",
+        "@id": "https://stellararcana.org/place/ashcross",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock."
+      }
+    ],
+    "https://stellararcana.org/place/bloodrift": [
+      {
+        "file": "Setting/Planets/Arrur/Places/bloodrift.json",
+        "@type": "Place",
+        "rdfs:label": "Bloodrift",
+        "@id": "https://stellararcana.org/place/bloodrift",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace",
+          "attitude"
+        ]
+      }
+    ],
+    "https://stellararcana.org/place/drowned-bastion": [
+      {
+        "file": "Setting/Planets/Arrur/Places/drowned-bastion.json",
+        "@type": "Place",
+        "rdfs:label": "Drowned Bastion",
+        "@id": "https://stellararcana.org/place/drowned-bastion",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Storm-battered cliffside city used as a penal colony and pirate port."
+      }
+    ],
+    "https://stellararcana.org/place/hollow-of-the-last-joke": [
+      {
+        "file": "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json",
+        "@type": "Place",
+        "rdfs:label": "Hollow of the Last Joke",
+        "@id": "https://stellararcana.org/place/hollow-of-the-last-joke",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza\u2019s Gri..."
+      }
+    ],
+    "https://stellararcana.org/place/korvhal": [
+      {
+        "file": "Setting/Planets/Arrur/Places/korvhal.json",
+        "@type": "Place",
+        "rdfs:label": "Korvhal",
+        "@id": "https://stellararcana.org/place/korvhal",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through..."
+      }
+    ],
+    "https://stellararcana.org/place/skarths-hollow": [
+      {
+        "file": "Setting/Planets/Arrur/Places/skarths-hollow.json",
+        "@type": "Place",
+        "rdfs:label": "Skarth\u2019s Hollow",
+        "@id": "https://stellararcana.org/place/skarths-hollow",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone p..."
+      }
+    ],
+    "https://stellararcana.org/place/southern-mountains": [
+      {
+        "file": "Setting/Planets/Arrur/Places/southern-mountains.json",
+        "@type": "Place",
+        "rdfs:label": "Southern Mountains",
+        "@id": "https://stellararcana.org/place/southern-mountains",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace",
+          "attitude"
+        ]
+      }
+    ],
+    "https://stellararcana.org/place/teeth-of-gorthuun": [
+      {
+        "file": "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json",
+        "@type": "Place",
+        "rdfs:label": "Teeth of Gorthuun",
+        "@id": "https://stellararcana.org/place/teeth-of-gorthuun",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails i..."
+      }
+    ],
+    "https://stellararcana.org/place/thakzas-grin": [
+      {
+        "file": "Setting/Planets/Arrur/Places/thakzas-grin.json",
+        "@type": "Place",
+        "rdfs:label": "Thakza\u2019s Grin",
+        "@id": "https://stellararcana.org/place/thakzas-grin",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke..."
+      }
+    ],
     "sa:skill-list": [
       {
         "file": "skills.json",
@@ -2179,7 +2763,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Jump, vault, tumble and maneuver better. Used for reflex saves"
+        "sa:description": "Jump, vault, tumble, and maneuver. Used for Reflex saves."
       }
     ],
     "sa:skill-appraise": [
@@ -2193,21 +2777,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Use your merchant's knowledge to determine the value of items and sell them in the right places."
-      }
-    ],
-    "sa:skill-arcane-summoning": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Arcane Summoning",
-        "@id": "sa:skill-arcane-summoning",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Form connections with strange beings known as outsiders and summon them to you."
+        "sa:description": "Determine item value and barter effectively."
       }
     ],
     "sa:skill-bluff": [
@@ -2249,7 +2819,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": ""
+        "sa:description": "Operate and troubleshoot computer systems and technology."
       }
     ],
     "sa:skill-concentration": [
@@ -2263,7 +2833,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Keep it together."
+        "sa:description": "Maintain focus during distracting or demanding situations."
       }
     ],
     "sa:skill-condition": [
@@ -2277,7 +2847,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become fit and earn a good physical condition. Used for fortitude saves"
+        "sa:description": "Develop physical fitness and endurance. Used for Fortitude saves."
       }
     ],
     "sa:skill-craft": [
@@ -2319,7 +2889,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become better at defense."
+        "sa:description": "Improve defensive capabilities and damage mitigation."
       }
     ],
     "sa:skill-demolitions": [
@@ -2403,7 +2973,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Handle creatures of animal intelligece. Creatures with an intelligence score at 3 or lower. Creature..."
+        "sa:description": "Influence creatures with animal intelligence (Intelligence 3 or lower). Creatures with no Intelligen..."
       }
     ],
     "sa:skill-handle-device": [
@@ -2417,7 +2987,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Work with traps, locks and similarly intricate mechanisms... with delicacy."
+        "sa:description": "Disable traps, pick locks, and manipulate intricate mechanisms."
       }
     ],
     "sa:skill-intimidate": [
@@ -2459,7 +3029,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Increase your ability to lead, whether it is a squad or a corporation."
+        "sa:description": "Lead groups ranging from small squads to large organizations."
       }
     ],
     "sa:skill-linguistics": [
@@ -2474,76 +3044,6 @@
           "sa:keyAbility"
         ],
         "sa:description": "Learn additional languages to expand what information you can gain."
-      }
-    ],
-    "sa:skill-martial-melee": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Melee)",
-        "@id": "sa:skill-martial-melee",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Develop proficiency with melee weapons and physical prowess."
-      }
-    ],
-    "sa:skill-martial-body": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Body)",
-        "@id": "sa:skill-martial-body",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Become a living weapon and perform special maneuvers."
-      }
-    ],
-    "sa:skill-martial-ranged": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Ranged)",
-        "@id": "sa:skill-martial-ranged",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Develop proficiency with firearms and other ranged weapons."
-      }
-    ],
-    "sa:skill-martial-crew-weapon": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial Crew Weapon",
-        "@id": "sa:skill-martial-crew-weapon",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Operate a crew weapon and deal some damage."
-      }
-    ],
-    "sa:skill-martial-weapon-system": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial Weapon System",
-        "@id": "sa:skill-martial-weapon-system",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Operate a weapon system, such a s a missile launch system or a battery of cannons."
       }
     ],
     "sa:skill-mechanics-use": [
@@ -2599,7 +3099,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become skilled at dancing, singing, oration, miming, instruments or presentations, whichever suits y..."
+        "sa:description": "Master performance arts such as dancing, singing, and instrumental music."
       }
     ],
     "sa:skill-profession": [
@@ -2627,7 +3127,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Make simple repairs on general items or more complete repairs on items you are knowledgeable with."
+        "sa:description": "Repair damaged items, with expertise in familiar equipment."
       }
     ],
     "sa:skill-research": [
@@ -2655,7 +3155,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Just ride. Ride any anymal that can bear your weight."
+        "sa:description": "Ride any animal you can control that bears your weight."
       }
     ],
     "sa:skill-sense-motive": [
@@ -2669,7 +3169,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Intuitively sense underlying issues about people. Used for will saves"
+        "sa:description": "Detect deception and read emotional subtext. Used for Will saves."
       }
     ],
     "sa:skill-spellcraft": [
@@ -2683,7 +3183,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become skilled at the art of casting spells, identifying magic items, crafting magic items, and iden..."
+        "sa:description": "Cast spells, identify magic, and detect active spellcasting."
       }
     ],
     "sa:skill-stealth": [
@@ -2740,20 +3240,6 @@
           "sa:keyAbility"
         ],
         "sa:description": "Heal people by performing surgery or similar medical attention."
-      }
-    ],
-    "sa:skill-any-4-knowledge-skills": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Any 4 knowledge skills",
-        "@id": "sa:skill-any-4-knowledge-skills",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Choose any four specialized knowledge skills."
       }
     ],
     "sa:skill-pilot": [
@@ -4059,6 +4545,513 @@
         ]
       }
     ],
+    "Armanitech": [
+      {
+        "file": "Setting/Organizations/Armanitech/armanitech.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Armanitech",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sect..."
+      }
+    ],
+    "Brug's Gobbos": [
+      {
+        "file": "Setting/Organizations/BrugsGobbos/brugs-gobbos.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Brug's Gobbos",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that ..."
+      }
+    ],
+    "The Concordat Trading House": [
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/concordat-trading-house.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Concordat Trading House",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominat..."
+      }
+    ],
+    "Cult of the Unbroken": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/cult-of-the-unbroken.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Cult of the Unbroken",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressi..."
+      }
+    ],
+    "Drexl: The Apparatus": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Drexl: The Apparatus",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      }
+    ],
+    "The Everliving Crusade: Campaign Overview": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/everliving-crusade-overview.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "The Everliving Crusade: Campaign Overview",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      }
+    ],
+    "Xanthia the Everliving": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Xanthia the Everliving",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      }
+    ],
+    "Deeprunners Union": [
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/deeprunners-union.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Deeprunners Union",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and un..."
+      }
+    ],
+    "Faith of the Everliving": [
+      {
+        "file": "Setting/Organizations/Everliving-Faith/everliving-faith.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Faith of the Everliving",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith pre..."
+      }
+    ],
+    "Faith & Fanatics: The Symbiosis": [
+      {
+        "file": "Setting/Organizations/Everliving-Faith/faith-and-fanatics.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Faith & Fanatics: The Symbiosis",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      }
+    ],
+    "The Exodian Church": [
+      {
+        "file": "Setting/Organizations/Exodian-Church/exodian-church.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Exodian Church",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the..."
+      }
+    ],
+    "Forge Syndicate": [
+      {
+        "file": "Setting/Organizations/Forge-Syndicate/forge-syndicate.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Forge Syndicate",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundr..."
+      }
+    ],
+    "House Valorian": [
+      {
+        "file": "Setting/Organizations/House-Valorian/house-valorian.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "House Valorian",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's f..."
+      }
+    ],
+    "The Luminous Synthesis": [
+      {
+        "file": "Setting/Organizations/Luminous-Synthesis/luminous-synthesis.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Luminous Synthesis",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven...."
+      }
+    ],
+    "The Velvet Mask": [
+      {
+        "file": "Setting/Organizations/Velvet-Mask/velvet-mask.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Velvet Mask",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, thef..."
+      }
+    ],
+    "The Verdant Collective": [
+      {
+        "file": "Setting/Organizations/Verdant-Collective/verdant-collective.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Verdant Collective",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to underst..."
+      }
+    ],
+    "Arcech": [
+      {
+        "file": "Setting/Planets/Arcech/arcech.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Arcech",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "genre",
+          "keywords",
+          "url",
+          "author",
+          "about",
+          "locationCreated",
+          "hasPart",
+          "inLanguage",
+          "dateCreated",
+          "identifier"
+        ],
+        "description": "Arcech is a world of stark contrasts, where immense Hive cities rise from the surface into low orbit..."
+      }
+    ],
+    "Arcech-Sylandris": [
+      {
+        "file": "Setting/Planets/Arcech/Places/arcech-sylandris.json",
+        "@type": "Place",
+        "rdfs:label": "Arcech-Sylandris",
+        "@id": "https://stellararcana.org/place/arcech-sylandris",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Blackwater": [
+      {
+        "file": "Setting/Planets/Arcech/Places/blackwater.json",
+        "@type": "Place",
+        "rdfs:label": "Blackwater",
+        "@id": "https://stellararcana.org/place/blackwater",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Emerald Heights": [
+      {
+        "file": "Setting/Planets/Arcech/Places/emerald-heights.json",
+        "@type": "Place",
+        "rdfs:label": "Emerald Heights",
+        "@id": "https://stellararcana.org/place/emerald-heights",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Ironhold": [
+      {
+        "file": "Setting/Planets/Arcech/Places/ironhold.json",
+        "@type": "Place",
+        "rdfs:label": "Ironhold",
+        "@id": "https://stellararcana.org/place/ironhold",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Skyhaven": [
+      {
+        "file": "Setting/Planets/Arcech/Places/skyhaven.json",
+        "@type": "Place",
+        "rdfs:label": "Skyhaven",
+        "@id": "https://stellararcana.org/place/skyhaven",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Starfall": [
+      {
+        "file": "Setting/Planets/Arcech/Places/starfall.json",
+        "@type": "Place",
+        "rdfs:label": "Starfall",
+        "@id": "https://stellararcana.org/place/starfall",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Arrur": [
+      {
+        "file": "Setting/Planets/Arrur/arrur.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Arrur",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "genre",
+          "keywords",
+          "url",
+          "author",
+          "about",
+          "locationCreated",
+          "hasPart",
+          "inLanguage",
+          "dateCreated",
+          "identifier"
+        ],
+        "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and ma..."
+      }
+    ],
+    "Ashcross": [
+      {
+        "file": "Setting/Planets/Arrur/Places/ashcross.json",
+        "@type": "Place",
+        "rdfs:label": "Ashcross",
+        "@id": "https://stellararcana.org/place/ashcross",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock."
+      }
+    ],
+    "Bloodrift": [
+      {
+        "file": "Setting/Planets/Arrur/Places/bloodrift.json",
+        "@type": "Place",
+        "rdfs:label": "Bloodrift",
+        "@id": "https://stellararcana.org/place/bloodrift",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace",
+          "attitude"
+        ]
+      }
+    ],
+    "Drowned Bastion": [
+      {
+        "file": "Setting/Planets/Arrur/Places/drowned-bastion.json",
+        "@type": "Place",
+        "rdfs:label": "Drowned Bastion",
+        "@id": "https://stellararcana.org/place/drowned-bastion",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Storm-battered cliffside city used as a penal colony and pirate port."
+      }
+    ],
+    "Hollow of the Last Joke": [
+      {
+        "file": "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json",
+        "@type": "Place",
+        "rdfs:label": "Hollow of the Last Joke",
+        "@id": "https://stellararcana.org/place/hollow-of-the-last-joke",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza\u2019s Gri..."
+      }
+    ],
+    "Korvhal": [
+      {
+        "file": "Setting/Planets/Arrur/Places/korvhal.json",
+        "@type": "Place",
+        "rdfs:label": "Korvhal",
+        "@id": "https://stellararcana.org/place/korvhal",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through..."
+      }
+    ],
+    "Skarth\u2019s Hollow": [
+      {
+        "file": "Setting/Planets/Arrur/Places/skarths-hollow.json",
+        "@type": "Place",
+        "rdfs:label": "Skarth\u2019s Hollow",
+        "@id": "https://stellararcana.org/place/skarths-hollow",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone p..."
+      }
+    ],
+    "Southern Mountains": [
+      {
+        "file": "Setting/Planets/Arrur/Places/southern-mountains.json",
+        "@type": "Place",
+        "rdfs:label": "Southern Mountains",
+        "@id": "https://stellararcana.org/place/southern-mountains",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace",
+          "attitude"
+        ]
+      }
+    ],
+    "Teeth of Gorthuun": [
+      {
+        "file": "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json",
+        "@type": "Place",
+        "rdfs:label": "Teeth of Gorthuun",
+        "@id": "https://stellararcana.org/place/teeth-of-gorthuun",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails i..."
+      }
+    ],
+    "Thakza\u2019s Grin": [
+      {
+        "file": "Setting/Planets/Arrur/Places/thakzas-grin.json",
+        "@type": "Place",
+        "rdfs:label": "Thakza\u2019s Grin",
+        "@id": "https://stellararcana.org/place/thakzas-grin",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke..."
+      }
+    ],
     "Skills": [
       {
         "file": "skills.json",
@@ -4082,7 +5075,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Jump, vault, tumble and maneuver better. Used for reflex saves"
+        "sa:description": "Jump, vault, tumble, and maneuver. Used for Reflex saves."
       }
     ],
     "Appraise": [
@@ -4096,21 +5089,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Use your merchant's knowledge to determine the value of items and sell them in the right places."
-      }
-    ],
-    "Arcane Summoning": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Arcane Summoning",
-        "@id": "sa:skill-arcane-summoning",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Form connections with strange beings known as outsiders and summon them to you."
+        "sa:description": "Determine item value and barter effectively."
       }
     ],
     "Bluff": [
@@ -4152,7 +5131,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": ""
+        "sa:description": "Operate and troubleshoot computer systems and technology."
       }
     ],
     "Concentration": [
@@ -4166,7 +5145,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Keep it together."
+        "sa:description": "Maintain focus during distracting or demanding situations."
       }
     ],
     "Condition": [
@@ -4180,7 +5159,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become fit and earn a good physical condition. Used for fortitude saves"
+        "sa:description": "Develop physical fitness and endurance. Used for Fortitude saves."
       }
     ],
     "Craft": [
@@ -4222,7 +5201,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become better at defense."
+        "sa:description": "Improve defensive capabilities and damage mitigation."
       }
     ],
     "Demolitions": [
@@ -4306,7 +5285,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Handle creatures of animal intelligece. Creatures with an intelligence score at 3 or lower. Creature..."
+        "sa:description": "Influence creatures with animal intelligence (Intelligence 3 or lower). Creatures with no Intelligen..."
       }
     ],
     "Handle Device": [
@@ -4320,7 +5299,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Work with traps, locks and similarly intricate mechanisms... with delicacy."
+        "sa:description": "Disable traps, pick locks, and manipulate intricate mechanisms."
       }
     ],
     "Intimidate": [
@@ -4362,7 +5341,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Increase your ability to lead, whether it is a squad or a corporation."
+        "sa:description": "Lead groups ranging from small squads to large organizations."
       }
     ],
     "Linguistics": [
@@ -4377,76 +5356,6 @@
           "sa:keyAbility"
         ],
         "sa:description": "Learn additional languages to expand what information you can gain."
-      }
-    ],
-    "Martial (Melee)": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Melee)",
-        "@id": "sa:skill-martial-melee",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Develop proficiency with melee weapons and physical prowess."
-      }
-    ],
-    "Martial (Body)": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Body)",
-        "@id": "sa:skill-martial-body",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Become a living weapon and perform special maneuvers."
-      }
-    ],
-    "Martial (Ranged)": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Ranged)",
-        "@id": "sa:skill-martial-ranged",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Develop proficiency with firearms and other ranged weapons."
-      }
-    ],
-    "Martial Crew Weapon": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial Crew Weapon",
-        "@id": "sa:skill-martial-crew-weapon",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Operate a crew weapon and deal some damage."
-      }
-    ],
-    "Martial Weapon System": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial Weapon System",
-        "@id": "sa:skill-martial-weapon-system",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Operate a weapon system, such a s a missile launch system or a battery of cannons."
       }
     ],
     "Mechanics Use": [
@@ -4502,7 +5411,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become skilled at dancing, singing, oration, miming, instruments or presentations, whichever suits y..."
+        "sa:description": "Master performance arts such as dancing, singing, and instrumental music."
       }
     ],
     "Profession": [
@@ -4530,7 +5439,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Make simple repairs on general items or more complete repairs on items you are knowledgeable with."
+        "sa:description": "Repair damaged items, with expertise in familiar equipment."
       }
     ],
     "Research": [
@@ -4558,7 +5467,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Just ride. Ride any anymal that can bear your weight."
+        "sa:description": "Ride any animal you can control that bears your weight."
       }
     ],
     "Sense Motive": [
@@ -4572,7 +5481,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Intuitively sense underlying issues about people. Used for will saves"
+        "sa:description": "Detect deception and read emotional subtext. Used for Will saves."
       }
     ],
     "Spellcraft": [
@@ -4586,7 +5495,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become skilled at the art of casting spells, identifying magic items, crafting magic items, and iden..."
+        "sa:description": "Cast spells, identify magic, and detect active spellcasting."
       }
     ],
     "Stealth": [
@@ -4643,20 +5552,6 @@
           "sa:keyAbility"
         ],
         "sa:description": "Heal people by performing surgery or similar medical attention."
-      }
-    ],
-    "Any 4 knowledge skills": [
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Any 4 knowledge skills",
-        "@id": "sa:skill-any-4-knowledge-skills",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Choose any four specialized knowledge skills."
       }
     ],
     "Pilot": [
@@ -5852,6 +6747,453 @@
         ]
       }
     ],
+    "sa:Organization": [
+      {
+        "file": "Setting/Organizations/Armanitech/armanitech.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Armanitech",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sect..."
+      },
+      {
+        "file": "Setting/Organizations/BrugsGobbos/brugs-gobbos.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Brug's Gobbos",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that ..."
+      },
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/concordat-trading-house.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Concordat Trading House",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominat..."
+      },
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/cult-of-the-unbroken.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Cult of the Unbroken",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressi..."
+      },
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/deeprunners-union.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Deeprunners Union",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and un..."
+      },
+      {
+        "file": "Setting/Organizations/Everliving-Faith/everliving-faith.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Faith of the Everliving",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith pre..."
+      },
+      {
+        "file": "Setting/Organizations/Exodian-Church/exodian-church.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Exodian Church",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the..."
+      },
+      {
+        "file": "Setting/Organizations/Forge-Syndicate/forge-syndicate.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Forge Syndicate",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundr..."
+      },
+      {
+        "file": "Setting/Organizations/House-Valorian/house-valorian.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "House Valorian",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's f..."
+      },
+      {
+        "file": "Setting/Organizations/Luminous-Synthesis/luminous-synthesis.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Luminous Synthesis",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven...."
+      },
+      {
+        "file": "Setting/Organizations/Velvet-Mask/velvet-mask.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Velvet Mask",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, thef..."
+      },
+      {
+        "file": "Setting/Organizations/Verdant-Collective/verdant-collective.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Verdant Collective",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to underst..."
+      }
+    ],
+    "CreativeWork": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Drexl: The Apparatus",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/everliving-crusade-overview.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "The Everliving Crusade: Campaign Overview",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Xanthia the Everliving",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Everliving-Faith/faith-and-fanatics.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Faith & Fanatics: The Symbiosis",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      },
+      {
+        "file": "Setting/Planets/Arcech/arcech.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Arcech",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "genre",
+          "keywords",
+          "url",
+          "author",
+          "about",
+          "locationCreated",
+          "hasPart",
+          "inLanguage",
+          "dateCreated",
+          "identifier"
+        ],
+        "description": "Arcech is a world of stark contrasts, where immense Hive cities rise from the surface into low orbit..."
+      },
+      {
+        "file": "Setting/Planets/Arrur/arrur.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Arrur",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "genre",
+          "keywords",
+          "url",
+          "author",
+          "about",
+          "locationCreated",
+          "hasPart",
+          "inLanguage",
+          "dateCreated",
+          "identifier"
+        ],
+        "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and ma..."
+      }
+    ],
+    "Place": [
+      {
+        "file": "Setting/Planets/Arcech/Places/arcech-sylandris.json",
+        "@type": "Place",
+        "rdfs:label": "Arcech-Sylandris",
+        "@id": "https://stellararcana.org/place/arcech-sylandris",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      },
+      {
+        "file": "Setting/Planets/Arcech/Places/blackwater.json",
+        "@type": "Place",
+        "rdfs:label": "Blackwater",
+        "@id": "https://stellararcana.org/place/blackwater",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      },
+      {
+        "file": "Setting/Planets/Arcech/Places/emerald-heights.json",
+        "@type": "Place",
+        "rdfs:label": "Emerald Heights",
+        "@id": "https://stellararcana.org/place/emerald-heights",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      },
+      {
+        "file": "Setting/Planets/Arcech/Places/ironhold.json",
+        "@type": "Place",
+        "rdfs:label": "Ironhold",
+        "@id": "https://stellararcana.org/place/ironhold",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      },
+      {
+        "file": "Setting/Planets/Arcech/Places/skyhaven.json",
+        "@type": "Place",
+        "rdfs:label": "Skyhaven",
+        "@id": "https://stellararcana.org/place/skyhaven",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      },
+      {
+        "file": "Setting/Planets/Arcech/Places/starfall.json",
+        "@type": "Place",
+        "rdfs:label": "Starfall",
+        "@id": "https://stellararcana.org/place/starfall",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      },
+      {
+        "file": "Setting/Planets/Arrur/Places/ashcross.json",
+        "@type": "Place",
+        "rdfs:label": "Ashcross",
+        "@id": "https://stellararcana.org/place/ashcross",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock."
+      },
+      {
+        "file": "Setting/Planets/Arrur/Places/bloodrift.json",
+        "@type": "Place",
+        "rdfs:label": "Bloodrift",
+        "@id": "https://stellararcana.org/place/bloodrift",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace",
+          "attitude"
+        ]
+      },
+      {
+        "file": "Setting/Planets/Arrur/Places/drowned-bastion.json",
+        "@type": "Place",
+        "rdfs:label": "Drowned Bastion",
+        "@id": "https://stellararcana.org/place/drowned-bastion",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Storm-battered cliffside city used as a penal colony and pirate port."
+      },
+      {
+        "file": "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json",
+        "@type": "Place",
+        "rdfs:label": "Hollow of the Last Joke",
+        "@id": "https://stellararcana.org/place/hollow-of-the-last-joke",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza\u2019s Gri..."
+      },
+      {
+        "file": "Setting/Planets/Arrur/Places/korvhal.json",
+        "@type": "Place",
+        "rdfs:label": "Korvhal",
+        "@id": "https://stellararcana.org/place/korvhal",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through..."
+      },
+      {
+        "file": "Setting/Planets/Arrur/Places/skarths-hollow.json",
+        "@type": "Place",
+        "rdfs:label": "Skarth\u2019s Hollow",
+        "@id": "https://stellararcana.org/place/skarths-hollow",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone p..."
+      },
+      {
+        "file": "Setting/Planets/Arrur/Places/southern-mountains.json",
+        "@type": "Place",
+        "rdfs:label": "Southern Mountains",
+        "@id": "https://stellararcana.org/place/southern-mountains",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace",
+          "attitude"
+        ]
+      },
+      {
+        "file": "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json",
+        "@type": "Place",
+        "rdfs:label": "Teeth of Gorthuun",
+        "@id": "https://stellararcana.org/place/teeth-of-gorthuun",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails i..."
+      },
+      {
+        "file": "Setting/Planets/Arrur/Places/thakzas-grin.json",
+        "@type": "Place",
+        "rdfs:label": "Thakza\u2019s Grin",
+        "@id": "https://stellararcana.org/place/thakzas-grin",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke..."
+      }
+    ],
     "sa:SkillCollection": [
       {
         "file": "skills.json",
@@ -5875,7 +7217,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Jump, vault, tumble and maneuver better. Used for reflex saves"
+        "sa:description": "Jump, vault, tumble, and maneuver. Used for Reflex saves."
       },
       {
         "file": "skills.json",
@@ -5887,19 +7229,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Use your merchant's knowledge to determine the value of items and sell them in the right places."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Arcane Summoning",
-        "@id": "sa:skill-arcane-summoning",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Form connections with strange beings known as outsiders and summon them to you."
+        "sa:description": "Determine item value and barter effectively."
       },
       {
         "file": "skills.json",
@@ -5935,7 +7265,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": ""
+        "sa:description": "Operate and troubleshoot computer systems and technology."
       },
       {
         "file": "skills.json",
@@ -5947,7 +7277,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Keep it together."
+        "sa:description": "Maintain focus during distracting or demanding situations."
       },
       {
         "file": "skills.json",
@@ -5959,7 +7289,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become fit and earn a good physical condition. Used for fortitude saves"
+        "sa:description": "Develop physical fitness and endurance. Used for Fortitude saves."
       },
       {
         "file": "skills.json",
@@ -5995,7 +7325,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become better at defense."
+        "sa:description": "Improve defensive capabilities and damage mitigation."
       },
       {
         "file": "skills.json",
@@ -6067,7 +7397,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Handle creatures of animal intelligece. Creatures with an intelligence score at 3 or lower. Creature..."
+        "sa:description": "Influence creatures with animal intelligence (Intelligence 3 or lower). Creatures with no Intelligen..."
       },
       {
         "file": "skills.json",
@@ -6079,7 +7409,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Work with traps, locks and similarly intricate mechanisms... with delicacy."
+        "sa:description": "Disable traps, pick locks, and manipulate intricate mechanisms."
       },
       {
         "file": "skills.json",
@@ -6115,7 +7445,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Increase your ability to lead, whether it is a squad or a corporation."
+        "sa:description": "Lead groups ranging from small squads to large organizations."
       },
       {
         "file": "skills.json",
@@ -6128,66 +7458,6 @@
           "sa:keyAbility"
         ],
         "sa:description": "Learn additional languages to expand what information you can gain."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Melee)",
-        "@id": "sa:skill-martial-melee",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Develop proficiency with melee weapons and physical prowess."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Body)",
-        "@id": "sa:skill-martial-body",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Become a living weapon and perform special maneuvers."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Ranged)",
-        "@id": "sa:skill-martial-ranged",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Develop proficiency with firearms and other ranged weapons."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial Crew Weapon",
-        "@id": "sa:skill-martial-crew-weapon",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Operate a crew weapon and deal some damage."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial Weapon System",
-        "@id": "sa:skill-martial-weapon-system",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Operate a weapon system, such a s a missile launch system or a battery of cannons."
       },
       {
         "file": "skills.json",
@@ -6235,7 +7505,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become skilled at dancing, singing, oration, miming, instruments or presentations, whichever suits y..."
+        "sa:description": "Master performance arts such as dancing, singing, and instrumental music."
       },
       {
         "file": "skills.json",
@@ -6259,7 +7529,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Make simple repairs on general items or more complete repairs on items you are knowledgeable with."
+        "sa:description": "Repair damaged items, with expertise in familiar equipment."
       },
       {
         "file": "skills.json",
@@ -6283,7 +7553,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Just ride. Ride any anymal that can bear your weight."
+        "sa:description": "Ride any animal you can control that bears your weight."
       },
       {
         "file": "skills.json",
@@ -6295,7 +7565,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Intuitively sense underlying issues about people. Used for will saves"
+        "sa:description": "Detect deception and read emotional subtext. Used for Will saves."
       },
       {
         "file": "skills.json",
@@ -6307,7 +7577,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become skilled at the art of casting spells, identifying magic items, crafting magic items, and iden..."
+        "sa:description": "Cast spells, identify magic, and detect active spellcasting."
       },
       {
         "file": "skills.json",
@@ -6356,18 +7626,6 @@
           "sa:keyAbility"
         ],
         "sa:description": "Heal people by performing surgery or similar medical attention."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Any 4 knowledge skills",
-        "@id": "sa:skill-any-4-knowledge-skills",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Choose any four specialized knowledge skills."
       },
       {
         "file": "skills.json",
@@ -7587,6 +8845,513 @@
         ]
       }
     ],
+    "Setting/Organizations/Armanitech/armanitech.json": [
+      {
+        "file": "Setting/Organizations/Armanitech/armanitech.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Armanitech",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sect..."
+      }
+    ],
+    "Setting/Organizations/BrugsGobbos/brugs-gobbos.json": [
+      {
+        "file": "Setting/Organizations/BrugsGobbos/brugs-gobbos.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Brug's Gobbos",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that ..."
+      }
+    ],
+    "Setting/Organizations/Concordat-Trading-House/concordat-trading-house.json": [
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/concordat-trading-house.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Concordat Trading House",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominat..."
+      }
+    ],
+    "Setting/Organizations/Cult-of-the-Unbroken/cult-of-the-unbroken.json": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/cult-of-the-unbroken.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Cult of the Unbroken",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressi..."
+      }
+    ],
+    "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Drexl: The Apparatus",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      }
+    ],
+    "Setting/Organizations/Cult-of-the-Unbroken/everliving-crusade-overview.json": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/everliving-crusade-overview.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "The Everliving Crusade: Campaign Overview",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      }
+    ],
+    "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Xanthia the Everliving",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      }
+    ],
+    "Setting/Organizations/Deeprunners-Union/deeprunners-union.json": [
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/deeprunners-union.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Deeprunners Union",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and un..."
+      }
+    ],
+    "Setting/Organizations/Everliving-Faith/everliving-faith.json": [
+      {
+        "file": "Setting/Organizations/Everliving-Faith/everliving-faith.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Faith of the Everliving",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith pre..."
+      }
+    ],
+    "Setting/Organizations/Everliving-Faith/faith-and-fanatics.json": [
+      {
+        "file": "Setting/Organizations/Everliving-Faith/faith-and-fanatics.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Faith & Fanatics: The Symbiosis",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description"
+        ]
+      }
+    ],
+    "Setting/Organizations/Exodian-Church/exodian-church.json": [
+      {
+        "file": "Setting/Organizations/Exodian-Church/exodian-church.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Exodian Church",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the..."
+      }
+    ],
+    "Setting/Organizations/Forge-Syndicate/forge-syndicate.json": [
+      {
+        "file": "Setting/Organizations/Forge-Syndicate/forge-syndicate.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Forge Syndicate",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundr..."
+      }
+    ],
+    "Setting/Organizations/House-Valorian/house-valorian.json": [
+      {
+        "file": "Setting/Organizations/House-Valorian/house-valorian.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "House Valorian",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's f..."
+      }
+    ],
+    "Setting/Organizations/Luminous-Synthesis/luminous-synthesis.json": [
+      {
+        "file": "Setting/Organizations/Luminous-Synthesis/luminous-synthesis.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Luminous Synthesis",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven...."
+      }
+    ],
+    "Setting/Organizations/Velvet-Mask/velvet-mask.json": [
+      {
+        "file": "Setting/Organizations/Velvet-Mask/velvet-mask.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Velvet Mask",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, thef..."
+      }
+    ],
+    "Setting/Organizations/Verdant-Collective/verdant-collective.json": [
+      {
+        "file": "Setting/Organizations/Verdant-Collective/verdant-collective.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Verdant Collective",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "role"
+        ],
+        "description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to underst..."
+      }
+    ],
+    "Setting/Planets/Arcech/arcech.json": [
+      {
+        "file": "Setting/Planets/Arcech/arcech.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Arcech",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "genre",
+          "keywords",
+          "url",
+          "author",
+          "about",
+          "locationCreated",
+          "hasPart",
+          "inLanguage",
+          "dateCreated",
+          "identifier"
+        ],
+        "description": "Arcech is a world of stark contrasts, where immense Hive cities rise from the surface into low orbit..."
+      }
+    ],
+    "Setting/Planets/Arcech/Places/arcech-sylandris.json": [
+      {
+        "file": "Setting/Planets/Arcech/Places/arcech-sylandris.json",
+        "@type": "Place",
+        "rdfs:label": "Arcech-Sylandris",
+        "@id": "https://stellararcana.org/place/arcech-sylandris",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Setting/Planets/Arcech/Places/blackwater.json": [
+      {
+        "file": "Setting/Planets/Arcech/Places/blackwater.json",
+        "@type": "Place",
+        "rdfs:label": "Blackwater",
+        "@id": "https://stellararcana.org/place/blackwater",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Setting/Planets/Arcech/Places/emerald-heights.json": [
+      {
+        "file": "Setting/Planets/Arcech/Places/emerald-heights.json",
+        "@type": "Place",
+        "rdfs:label": "Emerald Heights",
+        "@id": "https://stellararcana.org/place/emerald-heights",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Setting/Planets/Arcech/Places/ironhold.json": [
+      {
+        "file": "Setting/Planets/Arcech/Places/ironhold.json",
+        "@type": "Place",
+        "rdfs:label": "Ironhold",
+        "@id": "https://stellararcana.org/place/ironhold",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Setting/Planets/Arcech/Places/skyhaven.json": [
+      {
+        "file": "Setting/Planets/Arcech/Places/skyhaven.json",
+        "@type": "Place",
+        "rdfs:label": "Skyhaven",
+        "@id": "https://stellararcana.org/place/skyhaven",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Setting/Planets/Arcech/Places/starfall.json": [
+      {
+        "file": "Setting/Planets/Arcech/Places/starfall.json",
+        "@type": "Place",
+        "rdfs:label": "Starfall",
+        "@id": "https://stellararcana.org/place/starfall",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace"
+        ]
+      }
+    ],
+    "Setting/Planets/Arrur/arrur.json": [
+      {
+        "file": "Setting/Planets/Arrur/arrur.json",
+        "@type": "CreativeWork",
+        "rdfs:label": "Arrur",
+        "@id": null,
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "genre",
+          "keywords",
+          "url",
+          "author",
+          "about",
+          "locationCreated",
+          "hasPart",
+          "inLanguage",
+          "dateCreated",
+          "identifier"
+        ],
+        "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and ma..."
+      }
+    ],
+    "Setting/Planets/Arrur/Places/ashcross.json": [
+      {
+        "file": "Setting/Planets/Arrur/Places/ashcross.json",
+        "@type": "Place",
+        "rdfs:label": "Ashcross",
+        "@id": "https://stellararcana.org/place/ashcross",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock."
+      }
+    ],
+    "Setting/Planets/Arrur/Places/bloodrift.json": [
+      {
+        "file": "Setting/Planets/Arrur/Places/bloodrift.json",
+        "@type": "Place",
+        "rdfs:label": "Bloodrift",
+        "@id": "https://stellararcana.org/place/bloodrift",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace",
+          "attitude"
+        ]
+      }
+    ],
+    "Setting/Planets/Arrur/Places/drowned-bastion.json": [
+      {
+        "file": "Setting/Planets/Arrur/Places/drowned-bastion.json",
+        "@type": "Place",
+        "rdfs:label": "Drowned Bastion",
+        "@id": "https://stellararcana.org/place/drowned-bastion",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Storm-battered cliffside city used as a penal colony and pirate port."
+      }
+    ],
+    "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json": [
+      {
+        "file": "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json",
+        "@type": "Place",
+        "rdfs:label": "Hollow of the Last Joke",
+        "@id": "https://stellararcana.org/place/hollow-of-the-last-joke",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza\u2019s Gri..."
+      }
+    ],
+    "Setting/Planets/Arrur/Places/korvhal.json": [
+      {
+        "file": "Setting/Planets/Arrur/Places/korvhal.json",
+        "@type": "Place",
+        "rdfs:label": "Korvhal",
+        "@id": "https://stellararcana.org/place/korvhal",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through..."
+      }
+    ],
+    "Setting/Planets/Arrur/Places/skarths-hollow.json": [
+      {
+        "file": "Setting/Planets/Arrur/Places/skarths-hollow.json",
+        "@type": "Place",
+        "rdfs:label": "Skarth\u2019s Hollow",
+        "@id": "https://stellararcana.org/place/skarths-hollow",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone p..."
+      }
+    ],
+    "Setting/Planets/Arrur/Places/southern-mountains.json": [
+      {
+        "file": "Setting/Planets/Arrur/Places/southern-mountains.json",
+        "@type": "Place",
+        "rdfs:label": "Southern Mountains",
+        "@id": "https://stellararcana.org/place/southern-mountains",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace",
+          "containsPlace",
+          "attitude"
+        ]
+      }
+    ],
+    "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json": [
+      {
+        "file": "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json",
+        "@type": "Place",
+        "rdfs:label": "Teeth of Gorthuun",
+        "@id": "https://stellararcana.org/place/teeth-of-gorthuun",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails i..."
+      }
+    ],
+    "Setting/Planets/Arrur/Places/thakzas-grin.json": [
+      {
+        "file": "Setting/Planets/Arrur/Places/thakzas-grin.json",
+        "@type": "Place",
+        "rdfs:label": "Thakza\u2019s Grin",
+        "@id": "https://stellararcana.org/place/thakzas-grin",
+        "predicates": [
+          "type",
+          "label",
+          "description",
+          "containedInPlace"
+        ],
+        "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke..."
+      }
+    ],
     "skills.json": [
       {
         "file": "skills.json",
@@ -7608,7 +9373,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Jump, vault, tumble and maneuver better. Used for reflex saves"
+        "sa:description": "Jump, vault, tumble, and maneuver. Used for Reflex saves."
       },
       {
         "file": "skills.json",
@@ -7620,19 +9385,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Use your merchant's knowledge to determine the value of items and sell them in the right places."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Arcane Summoning",
-        "@id": "sa:skill-arcane-summoning",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Form connections with strange beings known as outsiders and summon them to you."
+        "sa:description": "Determine item value and barter effectively."
       },
       {
         "file": "skills.json",
@@ -7668,7 +9421,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": ""
+        "sa:description": "Operate and troubleshoot computer systems and technology."
       },
       {
         "file": "skills.json",
@@ -7680,7 +9433,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Keep it together."
+        "sa:description": "Maintain focus during distracting or demanding situations."
       },
       {
         "file": "skills.json",
@@ -7692,7 +9445,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become fit and earn a good physical condition. Used for fortitude saves"
+        "sa:description": "Develop physical fitness and endurance. Used for Fortitude saves."
       },
       {
         "file": "skills.json",
@@ -7728,7 +9481,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become better at defense."
+        "sa:description": "Improve defensive capabilities and damage mitigation."
       },
       {
         "file": "skills.json",
@@ -7800,7 +9553,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Handle creatures of animal intelligece. Creatures with an intelligence score at 3 or lower. Creature..."
+        "sa:description": "Influence creatures with animal intelligence (Intelligence 3 or lower). Creatures with no Intelligen..."
       },
       {
         "file": "skills.json",
@@ -7812,7 +9565,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Work with traps, locks and similarly intricate mechanisms... with delicacy."
+        "sa:description": "Disable traps, pick locks, and manipulate intricate mechanisms."
       },
       {
         "file": "skills.json",
@@ -7848,7 +9601,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Increase your ability to lead, whether it is a squad or a corporation."
+        "sa:description": "Lead groups ranging from small squads to large organizations."
       },
       {
         "file": "skills.json",
@@ -7861,66 +9614,6 @@
           "sa:keyAbility"
         ],
         "sa:description": "Learn additional languages to expand what information you can gain."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Melee)",
-        "@id": "sa:skill-martial-melee",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Develop proficiency with melee weapons and physical prowess."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Body)",
-        "@id": "sa:skill-martial-body",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Become a living weapon and perform special maneuvers."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial (Ranged)",
-        "@id": "sa:skill-martial-ranged",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Develop proficiency with firearms and other ranged weapons."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial Crew Weapon",
-        "@id": "sa:skill-martial-crew-weapon",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Operate a crew weapon and deal some damage."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Martial Weapon System",
-        "@id": "sa:skill-martial-weapon-system",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Operate a weapon system, such a s a missile launch system or a battery of cannons."
       },
       {
         "file": "skills.json",
@@ -7968,7 +9661,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become skilled at dancing, singing, oration, miming, instruments or presentations, whichever suits y..."
+        "sa:description": "Master performance arts such as dancing, singing, and instrumental music."
       },
       {
         "file": "skills.json",
@@ -7992,7 +9685,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Make simple repairs on general items or more complete repairs on items you are knowledgeable with."
+        "sa:description": "Repair damaged items, with expertise in familiar equipment."
       },
       {
         "file": "skills.json",
@@ -8016,7 +9709,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Just ride. Ride any anymal that can bear your weight."
+        "sa:description": "Ride any animal you can control that bears your weight."
       },
       {
         "file": "skills.json",
@@ -8028,7 +9721,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Intuitively sense underlying issues about people. Used for will saves"
+        "sa:description": "Detect deception and read emotional subtext. Used for Will saves."
       },
       {
         "file": "skills.json",
@@ -8040,7 +9733,7 @@
           "sa:description",
           "sa:keyAbility"
         ],
-        "sa:description": "Become skilled at the art of casting spells, identifying magic items, crafting magic items, and iden..."
+        "sa:description": "Cast spells, identify magic, and detect active spellcasting."
       },
       {
         "file": "skills.json",
@@ -8089,18 +9782,6 @@
           "sa:keyAbility"
         ],
         "sa:description": "Heal people by performing surgery or similar medical attention."
-      },
-      {
-        "file": "skills.json",
-        "@type": "sa:Skill",
-        "rdfs:label": "Any 4 knowledge skills",
-        "@id": "sa:skill-any-4-knowledge-skills",
-        "predicates": [
-          "rdfs:label",
-          "sa:description",
-          "sa:keyAbility"
-        ],
-        "sa:description": "Choose any four specialized knowledge skills."
       },
       {
         "file": "skills.json",
@@ -8321,9 +10002,9 @@
     ]
   },
   "summary": {
-    "totalFiles": 51,
-    "totalResources": 128,
-    "uniqueTypes": 11,
+    "totalFiles": 73,
+    "totalResources": 154,
+    "uniqueTypes": 14,
     "typeBreakdown": {
       "archetype:Archetype": 16,
       "sa:ActionList": 1,
@@ -8333,8 +10014,11 @@
       "sa:WondrousItem": 1,
       "sa:Feature": 29,
       "sa:Race": 12,
+      "sa:Organization": 12,
+      "CreativeWork": 6,
+      "Place": 15,
       "sa:SkillCollection": 1,
-      "sa:Skill": 58,
+      "sa:Skill": 51,
       "sa:Spells": 2
     }
   }

@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "label": "rdfs:label",
+    "description": "https://schema.org/description",
+    "type": "@type",
+    "CreativeWork": "https://schema.org/CreativeWork"
+  },
+  "type": "CreativeWork",
+  "label": "Xanthia the Everliving",
+  "description": [
+    "Xanthia is an immortal lich-queen whose existence blurs the boundary between monarch, god-empress, and cosmic undead tyrant. She represents weaponized immortality as political philosophy. Her current age is unknown—centuries, possibly millennia. Her power increases with every faithful soul that worships her.",
+    "Identity & Philosophy: Xanthia has endured through necromantic preservation of her consciousness and, critically, through the metaphysical power of faith itself. In a universe where belief has tangible reality-warping force, she has engineered herself into godhood. Her goal is not rulership—it is literal deification. She aims to become an unquestionable divinity worshipped across the sector, with the attendant power that such universal devotion grants.",
+    "Core Doctrine: Death is weakness. Eternity is victory. Civilization exists to glorify enduring power. Submission to immortality is enlightenment. The individual is temporary; only the hierarchy endures.",
+    "She encourages in her followers: Rigid stratified hierarchy (status is permanent, social mobility is upward toward apotheosis), absolute loyalty (obedience is transcendence), path to apotheosis (promise that exceptional followers may achieve undeath and permanent service), preservation of consciousness beyond death (the highest reward), eternal expansion (the Faith/Cult must grow sector-wide).",
+    "Strategic Genius: Xanthia is not an overconfident tyrant. She operates through multiple independent vectors simultaneously. The Faith of the Everliving provides legitimate missionary expansion and diplomatic cover. The Cult of the Unbroken provides destabilization, rapid conversion, and soft power. Drexl orchestrates specific high-value operations (like the Behemoth awakening) in ways that advance her goal regardless of their success or failure. If the Cult succeeds, she gains converts by the millions. If it's suppressed, survivors convert to the 'moderate' official Faith of the Everliving. Either way, her influence spreads.",
+    "Followers as Assets: Xanthia views every worshipper as a permanent asset—a vote in her favor, a prayer adding to her metaphysical weight, a potential undead soldier. A living believer is an investment; their faith grants her power directly. A dead believer raised as undead is an eternal asset. Betrayal means immediate annihilation; loyalty is rewarded with permanence, status, and the promise of never ending.",
+    "Current Operations: The Faith of the Everliving operates openly on dozens of worlds, gaining converts through philosophy and redemption theology. The Cult of the Unbroken destabilizes them through independent zealotry. Drexl executes specific high-stakes operations (Behemoth awakening on Arrur, etc.) in his own time, with his own objectives. Xanthia benefits from all three vectors. She does not command them; she allows them. She watches. She grows stronger with each new convert.",
+    "Danger Level: Xanthia is the most insidious threat in the sector. She cannot be killed (immortal), cannot be negotiated with (absolute in conviction), and cannot fail (every action, failed or succeeded, advances some form of her agenda). Her theology is infectious because it is fundamentally true to those who want it to be true. She has patience measured in centuries. She is patient enough to wait for civilizations to tear themselves apart before offering salvation. By the time opponents realize the scale of her presence, conversion has already become inevitable—and the converted believe they chose it freely."
+  ]
+}

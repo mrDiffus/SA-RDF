@@ -22,7 +22,7 @@
   },
   "type": "CreativeWork",
   "label": "Arrur",
-  "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and massive geological violence. It features sheer cliffs dropping into furious oceans, high-altitude deserts, volcanic plains, and myth-laden landmarks. Society revolves around strength, survival, and fortified cities like Bloodrift, which import destructive tech and export mercenaries, war materials, and magical arms.",
+  "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and massive geological violence. It features sheer cliffs dropping into furious oceans, high-altitude deserts, volcanic plains, and myth-laden landmarks. Society revolves around strength, survival, and fortified cities like Bloodrift, which import destructive tech and export mercenaries, war materials, and magical arms. However, Arrur now faces an existential threat: the Cult of the Unbroken, a death-cult devoted to the lich-empress Xanthia, has launched a military-religious crusade across the orc homeworld. Led by the war-priest Drexl, they spread necromantic doctrine, resurrect fallen warriors as reinforcements, and pursue an ancient power buried in the Southern Mountains—the Behemoth, a relic of forgotten ages meant to become Xanthia's weapon of apocalyptic terror.",
   "genre": "God-Scarred Mythology, Highland Brutalism, Mercenary Frontier, Volcanic War Epic",
   "keywords": [
     "orc homeworld",
@@ -36,7 +36,14 @@
     "Gorthuun",
     "Varrkul",
     "Korvhal",
-    "mercenary culture"
+    "mercenary culture",
+    "Southern Mountains",
+    "Behemoth",
+    "Cult of the Unbroken",
+    "Drexl",
+    "Xanthia",
+    "death-cult",
+    "necromantic crusade"
   ],
   "url": "https://stellararcana.org/arrur",
   "author": {
@@ -103,6 +110,12 @@
       "label": "Drowned Bastion",
       "description": "Storm-battered cliffside city used as a penal colony and pirate port.",
       "@id": "https://stellararcana.org/place/drowned-bastion"
+    },
+    {
+      "type": "Place",
+      "label": "Southern Mountains",
+      "description": "A vast, forbidding range at Arrur's southern extremity where magic and technology fail. Home to the Behemoth—an ancient, possibly sentient titan whose awakening would be apocalyptic.",
+      "@id": "https://stellararcana.org/place/southern-mountains"
     }
   ],
   "inLanguage": "en",
