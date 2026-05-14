@@ -1,0 +1,45 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "type": "@type"
+  },
+  "type": "Person",
+  "label": "Marrow: The Navigator",
+  "sa:race": "Orc",
+  "sa:identity": {
+    "label": "The Navigator",
+    "description": "High Tunneler commanding the western sector tunnels beneath Arcech's industrial district. Known for aggressive expansion, innovative salvage contracts, and an almost supernatural ability to find valuable artifacts in abandoned sections."
+  },
+  "schema:description": "Marrow earned her name by finding a fossilized bone in a pre-city burial chamber that contained carved symbols matching no known language. She kept it. She wears it as a pendant. This is the kind of archaeologically catastrophic behavior that should have made her persona non grata in academic circles—if she cared about academic circles, which she does not. She is brutally practical, coldly strategic, and utterly uninterested in the historical value of artifacts unless they can be sold or weaponized.",
+  "sa:nature": {
+    "appearance": "Orc, approximately 210 centimeters tall, muscular in the way people become muscular doing physically intensive work rather than training for appearance. Greenish-gray skin marked with old scars and burn marks (cave-ins, tunnel fires, industrial accidents). Her tusks are filed blunt for tunnel navigation work. She wears practical gear—heavy leather, reinforced boots, gear belts loaded with climbing rope and salvage tools. The fossil pendant hangs visible across her chest.",
+    "demeanor": "Direct, negotiation-capable, but uninterested in social niceties. She says what she means. She keeps her word exactly as stated—neither better nor worse. She shows no mercy but expects none.",
+    "quarters": "She maintains operational headquarters in the western sector's highest traffic hub—a pre-city transit junction that she has converted into a command post. Maps cover three walls. Salvage crates line the perimeter. Equipment is meticulously maintained. The space smells of oil and old mineral dust.",
+    "bearing": "She moves with controlled aggression, the kind of person who has survived multiple cave-ins because she was prepared for structural failure before it happened."
+  },
+  "sa:mechanics": {
+    "expansion_strategy": "She has opened seven new major tunnel corridors in the western sector over her tenure as sector boss. Each opening was risk-managed through careful surveying and shoring before commitment. She loses runners less frequently than statistically expected because her risk calculations account for human error.",
+    "salvage_operation": "Her real innovation is industrializing pre-city artifact recovery. She has established standardized assessment protocols, trained a team of appraisers, and established networks of buyers that can move artifacts from discovery to sale within four days. The profit margin is exceptional.",
+    "territorial_control": "She defends her sector's borders aggressively. Incursions by other sector operations are met with escalating force. She has never killed anyone unauthorized in her sector, but she has made the cost of entry high enough that few attempt it more than once.",
+    "relationship_with_rix": "Marrow respects Rix's judgment on structural safety and follows his directives without question. She does not, however, share his philosophy about neutral ground. She views the tunnels as infrastructure to be maximized for profit. Rix allows this tension to exist because Marrow's operational competence is unquestionable.",
+    "contract_approach": "She does not bid against other sectors for work. Instead, she expands her operational capacity so that her sector becomes the default choice for large, complex contracts. She can move volume that smaller operations cannot sustain."
+  },
+  "sa:relationships": {
+    "rix_blackstone": "Professionally subordinate but strategically independent. She executes Rix's structural safety mandates perfectly and ignores his broader philosophy about Deeprunner neutrality. Rix has not forced the issue, which suggests either patience or approval.",
+    "sector_bosses": "She maintains formal relations—trade agreements, dispute resolution through established protocol. She does not socialize. She does not build personal relationships with rivals. Efficiency is her priority.",
+    "salvage_team": "She has trained a crew of approximately 20 specialist runners who report directly to her. They are well-paid, dangerous, and fiercely loyal to her operational decisions. Turnover is near zero.",
+    "external_contractors": "Organizations from surface hive cities regularly contract Marrow's teams for tunnel work. She has earned a reputation for brutal honesty about project scope, timeline, and cost. Repeat business is high.",
+    "faith_of_everliving": "They have attempted to hire her sector for territorial intelligence. She refused. Not from principle, but because the contract offer was insufficient. She remains open to negotiation at the right price, though Rix's recent declaration has complicated the calculus."
+  },
+  "sa:quotes": [
+    "The tunnels don't care about your philosophy. They care about physics. Respect the physics, and you live. Ignore it, and you die. That is the only rule that matters.",
+    "A salvage contract is profitable when the risk assessment is correct. Mine usually are.",
+    "Other sectors lose runners to poor decisions. My losses are accidents and bad luck. That is a measurable difference."
+  ]
+}

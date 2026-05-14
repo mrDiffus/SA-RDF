@@ -652,7 +652,7 @@
       "@id": "sa:skill-spellcraft",
       "@type": "sa:Skill",
       "rdfs:label": "Spellcraft",
-      "sa:description": "Cast spells, identify magic, and detect active spellcasting.",
+      "sa:description": "Identify magic, and detect active spellcasting.",
       "sa:keyAbility": [
         {
           "@id": "sa:ability-intelligence",

@@ -14,7 +14,7 @@
   },
   "type": "sa:Organization",
   "label": "Armanitech",
-  "description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sector\u2019s leading employer of technical talent and fields a feared wet-work division. The company is governed by a board of directors\u2014humans from Old Earth\u2014rumored to have achieved immortality to perpetuate their wealth.",
+  "description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sector's leading employer of technical talent and fields a feared wet-work division. The company is governed by a board of directors\u2014humans from Old Earth\u2014rumored to have achieved immortality to perpetuate their wealth.",
   "role": [
     {
       "type": "sa:Role",

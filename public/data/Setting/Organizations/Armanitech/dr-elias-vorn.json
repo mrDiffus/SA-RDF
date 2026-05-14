@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "type": "@type"
+  },
+  "type": "Person",
+  "label": "Dr. Elias Vorn: The Visionary",
+  "sa:race": "Human",
+  "sa:identity": {
+    "label": "The Visionary",
+    "description": "Chief Research Officer and Principal Engineer. The architect of Armanitech's most advanced suit designs. Obsessed with the merger of human and machine beyond the point of functional preference."
+  },
+  "schema:description": "Elias Vorn is tall, unnaturally thin, and visibly augmented to the point where it is difficult to determine where the human ends and the technology begins. His left arm is synthetic—sleek, efficient, with joints that move through angles the human shoulder cannot achieve. His eyes have been replaced with optical systems of his own design. His spine shows through his shirt. He looks like a man who has optimized for function so thoroughly that aesthetic appeal became irrelevant somewhere around his thirty-fifth year.",
+  "sa:nature": {
+    "appearance": "Six feet four inches, approximately 135 pounds—a frame that has been stripped down to essential components. His skin is pale from years spent in laboratory environments. His right eye is human. His left eye is silver, with a visible targeting reticle that moves when he concentrates. His fingernails are filed flat to prevent catches against his work surfaces. He moves with precise, mechanical efficiency—no wasted energy, no casual grace.",
+    "augmentation_pattern": "He has replaced or heavily modified: spine (load-bearing enhancement), left arm (fully synthetic), both eyes (optical enhancement), partial nervous system rewiring (he claims an 300% improvement in neuromuscular response time). He has never augmented his brain directly, though rumors suggest he is considering it.",
+    "workspace": "His personal laboratory is on Armanitech's secondary facility. It is not locked—the security is behavioral. People who enter report feeling overwhelmingly that they are intruding. The space smells of ozone and expensive solvents. Every surface is in use. Every tool has a purpose. The coffee is cold.",
+    "affect": "He is capable of emotions, but they have become inefficient to him. Happiness and sadness have been replaced with 'optimal' and 'suboptimal.' He laughs occasionally, but it is a sound that does not match his facial expression."
+  },
+  "sa:mechanics": {
+    "design_philosophy": "The human body is a prototype. It is inefficient by design—compromises, legacy systems, evolutionary holdovers that served survival purposes in an environment that no longer exists. Armanitech suits do not enhance humans. They replace them.",
+    "breakthrough_designs": "The AC 14-17 suit he designed for Principal Engineers is the closest current thing to a second skin—responsive, regenerative, capable of function in environments that would kill an unaugmented human in minutes. He is already working on the successor: self-healing composite, neural integration, adaptive armor that learns from enemy weapons patterns.",
+    "obsession": "He wants to know what a human can become if all limitations are removed. Not genetically—augmentation. Not cloning—enhancement. He wants to build humans 2.0, and he believes Armanitech's immortal board is actually the proof of concept.",
+    "operational_limits": "The board has repeatedly blocked his most ambitious projects. He suspects they know something about the limits of augmentation he does not. This does not slow him. It simply makes him more creative about workarounds.",
+    "current_project": "Project Substrate—redesign of neural architecture to integrate directly with armor systems. The first prototype is classified. The test subject is also classified. He refuses to discuss either when questioned."
+  },
+  "sa:relationships": {
+    "nathaniel_cross": "Vorn respects Nathaniel in the way a researcher might respect a living example of successful transformation. He has asked, repeatedly, what modifications the board has undergone. Nathaniel has never answered directly, which Vorn finds simultaneously frustrating and motivating.",
+    "kassandra_vex": "The wetwork division regularly uses Armanitech's advanced suits. Vorn receives detailed feedback on durability, failure points, and real-world performance. He appreciates Kassandra because she provides the most unfiltered technical assessment he receives—she wants an edge, not reassurance.",
+    "junior_engineers": "He attracts brilliant young technicians who believe working with him will teach them transcendence. Most burn out within two years when they realize the cost of collaboration is surrendering emotional attachment to conventional humanity. Some stay. Those who stay become good.",
+    "the_body": "His remaining organic components are a compromise he tolerates. His face is one of the last organic systems he maintains. He has suggested to himself that it is for recognition purposes. He does not believe this. He has not yet admitted to himself why he preserves his face when he has replaced everything else that matters."
+  },
+  "sa:quotes": [
+    "Humans are not limited by their potential. They are limited by their assumptions about what is possible.",
+    "Every organic system is a compromise. I eliminate compromises.",
+    "The question is not whether we can enhance humans beyond naturalism. The question is: why would we stop?"
+  ]
+}

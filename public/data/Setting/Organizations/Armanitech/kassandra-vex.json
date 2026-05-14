@@ -1,0 +1,44 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "type": "@type"
+  },
+  "type": "Person",
+  "label": "Kassandra Vex: The Executioner",
+  "sa:race": "Human",
+  "sa:identity": {
+    "label": "The Executioner",
+    "description": "Chief of Armanitech's Wetwork Division. The most feared operative in the sector. Has never failed a contract. She does not brag about this—but the numbers are available to those who care to look."
+  },
+  "schema:description": "Kassandra Vex is frighteningly ordinary to look at—which is entirely the point. Mid-forties, average build, unremarkable face, the kind of person you would not remember ten seconds after looking directly at her. This is not accident. This is training. This is deliberate cultivation of absolute insignificance. Her hands are scarred. Her eyes are gray. When she speaks, her voice is the kind of quiet that forces absolute silence in a room because listening is the only way to hear her.",
+  "sa:nature": {
+    "appearance": "Methodically unremarkable. She owns two identical suits—gray, fits loosely, pockets reinforced. She wears the same boots to every meeting (composite sole, silent). Her hair is pulled back tight, no styling, no ornament. The only remarkable thing about her appearance is an old scar that runs from the corner of her left eye to her jaw—small enough to be easy to miss, large enough to suggest she survived something that should have killed her.",
+    "demeanor": "She moves quietly. Not sneaking—walking at normal speed, but each step calculated to minimize noise. She does not fidget. She does not blink more than necessary. She listens more than she speaks, and when she does speak, every sentence is information-dense.",
+    "quarters": "Armanitech provides her housing in a secure facility adjacent to the division's headquarters. She does not appear to live there. No one has ever successfully tracked her to a permanent residence.",
+    "the_scar": "The story (rumors, mostly) is that it was a failed attempt on her life by a target's hired protection. The target is dead. The protection detail is dead. Kassandra walking around with a scar seems almost contemptuous—proof that she survived the one moment someone nearly ended her."
+  },
+  "sa:mechanics": {
+    "operational_record": "Zero failed contracts in 22 years of division leadership. Zero surviving witnesses to operations when that is the contract specification. Zero patterns—her methods vary with such deliberate inconsistency that strategic analysis cannot predict her approach.",
+    "specialization": "Targeted elimination, extraction, psychological operations, and black-bag jobs that require such precision the client hasn't actually admitted what they wanted accomplished. She modularizes problems into parts no larger than a single operative can execute.",
+    "team_selection": "She does not accept applicants for the division. She recruits from the margins—failed soldiers, disgraced intelligence operatives, people with nothing to lose and everything to prove. She trains them until they either become lethal or break. She has a 40% attrition rate, which is considered exceptional in the industry.",
+    "operational_tempo": "She maintains 3-5 active contracts at any given time. Each contract receives exactly the resources required—no more, no less. No redundancy. No margin for error. Her contractors learn to operate with precision that borders on supernatural.",
+    "kill_decision": "Kassandra makes all tactical judgments about who dies in the field. She has authority to expand or reduce contracts as operational reality demands. She has never exceeded a contract's scope, which suggests either exceptional accuracy in her initial assessment or a ruthless willingness to absorb losses Armanitech would prefer not to acknowledge."
+  },
+  "sa:relationships": {
+    "nathaniel_cross": "She reports directly to the board through Nathaniel, meeting with him once per quarter. These meetings are thirty minutes exactly. The agendas are never written down. Nathaniel has never questioned her decisions.",
+    "operatives": "She does not socialize with her own team. She evaluates, assigns, extracts. Loyalty is professional. Personal bonds are security vulnerabilities she deliberately avoids cultivating.",
+    "rivals": "The Covenant of Mercenaries operates in the same sector and occasionally competes for contracts. Kassandra has never bid against them—she simply outperforms them until they step aside. There is no competition between her and any rival organization. Eventually, they realize this.",
+    "faith_of_everliving": "They are expanding territorial control on Arrur. Armanitech has not been contracted to eliminate them. Yet. Kassandra watches their consolidation with professional interest. She has already begun psychological profiles on their leadership in case the contract materializes."
+  },
+  "sa:quotes": [
+    "A contract is a promise written in mathematics. Everything else is noise.",
+    "Most operatives fail because they try to be clever. I succeed because I am thorough.",
+    "I have never failed. This is not luck or talent. This is what happens when you refuse to accept the possibility of failure."
+  ]
+}

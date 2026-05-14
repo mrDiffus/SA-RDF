@@ -184,7 +184,8 @@ export async function fetchSpells(): Promise<Spell[]> {
     target: raw['spell:target'],
     ...(raw['sa:damage'] !== undefined && { damage: raw['sa:damage'] }),
     ...(raw['sa:damageType'] !== undefined && { damageType: raw['sa:damageType'] }),
-    ...(raw['sa:levelScaling'] !== undefined && { levelScaling: raw['sa:levelScaling'] })
+    ...(raw['sa:levelScaling'] !== undefined && { levelScaling: raw['sa:levelScaling'] }),
+    ...(raw['sa:effect'] !== undefined && { effect: raw['sa:effect'] })
   })));
 }
 

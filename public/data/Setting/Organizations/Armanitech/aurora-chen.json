@@ -1,0 +1,45 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "type": "@type"
+  },
+  "type": "Person",
+  "label": "Aurora Chen: The Defector",
+  "sa:race": "Human",
+  "sa:identity": {
+    "label": "The Defector",
+    "description": "Former Senior Wetwork Consultant. Deserted the division six months ago after refusing a contract. Currently operating from Bloodrift as a private contractor. Status within Armanitech: officially deceased per wetwork division records."
+  },
+  "schema:description": "Aurora Chen is living proof that you can survive refusing Armanitech and escape the sector with operational breathing room. She is haunted by this—not by guilt, but by the knowledge that her survival suggests that Armanitech allowed it. She runs jobs for private clients, high-risk extraction and protection work that pays better than she needs because the money is the only way she can justify the risk. She has not slept more than four hours per night since leaving. She does not expect to sleep well again.",
+  "sa:nature": {
+    "appearance": "Mid-thirties, compact frame designed for endurance rather than burst strength, dark hair kept shoulder-length (a defiant break from Armanitech's preference for minimal targets). She has surgical scars that are not quite hidden by her clothing—reminders of augmentation she received under Armanitech oversight. Her hands are steady until they aren't, and then they shake for hours.",
+    "affect": "Professional. Distant. Capable of being personable in ways that feel rehearsed because they are. She maintains relationships through careful limitation—clients, contractors, nothing approaching friendship. The last time someone called her by her old nickname, she shut down the conversation entirely.",
+    "environment": "She operates from Bloodrift, renting monthly contracts for nondescript housing in industrial sections. She does not own anything worth protecting. She travels with one bag. She maintains three separate identities for operational purposes and no longer remembers which one is the original.",
+    "the_defection": "She was contracted to eliminate a target involved in fringe augmentation research—someone exploring the same territory as Dr. Vorn but through unorthodox financing. She ran the preliminary surveillance, assessed the target, and in the final 24 hours before the contract deadline, she recognized the target as someone she had trained with. She refused. The division classified her as compromised. The bounty on her head is significant. That she is still alive suggests either that she is better than they trained her to be, or that someone with enough authority is allowing her to exist as a living reminder that you can refuse and survive."
+  },
+  "sa:mechanics": {
+    "operational_profile": "Black-bag extraction, hostile environment protection, psychological interrogation, and the occasional teaching contract with smaller contractors who need specialist training. She no longer takes kill contracts—not from principle, but from pragmatism. The profit margin is identical, and the legal exposure is immeasurably worse.",
+    "augmentation_suite": "Enhanced nervous response (200% standard), subdermal plating across vitals (minimal, less obvious than Vorn's approach), neural optimization for rapid decision-making under stress. The augmentations are now eight years old. She wonders regularly if she should upgrade or if the modifications are sufficient reason to consider civilian life.",
+    "skill_specialization": "She was trained in everything Armanitech requires of an operative. She was never specialized. This made her valuable as a multi-tool and dangerous as a liability when she became unpredictable.",
+    "freelance_pricing": "She charges more than she needs to because the cost functions as a filter—she only accepts contracts from clients who are either exceptionally well-funded or desperately committed. Both filters serve her survival odds.",
+    "threat_profile": "She is alive because Armanitech judges that keeping her alive is more useful than killing her. She may be a honeypot—allowing her to live while monitoring her activities, tracking her clients, building a map of resistance networks and independent contractors. Or Armanitech may simply be done with her. She does not know which scenario is worse."
+  },
+  "sa:relationships": {
+    "armanitech_division": "Officially, she is dead. Operationally, there is a standing contract to neutralize her should she resurface in Armanitech territory. She has not tested this assumption. She does not intend to.",
+    "kassandra_vex": "Aurora trained under Vex. She respects her completely and would refuse any contract that required opposing her. Vex has not attempted to contact her since the defection. Aurora is uncertain whether this means Vex respects her decision or has simply moved on to other assets.",
+    "bloodrift_community": "She maintains the surface appearance of integration while maintaining absolute operational isolation. Bloodrift residents are neutral about her—she pays on time, causes no trouble, and does not insert herself into local politics. This is exactly the level of acceptance she requires.",
+    "independent_contractors": "She has built a reputation as reliable, professional, and aggressively risk-aware. Contractors who work with her report that she is cold, but dependable. They do not attempt to develop personal relationships. She appreciates this.",
+    "the_future": "She sends monthly payments to a secure account on a station beyond the sector. These are her exit strategy—ten years of this rate and she can disappear into civilian life on a distant world. Something tells her she will never actually execute that plan. She will keep running until Armanitech decides it is time to stop."
+  },
+  "sa:quotes": [
+    "I refused one contract. That should not have been enough to make me a ghost.",
+    "Armanitech allowed me to live. The question I cannot answer is whether that is mercy or patience.",
+    "Every job I take is borrowed time. Eventually, someone will collect the bill."
+  ]
+}

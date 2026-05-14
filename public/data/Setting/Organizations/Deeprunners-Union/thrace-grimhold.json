@@ -1,0 +1,47 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "type": "@type"
+  },
+  "type": "Person",
+  "label": "Thrace Grimhold: The Enforcer",
+  "sa:race": "Dwarf",
+  "sa:identity": {
+    "label": "The Enforcer",
+    "description": "Sector Boss of the northern tunnels beneath the manufacturing districts. Hardened tunnel cop. Enforces the code with casual violence and complete certainty. Responsible for 47% of rule violations being settled internally rather than escalating to council."
+  },
+  "schema:description": "Thrace Grimhold is built like a tunnel wall—square, solid, immovable. He has spent forty years managing territorial disputes, settling debts, and ensuring that anyone who tries to violate the neutral ground code receives an education in pain so complete that they never require a second lesson. He does not enjoy violence. He does not despise it. He treats it as a tool, the same way a carpenter treats a hammer. Efficient, straightforward, proportional to the task at hand.",
+  "sa:nature": {
+    "appearance": "Dwarf, approximately 135 centimeters tall, built with the kind of density that makes scale deceptive—he is heavier than humans six inches taller. His face is scarred from decades of tunnel violence. His beard is braided with iron rings, one for every major territorial dispute he has settled. Currently wearing seventeen. One eye is covered by a leather patch; the other is cold and gray. His hands are enormous and demonstrate evidence of break, reset, and break again.",
+    "demeanor": "Economical with words. Communicates primarily through presence. Can settle arguments simply by showing up. When he speaks, he uses minimum necessary language, delivered in a voice like rocks grinding.",
+    "method": "He enters a disputed tunnel section, evaluates the situation by reading body language and structural evidence, makes a judgment about who violated code, and implements consequences. The speed and certainty with which he does this is genuinely unsettling.",
+    "authority": "Runners do not challenge his decisions. Not out of fear (though fear is present), but because his subsequent explanation of his reasoning is always logically perfect. He never makes mistakes about code application."
+  },
+  "sa:mechanics": {
+    "conflict_resolution": "He handles approximately 40-60 disputes per year. Of these, 95% are resolved on first contact. The remaining 5% require follow-up enforcement. Repeats are uncommon.",
+    "code_application": "He can apply tunnel code to situations explicitly covered by code and implicitly covered by spirit-of-the-code. This distinction matters. He never forgives technical violations of spirit, never over-punishes technical code violations.",
+    "violence_calibration": "He escalates precisely. A first violation of code receives warning. A second receives bruising. A third receives broken bones. A fourth receives exile from tunnels. He has never had to execute a fifth because nobody has ever violated code a fifth time.",
+    "territory_management": "His sector has the lowest crime rate of any tunnel sector. Not because he prevents crime—because criminals understand that the punishment is certain and proportional, and simply choose to operate elsewhere.",
+    "council_relationship": "Rix trusts him completely. Marrow respects his methodology. Other sector bosses are barely aware of him; he does not socialize or conduct business outside his sector. His quarterly council reports are model efficiency—five minutes, clear data, motion to adjourn.",
+    "specialty_skills": "He can identify whether a structural collapse was accident or sabotage. He can track runners through tunnel systems by reading disturbances they leave. He has memorized his sector's entire network and can identify blind spots, trap locations, and optimal conflict resolution locations within seconds of assessing an area."
+  },
+  "sa:relationships": {
+    "rix_blackstone": "Absolute respect. Rix assigned him the northern sector seventeen years ago with the statement: 'Keep it clear.' He has. Rix has never questioned a decision. Thrace has never asked for guidance.",
+    "marrow": "Professional distance. They respect each other's competence. Disputes between sectors are rare; disputes within Thrace's sector have never been escalated to her because he resolves them before they grow large enough to matter.",
+    "vale_ashborn": "Thrace is the only person in the Deeprunners who seems to understand Vale perfectly, despite understanding almost nothing about him. When asked why Vale never gets lost, Thrace responded: 'Path's clear. He sees it. Different than most.' Refuses to elaborate.",
+    "runners": "They fear him. They also trust him. A runner in Thrace's sector can walk tunnel routes Vale leads with absolute confidence that Thrace will not tolerate interference. The crime rate in his sector is effectively zero.",
+    "external_enforcement": "Hive city authorities have attempted to hire him. He has declined. Not because he is opposed to working for surface dwellers, but because it would violate the code requiring sector bosses to maintain independent operations. His sector's independence is more valuable than any contract."
+  },
+  "sa:quotes": [
+    "Code is code. Doesn't matter what you thought your violation meant. Matters what you did.",
+    "I've never had to hit anyone twice. First time teaches them. Second time never comes.",
+    "Tunnels are clear because the punishment for clearing them the wrong way is clear. That is how you maintain order underground.",
+    "Vale Ashborn is blessed in ways I don't understand. I stopped trying to understand him. Now I just prevent people from disrupting whatever he has going."
+  ]
+}

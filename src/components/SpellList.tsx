@@ -205,8 +205,16 @@ export default function SpellList({ selectedResourceId, onNavigate }: SpellListP
               </div>
 
               <div className="space-y-4">
-                <span className="text-[10px] text-zinc-500 uppercase font-bold tracking-widest">Description</span>
-                <p className="text-zinc-300 leading-relaxed">{selectedSpell.description || '—'}</p>
+                <div>
+                  <span className="text-[10px] text-zinc-500 uppercase font-bold tracking-widest">Summary</span>
+                  <p className="text-zinc-300 leading-relaxed">{selectedSpell.description || '—'}</p>
+                </div>
+                {selectedSpell.effect && (
+                  <div>
+                    <span className="text-[10px] text-zinc-500 uppercase font-bold tracking-widest">Effect</span>
+                    <p className="text-zinc-300 leading-relaxed">{selectedSpell.effect}</p>
+                  </div>
+                )}
               </div>
             </motion.div>
           </>

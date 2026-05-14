@@ -1,0 +1,43 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "type": "@type"
+  },
+  "type": "Person",
+  "label": "Nathaniel Cross: The Architect",
+  "sa:race": "Human",
+  "sa:identity": {
+    "label": "The Architect",
+    "description": "Founder and Chief Executive Director of Armanitech. One of the original immortals from Old Earth. Claims to have been born in 2087. His age is a matter of corporate mystique and deliberate ambiguity."
+  },
+  "schema:description": "Nathaniel Cross does not look old. This is deliberate and distressing in equal measure. He is visibly Human—somewhere between 60 and 200 years old depending on lighting and the observer's willingness to believe. He dresses in austere black suits with minimal ornamentation, speaks rarely in public forums, and conducts Armanitech's business through a network of intermediaries so efficient most of the sector believes he is already dead. He is not. He is simply uninterested in being seen.",
+  "sa:nature": {
+    "appearance": "Visibly aged in the way of people who have had excellent cosmetic maintenance for centuries—no wrinkles, but a certain hardness around the eyes that cannot be bought. His hands show his age more than his face; the veins are prominent, the skin paper-thin despite every medical intervention. He wears black gloves more often than not.",
+    "demeanor": "When he does appear in person, he moves with mechanical precision. No gesture is wasted. No word is improvised. He speaks in complete sentences with perfect punctuation, as if reading from an internal script written decades ago and never revised.",
+    "quarters": "His office occupies the entire top floor of Armanitech's primary facility. It is spare—desk, chair, three walls of monitors showing the sector's economic data streaming in real-time. No personal effects. No photographs. Nothing suggesting the existence of a life outside the corporation.",
+    "visible_modification": "His spine shows evidence of replacement. His left eye is clearly artificial—it glows faintly in dim light. These are not hidden. They are displayed as proof of concept."
+  },
+  "sa:mechanics": {
+    "immortality_strategy": "The Board has access to life-extension technology far beyond public synthesis. The exact mechanism is classified. Rumors suggest: cellular rejuvenation through nanotech infusion, consciousness transfer between cloned bodies, or something stranger—that they are not alive in the conventional sense at all, but the continuity of pattern maintained through technology so advanced it appears supernatural.",
+    "vision": "Armanitech is not building products. It is building the infrastructure of transcendence. Every suit, every weapon, every piece of tech is a step toward a version of humanity that does not age, does not fail, does not surrender to entropy.",
+    "operational_style": "He sets the board's strategic direction, but does not involve himself in execution. He chooses lieutenants of exceptional competence, assigns impossible objectives, evaluates results with mathematical coldness, and replaces those who fail. He has been doing this for long enough that the process itself is refined to an art.",
+    "decision_timescale": "He makes decisions that will not mature for decades. He invests in technology that may not be weaponizable for 50 years. He plays a game against competitors he expects to outlive naturally."
+  },
+  "sa:relationships": {
+    "board_of_directors": "Nathaniel is first among equals, but only barely. The board consists of six other immortals from Earth, each holding equivalent power and patience. They convene once per year. The agenda items are classified. The decisions they reach reshape sector economics for the next 12 months.",
+    "sector_executive_tier": "Nathaniel views them as promising middle-management. Some will eventually be offered the immortality ritual. Most will retire wealthy and confused about why they never felt truly successful.",
+    "wetwork_division": "He approves all kill contracts above ten million credits. He has approved exactly four in the last thirty years. The division operates with near-autonomy below that threshold.",
+    "faith_of_everliving": "Nathaniel observes their expansion on Arrur with intellectual interest. They promise the same thing he has already achieved—the conquest of death. His advantage is that he has already won. Whatever they achieve, he achieved a century ago. This makes them irrelevant competitors, not threats."
+  },
+  "sa:quotes": [
+    "Armanitech does not manufacture products. We manufacture the future.",
+    "Immortality is not a state—it is a process. A maintenance routine. The moment you stop improving, you begin declining.",
+    "Every person in this organization has already died once. They simply choose not to accept it."
+  ]
+}

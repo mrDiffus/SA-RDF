@@ -122,6 +122,7 @@ export interface RawSpell {
   'sa:damage'?: string;
   'sa:damageType'?: string;
   'sa:levelScaling'?: string;
+  'sa:effect'?: string;
 }
 
 export interface RawSkill {
