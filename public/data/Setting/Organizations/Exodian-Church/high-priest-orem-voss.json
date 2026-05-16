@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/high-priest-orem-voss",
+      "@type": "schema:Person",
+      "rdfs:label": "High Priest Orem Voss",
+      "sa:identity": {
+        "rdfs:label": "The Reliquary Procession",
+        "schema:description": "A senior Exodian priest mounted in a four-legged armored reliquary chassis, treated by believers as both liturgy and threat display."
+      },
+      "schema:description": "High Priest Orem Voss is the Church's most visible answer to anyone who thinks faith should remain discreet. Below the waist he is almost entirely augmentation: a heavy armored reliquary chassis, four shield-like legs, concealed stabilizers, and cargo compartments for blessed tools, core modules, and ceremonial seals. Above the waist he wears layered priestly armor and a faceplate that can be raised only during the most formal rites. When Orem enters a district, it feels less like a person arriving than a doctrine taking a physical route through the streets.",
+      "sa:race": "Human",
+      "sa:thematics": [
+        "heavy augmentation",
+        "reliquary procession",
+        "ritual intimidation",
+        "salvage liturgy",
+        "holy mobility",
+        "mobile altar",
+        "public doctrine",
+        "forbidden access"
+      ],
+      "sa:nature": {
+        "appearance": "Tall above the chassis, broad through the shoulders, and surrounded by the hum of servo locks and sanctioned field generators. The four shield-legs are engraved with protective scripture and designed to brace under impact. His lower assembly looks half shrine, half siege platform, with recessed clamps for tools, icon plates, and portable sanctum lamps. His robes are tailored to drape around machinery rather than conceal it, making the augmentation part of the vestment rather than something hidden beneath.",
+        "demeanor": "Calm to the point of discomfort. Orem never seems rushed because he expects the room to make way for him. He speaks softly, which makes his words feel heavier. In a crowd he is composed and ceremonial; in private he is technical and exacting, with no patience for careless claims about sacred equipment.",
+        "quarters": "He keeps chambers inside a fortified reliquary annex that doubles as a repair bay, liturgy hall, and storage vault. Everything is labeled. Everything is cleaned. Nothing is left where a novice could trip over it and call the result divine will.",
+        "bearing": "His motion is deliberate and nearly impossible to unbalance. He advances like a procession that has decided to keep going even if the city refuses to make room. The shield-legs anchor him in place when he plants for a sermon, turning his body into a stationary altar that still looks ready to march."
+      },
+      "sa:mechanics": {
+        "ritual_command": "Orem oversees large reclamation rites where the Church publicly claims abandoned or hoarded technology as sacred trust. He decides whether an object is to be sanctified, repaired, redistributed, or stripped for parts.",
+        "augmentations": "His lower-body chassis is more advanced than anything worn by the lower clergy. It includes impact shielding, field stabilization, hidden storage, and interfaces for plugging directly into relic systems. The augmetics are not vanity; they are the Church's doctrine made industrial.",
+        "authority_level": "He can direct recovery teams, ordain senior evangelists into field work, and conduct public marches that double as a warning to hostile powers. Lower clergy are expected to obey without argument when he names a machine a relic or a resource.",
+        "symbolic_role": "Orem exists to remind people that the Church does not ask permission from institutions that hoard useful things. The four shield-legs are meant to look like armor, altar supports, and an answer all at once.",
+        "operational_style": "He prefers visible recoveries over quiet theft. If the Church takes a machine under his direction, the taking should be witnessed, remembered, and repeated as an example.",
+        "public_reputation": "Believers call him steadfast. Rivals call him excessive. Anyone who has seen his procession up close tends to describe the same thing with different words: an argument that walks."
+      },
+      "sa:relationships": {
+        "tech_evangelists": "He treats them as the Church's hands in the field and teaches them that rescue, reclamation, and redistribution are all holy work.",
+        "lower_clergy": "He expects modest augmetics from them and often uses that visible restraint as a teaching point: the rank of the priest is shown by what the body can bear.",
+        "cardinals": "He answers to them, but not happily. Orem respects command structure only when it serves recovery. He considers any cardinal who leaves machinery to decay a failure of faith.",
+        "the_faithful": "To congregations, he is the proof that the Church can be both practical and terrifying. People are more likely to believe in reclaimed salvation after seeing him arrive."
+      },
+      "sa:quotes": [
+        "A hidden machine is a lie with a power source.",
+        "If it can be repaired, it must be returned.",
+        "My legs are shielded because the Church is not here to kneel.",
+        "The procession is the sermon. The recovery is the answer.",
+        "When the city locks away its tools, it invites us to become necessary."
+      ]
+    }
+  ]
+}

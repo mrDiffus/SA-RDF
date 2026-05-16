@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/reef-harrower-oth",
+      "@type": "schema:Person",
+      "rdfs:label": "Reef-Harrower Oth",
+      "sa:identity": {
+        "rdfs:label": "The Bone Current",
+        "schema:description": "Aboleth shock engineer and reef-breaker; the savage specialist who turns fortifications, hulls, and bodies into harvestable debris."
+      },
+      "schema:description": "Reef-Harrower Oth looks like a siege engine grown in saltwater and fitted with teeth. His forearms are wrapped in kelp-reinforced armor, and the hooked implements hanging from his belt are less tools than promises of structural failure. He carries a severing maul chained to a spindle mount, but his preferred weapons are the currents he starts and the walls he convinces to collapse. When he laughs, the sound comes out like rock splitting under tide pressure.",
+      "sa:race": "Aboleth-touched heavy (reef-breaker, demolition specialist, adapted breacher)",
+      "sa:origin": "Coral ruin foundry and trench salvage yard",
+      "sa:thematics": [
+        "siege demolition",
+        "reef warfare",
+        "structural sabotage",
+        "predatory engineering",
+        "brutal salvage",
+        "deepwater industry",
+        "close-quarters destruction",
+        "salt-bone pragmatism",
+        "weaponized collapse",
+        "grim craftsmanship"
+      ],
+      "sa:nature": {
+        "appearance": "Massive, scarred, and packed with improvised hardware. His armor is built from coral plates, ship ribbing, and salvaged chainwork, all stained in a permanent film of brine. One shoulder bears a rotating drill-shroud, the other a flensing brace used to bite through hull plating or stone anchors. He is decorated with charms taken from ruins he helped crack open, each one a reminder that nothing built by others is sacred for long.",
+        "demeanor": "He is cheerful in the way a flood is cheerful. Oth enjoys work, especially the kind that makes other people back away from a structure and wonder whether it was ever safe. He is direct, occasionally jovial, and almost never subtle. In his presence, plans become shorter because he keeps solving them with force.",
+        "psychology": "Oth believes everything useful should be taken apart until its weakness becomes a map. He has an artisan's pride in destruction, regarding collapse as a form of honest analysis. He is not mindlessly violent; he is dedicated. He can tell by sound where a wall will fail, by smell where a deck will split, and by instinct where a body will panic first.",
+        "battle_role": "Breacher and terrain corruptor. He creates new entrances, destroys cover, and turns fortified positions into lethal debris fields for the rest of the shock unit to exploit."
+      },
+      "sa:mechanics": {
+        "primary_work": "Demolition, reef breaking, hull cracking, and battlefield salvage. He is sent where the enemy thinks walls, docks, or sacred barriers will keep them safe.",
+        "combat_style": "Heavy shock assault with area destruction. He uses mauls, cutters, drills, and psionically guided impact patterns to collapse defenses and isolate targets.",
+        "operational_method": "Oth opens the fight by removing terrain advantages. He cracks the structure, floods the breach, and forces defenders into the open where the rest of the line can harvest them.",
+        "narrative_use": "Best used for siege scenes, shipboard assaults, or any encounter where the environment itself should feel threatened. He is the kind of lieutenant that makes cover meaningless.",
+        "failure_modes": "He gets overcommitted to the most elegant collapse. Clever defenders can bait him into wrecking the wrong support, wasting his momentum. He also struggles in places with no breakable geometry, where his instinctive route-finding has less to bite into."
+      },
+      "sa:relationships": {
+        "zhorr": "Oth respects Zhorr's certainty and keeps pace with him because the captain understands that a breach is only useful if you pour through it fast.",
+        "the_reef_yards": "His favored hunting ground and workshop. He knows every weak seam in the local stone and every profitable ruin beneath it.",
+        "shipwrights": "He considers them either prospective allies or future customers, which is to say the same thing in different moods.",
+        "defenders": "He likes defenders who refuse to flee, because their stubbornness makes the demolition more meaningful.",
+        "loot": "He does not hoard treasure. He hoards options, scrap, and the parts needed to make the next collapse cleaner."
+      },
+      "sa:quotes": [
+        "Every wall has a prayer in it. I know how to answer.",
+        "If the deck groans like that, the fight is already mine.",
+        "Pretty fortification. Shame about the support.",
+        "I don't break things. I reveal what they were trying to hide.",
+        "Stand there if you want. It makes the diagram easier."
+      ]
+    }
+  ]
+}

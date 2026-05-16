@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/cardinal-sael-thorn",
+      "@type": "schema:Person",
+      "rdfs:label": "Cardinal Sael Thorn",
+      "sa:identity": {
+        "rdfs:label": "The Liberated Forge",
+        "schema:description": "A sector-level Exodian cardinal whose body is nearly as augmented as the doctrine she enforces."
+      },
+      "schema:description": "Cardinal Sael Thorn rules the Church's recovery operations with the poise of a diplomat and the hardware density of a war engine. Her body is heavily augmented beneath ceremonial armor: reinforced legs, servo-linked hips, spinal lattices, a chest-mounted command array, and a right arm replaced with a precision reliquary manipulator capable of carrying sacred cores or tearing open vault locks. The augmetics are gilded and devotional, but there is nothing decorative about them. They are what happens when the Church decides theology should be able to move heavy things.",
+      "sa:race": "Human",
+      "sa:thematics": [
+        "high clergy",
+        "sector command",
+        "heavily augmented",
+        "recovery campaigns",
+        "resource redistribution",
+        "church politics",
+        "industrial liberation",
+        "command doctrine"
+      ],
+      "sa:nature": {
+        "appearance": "Sael presents as a towering figure in layered cardinal armor with luminous scripture channels running across the plates. Her lower body is visibly more machine than flesh, but the augmentation is integrated so cleanly it reads as a single ceremonial silhouette. Her chest array can project route maps, recovery orders, and liturgical seals. Her face is severe, controlled, and almost always framed by the pale glow of interface needles just behind her ears.",
+        "demeanor": "Composed, urbane, and hard to unsettle. She speaks like a person who expects every room to become a negotiation and every negotiation to end with someone losing access to something they thought was theirs. Sael can sound gracious while authorizing the seizure of an entire warehouse district.",
+        "quarters": "Her private chamber is part command office, part reliquary, part operating theater for sacred maintenance. It contains maps of industrial hoards, salvaged machine cores in prayer-lined cradles, and a wall of sealed directives waiting for the next liberation campaign.",
+        "bearing": "She moves with a measured, almost regal weight that makes her seem built around decision rather than anatomy. Every step says she can afford to take her time because the people beneath her command have already started moving."
+      },
+      "sa:mechanics": {
+        "sector_authority": "Sael coordinates Church activity across multiple hive cities, deciding where recovery teams deploy, which caches are liberated next, and when the Church should make its presence impossible to ignore.",
+        "augmentations": "Her augmentations are deeper and more integrated than any lower-clergy installation. They are tuned for command, logistics, field oversight, and the physical demands of sustaining a heavy ceremonial suit for long operations. If the High Priest embodies procession, Sael embodies sustained campaign.",
+        "recovery_policy": "She treats technology hoards as unstable moral architecture. If a corporate vault, noble archive, or criminal cache has been sitting on useful tools while people suffer without them, she considers that a broken system worthy of Church intervention.",
+        "redistribution_network": "Sael does not merely seize technology. She reroutes it. Recovered machines are sent to workshops, shrine annexes, parish repair yards, and communities capable of keeping them alive. The Church gains loyalty by making the liberated useful again.",
+        "command_style": "She prefers clear goals, disciplined teams, and visible results. Failure is tolerated only if the salvage yielded a lesson. Waste is the one sin she does not romanticize.",
+        "public_reputation": "To allies, she is the cardinal who gets things moving. To enemies, she is the moment a locked door becomes a political problem."
+      },
+      "sa:relationships": {
+        "high_priests": "She relies on high priests to sanctify recovery at street level, but she expects them to think in terms of access and utility rather than ceremony alone.",
+        "tech_evangelists": "She uses them as her most visible field agents. They are the Church's proof that the recovered can be made public again.",
+        "corporate_powers": "She regards their hoards as temporary. The only question is whether they surrender them willingly or after the Church makes a doctrinal example.",
+        "the_prophet": "She claims obedience to the Prophet, though even her closest attendants suspect she has opinions about the future that extend beyond obedience."
+      },
+      "sa:quotes": [
+        "Technology locked away is technology already stolen from the living.",
+        "Recovery without redistribution is just theater.",
+        "We do not conquer vaults. We correct ownership.",
+        "If your industry cannot keep the world running, it will answer to someone who can.",
+        "The Church does not hoard miracles. We put them back to work."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/mara-voss",
+      "@type": "schema:Person",
+      "rdfs:label": "Mara Voss",
+      "sa:identity": {
+        "rdfs:label": "The Iron Veil",
+        "schema:description": "A Velvet Mask district boss whose ruined body was rebuilt into a deliberate display of menace, luxury, and survival after a bombing left her masked, maimed, and more dangerous than before."
+      },
+      "schema:description": "Mara Voss is one of Blackwater's middle bosses, the kind of woman who rose far enough through Velvet Mask violence to become indispensable but not visible. A bombing took the lower half of her face, both legs, and her right arm, leaving her alive only because the Mask decided her usefulness was greater than her pain. The breathing apparatus that seals her jaw and throat is polished, lacquered, and fitted like ceremonial jewelry, as much a fashion statement as it is a survival device. Her cybernetic replacements are never hidden: the prosthetic arm is plated, articulated, and marked with black-red inlays; the legs are heavy, elegant, and built to be seen. She favors tailored armor, sharp silhouettes, and expensive materials over concealment, turning every step into a declaration that she was not broken into disappearance. Mara handles territory disputes, protection rackets, and enforcement for a profitable slice of Blackwater, and she does it with the calm of someone who knows violence is less persuasive than ownership. People who meet her often remember the machinery first and the smile second, though the smile is only a rumor now. She does not need to be Vex. It is enough that whole blocks move when she gives an order.",
+      "sa:thematics": [
+        "survival",
+        "maimed elegance",
+        "cybernetic fashion",
+        "territorial power",
+        "crime boss",
+        "mask and identity"
+      ],
+      "sa:nature": {
+        "appearance": "Mara's lower face is enclosed in a sculpted breathing apparatus that seals over scars and damaged tissue with the look of couture rather than medical necessity. Her right arm is a visible cybernetic prosthesis, more ornate than practical, and both legs are rebuilt with heavy mechanical assemblies that make her taller, louder, and impossible to mistake for anyone else. She dresses to make the reconstruction part of her silhouette, not a secret.",
+        "demeanor": "She sits or stands with deliberate composure, conserving motion and making every gesture feel chosen. Her voice is filtered through the apparatus into something measured and metallic, which only adds to her authority.",
+        "presence": "She looks like a woman who survived an execution and decided to keep the scaffold as jewelry. The result is unsettling, expensive, and memorable.",
+        "fashion": "Her cybernetics are customized for status as much as function: polished plating, visible seams, black-red accents, and accessories meant to frame the machinery instead of hide it."
+      },
+      "sa:mechanics": {
+        "method": "She governs through leverage, reputation, and precise displays of control. Her district stays profitable because she rewards obedience, punishes waste, and never lets weakness look accidental.",
+        "role": "She is the sort of middle leader who can turn a local problem into an organization-wide issue if ignored, but who still answers upward when Vex or the top circle wants results.",
+        "operational_strength": "She is strongest in rackets, collections, intimidation, and negotiated peace between competing crews. Her cybernetics let her survive close-quarters violence and keep working after damage that would bench a lesser boss.",
+        "narrative_use": "Works as a regional patron, rival boss, or grim intermediary between street crews and the unseen top of the Mask.",
+        "failure_modes": "If her authority is challenged publicly, she responds hard and fast. If someone treats her injuries as weakness, she makes an example of them before the rumor can spread."
+      },
+      "sa:relationships": {
+        "Vex": "Trusted enough to manage a district, not trusted enough to be allowed comfort.",
+        "Street Assets": "Uses them as ears, couriers, and disposable pressure points.",
+        "Specialists": "Keeps them busy with precise jobs that protect her revenue streams.",
+        "Operatives": "Expects them to respect her territory and to ask permission before improvising inside it.",
+        "rivals": "Treats them as an accounting problem until they become a body problem."
+      },
+      "sa:quotes": [
+        "I was not spared. I was rebuilt to be useful.",
+        "Look at the hardware if you need to understand the woman.",
+        "Pain is not the wound. Waste is the wound.",
+        "Blackwater remembers whoever can still stand when the smoke clears."
+      ]
+    }
+  ]
+}

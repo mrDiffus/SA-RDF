@@ -3,8 +3,18 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "label": "rdfs:label",
     "type": "@type",
+    "Location": "https://stellararcana.org/Location",
     "Place": "https://schema.org/Place",
     "description": "https://schema.org/description",
+    "containedInLocation": {
+      "@id": "https://stellararcana.org/containedInLocation",
+      "@type": "@id"
+    },
+    "containsLocation": {
+      "@id": "https://stellararcana.org/containsLocation",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "containsPlace": {
       "@id": "https://schema.org/containsPlace",
       "@container": "@list"
@@ -14,7 +24,7 @@
       "@type": "@id"
     }
   },
-  "type": "Place",
+  "type": ["Place", "Location"],
   "label": "Skyhaven",
   "description": [
     "An elite hive city rising from ancient, mysterious pillars of unknown origin—Pillars so old and inscribed with forgotten runes that no engineer claims to understand their construction or material. The city sits atop these foundations, reaching into low orbit with crystalline spires and levitating gardens.",

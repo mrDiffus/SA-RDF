@@ -1,0 +1,223 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix adv: <https://stellar-arcana.org/adventure#> .
+
+# Root class: Adventure
+adv:AdventureShape
+  a sh:NodeShape ;
+  sh:targetClass adv:Adventure ;
+  sh:property [
+    sh:path adv:title ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:description ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:hasPart ; sh:class adv:Chapter ; sh:minCount 1 ;
+  ], [
+    sh:path adv:hasNPC ; sh:class adv:NPC ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasLocation ; sh:class adv:Location ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasEncounter ; sh:class adv:Encounter ; sh:minCount 0 ;
+  ] .
+
+# Chapter (e.g., "Part 1: Goblin Arrows")
+adv:ChapterShape
+  a sh:NodeShape ;
+  sh:targetClass adv:Chapter ;
+  sh:property [
+    sh:path adv:title ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:hasNPC ; sh:class adv:NPC ;
+  ], [
+    sh:path adv:hasLocation ; sh:class adv:Location ;
+  ], [
+    sh:path adv:hasEncounter ; sh:class adv:Encounter ;
+  ] .
+
+# --- NPCs ---
+adv:NPCShape
+  a sh:NodeShape ;
+  sh:targetClass adv:NPC ;
+  sh:property [
+    sh:path adv:name ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:role ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:alignment ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:appearance ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:personality ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:knowledge ; sh:class adv:Info ; sh:minCount 0 ;
+  ], [
+    sh:path adv:quest ; sh:class adv:Quest ; sh:minCount 0 ;
+  ], [
+    sh:path adv:faction ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:statBlock ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:roleplayingTips ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ] .
+
+# Information the NPC can reveal
+adv:InfoShape
+  a sh:NodeShape ;
+  sh:targetClass adv:Info ;
+  sh:property [
+    sh:path adv:subject ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:details ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:checkRequired ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ] .
+
+# Quest given by NPC
+adv:QuestShape
+  a sh:NodeShape ;
+  sh:targetClass adv:Quest ;
+  sh:property [
+    sh:path adv:name ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:giver ; sh:class adv:NPC ; sh:minCount 1 ;
+  ], [
+    sh:path adv:objective ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:reward ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:destination ; sh:class adv:Location ; sh:minCount 0 ;
+  ] .
+
+# --- Locations ---
+adv:LocationShape
+  a sh:NodeShape ;
+  sh:targetClass adv:Location ;
+  sh:property [
+    sh:path adv:name ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:description ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:boxedText ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasGeneralFeature ; sh:class adv:GeneralFeature ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasArea ; sh:class adv:Area ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasMap ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasSecretDoor ; sh:class adv:SecretDoor ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasTrap ; sh:class adv:Trap ; sh:minCount 0 ;
+  ] .
+
+# General features (light, ceilings, doors, etc.)
+adv:GeneralFeatureShape
+  a sh:NodeShape ;
+  sh:targetClass adv:GeneralFeature ;
+  sh:property [
+    sh:path adv:featureType ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:description ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ] .
+
+# Keyed area within a location (e.g., "Area 1: Cave Mouth")
+adv:AreaShape
+  a sh:NodeShape ;
+  sh:targetClass adv:Area ;
+  sh:property [
+    sh:path adv:areaNumber ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:areaName ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:description ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:boxedText ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasEncounter ; sh:class adv:Encounter ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasTreasure ; sh:class adv:Treasure ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasTrap ; sh:class adv:Trap ; sh:minCount 0 ;
+  ], [
+    sh:path adv:connectsTo ; sh:class adv:Area ; sh:minCount 0 ;
+  ] .
+
+# Secret door
+adv:SecretDoorShape
+  a sh:NodeShape ;
+  sh:targetClass adv:SecretDoor ;
+  sh:property [
+    sh:path adv:location ; sh:class adv:Area ; sh:minCount 1 ;
+  ], [
+    sh:path adv:perceptionDC ; sh:datatype xsd:integer ; sh:minCount 0 ;
+  ], [
+    sh:path adv:leadsTo ; sh:class adv:Area ; sh:minCount 1 ;
+  ] .
+
+# Trap
+adv:TrapShape
+  a sh:NodeShape ;
+  sh:targetClass adv:Trap ;
+  sh:property [
+    sh:path adv:name ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:trigger ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:effect ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:perceptionDC ; sh:datatype xsd:integer ; sh:minCount 0 ;
+  ], [
+    sh:path adv:savingThrow ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:damage ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ] .
+
+# --- Encounters (combat and non-combat) ---
+adv:EncounterShape
+  a sh:NodeShape ;
+  sh:targetClass adv:Encounter ;
+  sh:property [
+    sh:path adv:name ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:location ; sh:class adv:Location ; sh:minCount 1 ;
+  ], [
+    sh:path adv:hasMonster ; sh:class adv:Monster ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasNPC ; sh:class adv:NPC ; sh:minCount 0 ;
+  ], [
+    sh:path adv:surprise ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:tactics ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:developments ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hasTreasure ; sh:class adv:Treasure ; sh:minCount 0 ;
+  ], [
+    sh:path adv:xpaward ; sh:datatype xsd:integer ; sh:minCount 0 ;
+  ] .
+
+# Monster in an encounter (could be reused in stat blocks)
+adv:MonsterShape
+  a sh:NodeShape ;
+  sh:targetClass adv:Monster ;
+  sh:property [
+    sh:path adv:name ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:count ; sh:datatype xsd:integer ; sh:minCount 1 ;
+  ], [
+    sh:path adv:statBlock ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:hpVariant ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ] .
+
+# Treasure
+adv:TreasureShape
+  a sh:NodeShape ;
+  sh:targetClass adv:Treasure ;
+  sh:property [
+    sh:path adv:description ; sh:datatype xsd:string ; sh:minCount 1 ;
+  ], [
+    sh:path adv:value ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ], [
+    sh:path adv:magicItem ; sh:datatype xsd:string ; sh:minCount 0 ;
+  ] .

@@ -1,0 +1,63 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/silas-venn",
+      "@type": "schema:Person",
+      "rdfs:label": "Silas Venn",
+      "sa:identity": {
+        "rdfs:label": "The Quiet Blade",
+        "schema:description": "An old elven assassin-bladesinger-for-hire who works only through private word of mouth, changing presentation at whim to protect client secrecy and personal anonymity."
+      },
+      "schema:description": "Silas Venn looks like rumor made flesh: calm, elegant, and impossible to keep pinned to one shape for long. His blade is too precise, his silence too deliberate, and his presence carries the feel of a contract already accepted. When he first meets you, the room seems to narrow around the parts of him he has chosen to show.",
+      "sa:race": "Elf",
+      "sa:thematics": [
+        "bladesinging",
+        "discretion",
+        "private patronage",
+        "identity-shifting",
+        "old competence",
+        "contract violence",
+        "anonymity",
+        "elven longevity",
+        "gender as camouflage",
+        "reputation by rumor"
+      ],
+      "sa:nature": {
+        "appearance": "Usually seen as a severe elf with long black hair, pale eyes, and the posture of someone who never wastes movement. The defining features are not bodily so much as practical: arc scars crawling over the left lower arm, hand, and fingers from overpowering melee energy spells; a straight longsword that thrums with stored power; and blue combat robes that offer as much protection as modern power armor. Presentation shifts on purpose, sometimes more masculine, sometimes more androgynous, sometimes deliberately feminine, but the weapon, scars, and robes remain the recognizable constant.",
+        "demeanor": "Polite without warmth, patient without softness. He listens longer than most people can stand, then answers with exactly enough detail to be useful. He rarely raises his voice. In private, he can be dryly amused; in work, he becomes almost ceremonial. He dislikes unnecessary questions, especially about age, body, or history, and treats curiosity about his current presentation as a mark of poor upbringing or worse judgment.",
+        "psychology": "Silas has outlived enough identities to know that a fixed public self becomes a cage. He does not experience his shifts as disguise so much as maintenance. He is old enough to have learned that desire, prejudice, and memory all sharpen into hazards when left exposed. His professionalism is genuine, but so is the distance. He does not want companionship from clients, only clarity. Those who mistake his secrecy for fraud discover that the opposite is true: he has removed himself from the market of easy recognition so he can remain the kind of problem money can still solve.",
+        "privacy_protocols": "He rotates names, presentations, and small habits between jobs. He avoids long-term attachments under any one face. He prefers sealed communications, anonymous intermediaries, and clients who understand that a hired blade is not owed intimacy. If pressed too hard, he disappears instead of arguing. If forced to reveal more than intended, he changes again afterward."
+      },
+      "sa:mechanics": {
+        "primary_work": "High-end contract killing, extraction, and escort work where secrecy is more valuable than numbers. He is hired for impossible entries, surgical assassinations, quiet recoveries, and guard duties that require someone who can erase a target without leaving a story behind.",
+        "combat_style": "Bladesinging mixed with exacting footwork and controlled spellwork. He uses movement to deny angles, confuse reach, and turn a duel into a ritual he has already rehearsed. The sword is the delivery system; the timing, misdirection, and first strike do most of the work.",
+        "operational_method": "Works through referral only. Never courts public reputation. Maintains several disconnected identities and changes presentation between contracts so patrons cannot easily map one body to one history. He values discretion above loyalty, but once he accepts a job he becomes difficult to bribe, redirect, or surprise.",
+        "client_value": "Clients buy certainty with silence attached. He does not gossip, does not keep trophies, and does not make his patrons look foolish. For the wealthy and the desperate alike, that makes him worth more than louder killers with banners and prices.",
+        "failure_modes": "His insistence on privacy can create friction with groups that expect stable trust. He will refuse work that endangers his anonymity too much, even if the payment is excellent. If someone attempts to expose his true continuity, his response is immediate and clinical." 
+      },
+      "sa:relationships": {
+        "clients": "Usually nobles, fixers, hidden patrons, or institutions with enough money to pay for silence. They know him by reputation, not by invitation.",
+        "competitors": "Other mercenaries regard him as either a myth or an insult. He rarely acknowledges them unless they become part of a contract.",
+        "informants": "A small network of intermediaries carries requests to him. They are paid well for discretion and dismissed forever if they become curious.",
+        "his_current_face": "A temporary arrangement, not a true home. He treats whatever body he wears as a tool for the mission, though he chooses each with care.",
+        "those_who_know_his_pattern": "People close enough to notice his continuity understand that the changing bodies are not instability. They are the opposite: a disciplined answer to a world that cannot be trusted with permanence."
+      },
+      "sa:quotes": [
+        "If you know my name, you know too much.",
+        "I do not keep one face long enough for it to become a liability.",
+        "You are paying for silence that can fight back.",
+        "I never advertise. The work is my advertisement.",
+        "Call me by whatever name keeps your mouth polite.",
+        "Privacy is not secrecy. Privacy is control.",
+        "If I accepted every contract with good coin, I would have died centuries ago."
+      ]
+    }
+  ]
+}

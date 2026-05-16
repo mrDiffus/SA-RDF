@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/veldros-kane",
+      "@type": "schema:Person",
+      "rdfs:label": "Veldros Kane",
+      "sa:identity": {
+        "rdfs:label": "The Iron Hierophant",
+        "schema:description": "A magi-tech zealot general who fuses sanctified machinery, battlefield scripture, and necromantic command into one public horror show."
+      },
+      "schema:description": "Veldros Kane looks like a war relic that learned how to talk back. His armor is too precise to be handmade and too devotional to be factory work: brass ribs, rune-lit cables, reliquary plates, and a halo-frame of cracked arcane glass mounted behind his shoulders like a portable shrine. Under the machine-calm of his suit, old scars and surgical seams show where flesh was traded for capacity. He does not stride so much as arrive, and when he does, the air fills with the smell of hot copper, incense, and ozone. He is the kind of dwarf who expects to be obeyed, and usually has the firepower to make that expectation feel reasonable.",
+      "sa:race": "dwarf (augmented with sanctified prosthetics, arcane grafts, and bound spirit-cores)",
+      "sa:origin": "Border crucible-city and battlefield foundry complex",
+      "sa:thematics": [
+        "magi-punk",
+        "magi-tech",
+        "religious authoritarianism",
+        "forbidden augmentation",
+        "battlefield engineering",
+        "necromantic command",
+        "industrial sanctity",
+        "public terror",
+        "control through spectacle",
+        "anti-life doctrine"
+      ],
+      "sa:nature": {
+        "appearance": "Broad, severe, and heavily rebuilt. His armor mixes old crusader silhouette with industrial augmentation: layered cuirass plates, exposed power channels, ward-lamps embedded in the pauldrons, and a spine brace that hums when he turns his head. One eye is organic and hard as flint; the other is a lens of polished black crystal that tracks motion with unsettling precision. Prayer beads, clipped keycards, sealed reliquaries, and data-etched chains hang from his harness like trophies from different eras of empire. He carries a hammer-axe hybrid with a lattice head that can pulse heat, discharge wards, or crack bone with equal confidence.",
+        "demeanor": "He speaks in calm, clipped sermon fragments, as if every sentence were drafted for broadcast and execution at the same time. He never wastes motion. Every gesture looks deliberate, every pause controlled. In negotiation he does not threaten loudly; he states outcomes as though they have already been audited. Around him, subordinates straighten up without meaning to. He is not charismatic in a warm sense. He is organized gravity.",
+        "psychology": "Veldros believes compassion is an inefficient routing problem. In his mind, suffering is a temporary cost on the way to a perfected order where the weak are preserved by being made useful and the dead are preserved by being made obedient. He does not see himself as cruel; he sees himself as truthful. That makes him worse. He can justify any atrocity if it improves control, reduces dissent, or demonstrates inevitability. He is most dangerous when he is being helpful, because his help always comes with chains hidden inside the machinery.",
+        "the_title": "The Iron Hierophant is not a nickname he earned by accident. It is what happens when faith gets issued inventory numbers and then starts requisitioning bodies."
+      },
+      "sa:mechanics": {
+        "primary_work": "Field commander, propaganda asset, and high-value antagonist who leads magi-tech strike teams, reanimated labor battalions, and public demonstrations of disciplined brutality. He appears where a region needs to be broken into compliance or made into an example.",
+        "combat_style": "Midline commander with heavy melee reach and layered support systems. He uses warded armor, shock bursts, command sigils, and bound drones or lesser undead to control space before closing in to finish the job personally.",
+        "operational_method": "He prefers battlefields he can pre-measure. He brings surveillance charms, logistics crates, portable sanctuaries, and ritual machinery so the fight begins already leaning in his favor. If resistance persists, he escalates by converting the dead, the wounded, or the infrastructure itself into ammunition.",
+        "narrative_use": "Best used as obvious recurring antagonist, regional enforcer, or raid-boss figure with clear visual language and a strong hatred of player autonomy. He is the kind of enemy whose arrival changes the mood of a town immediately.",
+        "failure_modes": "His control doctrine makes him brittle when plans fail publicly. He cannot resist turning setbacks into demonstrations, which gives clever opponents openings. He also underestimates loyalty that is not bought, because he assumes every system works like his own."
+      },
+      "sa:relationships": {
+        "the_cult": "An unofficial ally and occasional spearpoint. He treats zealots as useful raw material, then complains when they remain sentimental about the living.",
+        "the_faith": "Publicly deniable, privately embarrassed, and quietly dependent on his ability to do violence without asking permission.",
+        "undead_battalions": "He considers them the most honest troops available: they do not hesitate, do not panic, and do not demand retirement.",
+        "civilian_zones": "He refers to them as compliance environments. Their people are resources until they become warnings.",
+        "opponents": "He respects resistance only when it is expensive. Anyone else is just paperwork with a pulse."
+      },
+      "sa:quotes": [
+        "Mercy is what you call a delay when you want it to sound noble.",
+        "Your city can keep its walls. I brought better keys.",
+        "The dead do not argue. That is why they make excellent citizens.",
+        "Faith without enforcement is just theater.",
+        "Stand down and be useful, or stand firm and be repurposed."
+      ]
+    }
+  ]
+}

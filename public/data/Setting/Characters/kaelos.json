@@ -1,0 +1,73 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/kaelos",
+      "@type": "schema:Person",
+      "rdfs:label": "Kaelos",
+      "sa:identity": {
+        "rdfs:label": "The Anvil",
+        "schema:description": "Blacksmith's son and rogue war-mage; the soldier who refused to break. Survivor of the Concord's collapse—now something hollow wearing a dead man's shape."
+      },
+      "schema:description": "Kaelos looks like a man carved out of storm damage: tall, scarred, and emptied in places no armor can cover. Lightning still lives in the seams of his hands, and the broken saber at his side makes even veterans step carefully. When he first speaks, it is usually only to say no, and the refusal lands harder than most threats.",
+      "sa:race": "Human (magically transformed; partially hollowed by forbidden casting)",
+      "sa:origin": "Concord border territories (blacksmith lineage, war-mage training)",
+      "sa:thematics": [
+        "war trauma",
+        "betrayal",
+        "forbidden magic",
+        "ritual scarring",
+        "survivor's obsession",
+        "loss of self",
+        "lightning and thunder",
+        "refusal",
+        "the cost of defiance",
+        "relics of the dead"
+      ],
+      "sa:nature": {
+        "appearance": "Tall, scarred from three days of phalanx fighting at the Sighing Plains. His left ear is sheared away—a clean, old wound that never quite healed right. His skin has the pale, over-stretched quality of someone who cast himself too empty. Faint scorch marks scar his right hand where lightning exits the skin; his knuckles are split open and never fully closed, revealing the faint glow of residual magic underneath. He moves with the precision of a man who learned to fight on his knees. His eyes are the color of old steel—reflective, flat, terrifying in their absence of affect.",
+        "demeanor": "Speaks in clipped sentences. Long silences between words, as if he's listening to something underneath sound. When he smiles, it looks like an old scar stretching. Laughs never. When combat is imminent, a faint humming—not from his throat, but from the air around him, as if the spells are already half-cast and waiting for permission. Others describe a presence like a stone wall: solid, immobile, carrying weight that shouldn't fit in one human frame.",
+        "psychology": "Something broke at the Sighing Plains that doesn't fix. He is not traumatized—trauma implies wound. This is amputation. He knows intellectually that civilians lived because of his defiance, that the Mourner's Pyre bought time, that refusal was the only honest choice. None of it lands. He speaks of it clinically, as if describing someone else's failure. The obsession with 'again' is not vengeance-seeking but rather a broken loop: an attempt to re-enter a moment where the outcome was still uncertain, where choices still mattered. Those who observe him too long report a sense of vertigo—standing near Kaelos feels like standing near a chasm that's aware it's a chasm.",
+        "the_breaking": "The Mourner's Pyre consumed not just his life-force but some irreducible component of his self. He casts now as a hollow thing—the magic works, but it works through him rather than from him. He has no idea how much of his current will is his own and how much is the ambient magic using him as a conduit. This uncertainty doesn't bother him. Very little bothers him anymore."
+      },
+      "sa:arsenal": {
+        "witness": {
+          "description": "A broken cavalry saber, roughly a foot long, jagged at the break. Looted from the corpse of a Xanthian knight-legate during the second Scouring of the Thornwood. The legate had just decapitated twelve Concord prisoners; Kaelos found the saber still lodged in the last victim's spine. He yanked it free, and the blade snapped a hand's width from the hilt. He never repaired it. The broken edge still holds the legate's dried blood, and when Kaelos focuses magic through it, witnesses report a faint scream—not heard, but felt, like a pressure against the skull. It is his arcane focus and his talisman.",
+          "mechanical_role": "Catalyzes raw, uncontrolled casting. Spells channeled through Witness bypass his conscious control more completely than normal focus-work. The result is faster, crueler, less precise. Enemies struck by magic cast through Witness report sensations of being gnawed on by something invisible."
+        }
+      },
+      "sa:magics": {
+        "signature_school": "Storm-craft (lightning, thunder, pressure) and earth-wrought (collapse, silence, crushing)",
+        "tactical_method": "Phalanx-fighting spellwork. Designed to protect allied soldiers and destroy in close quarters. Uses his body as the focal point; magic radiates outward from him like concentric breaks in stone.",
+        "forbidden_work": "The Mourner's Pyre—a spell that converts the caster's own life-force into a creeping, silent flame that burns only the living dead. It requires the caster to empty themselves entirely. Kaelos cast it once. It worked. It also separated him from something irreplaceable. He will not cast it again, not because he couldn't survive it, but because there's nothing left to burn.",
+        "casting_signature": "His spells come out eager, raw, and cruel. Those struck by them describe sensations of wrongness—the magic doesn't heal or illuminate or create, it consumes and distorts. His lightning tastes like copper. His thunder sounds like sighing. When he casts, the ambient temperature drops, and nearby creatures become very still.",
+        "cost_accumulation": "Each spell leaves a faint residue of something—not magical exhaustion, but something closer to spiritual infection. The magic itself is learning his shape. He casts without whispers because his throat simply won't form the words anymore. The magic knows what he wants before he does."
+      },
+      "sa:relationships": {
+        "the_concord": "Destroyed. Betrayed. He carries nothing from it except Witness and the knowledge that his defiance bought time only for the gates to fall three days later. The surviving remnants regard him with a mixture of reverence and dread—he is the living proof that their commanders were cowards, that there was another choice. He will not return.",
+        "xanthia_the_everliving": "She attempted to harvest his soul and found him already empty. She laughed and left him for crows. There is no vendetta between them—he was already defeated before she arrived. Now they move in parallel, and he neither seeks nor avoids encounter.",
+        "the_fallen_at_sighing_plains": "The forty-three who stood with him for three days. Some burned with the Mourner's Pyre. Some were harvested by Xanthia. Some scattered. He remembers their faces and thinks of them as the only intelligible thing remaining in his life. He will not speak their names aloud.",
+        "the_legate": "The corpse whose saber he carries. The Xanthian who executed twelve prisoners. Xanthia found these details amusing—that her dead knight now serves him as an instrument. He has no feelings about this beyond a faint sense of suitability.",
+        "those_who_would_hire_him": "He takes contracts without negotiating, without agreement on payment, appearing where instinct seems to suggest and fighting with no regard for objective. Those who've hired him report that the outcome is almost always exactly what they needed, executed in ways that suggest he understood their intent before they stated it. He is not reliable; he is worse—he is predictable in wholly unpredictable ways."
+      },
+      "sa:quotes": [
+        "I read the order. I read it twice. Then I said no.",
+        "Witness isn't shattered. It's just finished being whole.",
+        "The edge still has his blood. Every time I cast through it, I can taste twelve prisoners bleeding out.",
+        "The Pyre worked too well. Should have learned something from that.",
+        "I'm not looking for anyone to forgive me. I'm looking for anyone who would have chosen the same and had the strength to stand.",
+        "Magic used to come from me. Now I'm just the shape it passes through.",
+        "Again.",
+        "Again.",
+        "Again.",
+        "The Concord fell three days later anyway. So I won a battle and lost a war and lost myself in the middle. Fair trade."
+      ]
+    }
+  ]
+}

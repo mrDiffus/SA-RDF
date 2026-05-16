@@ -1,0 +1,1032 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Arcana: Skyhold Academy Adventures</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e1e2e 0%, #2a2a3e 100%);
+            color: #e0e0e0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 20px;
+            border-radius: 8px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        header p {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        .toc-section {
+            background: #2a2a3e;
+            border-left: 4px solid #667eea;
+            padding: 30px;
+            margin-bottom: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .toc-section h2 {
+            color: #667eea;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        .toc-columns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .toc-column h3 {
+            color: #a0aec0;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin: 8px 0;
+            padding-left: 0;
+        }
+
+        .toc-list a {
+            color: #90cdf4;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        .toc-list a:hover {
+            background: #667eea;
+            color: white;
+            padding-left: 15px;
+        }
+
+        .toc-list .level-3 {
+            margin-left: 20px;
+            font-size: 0.95em;
+            opacity: 0.8;
+        }
+
+        .toc-list .level-4 {
+            margin-left: 40px;
+            font-size: 0.9em;
+            opacity: 0.7;
+        }
+
+        .content {
+            background: #2a2a3e;
+            border-radius: 8px;
+            padding: 40px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+        }
+
+        .document-section {
+            margin-bottom: 60px;
+        }
+
+        .document-title {
+            color: #667eea;
+            font-size: 2.2em;
+            margin: 60px 0 20px 0;
+            padding-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        h2 {
+            color: #90cdf4;
+            font-size: 1.8em;
+            margin: 40px 0 20px 0;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #764ba2;
+        }
+
+        h3 {
+            color: #cbd5e0;
+            font-size: 1.4em;
+            margin: 30px 0 15px 0;
+            padding-left: 10px;
+            border-left: 3px solid #667eea;
+        }
+
+        h4 {
+            color: #a0aec0;
+            font-size: 1.2em;
+            margin: 20px 0 10px 0;
+            padding-left: 10px;
+        }
+
+        p {
+            margin: 15px 0;
+            text-align: justify;
+        }
+
+        strong {
+            color: #f6d345;
+        }
+
+        em {
+            color: #cbd5e0;
+            font-style: italic;
+        }
+
+        ul, ol {
+            margin: 15px 0 15px 30px;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background: #1e1e2e;
+        }
+
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #764ba2;
+        }
+
+        td {
+            padding: 12px;
+            border: 1px solid #764ba2;
+            color: #e0e0e0;
+        }
+
+        tr:nth-child(even) {
+            background: #262635;
+        }
+
+        tr:hover {
+            background: #2d2d3d;
+        }
+
+        blockquote {
+            border-left: 4px solid #667eea;
+            padding-left: 20px;
+            margin: 20px 0;
+            color: #cbd5e0;
+            font-style: italic;
+            background: #1e1e2e;
+            padding: 15px 20px;
+            border-radius: 4px;
+        }
+
+        .back-to-toc {
+            display: inline-block;
+            margin: 30px 0;
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            font-size: 0.95em;
+        }
+
+        .back-to-toc:hover {
+            background: #764ba2;
+            padding-left: 30px;
+        }
+
+        .hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #667eea, #764ba2, #667eea);
+            margin: 40px 0;
+        }
+
+        .anchor-link {
+            display: block;
+            position: relative;
+            top: -80px;
+            visibility: hidden;
+        }
+
+        hr {
+            border: none;
+            height: 2px;
+            background: linear-gradient(to right, #667eea, #764ba2, #667eea);
+            margin: 40px 0;
+        }
+
+        code {
+            background: #1e1e2e;
+            color: #f6d345;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+
+        @media (max-width: 768px) {
+            .toc-columns {
+                grid-template-columns: 1fr;
+            }
+
+            body {
+                font-size: 14px;
+            }
+
+            header h1 {
+                font-size: 1.8em;
+            }
+
+            .container {
+                padding: 10px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .toc-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Stellar Arcana: Skyhold Academy Adventures</h1>
+            <p>Complete adventure guide for Skyhold Academy heists and location details</p>
+        </header>
+
+        <div class="toc-section">
+            <h2>📑 Table of Contents</h2>
+            <div class="toc-columns">
+                <div class="toc-column">
+                    <h3>Document 1: Skyhold Academy Layout</h3>
+                    <ul class="toc-list">
+                        <li><a href="#doc1-title">Skyhold Academy - Collegiate Layout</a></li>
+                        <li><a href="#architecture">Overall Architecture & Verticality</a></li>
+                        <li><a href="#approach">The Approach: Arcane Quarter Street Level</a></li>
+                    </ul>
+                </div>
+                <div class="toc-column">
+                    <h3>Document 2: Neural Aether-Core Heist</h3>
+                    <ul class="toc-list">
+                        <li><a href="#doc2-title">Session 1: The Neural Aether-Core Heist</a></li>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#situation">Situation Overview</a></li>
+                        <li><a href="#brute-force">Brute Force Option: The Direct Assault</a>
+                            <ul class="toc-list level-3">
+                                <li><a href="#execution-path">Execution Path: Guns Blazing</a></li>
+                                <li><a href="#comparison">Tactical Comparison</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#complications">Scenario Complications & Reactive Elements</a></li>
+                        <li><a href="#escalation">Escalation & Consequences</a></li>
+                        <li><a href="#locations-section">Locations</a>
+                            <ul class="toc-list level-3">
+                                <li><a href="#skyhold-location">Skyhold Academy</a></li>
+                                <li><a href="#dissertation">S.S. Dissertation</a></li>
+                                <li><a href="#amphitheater">Grand Amphitheater & Venues</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#sessions-arc">Sessions Arc Overview</a></li>
+                        <li><a href="#npcs">NPCs & Key Persons</a></li>
+                        <li><a href="#mechanical">Mechanical & Technical Details</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="content">
+            <!-- DOCUMENT 1: SKYHOLD ACADEMY LAYOUT -->
+            <div class="document-section">
+                <span class="anchor-link" id="doc1-title"></span>
+                <h1 class="document-title">Skyhold Academy - Collegiate Layout for Theatre of Mind</h1>
+
+                <span class="anchor-link" id="architecture"></span>
+                <h2>Overall Architecture & Verticality</h2>
+                <p>Skyhold is a <strong>vertical institution</strong>—not a sprawling campus but a tower complex integrated into Skyhaven's megacity architecture. Think: prestigious university occupying multiple interconnected crystalline spires and mid-level platforms.</p>
+                
+                <p><strong>Vertical zones from bottom to top:</strong></p>
+                <ul>
+                    <li><strong>Lower Vault Level</strong> (~basement): Historical artifact storage, restricted access, older security infrastructure, service corridors connecting to lower Arcane Quarter infrastructure</li>
+                    <li><strong>Administrative-Academic Core</strong> (~levels 3-7): Director's offices, faculty research chambers, classroom spaces, Grand Amphitheater, public-facing academy functions</li>
+                    <li><strong>Upper Research Towers</strong> (~levels 8-12): Manfuctor workshop collaborations, elite researcher offices, specialized arcane labs, advanced integration chambers</li>
+                    <li><strong>Elite Dormitory Heights</strong> (~levels 13-18): Elite student housing, private study chambers, competitive training grounds ("ego chambers"), aerial observation platforms</li>
+                    <li><strong>Rooftop Spires</strong> (~levels 19+): Observation arrays, magical research installations, maintenance access, aerial docking platforms for visiting dignitaries</li>
+                </ul>
+
+                <hr>
+
+                <span class="anchor-link" id="approach"></span>
+                <h2>The Approach: Arcane Quarter Street Level</h2>
+                <p>Party first encounters Skyhold from the <strong>Arcane Quarter streets</strong>—the approach shapes mood.</p>
+
+                <h3>Visual Approach</h3>
+                <ul>
+                    <li>Crystalline spires rising impossibly high, shimmering with embedded arcane matrices</li>
+                    <li>Deep ozone smell (active magical fields burning through the air)</li>
+                    <li>Hum and crackle of energy systems—audible magic, slightly unsettling</li>
+                    <li>Well-dressed faculty and researchers moving between connected platforms</li>
+                    <li>Wealthy donors arriving in arcane carriages, personal security detail</li>
+                    <li>Elite students in academy regalia (distinctive robes, insignia signaling rank/achievement)</li>
+                    <li>Ambient competition: students acknowledging each other with nods or veiled disdain</li>
+                    <li>Architecture: marble facades, crystal balconies, floating gardens suspended between spires</li>
+                    <li>Gates and formal entrances—clear demarcation of "inside" vs. "outside"</li>
+                    <li>Foot traffic: controlled, purposeful, exclusive-feeling</li>
+                </ul>
+
+                <h3>Sound Landscape</h3>
+                <ul>
+                    <li>Constant hum of active magical wards</li>
+                    <li>Footsteps on marble and crystal (distinct acoustic quality)</li>
+                    <li>Distant bells or chimes marking time/ceremony start</li>
+                    <li>Occasional arcane crackle (field adjustments, protective wards activating)</li>
+                    <li>Muted conversation (people speak in hushed tones; institutional culture rewards restraint)</li>
+                </ul>
+            </div>
+
+            <a href="#" class="back-to-toc">↑ Back to Table of Contents</a>
+
+            <!-- DOCUMENT 2: NEURAL AETHER-CORE HEIST -->
+            <div class="document-section">
+                <span class="anchor-link" id="doc2-title"></span>
+                <h1 class="document-title">Session 1: The Neural Aether-Core Heist</h1>
+
+                <span class="anchor-link" id="overview"></span>
+                <h2>Overview</h2>
+                
+                <h3>The Hook</h3>
+                <p>The B.O.T. project—a high-magic, high-tech startup founded by post-doctoral researchers from Starfall—is on the verge of completion. The team's prototype autonomous combat unit requires a Neural Aether-Core to finalize consciousness integration. The artifact exists in the Skyhold Academy's restricted collection in Skyhaven: a competing institution notorious for nepotistic admissions and coddled legacy students, paired with a handful of genuinely elite, arrogant prodigies. The team must breach Skyhold's security and extract the component without being detected.</p>
+
+                <h3>Party Context (Starfall-native researchers)</h3>
+                <ul>
+                    <li><strong>Draegloth Scrounger (CEO/Academic Lead):</strong> Starfall native; drives strategy and negotiation; existential superiority masks sharp criminal instinct.</li>
+                    <li><strong>Orc Cannoneer Armsman (Chief Kinetic Officer):</strong> Starfall native; provides tactical firepower and public confidence; skilled at high-stakes performance and intimidation.</li>
+                    <li><strong>Human Medical Officer (Chief Medical Officer):</strong> Starfall native; synthesizes clinical and occult knowledge; essential for maintaining biocompatibility protocols.</li>
+                    <li><strong>Gnome Arcanist Technician (CTO):</strong> Starfall native; architect of illegal cybernetic hardpoints; master of arcane-electronic integration.</li>
+                </ul>
+
+                <h3>Campaign Parameters</h3>
+                <ul>
+                    <li><strong>Party Level:</strong> Post-doctoral (experienced, specialized knowledge); mid-to-high tier capabilities</li>
+                    <li><strong>Setting:</strong> Skyhaven, an elite vertical megacity on Arcech dominated by the Luminous Synthesis and its arcane academies</li>
+                    <li><strong>Base of Operations:</strong> The S.S. Dissertation (mobile research vessel) serves as the party's operational base, docked in Skyhaven's lower commercial sector</li>
+                    <li><strong>Central Theme:</strong> Starfall ambition challenges Skyhaven privilege. The B.O.T. project from a rival institution threatens Skyhold's monopoly on cutting-edge research. The team raids a competing college—an act of academic piracy that could expose them to both institutional enemies and corporate competitors like Armanitech.</li>
+                </ul>
+
+                <hr>
+
+                <span class="anchor-link" id="situation"></span>
+                <h2>Situation Overview</h2>
+                <p>The party has traveled to Skyhaven from Starfall, their home city on Arcech. Skyhold Academy—a centuries-old institution in the Arcane Quarter—holds a Neural Aether-Core acquired during Skyhold's prestigious patronage era. The party has secured temporary access to the Arcane Quarter through a rented research workspace (posing as external consultants studying Manfuctor integration techniques). Their access credentials are generic and time-limited: <strong>24 hours</strong> before their temporary workspace lease expires and they lose legitimate justification to be in the district.</p>
+
+                <p>The <strong>Neural Aether-Core</strong> is housed in Skyhold Academy's restricted vault collection, displayed in the Director's private exhibition chamber. The party is aware of the core's location through intelligence (academic networks, gossip, or purchased information). They are not welcome in Skyhold's interior; discovery would immediately trigger hostile response.</p>
+
+                <p>A significant institutional event—the <strong>Elevation Ceremony for Newly-Minted Skyhold Manfuctors</strong>—is scheduled to commence in approximately 3 hours. This ceremony draws the Director, senior faculty, legacy donors, and the academy's elite student prodigies to the Grand Amphitheater. The ceremony runs for 90 minutes, during which time the Director's exhibition chamber and adjacent administrative areas are lightly staffed or unmanned.</p>
+
+                <h3>Key Constraints & Opportunities</h3>
+                <ul>
+                    <li><strong>Time window:</strong> 24-hour visitor access to the Arcane Quarter remaining</li>
+                    <li><strong>Personnel distribution:</strong> Elevation Ceremony will draw significant staff volume away from administrative areas</li>
+                    <li><strong>The core itself:</strong> Displays in a climate-controlled crystalline case in the Director's private exhibition chamber</li>
+                    <li><strong>Security infrastructure:</strong> Electronic locks, camera systems, biometric access controls, and elite student patrols are present throughout Skyhold's interior</li>
+                    <li><strong>Containment requirement:</strong> The Neural Aether-Core is metaphysically sensitive; removal from its sealed display case without active containment field may cause deterioration or awakening</li>
+                    <li><strong>Containment field generator:</strong> Stored in an adjacent locked cabinet; must be accessed separately</li>
+                    <li><strong>Opposition:</strong> Skyhold's security apparatus, wealthy benefactors' private security, and embedded Reviewer #2 operatives (Armanitech has infiltrated Skyhold as well)</li>
+                </ul>
+
+                <hr>
+
+                <span class="anchor-link" id="brute-force"></span>
+                <h2>Brute Force Option: The Direct Assault</h2>
+                <p><strong>Strategic Rationale:</strong> The party may assess stealth infiltration as too complex, time-consuming, or probabilistically risky. Alternative: overwhelm physical security barriers with kinetic force, extract under controlled chaos, and outrun institutional response.</p>
+
+                <p><em>This option is risky.</em> Success requires coordination, combat capability, and luck. Failure results in prolonged institutional manhunt, combat casualties, or TPK.</p>
+
+                <hr>
+
+                <span class="anchor-link" id="execution-path"></span>
+                <h3>Execution Path: Guns Blazing</h3>
+
+                <h4>Phase 1: Vault Corridor Breach (T+0)</h4>
+                <p>Rather than evading the vault checkpoint, the party attacks directly. The Orc Cannoneer uses kinetic firepower, explosives, or arcane bombardment to destroy the security door's electronic lock and shatter the arcane ward matrix. The locked checkpoint barrier collapses. Alarm triggers immediately—no stealth benefit, minimal containment time.</p>
+
+                <p><strong>Consequence:</strong> Alarm Tier 1 (local alert to Skyhold security station) activates immediately. Elite student patrols receive alert within 90 seconds. Reviewer #2 operative monitors security feed and becomes aware of breach.</p>
+
+                <h4>Phase 2: Director's Exhibition Chamber (T+2-5 minutes)</h4>
+                <p>Party enters the exhibition chamber. The door features a biometric-arcane hybrid lock—can be bypassed through:</p>
+                <ul>
+                    <li>Gnome Arcanist attempts aggressive arcane-electronic hack (DC 20 assessment check). <strong>Failure triggers Tier-2 alarm cascade</strong> (facility-wide lockdown alert; security doors begin sealing throughout relevant corridors).</li>
+                    <li>Orc Cannoneer uses kinetic force to shatter the lock mechanism (loud, obvious, triggers Tier-2 alarm but guarantees access).</li>
+                    <li>Party uses obtained faculty biometric (if available) + rapid mana signature attunement under combat pressure (risky, high DC check, time-consuming).</li>
+                </ul>
+
+                <p>Once inside, party must locate and access the containment field generator cabinet (also hybrid-locked). Attempting forced access or rushed hacking compounds alarm escalation. If containment field generator is inaccessible or if cabinet lock triggers alert, core removal without containment begins core deterioration.</p>
+
+                <h4>Core Deterioration Risk</h4>
+                <p>If party grabs core without active containment field generator, core enters unstable state within 5-7 minutes of exposure. Party must either:</p>
+                <ul>
+                    <li>Retrieve generator and re-contain core before deterioration threshold</li>
+                    <li>Accept core damage and perform rapid extraction with manual containment or occult stabilization</li>
+                    <li>Abandon extraction and use brute force to escape empty-handed</li>
+                </ul>
+
+                <h4>Phase 3: Combat Encounters (T+4-12 minutes)</h4>
+                <p>While party operates in exhibition chamber, elite student patrols converge on vault-adjacent corridors. Combat encountered: 2-3 patrol teams (1-2 students per team). Each elite student is formidable combatant. Combat is lethal—students come to apprehend or kill depending on party threat assessment.</p>
+
+                <p><strong>Patrol Response Timeline:</strong></p>
+                <ul>
+                    <li>T+90 seconds: First patrol team reaches vault corridor (exterior to exhibition chamber); hears noise/disturbance, enters cautiously or requests backup</li>
+                    <li>T+3-4 minutes: Second patrol team arrives</li>
+                    <li>T+6-8 minutes: Third patrol team or faculty response (if Tier-2 alert is triggered)</li>
+                </ul>
+
+                <p><strong>Combat difficulty:</strong> High. Party is outnumbered and outpaced by institutional response. Party must choose: invest time in combat (letting patrol teams consolidate), or break contact and flee (abandoning stealth, triggering pursuit).</p>
+
+                <h4>Phase 4: Reviewer #2 Operative Response (T+3-6 minutes)</h4>
+                <p>Upon seeing security breach on feeds, Reviewer #2 operative immediately mobilizes. Operative positions to intercept party en route to exhibition chamber exits. Operative is not trying to solo-kill party; operative is trying to:</p>
+                <ul>
+                    <li>Tag party members with tracking devices (minimally invasive tagging; doesn't require extended contact)</li>
+                    <li>Force party to abandon core or fight (delaying extraction until patrols overwhelm)</li>
+                    <li>Observe party tactics and capabilities (gather intelligence for Armanitech)</li>
+                    <li>Extract core after party flees, wipes, escapes, or is captured</li>
+                </ul>
+
+                <p>If operative can delay party for 8-12 minutes, elite student patrols and security response becomes overwhelming. Operative either (a) forces party abandonment of core, then retrieves it after chaos clears, or (b) watches party get captured/killed, then retrieves core afterward.</p>
+
+                <h4>Phase 5: S.S. Dissertation Escape (T+15-25 minutes if successful)</h4>
+                <p>If party successfully breaks through patrols and operative resistance, they reach the lower commercial sector and S.S. Dissertation docking bay. Port authority is now alert (if Skyhold has flagged them). Party can:</p>
+                <ul>
+                    <li>Attempt standard departure (port authority blocks or delays; confrontation likely)</li>
+                    <li>Engage in combat/breaching with port authority to force departure (escalates pursuit)</li>
+                    <li>Use alternative docking strategy (abandoned docks, stealth relaunch) to avoid authority, but takes longer</li>
+                </ul>
+
+                <p>Ship departure from cold dock takes 20-30 minutes. If institutional response reaches the docks before ship launches, boarding attempts or directed arcane strike attacks may occur. Party must defend ship or accelerate launch sequence (risky, but possible under pressure).</p>
+
+                <p><strong>Success Condition for Brute Force:</strong> Party extracts core (with or without containment), fights through 2-3 patrol encounters, evades or neutralizes operative, reaches S.S. Dissertation, and launches before docking-bay lockdown completes. Tight timeline. Winnable. High casualty risk.</p>
+
+                <p><strong>Failure Condition:</strong> Party is overwhelmed by patrol coordination + operative interference. Either:</p>
+                <ul>
+                    <li>Party wipes to elite student patrols</li>
+                    <li>Party is captured/arrested by Skyhold/Luminous Synthesis security</li>
+                    <li>Reviewer #2 operative tag allows Armanitech to track party to S.S. Dissertation, escalating corporate espionage dimension</li>
+                    <li>Core remains in facility (mission fails; institutional investigation intensifies)</li>
+                </ul>
+
+                <hr>
+
+                <span class="anchor-link" id="comparison"></span>
+                <h3>Brute Force vs. Stealth: Tactical Comparison</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Factor</th>
+                            <th>Stealth</th>
+                            <th>Brute Force</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Time to Execute</strong></td>
+                            <td>30-45 minutes</td>
+                            <td>15-25 minutes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Alarm Risk</strong></td>
+                            <td>Low (if executed cleanly); catastrophic if caught</td>
+                            <td>Guaranteed; managed through speed</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Combat Encounters</strong></td>
+                            <td>0-2 (avoidable)</td>
+                            <td>2-3 (mandatory)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Exit Pressure</strong></td>
+                            <td>Low if undetected; high if discovered</td>
+                            <td>Very high; timed escape essential</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Institutional Response</strong></td>
+                            <td>Delayed discovery, investigation-based</td>
+                            <td>Immediate lockdown, combat-focused</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Operative Threat</strong></td>
+                            <td>Low (unless triggered); operative allows escape</td>
+                            <td>High; operative intercepts actively</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Core Deterioration Risk</strong></td>
+                            <td>Minimal if containment field accessed</td>
+                            <td>Moderate (time pressure forces rushed retrieval)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Party Casualty Risk</strong></td>
+                            <td>Moderate to low</td>
+                            <td>High</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Escape Likelihood</strong></td>
+                            <td>Moderate to high</td>
+                            <td>Moderate</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <hr>
+
+                <span class="anchor-link" id="complications"></span>
+                <h2>Scenario Complications & Reactive Elements</h2>
+
+                <h3>The Elevation Ceremony & Personnel Movement</h3>
+                <p>The Elevation Ceremony for Newly-Minted Manfuctors begins in approximately 3 hours and runs for 90 minutes. The Director, senior faculty mentors, wealthy legacy donors, and Skyhold's elite prodigy students congregate in the Grand Amphitheater. Campus foot traffic in the administrative and vault corridors diminishes significantly during this period. The Director's administrative assistant (who typically mans the vault access checkpoint) will be present in the amphitheater.</p>
+
+                <p>Security rotations occur routinely. A dedicated guard monitors the vault corridor entrance and camera systems during normal business hours; during the Elevation Ceremony, the checkpoint remains unstaffed (though patrol drones and elite student patrols continue automated sweeps every 10-15 minutes). Skyhold employs its most talented students as auxiliary security, leveraging their pride and competitive nature.</p>
+
+                <h3>The Director's Exhibition Chamber Security Apparatus</h3>
+
+                <h4>Electronic-Arcane Hybrid Lock System</h4>
+                <p>The interior door to the exhibition chamber features a dual-lock mechanism requiring both a biometric handprint (keyed to verified Skyhold senior faculty and Master-level Manfuctors) and an electronic keycard with an arcane signature verification. The biometric scanner detects living flesh; attempting to use a disembodied hand or substitute will fail and trigger a silent alert. The keycard reader requires the card to be "attuned" with the holder's mana signature—a stolen card alone will not suffice.</p>
+
+                <h4>Camera Surveillance & Patrols</h4>
+                <p>Multiple security cameras monitor the vault corridor and exhibition chamber anteroom. A single fixed camera in the northeast corner of the chamber focuses on the display case and central floor space. The camera has a specific line-of-sight; objects within the shadow of the east marble pillar (approximately 4 feet wide, located mid-chamber) are not visible to the camera. Additionally, elite student patrols walk the vault corridor every 12-15 minutes—unpredictable, competitive, and motivated by the prestige of catching intruders. These students are highly trained combatants (Skyhold pride themselves on producing the finest warriors and mages).</p>
+
+                <h4>Biometric-Arcane Cabinet Lock (Containment Field Storage)</h4>
+                <p>The side cabinet bearing the containment field generator is sealed with a hybrid lock more sophisticated than the door's system. Both biometric handprint AND active mana signature resonance are required. Failure to properly attune the mana signature triggers an immediate alarm (unlike the door mechanism, which is silent).</p>
+
+                <h3>Environmental Conditions & Atmospheric Detail</h3>
+                <p>The Director's Exhibition Chamber is a marvel of arcane architecture. Crystalline matrices embedded in the walls radiate soft blue-white light. The chamber smells of ozone and preserved mana. The polished obsidian floor reflects light perfectly—footsteps produce clear echoes. The Neural Aether-Core glows faintly within its crystalline case—a dull azure luminescence pulsing at irregular intervals. Touching the case triggers no immediate response, but the core inside responds slightly to proximity of living creatures (observable as brief luminescence flickers).</p>
+
+                <p>Two large stained-glass windows overlook the Arcane Quarter below, showing the sprawling district of Manfuctor workshops and crystalline spires. These windows are sealed with arcane wards; opening them from the inside requires disabling the ward system (a technical/arcane assessment challenge).</p>
+
+                <h3>Personnel & Possible Encounters</h3>
+
+                <p><strong>Director Valorian</strong> (non-hostile if not discovered, hostile if confronted): An aging elf scholar of immense prestige, owner of the artifact collection and primary beneficiary of Skyhold's patronage system. He is present in the Grand Amphitheater during the Elevation Ceremony and will not return to his office during the heist window. If he unexpectedly arrives during the party's action, he becomes immediately suspicious of unfamiliar personnel. He has authority to activate full lockdown and will not hesitate to do so.</p>
+
+                <p><strong>Elite Student Patrols</strong> (hostile if encountered): Skyhold's most accomplished students serve as auxiliary security during major events. These are talented, arrogant young mages and warriors who view security assignments as opportunities to demonstrate their superiority. If they encounter the party, they assume the party is a rival academy's espionage team or thieves. They will attempt to apprehend or confront the party with force.</p>
+
+                <p><strong>Threat Profile:</strong> Each patrol consists of 1-2 students. Individual students are formidable (equivalent to low-level adventurers). A single student can engage 1-2 party members for 2-3 rounds before requesting backup. Multiple students coordinating become significantly more dangerous.</p>
+
+                <h3>Reviewer #2 Operative: The Corporate Competitor</h3>
+
+                <p>An unknown agent operating under the codename "Reviewer #2" is embedded within Skyhold's security infrastructure. This operative is Armanitech-authorized corporate intelligence, tasked with monitoring high-value artifacts and gathering competitive intelligence on rival institutions' research capabilities.</p>
+
+                <p><strong>Operative's Current Status:</strong> Unaware of the party's intentions. Monitors security feeds passively during normal operations. Hidden credentials place the operative within the legitimate security apparatus; they have access to camera systems, alert networks, and facility layouts.</p>
+
+                <p><strong>Operative's Primary Objective:</strong> Acquire the Neural Aether-Core for Armanitech exploitation. The core's consciousness-integration technology represents significant R&D value—if Armanitech can reverse-engineer it, they consolidate market dominance in autonomous combat systems.</p>
+
+                <p><strong>Operative's Secondary Objective:</strong> If acquisition is impossible, prevent the party from escaping with the core. Better that the core remain missing (and valuable for recovery) than fall into a rival startup's hands. The operative will accept the core being locked back into the chamber if it means denying it to competitors.</p>
+
+                <p><strong>Operative's Tactical Approach:</strong> Professional, methodical, non-lethal when possible. The operative prefers to avoid direct confrontation—tracking devices, misdirection, and forcing party failure are preferable. However, if cornered or if the party becomes an obstacle to the mission, the operative is fully combat-capable and will engage.</p>
+
+                <h4>Key Personality Traits</h4>
+                <ul>
+                    <li>Speaks in clipped, efficient sentences; no theatrics or monologuing</li>
+                    <li>Views all parties (party, Skyhold, Luminous Synthesis) as potential obstacles or useful pawns</li>
+                    <li>Maintains absolute anonymity—disappearing without trace is success</li>
+                    <li>Competent enough to recognize skilled opposition; will show grudging respect if party demonstrates capability</li>
+                    <li>Primary loyalty is to mission and paycheck, not institution</li>
+                </ul>
+
+                <h4>Operative's Resources</h4>
+                <ul>
+                    <li>Access to Skyhold's security monitoring feeds and alert systems</li>
+                    <li>Concealed tracking devices (arcane-tech fusion tags, coin-sized, can be planted on equipment or personnel)</li>
+                    <li>Non-lethal combat gear (stun spells, grappling enchantments, magical restraints)</li>
+                    <li>Emergency extraction protocols (can call Armanitech corporate security if needed, but doing so escalates institutional attention)</li>
+                    <li>Knowledge of Skyhold's layout and personnel rosters</li>
+                </ul>
+
+                <h3>What Exists: The Party's Challenge</h3>
+
+                <p>The Neural Aether-Core exists in a secured location within a rival institution actively hostile to outsiders. Multiple barriers prevent access: locked doors, biometric controls, arcane signature requirements, electronic systems, automated patrols, elite student defenders, and institutional alert systems. The party has <strong>no legitimate access</strong> to Skyhold's interior—discovery is immediate threat.</p>
+
+                <p>The 24-hour visitor window is a genuine constraint. After that, the party loses access to the technical infrastructure they're using as cover. The Elevation Ceremony creates a staffing gap in the vault area, but Skyhold's culture of pride and competitive excellence means elite students are actively patrolling (not passive). Any disturbance during the ceremony will be investigated rapidly.</p>
+
+                <p>The containment field generator is essential. Its location and sophisticated lock present a secondary challenge layered on top of the primary vault break-in. The exhibition chamber is not a quiet, isolated location—it sits within an active academic facility with unpredictable traffic.</p>
+
+                <p><em>What the party does, when they do it, and how they engage with this situation is entirely their choice.</em></p>
+
+                <hr>
+
+                <span class="anchor-link" id="escalation"></span>
+                <h2>Escalation & Consequences</h2>
+
+                <h3>If the Core Is Successfully Extracted Without Triggering Alarm</h3>
+
+                <p>The theft is not immediately noticed. Director Valorian returns to his office approximately 2 hours after the Elevation Ceremony concludes. He discovers the missing core within minutes and reports it to Skyhold's administrative council. Security review of camera footage reveals a gap in coverage (if the party exploited the camera blind spot) or shows unidentified personnel (if they were captured on feed). Skyhold initiates an immediate internal investigation and begins alerting the Skyhaven institutional network.</p>
+
+                <p>By this point, if the party has reached the S.S. Dissertation and departed Skyhaven, they are likely clear. If they are still in the Arcane Quarter when the alert spreads, they face increasing scrutiny, possible interception by security teams, or elite student patrols.</p>
+
+                <p>The missing artifact generates significant alarm within Skyhaven's elite academic circles. A high-value theft from Skyhold Academy is serious business—Skyhold are the establishment, and an outside heist threatens their prestige. Skyhold's wealthy benefactors, the Luminous Synthesis, and Armanitech operatives all become interested. The party may encounter investigation, bounty hunters, or direct confrontation from rival factions seeking to leverage the theft for political advantage.</p>
+
+                <p>Starfall's reputation (as the party's home institution) may become tainted if the connection is discovered. Skyhold will pursue institutional and legal action against Starfall if they can establish the theft was coordinated.</p>
+
+                <h3>If the Core Is Extracted But Alarm Is Triggered</h3>
+
+                <p>If party actions cause an active security response (triggered alarm, spotted by elite student patrol, discovered by faculty), Skyhold enters full alert. The Director's exhibition chamber and adjacent corridors enter lockdown. Security doors seal; elite student teams converge; emergency communication alerts the Luminous Synthesis security apparatus.</p>
+
+                <p>Reviewer #2 operative becomes actively engaged if an alarm is triggered. The operative pursues, attempts to tag party members with tracking devices, and escalates the confrontation. However, the operative's primary interest is intelligence gathering—who would hit Skyhold, and why? This operative prioritizes information over direct confrontation.</p>
+
+                <p>The party faces hostile response from multiple vectors: Skyhold's security apparatus, elite student patrols (who view combat as validation of their training), the Luminous Synthesis (if their security is formally invoked), and Armanitech operatives (if they have time to respond).</p>
+
+                <h3>Stealth Discovery Cascade: Caught During Infiltration</h3>
+
+                <p>If the party triggers an alarm while operating in stealth mode (spotted by elite student patrol, camera malfunction reveals presence, biometric lock fails and triggers alert), Skyhold enters rapid response.</p>
+
+                <p><strong>Timeline of Response:</strong></p>
+                <ul>
+                    <li><strong>T+0:</strong> Alarm triggers. Elite student patrols receive alert location and respond with urgency.</li>
+                    <li><strong>T+2 minutes:</strong> Reviewer #2 operative becomes aware of breach via security feed monitoring. Operative immediately mobilizes to intercept party.</li>
+                    <li><strong>T+3 minutes:</strong> First elite student patrol team reaches vault corridor/exhibition chamber vicinity (potential combat begins).</li>
+                    <li><strong>T+5+ minutes:</strong> Additional patrol teams arrive; security personnel converge; facility-wide alert escalates; lockdown systems begin engaging.</li>
+                </ul>
+
+                <h3>Reviewer #2 Operative's Play During Stealth Discovery</h3>
+
+                <p>Upon learning of the party's presence, the operative abandons passive monitoring and actively intervenes. The operative's goal: prevent party extraction while preserving operative's anonymity.</p>
+
+                <p><strong>Operative's Tactical Sequence:</strong></p>
+                <ol>
+                    <li><strong>Positioning</strong> (T+2-3 min): Operative moves to intercept party in vault corridor or exhibition chamber antechamber, blocking primary exit routes.</li>
+                    <li><strong>Initial Contact:</strong> Operative confronts party with professional tone:
+                        <blockquote>"You're not leaving with that. Let me take it. You walk free. Skyhold never learns you were here."</blockquote>
+                    </li>
+                    <li><strong>Negotiation Window</strong> (30-60 seconds): Operative gauges party reaction. If party appears willing to negotiate or is distracted, operative plants tracking devices on equipment/personnel (subtle, coin-sized arcane-tech tags).</li>
+                    <li><strong>Escalation</strong> (if negotiation fails): Operative uses ranged combat tactics—stun spells, magical restraints, terrain control—to delay party. Operative doesn't need to defeat party; operative needs to delay them until elite student patrols arrive (3-5 minutes away, depending on their position).</li>
+                </ol>
+
+                <p><strong>Operative's Exit Strategy:</strong> Once elite student patrols are 2-3 minutes away, operative breaks engagement and fades into facility infrastructure (side corridors, maintenance passages, arcane lift access). Operative allows party to engage patrols directly, then waits for security lockdown to clear.</p>
+
+                <p>After facilities are secured and Director Valorian returns, operative (using legitimate security credentials) accesses the re-secured exhibition chamber and retrieves the core—claiming it had been "temporarily misplaced" or "recovered during security sweep." Operative exfiltrates with core via normal security protocols, undetected.</p>
+
+                <h3>Party Response Options Under This Pressure</h3>
+
+                <ol>
+                    <li><strong>Negotiate with operative:</strong>
+                        <ul>
+                            <li><em>Pro:</em> Operative honors deal if party cooperates (walks free, leaves core behind). No combat with operative.</li>
+                            <li><em>Con:</em> Party loses core (mission fails). Operative plants tracking device; Armanitech later tracks party to S.S. Dissertation and escalates corporate espionage dimension.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Fight operative:</strong>
+                        <ul>
+                            <li><em>Pro:</em> Party can potentially eliminate operative, preventing Armanitech intelligence gathering.</li>
+                            <li><em>Con:</em> Combat is loud and extended; alert elite student patrols converge during or immediately after party-operative engagement. Party likely faces combined operative + patrol opposition (lethal).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Split tactics:</strong>
+                        <ul>
+                            <li>Some party members engage operative (delay/distract); others attempt to grab core and containment field generator (risky under time pressure). Fragmentary engagement increases casualty risk.</li>
+                        </ul>
+                    </li>
+                    <li><strong>Tactical pivot to brute force:</strong>
+                        <ul>
+                            <li>Party abandons stealth, switches to aggressive combat, uses area-of-effect spells/abilities to overwhelm operative + arriving patrols. Extremely risky but dramatically escalates combat tension and party agency (party "owns" the chaos rather than being victims of it).</li>
+                        </ul>
+                    </li>
+                    <li><strong>Abandon mission from vault area:</strong>
+                        <ul>
+                            <li>Party evacuates exhibition chamber without core, breaks through operative/patrols using hit-and-run tactics, and flees Skyhold. Core remains secured; mission fails. Party avoids capture/death but loses artifact.</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <h3>Reviewer #2 Operative: Personality During Contact</h3>
+
+                <p>If party engages operative in conversation or combat:</p>
+
+                <ul>
+                    <li><strong>Speech pattern:</strong> Clipped, professional, no wasted words. Operative prefers to communicate via actions (tactical positioning, equipment display, threat gestures).</li>
+                    <li><strong>Respect for opposition:</strong> If party demonstrates tactical awareness, operative may acknowledge it indirectly ("You're trained. I respect that. Make the smart choice.").</li>
+                    <li><strong>Ruthlessness:</strong> Operative is willing to kill party members if it serves mission (though prefers non-lethal delay). However, operative will not take suicidal risks—if patrols approach and operative realizes party will survive the encounter, operative exits.</li>
+                    <li><strong>Anonymity obsession:</strong> Operative will never reveal Armanitech affiliation, codename, or personal identity. If captured, operative activates self-destruct arcane charge (kills operative, potentially harms captors).</li>
+                </ul>
+
+                <h3>If the Core Cannot Be Extracted (Failure or Abandonment)</h3>
+
+                <p>The party leaves empty-handed. The core remains secure in the Director's exhibition chamber. If no alarm was triggered and the party was not identified, they may attempt alternative approaches during their remaining time window: negotiation, bribery, research into alternative sources for a Neural Aether-Core (other institutions, black markets, private collectors), or abandoning the heist entirely.</p>
+
+                <p>However, if the party was identified or spotted by camera systems, the situation escalates immediately—their visitor credentials are revoked, they are escorted from Skyhold, and potential arrest by Skyhaven authorities becomes a risk.</p>
+
+                <h3>Departure from Skyhaven</h3>
+
+                <p>The S.S. Dissertation is docked in Skyhaven's lower commercial sector—a significant distance from the Arcane Quarter (approximately 30-45 minutes via groundside transportation, or 15-20 minutes via aerial route if the party has flight capabilities). The party's docking bay is subject to standard security registration (all vessels must maintain legitimate licensing and registration). If the party attempts to depart with an active, known theft on the record, port authority will attempt to detain the ship. If they depart with no current alert, they are clear.</p>
+
+                <p>The ship can be moved using conventional arcane-tech propulsion; departure takes approximately 20-30 minutes from cold dock state. The party could avoid port authority entirely by moving to an abandoned dock or industrial sector, extracting overland—slower, but avoids official interference.</p>
+
+                <h3>Consequences for Continued Presence in Skyhaven</h3>
+
+                <p>If the party remains in Skyhaven rather than departing, they are subject to investigation and institutional scrutiny. If the theft is discovered and traced to the party:</p>
+                <ul>
+                    <li>Visitor credentials are revoked immediately</li>
+                    <li>Skyhold and Luminous Synthesis security actively hunt the party</li>
+                    <li>Starfall institution is implicated and faces diplomatic/academic consequences</li>
+                    <li>Law enforcement may become involved (theft of institutional property, unauthorized access to restricted areas)</li>
+                    <li>Bounty hunters and rival factions may see an opportunity</li>
+                </ul>
+
+                <p>The party's visitor legitimacy becomes extremely brittle; any further attempts at academic access will be flagged and likely result in arrest.</p>
+
+                <hr>
+
+                <span class="anchor-link" id="locations-section"></span>
+                <h2>Locations</h2>
+
+                <span class="anchor-link" id="skyhold-location"></span>
+                <h3>Location: Skyhold Academy (Skyhaven, Arcane Quarter)</h3>
+
+                <p><strong>Description:</strong> An ancient, prestigious institution rising from the Arcane Quarter of Skyhaven. Skyhold's architecture reflects centuries of accumulated wealth and Manfuctor patronage: towering crystalline spires, floating gardens, and lavish arcane infrastructure. The academy is built vertically, with lower levels housing the historical vault collections and upper levels containing elite student dormitories and Manfuctor workshop collaborations. The entire campus shimmers with active arcane matrices and enchantments, heavily warded and monitored.</p>
+
+                <h4>Setting Details</h4>
+                <ul>
+                    <li>Crystalline spires reflecting Skyhaven's eternal twilight glow</li>
+                    <li>Ambient hum of active magical fields and Manfuctor wards</li>
+                    <li>Smell of ozone, preserved mana, and rare alchemical compounds</li>
+                    <li>Constant flow of well-dressed faculty, elite students, and wealthy benefactors during normal hours</li>
+                    <li>After-hours: eerie silence maintained by active security systems and periodic elite student patrols</li>
+                    <li>Architecture emphasizes opulence: marble corridors, stained-glass windows, bioluminescent accents</li>
+                </ul>
+
+                <h4>Faction Control</h4>
+                <p>Skyhold Academy Institution; Director oversight. The Luminous Synthesis provides ultimate authority over arcane security protocols. Reviewer #2 operatives embedded within security detail.</p>
+
+                <h4>Key Areas</h4>
+
+                <h5>Area 1: The Grand Amphitheater (Elevation Ceremony Venue)</h5>
+                <ul>
+                    <li>Seats approximately 600 faculty, donors, and elite students</li>
+                    <li>Advanced arcane lighting systems capable of spectacular visual displays</li>
+                    <li>Multiple entrances/exits (designed for processional dignity)</li>
+                    <li>Adjacent reception and banquet halls with catering</li>
+                    <li>Exit routes lead to administrative corridors and vault access points</li>
+                </ul>
+
+                <h5>Area 2: The Vault Access Corridor</h5>
+                <ul>
+                    <li>Restricted access, heavily warded with passive arcane deterrent fields</li>
+                    <li>Typically guarded by single security administrator during business hours</li>
+                    <li>Contains checkpoint for vault expeditions and artifact retrieval requests</li>
+                    <li>Polished obsidian floors (footsteps echo distinctly; difficult to cross undetected without magical dampening)</li>
+                    <li>Lit by chromatic crystal matrices embedded in walls</li>
+                </ul>
+
+                <h5>Area 3: The Director's Private Exhibition Chamber</h5>
+                <p><strong>Description:</strong> An opulent antechamber to the Director's exclusive study. Shelves and pedestals display the academy's most prestigious artifacts, collected over centuries of patronage. The Neural Aether-Core is housed in a climate-controlled crystalline display case positioned on a black marble pedestal in the center of the chamber. The case bears an ornate arcane-electronic lock mechanism.</p>
+
+                <p><strong>Setting Details:</strong></p>
+                <ul>
+                    <li>Smell of ozone and preserved magical essence</li>
+                    <li>Soft blue-white light radiating from crystalline matrices in the walls</li>
+                    <li>Polished obsidian floor (reflective, echoes footsteps clearly)</li>
+                    <li>Two large stained-glass windows overlooking the Arcane Quarter (sealed with arcane wards)</li>
+                    <li><strong>Security camera:</strong> mounted in northeast corner, focused on the display case and central floor space</li>
+                    <li><strong>Blind spot:</strong> east marble pillar (approximately 4 feet wide, located mid-chamber) is outside camera's visible frame</li>
+                    <li>Artifacts and display pedestals create visual clutter; potential for misdirection</li>
+                </ul>
+
+                <p><strong>Cabinet Lock (Biometric-Arcane Hybrid):</strong> Requires both handprint of a verified Skyhold senior faculty member or Master-level Manfuctor AND active mana signature resonance attuned to the cabinet. Obtaining both requires either:</p>
+                <ul>
+                    <li>Cooperating faculty member or Master Manfuctor willingly opening it</li>
+                    <li>Theft of a Master-level Manfuctor's person (extreme and obvious)</li>
+                    <li>Arcane-technical sabotage/hacking (hybrid assessment; DC 20; failure triggers immediate alarm)</li>
+                    <li>Ritual-based occult bypass (Human Occultist ritual knowledge; complex and time-consuming)</li>
+                </ul>
+
+                <p><strong>Containment Field Requirement:</strong> The Neural Aether-Core is metaphysically sensitive; removal from its sealed case without active containment field causes deterioration. The containment field generator is stored in an adjacent locked cabinet requiring similar biometric-arcane hybrid authentication. Accessing both cabinets without triggering alarms is a coordinated challenge.</p>
+
+                <h5>Area 4: The Lower Galleries (Alternative Infiltration Route)</h5>
+                <ul>
+                    <li>Historical artifact storage levels beneath the main exhibition chamber</li>
+                    <li>Older security systems (predating current arcane-electronic systems)</li>
+                    <li>Accessible via service stairs or arcane lift (lift requires access credentials)</li>
+                    <li>Contains dozens of artifact cases; visual chaos provides concealment</li>
+                    <li><strong>Encounter risk:</strong> Conservation staff, senior researchers, or automated patrol drones if alarms are triggered</li>
+                    <li><strong>Exit point:</strong> leads to basement service corridors connecting to the Arcane Quarter's lower infrastructure</li>
+                </ul>
+
+                <h5>Area 5: The Rooftop Observation Spire (Alternative Access)</h5>
+                <ul>
+                    <li>Highest point of Skyhold's campus; overlooks the entire Arcane Quarter</li>
+                    <li>Contains arcane observation arrays (for magical and astronomical research)</li>
+                    <li>Accessible via maintenance stairwells in the upper residential towers</li>
+                    <li><strong>Encounter risk:</strong> Elite student researchers, rooftop patrol drones, or Luminous Synthesis security if they're investigating</li>
+                    <li><strong>Strategic value:</strong> vantage point for reconnaissance, potential aerial approach routes (if party has flight or climbing capability)</li>
+                </ul>
+
+                <hr>
+
+                <span class="anchor-link" id="dissertation"></span>
+                <h3>Location: S.S. Dissertation (Mobile Research Vessel)</h3>
+
+                <p><strong>Description:</strong> The party's home base—a sleek research vessel that serves as mobile laboratory and operational headquarters. Currently docked in Skyhaven's lower commercial sector, approximately 30-45 minutes groundside travel (or 15-20 minutes by aerial route) from the Arcane Quarter where Skyhold Academy is located. The ship maintains a legitimized commercial registration as a Starfall-based research consultant vessel. The S.S. Dissertation is approximately 120 feet in length, modular in design, with specialized sections for different functions.</p>
+
+                <h4>Setting Details</h4>
+                <ul>
+                    <li>Exterior: matte black hull with faint arcane shimmer (cloaking-capable); corporate logo reads "Dissertation Ventures, Inc."</li>
+                    <li>Interior: efficient, high-tech aesthetic blending laboratory workbenches with living quarters</li>
+                    <li>Docking position: in a facility shared with other independent research vessels and small corporate ships</li>
+                    <li>Port authority oversight: standard security registration required; departure requires port clearance</li>
+                    <li>Ambient lighting from chromatic energy matrices; hum of arcane-tech systems</li>
+                    <li>Smell: ozone, lubricant oil, sterile lab environment</li>
+                    <li>Constant subtle vibration from holding pattern systems (ship does not move unless engaged)</li>
+                </ul>
+
+                <h4>Key Sections</h4>
+
+                <p><strong>Section 1: The Lab</strong></p>
+                <ul>
+                    <li>Workbenches equipped with tools for cybernetic integration and component assembly</li>
+                    <li>Containment field generators for sensitive magical components</li>
+                    <li>Medical bay with specialized equipment for biocompatibility protocols</li>
+                    <li>Where the Neural Aether-Core will be integrated into the B.O.T. prototype</li>
+                </ul>
+
+                <p><strong>Section 2: The Ego-Chamber</strong></p>
+                <ul>
+                    <li>Specialized gym and performance stage for the Orc Armsman's combat training</li>
+                    <li>High-ceiling open layout; large mirrors and practice grounds</li>
+                    <li>Also serves as crew quarters for demonstrations and strategy sessions</li>
+                </ul>
+
+                <p><strong>Section 3: The Ontological Library</strong></p>
+                <ul>
+                    <li>Private office space for processing Mnemonic Prisms and tactical data</li>
+                    <li>Comfortable seating; serves as the Draegloth's command center</li>
+                    <li>Secure communication systems (encoded mana-transmission protocols)</li>
+                </ul>
+
+                <p><strong>Section 4: The Bridge/Core Command</strong></p>
+                <ul>
+                    <li>Technical control center for ship systems</li>
+                    <li>Docking protocols, communication array, and power management systems</li>
+                    <li>Gnome Technician's primary workspace</li>
+                </ul>
+
+                <p><strong>Section 5: Living Quarters</strong></p>
+                <ul>
+                    <li>Cramped but functional crew berths for ongoing operations</li>
+                    <li>Shared common area with limited provisions</li>
+                </ul>
+
+                <p><strong>Security Features:</strong> Hatch locks with arcane-electronic hybrid systems; emergency overrides controlled by Gnome Technician; cloaking field can be engaged for docked positioning.</p>
+
+                <hr>
+
+                <span class="anchor-link" id="amphitheater"></span>
+                <h3>Location: The Grand Amphitheater & Elevation Ceremony Venues</h3>
+
+                <p><strong>Description:</strong> Skyhold's most prestigious ceremonial space, hosting the quarterly Elevation Ceremony where newly-minted Manfuctors are officially recognized. The amphitheater is an architectural masterpiece of crystalline arches and arcane illumination. Adjacent spaces include reception halls, banquet areas, and networking lounges. This is where the party's target window occurs—when faculty, donors, and elite students are concentrated in one location, away from the vault areas.</p>
+
+                <h4>Key Details for Heist</h4>
+                <ul>
+                    <li>Grand Amphitheater: seats ~600 (Director, faculty, distinguished donors, elite students)</li>
+                    <li>Multiple processional entrances (designed for ceremonial grand entries, not rapid evacuation)</li>
+                    <li>Reception/banquet halls adjacent to amphitheater; high foot traffic during ceremony</li>
+                    <li><strong>Crowd density during ceremony:</strong> minimal (everyone is in the amphitheater); peaks 20-30 minutes after ceremony ends during socializing</li>
+                    <li><strong>Security focus during ceremony:</strong> primarily on ceremony logistics and distinguished guest management (not vault security)</li>
+                    <li><strong>Potential distraction vector:</strong> the reception areas after the ceremony, when elite students and faculty are mingling, exhausted, and celebrating</li>
+                    <li><strong>Exits and routes:</strong> multiple corridors from amphitheater lead to administrative areas, research wings, and—with proper navigation—vault-adjacent corridors</li>
+                </ul>
+
+                <hr>
+
+                <span class="anchor-link" id="sessions-arc"></span>
+                <h2>Sessions Arc Overview (Teaser for Future Sessions)</h2>
+
+                <ul>
+                    <li><strong>Session 1: Neural Aether-Core (Skyhold Academy)</strong> — Establish tone, party chemistry, and heist mechanics. Introduce Reviewer #2 as emergent threat.</li>
+                    <li><strong>Session 2: Bio-Waste Synapse (Arcech Sewers)</strong> — Explore the darker underbelly of the hive city; introduce sentient slime-mind and moral ambiguity.</li>
+                    <li><strong>Session 3: Stutter-Drive Processor (Dept. of Chronomancy)</strong> — Leverage Orc Armsman's performance skills in a unique time-dilation puzzle.</li>
+                    <li><strong>Session 4: Soul-Sliver (Void-Lotto Casino)</strong> — High-stakes social encounter; gambling and negotiation, with literal life-years at risk.</li>
+                    <li><strong>Session 5: Plasteel Chassis (Armanitech Scrapyard)</strong> — Climactic confrontation with Armanitech operatives and Reviewer #2; Draegloth faces academic/philosophical challenge.</li>
+                    <li><strong>Session 6+: B.O.T. Activation & Consequences</strong> — B.O.T. prototype fully operational; corporate espionage escalates; Reviewer #2 escalates; party must confront consequences of their illegal research and carve a path in Arcech's cutthroat startup ecosystem.</li>
+                </ul>
+
+                <hr>
+
+                <span class="anchor-link" id="npcs"></span>
+                <h2>NPCs & Key Persons</h2>
+
+                <h3>Director Valorian</h3>
+                <p><strong>Role:</strong> Senior administrator, proprietor of the artifact collection, ultimate authority within Skyhold Academy.</p>
+
+                <p><strong>Background:</strong> Male elf scholar, approximately 300+ years old. Prestigious founder of Skyhold's modern patronage system and architect of the academy's rise to prominence. Takes profound personal pride in the artifact collection, particularly prestigious acquisitions like the Neural Aether-Core.</p>
+
+                <p><strong>Current State:</strong> Presiding over the Elevation Ceremony in the Grand Amphitheater (occupied for approximately 90 minutes). Will return to his office suite approximately 2 hours after the ceremony concludes.</p>
+
+                <p><strong>Demeanor:</strong> Aristocratic, reserved, and formal. Treats visiting academics with polite distance but maintains strict institutional protocols. Unaware of any threat to the artifacts. If he encounters unfamiliar personnel in his exhibition chamber without proper authorization, he immediately becomes hostile and will activate full security protocols without hesitation.</p>
+
+                <p><strong>Motivations:</strong> Institutional legacy, prestige, protection of Skyhold's economic interests through artifact ownership.</p>
+
+                <h3>Master Manfuctor Celeste (Elevation Ceremony Administrator)</h3>
+                <p><strong>Role:</strong> Senior faculty member overseeing the Elevation Ceremony; prominent figure in Skyhold's recognition of new Masters.</p>
+
+                <p><strong>Background:</strong> Human woman, mid-level legendary researcher. Responsible for ceremony logistics and official recognition protocols.</p>
+
+                <p><strong>Current State:</strong> Presenting newly-elevated Manfuctors in the Grand Amphitheater during the ceremony (not relevant to vault security during the heist window). Will move to reception areas after ceremony concludes.</p>
+
+                <p><strong>Demeanor:</strong> Enthusiastic, ceremonial, preoccupied with ceremony logistics.</p>
+
+                <p><strong>Relevance to Party:</strong> Minimal unless directly encountered during distraction or exfiltration phases.</p>
+
+                <h3>Elite Student Patrols (Multiple)</h3>
+                <p><strong>Role:</strong> Auxiliary security and institutional pride enforcers; Skyhold's most talented student combatants and mages.</p>
+
+                <p><strong>Background:</strong> Selected from Skyhold's cohort of arrogant, competitive prodigies. These students view security assignments as validation of their superior abilities and treat any intrusion as a personal insult.</p>
+
+                <p><strong>Current State:</strong> Routine patrols of academy corridors every 10-15 minutes (or more frequently if alert status escalates).</p>
+
+                <p><strong>Demeanor:</strong> Confident, condescending, eager to prove their capabilities. Assume any outsider is a spy, thief, or rival academy agent.</p>
+
+                <p><strong>Threat Profile:</strong> Each patrol consists of 1-2 elite students. Individual students are formidable combatants (equivalent to low-level adventurers with access to high-end spellcasting and combat training). A single student can engage 1-2 party members for 2-3 rounds; if the student gets time to call backup, additional students arrive within moments.</p>
+
+                <p><strong>Encounter Behavior:</strong> Elite student patrols will attempt to apprehend, interrogate, or intimidate unfamiliar personnel. They view potential intruders as opportunities to demonstrate their prowess. If a party member appears to be escaping or resisting, the students escalate to lethal force (or as close as institutional protocols allow).</p>
+
+                <h3>Reviewer #2 Operative (Identity Unknown)</h3>
+                <p><strong>Role:</strong> Corporate security agent, embedded threat within Skyhold's security apparatus.</p>
+
+                <p><strong>Background:</strong> An agent of Armanitech embedded within Skyhold's security detail under false credentials, ostensibly as a contractor providing enhanced arcane security monitoring. This operative monitors the exhibition chamber's security feeds, maintains intelligence on high-value assets, and gathers information on institutional operations. No name. No public face. No history before assignment.</p>
+
+                <p><strong>Current State Awareness:</strong> Aware that the Neural Aether-Core exists; unaware of the party's intentions unless alarm systems are triggered or suspicious activity is reported. Passively monitors feeds during normal operations, expecting nothing unusual.</p>
+
+                <p><strong>Activation Trigger:</strong> If an active security alarm is triggered, or if suspicious activity is reported by elite students or automated systems, the operative responds. If the party operates silently without raising alarms, the operative remains passive and disengaged.</p>
+
+                <p><strong>Capabilities:</strong> Competent combatant trained in advanced tactics, pursuit, and interdiction. Skilled with tracking devices and surveillance equipment. Capable of operating independently or calling on Armanitech corporate security resources (though doing so escalates institutional exposure, which operative avoids).</p>
+
+                <p><strong>Motivation:</strong> Corporate espionage, intelligence gathering, suppression of competition. Specifically tasked with monitoring threats to Armanitech's market position and gathering intelligence on cutting-edge artifact movements within Skyhaven's elite institutions. Primary objective: acquisition. Secondary objective: denial.</p>
+
+                <p><strong>Note:</strong> The operative's primary value is intelligence and prevention—capturing or identifying who would raid Skyhold is valuable information. The operative may deliberately allow the party to escape (with a tracking device attached) rather than engage directly, if doing so serves Armanitech's larger interests. The operative's relationship to the party is not antagonistic until forced—professional, competitive, pragmatic.</p>
+
+                <h3>Automated Sentinel Drones</h3>
+                <p><strong>Nature:</strong> Non-lethal, patrol-based arcane-tech drones conducting systematic sweeps of restricted corridors, vault access points, and sensitive administrative areas.</p>
+
+                <p><strong>Behavior:</strong> Drones operate on fixed schedules (sweeping vault-adjacent corridors approximately every 12-15 minutes during normal operations). Equipped with visual sensors and arcane aura detection. Upon detecting unauthorized personnel or arcane disturbances, drones immediately trigger alarms and alert security personnel. Drones cannot be reasoned with or deceived through illusion, but can be physically obstructed or temporarily misdirected.</p>
+
+                <p><strong>Threat Level:</strong> Moderate during normal operations; extremely dangerous if multiple alarms are triggered in succession (multiple drones converge rapidly, compressing party response time significantly and raising institutional alert levels).</p>
+
+                <hr>
+
+                <span class="anchor-link" id="mechanical"></span>
+                <h2>Mechanical & Technical Details</h2>
+
+                <h3>Neural Aether-Core Properties</h3>
+                <p>The core is an arcane-technological artifact capable of interfacing with biological neural systems. Its metaphysical nature makes it sensitive to environmental disturbance. If removed from its sealed crystalline case without an active containment field, the core begins to destabilize. Party members responsible for transport must manage this deterioration through either:</p>
+                <ul>
+                    <li>Acquiring and activating the containment field generator (located in the adjacent locked cabinet within the exhibition chamber)</li>
+                    <li>Managing the core through ritual magic or special handling protocols</li>
+                    <li>Accepting core damage as a consequence of rapid extraction</li>
+                </ul>
+            </div>
+
+            <a href="#" class="back-to-toc">↑ Back to Table of Contents</a>
+        </div>
+
+        <footer style="text-align: center; padding: 30px; color: #a0aec0; margin-top: 40px; border-top: 2px solid #667eea;">
+            <p>Stellar Arcana Adventure Guide | Single-page reference document</p>
+            <p>Fragment navigation: Click any link in the table of contents to jump to that section</p>
+        </footer>
+    </div>
+</body>
+</html>

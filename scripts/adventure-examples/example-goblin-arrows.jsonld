@@ -1,0 +1,201 @@
+{
+  "@context": {
+    "@vocab": "https://stellar-arcana.org/adventure#",
+    "adv": "https://stellar-arcana.org/adventure#",
+    "schema": "http://schema.org/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@id": "https://stellar-arcana.org/adventure/goblin-arrows",
+  "@type": "adv:Adventure",
+  "rdfs:label": "Goblin Arrows One-Shot",
+  "schema:title": "Goblin Arrows",
+  "schema:description": "A simple one-shot adventure where a small goblin outfit raids travelers on a forest road. The party must track them down and stop the raids.",
+  "adv:hasPart": [
+    {
+      "@id": "https://stellar-arcana.org/adventure/goblin-arrows/chapter-1",
+      "@type": "adv:Chapter",
+      "rdfs:label": "Chapter 1: The Ambush",
+      "schema:description": "The party is ambushed by goblin archers on a forest road. They must survive and pursue the attackers.",
+      "adv:hasEncounter": [
+        {
+          "@id": "https://stellar-arcana.org/adventure/goblin-arrows/chapter-1/encounter-1"
+        }
+      ],
+      "adv:hasLocation": [
+        {
+          "@id": "https://stellar-arcana.org/adventure/goblin-arrows/location-forest-road"
+        }
+      ]
+    },
+    {
+      "@id": "https://stellar-arcana.org/adventure/goblin-arrows/chapter-2",
+      "@type": "adv:Chapter",
+      "rdfs:label": "Chapter 2: The Goblin Lair",
+      "schema:description": "The party tracks the goblins back to their lair in the forest. They discover a larger organization than expected.",
+      "adv:hasLocation": [
+        {
+          "@id": "https://stellar-arcana.org/adventure/goblin-arrows/location-goblin-lair"
+        }
+      ],
+      "adv:hasEncounter": [
+        {
+          "@id": "https://stellar-arcana.org/adventure/goblin-arrows/chapter-2/encounter-1"
+        }
+      ]
+    }
+  ],
+  "adv:hasNPC": [
+    {
+      "@id": "https://stellar-arcana.org/adventure/goblin-arrows/npc-shrak",
+      "@type": "adv:NPC",
+      "rdfs:label": "Shrak (Goblin Boss)",
+      "schema:name": "Shrak",
+      "adv:role": "antagonist",
+      "schema:description": "A cunning goblin leader with ambitions to establish a larger bandit operation. Cruel but strategic. Wears salvaged militia armor and carries a well-maintained crossbow.",
+      "adv:faction": "Independent goblin outfit",
+      "adv:appearance": "Green-skinned goblin, lean and scarred, stands 4 feet tall, wears dented armor",
+      "adv:personality": "Snarling voice, speaks broken Common, laughs at violence, respects strength"
+    },
+    {
+      "@id": "https://stellar-arcana.org/adventure/goblin-arrows/npc-merchant",
+      "@type": "adv:NPC",
+      "rdfs:label": "Kerrith (Merchant)",
+      "schema:name": "Kerrith",
+      "adv:role": "questgiver",
+      "schema:description": "A merchant targeted by the goblin band. Offers reward for stopping the raids. Nervous and grateful.",
+      "adv:faction": "Independent merchant",
+      "adv:appearance": "Middle-aged human, portly, wears travel-stained silks",
+      "adv:personality": "Anxious, generous, knows the roads well"
+    }
+  ],
+  "adv:hasLocation": [
+    {
+      "@id": "https://stellar-arcana.org/adventure/goblin-arrows/location-forest-road",
+      "@type": "adv:Location",
+      "rdfs:label": "Forest Road",
+      "schema:name": "Forest Road",
+      "schema:description": "A well-traveled forest road through dense vegetation. Ambient danger; isolated.",
+      "adv:hasArea": [
+        {
+          "@id": "https://stellar-arcana.org/adventure/goblin-arrows/location-forest-road/area-1",
+          "@type": "adv:Area",
+          "adv:areaNumber": "1",
+          "adv:areaName": "Ambush Site",
+          "schema:description": "Where the goblins spring their trap. Dense trees on both sides of the road provide cover."
+        },
+        {
+          "@id": "https://stellar-arcana.org/adventure/goblin-arrows/location-forest-road/area-2",
+          "@type": "adv:Area",
+          "adv:areaNumber": "2",
+          "adv:areaName": "Pursuit Route",
+          "schema:description": "Tracks leading away from the road deeper into the forest."
+        }
+      ],
+      "adv:hasGeneralFeature": [
+        {
+          "@type": "adv:GeneralFeature",
+          "adv:featureType": "Lighting",
+          "schema:description": "Dappled sunlight through the canopy, shadows in the dense vegetation"
+        },
+        {
+          "@type": "adv:GeneralFeature",
+          "adv:featureType": "Terrain",
+          "schema:description": "Muddy path, scattered rocks, fallen logs"
+        }
+      ]
+    },
+    {
+      "@id": "https://stellar-arcana.org/adventure/goblin-arrows/location-goblin-lair",
+      "@type": "adv:Location",
+      "rdfs:label": "Goblin Camp",
+      "schema:name": "Goblin Camp",
+      "schema:description": "A ramshackle camp hidden in the forest. Crude shelters, scattered plunder, lookout posts.",
+      "adv:hasArea": [
+        {
+          "@id": "https://stellar-arcana.org/adventure/goblin-arrows/location-goblin-lair/area-1",
+          "@type": "adv:Area",
+          "adv:areaNumber": "1",
+          "adv:areaName": "Entrance",
+          "schema:description": "Hidden entrance behind thick brambles. Single lookout post."
+        },
+        {
+          "@id": "https://stellar-arcana.org/adventure/goblin-arrows/location-goblin-lair/area-2",
+          "@type": "adv:Area",
+          "adv:areaNumber": "2",
+          "adv:areaName": "Main Camp",
+          "schema:description": "Central area with crude shelters and campfire. Where most goblins gather."
+        },
+        {
+          "@id": "https://stellar-arcana.org/adventure/goblin-arrows/location-goblin-lair/area-3",
+          "@type": "adv:Area",
+          "adv:areaNumber": "3",
+          "adv:areaName": "Shrak's Tent",
+          "schema:description": "Large central tent where the boss sleeps and keeps plunder."
+        }
+      ]
+    }
+  ],
+  "adv:hasEncounter": [
+    {
+      "@id": "https://stellar-arcana.org/adventure/goblin-arrows/chapter-1/encounter-1",
+      "@type": "adv:Encounter",
+      "rdfs:label": "Goblin Ambush",
+      "schema:name": "Goblin Ambush",
+      "schema:description": "The party is ambushed by goblin archers while traveling the forest road.",
+      "adv:location": {
+        "@id": "https://stellar-arcana.org/adventure/goblin-arrows/location-forest-road"
+      },
+      "adv:hasMonster": [
+        {
+          "@type": "adv:Monster",
+          "schema:name": "Goblin Archer",
+          "adv:count": 4,
+          "schema:description": "Small green humanoids with shortbows, lightly armored, quick reflexes"
+        },
+        {
+          "@type": "adv:Monster",
+          "schema:name": "Goblin Bruiser",
+          "adv:count": 2,
+          "schema:description": "Larger goblins with clubs and leather armor, aggressive tactics"
+        }
+      ],
+      "adv:surprise": "Goblins have surprise if the party is not actively looking for trouble.",
+      "adv:tactics": "Archers stay at range; bruisers charge once melee is engaged. Goblins attempt to scatter and flee once half their number are down.",
+      "adv:developments": "If a goblin is captured, they can be interrogated for location of the lair."
+    },
+    {
+      "@id": "https://stellar-arcana.org/adventure/goblin-arrows/chapter-2/encounter-1",
+      "@type": "adv:Encounter",
+      "rdfs:label": "Battle at the Camp",
+      "schema:name": "Battle at Goblin Camp",
+      "schema:description": "The party storms the goblin camp and confronts Shrak and his remaining forces.",
+      "adv:location": {
+        "@id": "https://stellar-arcana.org/adventure/goblin-arrows/location-goblin-lair"
+      },
+      "adv:hasMonster": [
+        {
+          "@type": "adv:Monster",
+          "schema:name": "Shrak (Goblin Warlord)",
+          "adv:count": 1,
+          "schema:description": "Cunning leader with good tactics, crossbow and commands goblins intelligently"
+        },
+        {
+          "@type": "adv:Monster",
+          "schema:name": "Goblin Warriors",
+          "adv:count": 6,
+          "schema:description": "Mix of archers and melee combatants, varying quality"
+        }
+      ],
+      "adv:surprise": "Depends on party approach. Stealth allows surprise; direct assault does not.",
+      "adv:tactics": "Shrak organizes goblins into defensive positions. Uses terrain for cover. Attempts to lead party away from main camp via misdirection.",
+      "adv:developments": "If party captures Shrak alive, they can interrogate him about larger goblin organizations. Reinforcements may arrive if combat drags on.",
+      "adv:hasTreasure": [
+        {
+          "@type": "adv:Treasure",
+          "schema:description": "Plunder from merchant caravans: 200 gold coins, silks, spices, Shrak's masterwork crossbow, ring with goblin markings"
+        }
+      ]
+    }
+  ]
+}

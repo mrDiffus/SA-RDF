@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/sister-ivra-meld",
+      "@type": "schema:Person",
+      "rdfs:label": "Sister Ivra Meld",
+      "sa:identity": {
+        "rdfs:label": "The Recovery Hymnist",
+        "schema:description": "A street-level Exodian evangelist who turns scavenging routes into sermons and scrap yards into sanctuaries."
+      },
+      "schema:description": "Sister Ivra Meld moves through lower hive markets in scavenged robes and prayer-strip pennants, singing recovery chants that sound like work songs until the last line lands as doctrine. Her augmetics are intentionally modest: reinforced forearms, ocular filaments for reading serials in bad light, a spinal brace that lets her stand for hours while preaching, and a compact vow-rig strapped beneath her collar. She is trusted because she looks like one of the people the Church claims to serve. When Ivra says a machine has been abandoned by the universe, she means it is already half sacred and ready to be returned to use.",
+      "sa:race": "Human",
+      "sa:thematics": [
+        "field evangelism",
+        "recovery doctrine",
+        "scrap-market preaching",
+        "modest augmetics",
+        "holy salvage",
+        "redistribution",
+        "street religion",
+        "machines as inheritance"
+      ],
+      "sa:nature": {
+        "appearance": "Lean, wiry, and hard to miss once she starts speaking. Her left forearm is wrapped in sanctified cable sheaths that double as bracing and iconography. One eye has a faint amber sheen from an optical implant; the other is bare and intensely observant. She keeps practical tools on her belt: seal cutters, prayer tags, a solder pen, and a compact reliquary case for seized machine-cores. Her augmetics are visible but not imposing, the kind a working congregation can read as labor rather than domination.",
+        "demeanor": "Warm in public, relentless in private. She asks people what they need before she asks what they believe. She can be persuasive without sounding manipulative because she genuinely understands the desperation of the lower levels. If she thinks a foreman, broker, or vault owner is hoarding useful technology, her tone turns crisp and merciless.",
+        "quarters": "Ivra keeps no fixed home and prefers temporary beds in church annexes, maintenance closets, and half-collapsed chapels near salvage districts. Wherever she sleeps, she leaves a tiny workbench arranged with recovered screws, cracked circuit boards, and a folded prayer cloth soaked in machine oil.",
+        "bearing": "She walks like someone accustomed to crowds parting for a sermon and sudden collapses in the same hour. Her posture is humble, but only because she knows exactly where her weight belongs when a crowd starts to believe her."
+      },
+      "sa:mechanics": {
+        "recovery_ministry": "She leads salvage sermons that identify abandoned machinery, seized tools, and hidden utility systems as sacred trust rather than private property. Her teams recover equipment from derelict blocks, dead workshops, and black-market storage cages, then decide what should be repaired, redistributed, or publicly reclaimed.",
+        "redistribution_method": "Ivra prefers visible recovery. She will bring a seized generator back to a tenement square, bless it in front of the crowd, and assign it to the people who were told to do without. That spectacle is the point: the Church gains followers by proving that lost technology can be made available again.",
+        "social_reach": "She is particularly effective among dock workers, maintenance crews, and the unemployed, because she speaks like someone who has actually crawled through broken service shafts and come back with a useful answer. Her converts tend to be practical, not devout, until they realize the two can be the same thing.",
+        "authority_level": "Ivra commands no formal military force, but she can assemble a crowd, a recovery team, and a credible argument with frightening speed. In the lower levels, that is often enough to move a machine out of a locked room and into public use.",
+        "limitations": "Her augmetics are not built for heavy conflict. She survives by being harder to ignore than to protect, and by working with people who know the tunnels, load-bearing walls, and weak points in corporate security.",
+        "public_reputation": "Marketkeepers call her a nuisance. Tenants call her a miracle. Salvage crews call her when they have found something they are afraid to name aloud."
+      },
+      "sa:relationships": {
+        "the_church": "She belongs to the Exodian Church's lower ministries and understands the larger hierarchy well enough to be skeptical of it. She believes the Church is strongest when it brings tools down to the people who need them.",
+        "salvage_crews": "She trades blessings for cooperation and keeps her word on everything except her tendency to show up with more people than expected.",
+        "corporate_vaults": "She regards locked storerooms full of usable machinery as a moral failure that the faithful are obliged to correct.",
+        "high_clergy": "High priests and cardinals occasionally use her as a local face for recovery work. She accepts because it gets equipment moving, though she distrusts any plan that keeps the tools inaccessible for too long."
+      },
+      "sa:quotes": [
+        "If it still works, it still belongs in the world.",
+        "Prayer is useful. So is a cutting torch.",
+        "A locked machine is a sermon waiting to be interrupted.",
+        "I do not steal. I return what was hidden too long.",
+        "Come closer. If your tools are broken, we can bless them back into labor."
+      ]
+    }
+  ]
+}

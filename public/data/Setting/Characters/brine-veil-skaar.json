@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/brine-veil-skaar",
+      "@type": "schema:Person",
+      "rdfs:label": "Brine-Veil Skaar",
+      "sa:identity": {
+        "rdfs:label": "The Patient Net",
+        "schema:description": "Aboleth infiltrator and captive handler; the quiet hunter who gathers prisoners, secrets, and supply lines without ever needing a loud entrance."
+      },
+      "schema:description": "Brine-Veil Skaar is the sort of enemy that survivors argue over later because nobody noticed him until it was already too late. He moves under a hanging veil of salt-stiff fabric, his body lean, scarred, and disturbingly still, with the kind of attention that makes lockpicks and ward-sigils feel embarrassed. His skin is lined with pale channel-marks used for psychic tagging, and when he raises one hand, nearby sentries often find their thoughts slipping away as if pulled by undertow. He is the aboleth force's collector, not its butcher: the one who knows which people, routes, and rumors are worth dragging beneath the surface alive.",
+      "sa:race": "Aboleth-touched infiltrator (tracker, captive-taker, psionic collector)",
+      "sa:origin": "Low-tide smugglers' den converted into a submerged listening nest",
+      "sa:thematics": [
+        "infiltration",
+        "captor psychology",
+        "quiet menace",
+        "supply-line predation",
+        "psionic tagging",
+        "operational patience",
+        "information harvesting",
+        "ambush doctrine",
+        "brine-shadow stealth",
+        "disappearing acts"
+      ],
+      "sa:nature": {
+        "appearance": "Tall but narrow, wrapped in layers that look like wet fog made cloth. His face is partially hidden by a translucent veil hardened with salt, and the lines on his throat glow faintly when he uses his gifts. He wears capture rings, net weights, and cut-glass tokens taken from prisoners who thought they were too important to vanish. His tools are silent, sharp, and arranged with obsessive care.",
+        "demeanor": "He speaks almost conversationally, which makes every warning feel worse. Skaar rarely rushes and never appears surprised. He listens longer than most people can tolerate, then asks one small question that ruins the rest of the room. He has the unnerving habit of treating panic as a scheduling issue.",
+        "psychology": "Skaar sees people as patterns of movement, dependency, and fear. He is interested in who breaks first, who lies longest, and who can be quietly isolated from their supports. Unlike the others, he does not enjoy obvious violence. He enjoys absence, because absence has useful aftereffects. When he takes someone, what he really captures is the shape they leave behind in everyone else's behavior.",
+        "battle_role": "Infiltrator and control specialist. Skaar marks targets, steals answers, and disables exits so Zhorr's line can arrive to a battlefield already half-empty."
+      },
+      "sa:mechanics": {
+        "primary_work": "Reconnaissance, kidnapping, hostage retrieval, and supply-line strangulation. He is deployed ahead of the main force to soften resistance and harvest leverage.",
+        "combat_style": "Stealth approach, sudden psychic restraint, and crowd isolation. He prefers to remove one key target and let the rest unravel themselves.",
+        "operational_method": "Skaar tags targets with psychic brine, trails them through tunnels or streets, then collapses their support network one link at a time. He does not need to win the fight outright if he can make surrender feel like an obvious administrative step.",
+        "narrative_use": "Ideal as a shadow lieutenant, escape-plot antagonist, or recurring stalker who turns logistics into horror. He is the one you add when the war needs consequences beyond the battlefield.",
+        "failure_modes": "He depends on invisibility, patience, and clean information. If forced into a public brawl, he becomes more cautious than dangerous. He also dislikes targets who deliberately poison their own supply chain, because it denies him the clean leverage he craves."
+      },
+      "sa:relationships": {
+        "zhorr": "Skaar feeds Zhorr clean targets and useful paths, and Zhorr protects Skaar's work by making the open battle too loud for anyone to notice the disappearances behind it.",
+        "the_net": "A web of tagged informants, coerced guides, and frightened couriers who know they have already been seen.",
+        "prisoners": "He catalogues them by usefulness, not sympathy. The kindest thing he offers captives is the chance to be valuable before they are gone.",
+        "merchants": "He watches routes, inventories, and payment habits. Commerce is merely a long chain of potential compromises.",
+        "guard_posts": "He prefers to bypass them, but when necessary he leaves them standing so they can report the wrong story."
+      },
+      "sa:quotes": [
+        "You were loud three towns ago.",
+        "I don't need to find everyone. Just the one they keep relying on.",
+        "A vanished supply line is a prayer answered in reverse.",
+        "Keep talking. It helps me map where you are afraid to go.",
+        "No, no. Leave the door unlocked. I prefer when panic does the work for me."
+      ]
+    }
+  ]
+}

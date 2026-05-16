@@ -14,7 +14,7 @@
   },
   "type": "sa:Organization",
   "label": "The Exodian Church",
-  "description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the path to transcendence. The Church operates across all hive cities, recruiting members from every social stratum with an apocalyptic vision: the old universe is ending, and through sacred engineering and spiritual refinement, the worthy ascend. They see Manfuctors as prophets, technology as scripture, and the space elevators as humanity's path to salvation. Most established institutions (House Valorian, the Synthesis, city governments) view them as heretical anarchists; the Church views the establishments as corrupt guardians of obsolete power. They are growing, decentralized, and increasingly active.",
+  "description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the path to transcendence. The Church operates across all hive cities, recruiting members from every social stratum with an apocalyptic vision: the old universe is ending, and through sacred engineering and spiritual refinement, the worthy ascend. They see Manfuctors as prophets, technology as scripture, and the space elevators as humanity's path to salvation. Most established institutions (House Valorian, the Synthesis, city governments) view them as heretical anarchists; the Church views the establishments as corrupt guardians of obsolete power. They are growing, decentralized, and increasingly active. Their high priests and senior liturgists are unmistakable on sight: fully augmented lower bodies mounted in armored reliquary frames with four shield-like legs, turning ritual procession into mobile doctrine. Those chassis are both vestment and warning, an icon of a Church that will not be cowed.",
   "role": [
     {
       "type": "sa:Role",
@@ -45,31 +45,57 @@
     },
     {
       "type": "sa:Role",
-      "label": "Circle Speaker",
-      "requiredRenown": 11,
-      "prerequisites": "Ordained for four years, proven leadership of growing congregation, revealed as secret bishop to Church mysteries.",
+      "label": "Tech Evangelist",
+      "requiredRenown": 4,
+      "prerequisites": "Proven ability to locate, recover, and sanctify abandoned or hoarded technology; accepted into the Church's field ministry.",
       "description": [
-        "Authority over multiple congregations across one or two hive cities; strategic religious direction",
-        "Initiation into Church's true purpose: coordinate recruitment across city boundaries",
-        "Command authority: direct 2d6 Ordained Exodians and 2d4 Novitiates in organized activities",
-        "Access to Church's hidden technology vault; retrieve pre-Exodian relics for research/restoration",
-        "Discretionary budget: 20,000 credits annually for expansion, recruitment drives, and sacred construction",
-        "Right to 'confiscate' tech from non-believers if deemed sin against the Church (rationalize/justify theft)",
-        "Organizational authority: call for coordinated prayer vigils, protests, or sit-ins across cities"
+        "Lead salvage sermons, recovery runs, and public demonstrations that frame lost tech as sacred inheritance",
+        "Free seized technology from corrupt owners, black markets, or derelict ruins and redistribute it to the faithful",
+        "Access to Church recovery teams, basic relic appraisal, and sanctification rites for reclaimed machines",
+        "Permission to recruit scavengers, hackers, and tinkerers into Exodian service",
+        "Small stipend and priority claim on reclaimed tools, components, and repair access"
       ]
     },
     {
       "type": "sa:Role",
-      "label": "Cardinal of the Ascension",
-      "requiredRenown": 18,
-      "prerequisites": "Circle Speaker for six years, orchestrated Church growth across three+ hive cities, election by inner circle of bishops.",
+      "label": "High Priest of the Reliquary",
+      "requiredRenown": 14,
+      "prerequisites": "Served as Ordained Exodian or Tech Evangelist for several years; mastered Exodian liturgy, recovery doctrine, and reliquary maintenance; chosen by senior clergy.",
       "description": [
-        "Seat on Exodian High Synod; strategic input on Church direction and long-term apocalyptic plans",
+        "Command the Church's ritual salvage operations; decide which relics are freed, consecrated, or dismantled for sacred use",
+        "Wear the full augmented reliquary chassis seen in procession: armored lower body, shield-legs, and sacred tech-vault interfaces",
+        "Lead major rites, public marches, and reclamation ceremonies that turn recovery into a visible declaration of faith",
+        "Direct squads of Tech Evangelists and Ordained Exodians during high-risk tech extraction missions",
+        "Access to sealed reliquary stores, advanced augmentation maintenance, and the Church's most guarded recovery intelligence"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Circle Speaker",
+      "requiredRenown": 18,
+      "prerequisites": "High Priest of the Reliquary or equivalent senior office for several years; demonstrated sector-wide influence, successful recovery of significant lost technology, and proven ability to unite multiple congregations.",
+      "description": [
+        "Authority over multiple congregations across one or two hive cities; strategic religious direction and recovery doctrine",
+        "Coordinate recruitment across city boundaries and direct large-scale reclamation campaigns",
+        "Command authority: direct 2d6 Ordained Exodians, 2d4 Tech Evangelists, and 2d4 Novitiates in organized activities",
+        "Access to Church's hidden technology vault; retrieve pre-Exodian relics for research, restoration, or redistribution",
+        "Discretionary budget: 20,000 credits annually for expansion, recovery drives, and sacred construction",
+        "Right to confiscate or liberate tech from non-believers if deemed a holy recovery",
+        "Organizational authority: call for coordinated prayer vigils, protests, sit-ins, or recovery raids across cities"
+      ]
+    },
+    {
+      "type": "sa:Role",
+      "label": "Cardinal of the Liberated Forge",
+      "requiredRenown": 22,
+      "prerequisites": "Served as Circle Speaker for six years, orchestrated Church growth across three+ hive cities, and proven ability to liberate major technology caches or industrial sites under Church control.",
+      "description": [
+        "Seat on Exodian High Synod; strategic input on Church direction, recovery doctrine, and long-term apocalyptic plans",
         "Authority over all Church operations in assigned sector (typically 2–3 hive cities)",
-        "Command 4d6 Circle Speakers, multiple subordinate Ordained Exodians, and 2d4 elite missionary teams",
+        "Command 4d6 Circle Speakers, multiple subordinate Ordained Exodians, and 2d4 elite recovery cadres",
         "Direct access to Church leader (the Prophet, whose identity is secret even to most Cardinals)",
         "Discretionary budget: 100,000+ credits annually for organized operations",
-        "Authority to authorize 'holy work': sacrifice operations, technology theft justified as divine will",
+        "Authority to authorize holy work: recovery operations, technology redistribution, and sanctioned seizures from corrupt powers",
         "Ability to move Church resources and personnel across city boundaries with minimal detection",
         "Build personal fanatical following; orders are treated as divine mandate by subordinates"
       ]

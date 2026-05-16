@@ -43,7 +43,7 @@ sa:PersonCharacterShape
     sh:property [
         sh:path     schema:description ;
         sh:name     "description" ;
-        sh:description "Primary narrative description of the character. Establishes personality, background, and significance. May be a single comprehensive paragraph or structured narrative string." ;
+        sh:description "Primary narrative description of the character. Establishes personality, background, and significance. May be a single comprehensive paragraph or structured narrative string. Suitable for reading to the players when first encountering the character" ;
         sh:datatype xsd:string ;
         sh:minCount 1 ;
         sh:maxCount 1 ;

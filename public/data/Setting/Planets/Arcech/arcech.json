@@ -4,6 +4,7 @@
       "label": "rdfs:label",
       "type": "@type",
       "CreativeWork": "https://schema.org/CreativeWork",
+      "Location": "https://stellararcana.org/Location",
       "Place": "https://schema.org/Place",
       "Person": "https://schema.org/Person",
       "author": {
@@ -20,7 +21,7 @@
         "@type": "@id"
       }
     },
-    "type": "CreativeWork",
+    "type": ["CreativeWork", "Location"],
     "label": "Arcech",
     "description": "Arcech is a world of stark contrasts, where immense Hive cities rise from the surface into low orbit, crowned with satellites and tethered by vast space elevators. The planet features pristine oceans, dense jungles, and towering mountains, but most life is concentrated in vertical megacities. Magic and technology fuse seamlessly, especially through the work of Manfucators—rare magicians who transform raw materials into high-end goods. Competition between cities is fierce, and the wilderness teems with strange and dangerous life.",
     "genre": "Mythic Futurism, Arcane Industrialism, Vertical Megacity Drama, Xenobiological Frontier",

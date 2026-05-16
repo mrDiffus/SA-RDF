@@ -11,7 +11,7 @@
   },
   "type": "Person",
   "label": "Brug",
-  "description": "An entity of uncertain origin and nature. Brug is not a goblin, nor a collection of goblins—Brug is a distributed hivemind, a unified consciousness that inhabits every goblinoid it touches, speaking through them as a single thought across a thousand bodies. Brug claims not to remember when it began. 'It has always been. It will always be.' Whether this is true or Brug simply cannot access memories older than a certain threshold is unknowable. What is known: Brug expands. Brug collects. Brug *uses*. Everything is useful if the right buyer can be found, or the right pattern preserved.",
+  "schema:description": "Brug is not a goblin so much as a distributed hunger wearing goblin faces. It speaks from a thousand bodies at once, calm and impossible to pin down, as if every nearby goblinoid were listening to the same thought. When Brug first addresses you, it feels less like meeting a person than realizing a whole undercity has noticed you.",
   "schema:url": "https://stellararcana.org/character/Brug",
   "sa:thematics": [
     "Distributed consciousness distributed across goblinoid bodies",

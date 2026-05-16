@@ -1,0 +1,50 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "sa": "https://stellararcana.org/",
+    "schema": "https://schema.org/",
+    "label": "rdfs:label",
+    "description": "schema:description",
+    "type": "@type"
+  },
+  "type": "Person",
+  "label": "Brannik Emberjudge",
+  "sa:race": "Gnome",
+  "sa:identity": {
+    "label": "The Ember Judge",
+    "description": "A tribunal enforcer and oath-burner who reads guilt like forge heat and carries a relic blade that looks far too large for his frame."
+  },
+  "schema:description": "Brannik Emberjudge is a compact gnome with a severe stare, a scarred face, and the posture of someone who has already heard every excuse and found them all wanting. He serves as a tribunal enforcer, oath-auditor, and occasional field judge for disputes too dangerous, too old, or too politically inconvenient to resolve in daylight. His signature weapon is a radiant crescent relic that glows like a furnace edge, making him easy to recognize and harder to lie to. Brannik does not seek cruelty for its own sake; he seeks finality. In the right hands, that makes him a useful ally. In the wrong ones, it makes him a recurring problem.",
+  "sa:thematics": [
+    "judgment",
+    "oaths",
+    "forge-law",
+    "recurrence",
+    "relentless authority"
+  ],
+  "sa:nature": {
+    "appearance": "Brannik is a stocky gnome with a thick red beard, weathered skin, and a face that looks permanently set for cross-examination. The glowing crescent weapon above him reads like a ritual seal made into steel and light.",
+    "demeanor": "He speaks with tight control and wastes no words. Even at rest, he looks like he is weighing testimony.",
+    "presence": "He is memorable because he is small, exact, and impossible to ignore once he has chosen a target.",
+    "weapon": "The crescent relic is part badge, part execution tool, part inherited judgment. He treats it as proof that sentence and sentence carry equal weight."
+  },
+  "sa:mechanics": {
+    "method": "He investigates first, listens second, and strikes only when he believes the record is complete enough to stand in court or in blood.",
+    "philosophy": "A vow is not a promise. It is a structure. Break it, and the whole edifice deserves collapse.",
+    "field_role": "He can appear as auditor, rival, protector, witness, or executioner depending on how the party has behaved.",
+    "recurring_use": "He works best as a character who returns whenever contracts are violated, evidence is incomplete, or a debt still has a name attached to it."
+  },
+  "sa:relationships": {
+    "Forge-Syndicate": "A useful but not fully trusted enforcer whose authority comes from competence and fear of precedent.",
+    "oathbreakers": "His preferred quarry; he treats them as structural damage to the world rather than simple criminals.",
+    "lawful allies": "He respects people who keep records, honor terms, and admit fault before the blade comes out.",
+    "players": "He may become a patron if they are reliable, a witness if they are honest, or a relentless complication if they are not."
+  },
+  "sa:quotes": [
+    "I do not punish. I conclude.",
+    "Your explanation is organized. That is not the same as true.",
+    "A broken vow still has shape. I am here to cut it down cleanly."
+  ]
+}

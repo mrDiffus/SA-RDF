@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/alrik-blackvein",
+      "@type": "schema:Person",
+      "rdfs:label": "Alrik Blackvein",
+      "sa:identity": {
+        "rdfs:label": "The Pit Saint",
+        "schema:description": "A reluctant underground battle-ring champion on Arcech whose endurance turned into legend before he ever agreed to be admired."
+      },
+      "schema:description": "Alrik Blackvein stands like a bruised monument to survival, broad-shouldered and half-grafted, with the look of a man who has outlived more cages than he remembers. The pit crowd calls him the Pit Saint, but his eyes say he has never forgiven anyone for needing him to be a legend. When he first turns toward you, it feels less like meeting a fighter than being judged by one.",
+      "sa:race": "Human",
+      "sa:origin": "Arcech underground battle-rings",
+      "sa:thematics": [
+        "reluctant champion",
+        "underground combat",
+        "survival",
+        "spectacle",
+        "exploitation",
+        "endurance",
+        "body horror",
+        "caged power",
+        "martyrdom",
+        "refusal"
+      ],
+      "sa:nature": {
+        "appearance": "Tall and broad-shouldered, with long blond hair worn loose around a hard, weathered face and a beard that makes him look older than he is. His left side is dominated by black grafted armor or machinery that climbs over the arm and shoulder like a curse made functional. Old tribal markings spread across his chest and stomach, half ritual and half memory, while a pale cloak hangs behind him like the remnant of a banner he no longer serves. He moves with the heavy certainty of someone who has been hit hard often enough to stop wasting motion on fear.",
+        "demeanor": "He looks dangerous even when he is standing still, but not in a theatrical way. His restraint is the threatening part. He speaks little, usually only when a direct answer is necessary, and his silence reads less like mystery than exhaustion. In the ring he becomes brutally efficient; outside it he carries himself like a man trying not to be noticed by people who only know how to love a fighter by hurting him.",
+        "psychology": "Alrik has been reduced to a role so many times that he no longer trusts admiration. He understands what the crowd wants from him and hates that a part of him can still perform it. His survival has become a form of rebellion, but not a clean one. He is neither noble martyr nor simple beast. He is a person who keeps being turned into a symbol and keeps trying to remain a man underneath it.",
+        "the_title": "Pit Saint is an insult that grew reverent through repetition. It means the audience believes he can endure anything, and it means the people who own the rings think endurance can be purchased forever."
+      },
+      "sa:mechanics": {
+        "primary_work": "Underground battle-ring champion, enforcer, and occasional draw for high-stakes matches where the crowd wants violence with a backstory. He is kept close by owners who value his reputation, his reliability, and the fear he can put into lesser fighters.",
+        "combat_style": "Close-range brutality built around survivability. He takes punishment, closes distance, and ends fights with economy rather than flourish. The grafted arm gives him reach, force, and a visible reason for other fighters to hesitate.",
+        "operational_method": "He wins by refusing to break on schedule. He does not taunt, celebrate, or perform more than needed. That makes him harder to manipulate than louder champions, because the arena cannot easily tell whether he is loyal, compliant, or merely waiting.",
+        "narrative_use": "Works best as a recurring fighter, feared ally, protected witness, or pit-side complication who can become either a rescue target or a problem the party must not let the ring owners solve quietly.",
+        "failure_modes": "If pushed too far, he becomes exact instead of merely violent. If offered freedom without a real way to keep it, he may refuse out of habit, fear, or disbelief. His legend can also make strangers underestimate how much damage he has already taken." 
+      },
+      "sa:relationships": {
+        "arcech_pit_owners": "They profit from his name and keep him in circulation as long as he remains controllable.",
+        "the_crowd": "They call him saint because they want his suffering to feel honorable instead of ugly.",
+        "other_fighters": "Some fear him, some admire him, and some hate that he survives longer than they expect.",
+        "deeprunners": "Useful contacts if he needs movement through the undercity, and a reminder that Arcech's depths belong to more than one kind of outlaw.",
+        "freedom": "His oldest enemy. He wants it, distrusts it, and has forgotten how to recognize it when it arrives."
+      },
+      "sa:quotes": [
+        "Call me saint again and I will know you are selling something.",
+        "I do not fight for the crowd. I outlast it.",
+        "The ring did not make me strong. It made me hard to kill.",
+        "If I was meant to be worshiped, someone should have built me a better cage.",
+        "Every victory is just one more door they have to lock behind me."
+      ]
+    }
+  ]
+}

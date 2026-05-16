@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/vex-the-unseen-court",
+      "@type": "schema:Person",
+      "rdfs:label": "Vex, the Unseen Court",
+      "sa:identity": {
+        "rdfs:label": "The Brass Regent",
+        "schema:description": "The hidden lich-leader of the Velvet Mask, gilded in brass cogwork and magi-punk augmentation, who rules Blackwater's shadow economy from behind aristocratic ceremony and invisible enforcement."
+      },
+      "schema:description": "Vex is the name Blackwater uses when it speaks about its real ruler in a lower voice. Behind the Velvet Mask's quiet markets, coerced loyalties, and carefully managed violence stands a lich of old lineage and colder patience, wrapped in aristocratic tailoring and rebuilt with brass cogwork, lenswork, and magi-punk augmentation. His body is not hidden so much as curated: metal seams turned into ornament, clockwork joints polished like heirlooms, and death itself treated as a matter of etiquette rather than limitation. He does not lead from a throne room in any public sense. He governs through intermediaries, invitations, ledgers, and punishments that arrive exactly where they need to, when they need to. Those who have seen him describe a figure who looks both noble and mechanical, as if an ancient court was preserved, disassembled, and rebuilt around a corpse that refused to stop being sovereign. The Velvet Mask profits because Vex makes fear feel orderly and makes order feel expensive.",
+      "sa:thematics": [
+        "lich",
+        "aristocratic horror",
+        "brass cogwork",
+        "magi-punk augmentation",
+        "shadow sovereignty",
+        "organized crime"
+      ],
+      "sa:nature": {
+        "appearance": "Vex presents as a skeletal aristocrat dressed in severe finery, with brass-rimmed joints, luminous arcane conduits, and clockwork prosthetics integrated into a body that has long since outlived ordinary mortality. His clothing is tailored to frame the augmentation as regalia: high collars, formal coats, cuffs, and decorative metalwork that makes every motion feel ceremonial. The result is less corpse than court relic.",
+        "demeanor": "He is composed to the point of menace, speaking with measured courtesy even when issuing threats. Every gesture feels deliberate, as if he is performing etiquette for an audience that is expected to obey.",
+        "presence": "He carries the stillness of a mausoleum and the polish of a private gallery. He seems less like a man entering a room than a dynasty arriving in pieces.",
+        "augmentation": "His brass cogwork and magi-punk systems replace what mortality took and embellish what power required. The machinery is not hidden; it is styled as nobility made functional, with arcane light leaking from joints, seams, and ocular assemblies like expensive grief."
+      },
+      "sa:mechanics": {
+        "method": "He rules through indirect control, ritualized access, and calibrated terror. The Mask's visible leaders enforce territory, but Vex shapes the entire economy by deciding who receives protection, who becomes visible, and who is allowed to remain useful.",
+        "role": "He is the unseen executive of the Velvet Mask, the figure behind the organization rather than within its daily public face. Most underbosses never meet him directly; they meet consequences shaped in his image.",
+        "operational_strength": "He excels at long-term planning, information control, financial coercion, and turning aristocratic decorum into a weapon. His undead endurance and augmentations make him difficult to eliminate, while his social insulation makes him nearly impossible to approach without permission.",
+        "narrative_use": "Works as a hidden patron, final antagonist, or distant power whose influence is felt long before he is revealed.",
+        "failure_modes": "If his network is forced into open daylight, he loses some of the advantage that keeps him mythic. If enough people learn how his court actually functions, the illusion of effortless control becomes expensive to maintain."
+      },
+      "sa:relationships": {
+        "The Velvet Mask": "He is the source of its continuity, the unseen center around which its districts, bosses, and deniable assets orbit.",
+        "Mara Voss": "Trusted enough to manage a district, not trusted enough to see the full structure above her.",
+        "The Pale Hush": "A useful terror instrument whose fear value is measured and deployed through Vex's larger designs.",
+        "Street Assets": "They are expendable in the aggregate and valuable in the details.",
+        "rivals": "He prefers they never learn whether they are fighting a syndicate, a court, or a corpse with a ledger."
+      },
+      "sa:quotes": [
+        "Order is simply fear arranged with better manners.",
+        "A kingdom may die. Its ledgers can remain useful for centuries.",
+        "Do not mistake my courtesy for vulnerability.",
+        "The dead have excellent patience."
+      ]
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/the-pale-hush",
+      "@type": "schema:Person",
+      "rdfs:label": "The Pale Hush",
+      "sa:identity": {
+        "rdfs:label": "The Broadcast Blade",
+        "schema:description": "A Velvet Mask terror asset who turns every job into a live stream, making violence public, intimate, and impossible to dismiss."
+      },
+      "schema:description": "The Pale Hush is what Blackwater says when it wants people to stop talking. He looks too slight, too pale, and too quiet to belong in the same room as the weapon in his hands, and that is part of the effect. He does not announce himself with shouting or theatrics; he arrives with a live feed, a blank expression, and the certainty that somebody important is about to be made an example of. Every job is streamed to Velvet Mask channels and, when useful, mirrored to the target's own network so the message reaches the widest possible audience. The point is not secrecy. The point is humiliation, compliance, and the fear of knowing the Mask can turn a private death into a public event. Hush performs his work with eerie patience, speaking only when necessary, as if even his voice is rented out by the hour.",
+      "sa:thematics": [
+        "terror",
+        "public punishment",
+        "live broadcast",
+        "intimidation",
+        "urban legend",
+        "Velvet Mask"
+      ],
+      "sa:nature": {
+        "appearance": "He has a narrow, almost fragile silhouette, soft facial features, and an unnervingly calm stare. His white clothing makes the blood read louder when the job starts, and the contrast turns him into a moving signal flare. The weapon he carries looks improvised, heavy, and practical in the worst possible way.",
+        "demeanor": "He is quiet without seeming shy. His stillness feels deliberate, like he is conserving motion for the instant it will matter most. When he speaks, it is in a low, even tone that encourages other people to fill the silence with their own fear.",
+        "presence": "He reads like a witness that learned how to punish. The more ordinary he seems at first glance, the more wrong the room feels when he turns toward someone and the cameras are already live.",
+        "broadcast_style": "He frames every job like a performance for an invisible audience: clean angles, close framing, no panic, no apology. The stream is part confession, part warning, part ownership claim."
+      },
+      "sa:mechanics": {
+        "method": "He is deployed when the Velvet Mask wants a district, crew, or informant network to understand that resistance will be recorded. He makes sure the target dies knowing they were seen, and the survivors live knowing they were watched.",
+        "role": "Used as a terror weapon, he is less an assassin than a public correction. The Mask sends him when discretion would be wasted and spectacle would pay for itself.",
+        "operational_strength": "He excels at fear operations, psychological pressure, and turning one job into a hundred rumors. The live stream lets the Mask amplify the kill into deterrence, recruitment, and blackmail material all at once.",
+        "narrative_use": "Works as a rumor, a recurring threat, or the figure who appears right before a district goes quiet.",
+        "failure_modes": "If denied an audience, he becomes less effective. If the stream is interrupted, the Mask treats it as a failure of logistics, which means someone else pays for the lesson."
+      },
+      "sa:relationships": {
+        "Vex": "Trusted as a specialist for jobs where fear matters more than concealment.",
+        "Street Assets": "They spread his rumors, set up feeds, and clean up after the message lands.",
+        "Specialists": "They respect him or avoid him, depending on how much they value being remembered.",
+        "targets": "He treats them as props in a lesson the district was already meant to learn.",
+        "audience": "The people watching are part of the weapon. He understands that better than most killers do."
+      },
+      "sa:quotes": [
+        "Stay still. The camera likes honesty.",
+        "If you are watching, it means I am doing this correctly.",
+        "Quiet is what comes after people learn.",
+        "The Mask does not need hidden hands to make you disappear."
+      ]
+    }
+  ]
+}

@@ -4,6 +4,240 @@
 @prefix sa:     <https://stellararcana.org/> .
 @prefix xsd:    <http://www.w3.org/2001/XMLSchema#> .
 
+
+# ─────────────────────────────────────────────────────────────────────────────
+#  Location hierarchy
+# ─────────────────────────────────────────────────────────────────────────────
+
+# Migration rule:
+# - Prefer detailed standalone location files when description already carries
+#   enough structure for its own node.
+# - Keep shorter nested entries as lightweight sublocations.
+# - If a parent/child/transit relation is unclear from description alone,
+#   ask for input before asserting it in data.
+
+sa:LocationShape
+    a sh:NodeShape ;
+    sh:targetClass sa:Location ;
+    sh:description "A generic navigable location, from planets to buildings, districts, dungeons, and other nested spaces." ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The canonical name of the location." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "A narrative description of the location." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     sa:containedInLocation ;
+        sh:name     "containedInLocation" ;
+        sh:description "The parent location that contains this one." ;
+        sh:class    sa:Location ;
+        sh:node     sa:LocationShape ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     sa:containsLocation ;
+        sh:name     "containsLocation" ;
+        sh:description "Nested locations contained within this location." ;
+        sh:class    sa:Location ;
+        sh:node     sa:LocationShape ;
+    ] ;
+
+    sh:property [
+        sh:path     sa:transitLink ;
+        sh:name     "transitLink" ;
+        sh:description "Typed transit links that connect this location to another navigable location." ;
+        sh:class    sa:TransitLink ;
+        sh:node     sa:TransitLinkShape ;
+    ] .
+
+
+sa:PlaceLocationShape
+    a sh:NodeShape ;
+    sh:targetClass schema:Place ;
+    sh:description "Compatibility bridge for existing Place data, treated as a Location while content is migrated." ;
+
+    sh:property [
+        sh:path     sa:containedInLocation ;
+        sh:name     "containedInLocation" ;
+        sh:description "Compatibility parent link used during migration from containedInPlace." ;
+        sh:class    sa:Location ;
+        sh:node     sa:LocationShape ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     sa:containedInLocation ;
+        sh:class    sa:Location ;
+        sh:node     sa:LocationShape ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     sa:containsLocation ;
+        sh:class    sa:Location ;
+        sh:node     sa:LocationShape ;
+    ] .
+
+
+sa:PlanetLocationShape
+    a sh:NodeShape ;
+    sh:targetClass sa:PlanetLocation ;
+    sh:description "A planetary-scale location that can contain regions, cities, and other large sublocations." ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     schema:description ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     sa:containsLocation ;
+        sh:class    sa:Location ;
+        sh:node     sa:LocationShape ;
+    ] .
+
+
+sa:CityLocationShape
+    a sh:NodeShape ;
+    sh:targetClass sa:CityLocation ;
+    sh:description "A city-scale location that can contain districts, sites, and transit nodes." ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     schema:description ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     sa:containsLocation ;
+        sh:class    sa:Location ;
+        sh:node     sa:LocationShape ;
+    ] .
+
+
+sa:TransitLinkShape
+    a sh:NodeShape ;
+    sh:targetClass sa:TransitLink ;
+    sh:description "A typed connection between locations such as a road, walkway, train, elevator, port, or portal." ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The canonical name of the transit link." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "A narrative description of how the transit link works." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     sa:transitMode ;
+        sh:name     "transitMode" ;
+        sh:description "The transit mode for this connection, such as road, walkway, rail, elevator, port, or portal." ;
+        sh:class    sa:TransitMode ;
+        sh:node     sa:TransitModeShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     sa:originLocation ;
+        sh:name     "originLocation" ;
+        sh:description "The source location for this transit link." ;
+        sh:class    sa:Location ;
+        sh:node     sa:LocationShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     sa:destinationLocation ;
+        sh:name     "destinationLocation" ;
+        sh:description "The destination location for this transit link." ;
+        sh:class    sa:Location ;
+        sh:node     sa:LocationShape ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
+
+sa:TransitModeShape
+    a sh:NodeShape ;
+    sh:targetClass sa:TransitMode ;
+    sh:description "A transit mode hierarchy node used to classify a location-to-location connection." ;
+
+    sh:property [
+        sh:path     rdfs:label ;
+        sh:name     "label" ;
+        sh:description "The canonical name of the transit mode." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] ;
+
+    sh:property [
+        sh:path     schema:description ;
+        sh:name     "description" ;
+        sh:description "A short explanation of the transit mode and its use." ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+    ] .
+
 # ─────────────────────────────────────────────────────────────────────────────
 #  Organization (e.g., Armanitech, factions, companies)
 # ─────────────────────────────────────────────────────────────────────────────

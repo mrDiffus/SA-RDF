@@ -58,17 +58,16 @@
     },
     {
       "type": "sa:Role",
-      "label": "Hand of Vex",
-      "requiredRenown": 18,
-      "prerequisites": "Operative for eight years, orchestrated multi-city operations, earned Vex's direct confidence and trust.",
+      "label": "Mask Boss",
+      "requiredRenown": 16,
+      "prerequisites": "Operative for six years, kept a district profitable under pressure, and earned Vex's confidence as a steady hand rather than a loud one.",
       "description": [
-        "Direct strategic relationship with Vex; receive orders via secure channels only",
-        "Authority over all lower ranks in your theater of operations",
-        "Command 2d6 Operatives or 3d6 Specialists for major operations",
-        "Discretion to approve/veto external operations that might affect Mask interests",
-        "Access to Mask's deep vault of blackmail, secrets, and leverage over city officials",
-        "Earn percentage points on Mask's profits across your region; passive income (5,000–15,000 credits/month)",
-        "Can arrange disappearances, frame jobs, and political assassinations at Vex's discretion"
+        "Runs a local rackets network as a recognized boss; other crews answer when the Mask points at a street",
+        "Can command 1d6 Operatives or 2d6 Specialists for major jobs and collection runs",
+        "Settles disputes between crews, fixes payment problems, and keeps profitable areas from turning into open war",
+        "Access to Mask blackmail ledgers, protected routes, and trusted fences for moving large sums or sensitive cargo",
+        "Can approve deniable retaliation, forced buyouts, and targeted removals inside assigned territory",
+        "Earns regional profit share and one cut of every major score routed through the district"
       ]
     }
   ]

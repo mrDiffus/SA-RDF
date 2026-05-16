@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/maw-captain-zhorr",
+      "@type": "schema:Person",
+      "rdfs:label": "Maw-Captain Zhorr",
+      "sa:identity": {
+        "rdfs:label": "The First Drown",
+        "schema:description": "Aboleth shock captain and boarding-rite butcher; the one who walks first through flooded corridors so the rest can follow without hesitation."
+      },
+      "schema:description": "Maw-Captain Zhorr wears abyssal armor scaled like wet stone and carries himself with the calm certainty of something that has never once doubted the right to feed. His helm blooms with pale lantern-eyes, and the cables trailing from his back move like a school of blind eels searching for flesh. He does not bellow orders. He inclines his head, and the shock troops around him move as if their bones have been tugged by the same hidden hook. In battle he is the first shape out of the flood, cutting through panic before he cuts through bodies.",
+      "sa:race": "Aboleth-touched brute (deepwater transformed, ritual-commanded, semi-psionic)",
+      "sa:origin": "Submerged trench citadel and slave-barracks below a ruined coastal shelf",
+      "sa:thematics": [
+        "abyssal militarism",
+        "boarding assault",
+        "psionic command",
+        "flooded warfare",
+        "predatory discipline",
+        "deep-time arrogance",
+        "shock troop doctrine",
+        "wet iron brutality",
+        "ritual hierarchy",
+        "inhuman patience"
+      ],
+      "sa:nature": {
+        "appearance": "Heavyset and wall-like, with layered abyssal plates bolted over a body altered by trench rites. His skin has the green-black cast of deep water and old bruises, with gill seams opening along the throat and ribs. Lanterns mounted in the helm glow through brine glass, giving him the look of a drowned saint dragged upright by necessity. Spines, barnacle ridges, and sacrificial ropework mark his armor as both rank insignia and warning.",
+        "demeanor": "He speaks only when the order must be remembered. Even then, his words arrive in a low, wet murmur that sounds less heard than imposed. Around him, lesser troops become unnervingly disciplined. He radiates the sense that resistance is not forbidden so much as already accounted for. Those who meet his gaze often describe the impression of being measured for a coffin they do not yet know they need.",
+        "psychology": "Zhorr believes the world is a surface film over a much older hunger. He does not hate surface-dwellers; he regards them as temporary material that has not yet learned its proper place. His cruelty is practical, but not casual. Every drowning, every broken limb, every captured throat is a lesson in obedience. He is patient enough to let fear do half the work.",
+        "battle_role": "Frontline breach leader. Zhorr opens chokepoints, absorbs the first counterattack, and keeps the formation moving while the rest of the shock line floods the breach behind him."
+      },
+      "sa:mechanics": {
+        "primary_work": "Leads assault formations in submerged tunnels, flooded streets, and shipboard raids. He is deployed wherever an enemy strongpoint needs to be turned into a panic chamber in under a minute.",
+        "combat_style": "Shield-and-hook pressure fighter with psionic disruption. He uses brutal reach, command pulses, and environmental control to force enemies out of formation before finishing them at close range.",
+        "operational_method": "He advances under tidal cover, shorting out morale with psychic pressure while the shock line uses grapple-hooks, barbs, and chokepoint flooding to prevent retreat. If the terrain cannot be flooded, he makes bodies do the work instead.",
+        "narrative_use": "Best used as opening boss, boarding commander, or recurring heavy who announces the arrival of an aboleth warband. He is ideal when the scene needs a single enemy who makes the whole encounter feel submerged even on dry land.",
+        "failure_modes": "His discipline depends on momentum and audible command. If isolated from his troop network or denied the terrain he expects, his certainty becomes a flaw opponents can pry open. He also underestimates improvisers who treat fear as optional."
+      },
+      "sa:relationships": {
+        "the_aboleth_below": "He treats their will as the only thing worth obeying and their ancient patience as proof that cruelty is simply wisdom with better storage.",
+        "shock_troops": "He regards them as extensions of his own body. He does not inspire loyalty; he enforces synchronized instinct.",
+        "surface_defenders": "He respects them only when they keep breathing under pressure. Break them once, and he assumes they are finished.",
+        "captives": "He prefers them alive long enough to learn the cost of resisting the tide. Compliance after trauma is, to him, the proper shape of conversion.",
+        "rivals": "Those who command through charisma rather than fear confuse him. He assumes they are either weak or hiding a larger predator behind the curtain."
+      },
+      "sa:quotes": [
+        "The first mouth through the door is the one the rest follow.",
+        "You call this a wall. I call it a delay.",
+        "Drown first. Decide later.",
+        "The tide does not ask permission.",
+        "Kneel while you still have air enough to learn the lesson."
+      ]
+    }
+  ]
+}

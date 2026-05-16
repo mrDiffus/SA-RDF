@@ -1,0 +1,59 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/brother-keth-rail",
+      "@type": "schema:Person",
+      "rdfs:label": "Brother Keth Rail",
+      "sa:identity": {
+        "rdfs:label": "The Ledger Hand",
+        "schema:description": "An ordained Exodian who turns recovered serial numbers into scripture and broken devices into legal claims."
+      },
+      "schema:description": "Brother Keth Rail is what happens when a parish gets serious about salvage accounting. He began as a street preacher and ledger clerk, then earned enough distinction in recovery work to be given visible augmetics: a servo-left arm, spine reinforcement, wrist ports for diagnostic tools, and a collar-mounted data reliquary that stores ownership disputes, route maps, and blessed chain-of-custody records. He does not sermonize like Sister Ivra. He audits. He arrives at a site, determines who is hoarding what, and explains with quiet certainty why the Church is entitled to take custody of the abandoned or improperly locked machine.",
+      "sa:race": "Human",
+      "sa:thematics": [
+        "clerical accounting",
+        "relic recovery",
+        "moderate augmetics",
+        "chain of custody",
+        "bureaucratic zeal",
+        "holy arbitration",
+        "field diagnostics",
+        "useful machinery"
+      ],
+      "sa:nature": {
+        "appearance": "Broad-shouldered and tidy in a severe, workmanlike way. His left arm is a polished mechanical replacement with engraved tally marks running from wrist to shoulder. His spine brace shows under his vestments as a line of nested plates, and his fingertips are fitted with precision seals for handling relic tags. His face is old enough to seem permanent, but the small implant behind one ear catches the light when he turns toward a machine panel.",
+        "demeanor": "Measured, patient, and impossible to bluff for long. He rarely raises his voice because he does not need to. Keth makes people feel like they are already answering questions they have not heard yet. He is not cruel, but he is exact, and that is often worse for people who want to keep stolen equipment hidden.",
+        "quarters": "He keeps office in a converted maintenance office near a salvage exchange: racks of tagged components, hanging prayer seals, ink pads, diagnostic slates, and three separate ledgers for recovered property, Church custody, and items being returned to working communities.",
+        "bearing": "He moves like a man who has measured every doorway in the district and can tell by posture whether a machine can be moved without cracking a wall. He is never in a hurry unless someone is lying."
+      },
+      "sa:mechanics": {
+        "recovery_ministry": "Keth handles the practical middle ground between street salvation and high clergy doctrine. He assesses whether salvaged equipment can be repaired, whether it should be redistributed immediately, and whether the Church is entitled to reclaim it from owners who have let it rot behind a locked gate.",
+        "ledger_work": "He keeps meticulous records of serial numbers, ownership claims, battery cycles, and maintenance histories. In Exodian practice, a machine without use history is a machine waiting to be liberated.",
+        "dispute_resolution": "Keth often serves as the one who settles arguments between salvage crews, parish councils, and nervous foremen. He can make a formal case for reclaiming an entire storage block while sounding like he is merely reading a maintenance report.",
+        "augmentations": "His augmetics are functional rather than grand. They make him a better recorder, loader, and field examiner, not a living shrine. That restraint earns trust from people who fear the Church's higher ranks.",
+        "authority_level": "He can direct small recovery crews, authorize low-risk reclamations, and decide when an object is too damaged to keep hoarded. He is the sort of priest who turns a broken pump into a parish victory.",
+        "public_reputation": "Workshop crews call him fair. Vault-keepers call him impossible. Church novices think he is boring until they watch him talk a security chief into surrendering a locked crate."
+      },
+      "sa:relationships": {
+        "sister_ivra_meld": "He respects Ivra's ability to turn the crowd without losing control of the work. She thinks he is too careful, which he considers a mild compliment.",
+        "the_church": "He belongs to the machinery-minded wing of the Church's lower clergy and believes doctrine is worthless unless it results in a repaired machine or a fed parish.",
+        "salvage_authorities": "He argues with them for a living. Some hate him. Some quietly keep his number because he is usually right.",
+        "high_clergy": "He can work under high priests and cardinals without flinching, but he does not mistake ceremonial scale for operational wisdom."
+      },
+      "sa:quotes": [
+        "If nobody can maintain it, they don't own it. They babysit it.",
+        "A serial number is not a shrine. It is a record. Records can be corrected.",
+        "We are not stripping your vault. We are returning its contents to function.",
+        "Useful things should not be prayed over until they rust.",
+        "Bring me the paperwork and the power core. I only need one of those to begin."
+      ]
+    }
+  ]
+}

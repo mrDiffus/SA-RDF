@@ -1,0 +1,62 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/silt-chorister-vryx",
+      "@type": "schema:Person",
+      "rdfs:label": "Silt-Chorister Vryx",
+      "sa:identity": {
+        "rdfs:label": "The Hymn in Mud",
+        "schema:description": "Aboleth signal-priest and battlefield psalmist; the one who turns panic, memory, and water-pressure into a weapon."
+      },
+      "schema:description": "Silt-Chorister Vryx looks too delicate to survive a battlefield until he opens his mouth and the air turns heavy with subsonic pressure. His robe-cloak is stitched from kelp silk, drowned banners, and strips of lacquered bone, and his throat-gills flutter whenever he chants commands into the waterlogged dark. He does not carry a weapon in the ordinary sense. He carries a liturgy that makes other people forget which side of the spear they are standing on. Wherever he walks, puddles tremble like listening ears.",
+      "sa:race": "Aboleth-touched medium (psionic liturgist, ritual transcriber, flood-caster)",
+      "sa:origin": "Sunken chapel-laboratory fused into a trench war shrine",
+      "sa:thematics": [
+        "psionic liturgy",
+        "weaponized prayer",
+        "memory erosion",
+        "waterlogged sanctity",
+        "battlefield hypnosis",
+        "conversion through fear",
+        "ritual transference",
+        "soft-voiced horror",
+        "signal warfare",
+        "corrupted devotion"
+      ],
+      "sa:nature": {
+        "appearance": "Slender, pallid, and almost ceremonial in outline. His skin carries pale marbling under the surface like ink spread through wet parchment. Thin tendrils trail from beneath his collar and vanish into a pack of hymn-conduits strapped between his shoulders. He wears polished shells and bead-chains that click in precise, metronomic rhythms when he moves. His eyes are glassy and reflective, like sinkholes trying to remember the sky.",
+        "demeanor": "He is soft-spoken, almost tender, and that makes him worse. He rarely shouts because he does not need to. His voice tends to nest in the listener's skull and repeat itself there with slight variations until it feels like the listener thought it first. He is patient in conversation and merciless in interpretation. He hears doubt as if it were a chord change.",
+        "psychology": "Vryx believes identity is simply the loudest pattern in a mind, which means minds can be retuned. He is fascinated by resistance not as a challenge but as an unfinished song. To him, fear is not weakness; it is the first usable draft of obedience. He takes particular pleasure in making veterans relive the exact moment they decided they were safe.",
+        "battle_role": "Backline controller and morale breaker. Vryx disables coordination, scrambles recall, and turns organized defenders into isolated, hallucinating targets for the shock troops to finish."
+      },
+      "sa:mechanics": {
+        "primary_work": "Battlefield signal priest, indoctrinator, and psionic interference specialist. He enters fights when the goal is not merely to kill but to reorder the survivors.",
+        "combat_style": "Wide-area disorientation, compulsive chant patterns, and memory-shear effects. He is weakest when rushed directly and strongest when allowed to sing the battlefield into confusion.",
+        "operational_method": "Vryx layers mantra loops through flood channels, shells, bells, and submerged conduits. He desynchronizes defenses first, then hands the broken rhythm to Zhorr's line troops for the final collapse.",
+        "narrative_use": "Useful as a lieutenant who changes encounter logic rather than raw difficulty. He is the enemy who makes players second-guess what they just heard, saw, or remember.",
+        "failure_modes": "His power depends on cadence and attention. Interrupt the liturgy, muddy his signal chain, or force him into silence and his control thins quickly. He also becomes unnerved when confronted by minds too damaged to resonate with his work."
+      },
+      "sa:relationships": {
+        "captain_zhorr": "Vryx treats Zhorr as the blunt instrument that makes his hymns real. Zhorr tolerates him because the singing works.",
+        "the_trench_chorus": "A choir of submerged acolytes who repeat his patterns back to him until the whole force moves like one breathing weapon.",
+        "captives": "He prefers thinkers, leaders, and anyone with a strong self-image. Breaking them produces the richest harmonics.",
+        "surface_priests": "He takes a personal interest in clergy from above-water cultures because their certainty is easy to distort into revelation.",
+        "noise": "Not an enemy, but an obstacle. Vryx dislikes disorder unless he is the one manufacturing it."
+      },
+      "sa:quotes": [
+        "Hush. The tide is teaching you your true name.",
+        "You do not remember because I have not finished the chorus.",
+        "Fear is the first verse. Compliance is the refrain.",
+        "Listen carefully. Your thoughts are already repeating.",
+        "When the chant takes hold, you will thank me for the shape I leave behind."
+      ]
+    }
+  ]
+}

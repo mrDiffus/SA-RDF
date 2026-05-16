@@ -1,0 +1,61 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/hex-venn",
+      "@type": "schema:Person",
+      "rdfs:label": "Hex Venn",
+      "sa:identity": {
+        "rdfs:label": "The Milkmaid",
+        "schema:description": "Independent occult salvager and creature harvester; pragmatist without conscience or sleep schedule."
+      },
+      "schema:description": "Hex Venn arrives with a satchel of impossible specimens, a sleepless grin, and the quiet confidence of someone who has already solved problems you have not noticed yet. Her skin glows faintly where symbiotes cling beneath the surface, and every motion suggests she is listening to something the room cannot hear. The first thing you understand about her is that she is not afraid of the monstrous. The second is that she has made it useful.",
+      "sa:race": "Human (extensively modified by exposure and parasitic integration)",
+      "sa:thematics": [
+        "pragmatism",
+        "body-horror normalized",
+        "creature ecology",
+        "liminal spaces",
+        "illegal salvage",
+        "creature synthesis",
+        "unhinged competence",
+        "symbiosis"
+      ],
+      "sa:nature": {
+        "appearance": "Gaunt, pale from years in underground zones and dimly-lit labs. Her skin bears faint bioluminescent marks where symbiotes attach. Clothing is functional, stained, patched repeatedly. Several creatures visibly exist in her hair, clothing folds, and integrated into her shoulders. Her eyes have a faint glow—unclear whether lens implant or creature-granted.",
+        "demeanor": "Moves with unsettling precision despite sleep deprivation. Speaks quickly, often mid-thought. Laughs rarely but intensely. Exhibits signs of obsessive compulsion when discussing creature behavior or harvesting techniques.",
+        "psychology": "Has crossed some threshold of sanity but remains functionally competent. Experiences the visceral and horrific as mundane detail. Develops странощные attachments to her creatures, treating them as colleagues rather than tools. Possible signs of parasitic cognitive influence, though distinguishing intent from infection is impossible.",
+        "symbiosis_status": "At least three major parasites integrated into her biology; possibly more dormant or unnoticed. Lives in mutualistic relationship with them—they sustain her, she maintains their viability. Removal would likely be fatal."
+      },
+      "sa:mechanics": {
+        "primary_work": "Illegal occult salvage and creature harvesting. Locates unstable zones, extracts viable specimens, processes them for biological materials or keeps them for direct application.",
+        "creature_arsenal": "Each symbiote serves distinct function: sensing (thermal, magical, dimensional), harvesting (venom, silk, secretions), binding (parasitic lock-holding), extraction (cutting through biological and material barriers). Uses them in combination for problem-solving.",
+        "problem_solving_approach": "Lateral and grotesque. Rarely uses conventional methods when creatures offer alternative. Willing to contaminate sites or people if the payoff justifies it.",
+        "reliability": "Gets the job done. Always. The methods are disturbing, the timeline unpredictable, but the outcome is guaranteed. Repeat clients swear by her; first-time employers often need therapy afterward.",
+        "danger_profile": "Not a liability so much as a *calculated risk*. Clients know they're dealing with someone whose decision-making incorporates creature influence and sleep-deprivation logic. Outcomes can be unexpectedly elegant or catastrophically unhinged."
+      },
+      "sa:relationships": {
+        "symbiotes": "Her actual family. Named them (Null, Feather, Spoke, others). Considers them collaborators. Their judgment influences her own; occasionally overrides her decisions.",
+        "repeat_clients": "Cautious but loyal. They've learned that hiring Hex means accepting outcomes that technically satisfy the contract in deeply uncomfortable ways.",
+        "zone_denizens": "Creatures, scavengers, and dimensional residents of liminal spaces respect her presence. She's native to the margins in ways most humans aren't.",
+        "rival_salvagers": "Actively undermines competitors who use 'wasteful' methods. Has been known to contaminate sites rather than let someone else stabilize them.",
+        "authorities": "Technically wanted across multiple jurisdictions. Enforcement is low priority because apprehending her would require pursuing her into zones most officials refuse to enter."
+      },
+      "sa:quotes": [
+        "Why synthesize when you can milk?",
+        "The creature doesn't care about your contract. I do. That's the difference between us.",
+        "People think they hired me for the solution. Really, they hired me because they were too scared to do it themselves.",
+        "Tuesday. Just Tuesday.",
+        "You can see the faint bioluminescence? That's not a marking. That's an agreement.",
+        "The creatures keep me sane. Sounds backwards, I know.",
+        "Conventional methods are for people who still believe in conventional outcomes."
+      ]
+    }
+  ]
+}

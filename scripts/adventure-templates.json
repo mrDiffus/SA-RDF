@@ -1,0 +1,174 @@
+{
+  "@context": {
+    "@vocab": "https://stellar-arcana.org/adventure#",
+    "adv": "https://stellar-arcana.org/adventure#",
+    "schema": "http://schema.org/",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "adventure-one-shot-template": {
+    "@id": "https://stellar-arcana.org/adventure/template-one-shot",
+    "@type": "adv:Adventure",
+    "rdfs:label": "One-Shot Adventure Template",
+    "schema:title": "One-Shot Adventure Title",
+    "schema:description": "A single-session adventure with one location and 1-2 encounters.",
+    "adv:hasPart": [
+      {
+        "@id": "https://stellar-arcana.org/adventure/template-one-shot/chapter-1",
+        "@type": "adv:Chapter",
+        "rdfs:label": "Chapter 1: Opening Scene",
+        "schema:description": "Hook the party and establish the central conflict."
+      }
+    ],
+    "adv:hasNPC": [
+      {
+        "@id": "https://stellar-arcana.org/adventure/template-one-shot/npc-1",
+        "@type": "adv:NPC",
+        "rdfs:label": "Example NPC",
+        "schema:name": "Example NPC Name",
+        "adv:role": "questgiver",
+        "schema:description": "Brief personality and goal.",
+        "adv:faction": "Some Faction or Independent"
+      }
+    ],
+    "adv:hasLocation": [
+      {
+        "@id": "https://stellar-arcana.org/adventure/template-one-shot/location-1",
+        "@type": "adv:Location",
+        "rdfs:label": "Location Name",
+        "schema:name": "Location Name",
+        "schema:description": "Detailed description of the location including atmosphere and key features.",
+        "adv:hasArea": [
+          {
+            "@id": "https://stellar-arcana.org/adventure/template-one-shot/location-1/area-1",
+            "@type": "adv:Area",
+            "adv:areaNumber": "1",
+            "adv:areaName": "Area Description",
+            "schema:description": "What is in this area?"
+          }
+        ]
+      }
+    ],
+    "adv:hasEncounter": [
+      {
+        "@id": "https://stellar-arcana.org/adventure/template-one-shot/encounter-1",
+        "@type": "adv:Encounter",
+        "rdfs:label": "Example Combat Encounter",
+        "schema:description": "Description of what happens in this encounter.",
+        "adv:location": {
+          "@id": "https://stellar-arcana.org/adventure/template-one-shot/location-1"
+        },
+        "adv:hasMonster": [
+          {
+            "@type": "adv:Monster",
+            "rdfs:label": "Monster Type",
+            "schema:name": "Monster Name or Type",
+            "adv:count": 1,
+            "schema:description": "Stat block or reference."
+          }
+        ]
+      }
+    ]
+  },
+  "adventure-multi-chapter-template": {
+    "@id": "https://stellar-arcana.org/adventure/template-campaign",
+    "@type": "adv:Adventure",
+    "rdfs:label": "Multi-Chapter Campaign Template",
+    "schema:title": "Multi-Chapter Adventure Title",
+    "schema:description": "A linked series of chapters across multiple sessions.",
+    "adv:hasPart": [
+      {
+        "@id": "https://stellar-arcana.org/adventure/template-campaign/chapter-1",
+        "@type": "adv:Chapter",
+        "rdfs:label": "Chapter 1: Setup",
+        "schema:description": "Introduce hook and main conflict."
+      },
+      {
+        "@id": "https://stellar-arcana.org/adventure/template-campaign/chapter-2",
+        "@type": "adv:Chapter",
+        "rdfs:label": "Chapter 2: Escalation",
+        "schema:description": "Raise stakes and complicate the plot."
+      },
+      {
+        "@id": "https://stellar-arcana.org/adventure/template-campaign/chapter-3",
+        "@type": "adv:Chapter",
+        "rdfs:label": "Chapter 3: Climax",
+        "schema:description": "Final confrontation and resolution."
+      }
+    ],
+    "adv:hasNPC": [
+      {
+        "@id": "https://stellar-arcana.org/adventure/template-campaign/npc-villain",
+        "@type": "adv:NPC",
+        "rdfs:label": "Villain",
+        "schema:name": "Villain Name",
+        "adv:role": "antagonist",
+        "schema:description": "The main antagonist and their goals.",
+        "adv:faction": "Some Faction"
+      },
+      {
+        "@id": "https://stellar-arcana.org/adventure/template-campaign/npc-ally",
+        "@type": "adv:NPC",
+        "rdfs:label": "Key Ally",
+        "schema:name": "Ally Name",
+        "adv:role": "ally",
+        "schema:description": "An important ally to the party.",
+        "adv:faction": "Some Faction"
+      }
+    ],
+    "adv:hasLocation": [],
+    "adv:hasEncounter": []
+  },
+  "npc-block-template": {
+    "@type": "adv:NPC",
+    "rdfs:label": "NPC Template",
+    "schema:name": "NPC Name",
+    "adv:role": "antagonist",
+    "schema:description": "Personality, goals, and mechanical hint (archetype/gear).",
+    "adv:faction": "Organization or Independent",
+    "adv:appearance": "Physical description",
+    "adv:personality": "Voice and mannerisms",
+    "adv:statBlock": "Archetype, level, equipment"
+  },
+  "encounter-block-template": {
+    "@type": "adv:Encounter",
+    "rdfs:label": "Combat Encounter",
+    "schema:name": "Encounter Name",
+    "schema:description": "What is at stake? What's the situation?",
+    "adv:location": {
+      "@id": "https://stellar-arcana.org/adventure/[title]/location-ref"
+    },
+    "adv:hasMonster": [
+      {
+        "@type": "adv:Monster",
+        "schema:name": "Antagonist Name",
+        "adv:count": 1,
+        "schema:description": "Type, archetype, and role in combat"
+      }
+    ],
+    "adv:tactics": "How does this enemy fight?",
+    "adv:developments": "What changes during combat? Reinforcements? Environmental shifts?",
+    "adv:surprise": "Does anyone get surprise?"
+  },
+  "location-block-template": {
+    "@type": "adv:Location",
+    "rdfs:label": "Location Name",
+    "schema:name": "Location Name",
+    "schema:description": "Overall atmosphere, size, who controls it.",
+    "adv:hasArea": [
+      {
+        "@type": "adv:Area",
+        "adv:areaNumber": "1",
+        "adv:areaName": "Area Name",
+        "schema:description": "What is in this sub-area? What can the party do here?"
+      }
+    ],
+    "adv:hasGeneralFeature": [
+      {
+        "@type": "adv:GeneralFeature",
+        "adv:featureType": "Lighting",
+        "schema:description": "Candles, torches, darkness, etc."
+      }
+    ]
+  }
+}

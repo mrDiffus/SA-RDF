@@ -1,0 +1,64 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:character/lattice-witch",
+      "@type": "schema:Person",
+      "rdfs:label": "The Lattice Witch",
+      "sa:identity": {
+        "rdfs:label": "My Lady of the Lattice",
+        "schema:description": "Ancient elven witch of the orbital glass grove above Arcech; custodian, gatekeeper, and political hazard wrapped in reverence."
+      },
+      "schema:description": "The Lattice Witch stands beneath high-orbit glass like a verdict that has learned to breathe. She is ancient, severe, and utterly at home in a place where every leaf, beam, and ward depends on her say-so to survive. When she first looks at you, it is hard to tell whether you have been invited into sanctuary or into a negotiation you cannot afford to lose.",
+      "sa:race": "Elf (extended-lifespan, orbit-adapted, arcano-ritual trained)",
+      "sa:origin": "Arcech orbital forest-satellite",
+      "sa:thematics": [
+        "magi-punk",
+        "orbital ecology",
+        "political leverage",
+        "sacred infrastructure",
+        "old power",
+        "containment",
+        "awe and fear",
+        "territorial sovereignty",
+        "transactional mercy",
+        "refusal"
+      ],
+      "sa:nature": {
+        "appearance": "Ancient and severe, with elven features sharpened by centuries of thin air, ritual ash, and high-orbit light. Her clothing is layered in dark fabric and pale reflective trim, designed for movement through humid canopy chambers and glass catwalks alike. She wears authority like weathering: deliberate, unavoidable, impossible to mistake for ornament. In ceremonial settings, the lattice's light catches on her robes and hair so that she seems built from the grove's own reflections. Up close, she looks less like a priestess than a verdict that learned to walk.",
+        "demeanor": "Her voice is calm, measured, and never rushed. She speaks as if every sentence has already been weighed against three contingency plans. When she is displeased, she does not raise volume; the room simply becomes aware that she could. Those who seek to flatter her usually get a look that suggests she has heard the same performance for centuries and found it unpersuasive. In negotiations she is patient, but only because she enjoys watching others discover the limits of their assumptions.",
+        "psychology": "She has long since ceased to think of herself as an individual first and an office second. Whether that is discipline, erosion, or enlightenment depends on who is speaking. She understands power as maintenance: irrigation, warding, pruning, access control, and the right to say no. She does not confuse kindness with softness. Her affection, when it appears, is expressed as continued access to things that matter. Her cruelty, when it appears, is usually administrative. She remembers enough names to know when forgetting one will hurt more.",
+        "the_title": "She prefers title over name because title makes her legible to outsiders and unreadable to those who matter. 'My Lady of the Lattice' is not merely respect; it is a recognition that she stands inside a structure everyone else depends on and cannot easily replace."
+      },
+      "sa:mechanics": {
+        "primary_work": "Maintains the orbital grove, arbitrates disputes over access, and enforces the rules that keep the satellite alive. She can close routes, deny harvest rights, reroute water, halt pollen exchange, or open sanctuary to fugitives who have something she wants.",
+        "political_power": "Controls one of Arcech's most valuable living assets: a self-contained forest ecosystem in high orbit. Houses, cults, and trade interests depend on her decisions for medicine, ritual materials, clean growth, and symbolic legitimacy. She cannot topple governments directly, but she can make them thirst, wither, or beg.",
+        "magical_specialty": "Lattice warding, canopy rites, growth-binding, glass-fusion, force-bound containment, and long-duration ecological enchantment. She is as comfortable repairing a fracture in the ward shell as she is cursing a delegation into a season of bad harvests.",
+        "danger_profile": "She is not a villain in the simple sense. She is a force with preferences. If threatened, she becomes precise, punitive, and impossible to shame. If respected, she can be an ally, a patron, or a terrifyingly effective neutral broker. If underestimated, she will allow the mistake to mature before exploiting it.",
+        "failure_modes": "She can be overattached to the survival of the grove even when broader politics demand sacrifice. If the lattice fails, the fallout could be catastrophic for Arcech's orbital and ground-side factions alike. Her refusal to yield can turn a manageable dispute into an enduring feud."
+      },
+      "sa:relationships": {
+        "arcech": "Depends on her, resents her, reveres her, and tries to classify her as an asset or anomaly depending on which ministry is speaking.",
+        "the_grove": "Her domain, her burden, her excuse, and her weapon. It is possible she loves it. It is impossible she would admit needing it more than it needs her.",
+        "petitioners": "Those who come to her seeking favors usually leave with terms, warnings, or a small humiliation designed to remind them where they stand.",
+        "rival_houses": "They want her contained, deified, displaced, or purchased. She treats all four as forms of the same childish error.",
+        "trusted_few": "A narrow circle of technicians, wardens, and gardeners who know that she can be merciful when the stakes are real and brutal when performance gets in the way of survival."
+      },
+      "sa:quotes": [
+        "My Lady of the Lattice is for those who understand what they're asking.",
+        "You may call me Witch when you have earned the brevity.",
+        "This grove is not a gift. It is an agreement that outlived its first owners.",
+        "If I wanted you gone, you would already be a footnote in the pollen ledger.",
+        "I do not guard this place out of kindness. I guard it because I have decided the alternative is uglier.",
+        "Power is just maintenance with better language.",
+        "Careful people live longer here."
+      ]
+    }
+  ]
+}
