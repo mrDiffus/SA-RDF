@@ -1,4 +1,3 @@
-using System.Net;
 using DiscordLoreAndCharBotDotnet.Config;
 using DiscordLoreAndCharBotDotnet.Models;
 using DiscordLoreAndCharBotDotnet.Services;
@@ -8,31 +7,6 @@ namespace DiscordLoreAndCharBotDotnet.Tests.Unit.Services;
 
 public sealed class DiscordBotHostMentionHandlingTests
 {
-  [Fact]
-  [Trait("Category", "Unit")]
-  public void BuildMentionQuestionWithThreadContext_ReturnsQuestionWhenContextMissing()
-  {
-    var result = DiscordBotHost.BuildMentionQuestionWithThreadContext("What now?", null);
-
-    Assert.Equal("What now?", result);
-  }
-
-  [Fact]
-  [Trait("Category", "Unit")]
-  public void BuildMentionQuestionWithThreadContext_AppendsThreadTranscript()
-  {
-    var result = DiscordBotHost.BuildMentionQuestionWithThreadContext(
-      "What now?",
-      "[alice] setup complete\n[bot] Part 2/3");
-
-    Assert.Contains("What now?", result, StringComparison.Ordinal);
-    Assert.Contains("Thread context so far", result, StringComparison.Ordinal);
-    Assert.Contains("--- THREAD_CONTEXT_START ---", result, StringComparison.Ordinal);
-    Assert.Contains("[alice] setup complete", result, StringComparison.Ordinal);
-    Assert.Contains("[bot] Part 2/3", result, StringComparison.Ordinal);
-    Assert.Contains("--- THREAD_CONTEXT_END ---", result, StringComparison.Ordinal);
-  }
-
   [Theory]
   [InlineData("ask-user-0328-1530-p2")]
   [InlineData("ASK-user-name-0328-1530-p12")]
@@ -74,33 +48,11 @@ public sealed class DiscordBotHostMentionHandlingTests
             var profileStore = new ProfileStore(Path.Combine(tempDir, "profiles.json"));
             await profileStore.InitAsync();
 
-            var handler = new TestHttpMessageHandler((_, _) => Task.FromResult(
-                TestHttpMessageHandler.JsonResponse(HttpStatusCode.OK, """
-{
-  "candidates": [
-    {
-      "content": {
-        "parts": [
-          {
-            "text": "Mention answer"
-          }
-        ]
-      }
-    }
-  ]
-}
-""")));
-
-            using var httpClient = new HttpClient(handler);
-            var host = await CreateHostAsync(tempDir, profileStore, httpClient, new KnowledgeBase
-            {
-                Chunks = [new KnowledgeChunk { SourcePath = "rules.json", Title = "Rules", Text = "Local canon mention context." }]
-            });
+            var host = await CreateHostAsync(tempDir, profileStore, new FakeAskAgentService("Mention answer"));
 
             var response = await host.BuildMentionResponseAsync("user-1", "Tell me lore", CancellationToken.None);
 
             Assert.Equal("Mention answer", response);
-            Assert.Single(handler.Requests);
         }
         finally
         {
@@ -118,18 +70,13 @@ public sealed class DiscordBotHostMentionHandlingTests
             var profileStore = new ProfileStore(Path.Combine(tempDir, "profiles.json"));
             await profileStore.InitAsync();
 
-            var handler = new TestHttpMessageHandler((_, cancellationToken) =>
+            var blockingAgent = new FakeAskAgentService(async (_, ct) =>
             {
-                var tcs = new TaskCompletionSource<HttpResponseMessage>(TaskCreationOptions.RunContinuationsAsynchronously);
-                cancellationToken.Register(() => tcs.TrySetCanceled(cancellationToken));
-                return tcs.Task;
+                await Task.Delay(Timeout.Infinite, ct);
+                return string.Empty;
             });
 
-            using var httpClient = new HttpClient(handler);
-            var host = await CreateHostAsync(tempDir, profileStore, httpClient, new KnowledgeBase
-            {
-                Chunks = [new KnowledgeChunk { SourcePath = "rules.json", Title = "Rules", Text = "Local canon." }]
-            });
+            var host = await CreateHostAsync(tempDir, profileStore, blockingAgent);
             host.MentionRequestTimeout = TimeSpan.FromMilliseconds(20);
 
             string? observedResponse = null;
@@ -161,18 +108,13 @@ public sealed class DiscordBotHostMentionHandlingTests
             var profileStore = new ProfileStore(Path.Combine(tempDir, "profiles.json"));
             await profileStore.InitAsync();
 
-            var handler = new TestHttpMessageHandler((_, cancellationToken) =>
+            var blockingAgent = new FakeAskAgentService(async (_, ct) =>
             {
-                var tcs = new TaskCompletionSource<HttpResponseMessage>(TaskCreationOptions.RunContinuationsAsynchronously);
-                cancellationToken.Register(() => tcs.TrySetCanceled(cancellationToken));
-                return tcs.Task;
+                await Task.Delay(Timeout.Infinite, ct);
+                return string.Empty;
             });
 
-            using var httpClient = new HttpClient(handler);
-            var host = await CreateHostAsync(tempDir, profileStore, httpClient, new KnowledgeBase
-            {
-                Chunks = [new KnowledgeChunk { SourcePath = "rules.json", Title = "Rules", Text = "Local canon." }]
-            });
+            var host = await CreateHostAsync(tempDir, profileStore, blockingAgent);
             host.MentionRequestTimeout = TimeSpan.FromSeconds(5);
 
             using var shutdownCts = new CancellationTokenSource();
@@ -207,28 +149,7 @@ public sealed class DiscordBotHostMentionHandlingTests
             var profileStore = new ProfileStore(Path.Combine(tempDir, "profiles.json"));
             await profileStore.InitAsync();
 
-            var handler = new TestHttpMessageHandler((_, _) => Task.FromResult(
-                TestHttpMessageHandler.JsonResponse(HttpStatusCode.OK, """
-{
-  "candidates": [
-    {
-      "content": {
-        "parts": [
-          {
-            "text": "unused"
-          }
-        ]
-      }
-    }
-  ]
-}
-""")));
-
-            using var httpClient = new HttpClient(handler);
-            var host = await CreateHostAsync(tempDir, profileStore, httpClient, new KnowledgeBase
-            {
-                Chunks = [new KnowledgeChunk { SourcePath = "rules.json", Title = "Rules", Text = "Local canon." }]
-            });
+            var host = await CreateHostAsync(tempDir, profileStore, new FakeAskAgentService("unused"));
 
             string? observedResponse = null;
             await host.ProcessMentionRequestAsync(
@@ -259,25 +180,7 @@ public sealed class DiscordBotHostMentionHandlingTests
             var profileStore = new ProfileStore(Path.Combine(tempDir, "profiles.json"));
             await profileStore.InitAsync();
 
-            var handler = new TestHttpMessageHandler((_, _) => Task.FromResult(
-                TestHttpMessageHandler.JsonResponse(HttpStatusCode.OK, """
-{
-  "candidates": [
-    {
-      "content": {
-        "parts": [
-          {
-            "text": "ok"
-          }
-        ]
-      }
-    }
-  ]
-}
-""")));
-
-            using var httpClient = new HttpClient(handler);
-            var host = await CreateHostAsync(tempDir, profileStore, httpClient, new KnowledgeBase { Chunks = [] });
+            var host = await CreateHostAsync(tempDir, profileStore, new FakeAskAgentService("ok"));
             host.MaxInFlightMentionRequestsPerUser = 2;
 
             Assert.True(host.TryBeginMentionRequest("user-1"));
@@ -294,33 +197,15 @@ public sealed class DiscordBotHostMentionHandlingTests
         }
     }
 
-    private static async Task<DiscordBotHost> CreateHostAsync(
+    private static Task<DiscordBotHost> CreateHostAsync(
         string tempDir,
         ProfileStore profileStore,
-        HttpClient httpClient,
-        KnowledgeBase knowledgeBase)
+        IAskAgentService askAgent)
     {
-        var manifestPath = Path.Combine(tempDir, "assets_manifest.json");
-        await File.WriteAllTextAsync(manifestPath, """
-{
-  "Entries": []
-}
-""");
-
-        var manifest = await AssetManifestService.LoadOrCreateAsync(manifestPath);
-        var gemini = new GeminiService(
-            httpClient,
-            "api-key",
-            "gemini-model",
-            "You are a tester persona.",
-            manifest,
-            enableGoogleSearchRetrieval: true);
-
-        return new DiscordBotHost(
+        return Task.FromResult(new DiscordBotHost(
             CreateConfig(tempDir),
             profileStore,
-            gemini,
-            knowledgeBase);
+            askAgent));
     }
 
     private static BotConfig CreateConfig(string tempDir)
@@ -334,11 +219,9 @@ public sealed class DiscordBotHostMentionHandlingTests
             GeminiModel = "gemini-model",
             AutoRegisterCommands = true,
             EnableMessageContentIntent = false,
-            EnableGoogleSearchRetrieval = true,
             DataRoot = tempDir,
             ProfileStorePath = Path.Combine(tempDir, "profiles.json"),
-            PersonaPath = Path.Combine(tempDir, "persona.md"),
-            AssetManifestPath = Path.Combine(tempDir, "assets_manifest.json")
+            PersonaPath = Path.Combine(tempDir, "persona.md")
         };
     }
 

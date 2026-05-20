@@ -35,9 +35,49 @@ public sealed class BotConfigTests
             Assert.Equal("gemini-2.5-flash", config.GeminiModel);
             Assert.True(config.AutoRegisterCommands);
             Assert.False(config.EnableMessageContentIntent);
-            Assert.True(config.EnableGoogleSearchRetrieval);
             Assert.Equal(Path.GetFullPath(Path.Combine(tempDir, "../public/data")), config.DataRoot);
             Assert.Equal(Path.GetFullPath(Path.Combine(tempDir, "./storage/profiles.json")), config.ProfileStorePath);
+        }
+        finally
+        {
+            Directory.SetCurrentDirectory(originalDirectory);
+            Environment.SetEnvironmentVariable("DOTNET_ENVIRONMENT", originalEnvironment);
+            Directory.Delete(tempDir, recursive: true);
+        }
+    }
+
+    [Fact]
+    [Trait("Category", "Unit")]
+    public void Load_FallsBackToAncestorDataRootWhenDebuggerStartsInOutputFolder()
+    {
+        var tempDir = CreateTempDir();
+        var repoRoot = Path.Combine(tempDir, "repo");
+        var publicData = Path.Combine(tempDir, "public", "data");
+        var outputDir = Path.Combine(repoRoot, "Discord-Lore-And-Char-Bot-dotnet", "bin", "Debug", "net10.0");
+        var originalDirectory = Directory.GetCurrentDirectory();
+        var originalEnvironment = Environment.GetEnvironmentVariable("DOTNET_ENVIRONMENT");
+
+        try
+        {
+            Directory.CreateDirectory(publicData);
+            Directory.CreateDirectory(outputDir);
+
+            File.WriteAllText(Path.Combine(outputDir, "appsettings.json"), """
+{
+  "Bot": {
+    "DiscordToken": "token",
+    "DiscordApplicationId": "12345",
+    "GeminiApiKey": "gem-key"
+  }
+}
+""");
+
+            Environment.SetEnvironmentVariable("DOTNET_ENVIRONMENT", null);
+            Directory.SetCurrentDirectory(outputDir);
+
+            var config = BotConfig.Load(outputDir);
+
+            Assert.Equal(Path.GetFullPath(publicData), config.DataRoot);
         }
         finally
         {

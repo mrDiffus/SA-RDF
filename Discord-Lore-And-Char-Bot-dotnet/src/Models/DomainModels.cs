@@ -40,3 +40,8 @@ internal sealed class KnowledgeBase
 {
     public required IReadOnlyList<KnowledgeChunk> Chunks { get; init; }
 }
+
+/// <summary>
+/// A single turn in a prior conversation, used to seed agent thread history for mention replies.
+/// </summary>
+internal readonly record struct ConversationTurn(bool IsAssistant, string Content);

@@ -11,11 +11,9 @@ internal sealed class BotConfig
     public required string GeminiModel { get; init; }
     public required bool AutoRegisterCommands { get; init; }
     public required bool EnableMessageContentIntent { get; init; }
-    public required bool EnableGoogleSearchRetrieval { get; init; }
     public required string DataRoot { get; init; }
     public required string ProfileStorePath { get; init; }
     public required string PersonaPath { get; init; }
-    public required string AssetManifestPath { get; init; }
 
     public static BotConfig Load(string baseDirectory)
     {
@@ -44,11 +42,9 @@ internal sealed class BotConfig
             GeminiModel = Optional(configuration, "Bot:GeminiModel", "gemini-2.5-flash"),
             AutoRegisterCommands = ParseBoolOptional(configuration, "Bot:AutoRegisterCommands", true),
             EnableMessageContentIntent = ParseBoolOptional(configuration, "Bot:EnableMessageContentIntent", false),
-            EnableGoogleSearchRetrieval = ParseBoolOptional(configuration, "Bot:EnableGoogleSearchRetrieval", true),
-            DataRoot = ResolvePath(contentRoot, Optional(configuration, "Bot:DataRoot", "../public/data")),
+            DataRoot = ResolveExistingDirectoryPath(contentRoot, Optional(configuration, "Bot:DataRoot", "../public/data")),
             ProfileStorePath = ResolvePath(contentRoot, Optional(configuration, "Bot:ProfileStorePath", "./storage/profiles.json")),
-            PersonaPath = ResolvePath(contentRoot, Optional(configuration, "Bot:PersonaPath", "./persona.md")),
-            AssetManifestPath = ResolvePath(contentRoot, Optional(configuration, "Bot:AssetManifestPath", "./assets_manifest.json"))
+            PersonaPath = ResolvePath(contentRoot, Optional(configuration, "Bot:PersonaPath", "./persona.md"))
         };
     }
 
@@ -108,5 +104,33 @@ internal sealed class BotConfig
     private static string ResolvePath(string baseDirectory, string input)
     {
         return Path.GetFullPath(Path.Combine(baseDirectory, input));
+    }
+
+    private static string ResolveExistingDirectoryPath(string baseDirectory, string input)
+    {
+        if (Path.IsPathRooted(input))
+        {
+            return Path.GetFullPath(input);
+        }
+
+        var resolved = ResolvePath(baseDirectory, input);
+        if (Directory.Exists(resolved))
+        {
+            return resolved;
+        }
+
+        var current = new DirectoryInfo(baseDirectory);
+        while (current is not null)
+        {
+            var candidate = Path.GetFullPath(Path.Combine(current.FullName, input));
+            if (Directory.Exists(candidate))
+            {
+                return candidate;
+            }
+
+            current = current.Parent;
+        }
+
+        return resolved;
     }
 }

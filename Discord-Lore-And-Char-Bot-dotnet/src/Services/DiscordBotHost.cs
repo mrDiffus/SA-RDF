@@ -21,8 +21,7 @@ internal sealed class DiscordBotHost
     private const int MentionThreadHistoryBlockCharLimit = 2600;
     private readonly BotConfig _config;
     private readonly ProfileStore _profileStore;
-    private readonly GeminiService _gemini;
-    private readonly KnowledgeBase _knowledgeBase;
+    private readonly IAskAgentService _askAgent;
     private readonly DiscordSocketClient _client;
     private readonly CancellationTokenSource _shutdownCts = new();
     private readonly ConcurrentDictionary<ulong, Task> _activeSlashTasks = new();
@@ -44,12 +43,11 @@ internal sealed class DiscordBotHost
     internal TimeSpan MentionRequestTimeout { get; set; } = TimeSpan.FromSeconds(90);
     internal int MaxInFlightMentionRequestsPerUser { get; set; } = 2;
 
-    public DiscordBotHost(BotConfig config, ProfileStore profileStore, GeminiService gemini, KnowledgeBase knowledgeBase)
+    public DiscordBotHost(BotConfig config, ProfileStore profileStore, IAskAgentService askAgent)
     {
         _config = config;
         _profileStore = profileStore;
-        _gemini = gemini;
-        _knowledgeBase = knowledgeBase;
+        _askAgent = askAgent;
 
         var intents = GatewayIntents.Guilds | GatewayIntents.GuildMessages;
         if (_config.EnableMessageContentIntent)
@@ -367,20 +365,27 @@ internal sealed class DiscordBotHost
             }
         }
 
-        var intent = IntentDetector.Detect(question, input.IntentOverride);
-        var retrievalQuery = $"{question} {profile?.Archetype ?? string.Empty} {profile?.Race ?? string.Empty} {profile?.Trope ?? string.Empty}".Trim();
-        var context = KnowledgeBaseService.RetrieveRelevantChunks(_knowledgeBase, retrievalQuery, 8);
-
-        var askRequest = new AskRequest
-        {
-            UserId = userId,
-            Question = question,
-            Intent = intent,
-            Profile = profile
-        };
-
-        var answer = await _gemini.AnswerAsync(askRequest, context, cancellationToken);
+        var questionWithContext = BuildQuestionWithProfileContext(question, profile);
+        var answer = await _askAgent.AnswerAsync(questionWithContext, cancellationToken);
         return DiscordMessageClamper.NormalizeLinksForDiscord(answer);
+    }
+
+    internal static string BuildQuestionWithProfileContext(string question, CharacterProfile? profile)
+    {
+        if (profile is null)
+        {
+            return question;
+        }
+
+        var sb = new StringBuilder("[Character: ");
+        sb.Append(profile.Name);
+        if (profile.CurrentLevel.HasValue) sb.Append($", Level {profile.CurrentLevel}");
+        if (profile.Archetype is not null) sb.Append($", Archetype: {profile.Archetype}");
+        if (profile.Race is not null) sb.Append($", Race: {profile.Race}");
+        if (profile.Trope is not null) sb.Append($", Trope: {profile.Trope}");
+        if (profile.Notes is not null) sb.Append($", Notes: {profile.Notes}");
+        sb.Append(']');
+        return $"{sb}\n{question}";
     }
 
     internal static string? GetMentionValidationError(string question)
@@ -392,22 +397,14 @@ internal sealed class DiscordBotHost
         string userId,
         string question,
         CancellationToken cancellationToken,
-        string? threadContext = null)
+        IReadOnlyList<ConversationTurn>? priorHistory = null)
     {
         if (GetMentionValidationError(question) is not null)
         {
             throw new InvalidOperationException("BuildMentionResponseAsync requires a non-empty mention question.");
         }
 
-        var context = KnowledgeBaseService.RetrieveRelevantChunks(_knowledgeBase, question, 8);
-        var askRequest = new AskRequest
-        {
-            UserId = userId,
-            Question = BuildMentionQuestionWithThreadContext(question, threadContext),
-            Intent = IntentDetector.Detect(question, "auto")
-        };
-
-        var answer = await _gemini.AnswerAsync(askRequest, context, cancellationToken);
+        var answer = await _askAgent.AnswerWithHistoryAsync(question, priorHistory ?? [], cancellationToken);
         var normalized = DiscordMessageClamper.NormalizeLinksForDiscord(answer);
         return DiscordMessageClamper.Clamp(normalized);
     }
@@ -417,14 +414,14 @@ internal sealed class DiscordBotHost
         string question,
         Func<string, Task> respondAsync,
         CancellationToken shutdownToken,
-        string? threadContext = null)
+        IReadOnlyList<ConversationTurn>? priorHistory = null)
     {
         using var requestCts = CancellationTokenSource.CreateLinkedTokenSource(shutdownToken);
         requestCts.CancelAfter(MentionRequestTimeout);
 
         try
         {
-            var answer = await BuildMentionResponseAsync(userId, question, requestCts.Token, threadContext);
+            var answer = await BuildMentionResponseAsync(userId, question, requestCts.Token, priorHistory);
             await TryRespondAsync(respondAsync, answer);
         }
         catch (OperationCanceledException) when (shutdownToken.IsCancellationRequested)
@@ -487,10 +484,10 @@ internal sealed class DiscordBotHost
             Console.WriteLine($"[bot] failed to trigger mention typing indicator: {ex.Message}");
         }
 
-        string? threadContext = null;
+        IReadOnlyList<ConversationTurn>? priorHistory = null;
         if (message.Channel is SocketThreadChannel threadChannel)
         {
-            threadContext = await TryBuildThreadHistoryContextAsync(threadChannel, message);
+            priorHistory = await TryBuildThreadHistoryContextAsync(threadChannel, message);
         }
 
         await ProcessMentionRequestAsync(
@@ -498,7 +495,7 @@ internal sealed class DiscordBotHost
             question,
             response => SafeReplyToMentionAsync(message, response),
             _shutdownCts.Token,
-            threadContext);
+            priorHistory);
     }
 
     private static async Task TryRespondAsync(Func<string, Task> respondAsync, string content)
@@ -701,22 +698,13 @@ internal sealed class DiscordBotHost
             && sectionCount > 1;
     }
 
-    internal static string BuildMentionQuestionWithThreadContext(string question, string? threadContext)
-    {
-        if (string.IsNullOrWhiteSpace(threadContext))
-        {
-            return question;
-        }
-
-        return $"{question}\n\nThread context so far (oldest to newest):\n--- THREAD_CONTEXT_START ---\n{threadContext}\n--- THREAD_CONTEXT_END ---";
-    }
-
-    private static async Task<string?> TryBuildThreadHistoryContextAsync(SocketThreadChannel threadChannel, SocketMessage currentMessage)
+private async Task<IReadOnlyList<ConversationTurn>?> TryBuildThreadHistoryContextAsync(SocketThreadChannel threadChannel, SocketMessage currentMessage)
     {
         try
         {
+            var botUserId = _client.CurrentUser?.Id ?? 0;
             var messages = await threadChannel.GetMessagesAsync(limit: MentionThreadHistoryFetchLimit).FlattenAsync();
-            return BuildThreadHistoryContextFromMessages(messages, currentMessage.Id);
+            return BuildThreadHistoryContextFromMessages(messages, currentMessage.Id, botUserId);
         }
         catch (Exception ex)
         {
@@ -725,52 +713,24 @@ internal sealed class DiscordBotHost
         }
     }
 
-    internal static string? BuildThreadHistoryContextFromMessages(IEnumerable<IMessage> messages, ulong currentMessageId)
+    internal static IReadOnlyList<ConversationTurn>? BuildThreadHistoryContextFromMessages(IEnumerable<IMessage> messages, ulong currentMessageId, ulong botUserId)
     {
-        var orderedLines = messages
-            .Where(msg => msg.Id <= currentMessageId)
+        var turns = messages
+            .Where(msg => msg.Id < currentMessageId)
             .Where(msg => msg.Type is MessageType.Default or MessageType.Reply)
             .Select(msg => new
             {
                 msg.Timestamp,
                 Content = NormalizeThreadMessageContent(msg.Content),
-                Author = string.IsNullOrWhiteSpace(msg.Author?.Username) ? "user" : msg.Author.Username
+                IsBot = msg.Author?.Id == botUserId
             })
             .Where(item => !string.IsNullOrWhiteSpace(item.Content))
             .OrderBy(item => item.Timestamp)
             .TakeLast(MentionThreadHistoryLineLimit)
-            .Select(item => $"[{item.Author}] {item.Content}")
+            .Select(item => new ConversationTurn(item.IsBot, item.Content[..Math.Min(item.Content.Length, MentionThreadHistoryLineContentLimit)]))
             .ToArray();
 
-        if (orderedLines.Length == 0)
-        {
-            return null;
-        }
-
-        var builder = new StringBuilder();
-        foreach (var line in orderedLines)
-        {
-            if (builder.Length > 0)
-            {
-                builder.AppendLine();
-            }
-
-            var remaining = MentionThreadHistoryBlockCharLimit - builder.Length;
-            if (remaining <= 0)
-            {
-                break;
-            }
-
-            if (line.Length > remaining)
-            {
-                builder.Append(line[..remaining]);
-                break;
-            }
-
-            builder.Append(line);
-        }
-
-        return builder.Length == 0 ? null : builder.ToString();
+        return turns.Length > 0 ? turns : null;
     }
 
     private static string NormalizeThreadMessageContent(string? input)

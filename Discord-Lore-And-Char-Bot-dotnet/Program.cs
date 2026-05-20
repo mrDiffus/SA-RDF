@@ -1,5 +1,12 @@
-﻿using DiscordLoreAndCharBotDotnet.Config;
+﻿#pragma warning disable SKEXP0070
+#pragma warning disable SKEXP0110
+
+using DiscordLoreAndCharBotDotnet.Config;
+using DiscordLoreAndCharBotDotnet.Plugins;
 using DiscordLoreAndCharBotDotnet.Services;
+using Microsoft.SemanticKernel;
+using Microsoft.SemanticKernel.Agents;
+using Microsoft.SemanticKernel.Connectors.Google;
 
 var baseDirectory = AppContext.BaseDirectory;
 var config = BotConfig.Load(baseDirectory);
@@ -10,37 +17,33 @@ await profileStore.InitAsync();
 var knowledgeBase = await KnowledgeBaseService.BuildAsync(config.DataRoot);
 Console.WriteLine($"[bot] loaded {knowledgeBase.Chunks.Count} knowledge chunks");
 
-using var httpClient = new HttpClient();
 var personaInstruction = File.Exists(config.PersonaPath)
 	? await File.ReadAllTextAsync(config.PersonaPath)
-	: "You are a tabletop RPG assistant for a custom setting. Local data snippets are the only factual authority. Do not invent source facts.";
+	: "You are a tabletop RPG assistant for a custom setting. Local data is the only factual authority. Do not invent source facts.";
 
-var assets = await AssetManifestService.LoadOrCreateAsync(config.AssetManifestPath);
-await assets.SyncWithGeminiAsync(httpClient, config.GeminiApiKey, config.DataRoot, CancellationToken.None);
-Console.WriteLine($"[bot] manifest contains {assets.FileRefs.Count} uploaded Gemini file references");
+var kernel = Kernel.CreateBuilder()
+	.AddGoogleAIGeminiChatCompletion(config.GeminiModel, config.GeminiApiKey)
+	.Build();
 
-var gemini = new GeminiService(
-	httpClient,
-	config.GeminiApiKey,
-	config.GeminiModel,
-	personaInstruction,
-	assets,
-	config.EnableGoogleSearchRetrieval);
+kernel.Plugins.AddFromObject(new KnowledgePlugin(knowledgeBase), "Knowledge");
+kernel.Plugins.AddFromObject(new ProfilePlugin(profileStore), "Profile");
 
-var startupProbe = await gemini.ProbeAwakeAsync(CancellationToken.None);
-if (startupProbe == StartupProbeResult.RateLimited)
+var agent = new ChatCompletionAgent
 {
-	Console.WriteLine("[bot] startup blocked: Gemini API is currently rate-limited. Try again later.");
-	Environment.ExitCode = 1;
-	return;
-}
+	Name = "StellarArcanaMaster",
+	Instructions = personaInstruction,
+	Kernel = kernel,
+	Arguments = new KernelArguments(
+		new GeminiPromptExecutionSettings
+		{
+			FunctionChoiceBehavior = FunctionChoiceBehavior.Auto(),
+			Temperature = 0.3
+		})
+};
 
-if (startupProbe == StartupProbeResult.NonRateLimitFailure)
-{
-	Console.WriteLine("[bot] warning: Gemini startup probe failed for a non-rate-limit reason; continuing startup.");
-}
+var askAgent = new AskAgentService(agent);
 
-var host = new DiscordBotHost(config, profileStore, gemini, knowledgeBase);
+var host = new DiscordBotHost(config, profileStore, askAgent);
 
 using var cts = new CancellationTokenSource();
 Console.CancelKeyPress += (_, args) =>

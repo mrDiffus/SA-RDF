@@ -54,8 +54,7 @@ public sealed class DiscordBotHostTests
         var ex = Record.Exception(() => new DiscordBotHost(
             CreateConfig(enableMessageContentIntent: false),
             null!,
-            null!,
-            new KnowledgeBase { Chunks = [] }));
+            null!));
 
         Assert.Null(ex);
     }
@@ -67,8 +66,7 @@ public sealed class DiscordBotHostTests
         var ex = Record.Exception(() => new DiscordBotHost(
             CreateConfig(enableMessageContentIntent: true),
             null!,
-            null!,
-            new KnowledgeBase { Chunks = [] }));
+            null!));
 
         Assert.Null(ex);
     }
@@ -104,11 +102,9 @@ public sealed class DiscordBotHostTests
             GeminiModel = "gemini-model",
             AutoRegisterCommands = true,
             EnableMessageContentIntent = enableMessageContentIntent,
-            EnableGoogleSearchRetrieval = true,
             DataRoot = "data",
             ProfileStorePath = "profiles.json",
-            PersonaPath = "persona.md",
-            AssetManifestPath = "assets_manifest.json"
+            PersonaPath = "persona.md"
         };
     }
 
