@@ -1,0 +1,51 @@
+@prefix location: <https://stellararcana.org/> .
+@prefix sa: <https://stellararcana.org/> .
+@prefix schema: <https://schema.org/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+location:example-prime a sa:PlanetLocation ;
+    rdfs:label "Example Prime" ;
+    schema:description "Example planet for plain RDF testing. It has two cities and three sublocations in each city." ;
+    sa:containsLocation location:aurelia-crest , location:brinegate-harbor .
+
+location:aurelia-crest a sa:CityLocation , sa:Location ;
+    rdfs:label "Aurelia Crest" ;
+    schema:description "Highland city built on terraced ridges and bright civic spires." ;
+    sa:containedInLocation location:example-prime ;
+    sa:containsLocation location:sunmarket-square , location:windward-archives , location:goldstep-reserve .
+
+location:sunmarket-square a sa:Location ;
+    rdfs:label "Sunmarket Square" ;
+    schema:description "Open trade plaza at city center where vendors gather at dawn." ;
+    sa:containedInLocation location:aurelia-crest .
+
+location:windward-archives a sa:Location ;
+    rdfs:label "Windward Archives" ;
+    schema:description "Record hall carved into a cliffside overlooking the upper terraces." ;
+    sa:containedInLocation location:aurelia-crest .
+
+location:goldstep-reserve a sa:Location ;
+    rdfs:label "Goldstep Reserve" ;
+    schema:description "Protected district of gardens, watchtowers, and council villas." ;
+    sa:containedInLocation location:aurelia-crest .
+
+location:brinegate-harbor a sa:CityLocation , sa:Location ;
+    rdfs:label "Brinegate Harbor" ;
+    schema:description "Coastal port city shaped by salt walls, tide basins, and working docks." ;
+    sa:containedInLocation location:example-prime ;
+    sa:containsLocation location:tideforge-docks , location:lantern-moor , location:reefwarden-bazaar .
+
+location:tideforge-docks a sa:Location ;
+    rdfs:label "Tideforge Docks" ;
+    schema:description "Industrial pier district where cargo rigs and repair yards line the water." ;
+    sa:containedInLocation location:brinegate-harbor .
+
+location:lantern-moor a sa:Location ;
+    rdfs:label "Lantern Moor" ;
+    schema:description "Low marsh quarter lit by beacons and crossed by raised walkways." ;
+    sa:containedInLocation location:brinegate-harbor .
+
+location:reefwarden-bazaar a sa:Location ;
+    rdfs:label "Reefwarden Bazaar" ;
+    schema:description "Market district for fishers, sailors, and saltcraft merchants." ;
+    sa:containedInLocation location:brinegate-harbor .

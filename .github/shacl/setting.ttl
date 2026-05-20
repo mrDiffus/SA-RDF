@@ -15,6 +15,11 @@
 # - Keep shorter nested entries as lightweight sublocations.
 # - If a parent/child/transit relation is unclear from description alone,
 #   ask for input before asserting it in data.
+# Curation rule:
+# - Iterate location-by-location, not with a bulk transform.
+# - Use description as first evidence, but only commit links that are unambiguous.
+# - When a location is detailed enough to justify its own file, keep it standalone;
+#   otherwise leave it embedded and link it later during a review pass.
 
 sa:LocationShape
     a sh:NodeShape ;

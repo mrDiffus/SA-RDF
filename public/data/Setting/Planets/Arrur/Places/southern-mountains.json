@@ -3,8 +3,18 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "label": "rdfs:label",
     "type": "@type",
+    "Location": "https://stellararcana.org/Location",
     "Place": "https://schema.org/Place",
     "description": "https://schema.org/description",
+    "containedInLocation": {
+      "@id": "https://stellararcana.org/containedInLocation",
+      "@type": "@id"
+    },
+    "containsLocation": {
+      "@id": "https://stellararcana.org/containsLocation",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "containsPlace": {
       "@id": "https://schema.org/containsPlace",
       "@container": "@list"
@@ -19,7 +29,7 @@
       "@container": "@list"
     }
   },
-  "type": "Place",
+  "type": ["Place", "Location"],
   "label": "Southern Mountains",
   "description": [
     "A vast, forbidding range at Arrur's southern extremity, infamous as a dead zone where magic and advanced technology degrade or fail entirely. Ancient, jagged peaks shrouded in perpetual storms and toxic ash clouds.",
@@ -28,27 +38,65 @@
     "Lore: Deep beneath the peaks lies the Behemoth—an ancient, possibly sentient titan of uncertain origin. Whether war god, primordial organism, or divine corpse, no living culture fully understands it. Whispers claim it shaped the mountains themselves through its sheer mass. Its awakening would be apocalyptic.",
     "Current Threat: The Cult of the Unbroken, led by Drexl (Herald of Xanthia), has mounted an extensive expedition toward the Behemoth's resting place. Ritual sites have been activated; the mountains rumble with increasing frequency. Ancient chambers are being excavated. If Drexl succeeds in binding the Behemoth to the lich-empress Xanthia's will, Arrur—and beyond—faces annihilation."
   ],
-  "@id": "https://stellararcana.org/place/southern-mountains",
-  "containedInPlace": "https://stellararcana.org/place/arrur",
+  "@id": "location:southern-mountains",
+  "containedInLocation": "location:arrur",
+  "containedInPlace": "location:arrur",
+  "containsLocation": [
+    {
+      "type": "Location",
+      "label": "The Behemoth Trench",
+      "@id": "location:the-behemoth-trench",
+      "description": "A massive, roughly circular depression thousands of meters across. Ancient masonry and skeletal stone structures ring its lip. At its bottom lies something vast, sleeping or stirring—wreathed in shadow and necrotic fog."
+    },
+    {
+      "type": "Location",
+      "label": "Ritual Ossuary",
+      "@id": "location:ritual-ossuary",
+      "description": "A site of bone-stacked graves and mass execution altars where the Cult of the Unbroken performs resurrection ceremonies. Marked by Xanthian sigils carved into stone and by the constant reek of embalming oils."
+    },
+    {
+      "type": "Location",
+      "label": "Obsidian Spire",
+      "@id": "location:obsidian-spire",
+      "description": "An isolated volcanic peak where Drexl maintains a war camp and necromantic observatory. Black banner flies constantly from its summit."
+    },
+    {
+      "type": "Location",
+      "label": "The Deadlands",
+      "@id": "location:the-deadlands",
+      "description": "Barren plains surrounding the mountain's base where massive grave sites have been dug. Undead figures can be glimpsed shambling in organized ranks."
+    },
+    {
+      "type": "Location",
+      "label": "Ravine of Echoes",
+      "@id": "location:ravine-of-echoes",
+      "description": "A deep canyon where voices carry impossibly far and sound distorts. Cult scouts use it as a communication route and hiding place."
+    }
+  ],
   "containsPlace": [
     {
       "label": "The Behemoth Trench",
+      "@id": "location:the-behemoth-trench",
       "description": "A massive, roughly circular depression thousands of meters across. Ancient masonry and skeletal stone structures ring its lip. At its bottom lies something vast, sleeping or stirring—wreathed in shadow and necrotic fog."
     },
     {
       "label": "Ritual Ossuary",
+      "@id": "location:ritual-ossuary",
       "description": "A site of bone-stacked graves and mass execution altars where the Cult of the Unbroken performs resurrection ceremonies. Marked by Xanthian sigils carved into stone and by the constant reek of embalming oils."
     },
     {
       "label": "Obsidian Spire",
+      "@id": "location:obsidian-spire",
       "description": "An isolated volcanic peak where Drexl maintains a war camp and necromantic observatory. Black banner flies constantly from its summit."
     },
     {
       "label": "The Deadlands",
+      "@id": "location:the-deadlands",
       "description": "Barren plains surrounding the mountain's base where massive grave sites have been dug. Undead figures can be glimpsed shambling in organized ranks."
     },
     {
       "label": "Ravine of Echoes",
+      "@id": "location:ravine-of-echoes",
       "description": "A deep canyon where voices carry impossibly far and sound distorts. Cult scouts use it as a communication route and hiding place."
     }
   ],

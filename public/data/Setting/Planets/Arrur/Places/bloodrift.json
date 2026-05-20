@@ -3,8 +3,18 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "label": "rdfs:label",
     "type": "@type",
+    "Location": "https://stellararcana.org/Location",
     "Place": "https://schema.org/Place",
     "description": "https://schema.org/description",
+    "containedInLocation": {
+      "@id": "https://stellararcana.org/containedInLocation",
+      "@type": "@id"
+    },
+    "containsLocation": {
+      "@id": "https://stellararcana.org/containsLocation",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "containsPlace": {
       "@id": "https://schema.org/containsPlace",
       "@container": "@list"
@@ -19,7 +29,7 @@
       "@container": "@list"
     }
   },
-  "type": "Place",
+  "type": ["Place", "Location"],
   "label": "Bloodrift",
   "description": [
     "A vertical fortress-city carved into the cliffs of a massive canyon on Arrur, central to war and trade.",
@@ -28,27 +38,65 @@
     "Economy: Imports high-end weaponry, magic artifacts, and atmospheric processors. Exports war material, mercenary contracts, and scavenged ancient tech.",
     "Culture: Aggressive pragmatism. Honor is measured in how much you can haul up from the Rift and how many times you climb back down again."
   ],
-  "@id": "https://stellararcana.org/place/bloodrift",
-  "containedInPlace": "https://stellararcana.org/place/arrur",
+  "@id": "location:bloodrift",
+  "containedInLocation": "location:arrur",
+  "containedInPlace": "location:arrur",
+  "containsLocation": [
+    {
+      "type": "Location",
+      "label": "The Mawport",
+      "@id": "location:the-mawport",
+      "description": "The spaceport plateau — fortified, heavily militarized, ringed with anti-orbital guns."
+    },
+    {
+      "type": "Location",
+      "label": "The Chainmarkets",
+      "@id": "location:the-chainmarkets",
+      "description": "Suspended markets built into iron scaffolding along the cliffs. You buy and sell midair."
+    },
+    {
+      "type": "Location",
+      "label": "The Clutch",
+      "@id": "location:the-clutch",
+      "description": "The dense, tangled lower city where the poorest dwell in nets, cages, and shanties."
+    },
+    {
+      "type": "Location",
+      "label": "The Redsteel Hall",
+      "@id": "location:the-redsteel-hall",
+      "description": "The main gathering hall for mercenary companies — contracts are fought over with ritualized knife duels."
+    },
+    {
+      "type": "Location",
+      "label": "The Blackcradle",
+      "@id": "location:the-blackcradle",
+      "description": "Deepest known cavern accessible from Bloodrift, rumored to house an entire forgotten race — or worse."
+    }
+  ],
   "containsPlace": [
     {
       "label": "The Mawport",
+      "@id": "location:the-mawport",
       "description": "The spaceport plateau \u2014 fortified, heavily militarized, ringed with anti-orbital guns."
     },
     {
       "label": "The Chainmarkets",
+      "@id": "location:the-chainmarkets",
       "description": "Suspended markets built into iron scaffolding along the cliffs. You buy and sell midair."
     },
     {
       "label": "The Clutch",
+      "@id": "location:the-clutch",
       "description": "The dense, tangled lower city where the poorest dwell in nets, cages, and shanties."
     },
     {
       "label": "The Redsteel Hall",
+      "@id": "location:the-redsteel-hall",
       "description": "The main gathering hall for mercenary companies \u2014 contracts are fought over with ritualized knife duels."
     },
     {
       "label": "The Blackcradle",
+      "@id": "location:the-blackcradle",
       "description": "Deepest known cavern accessible from Bloodrift, rumored to house an entire forgotten race \u2014 or worse."
     }
   ],

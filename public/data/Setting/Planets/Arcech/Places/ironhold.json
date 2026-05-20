@@ -3,8 +3,18 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "label": "rdfs:label",
     "type": "@type",
+    "Location": "https://stellararcana.org/Location",
     "Place": "https://schema.org/Place",
     "description": "https://schema.org/description",
+    "containedInLocation": {
+      "@id": "https://stellararcana.org/containedInLocation",
+      "@type": "@id"
+    },
+    "containsLocation": {
+      "@id": "https://stellararcana.org/containsLocation",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "containsPlace": {
       "@id": "https://schema.org/containsPlace",
       "@container": "@list"
@@ -14,7 +24,7 @@
       "@type": "@id"
     }
   },
-  "type": "Place",
+  "type": ["Place", "Location"],
   "label": "Ironhold",
   "description": [
     "A brutal industrial hive city built around massive underground ore deposits and surface-level refineries. Ironhold is perpetual motion—furnaces roar, pneumatic lifts scream, and cargo shuttles arc overhead 24/7. The city is a machine for converting raw materials into processed goods and shipping them off-world.",
@@ -24,27 +34,65 @@
     "Culture: Pragmatic, hierarchical, union-dominated. Status is measured by skill, safety record, and tenure. Work defines identity; leisure is brief and often involves gambling or black-market substances.",
     "Dominant Power: Forge Syndicate (labor union with absolute veto over production). Other presences: Armanitech (procurement office and equipment sales), Brug's Gobbos (shadows on every dock, black-market supplies), independent salvagers."
   ],
-  "@id": "https://stellararcana.org/place/ironhold",
-  "containedInPlace": "https://stellararcana.org/place/arcech",
+  "@id": "location:ironhold",
+  "containedInLocation": "location:arcech",
+  "containedInPlace": "location:arcech",
+  "containsLocation": [
+    {
+      "type": "Location",
+      "label": "The Thermite Pits",
+      "@id": "location:the-thermite-pits",
+      "description": "Underground mining and open-pit excavations extracting ore directly. Geothermal vents power the deepest refineries. Dangerous, relentless work."
+    },
+    {
+      "type": "Location",
+      "label": "The Forge District",
+      "@id": "location:the-forge-district",
+      "description": "Massive industrial furnaces and smelting operations. The air reeks of metal and sulfur. This is the economic heart."
+    },
+    {
+      "type": "Location",
+      "label": "Worker's Haven",
+      "@id": "location:workers-haven",
+      "description": "Dense lower residential district. Cheap, utilitarian housing blocks stacked vertically. Syndicate union halls and communal dining centers."
+    },
+    {
+      "type": "Location",
+      "label": "The Cargo Towers",
+      "@id": "location:the-cargo-towers",
+      "description": "Massive freight elevator shafts and aerodock facilities connecting to orbital freighters. Where processed goods are loaded for off-world shipment."
+    },
+    {
+      "type": "Location",
+      "label": "The Undercity",
+      "@id": "location:the-undercity",
+      "description": "Black-market district hidden within abandoned mining shafts and tunnel networks. Where gray-market goods change hands and Syndicate discipline doesn't reach."
+    }
+  ],
   "containsPlace": [
     {
       "label": "The Thermite Pits",
+      "@id": "location:the-thermite-pits",
       "description": "Underground mining and open-pit excavations extracting ore directly. Geothermal vents power the deepest refineries. Dangerous, relentless work."
     },
     {
       "label": "The Forge District",
+      "@id": "location:the-forge-district",
       "description": "Massive industrial furnaces and smelting operations. The air reeks of metal and sulfur. This is the economic heart."
     },
     {
       "label": "Worker's Haven",
+      "@id": "location:workers-haven",
       "description": "Dense lower residential district. Cheap, utilitarian housing blocks stacked vertically. Syndicate union halls and communal dining centers."
     },
     {
       "label": "The Cargo Towers",
+      "@id": "location:the-cargo-towers",
       "description": "Massive freight elevator shafts and aerodock facilities connecting to orbital freighters. Where processed goods are loaded for off-world shipment."
     },
     {
       "label": "The Undercity",
+      "@id": "location:the-undercity",
       "description": "Black-market district hidden within abandoned mining shafts and tunnel networks. Where gray-market goods change hands and Syndicate discipline doesn't reach."
     }
   ]

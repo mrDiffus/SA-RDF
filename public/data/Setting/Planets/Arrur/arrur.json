@@ -20,7 +20,8 @@
       "@type": "@id"
     }
   },
-  "type": "CreativeWork",
+  "type": ["CreativeWork", "Location"],
+  "@id": "location:arrur",
   "label": "Arrur",
   "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and massive geological violence. It features sheer cliffs dropping into furious oceans, high-altitude deserts, volcanic plains, and myth-laden landmarks. Society revolves around strength, survival, and fortified cities like Bloodrift, which import destructive tech and export mercenaries, war materials, and magical arms. However, Arrur now faces an existential threat: the Cult of the Unbroken, a death-cult devoted to the lich-empress Xanthia, has launched a military-religious crusade across the orc homeworld. Led by the war-priest Drexl, they spread necromantic doctrine, resurrect fallen warriors as reinforcements, and pursue an ancient power buried in the Southern Mountains—the Behemoth, a relic of forgotten ages meant to become Xanthia's weapon of apocalyptic terror.",
   "genre": "God-Scarred Mythology, Highland Brutalism, Mercenary Frontier, Volcanic War Epic",
@@ -50,72 +51,72 @@
     "type": "Person",
     "label": "Your Name or Alias"
   },
-  "about": {
-    "type": "Place",
+    "about": {
+    "type": ["Place", "Location"],
     "label": "Arrur",
     "description": "A high-gravity planet with extreme vertical geography, hostile oceans, and a culture built on war, survival, and myth. Ancient gods are said to have physically shaped the planet by biting it, leaving massive cliffs, frozen peaks, and cursed rivers.",
-    "@id": "https://stellararcana.org/place/arrur"
+      "@id": "location:arrur"
   },
   "locationCreated": {
-    "type": "Place",
+    "type": ["Place", "Location"],
     "label": "Bloodrift",
     "description": "A vertical fortress-city carved into the cliff walls of a massive canyon. Imports destructive technology via spaceport and exports war goods, mercenaries, and enchanted arms. Features include the Mawport, Chainmarkets, Clutch, Redsteel Hall, and Blackcradle.",
-    "@id": "https://stellararcana.org/place/bloodrift"
+      "@id": "location:bloodrift"
   },
   "hasPart": [
     {
-      "type": "Place",
+      "type": ["Place", "Location"],
       "label": "Bloodrift",
       "description": "A militarized trade hub and vertical city, central to Arrur's economy and warfare culture.",
-      "@id": "https://stellararcana.org/place/bloodrift"
+        "@id": "location:bloodrift"
     },
     {
-      "type": "Place",
+      "type": ["Place", "Location"],
       "label": "Teeth of Gorthuun",
       "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails in their presence.",
-      "@id": "https://stellararcana.org/place/teeth-of-gorthuun"
+        "@id": "location:teeth-of-gorthuun"
     },
     {
-      "type": "Place",
+      "type": ["Place", "Location"],
       "label": "Hollow of the Last Joke",
       "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza\u2019s Grin, said to originate from his shattered, still-living heart deep underground.",
-      "@id": "https://stellararcana.org/place/hollow-of-the-last-joke"
+        "@id": "location:hollow-of-the-last-joke"
     },
     {
-      "type": "Place",
+      "type": ["Place", "Location"],
       "label": "Thakza\u2019s Grin",
       "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke across the highlands. Said to be Zugthak's laughter made liquid.",
-      "@id": "https://stellararcana.org/place/thakzas-grin"
+        "@id": "location:thakzas-grin"
     },
     {
-      "type": "Place",
+      "type": ["Place", "Location"],
       "label": "Korvhal",
       "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through the highlands.",
-      "@id": "https://stellararcana.org/place/korvhal"
+        "@id": "location:korvhal"
     },
     {
-      "type": "Place",
+      "type": ["Place", "Location"],
       "label": "Skarth\u2019s Hollow",
       "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone palisades.",
-      "@id": "https://stellararcana.org/place/skarths-hollow"
+        "@id": "location:skarths-hollow"
     },
     {
-      "type": "Place",
+      "type": ["Place", "Location"],
       "label": "Ashcross",
       "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock.",
-      "@id": "https://stellararcana.org/place/ashcross"
+        "@id": "location:ashcross"
     },
     {
-      "type": "Place",
+      "type": ["Place", "Location"],
       "label": "Drowned Bastion",
       "description": "Storm-battered cliffside city used as a penal colony and pirate port.",
-      "@id": "https://stellararcana.org/place/drowned-bastion"
+        "@id": "location:drowned-bastion"
     },
     {
-      "type": "Place",
+      "type": ["Place", "Location"],
       "label": "Southern Mountains",
       "description": "A vast, forbidding range at Arrur's southern extremity where magic and technology fail. Home to the Behemoth—an ancient, possibly sentient titan whose awakening would be apocalyptic.",
-      "@id": "https://stellararcana.org/place/southern-mountains"
+        "@id": "location:southern-mountains"
     }
   ],
   "inLanguage": "en",

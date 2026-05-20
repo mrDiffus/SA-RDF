@@ -3,8 +3,18 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "label": "rdfs:label",
     "type": "@type",
+    "Location": "https://stellararcana.org/Location",
     "Place": "https://schema.org/Place",
     "description": "https://schema.org/description",
+    "containedInLocation": {
+      "@id": "https://stellararcana.org/containedInLocation",
+      "@type": "@id"
+    },
+    "containsLocation": {
+      "@id": "https://stellararcana.org/containsLocation",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "containsPlace": {
       "@id": "https://schema.org/containsPlace",
       "@container": "@list"
@@ -14,7 +24,7 @@
       "@type": "@id"
     }
   },
-  "type": "Place",
+  "type": ["Place", "Location"],
   "label": "Blackwater",
   "description": [
     "A gritty, graffiti-covered city built in the shadow of polluted swamps and industrial runoff. Blackwater is where crime, commerce, and survival intertwine. The city's facade is legal markets; its reality is a dual economy where black-market activity rivals legitimate trade. The Velvet Mask controls the shadow side; law enforcement is either paid off or outgunned.",
@@ -24,27 +34,65 @@
     "Culture: Noir, paranoid, trust-nobody. Status is measured by money (no questions asked), connections to shadow networks, and ability to keep secrets. Surface culture is gritty but civil; shadow culture is ruthless.",
     "Dominant Power: The Velvet Mask (shadow government). Other presences: Armanitech (covert operations office), Brug's Gobbos (pervasive black-market operators), Deeprunners Union (tunnel network controllers), independent crime syndicates (tolerated as long as they don't challenge the Mask)."
   ],
-  "@id": "https://stellararcana.org/place/blackwater",
-  "containedInPlace": "https://stellararcana.org/place/arcech",
+  "@id": "location:blackwater",
+  "containedInLocation": "location:arcech",
+  "containedInPlace": "location:arcech",
+  "containsLocation": [
+    {
+      "type": "Location",
+      "label": "The Sprawl",
+      "@id": "location:the-sprawl",
+      "description": "Upper city slums with dense, ramshackle housing. Legitimate street markets compete with black-market stalls. High crime; low enforcement."
+    },
+    {
+      "type": "Location",
+      "label": "The Gray Quarter",
+      "@id": "location:the-gray-quarter",
+      "description": "Mid-city business district with legitimate storefronts disguising illegal operations. Where the Mask conducts official business."
+    },
+    {
+      "type": "Location",
+      "label": "Port Blackwater",
+      "@id": "location:port-blackwater",
+      "description": "Docking facilities and cargo terminals. Smuggler operational hub. Theoretically regulated; effectively lawless."
+    },
+    {
+      "type": "Location",
+      "label": "The Underpools",
+      "@id": "location:the-underpools",
+      "description": "Sewage treatment facilities and sub-city tunnel networks heavily controlled by Deeprunners and the Mask. Hidden safe houses and dead-drop locations."
+    },
+    {
+      "type": "Location",
+      "label": "Crimson Row",
+      "@id": "location:crimson-row",
+      "description": "The vice district. Casinos, pleasure houses, fight pits, and drug dens. Highest revenue; highest danger. Home to most Mask enforcement."
+    }
+  ],
   "containsPlace": [
     {
       "label": "The Sprawl",
+      "@id": "location:the-sprawl",
       "description": "Upper city slums with dense, ramshackle housing. Legitimate street markets compete with black-market stalls. High crime; low enforcement."
     },
     {
       "label": "The Gray Quarter",
+      "@id": "location:the-gray-quarter",
       "description": "Mid-city business district with legitimate storefronts disguising illegal operations. Where the Mask conducts official business."
     },
     {
       "label": "Port Blackwater",
+      "@id": "location:port-blackwater",
       "description": "Docking facilities and cargo terminals. Smuggler operational hub. Theoretically regulated; effectively lawless."
     },
     {
       "label": "The Underpools",
+      "@id": "location:the-underpools",
       "description": "Sewage treatment facilities and sub-city tunnel networks heavily controlled by Deeprunners and the Mask. Hidden safe houses and dead-drop locations."
     },
     {
       "label": "Crimson Row",
+      "@id": "location:crimson-row",
       "description": "The vice district. Casinos, pleasure houses, fight pits, and drug dens. Highest revenue; highest danger. Home to most Mask enforcement."
     }
   ]

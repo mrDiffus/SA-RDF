@@ -34,27 +34,65 @@
     "Culture: Reverent, competitive, exclusive. Status is measured by magical achievement, Manfuctor affiliation, and proximity to the city's mysteries. The Luminous Synthesis holds absolute cultural and economic authority.",
     "Dominant Power: The Luminous Synthesis (Manfuctor cabal and arcane authority). Other presences: Armanitech (satellite research office), Concordat Trading House (embassy and luxury goods distribution), freelance Manfuctors."
   ],
-  "@id": "https://stellararcana.org/place/skyhaven",
-  "containedInPlace": "https://stellararcana.org/place/arcech",
+  "@id": "location:skyhaven",
+  "containedInLocation": "location:arcech",
+  "containedInPlace": "location:arcech",
+  "containsLocation": [
+    {
+      "type": "Location",
+      "label": "The Sacred Vaults",
+      "@id": "location:the-sacred-vaults",
+      "description": "The lowest, oldest levels built directly into the Pillars. Sealed chambers rumored to contain pre-city technology and ancient texts. Entry forbidden except by Synthesis decree."
+    },
+    {
+      "type": "Location",
+      "label": "The Arcane Quarter",
+      "@id": "location:the-arcane-quarter",
+      "description": "Mid-city district containing Manfuctor workshops, enchantment studios, and arcane academies. Center of magical research and production."
+    },
+    {
+      "type": "Location",
+      "label": "The Merchant Promenade",
+      "@id": "location:the-merchant-promenade",
+      "description": "A district of luxury shops, galleries, and trading houses. Where the wealthy acquire rare goods and the Synthesis displays masterwork artifacts."
+    },
+    {
+      "type": "Location",
+      "label": "The Celestial Spire",
+      "@id": "location:the-celestial-spire",
+      "description": "The highest residential and administrative district. Home to Synthesis leadership and the wealthiest inhabitants. Direct connection to the space elevator terminus."
+    },
+    {
+      "type": "Location",
+      "label": "The Observatory Ring",
+      "@id": "location:the-observatory-ring",
+      "description": "Orbital observation stations and satellite docking facilities surrounding Skyhaven. Research centers for magical and technological study of the cosmos."
+    }
+  ],
   "containsPlace": [
     {
       "label": "The Sacred Vaults",
+      "@id": "location:the-sacred-vaults",
       "description": "The lowest, oldest levels built directly into the Pillars. Sealed chambers rumored to contain pre-city technology and ancient texts. Entry forbidden except by Synthesis decree."
     },
     {
       "label": "The Arcane Quarter",
+      "@id": "location:the-arcane-quarter",
       "description": "Mid-city district containing Manfuctor workshops, enchantment studios, and arcane academies. Center of magical research and production."
     },
     {
       "label": "The Merchant Promenade",
+      "@id": "location:the-merchant-promenade",
       "description": "A district of luxury shops, galleries, and trading houses. Where the wealthy acquire rare goods and the Synthesis displays masterwork artifacts."
     },
     {
       "label": "The Celestial Spire",
+      "@id": "location:the-celestial-spire",
       "description": "The highest residential and administrative district. Home to Synthesis leadership and the wealthiest inhabitants. Direct connection to the space elevator terminus."
     },
     {
       "label": "The Observatory Ring",
+      "@id": "location:the-observatory-ring",
       "description": "Orbital observation stations and satellite docking facilities surrounding Skyhaven. Research centers for magical and technological study of the cosmos."
     }
   ]

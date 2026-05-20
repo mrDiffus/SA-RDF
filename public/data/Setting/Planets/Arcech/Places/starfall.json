@@ -3,8 +3,18 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "label": "rdfs:label",
     "type": "@type",
+    "Location": "https://stellararcana.org/Location",
     "Place": "https://schema.org/Place",
     "description": "https://schema.org/description",
+    "containedInLocation": {
+      "@id": "https://stellararcana.org/containedInLocation",
+      "@type": "@id"
+    },
+    "containsLocation": {
+      "@id": "https://stellararcana.org/containsLocation",
+      "@container": "@list",
+      "@type": "@id"
+    },
     "containsPlace": {
       "@id": "https://schema.org/containsPlace",
       "@container": "@list"
@@ -14,7 +24,7 @@
       "@type": "@id"
     }
   },
-  "type": "Place",
+  "type": ["Place", "Location"],
   "label": "Starfall",
   "description": [
     "The largest off-world port in the Arcech system, built around multiple massive space elevators and orbital docking facilities. Starfall is the nexus of interstellar trade—it is where cultures collide, commerce flows, and fortunes are made or lost. The city is perpetually busy with traders, diplomats, adventurers, and merchants from across known space.",
@@ -24,27 +34,65 @@
     "Culture: Cosmopolitan, deal-oriented, pragmatic. Status measured by wealth, connections, and successful negotiations. Trust is temporary; contracts are sacred. Languages: at least five major languages spoken daily.",
     "Dominant Power: The Concordat Trading House (merchant republic controlling tariffs and shipping). Other presences: Armanitech (corporate import-export subsidiary), House Valorian (embassy representing capital interests), Deeprunners Union (sub-city smuggling networks), Exodian Church (recruiting among transients), Brug's Gobbos (everywhere—dealing information and contraband)."
   ],
-  "@id": "https://stellararcana.org/place/starfall",
-  "containedInPlace": "https://stellararcana.org/place/arcech",
+  "@id": "location:starfall",
+  "containedInLocation": "location:arcech",
+  "containedInPlace": "location:arcech",
+  "containsLocation": [
+    {
+      "type": "Location",
+      "label": "The Elevator Spires",
+      "@id": "location:the-elevator-spires",
+      "description": "Massive orbital connection hubs. Docking facilities for deep-space vessels, transfer stations for gravity-bound trade. Highest security zone."
+    },
+    {
+      "type": "Location",
+      "label": "The Merchant Quarter",
+      "@id": "location:the-merchant-quarter",
+      "description": "Commercial district dominated by trading houses, commodity brokers, and negotiation halls. Where deals worth millions are struck daily."
+    },
+    {
+      "type": "Location",
+      "label": "The Docks",
+      "@id": "location:the-docks",
+      "description": "Warehouse districts and cargo terminals. Constant movement of goods. Mix of legitimate and black-market activity."
+    },
+    {
+      "type": "Location",
+      "label": "The Bazaar of Worlds",
+      "@id": "location:the-bazaar-of-worlds",
+      "description": "Open market where traders from all cultures sell exotic goods, rare artifacts, and off-world merchandise. Chaotic, dangerous, endlessly fascinating."
+    },
+    {
+      "type": "Location",
+      "label": "The Expat Districts",
+      "@id": "location:the-expat-districts",
+      "description": "Luxury hotels, embassy buildings, and consulate compounds. Home to diplomatic staff and wealthy travelers. Heavily patrolled and secured."
+    }
+  ],
   "containsPlace": [
     {
       "label": "The Elevator Spires",
+      "@id": "location:the-elevator-spires",
       "description": "Massive orbital connection hubs. Docking facilities for deep-space vessels, transfer stations for gravity-bound trade. Highest security zone."
     },
     {
       "label": "The Merchant Quarter",
+      "@id": "location:the-merchant-quarter",
       "description": "Commercial district dominated by trading houses, commodity brokers, and negotiation halls. Where deals worth millions are struck daily."
     },
     {
       "label": "The Docks",
+      "@id": "location:the-docks",
       "description": "Warehouse districts and cargo terminals. Constant movement of goods. Mix of legitimate and black-market activity."
     },
     {
       "label": "The Bazaar of Worlds",
+      "@id": "location:the-bazaar-of-worlds",
       "description": "Open market where traders from all cultures sell exotic goods, rare artifacts, and off-world merchandise. Chaotic, dangerous, endlessly fascinating."
     },
     {
       "label": "The Expat Districts",
+      "@id": "location:the-expat-districts",
       "description": "Luxury hotels, embassy buildings, and consulate compounds. Home to diplomatic staff and wealthy travelers. Heavily patrolled and secured."
     }
   ]
