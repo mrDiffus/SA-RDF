@@ -1,0 +1,236 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "schema": "https://schema.org/",
+    "sa": "https://stellararcana.org/"
+  },
+  "@graph": [
+    {
+      "@id": "sa:curio/ravager-fang-spine-of-world",
+      "@type": "sa:Curio",
+      "rdfs:label": "Ravager Fang — Spine of the World",
+      "schema:description": "A massive fang torn from a colossal Ravager beast that roamed the Spine of the World's highest peaks centuries ago. Still warm to the touch, it thrums with primal ferocity. The enamel is impossibly white and curved, the root stained with deep crimson.",
+      "sa:rarity": "rare",
+      "sa:origin": "monster_hunting",
+      "sa:compatibleTypes": [
+        "weapon",
+        "armor",
+        "jewelry"
+      ],
+      "sa:isSwappable": true,
+      "sa:attunementTime": "short-rest",
+      "sa:attunementRitual": "Hold the fang to the base item while meditating on the hunt. Recall the moment the beast fell. The fang grows warm in your grip—you will feel it settle into place.",
+      "sa:effects": [
+        {
+          "rdfs:label": "Predator's Resonance",
+          "schema:description": "+2 to Intimidation checks against beasts and large creatures.",
+          "sa:appliesToItemType": "weapon"
+        },
+        {
+          "rdfs:label": "Bestial Fortitude",
+          "schema:description": "Wearer gains resistance to piercing damage.",
+          "sa:appliesToItemType": "armor"
+        },
+        {
+          "rdfs:label": "Predator's Presence",
+          "schema:description": "Once per long rest, you may reroll a Strength check.",
+          "sa:appliesToItemType": "jewelry"
+        }
+      ]
+    },
+    {
+      "@id": "sa:curio/bloodstained-silk-bandage",
+      "@type": "sa:Curio",
+      "rdfs:label": "Bloodstained Silk Bandage",
+      "schema:description": "A length of white silk soaked in the blood of a noble sacrifice—a life given willingly for victory. The stain has never faded, never dried completely. It radiates quiet, solemn power.",
+      "sa:rarity": "very-rare",
+      "sa:origin": "sacrifice_ritual",
+      "sa:compatibleTypes": [
+        "clothing",
+        "jewelry"
+      ],
+      "sa:isSwappable": false,
+      "sa:attunementTime": "short-rest",
+      "sa:attunementRitual": "Wrap the bandage around the base item and speak aloud the name of what you sacrificed. Promise to honor that sacrifice. The silk clings of its own accord.",
+      "sa:sacrifice": "Permanently lose 5 maximum HP. This is the weight of the pact.",
+      "sa:effects": [
+        {
+          "rdfs:label": "Blood Pact",
+          "schema:description": "Once per long rest, you may reroll a failed saving throw. The lost HP may be restored only by the item being destroyed or the pact being formally renounced (rare, with consequences)."
+        }
+      ]
+    },
+    {
+      "@id": "sa:curio/echo-of-last-words",
+      "@type": "sa:Curio",
+      "rdfs:label": "Echo of Last Words",
+      "schema:description": "A crystallized sigh—the final breath of a fallen hero, captured in a translucent stone the size of a thumb. Warm. Faintly luminous at night. It remembers what was spoken.",
+      "sa:rarity": "uncommon",
+      "sa:origin": "fallen_companion",
+      "sa:compatibleTypes": [
+        "weapon",
+        "jewelry"
+      ],
+      "sa:isSwappable": true,
+      "sa:attunementTime": "short-rest",
+      "sa:attunementRitual": "Hold the stone close and listen. Silently remember the words spoken. You will hear them echo faintly each time you use the item.",
+      "sa:effects": [
+        {
+          "rdfs:label": "Echoing Resolve",
+          "schema:description": "Once per long rest, when you would fail an ability check or saving throw, you may choose to succeed instead. The stone grows cold for one day."
+        }
+      ]
+    },
+    {
+      "@id": "sa:curio/plague-survivor-bone",
+      "@type": "sa:Curio",
+      "rdfs:label": "Plague Survivor Bone",
+      "schema:description": "A small bone from a creature that survived the Whitecough—a plague thought to have no survivors. The bone is pale and strange, etched with patterns that weren't carved by any tool. It smells faintly of herbs and earth.",
+      "sa:rarity": "rare",
+      "sa:origin": "plague_survivor",
+      "sa:compatibleTypes": [
+        "armor",
+        "clothing"
+      ],
+      "sa:isSwappable": true,
+      "sa:attunementTime": "short-rest",
+      "sa:attunementRitual": "Meditate on survival. Press the bone against the item and feel the warmth of life persisting through impossible odds.",
+      "sa:effects": [
+        {
+          "rdfs:label": "Survivor's Vigil",
+          "schema:description": "Wearer gains advantage on saving throws against disease and poison. Once per long rest, if reduced to 0 HP, you may immediately use your reaction to regain 1d8 + CON modifier HP instead."
+        }
+      ]
+    },
+    {
+      "@id": "sa:curio/fey-bargain-token",
+      "@type": "sa:Curio",
+      "rdfs:label": "Fey Bargain Token",
+      "schema:description": "An impossibly thin coin or medallion, neither gold nor silver, that shifts color in different light. It was given freely by a fey lord in exchange for a debt you do not yet understand you owe. Beautiful and terrible.",
+      "sa:rarity": "very-rare",
+      "sa:origin": "fey_encounter",
+      "sa:compatibleTypes": [
+        "jewelry",
+        "clothing"
+      ],
+      "sa:isSwappable": false,
+      "sa:attunementTime": "ritual",
+      "sa:attunementRitual": "Speak the fey lord's name three times (if you know it) or simply offer your intention to accept the bargain. The token will adhere to the item. You will know, in your bones, that the debt is now formal.",
+      "sa:sacrifice": "You are bound to fulfill a quest or service for the fey lord when called upon. Refusal incurs disadvantage on all Charisma checks for one lunar cycle.",
+      "sa:effects": [
+        {
+          "rdfs:label": "Fey Charm",
+          "schema:description": "You may cast one fey-themed spell or cantrip at will (GM's choice based on bargain struck). Additionally, fey creatures have disadvantage on their first attack against you in combat."
+        }
+      ]
+    },
+    {
+      "@id": "sa:curio/obsidian-tear",
+      "@type": "sa:Curio",
+      "rdfs:label": "Obsidian Tear",
+      "schema:description": "A perfectly formed black tear-drop of volcanic glass, no larger than a teardrop. It is cold—always cold—and never fogs, no matter the humidity. Legend says it was wept by a god in mourning.",
+      "sa:rarity": "uncommon",
+      "sa:origin": "ancient_ruin",
+      "sa:compatibleTypes": [
+        "weapon",
+        "armor",
+        "jewelry"
+      ],
+      "sa:isSwappable": true,
+      "sa:attunementTime": "short-rest",
+      "sa:attunementRitual": "Hold the tear and meditate on sorrow—any loss, any moment of grief. Let it pass into the obsidian. It will feel lighter afterward.",
+      "sa:effects": [
+        {
+          "rdfs:label": "Sorrow's Edge",
+          "schema:description": "Weapon attacks with this curio gain +1 to damage rolls. On armor, grants +1 to AC. On jewelry, wearer resists one instance of psychic damage per long rest."
+        }
+      ]
+    },
+    {
+      "@id": "sa:curio/leviathan-barb",
+      "@type": "sa:Curio",
+      "rdfs:label": "Leviathan Barb",
+      "schema:description": "A serrated spike harvested from a colossal aquatic predator dwelling in the deep oceans. Still slick with bioluminescent venom, it pulses with an ethereal blue-green glow. Dangerous to handle carelessly—the venom remains potent even years after extraction.",
+      "sa:rarity": "rare",
+      "sa:origin": "deep_sea_hunt",
+      "sa:compatibleTypes": [
+        "weapon"
+      ],
+      "sa:isSwappable": true,
+      "sa:attunementTime": "short-rest",
+      "sa:attunementRitual": "Carefully integrate the barb into the weapon's grip or hilt. Feel the venom throb in sync with your heartbeat. You become hyperaware of the toxin's predatory potential.",
+      "sa:effects": [
+        {
+          "rdfs:label": "Toxic Coating",
+          "schema:description": "Weapon attacks deal an additional 1d6 poison damage. On a critical hit, the target must make a CON save (DC 14) or be poisoned until the end of their next turn."
+        }
+      ]
+    },
+    {
+      "@id": "sa:curio/saint-statue-fragment",
+      "@type": "sa:Curio",
+      "rdfs:label": "Saint Statue Fragment",
+      "schema:description": "A broken piece of a marble or stone statue depicting a saint or holy figure. The break is ancient, weathered, but the remaining features are serene. It radiates a quiet, protective warmth.",
+      "sa:rarity": "uncommon",
+      "sa:origin": "holy_site",
+      "sa:compatibleTypes": [
+        "armor",
+        "jewelry",
+        "clothing"
+      ],
+      "sa:isSwappable": true,
+      "sa:attunementTime": "short-rest",
+      "sa:attunementRitual": "Hold the fragment and offer a silent prayer or moment of gratitude. Ask for the saint's blessing on the item.",
+      "sa:effects": [
+        {
+          "rdfs:label": "Holy Protection",
+          "schema:description": "Once per long rest, you may reroll a saving throw against an effect that would charm or frighten you."
+        }
+      ]
+    },
+    {
+      "@id": "sa:curio/phoenix-feather-binding",
+      "@type": "sa:Curio",
+      "rdfs:label": "Phoenix Feather Binding",
+      "schema:description": "A length of cord woven from phoenix down and sinew. It glows faintly orange-red and is warm to the touch. Impossible to burn. Smells of cinnamon and distant smoke.",
+      "sa:rarity": "legendary",
+      "sa:origin": "phoenix_encounter",
+      "sa:compatibleTypes": [
+        "weapon",
+        "armor"
+      ],
+      "sa:isSwappable": false,
+      "sa:attunementTime": "ritual",
+      "sa:attunementRitual": "Wrap the cord around the item in deliberate, meditative loops. With each loop, speak a vow—something you will pursue unto rebirth if necessary. On the final loop, the cord adheres permanently.",
+      "sa:sacrifice": "You become unable to lie about your vows. Each time you betray one, you take 1d6 psychic damage. However, if you die pursuing a vow, you automatically return to life at dawn with 1 HP (once, then the cord's power is spent).",
+      "sa:effects": [
+        {
+          "rdfs:label": "Rebirth's Promise",
+          "schema:description": "If attached to weapon: +2 to attack rolls and damage. If attached to armor: +2 to AC and saves. Additionally, the first time you reach 0 HP, you may stand again with 1 HP (recharges after a long rest in a place of significance to your vows)."
+        }
+      ]
+    },
+    {
+      "@id": "sa:curio/thiefs-mark",
+      "@type": "sa:Curio",
+      "rdfs:label": "Thief's Mark",
+      "schema:description": "A tiny sigil, burned or carved into the item—the personal seal of a legendary thief. It marks the item as one of their treasures. Still carries the faint scent of smoke and lockpicks.",
+      "sa:rarity": "uncommon",
+      "sa:origin": "outlaw_inheritance",
+      "sa:compatibleTypes": [
+        "jewelry",
+        "clothing"
+      ],
+      "sa:isSwappable": false,
+      "sa:attunementTime": "short-rest",
+      "sa:attunementRitual": "Study the mark and memorize its every curve. Pledge to use it wisely or unwisely, but consciously. The thief is watching, somewhere.",
+      "sa:effects": [
+        {
+          "rdfs:label": "Thief's Eye",
+          "schema:description": "Advantage on Stealth and Sleight of Hand checks. Once per long rest, you may detect a trap or hidden object within 30 feet as if you had used a search action."
+        }
+      ]
+    }
+  ]
+}

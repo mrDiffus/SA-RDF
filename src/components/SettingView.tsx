@@ -33,70 +33,69 @@ function resolveDataPath(path: string): string {
   return `${import.meta.env.BASE_URL}${normalizedPath}`;
 }
 
-// Character files to load for each organization (excluding org definition files)
-const CHARACTER_FILES_BY_ORG: Record<string, string[]> = {
-  'Armanitech': [],
-  'BrugsGobbos': ['brug.json'],
-  'Concordat-Trading-House': ['mira-strand.json', 'thordis-ironforge-morvan.json', 'kadesh-morvan.json', 'dorn-bellisarius.json', 'kael-ironbound.json', 'petra-shinn.json', 'selene-kross.json'],
-  'Cult-of-the-Unbroken': ['xanthia-everliving.json', 'drexl-herald.json'],
-  'Deeprunners-Union': [],
-  'Everliving-Faith': [],
-  'Exodian-Church': [],
-  'Forge-Syndicate': [],
-  'House-Valorian': [],
-  'Luminous-Synthesis': [],
-  'Velvet-Mask': [],
-  'Verdant-Collective': [],
-};
+interface ResourceIndexEntry {
+  file: string;
+  '@type': string;
+  'rdfs:label': string;
+  '@id': string | null;
+}
 
 async function fetchSettingData(): Promise<SettingData> {
-  const orgFolders = {
-    'Armanitech': 'armanitech',
-    'BrugsGobbos': 'brugs-gobbos',
-    'Concordat-Trading-House': 'concordat-trading-house',
-    'Cult-of-the-Unbroken': 'cult-of-the-unbroken',
-    'Deeprunners-Union': 'deeprunners-union',
-    'Everliving-Faith': 'everliving-faith',
-    'Exodian-Church': 'exodian-church',
-    'Forge-Syndicate': 'forge-syndicate',
-    'House-Valorian': 'house-valorian',
-    'Luminous-Synthesis': 'luminous-synthesis',
-    'Velvet-Mask': 'velvet-mask',
-    'Verdant-Collective': 'verdant-collective',
-  } as const;
+  const index = await fetch(resolveDataPath('/data/resource-index.json')).then(r => r.json()) as {
+    resources: ResourceIndexEntry[];
+  };
 
-  const [arrur, arcech, ...orgs] = await Promise.all([
-    fetch(resolveDataPath('/data/Setting/Planets/Arrur/arrur.json')).then(r => r.json()),
-    fetch(resolveDataPath('/data/Setting/Planets/Arcech/arcech.json')).then(r => r.json()),
-    ...Object.entries(orgFolders).map(([displayName, folderName]) =>
-      fetch(resolveDataPath(`/data/Setting/Organizations/${displayName}/${folderName}.json`))
+  const resources: ResourceIndexEntry[] = index.resources;
+
+  // Derive planets: Setting/Planets/<Name>/<slug>.json (no /Places/ segment)
+  const planetEntries = resources.filter(
+    r => r.file.startsWith('Setting/Planets/') && r.file.indexOf('/Places/') === -1
+  );
+
+  // Derive orgs: all sa:Organization entries under Setting/Organizations/
+  const orgEntries = resources.filter(r => r['@type'] === 'sa:Organization');
+
+  const [planets, ...orgs] = await Promise.all([
+    Promise.all(
+      planetEntries.map(entry =>
+        fetch(resolveDataPath(`/data/${entry.file}`)).then(r => r.json()).catch(() => null)
+      )
+    ),
+    ...orgEntries.map(orgEntry => {
+      // Derive folder name from file path: "Setting/Organizations/{FolderName}/{slug}.json"
+      const folderName = orgEntry.file.split('/')[2];
+
+      return fetch(resolveDataPath(`/data/${orgEntry.file}`))
         .then(r => r.json())
         .then(async (orgData) => {
-          // Load character files for this organization
-          const charFiles = CHARACTER_FILES_BY_ORG[displayName] || [];
+          // Load all non-org-definition files in the same folder
+          const memberEntries = resources.filter(
+            r => r.file.startsWith(`Setting/Organizations/${folderName}/`) && r['@type'] !== 'sa:Organization'
+          );
+
           const characters = await Promise.all(
-            charFiles.map(async (charFile) => {
+            memberEntries.map(async (memberEntry) => {
               try {
-                const charData = await fetch(resolveDataPath(`/data/Setting/Organizations/${displayName}/${charFile}`)).then(r => r.json());
+                const charData = await fetch(resolveDataPath(`/data/${memberEntry.file}`)).then(r => r.json());
                 return {
-                  filename: charFile.replace('.json', ''),
-                  label: charData['label'] || charData['rdfs:label'] || charFile,
-                  identity: charData['sa:identity'] || charData['sa:identity'],
+                  filename: memberEntry.file.split('/').pop()!.replace('.json', ''),
+                  label: charData['label'] || charData['rdfs:label'] || memberEntry['rdfs:label'],
+                  identity: charData['sa:identity'],
                 };
               } catch {
                 return null;
               }
             })
           );
-          
+
           return {
             ...orgData,
-            folderName: displayName,
+            folderName,
             characters: characters.filter((c) => c !== null),
           };
         })
-        .catch(() => null)
-    ),
+        .catch(() => null);
+    }),
   ]);
 
   const toPlanet = (raw: Record<string, unknown>): Planet => ({
@@ -119,7 +118,7 @@ async function fetchSettingData(): Promise<SettingData> {
   });
 
   return {
-    planets: [toPlanet(arrur), toPlanet(arcech)],
+    planets: (planets as (Record<string, unknown> | null)[]).filter(p => p !== null).map(toPlanet),
     organizations: orgs.filter((org) => org !== null).map(toOrg),
   };
 }

@@ -21,16 +21,15 @@ function resolveDataPath(path: string): string {
 }
 
 async function fetchPlaceData(planetName: string, placeName: string): Promise<PlaceDetail | null> {
-  const planetMap: Record<string, string> = {
-    'Arrur': '/data/Setting/Planets/Arrur/Places/',
-    'Arcech': '/data/Setting/Planets/Arcech/Places/'
-  };
+  // Strip location: prefix if present (places are referenced by @id which may include prefix)
+  const cleanPlaceName = placeName.startsWith('location:') 
+    ? placeName.slice('location:'.length) 
+    : placeName;
 
-  const placesPath = planetMap[planetName];
-  if (!placesPath) return null;
+  const placesPath = `/data/Setting/Planets/${planetName}/Places/`;
 
   try {
-    const res = await fetch(resolveDataPath(`${placesPath}${placeName}.json`));
+    const res = await fetch(resolveDataPath(`${placesPath}${cleanPlaceName}.json`));
     if (res.ok) {
       const raw = await res.json();
       return {

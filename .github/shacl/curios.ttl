@@ -1,0 +1,124 @@
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix sa: <https://stellararcana.org/> .
+
+sa:CurioShape
+  a sh:NodeShape ;
+  sh:targetClass sa:Curio ;
+  rdfs:comment "Validates story-born curios that attach to gear (weapons, armor, jewelry, clothing). Curios are adventure-earned enhancements tied to character narrative. Max 3 curios per item. Attuned via short rest ritual. Design guidance: rarity scales attunement cost and mechanical benefit. Common/uncommon: no cost, minor bonuses. Rare: material or ability cost. Very-rare/legendary: significant sacrifice or permanent commitment. Artifact: GM discretion." ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "Curio must have a memorable, evocative name." ;
+  ] ;
+  sh:property [
+    sh:path schema:description ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "Describe the curio's origin, appearance, and feel. Make it a story, not a stat." ;
+  ] ;
+  sh:property [
+    sh:path sa:rarity ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "common" "uncommon" "rare" "very-rare" "legendary" "artifact" ) ;
+    sh:message "Rarity determines attunement cost and mechanical impact. Scale accordingly." ;
+  ] ;
+  sh:property [
+    sh:path sa:origin ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:message "Where did this curio come from? (e.g., 'dragon_slaying', 'ancient_ruin', 'sacrifice_ritual', 'fey_encounter', 'plague_survivor')" ;
+  ] ;
+  sh:property [
+    sh:path sa:compatibleTypes ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:message "Which item types can this attach to? Options: weapon, armor, jewelry, clothing. Array allowed." ;
+  ] ;
+  sh:property [
+    sh:path sa:isSwappable ;
+    sh:datatype xsd:boolean ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "Swappable curios can move between items. Non-swappable (e.g., 'dragon blood soaked into leather') permanently bond to the first item." ;
+  ] ;
+  sh:property [
+    sh:path sa:attunementTime ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:in ( "short-rest" "long-rest" "ritual" "immediate" ) ;
+    sh:message "Standard: short-rest (1 hour during rest). Long-rest for powerful curios. Ritual/immediate for GM-defined moments." ;
+  ] ;
+  sh:property [
+    sh:path sa:attunementRitual ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "Narrative description of the attunement process. What does the character do/feel? This is the soul of the curio." ;
+  ] ;
+  sh:property [
+    sh:path sa:sacrifice ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "If present, describe what must be sacrificed (rare+): HP loss, ability point, permanent resource, emotional cost, etc." ;
+  ] ;
+  sh:property [
+    sh:path sa:effects ;
+    sh:node sa:CurioEffectShape ;
+    sh:minCount 1 ;
+    sh:message "Array of mechanical or narrative benefits. Rare curios may have multiple contextual effects depending on carrier item type." ;
+  ] ;
+  sh:property [
+    sh:path sa:maxAttachable ;
+    sh:datatype xsd:integer ;
+    sh:maxCount 1 ;
+    sh:message "Optional: how many times can this specific curio exist on one item? (Default: 1). Rarely used." ;
+  ] .
+
+sa:CurioEffectShape
+  a sh:NodeShape ;
+  rdfs:comment "A single mechanical or narrative benefit granted by the curio. Multiple effects allow context-dependent bonuses based on carrier item." ;
+  sh:property [
+    sh:path rdfs:label ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "Effect name or hook (e.g., 'Draconic Resonance', 'Echoing Resolve')." ;
+  ] ;
+  sh:property [
+    sh:path schema:description ;
+    sh:datatype xsd:string ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "Mechanical benefit or narrative flourish. Be specific: +X bonus, reroll once per long rest, resistance to X, etc." ;
+  ] ;
+  sh:property [
+    sh:path sa:appliesToItemType ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "Optional: if this effect is context-dependent, specify carrier type ('weapon', 'armor', etc.). If absent, effect applies universally." ;
+  ] .
+
+sa:AttachedCurioShape
+  a sh:NodeShape ;
+  rdfs:comment "For character equipment instances (not prototypicals in equipment lists). Tracks curios bound to specific gear." ;
+  sh:property [
+    sh:path sa:attachedCurios ;
+    sh:datatype xsd:string ;
+    sh:maxCount 3 ;
+    sh:message "Array of curio @id IRIs. Max 3 per item. Reference by sa:curio/{slug}." ;
+  ] ;
+  sh:property [
+    sh:path sa:boundCurios ;
+    sh:datatype xsd:string ;
+    sh:maxCount 3 ;
+    sh:message "Track which curios are permanently bound (non-swappable). Helps prevent accidental detachment." ;
+  ] .

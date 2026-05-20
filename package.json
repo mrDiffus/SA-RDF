@@ -5,7 +5,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "build:index": "node scripts/build-resource-index.cjs",
+    "predev": "npm run build:index",
     "dev": "vite --port=3000 --host=0.0.0.0",
+    "prebuild": "npm run build:index",
     "build": "vite build",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",

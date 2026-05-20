@@ -102,11 +102,61 @@
         },
         {
           "@type": "sa:BoundConstruct",
-          "rdfs:label": "Civic Familiar",
-          "sa:description": "A state-issued micro-familiar that delivers alerts, guidance, and public information.",
-          "sa:commonUsage": "Given to citizens upon registration or birth.",
-          "sa:societalImpact": "Balances helpful services with intrusive surveillance. Abused by authoritarian regimes and protective parents alike.",
-          "sa:rarity": "common",
+          "rdfs:label": "Synthesis Beacon (Skyhaven)",
+          "sa:description": "An ornate crystalline familiar issued by the Luminous Synthesis. It tracks your arcane lineage, spell affinity signatures, and Manfuctor apprenticeship status. Grants access to restricted academies and magical districts. Broadcasts subtle aura indicating your magical achievement tier to other Synthesis members.",
+          "sa:commonUsage": "Given to all Skyhaven residents upon registration or academic enrollment.",
+          "societalImpact": "Creates a hierarchy of magical privilege. Refusal or loss of the beacon marks one as spiritually incomplete or magically unworthy—a social catastrophe. Synthesis uses broadcasts to predict talent and poach competitors.",
+          "sa:rarity": "uncommon",
+          "sa:cost": 0,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "@type": "sa:BoundConstruct",
+          "rdfs:label": "Syndicate Collar (Ironhold)",
+          "sa:description": "A reinforced micro-familiar worn as an armband or neck piece. Tracks shift hours, location within work zones, health vitals, and safety compliance. Alerts workers to hazardous conditions and coordinates rescue in industrial accidents. Grants bonus to saves against exhaustion and disease.",
+          "sa:commonUsage": "Mandatory for all Forge Syndicate workers. Issued upon employment; removed only upon termination or death.",
+          "societalImpact": "Presents as worker protection but enables exploitation tracking. Union uses data to audit productivity and identify 'slackers.' Workers dependent on it for incident response—removing it is career suicide. Creates surveillance-based safety culture.",
+          "sa:rarity": "uncommon",
+          "sa:cost": 0,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "@type": "sa:BoundConstruct",
+          "rdfs:label": "Mask Whisper (Blackwater)",
+          "sa:description": "An elusive construct that phases between visibility and shadow, appearing as a small iridescent token or flickering mote. It relays encrypted messages between members of the Velvet Mask and alerts wearers to underground movement, safe houses, and shadow-market activity. Grants advantage on checks to navigate black-market networks.",
+          "sa:commonUsage": "Distributed by the Velvet Mask to syndicate members, informants, and approved operators.",
+          "societalImpact": "Symbol of inclusion in shadow networks; exclusion from it is a death sentence. Enables organized crime coordination and information brokering. Possession signals to enforcement that you're 'connected'—protection and entrapment.",
+          "sa:rarity": "uncommon",
+          "sa:cost": 0,
+          "sa:legalStatus": "illegal"
+        },
+        {
+          "@type": "sa:BoundConstruct",
+          "rdfs:label": "Research Echo (Emerald Heights)",
+          "sa:description": "A living botanical construct resembling a luminescent vine or floating seed pod. It records ambient ecological data, organism encounters, and research observations. Syncs with the Verdant Collective's databases to grant advantage on Investigation checks related to xenobiology and grants access to collective research archives.",
+          "sa:commonUsage": "Issued to all researchers, graduate students, and naturalists enrolled with the Verdant Collective.",
+          "societalImpact": "Purports to democratize research but actually centralizes knowledge control. All discoveries feed the Collective's monopoly on biotech patents. Contributes to anti-competitive pressure on independent scientists.",
+          "sa:rarity": "uncommon",
+          "sa:cost": 0,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "@type": "sa:BoundConstruct",
+          "rdfs:label": "Commerce Cipher (Starfall)",
+          "sa:description": "A portable crystalline node that broadcasts trade credentials, tariff clearance, diplomatic immunity (if applicable), and shipping status. Grants advantage on Commerce and negotiation checks. Automatically translates Concordat protocols and reveals current trade law updates.",
+          "sa:commonUsage": "Issued to merchants, traders, and diplomatic representatives operating in Starfall's markets and orbital facilities.",
+          "societalImpact": "Without it, you're a non-resident facing tariff penalties and legal liability. Effectively creates a two-tier economy: authorized traders and black-market operators. Concordat uses cipher data to track commodity flows and manipulate prices.",
+          "sa:rarity": "uncommon",
+          "sa:cost": 0,
+          "sa:legalStatus": "legal"
+        },
+        {
+          "@type": "sa:BoundConstruct",
+          "rdfs:label": "Altitude Warden (Arcech-Sylandris)",
+          "sa:description": "An elegant, status-sensitive construct that shifts appearance based on vertical authorization level. Lower-tier versions glow faintly; upper-tier versions radiate crystalline light. Grants or restricts access to maglev lines, elevator spires, and altitude zones. Broadcasts your current altitude-class to other Warden wearers. Syncs with House Valorian's real estate management network.",
+          "sa:commonUsage": "Distributed by House Valorian to all Arcech-Sylandris residents. Appearance and function tied to property ownership and financial standing.",
+          "societalImpact": "Institutionalizes verticality as social identity. Lower-altitude residents are visibly marked as subordinate; denial of upgrade access is a form of economic punishment. Creates aspirational consumption—people pursue altitude upgrades as social destiny. Loss of the Warden can trigger eviction or exile to 'the Roots.'",
+          "sa:rarity": "uncommon",
           "sa:cost": 0,
           "sa:legalStatus": "legal"
         },
@@ -142,10 +192,10 @@
         },
         {
           "type": "sa:WondrousItem",
-          "rdfs:label": "Oathbrand Ring",
-          "sa:description": "A forged loop of alloyed mithglass and runestone that burns a sigil into the back of your hands and forehead when you break a spoken promise. While worn, you have advantage on Persuasion checks when vowing to complete something.",
-          "sa:commonUsage": "Given to envoys, arbitrators, and oathbound warriors.",
-          "societalImpact": "Cultures that value honor use these as lie detectors. Refusing to wear one may be considered an insult.",
+          "rdfs:label": "Consumer Cipher",
+          "sa:description": "A subtle smart-jewelry interface that broadcasts your consumption profile, payment history, and preference signature to networked merchants and service vendors. Grants advantage on Persuasion checks during transactions and access to 'personalized' deals. Merchants instantly adjust pricing and offers to maximize extraction from your specific budget and desires.",
+          "sa:commonUsage": "Worn by frequent travelers, wealthy consumers, and anyone integrated into the corporate economy. Corporate loyalty programs often issue them as status markers.",
+          "societalImpact": "Promised convenience and customized service, but creates algorithmic profiling that inflates prices for high-value targets. Brands weaponize the data to trigger consumption and exploit weaknesses. Refusal to wear one marks you as 'unpredictable' or 'cash-restricted'—a social liability.",
           "sa:rarity": "uncommon",
           "sa:cost": 600,
           "sa:legalStatus": "legal"
