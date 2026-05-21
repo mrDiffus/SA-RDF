@@ -6,7 +6,7 @@ services:
     # 👇 Instructs Docker to compile the application locally on the NUC
     build:
       context: ..
-      dockerfile: Dockerfile
+      dockerfile: Discord-Lore-And-Char-Bot-dotnet/Dockerfile
     container_name: discord-lore-bot
     restart: unless-stopped
     environment:
