@@ -7,7 +7,7 @@ RUN dotnet restore Discord-Lore-And-Char-Bot-dotnet/Discord-Lore-And-Char-Bot-do
 
 # Copy bot source and shared data files.
 COPY Discord-Lore-And-Char-Bot-dotnet/. Discord-Lore-And-Char-Bot-dotnet/
-COPY public/data ./public/data
+COPY Discord-Lore-And-Char-Bot-dotnet/public/data ./public/data
 
 WORKDIR /src/Discord-Lore-And-Char-Bot-dotnet
 RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false
