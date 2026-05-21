@@ -5,7 +5,7 @@ services:
     image: local/discord-bot:latest
     # 👇 Instructs Docker to compile the application locally on the NUC
     build:
-      context: .
+      context: ..
       dockerfile: Dockerfile
     container_name: discord-lore-bot
     restart: unless-stopped
