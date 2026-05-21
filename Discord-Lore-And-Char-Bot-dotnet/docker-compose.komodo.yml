@@ -1,7 +1,7 @@
 services:
   discord-lore-bot:
     # Komodo will find this instantly because you baked it in Step 1
-    image: local/discord-bot:latest
+    image: local/discord-bot:latest-latest
     container_name: discord-lore-bot
     restart: unless-stopped
     environment:
