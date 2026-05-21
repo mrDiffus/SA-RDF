@@ -1,32 +1,19 @@
-version: '3.8'
-
 services:
   discord-lore-bot:
+    # Komodo will find this instantly because you baked it in Step 1
     image: local/discord-bot:latest
-    # 👇 Instructs Docker to compile the application locally on the NUC
-    build:
-      context: ..
-      dockerfile: Discord-Lore-And-Char-Bot-dotnet/Dockerfile
     container_name: discord-lore-bot
     restart: unless-stopped
     environment:
       - DOTNET_ENVIRONMENT=Production
-      
-      # Discord Configuration (Replace with your actual keys)
       - Bot__DiscordToken=YOUR_ACTUAL_DISCORD_TOKEN
       - Bot__DiscordApplicationId=YOUR_APPLICATION_ID
       - Bot__DiscordGuildId=YOUR_OPTIONAL_GUILD_ID
-      
-      # Gemini API Configuration
       - Bot__GeminiApiKey=YOUR_GEMINI_API_KEY
       - Bot__GeminiModel=gemini-2.5-flash
-      
-      # Feature Flags
       - Bot__AutoRegisterCommands=true
       - Bot__EnableMessageContentIntent=false
       - Bot__EnableGoogleSearchRetrieval=true
-      
-      # Data Paths (Matching internal container paths)
       - Bot__DataRoot=/app/public/data
       - Bot__ProfileStorePath=/app/storage/profiles.json
       - Bot__PersonaPath=/app/persona.md
