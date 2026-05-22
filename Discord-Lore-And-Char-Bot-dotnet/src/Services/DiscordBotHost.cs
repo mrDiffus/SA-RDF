@@ -169,10 +169,10 @@ internal sealed class DiscordBotHost
         {
             await command.DeferAsync();
         }
-        catch (HttpException ex) when ((int?)ex.DiscordCode == 40060)
+        catch (HttpException ex) when (IsIgnorableInteractionAcknowledgementFailure(ex.DiscordCode))
         {
-            // Discord retried the interaction delivery before we could acknowledge it.
-            // The duplicate invocation already deferred; skip processing this one.
+            // Discord can deliver duplicate or expired interactions after the ack window.
+            // In both cases there is nothing left to process for this invocation.
             return;
         }
 
@@ -197,6 +197,11 @@ internal sealed class DiscordBotHost
     internal static string? GetAskInputValidationError(AskCommandInput input)
     {
         return string.IsNullOrWhiteSpace(input.Question) ? "Question is required." : null;
+    }
+
+    internal static bool IsIgnorableInteractionAcknowledgementFailure(DiscordErrorCode? discordCode)
+    {
+        return discordCode is not null && (int)discordCode.Value is 40060 or 10062;
     }
 
     internal bool TryBeginSlashRequest(string userId)

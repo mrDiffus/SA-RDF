@@ -1,3 +1,4 @@
+using Discord;
 using DiscordLoreAndCharBotDotnet.Config;
 using DiscordLoreAndCharBotDotnet.Models;
 using DiscordLoreAndCharBotDotnet.Services;
@@ -25,6 +26,27 @@ public sealed class DiscordBotHostSlashHandlingTests
 
         Assert.Equal("Question is required.", error);
     }
+
+  [Theory]
+  [InlineData(40060)]
+  [InlineData(10062)]
+  [Trait("Category", "Unit")]
+  public void IsIgnorableInteractionAcknowledgementFailure_ReturnsTrueForExpectedDiscordCodes(int discordCode)
+  {
+    Assert.True(DiscordBotHost.IsIgnorableInteractionAcknowledgementFailure((DiscordErrorCode)discordCode));
+  }
+
+  [Theory]
+  [InlineData(null)]
+  [InlineData(0)]
+  [InlineData(50013)]
+  [Trait("Category", "Unit")]
+  public void IsIgnorableInteractionAcknowledgementFailure_ReturnsFalseForOtherDiscordCodes(int? discordCode)
+  {
+    var errorCode = discordCode is null ? null : (DiscordErrorCode?)discordCode.Value;
+
+    Assert.False(DiscordBotHost.IsIgnorableInteractionAcknowledgementFailure(errorCode));
+  }
 
     [Fact]
     [Trait("Category", "Unit")]
