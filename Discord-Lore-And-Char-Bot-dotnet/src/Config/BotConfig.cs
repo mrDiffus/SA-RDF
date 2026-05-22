@@ -41,7 +41,7 @@ internal sealed class BotConfig
             GeminiApiKey = Required(configuration, "Bot:GeminiApiKey"),
             GeminiModel = Optional(configuration, "Bot:GeminiModel", "gemini-2.5-flash"),
             AutoRegisterCommands = ParseBoolOptional(configuration, "Bot:AutoRegisterCommands", true),
-            EnableMessageContentIntent = ParseBoolOptional(configuration, "Bot:EnableMessageContentIntent", false),
+            EnableMessageContentIntent = ParseBoolOptional(configuration, "Bot:EnableMessageContentIntent", true),
             DataRoot = ResolveExistingDirectoryPath(contentRoot, Optional(configuration, "Bot:DataRoot", "../public/data")),
             ProfileStorePath = ResolvePath(contentRoot, Optional(configuration, "Bot:ProfileStorePath", "./storage/profiles.json")),
             PersonaPath = ResolvePath(contentRoot, Optional(configuration, "Bot:PersonaPath", "./persona.md"))
