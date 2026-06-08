@@ -2,33 +2,35 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "Person",
-  "label": "Dorn Bellisarius: The Restructor",
-  "sa:race": "Dwarf",
-  "sa:identity": {
-    "label": "The Restructor",
-    "description": "Chief Acquisition Officer of the Concordat Trading House. Mira Strand's translator between vision and execution. An impeccable corporate attorney specializing in contractual architecture and financial engineering."
-  },
-  "schema:description": "Dorn Bellisarius has never forced a negotiation. Every agreement he has reached was already concluded on paper before the parties spoke. He is impeccable—beard trimmed to mathematical precision, suits tailored by someone who understands that fit is power, cologne expensive and subtle. He speaks like a corporate attorney because he is one, every word vetted for legal exposure before it leaves his mouth.",
-  "sa:nature": {
-    "appearance": "A dwarf who has spent a considerable career moving in human-dominated corporate spaces. His beard is groomed with military precision. His suits are bespoke, cut to emphasize authority rather than adapt to his frame. His hands are soft—he has not worked stone or metal in decades. He wears jeweled rings that signify his legal credentials and prior victories.",
-    "physical_presence": "He moves slowly, carefully, as if calculating the legal implications of each step. When he speaks, people listen, because he has earned (through relentless professionalism) the assumption that every word carries weight.",
-    "essence": "Not visible strength, but the invisible architecture of power written into contracts."
-  },
-  "sa:mechanics": {
-    "method": "Dorn examines the Strand family's dispersed assets, their contractual obligations, their partnerships, and he finds angles—the ambiguous clauses, the leverage points, the buried claims that allow Mira to extract value through restructuring rather than force.",
-    "expertise": "Contract dissolutions, debt conversions, asset liquidations, strategic restructuring. His analyses are thorough enough to survive legal challenge in any tribunal. His restructurings are elegant enough to appear inevitable in retrospect.",
-    "signature_approach": "He refuses to enter negotiations he has not already won on paper. His strength is not in rhetoric or persuasion. It is in the architecture of agreements themselves. He finds the flaw in the contract, the loophole in the regulation, the sequence of legal moves that transforms a liability into an asset."
-  },
-  "sa:relationships": {
-    "mira_strand": "Dorn respects Mira in the way a master craftsman respects a patron who understands value. She does not ask him to accomplish the impossible—she asks him to accomplish things that appear impossible until he has already done them. She trusts his judgment on what is structurally achievable. They do not have a personal relationship. They have a professional one of extraordinary clarity. Mira pays him exceptionally well, and in return, Dorn delivers work so meticulous it borders on art.",
-    "loyalty_structure": "He will remain in her service as long as the problems continue to test his skills. When a position emerges that provides greater intellectual challenge, or when a client offers more interesting legal puzzles, he will depart with professional decorum and no regrets. Until then, he remains indispensable."
-  }
+  "@graph": [
+    {
+      "@id": "sa:character/dorn-bellisarius",
+      "@type": "schema:Person",
+      "rdfs:label": "Dorn Bellisarius",
+      "sa:race": "Dwarf",
+      "sa:identity": {
+        "rdfs:label": "The Restructor",
+        "schema:description": "Chief Acquisition Officer of the Concordat Trading House. Mira Strand's translator between vision and execution. An impeccable corporate attorney specializing in contractual architecture and financial engineering."
+      },
+      "schema:description": "Dorn Bellisarius has never forced a negotiation. Every agreement he has reached was already concluded on paper before the parties spoke. He is impeccable—beard trimmed to mathematical precision, suits tailored by someone who understands that fit is power, cologne expensive and subtle. He speaks like a corporate attorney because he is one, every word vetted for legal exposure before it leaves his mouth.",
+      "sa:nature": {
+        "appearance": "A dwarf who has spent a considerable career moving in human-dominated corporate spaces. His beard is groomed with military precision. His suits are bespoke, cut to emphasize authority rather than adapt to his frame. His hands are soft—he has not worked stone or metal in decades. He wears jeweled rings that signify his legal credentials and prior victories.",
+        "physical_presence": "He moves slowly, carefully, as if calculating the legal implications of each step. When he speaks, people listen, because he has earned (through relentless professionalism) the assumption that every word carries weight.",
+        "essence": "Not visible strength, but the invisible architecture of power written into contracts."
+      },
+      "sa:mechanics": {
+        "method": "Dorn examines the Strand family's dispersed assets, their contractual obligations, their partnerships, and he finds angles—the ambiguous clauses, the leverage points, the buried claims that allow Mira to extract value through restructuring rather than force.",
+        "expertise": "Contract dissolutions, debt conversions, asset liquidations, strategic restructuring. His analyses are thorough enough to survive legal challenge in any tribunal. His restructurings are elegant enough to appear inevitable in retrospect.",
+        "signature_approach": "He refuses to enter negotiations he has not already won on paper. His strength is not in rhetoric or persuasion. It is in the architecture of agreements themselves. He finds the flaw in the contract, the loophole in the regulation, the sequence of legal moves that transforms a liability into an asset."
+      },
+      "sa:relationships": {
+        "mira_strand": "Dorn respects Mira in the way a master craftsman respects a patron who understands value. She does not ask him to accomplish the impossible—she asks him to accomplish things that appear impossible until he has already done them. She trusts his judgment on what is structurally achievable. They do not have a personal relationship. They have a professional one of extraordinary clarity. Mira pays him exceptionally well, and in return, Dorn delivers work so meticulous it borders on art.",
+        "loyalty_structure": "He will remain in her service as long as the problems continue to test his skills. When a position emerges that provides greater intellectual challenge, or when a client offers more interesting legal puzzles, he will depart with professional decorum and no regrets. Until then, he remains indispensable."
+      }
+    }
+  ]
 }

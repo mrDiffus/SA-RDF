@@ -13,6 +13,16 @@
         { "@type": "sa:Paragraph", "sa:text": "An ability can never be raised higher than 20 without bonuses from magic or equipment." },
         { "@type": "sa:Header", "sa:text": "Strength", "sa:content": [{ "@type": "sa:Paragraph", "sa:text": "Lets you swing that hammer harder or lift those big weights." }] }
       ]
+    },
+    {
+      "@id": "sa:rules-starting-credits",
+      "@type": "sa:Section",
+      "rdfs:label": "Starting Credits",
+      "sa:content": [
+        { "@type": "sa:Paragraph", "sa:text": "When a character is built from two archetypes, add together any starting credit values or starting credit bonuses from both archetypes before rolling." },
+        { "@type": "sa:Paragraph", "sa:text": "If one or both archetypes tell you to roll for credits, make those rolls after the archetype values are combined. If both archetypes grant a credits roll, roll each one and add the results." },
+        { "@type": "sa:Paragraph", "sa:text": "If the archetypes disagree on how to handle starting credits, use both rules and total the results unless the GM says otherwise." }
+      ]
     }
   ]
 }

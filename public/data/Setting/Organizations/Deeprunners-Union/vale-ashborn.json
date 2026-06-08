@@ -2,47 +2,49 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "Person",
-  "label": "Vale Ashborn: The Beautiful Guide",
-  "sa:race": "Human",
-  "sa:identity": {
-    "label": "The Beautiful Guide",
-    "description": "Lead Guide of the central sector. Most requested escort for tunnel traversals despite having no demonstrable navigation ability. Never lost a client. Never successfully explained where he was going. Profoundly, devastatingly handsome. Abyssally unintelligent."
-  },
-  "schema:description": "Vale Ashborn is a man who exists in a state of permanent, profound confusion about how the world works, and this confusion has somehow become his greatest asset. He is beautiful in the way that makes architects weep—bone structure that suggests divine intervention, a smile that has ended rivalries before they started, a presence that somehow makes everyone around him feel better about themselves. He is also catastrophically, bewilderingly stupid. He does not understand metaphor, has never successfully completed a task that required sequential thinking, and once asked why water was called water when it was clearly liquid. And yet, people follow him into the darkest tunnels on the planet. People who have legitimate navigation training have walked behind Vale in utter darkness and somehow arrived at their destination without his ever saying anything useful.",
-  "sa:nature": {
-    "appearance": "Devastatingly handsome in a way that transcends normal human variance. Symmetrical face, clear skin, eyes so blue they seem borrowed from another sky-having planet. Dark hair that falls perfectly even after crawling through tunnels. Tall (approximately 185 cm), lean without appearing fragile, muscular without appearing studied. He wears tunnel gear, but on him it looks like a fashion statement. He smells faintly of soap and minerals.",
-    "affect": "Constantly happy, not from achievement or joy, but from genuine moment-to-moment consciousness unable to sustain negative emotion. He smiles at things that are objectively disasters. He compliments people on characteristics they are actively being punished for. He is incapable of sarcasm, irony, or any form of communication beyond literal interpretation and earnest enthusiasm.",
-    "intelligence": "Measurably below average. He cannot calculate simple distances. He frequently forgets which direction is up. He refers to the tunnels as 'wet rocks' sometimes and 'dark hallways' other times, with no apparent awareness that he is describing the same thing. He once was asked to find north and pointed toward a random wall. The wall was north. This was accident.",
-    "quarters": "He actually lives in the tunnels—specifically wherever he happened to fall asleep the previous night. Other runners have to actually go find him at the start of contracted expeditions. He has never once been late to an assignment, despite never apparently knowing where he was supposed to be. He simply shows up, smiling, exactly when needed, from directions that make no navigational sense.",
-    "the_miracle": "Nobody can explain Vale's success rate. He has guided over three hundred expeditions through deep tunnel sections. Zero casualty rate. Zero cases of clients being lost. Zero successful accusations of incompetence, despite the fact that he demonstrably has no idea what he is doing. He has never corrected someone's direction. He has never given an order. He has never shown anything resembling awareness of navigation. And yet clients emerge from darkness into daylight as if guided by instinct itself."
-  },
-  "sa:mechanics": {
-    "the_utter_mystery": "Theories abound: (1) he actually has supernatural navigation abilities he cannot articulate, (2) clients project competence onto him and navigate themselves while following his literal body, (3) the tunnels themselves respond to his pure goodness, (4) the universe has a sense of humor and Vale is the punchline, (5) he is a ghost or demon with access to knowledge he cannot express. None have been proven. All remain equally plausible.",
-    "contract_pricing": "He charges the exact same as other Lead Guides despite being the most requested. He does not understand that he could charge more. When asked why, he explained: 'That's what the board said it costs, so that's what it costs.' The board set the price. That was five years ago. He has never questioned it.",
-    "client_testimonials": "Unanimous five-star reviews. Nobody can identify what he did specifically. One client noted: 'He smiled at me when I was panicking. Then we weren't lost anymore.' Another: 'I don't remember him saying anything useful, but following him felt safe.' A third: 'I think he was singing at one point? I was confused the whole time and I've never felt so confident.'",
-    "behavioral_patterns": "He wakes each morning (in whatever tunnel he fell asleep in) completely refreshed, appears genuinely excited about the day, and wanders through tunnels in a way that only an idiot or a genius would attempt. Somehow, his path is always optimalizing. He gets caught in dead-ends frequently. He leaves them in directions he seemed to pick at random, always the correct direction.",
-    "renown_accumulation": "He has earned Lead Guide status through pure attrition—he was assigned so much contract work as a Tunnel Runner that runners voted him into promotion one day without him understanding why. When asked how he achieved elevation to Lead Guide, he said: 'I think Rix talked about it? I wasn't listening. But now people call me something different, so I guess something happened.'",
-    "the_real_explanation": "Unknown. Rix has apparently decided not to investigate too deeply, on the theory that some mysteries in the tunnels should remain mysteries. Marrow respects Vale professionally, noting: 'He works. The why is irrelevant.'"
-  },
-  "sa:relationships": {
-    "other_lead_guides": "They range from devoted fans (he is genuinely nice and never takes credit for successes) to quietly murderous (he is stealing their contracts through no fault of his own). Vale is unaware that any tension exists. When competitors complain to him, he has responded sympathetically and suggested they should guide more expeditions.",
-    "tunnel_runners": "He treats them as equals. He thanks them for finding tunnels. He gets lost with them and seems to find it charming. When someone dies in a tunnel, Vale becomes unexpectedly serious and sad for approximately three days, then returns to baseline happiness. Nobody knows how to process this emotional pattern.",
-    "clients": "They feel inexplicably safe around him. A corporate executive who hired him for a security breach extraction noted: 'I would follow that man off a cliff and be surprised we landed on cloud nine.' He does not leverage this goodwill. He appears unaware it exists.",
-    "rix_blackstone": "Rix observes Vale with what might be fondness in a dwarf who rarely shows emotion. When asked about Vale once, Rix said: 'He belongs to the tunnels now. The tunnels guide him. The tunnels like him.' No follow-up questions answered.",
-    "marrow": "She has tested Vale three times with fictional tunnel structures and impossible navigation challenges, attempting to break his streak. He completed all three. She responded: 'Incomprehensible. Hire him again.'"
-  },
-  "sa:quotes": [
-    "I love tunnels! They're big and dark and they have rocks!",
-    "When I don't know where to go, I just turn until the tunnel feels right and then I go that way.",
-    "Everybody is nice if you assume they're being nice. Has anyone ever told you that? Well, they are. So don't assume they're being rude.",
-    "I've never understood why people worry about getting lost. Everywhere is already here. You can just wait and it'll find you."
+  "@graph": [
+    {
+      "@id": "sa:character/vale-ashborn",
+      "@type": "schema:Person",
+      "rdfs:label": "Vale Ashborn",
+      "sa:race": "Human",
+      "sa:identity": {
+        "rdfs:label": "The Beautiful Guide",
+        "schema:description": "Lead Guide of the central sector. Most requested escort for tunnel traversals despite having no demonstrable navigation ability. Never lost a client. Never successfully explained where he was going. Profoundly, devastatingly handsome. Abyssally unintelligent."
+      },
+      "schema:description": "Vale Ashborn is a man who exists in a state of permanent, profound confusion about how the world works, and this confusion has somehow become his greatest asset. He is beautiful in the way that makes architects weep—bone structure that suggests divine intervention, a smile that has ended rivalries before they started, a presence that somehow makes everyone around him feel better about themselves. He is also catastrophically, bewilderingly stupid. He does not understand metaphor, has never successfully completed a task that required sequential thinking, and once asked why water was called water when it was clearly liquid. And yet, people follow him into the darkest tunnels on the planet. People who have legitimate navigation training have walked behind Vale in utter darkness and somehow arrived at their destination without his ever saying anything useful.",
+      "sa:nature": {
+        "appearance": "Devastatingly handsome in a way that transcends normal human variance. Symmetrical face, clear skin, eyes so blue they seem borrowed from another sky-having planet. Dark hair that falls perfectly even after crawling through tunnels. Tall (approximately 185 cm), lean without appearing fragile, muscular without appearing studied. He wears tunnel gear, but on him it looks like a fashion statement. He smells faintly of soap and minerals.",
+        "affect": "Constantly happy, not from achievement or joy, but from genuine moment-to-moment consciousness unable to sustain negative emotion. He smiles at things that are objectively disasters. He compliments people on characteristics they are actively being punished for. He is incapable of sarcasm, irony, or any form of communication beyond literal interpretation and earnest enthusiasm.",
+        "intelligence": "Measurably below average. He cannot calculate simple distances. He frequently forgets which direction is up. He refers to the tunnels as 'wet rocks' sometimes and 'dark hallways' other times, with no apparent awareness that he is describing the same thing. He once was asked to find north and pointed toward a random wall. The wall was north. This was accident.",
+        "quarters": "He actually lives in the tunnels—specifically wherever he happened to fall asleep the previous night. Other runners have to actually go find him at the start of contracted expeditions. He has never once been late to an assignment, despite never apparently knowing where he was supposed to be. He simply shows up, smiling, exactly when needed, from directions that make no navigational sense.",
+        "the_miracle": "Nobody can explain Vale's success rate. He has guided over three hundred expeditions through deep tunnel sections. Zero casualty rate. Zero cases of clients being lost. Zero successful accusations of incompetence, despite the fact that he demonstrably has no idea what he is doing. He has never corrected someone's direction. He has never given an order. He has never shown anything resembling awareness of navigation. And yet clients emerge from darkness into daylight as if guided by instinct itself."
+      },
+      "sa:mechanics": {
+        "the_utter_mystery": "Theories abound: (1) he actually has supernatural navigation abilities he cannot articulate, (2) clients project competence onto him and navigate themselves while following his literal body, (3) the tunnels themselves respond to his pure goodness, (4) the universe has a sense of humor and Vale is the punchline, (5) he is a ghost or demon with access to knowledge he cannot express. None have been proven. All remain equally plausible.",
+        "contract_pricing": "He charges the exact same as other Lead Guides despite being the most requested. He does not understand that he could charge more. When asked why, he explained: 'That's what the board said it costs, so that's what it costs.' The board set the price. That was five years ago. He has never questioned it.",
+        "client_testimonials": "Unanimous five-star reviews. Nobody can identify what he did specifically. One client noted: 'He smiled at me when I was panicking. Then we weren't lost anymore.' Another: 'I don't remember him saying anything useful, but following him felt safe.' A third: 'I think he was singing at one point? I was confused the whole time and I've never felt so confident.'",
+        "behavioral_patterns": "He wakes each morning (in whatever tunnel he fell asleep in) completely refreshed, appears genuinely excited about the day, and wanders through tunnels in a way that only an idiot or a genius would attempt. Somehow, his path is always optimalizing. He gets caught in dead-ends frequently. He leaves them in directions he seemed to pick at random, always the correct direction.",
+        "renown_accumulation": "He has earned Lead Guide status through pure attrition—he was assigned so much contract work as a Tunnel Runner that runners voted him into promotion one day without him understanding why. When asked how he achieved elevation to Lead Guide, he said: 'I think Rix talked about it? I wasn't listening. But now people call me something different, so I guess something happened.'",
+        "the_real_explanation": "Unknown. Rix has apparently decided not to investigate too deeply, on the theory that some mysteries in the tunnels should remain mysteries. Marrow respects Vale professionally, noting: 'He works. The why is irrelevant.'"
+      },
+      "sa:relationships": {
+        "other_lead_guides": "They range from devoted fans (he is genuinely nice and never takes credit for successes) to quietly murderous (he is stealing their contracts through no fault of his own). Vale is unaware that any tension exists. When competitors complain to him, he has responded sympathetically and suggested they should guide more expeditions.",
+        "tunnel_runners": "He treats them as equals. He thanks them for finding tunnels. He gets lost with them and seems to find it charming. When someone dies in a tunnel, Vale becomes unexpectedly serious and sad for approximately three days, then returns to baseline happiness. Nobody knows how to process this emotional pattern.",
+        "clients": "They feel inexplicably safe around him. A corporate executive who hired him for a security breach extraction noted: 'I would follow that man off a cliff and be surprised we landed on cloud nine.' He does not leverage this goodwill. He appears unaware it exists.",
+        "rix_blackstone": "Rix observes Vale with what might be fondness in a dwarf who rarely shows emotion. When asked about Vale once, Rix said: 'He belongs to the tunnels now. The tunnels guide him. The tunnels like him.' No follow-up questions answered.",
+        "marrow": "She has tested Vale three times with fictional tunnel structures and impossible navigation challenges, attempting to break his streak. He completed all three. She responded: 'Incomprehensible. Hire him again.'"
+      },
+      "sa:quotes": [
+        "I love tunnels! They're big and dark and they have rocks!",
+        "When I don't know where to go, I just turn until the tunnel feels right and then I go that way.",
+        "Everybody is nice if you assume they're being nice. Has anyone ever told you that? Well, they are. So don't assume they're being rude.",
+        "I've never understood why people worry about getting lost. Everywhere is already here. You can just wait and it'll find you."
+      ]
+    }
   ]
 }

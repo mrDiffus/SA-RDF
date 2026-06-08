@@ -520,6 +520,7 @@ export async function loadCharacter(organizationSlug: string, characterSlug: str
     throw new Error(`Failed to load character: ${response.statusText}`);
   }
 
-  const characterData = await response.json() as PersonCharacter;
+  const raw = await response.json();
+  const characterData = (raw['@graph']?.[0] ?? raw) as PersonCharacter;
   return characterData;
 }
