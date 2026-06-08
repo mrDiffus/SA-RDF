@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
-import { ArrowLeft } from 'lucide-react';
 
-export default function ChangelogView({ onBack }: { onBack: () => void }) {
+function resolveDataPath(path: string): string {
+  const normalizedPath = path.startsWith('/') ? path.slice(1) : path;
+  return `${import.meta.env.BASE_URL}${normalizedPath}`;
+}
+
+export default function ChangelogView() {
   const [changelogContent, setChangelogContent] = useState<string>('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -9,7 +13,7 @@ export default function ChangelogView({ onBack }: { onBack: () => void }) {
   useEffect(() => {
     const fetchChangelog = async () => {
       try {
-        const response = await fetch('/data/CHANGELOG.md');
+        const response = await fetch(resolveDataPath('/data/CHANGELOG.md'));
         if (!response.ok) {
           throw new Error('Failed to load changelog');
         }
@@ -26,44 +30,15 @@ export default function ChangelogView({ onBack }: { onBack: () => void }) {
   }, []);
 
   if (loading) {
-    return (
-      <div className="space-y-8">
-        <button
-          onClick={onBack}
-          className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back
-        </button>
-        <div className="text-center text-zinc-400">Loading changelog...</div>
-      </div>
-    );
+    return <div className="text-center text-zinc-400">Loading changelog...</div>;
   }
 
   if (error) {
-    return (
-      <div className="space-y-8">
-        <button
-          onClick={onBack}
-          className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8"
-        >
-          <ArrowLeft className="w-4 h-4" />
-          Back
-        </button>
-        <div className="text-center text-red-400">Error: {error}</div>
-      </div>
-    );
+    return <div className="text-center text-red-400">Error: {error}</div>;
   }
 
   return (
     <div className="space-y-8">
-      <button
-        onClick={onBack}
-        className="flex items-center gap-2 text-zinc-400 hover:text-white transition-colors mb-8"
-      >
-        <ArrowLeft className="w-4 h-4" />
-        Back
-      </button>
 
       <div className="prose prose-invert max-w-none">
         <article className="space-y-6 text-zinc-300">

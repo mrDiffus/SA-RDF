@@ -2,40 +2,41 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "Person",
-  "label": "Xanthia the Everliving",
-  "sa:identity": {
-    "label": "The Everliving",
-    "description": "An immortal lich-queen whose existence blurs the boundary between monarch, god-empress, and cosmic undead tyrant. Current age unknown—centuries, possibly millennia."
-  },
-  "schema:description": "Xanthia is an immortal lich-queen whose existence blurs the boundary between monarch, god-empress, and cosmic undead tyrant. She represents weaponized immortality as political philosophy. Her power increases with every faithful soul that worships her. In a universe where belief has tangible reality-warping force, she has engineered herself into godhood.",
-  "sa:nature": {
-    "immortality_mechanism": "Necromantic preservation of her consciousness. Critically, also through the metaphysical power of faith itself.",
-    "goal": "Literal deification. She aims to become an unquestionable divinity worshipped across the sector, with the attendant power that such universal devotion grants.",
-    "doctrine": "Death is weakness. Eternity is victory. Civilization exists to glorify enduring power. Submission to immortality is enlightenment. The individual is temporary; only the hierarchy endures."
-  },
-  "sa:mechanics": {
-    "dual_vector_strategy": "The Faith of the Everliving provides legitimate missionary expansion and diplomatic cover. The Cult of the Unbroken provides destabilization, rapid conversion, and soft power. Drexl orchestrates specific high-value operations in ways that advance her goal regardless of success or failure.",
-    "follower_conversion": "Every success converts millions. Every suppression pushes survivors toward the 'moderate' official Faith. Either way, her influence spreads.",
-    "follower_as_asset": "Living believer = an investment in her metaphysical weight through their faith. Dead believer = eternal undead soldier. Betrayal = immediate annihilation.",
-    "reward_structure": "Living: permanence, status, promise of apotheosis. Dead: undeath and eternal service. Betrayal: obliteration."
-  },
-  "sa:relationships": {
-    "faith_of_everliving": "Official missionary wing. Provides legitimacy and expansion.",
-    "cult_of_unbroken": "Autonomous zealotry. Destabilizes regions for conversion.",
-    "drexl": "Personal apparatus. Orchestrates high-stakes theological operations.",
-    "believers": "They are permanent assets—votes in her favor, prayers adding to her metaphysical weight, potential undead soldiers."
-  },
-  "sa:quotes": [
-    "Death is weakness. Eternity awaits the faithful.",
-    "I do not command you. I invite you to endure forever."
+  "@graph": [
+    {
+      "@id": "sa:character/xanthia-the-everliving",
+      "@type": "schema:Person",
+      "rdfs:label": "Xanthia the Everliving",
+      "sa:identity": {
+        "rdfs:label": "The Everliving",
+        "schema:description": "An immortal lich-queen whose existence blurs the boundary between monarch, god-empress, and cosmic undead tyrant. Current age unknown—centuries, possibly millennia."
+      },
+      "schema:description": "Xanthia is an immortal lich-queen whose existence blurs the boundary between monarch, god-empress, and cosmic undead tyrant. She represents weaponized immortality as political philosophy. Her power increases with every faithful soul that worships her. In a universe where belief has tangible reality-warping force, she has engineered herself into godhood.",
+      "sa:nature": {
+        "immortality_mechanism": "Necromantic preservation of her consciousness. Critically, also through the metaphysical power of faith itself.",
+        "goal": "Literal deification. She aims to become an unquestionable divinity worshipped across the sector, with the attendant power that such universal devotion grants.",
+        "doctrine": "Death is weakness. Eternity is victory. Civilization exists to glorify enduring power. Submission to immortality is enlightenment. The individual is temporary; only the hierarchy endures."
+      },
+      "sa:mechanics": {
+        "dual_vector_strategy": "The Faith of the Everliving provides legitimate missionary expansion and diplomatic cover. The Cult of the Unbroken provides destabilization, rapid conversion, and soft power. Drexl orchestrates specific high-value operations in ways that advance her goal regardless of success or failure.",
+        "follower_conversion": "Every success converts millions. Every suppression pushes survivors toward the 'moderate' official Faith. Either way, her influence spreads.",
+        "follower_as_asset": "Living believer = an investment in her metaphysical weight through their faith. Dead believer = eternal undead soldier. Betrayal = immediate annihilation.",
+        "reward_structure": "Living: permanence, status, promise of apotheosis. Dead: undeath and eternal service. Betrayal: obliteration."
+      },
+      "sa:relationships": {
+        "faith_of_everliving": "Official missionary wing. Provides legitimacy and expansion.",
+        "cult_of_unbroken": "Autonomous zealotry. Destabilizes regions for conversion.",
+        "drexl": "Personal apparatus. Orchestrates high-stakes theological operations.",
+        "believers": "They are permanent assets—votes in her favor, prayers adding to her metaphysical weight, potential undead soldiers."
+      },
+      "sa:quotes": [
+        "Death is weakness. Eternity awaits the faithful.",
+        "I do not command you. I invite you to endure forever."
+      ]
+    }
   ]
 }
-

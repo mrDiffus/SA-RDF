@@ -2,92 +2,91 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "https://schema.org/",
     "sa": "https://stellararcana.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "requiredRenown": "sa:requiredRenown",
-    "prerequisites": "sa:prerequisites",
-    "role": "sa:role",
-    "type": "@type"
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "sa:Organization",
-  "label": "Cult of the Unbroken",
-  "description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressions of devotion to Xanthia the Everliving. The Cult encompasses prayer cells, zealot warbands, necromantic cabals, fireband preachers, and everything in between—unified only by rejection of conventional authority and absolute faith in Xanthia's divinity. The Faith of the Everliving officially disavows such movements: \"We cannot control what zealous believers do in their conviction.\" This deniability is the Cult's greatest strength. A Cult cell might range from a dozen devout followers sharing rites in secret to a militarized crusade commanding thousands of undead. Local expressions adapt theology to regional culture: orcish Cult cells emphasize eternal strength and conquest; human Cult cells promise escape from mortality; some focus purely on necromantic study. What unites them is the doctrine that undeath is apotheosis—transcendence over weakness—and that Xanthia's will supersedes all earthly law. Individual cells operate autonomously, creating cascading destabilizations the Faith of the Everliving's diplomatic corps can deny orchestrating. Some Cult manifestations receive covert support from other actors (including, possibly, sympathetic members of the official Faith). Others are purely grassroots fanaticism. The distinction becomes meaningless: the Cult destabilizes regions, and the Faith arrives later as savior offering order through submission to Xanthia.",
-  "role": [
+  "@graph": [
     {
-      "type": "sa:Role",
-      "label": "Penitent Seeker",
-      "requiredRenown": 0,
-      "prerequisites": "Submitted to a Cult cell's initiation rite; sworn oath before a priestess, war-shaman, or local zealot leader.",
-      "description": [
-        "Receives indoctrination in Xanthian theology adapted to local culture",
-        "Participates in ritual gatherings, prayer circles, and communion rites",
-        "May consume ashes of honored deceased or witness resurrection ceremonies",
-        "Receives first ritual marks: tattoos, scarification, or brands marking covenant with Xanthia"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "Scarred Initiate",
-      "requiredRenown": 5,
-      "prerequisites": "Demonstrated zeal and commitment; completed dangerous tasks or warfare for the cell; bear ritual scarification as proof of devotion.",
-      "description": [
-        "Lead small groups (1d4 other Cult members or recently converted followers)",
-        "Assist in resurrection rites and necromantic ceremonies",
-        "Wear bone-marked armor or ritual vestments identifying you as committed Cult member",
-        "Understand practical necromancy fundamentals; assist with binding and control of undead"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "Zealot Knight",
-      "requiredRenown": 10,
-      "prerequisites": "Victory in ritual combat or tests of faith; orchestrated recruitment or military success for your cell; demonstrated necromantic aptitude.",
-      "description": [
-        "Command a sizeable warband (2d6 devoted followers, mix of undead and living zealots)",
-        "Requisition ritual implements, bone armor, and spiritual weapons",
-        "Perform advanced reanimation rites; raise fallen believers mid-battle",
-        "Authority to execute heretics and forcibly convert prisoners through display of Xanthia's power"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "Ritual Keeper",
-      "requiredRenown": 15,
-      "prerequisites": "Master of necromantic ceremonies; maintained permanent ritual site; trained others in resurrection protocols and Xanthian rites.",
-      "description": [
-        "Design and oversee large-scale necromantic ceremonies",
-        "Maintain sacred sites: mass graves, altars, places of power",
-        "Resurrect fallen champions with enhanced vitality; preserve consciousness across undeath",
-        "Access to elder texts and secret doctrines; interpret Xanthia's will to your cell",
-        "Lead mass conversion campaigns; baptize entire towns through spectacle and revelation"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "War Priest",
-      "requiredRenown": 20,
-      "prerequisites": "Led your cell through military campaigns of regional significance; established unquestionable dominion over multiple settlements or warbands; mastery of both theology and necromantic warfare.",
-      "description": [
-        "Command an entire crusader network (4d6+ militant devotees, substantial undead forces)",
-        "Negotiate with external powers as a representative of Xanthian will",
-        "Wear ceremonial armor, ritual masks, and carry symbols of Xanthia's authority",
-        "Perform resurrection ceremonies that preserve the personalities and memories of major figures",
-        "Shape theology for your region; reinterpret scripture to suit local culture"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "Shadow Inquisitor",
-      "requiredRenown": 25,
-      "prerequisites": "Invitation only; recognized by the highest echelons of Xanthian devotion as a chosen instrument of her will; mastery over necromancy, theology, and the art of making others believe.",
-      "description": [
-        "Operate autonomously across sectors; coordinate between cells while maintaining plausible independence",
-        "Authority to reshape theology and purge heresy in the name of Xanthia's vision",
-        "Access to forbidden rites; whispers of immortality or lichdom as ultimate reward",
-        "No cell controls you; you answer only to Xanthia herself"
+      "@id": "sa:org/cult-of-the-unbroken",
+      "@type": "sa:Organization",
+      "rdfs:label": "Cult of the Unbroken",
+      "sa:description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressions of devotion to Xanthia the Everliving. The Cult encompasses prayer cells, zealot warbands, necromantic cabals, fireband preachers, and everything in between—unified only by rejection of conventional authority and absolute faith in Xanthia's divinity. The Faith of the Everliving officially disavows such movements: \"We cannot control what zealous believers do in their conviction.\" This deniability is the Cult's greatest strength. A Cult cell might range from a dozen devout followers sharing rites in secret to a militarized crusade commanding thousands of undead. Local expressions adapt theology to regional culture: orcish Cult cells emphasize eternal strength and conquest; human Cult cells promise escape from mortality; some focus purely on necromantic study. What unites them is the doctrine that undeath is apotheosis—transcendence over weakness—and that Xanthia's will supersedes all earthly law. Individual cells operate autonomously, creating cascading destabilizations the Faith of the Everliving's diplomatic corps can deny orchestrating. Some Cult manifestations receive covert support from other actors (including, possibly, sympathetic members of the official Faith). Others are purely grassroots fanaticism. The distinction becomes meaningless: the Cult destabilizes regions, and the Faith arrives later as savior offering order through submission to Xanthia.",
+      "sa:role": [
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Penitent Seeker",
+          "sa:requiredRenown": 0,
+          "sa:prerequisites": "Submitted to a Cult cell's initiation rite; sworn oath before a priestess, war-shaman, or local zealot leader.",
+          "sa:description": [
+            "Receives indoctrination in Xanthian theology adapted to local culture",
+            "Participates in ritual gatherings, prayer circles, and communion rites",
+            "May consume ashes of honored deceased or witness resurrection ceremonies",
+            "Receives first ritual marks: tattoos, scarification, or brands marking covenant with Xanthia"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Scarred Initiate",
+          "sa:requiredRenown": 5,
+          "sa:prerequisites": "Demonstrated zeal and commitment; completed dangerous tasks or warfare for the cell; bear ritual scarification as proof of devotion.",
+          "sa:description": [
+            "Lead small groups (1d4 other Cult members or recently converted followers)",
+            "Assist in resurrection rites and necromantic ceremonies",
+            "Wear bone-marked armor or ritual vestments identifying you as committed Cult member",
+            "Understand practical necromancy fundamentals; assist with binding and control of undead"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Zealot Knight",
+          "sa:requiredRenown": 10,
+          "sa:prerequisites": "Victory in ritual combat or tests of faith; orchestrated recruitment or military success for your cell; demonstrated necromantic aptitude.",
+          "sa:description": [
+            "Command a sizeable warband (2d6 devoted followers, mix of undead and living zealots)",
+            "Requisition ritual implements, bone armor, and spiritual weapons",
+            "Perform advanced reanimation rites; raise fallen believers mid-battle",
+            "Authority to execute heretics and forcibly convert prisoners through display of Xanthia's power"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Ritual Keeper",
+          "sa:requiredRenown": 15,
+          "sa:prerequisites": "Master of necromantic ceremonies; maintained permanent ritual site; trained others in resurrection protocols and Xanthian rites.",
+          "sa:description": [
+            "Design and oversee large-scale necromantic ceremonies",
+            "Maintain sacred sites: mass graves, altars, places of power",
+            "Resurrect fallen champions with enhanced vitality; preserve consciousness across undeath",
+            "Access to elder texts and secret doctrines; interpret Xanthia's will to your cell",
+            "Lead mass conversion campaigns; baptize entire towns through spectacle and revelation"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "War Priest",
+          "sa:requiredRenown": 20,
+          "sa:prerequisites": "Led your cell through military campaigns of regional significance; established unquestionable dominion over multiple settlements or warbands; mastery of both theology and necromantic warfare.",
+          "sa:description": [
+            "Command an entire crusader network (4d6+ militant devotees, substantial undead forces)",
+            "Negotiate with external powers as a representative of Xanthian will",
+            "Wear ceremonial armor, ritual masks, and carry symbols of Xanthia's authority",
+            "Perform resurrection ceremonies that preserve the personalities and memories of major figures",
+            "Shape theology for your region; reinterpret scripture to suit local culture"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Shadow Inquisitor",
+          "sa:requiredRenown": 25,
+          "sa:prerequisites": "Invitation only; recognized by the highest echelons of Xanthian devotion as a chosen instrument of her will; mastery over necromancy, theology, and the art of making others believe.",
+          "sa:description": [
+            "Operate autonomously across sectors; coordinate between cells while maintaining plausible independence",
+            "Authority to reshape theology and purge heresy in the name of Xanthia's vision",
+            "Access to forbidden rites; whispers of immortality or lichdom as ultimate reward",
+            "No cell controls you; you answer only to Xanthia herself"
+          ]
+        }
       ]
     }
   ]

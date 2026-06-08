@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-05-22T06:46:47.763Z",
+  "generatedAt": "2026-06-08T15:09:04.224Z",
   "version": "1.0",
   "resources": [
     {
@@ -1010,6 +1010,16 @@
       ]
     },
     {
+      "file": "rules.json",
+      "@type": "sa:Section",
+      "rdfs:label": "Starting Credits",
+      "@id": "sa:rules-starting-credits",
+      "predicates": [
+        "rdfs:label",
+        "sa:content"
+      ]
+    },
+    {
       "file": "Setting/Characters/alrik-blackvein.json",
       "@type": "schema:Person",
       "rdfs:label": "Alrik Blackvein",
@@ -1192,23 +1202,21 @@
       "file": "Setting/Organizations/Armanitech/armanitech.json",
       "@type": "sa:Organization",
       "rdfs:label": "Armanitech",
-      "@id": null,
+      "@id": "sa:org/armanitech",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sector's leading employe..."
+      "sa:description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sect..."
     },
     {
       "file": "Setting/Organizations/Armanitech/aurora-chen.json",
-      "@type": "Person",
-      "rdfs:label": "Aurora Chen: The Defector",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Aurora Chen",
+      "@id": "sa:character/aurora-chen",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1220,12 +1228,11 @@
     },
     {
       "file": "Setting/Organizations/Armanitech/cassian-cole.json",
-      "@type": "Person",
-      "rdfs:label": "Cassian Cole: The Merchant",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Cassian Cole",
+      "@id": "sa:character/cassian-cole",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1237,12 +1244,11 @@
     },
     {
       "file": "Setting/Organizations/Armanitech/dr-elias-vorn.json",
-      "@type": "Person",
-      "rdfs:label": "Dr. Elias Vorn: The Visionary",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Dr. Elias Vorn",
+      "@id": "sa:character/dr-elias-vorn",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1254,12 +1260,11 @@
     },
     {
       "file": "Setting/Organizations/Armanitech/kassandra-vex.json",
-      "@type": "Person",
-      "rdfs:label": "Kassandra Vex: The Executioner",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Kassandra Vex",
+      "@id": "sa:character/kassandra-vex",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1271,12 +1276,11 @@
     },
     {
       "file": "Setting/Organizations/Armanitech/nathaniel-cross.json",
-      "@type": "Person",
-      "rdfs:label": "Nathaniel Cross: The Architect",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Nathaniel Cross",
+      "@id": "sa:character/nathaniel-cross",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1288,12 +1292,11 @@
     },
     {
       "file": "Setting/Organizations/BrugsGobbos/brug.json",
-      "@type": "Person",
+      "@type": "schema:Person",
       "rdfs:label": "Brug",
-      "@id": null,
+      "@id": "sa:character/brug",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "schema:description",
         "schema:url",
         "sa:thematics",
@@ -1307,36 +1310,33 @@
       "file": "Setting/Organizations/BrugsGobbos/brugs-gobbos.json",
       "@type": "sa:Organization",
       "rdfs:label": "Brug's Gobbos",
-      "@id": null,
+      "@id": "sa:org/brugs-gobbos",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that infests every hive c..."
+      "sa:description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that ..."
     },
     {
       "file": "Setting/Organizations/Concordat-Trading-House/concordat-trading-house.json",
       "@type": "sa:Organization",
       "rdfs:label": "The Concordat Trading House",
-      "@id": null,
+      "@id": "sa:org/concordat-trading-house",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominates commerce through ..."
+      "sa:description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominat..."
     },
     {
       "file": "Setting/Organizations/Concordat-Trading-House/dorn-bellisarius.json",
-      "@type": "Person",
-      "rdfs:label": "Dorn Bellisarius: The Restructor",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Dorn Bellisarius",
+      "@id": "sa:character/dorn-bellisarius",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1347,12 +1347,11 @@
     },
     {
       "file": "Setting/Organizations/Concordat-Trading-House/kadesh-morvan.json",
-      "@type": "Person",
-      "rdfs:label": "Kadesh Morvan: The Fortress Keeper",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Kadesh Morvan",
+      "@id": "sa:character/kadesh-morvan",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1364,12 +1363,11 @@
     },
     {
       "file": "Setting/Organizations/Concordat-Trading-House/kael-ironbound.json",
-      "@type": "Person",
-      "rdfs:label": "Kael Ironbound: The Mechanism",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Kael Ironbound",
+      "@id": "sa:character/kael-ironbound",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1381,12 +1379,11 @@
     },
     {
       "file": "Setting/Organizations/Concordat-Trading-House/mira-strand.json",
-      "@type": "Person",
-      "rdfs:label": "Mira Strand: The Liquidator",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Mira Strand",
+      "@id": "sa:character/mira-strand",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1398,12 +1395,11 @@
     },
     {
       "file": "Setting/Organizations/Concordat-Trading-House/petra-shinn.json",
-      "@type": "Person",
-      "rdfs:label": "Petra Shinn: The Web Master",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Petra Shinn",
+      "@id": "sa:character/petra-shinn",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1415,12 +1411,11 @@
     },
     {
       "file": "Setting/Organizations/Concordat-Trading-House/selene-kross.json",
-      "@type": "Person",
-      "rdfs:label": "Selene Kross: The Vulture",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Selene Kross",
+      "@id": "sa:character/selene-kross",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1432,12 +1427,11 @@
     },
     {
       "file": "Setting/Organizations/Concordat-Trading-House/thordis-ironforge-morvan.json",
-      "@type": "Person",
-      "rdfs:label": "Thordis Ironforge-Morvan: The Duchess",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Thordis Ironforge-Morvan",
+      "@id": "sa:character/thordis-ironforge-morvan",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1451,23 +1445,21 @@
       "file": "Setting/Organizations/Cult-of-the-Unbroken/cult-of-the-unbroken.json",
       "@type": "sa:Organization",
       "rdfs:label": "Cult of the Unbroken",
-      "@id": null,
+      "@id": "sa:org/cult-of-the-unbroken",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressions of devotion to X..."
+      "sa:description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressi..."
     },
     {
       "file": "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json",
-      "@type": "Person",
+      "@type": "schema:Person",
       "rdfs:label": "Drexl",
-      "@id": null,
+      "@id": "sa:character/drexl",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:identity",
         "schema:description",
         "sa:nature",
@@ -1478,12 +1470,11 @@
     },
     {
       "file": "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json",
-      "@type": "Person",
+      "@type": "schema:Person",
       "rdfs:label": "Xanthia the Everliving",
-      "@id": null,
+      "@id": "sa:character/xanthia-the-everliving",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:identity",
         "schema:description",
         "sa:nature",
@@ -1496,23 +1487,21 @@
       "file": "Setting/Organizations/Deeprunners-Union/deeprunners-union.json",
       "@type": "sa:Organization",
       "rdfs:label": "Deeprunners Union",
-      "@id": null,
+      "@id": "sa:org/deeprunners-union",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and underground engineers ..."
+      "sa:description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and un..."
     },
     {
       "file": "Setting/Organizations/Deeprunners-Union/marrow.json",
-      "@type": "Person",
-      "rdfs:label": "Marrow: The Navigator",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Marrow",
+      "@id": "sa:character/marrow",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1524,12 +1513,11 @@
     },
     {
       "file": "Setting/Organizations/Deeprunners-Union/rix-blackstone.json",
-      "@type": "Person",
-      "rdfs:label": "Rix Blackstone: The Architect",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Rix Blackstone",
+      "@id": "sa:character/rix-blackstone",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1541,12 +1529,11 @@
     },
     {
       "file": "Setting/Organizations/Deeprunners-Union/thrace-grimhold.json",
-      "@type": "Person",
-      "rdfs:label": "Thrace Grimhold: The Enforcer",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Thrace Grimhold",
+      "@id": "sa:character/thrace-grimhold",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1558,12 +1545,11 @@
     },
     {
       "file": "Setting/Organizations/Deeprunners-Union/vale-ashborn.json",
-      "@type": "Person",
-      "rdfs:label": "Vale Ashborn: The Beautiful Guide",
-      "@id": null,
+      "@type": "schema:Person",
+      "rdfs:label": "Vale Ashborn",
+      "@id": "sa:character/vale-ashborn",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1577,14 +1563,13 @@
       "file": "Setting/Organizations/Everliving-Faith/everliving-faith.json",
       "@type": "sa:Organization",
       "rdfs:label": "Faith of the Everliving",
-      "@id": null,
+      "@id": "sa:org/everliving-faith",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith presents itself as a le..."
+      "sa:description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith pre..."
     },
     {
       "file": "Setting/Organizations/Exodian-Church/brother-keth-rail.json",
@@ -1624,14 +1609,13 @@
       "file": "Setting/Organizations/Exodian-Church/exodian-church.json",
       "@type": "sa:Organization",
       "rdfs:label": "The Exodian Church",
-      "@id": null,
+      "@id": "sa:org/exodian-church",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the path to transcenden..."
+      "sa:description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the..."
     },
     {
       "file": "Setting/Organizations/Exodian-Church/high-priest-orem-voss.json",
@@ -1669,12 +1653,11 @@
     },
     {
       "file": "Setting/Organizations/Forge-Syndicate/brannik-emberjudge.json",
-      "@type": "Person",
+      "@type": "schema:Person",
       "rdfs:label": "Brannik Emberjudge",
-      "@id": null,
+      "@id": "sa:character/brannik-emberjudge",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:race",
         "sa:identity",
         "schema:description",
@@ -1689,36 +1672,33 @@
       "file": "Setting/Organizations/Forge-Syndicate/forge-syndicate.json",
       "@type": "sa:Organization",
       "rdfs:label": "Forge Syndicate",
-      "@id": null,
+      "@id": "sa:org/forge-syndicate",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundries, and factories o..."
+      "sa:description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundr..."
     },
     {
       "file": "Setting/Organizations/House-Valorian/house-valorian.json",
       "@type": "sa:Organization",
       "rdfs:label": "House Valorian",
-      "@id": null,
+      "@id": "sa:org/house-valorian",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's founding. House Valor..."
+      "sa:description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's f..."
     },
     {
       "file": "Setting/Organizations/House-Valorian/lysandra-voss.json",
-      "@type": "Person",
+      "@type": "schema:Person",
       "rdfs:label": "Lysandra Voss",
-      "@id": null,
+      "@id": "sa:character/lysandra-voss",
       "predicates": [
-        "type",
-        "label",
+        "rdfs:label",
         "sa:identity",
         "schema:description",
         "sa:nature",
@@ -1731,14 +1711,13 @@
       "file": "Setting/Organizations/Luminous-Synthesis/luminous-synthesis.json",
       "@type": "sa:Organization",
       "rdfs:label": "The Luminous Synthesis",
-      "@id": null,
+      "@id": "sa:org/luminous-synthesis",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven. The Synthesis contr..."
+      "sa:description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven...."
     },
     {
       "file": "Setting/Organizations/Velvet-Mask/mara-voss.json",
@@ -1776,14 +1755,13 @@
       "file": "Setting/Organizations/Velvet-Mask/velvet-mask.json",
       "@type": "sa:Organization",
       "rdfs:label": "The Velvet Mask",
-      "@id": null,
+      "@id": "sa:org/velvet-mask",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, theft, black-market trad..."
+      "sa:description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, thef..."
     },
     {
       "file": "Setting/Organizations/Velvet-Mask/vex-the-unseen-court.json",
@@ -1805,278 +1783,251 @@
       "file": "Setting/Organizations/Verdant-Collective/verdant-collective.json",
       "@type": "sa:Organization",
       "rdfs:label": "The Verdant Collective",
-      "@id": null,
+      "@id": "sa:org/verdant-collective",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "role"
+        "rdfs:label",
+        "sa:description",
+        "sa:role"
       ],
-      "description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to understanding and cultivati..."
+      "sa:description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to underst..."
     },
     {
       "file": "Setting/Planets/Arcech/arcech.json",
-      "@type": "CreativeWork",
+      "@type": "schema:CreativeWork",
       "rdfs:label": "Arcech",
       "@id": "location:arcech",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "genre",
-        "keywords",
-        "url",
-        "author",
-        "about",
-        "locationCreated",
-        "hasPart",
-        "inLanguage",
-        "dateCreated",
-        "identifier"
-      ],
-      "description": "Arcech is a world of stark contrasts, where immense Hive cities rise from the surface into low orbit, crowned with satel..."
+        "rdfs:label",
+        "schema:description",
+        "schema:genre",
+        "schema:keywords",
+        "schema:url",
+        "schema:author",
+        "schema:about",
+        "schema:locationCreated",
+        "schema:hasPart",
+        "schema:inLanguage",
+        "schema:dateCreated",
+        "schema:identifier"
+      ]
     },
     {
       "file": "Setting/Planets/Arcech/Places/arcech-sylandris.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Arcech-Sylandris",
       "@id": "location:arcech-sylandris",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace",
-        "containsLocation",
-        "containsPlace"
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace",
+        "sa:containsLocation",
+        "schema:containsPlace"
       ]
     },
     {
       "file": "Setting/Planets/Arcech/Places/blackwater.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Blackwater",
       "@id": "location:blackwater",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace",
-        "containsLocation",
-        "containsPlace"
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace",
+        "sa:containsLocation",
+        "schema:containsPlace"
       ]
     },
     {
       "file": "Setting/Planets/Arcech/Places/emerald-heights.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Emerald Heights",
       "@id": "location:emerald-heights",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace",
-        "containsLocation",
-        "containsPlace"
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace",
+        "sa:containsLocation",
+        "schema:containsPlace"
       ]
     },
     {
       "file": "Setting/Planets/Arcech/Places/ironhold.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Ironhold",
       "@id": "location:ironhold",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace",
-        "containsLocation",
-        "containsPlace"
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace",
+        "sa:containsLocation",
+        "schema:containsPlace"
       ]
     },
     {
       "file": "Setting/Planets/Arcech/Places/skyhaven.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Skyhaven",
       "@id": "location:skyhaven",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace",
-        "containsLocation",
-        "containsPlace"
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace",
+        "sa:containsLocation",
+        "schema:containsPlace"
       ]
     },
     {
       "file": "Setting/Planets/Arcech/Places/starfall.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Starfall",
       "@id": "location:starfall",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace",
-        "containsLocation",
-        "containsPlace"
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace",
+        "sa:containsLocation",
+        "schema:containsPlace"
       ]
     },
     {
       "file": "Setting/Planets/Arrur/arrur.json",
-      "@type": "CreativeWork",
+      "@type": "schema:CreativeWork",
       "rdfs:label": "Arrur",
       "@id": "location:arrur",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "genre",
-        "keywords",
-        "url",
-        "author",
-        "about",
-        "locationCreated",
-        "hasPart",
-        "inLanguage",
-        "dateCreated",
-        "identifier"
-      ],
-      "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and massive geological vio..."
+        "rdfs:label",
+        "schema:description",
+        "schema:genre",
+        "schema:keywords",
+        "schema:url",
+        "schema:author",
+        "schema:about",
+        "schema:locationCreated",
+        "schema:hasPart",
+        "schema:inLanguage",
+        "schema:dateCreated",
+        "schema:identifier"
+      ]
     },
     {
       "file": "Setting/Planets/Arrur/Places/ashcross.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Ashcross",
       "@id": "location:ashcross",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace"
-      ],
-      "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock...."
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace"
+      ]
     },
     {
       "file": "Setting/Planets/Arrur/Places/bloodrift.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Bloodrift",
       "@id": "location:bloodrift",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace",
-        "containsLocation",
-        "containsPlace",
-        "attitude"
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace",
+        "sa:containsLocation",
+        "schema:containsPlace",
+        "sa:attitude"
       ]
     },
     {
       "file": "Setting/Planets/Arrur/Places/drowned-bastion.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Drowned Bastion",
       "@id": "location:drowned-bastion",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace"
-      ],
-      "description": "Storm-battered cliffside city used as a penal colony and pirate port...."
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace"
+      ]
     },
     {
       "file": "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Hollow of the Last Joke",
       "@id": "location:hollow-of-the-last-joke",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace"
-      ],
-      "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza’s Grin, said to originate..."
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace"
+      ]
     },
     {
       "file": "Setting/Planets/Arrur/Places/korvhal.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Korvhal",
       "@id": "location:korvhal",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace"
-      ],
-      "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through the highlands...."
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace"
+      ]
     },
     {
       "file": "Setting/Planets/Arrur/Places/skarths-hollow.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Skarth’s Hollow",
       "@id": "location:skarths-hollow",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace"
-      ],
-      "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone palisades...."
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace"
+      ]
     },
     {
       "file": "Setting/Planets/Arrur/Places/southern-mountains.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Southern Mountains",
       "@id": "location:southern-mountains",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace",
-        "containsLocation",
-        "containsPlace",
-        "attitude"
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace",
+        "sa:containsLocation",
+        "schema:containsPlace",
+        "sa:attitude"
       ]
     },
     {
       "file": "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json",
-      "@type": "Place",
+      "@type": "schema:Place",
       "rdfs:label": "Teeth of Gorthuun",
       "@id": "location:teeth-of-gorthuun",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace"
-      ],
-      "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails in their presence...."
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace"
+      ]
     },
     {
       "file": "Setting/Planets/Arrur/Places/thakzas-grin.json",
-      "@type": "Place",
-      "rdfs:label": "Thakza’s Grin",
+      "@type": "schema:Place",
+      "rdfs:label": "Thakza's Grin",
       "@id": "location:thakzas-grin",
       "predicates": [
-        "type",
-        "label",
-        "description",
-        "containedInLocation",
-        "containedInPlace"
-      ],
-      "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke across the highland..."
+        "rdfs:label",
+        "schema:description",
+        "sa:containedInLocation",
+        "schema:containedInPlace"
+      ]
     },
     {
       "file": "skills.json",
@@ -3415,6 +3366,18 @@
         ]
       }
     ],
+    "sa:rules-starting-credits": [
+      {
+        "file": "rules.json",
+        "@type": "sa:Section",
+        "rdfs:label": "Starting Credits",
+        "@id": "sa:rules-starting-credits",
+        "predicates": [
+          "rdfs:label",
+          "sa:content"
+        ]
+      }
+    ],
     "sa:character/alrik-blackvein": [
       {
         "file": "Setting/Characters/alrik-blackvein.json",
@@ -3614,6 +3577,429 @@
         ]
       }
     ],
+    "sa:org/armanitech": [
+      {
+        "file": "Setting/Organizations/Armanitech/armanitech.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Armanitech",
+        "@id": "sa:org/armanitech",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sect..."
+      }
+    ],
+    "sa:character/aurora-chen": [
+      {
+        "file": "Setting/Organizations/Armanitech/aurora-chen.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Aurora Chen",
+        "@id": "sa:character/aurora-chen",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/cassian-cole": [
+      {
+        "file": "Setting/Organizations/Armanitech/cassian-cole.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Cassian Cole",
+        "@id": "sa:character/cassian-cole",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/dr-elias-vorn": [
+      {
+        "file": "Setting/Organizations/Armanitech/dr-elias-vorn.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Dr. Elias Vorn",
+        "@id": "sa:character/dr-elias-vorn",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/kassandra-vex": [
+      {
+        "file": "Setting/Organizations/Armanitech/kassandra-vex.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Kassandra Vex",
+        "@id": "sa:character/kassandra-vex",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/nathaniel-cross": [
+      {
+        "file": "Setting/Organizations/Armanitech/nathaniel-cross.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Nathaniel Cross",
+        "@id": "sa:character/nathaniel-cross",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/brug": [
+      {
+        "file": "Setting/Organizations/BrugsGobbos/brug.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Brug",
+        "@id": "sa:character/brug",
+        "predicates": [
+          "rdfs:label",
+          "schema:description",
+          "schema:url",
+          "sa:thematics",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:org/brugs-gobbos": [
+      {
+        "file": "Setting/Organizations/BrugsGobbos/brugs-gobbos.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Brug's Gobbos",
+        "@id": "sa:org/brugs-gobbos",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that ..."
+      }
+    ],
+    "sa:org/concordat-trading-house": [
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/concordat-trading-house.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Concordat Trading House",
+        "@id": "sa:org/concordat-trading-house",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominat..."
+      }
+    ],
+    "sa:character/dorn-bellisarius": [
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/dorn-bellisarius.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Dorn Bellisarius",
+        "@id": "sa:character/dorn-bellisarius",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships"
+        ]
+      }
+    ],
+    "sa:character/kadesh-morvan": [
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/kadesh-morvan.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Kadesh Morvan",
+        "@id": "sa:character/kadesh-morvan",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/kael-ironbound": [
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/kael-ironbound.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Kael Ironbound",
+        "@id": "sa:character/kael-ironbound",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/mira-strand": [
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/mira-strand.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Mira Strand",
+        "@id": "sa:character/mira-strand",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/petra-shinn": [
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/petra-shinn.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Petra Shinn",
+        "@id": "sa:character/petra-shinn",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/selene-kross": [
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/selene-kross.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Selene Kross",
+        "@id": "sa:character/selene-kross",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/thordis-ironforge-morvan": [
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/thordis-ironforge-morvan.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Thordis Ironforge-Morvan",
+        "@id": "sa:character/thordis-ironforge-morvan",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:org/cult-of-the-unbroken": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/cult-of-the-unbroken.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Cult of the Unbroken",
+        "@id": "sa:org/cult-of-the-unbroken",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressi..."
+      }
+    ],
+    "sa:character/drexl": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Drexl",
+        "@id": "sa:character/drexl",
+        "predicates": [
+          "rdfs:label",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/xanthia-the-everliving": [
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Xanthia the Everliving",
+        "@id": "sa:character/xanthia-the-everliving",
+        "predicates": [
+          "rdfs:label",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:org/deeprunners-union": [
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/deeprunners-union.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Deeprunners Union",
+        "@id": "sa:org/deeprunners-union",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and un..."
+      }
+    ],
+    "sa:character/marrow": [
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/marrow.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Marrow",
+        "@id": "sa:character/marrow",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/rix-blackstone": [
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/rix-blackstone.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Rix Blackstone",
+        "@id": "sa:character/rix-blackstone",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/thrace-grimhold": [
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/thrace-grimhold.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Thrace Grimhold",
+        "@id": "sa:character/thrace-grimhold",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:character/vale-ashborn": [
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/vale-ashborn.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Vale Ashborn",
+        "@id": "sa:character/vale-ashborn",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:org/everliving-faith": [
+      {
+        "file": "Setting/Organizations/Everliving-Faith/everliving-faith.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Faith of the Everliving",
+        "@id": "sa:org/everliving-faith",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith pre..."
+      }
+    ],
     "sa:character/brother-keth-rail": [
       {
         "file": "Setting/Organizations/Exodian-Church/brother-keth-rail.json",
@@ -3650,6 +4036,20 @@
           "sa:relationships",
           "sa:quotes"
         ]
+      }
+    ],
+    "sa:org/exodian-church": [
+      {
+        "file": "Setting/Organizations/Exodian-Church/exodian-church.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Exodian Church",
+        "@id": "sa:org/exodian-church",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the..."
       }
     ],
     "sa:character/high-priest-orem-voss": [
@@ -3690,6 +4090,84 @@
         ]
       }
     ],
+    "sa:character/brannik-emberjudge": [
+      {
+        "file": "Setting/Organizations/Forge-Syndicate/brannik-emberjudge.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Brannik Emberjudge",
+        "@id": "sa:character/brannik-emberjudge",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:thematics",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:org/forge-syndicate": [
+      {
+        "file": "Setting/Organizations/Forge-Syndicate/forge-syndicate.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "Forge Syndicate",
+        "@id": "sa:org/forge-syndicate",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundr..."
+      }
+    ],
+    "sa:org/house-valorian": [
+      {
+        "file": "Setting/Organizations/House-Valorian/house-valorian.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "House Valorian",
+        "@id": "sa:org/house-valorian",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's f..."
+      }
+    ],
+    "sa:character/lysandra-voss": [
+      {
+        "file": "Setting/Organizations/House-Valorian/lysandra-voss.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Lysandra Voss",
+        "@id": "sa:character/lysandra-voss",
+        "predicates": [
+          "rdfs:label",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      }
+    ],
+    "sa:org/luminous-synthesis": [
+      {
+        "file": "Setting/Organizations/Luminous-Synthesis/luminous-synthesis.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Luminous Synthesis",
+        "@id": "sa:org/luminous-synthesis",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven...."
+      }
+    ],
     "sa:character/mara-voss": [
       {
         "file": "Setting/Organizations/Velvet-Mask/mara-voss.json",
@@ -3726,6 +4204,20 @@
         ]
       }
     ],
+    "sa:org/velvet-mask": [
+      {
+        "file": "Setting/Organizations/Velvet-Mask/velvet-mask.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Velvet Mask",
+        "@id": "sa:org/velvet-mask",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, thef..."
+      }
+    ],
     "sa:character/vex-the-unseen-court": [
       {
         "file": "Setting/Organizations/Velvet-Mask/vex-the-unseen-court.json",
@@ -3744,302 +4236,290 @@
         ]
       }
     ],
+    "sa:org/verdant-collective": [
+      {
+        "file": "Setting/Organizations/Verdant-Collective/verdant-collective.json",
+        "@type": "sa:Organization",
+        "rdfs:label": "The Verdant Collective",
+        "@id": "sa:org/verdant-collective",
+        "predicates": [
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
+        ],
+        "sa:description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to underst..."
+      }
+    ],
     "location:arcech": [
       {
         "file": "Setting/Planets/Arcech/arcech.json",
-        "@type": "CreativeWork",
+        "@type": "schema:CreativeWork",
         "rdfs:label": "Arcech",
         "@id": "location:arcech",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "genre",
-          "keywords",
-          "url",
-          "author",
-          "about",
-          "locationCreated",
-          "hasPart",
-          "inLanguage",
-          "dateCreated",
-          "identifier"
-        ],
-        "description": "Arcech is a world of stark contrasts, where immense Hive cities rise from the surface into low orbit, crowned with satel..."
+          "rdfs:label",
+          "schema:description",
+          "schema:genre",
+          "schema:keywords",
+          "schema:url",
+          "schema:author",
+          "schema:about",
+          "schema:locationCreated",
+          "schema:hasPart",
+          "schema:inLanguage",
+          "schema:dateCreated",
+          "schema:identifier"
+        ]
       }
     ],
     "location:arcech-sylandris": [
       {
         "file": "Setting/Planets/Arcech/Places/arcech-sylandris.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Arcech-Sylandris",
         "@id": "location:arcech-sylandris",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "location:blackwater": [
       {
         "file": "Setting/Planets/Arcech/Places/blackwater.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Blackwater",
         "@id": "location:blackwater",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "location:emerald-heights": [
       {
         "file": "Setting/Planets/Arcech/Places/emerald-heights.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Emerald Heights",
         "@id": "location:emerald-heights",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "location:ironhold": [
       {
         "file": "Setting/Planets/Arcech/Places/ironhold.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Ironhold",
         "@id": "location:ironhold",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "location:skyhaven": [
       {
         "file": "Setting/Planets/Arcech/Places/skyhaven.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Skyhaven",
         "@id": "location:skyhaven",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "location:starfall": [
       {
         "file": "Setting/Planets/Arcech/Places/starfall.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Starfall",
         "@id": "location:starfall",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "location:arrur": [
       {
         "file": "Setting/Planets/Arrur/arrur.json",
-        "@type": "CreativeWork",
+        "@type": "schema:CreativeWork",
         "rdfs:label": "Arrur",
         "@id": "location:arrur",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "genre",
-          "keywords",
-          "url",
-          "author",
-          "about",
-          "locationCreated",
-          "hasPart",
-          "inLanguage",
-          "dateCreated",
-          "identifier"
-        ],
-        "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and massive geological vio..."
+          "rdfs:label",
+          "schema:description",
+          "schema:genre",
+          "schema:keywords",
+          "schema:url",
+          "schema:author",
+          "schema:about",
+          "schema:locationCreated",
+          "schema:hasPart",
+          "schema:inLanguage",
+          "schema:dateCreated",
+          "schema:identifier"
+        ]
       }
     ],
     "location:ashcross": [
       {
         "file": "Setting/Planets/Arrur/Places/ashcross.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Ashcross",
         "@id": "location:ashcross",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "location:bloodrift": [
       {
         "file": "Setting/Planets/Arrur/Places/bloodrift.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Bloodrift",
         "@id": "location:bloodrift",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace",
-          "attitude"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace",
+          "sa:attitude"
         ]
       }
     ],
     "location:drowned-bastion": [
       {
         "file": "Setting/Planets/Arrur/Places/drowned-bastion.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Drowned Bastion",
         "@id": "location:drowned-bastion",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Storm-battered cliffside city used as a penal colony and pirate port...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "location:hollow-of-the-last-joke": [
       {
         "file": "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Hollow of the Last Joke",
         "@id": "location:hollow-of-the-last-joke",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza’s Grin, said to originate..."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "location:korvhal": [
       {
         "file": "Setting/Planets/Arrur/Places/korvhal.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Korvhal",
         "@id": "location:korvhal",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through the highlands...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "location:skarths-hollow": [
       {
         "file": "Setting/Planets/Arrur/Places/skarths-hollow.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Skarth’s Hollow",
         "@id": "location:skarths-hollow",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone palisades...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "location:southern-mountains": [
       {
         "file": "Setting/Planets/Arrur/Places/southern-mountains.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Southern Mountains",
         "@id": "location:southern-mountains",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace",
-          "attitude"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace",
+          "sa:attitude"
         ]
       }
     ],
     "location:teeth-of-gorthuun": [
       {
         "file": "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Teeth of Gorthuun",
         "@id": "location:teeth-of-gorthuun",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails in their presence...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "location:thakzas-grin": [
       {
         "file": "Setting/Planets/Arrur/Places/thakzas-grin.json",
-        "@type": "Place",
-        "rdfs:label": "Thakza’s Grin",
+        "@type": "schema:Place",
+        "rdfs:label": "Thakza's Grin",
         "@id": "location:thakzas-grin",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke across the highland..."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "sa:skill-list": [
@@ -5945,6 +6425,18 @@
         ]
       }
     ],
+    "Starting Credits": [
+      {
+        "file": "rules.json",
+        "@type": "sa:Section",
+        "rdfs:label": "Starting Credits",
+        "@id": "sa:rules-starting-credits",
+        "predicates": [
+          "rdfs:label",
+          "sa:content"
+        ]
+      }
+    ],
     "Alrik Blackvein": [
       {
         "file": "Setting/Characters/alrik-blackvein.json",
@@ -6149,25 +6641,23 @@
         "file": "Setting/Organizations/Armanitech/armanitech.json",
         "@type": "sa:Organization",
         "rdfs:label": "Armanitech",
-        "@id": null,
+        "@id": "sa:org/armanitech",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sector's leading employe..."
+        "sa:description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sect..."
       }
     ],
-    "Aurora Chen: The Defector": [
+    "Aurora Chen": [
       {
         "file": "Setting/Organizations/Armanitech/aurora-chen.json",
-        "@type": "Person",
-        "rdfs:label": "Aurora Chen: The Defector",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Aurora Chen",
+        "@id": "sa:character/aurora-chen",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6178,15 +6668,14 @@
         ]
       }
     ],
-    "Cassian Cole: The Merchant": [
+    "Cassian Cole": [
       {
         "file": "Setting/Organizations/Armanitech/cassian-cole.json",
-        "@type": "Person",
-        "rdfs:label": "Cassian Cole: The Merchant",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Cassian Cole",
+        "@id": "sa:character/cassian-cole",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6197,15 +6686,14 @@
         ]
       }
     ],
-    "Dr. Elias Vorn: The Visionary": [
+    "Dr. Elias Vorn": [
       {
         "file": "Setting/Organizations/Armanitech/dr-elias-vorn.json",
-        "@type": "Person",
-        "rdfs:label": "Dr. Elias Vorn: The Visionary",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Dr. Elias Vorn",
+        "@id": "sa:character/dr-elias-vorn",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6216,15 +6704,14 @@
         ]
       }
     ],
-    "Kassandra Vex: The Executioner": [
+    "Kassandra Vex": [
       {
         "file": "Setting/Organizations/Armanitech/kassandra-vex.json",
-        "@type": "Person",
-        "rdfs:label": "Kassandra Vex: The Executioner",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Kassandra Vex",
+        "@id": "sa:character/kassandra-vex",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6235,15 +6722,14 @@
         ]
       }
     ],
-    "Nathaniel Cross: The Architect": [
+    "Nathaniel Cross": [
       {
         "file": "Setting/Organizations/Armanitech/nathaniel-cross.json",
-        "@type": "Person",
-        "rdfs:label": "Nathaniel Cross: The Architect",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Nathaniel Cross",
+        "@id": "sa:character/nathaniel-cross",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6257,12 +6743,11 @@
     "Brug": [
       {
         "file": "Setting/Organizations/BrugsGobbos/brug.json",
-        "@type": "Person",
+        "@type": "schema:Person",
         "rdfs:label": "Brug",
-        "@id": null,
+        "@id": "sa:character/brug",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "schema:description",
           "schema:url",
           "sa:thematics",
@@ -6278,14 +6763,13 @@
         "file": "Setting/Organizations/BrugsGobbos/brugs-gobbos.json",
         "@type": "sa:Organization",
         "rdfs:label": "Brug's Gobbos",
-        "@id": null,
+        "@id": "sa:org/brugs-gobbos",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that infests every hive c..."
+        "sa:description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that ..."
       }
     ],
     "The Concordat Trading House": [
@@ -6293,25 +6777,23 @@
         "file": "Setting/Organizations/Concordat-Trading-House/concordat-trading-house.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Concordat Trading House",
-        "@id": null,
+        "@id": "sa:org/concordat-trading-house",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominates commerce through ..."
+        "sa:description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominat..."
       }
     ],
-    "Dorn Bellisarius: The Restructor": [
+    "Dorn Bellisarius": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/dorn-bellisarius.json",
-        "@type": "Person",
-        "rdfs:label": "Dorn Bellisarius: The Restructor",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Dorn Bellisarius",
+        "@id": "sa:character/dorn-bellisarius",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6321,15 +6803,14 @@
         ]
       }
     ],
-    "Kadesh Morvan: The Fortress Keeper": [
+    "Kadesh Morvan": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/kadesh-morvan.json",
-        "@type": "Person",
-        "rdfs:label": "Kadesh Morvan: The Fortress Keeper",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Kadesh Morvan",
+        "@id": "sa:character/kadesh-morvan",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6340,15 +6821,14 @@
         ]
       }
     ],
-    "Kael Ironbound: The Mechanism": [
+    "Kael Ironbound": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/kael-ironbound.json",
-        "@type": "Person",
-        "rdfs:label": "Kael Ironbound: The Mechanism",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Kael Ironbound",
+        "@id": "sa:character/kael-ironbound",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6359,15 +6839,14 @@
         ]
       }
     ],
-    "Mira Strand: The Liquidator": [
+    "Mira Strand": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/mira-strand.json",
-        "@type": "Person",
-        "rdfs:label": "Mira Strand: The Liquidator",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Mira Strand",
+        "@id": "sa:character/mira-strand",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6378,15 +6857,14 @@
         ]
       }
     ],
-    "Petra Shinn: The Web Master": [
+    "Petra Shinn": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/petra-shinn.json",
-        "@type": "Person",
-        "rdfs:label": "Petra Shinn: The Web Master",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Petra Shinn",
+        "@id": "sa:character/petra-shinn",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6397,15 +6875,14 @@
         ]
       }
     ],
-    "Selene Kross: The Vulture": [
+    "Selene Kross": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/selene-kross.json",
-        "@type": "Person",
-        "rdfs:label": "Selene Kross: The Vulture",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Selene Kross",
+        "@id": "sa:character/selene-kross",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6416,15 +6893,14 @@
         ]
       }
     ],
-    "Thordis Ironforge-Morvan: The Duchess": [
+    "Thordis Ironforge-Morvan": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/thordis-ironforge-morvan.json",
-        "@type": "Person",
-        "rdfs:label": "Thordis Ironforge-Morvan: The Duchess",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Thordis Ironforge-Morvan",
+        "@id": "sa:character/thordis-ironforge-morvan",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6440,25 +6916,23 @@
         "file": "Setting/Organizations/Cult-of-the-Unbroken/cult-of-the-unbroken.json",
         "@type": "sa:Organization",
         "rdfs:label": "Cult of the Unbroken",
-        "@id": null,
+        "@id": "sa:org/cult-of-the-unbroken",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressions of devotion to X..."
+        "sa:description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressi..."
       }
     ],
     "Drexl": [
       {
         "file": "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json",
-        "@type": "Person",
+        "@type": "schema:Person",
         "rdfs:label": "Drexl",
-        "@id": null,
+        "@id": "sa:character/drexl",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:identity",
           "schema:description",
           "sa:nature",
@@ -6471,12 +6945,11 @@
     "Xanthia the Everliving": [
       {
         "file": "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json",
-        "@type": "Person",
+        "@type": "schema:Person",
         "rdfs:label": "Xanthia the Everliving",
-        "@id": null,
+        "@id": "sa:character/xanthia-the-everliving",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:identity",
           "schema:description",
           "sa:nature",
@@ -6491,25 +6964,23 @@
         "file": "Setting/Organizations/Deeprunners-Union/deeprunners-union.json",
         "@type": "sa:Organization",
         "rdfs:label": "Deeprunners Union",
-        "@id": null,
+        "@id": "sa:org/deeprunners-union",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and underground engineers ..."
+        "sa:description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and un..."
       }
     ],
-    "Marrow: The Navigator": [
+    "Marrow": [
       {
         "file": "Setting/Organizations/Deeprunners-Union/marrow.json",
-        "@type": "Person",
-        "rdfs:label": "Marrow: The Navigator",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Marrow",
+        "@id": "sa:character/marrow",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6520,15 +6991,14 @@
         ]
       }
     ],
-    "Rix Blackstone: The Architect": [
+    "Rix Blackstone": [
       {
         "file": "Setting/Organizations/Deeprunners-Union/rix-blackstone.json",
-        "@type": "Person",
-        "rdfs:label": "Rix Blackstone: The Architect",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Rix Blackstone",
+        "@id": "sa:character/rix-blackstone",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6539,15 +7009,14 @@
         ]
       }
     ],
-    "Thrace Grimhold: The Enforcer": [
+    "Thrace Grimhold": [
       {
         "file": "Setting/Organizations/Deeprunners-Union/thrace-grimhold.json",
-        "@type": "Person",
-        "rdfs:label": "Thrace Grimhold: The Enforcer",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Thrace Grimhold",
+        "@id": "sa:character/thrace-grimhold",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6558,15 +7027,14 @@
         ]
       }
     ],
-    "Vale Ashborn: The Beautiful Guide": [
+    "Vale Ashborn": [
       {
         "file": "Setting/Organizations/Deeprunners-Union/vale-ashborn.json",
-        "@type": "Person",
-        "rdfs:label": "Vale Ashborn: The Beautiful Guide",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Vale Ashborn",
+        "@id": "sa:character/vale-ashborn",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6582,14 +7050,13 @@
         "file": "Setting/Organizations/Everliving-Faith/everliving-faith.json",
         "@type": "sa:Organization",
         "rdfs:label": "Faith of the Everliving",
-        "@id": null,
+        "@id": "sa:org/everliving-faith",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith presents itself as a le..."
+        "sa:description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith pre..."
       }
     ],
     "Brother Keth Rail": [
@@ -6635,14 +7102,13 @@
         "file": "Setting/Organizations/Exodian-Church/exodian-church.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Exodian Church",
-        "@id": null,
+        "@id": "sa:org/exodian-church",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the path to transcenden..."
+        "sa:description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the..."
       }
     ],
     "High Priest Orem Voss": [
@@ -6686,12 +7152,11 @@
     "Brannik Emberjudge": [
       {
         "file": "Setting/Organizations/Forge-Syndicate/brannik-emberjudge.json",
-        "@type": "Person",
+        "@type": "schema:Person",
         "rdfs:label": "Brannik Emberjudge",
-        "@id": null,
+        "@id": "sa:character/brannik-emberjudge",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -6708,14 +7173,13 @@
         "file": "Setting/Organizations/Forge-Syndicate/forge-syndicate.json",
         "@type": "sa:Organization",
         "rdfs:label": "Forge Syndicate",
-        "@id": null,
+        "@id": "sa:org/forge-syndicate",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundries, and factories o..."
+        "sa:description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundr..."
       }
     ],
     "House Valorian": [
@@ -6723,25 +7187,23 @@
         "file": "Setting/Organizations/House-Valorian/house-valorian.json",
         "@type": "sa:Organization",
         "rdfs:label": "House Valorian",
-        "@id": null,
+        "@id": "sa:org/house-valorian",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's founding. House Valor..."
+        "sa:description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's f..."
       }
     ],
     "Lysandra Voss": [
       {
         "file": "Setting/Organizations/House-Valorian/lysandra-voss.json",
-        "@type": "Person",
+        "@type": "schema:Person",
         "rdfs:label": "Lysandra Voss",
-        "@id": null,
+        "@id": "sa:character/lysandra-voss",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:identity",
           "schema:description",
           "sa:nature",
@@ -6756,14 +7218,13 @@
         "file": "Setting/Organizations/Luminous-Synthesis/luminous-synthesis.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Luminous Synthesis",
-        "@id": null,
+        "@id": "sa:org/luminous-synthesis",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven. The Synthesis contr..."
+        "sa:description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven...."
       }
     ],
     "Mara Voss": [
@@ -6807,14 +7268,13 @@
         "file": "Setting/Organizations/Velvet-Mask/velvet-mask.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Velvet Mask",
-        "@id": null,
+        "@id": "sa:org/velvet-mask",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, theft, black-market trad..."
+        "sa:description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, thef..."
       }
     ],
     "Vex, the Unseen Court": [
@@ -6840,312 +7300,285 @@
         "file": "Setting/Organizations/Verdant-Collective/verdant-collective.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Verdant Collective",
-        "@id": null,
+        "@id": "sa:org/verdant-collective",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to understanding and cultivati..."
+        "sa:description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to underst..."
       }
     ],
     "Arcech": [
       {
         "file": "Setting/Planets/Arcech/arcech.json",
-        "@type": "CreativeWork",
+        "@type": "schema:CreativeWork",
         "rdfs:label": "Arcech",
         "@id": "location:arcech",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "genre",
-          "keywords",
-          "url",
-          "author",
-          "about",
-          "locationCreated",
-          "hasPart",
-          "inLanguage",
-          "dateCreated",
-          "identifier"
-        ],
-        "description": "Arcech is a world of stark contrasts, where immense Hive cities rise from the surface into low orbit, crowned with satel..."
+          "rdfs:label",
+          "schema:description",
+          "schema:genre",
+          "schema:keywords",
+          "schema:url",
+          "schema:author",
+          "schema:about",
+          "schema:locationCreated",
+          "schema:hasPart",
+          "schema:inLanguage",
+          "schema:dateCreated",
+          "schema:identifier"
+        ]
       }
     ],
     "Arcech-Sylandris": [
       {
         "file": "Setting/Planets/Arcech/Places/arcech-sylandris.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Arcech-Sylandris",
         "@id": "location:arcech-sylandris",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Blackwater": [
       {
         "file": "Setting/Planets/Arcech/Places/blackwater.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Blackwater",
         "@id": "location:blackwater",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Emerald Heights": [
       {
         "file": "Setting/Planets/Arcech/Places/emerald-heights.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Emerald Heights",
         "@id": "location:emerald-heights",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Ironhold": [
       {
         "file": "Setting/Planets/Arcech/Places/ironhold.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Ironhold",
         "@id": "location:ironhold",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Skyhaven": [
       {
         "file": "Setting/Planets/Arcech/Places/skyhaven.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Skyhaven",
         "@id": "location:skyhaven",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Starfall": [
       {
         "file": "Setting/Planets/Arcech/Places/starfall.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Starfall",
         "@id": "location:starfall",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Arrur": [
       {
         "file": "Setting/Planets/Arrur/arrur.json",
-        "@type": "CreativeWork",
+        "@type": "schema:CreativeWork",
         "rdfs:label": "Arrur",
         "@id": "location:arrur",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "genre",
-          "keywords",
-          "url",
-          "author",
-          "about",
-          "locationCreated",
-          "hasPart",
-          "inLanguage",
-          "dateCreated",
-          "identifier"
-        ],
-        "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and massive geological vio..."
+          "rdfs:label",
+          "schema:description",
+          "schema:genre",
+          "schema:keywords",
+          "schema:url",
+          "schema:author",
+          "schema:about",
+          "schema:locationCreated",
+          "schema:hasPart",
+          "schema:inLanguage",
+          "schema:dateCreated",
+          "schema:identifier"
+        ]
       }
     ],
     "Ashcross": [
       {
         "file": "Setting/Planets/Arrur/Places/ashcross.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Ashcross",
         "@id": "location:ashcross",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Bloodrift": [
       {
         "file": "Setting/Planets/Arrur/Places/bloodrift.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Bloodrift",
         "@id": "location:bloodrift",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace",
-          "attitude"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace",
+          "sa:attitude"
         ]
       }
     ],
     "Drowned Bastion": [
       {
         "file": "Setting/Planets/Arrur/Places/drowned-bastion.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Drowned Bastion",
         "@id": "location:drowned-bastion",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Storm-battered cliffside city used as a penal colony and pirate port...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Hollow of the Last Joke": [
       {
         "file": "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Hollow of the Last Joke",
         "@id": "location:hollow-of-the-last-joke",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza’s Grin, said to originate..."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Korvhal": [
       {
         "file": "Setting/Planets/Arrur/Places/korvhal.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Korvhal",
         "@id": "location:korvhal",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through the highlands...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Skarth’s Hollow": [
       {
         "file": "Setting/Planets/Arrur/Places/skarths-hollow.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Skarth’s Hollow",
         "@id": "location:skarths-hollow",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone palisades...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Southern Mountains": [
       {
         "file": "Setting/Planets/Arrur/Places/southern-mountains.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Southern Mountains",
         "@id": "location:southern-mountains",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace",
-          "attitude"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace",
+          "sa:attitude"
         ]
       }
     ],
     "Teeth of Gorthuun": [
       {
         "file": "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Teeth of Gorthuun",
         "@id": "location:teeth-of-gorthuun",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails in their presence...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
-    "Thakza’s Grin": [
+    "Thakza's Grin": [
       {
         "file": "Setting/Planets/Arrur/Places/thakzas-grin.json",
-        "@type": "Place",
-        "rdfs:label": "Thakza’s Grin",
+        "@type": "schema:Place",
+        "rdfs:label": "Thakza's Grin",
         "@id": "location:thakzas-grin",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke across the highland..."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Skills": [
@@ -8172,6 +8605,16 @@
           "rdfs:label",
           "sa:content"
         ]
+      },
+      {
+        "file": "rules.json",
+        "@type": "sa:Section",
+        "rdfs:label": "Starting Credits",
+        "@id": "sa:rules-starting-credits",
+        "predicates": [
+          "rdfs:label",
+          "sa:content"
+        ]
       }
     ],
     "sa:Equipment": [
@@ -9104,6 +9547,307 @@
         ]
       },
       {
+        "file": "Setting/Organizations/Armanitech/aurora-chen.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Aurora Chen",
+        "@id": "sa:character/aurora-chen",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Armanitech/cassian-cole.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Cassian Cole",
+        "@id": "sa:character/cassian-cole",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Armanitech/dr-elias-vorn.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Dr. Elias Vorn",
+        "@id": "sa:character/dr-elias-vorn",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Armanitech/kassandra-vex.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Kassandra Vex",
+        "@id": "sa:character/kassandra-vex",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Armanitech/nathaniel-cross.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Nathaniel Cross",
+        "@id": "sa:character/nathaniel-cross",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/BrugsGobbos/brug.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Brug",
+        "@id": "sa:character/brug",
+        "predicates": [
+          "rdfs:label",
+          "schema:description",
+          "schema:url",
+          "sa:thematics",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/dorn-bellisarius.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Dorn Bellisarius",
+        "@id": "sa:character/dorn-bellisarius",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/kadesh-morvan.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Kadesh Morvan",
+        "@id": "sa:character/kadesh-morvan",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/kael-ironbound.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Kael Ironbound",
+        "@id": "sa:character/kael-ironbound",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/mira-strand.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Mira Strand",
+        "@id": "sa:character/mira-strand",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/petra-shinn.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Petra Shinn",
+        "@id": "sa:character/petra-shinn",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/selene-kross.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Selene Kross",
+        "@id": "sa:character/selene-kross",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Concordat-Trading-House/thordis-ironforge-morvan.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Thordis Ironforge-Morvan",
+        "@id": "sa:character/thordis-ironforge-morvan",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Drexl",
+        "@id": "sa:character/drexl",
+        "predicates": [
+          "rdfs:label",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Xanthia the Everliving",
+        "@id": "sa:character/xanthia-the-everliving",
+        "predicates": [
+          "rdfs:label",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/marrow.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Marrow",
+        "@id": "sa:character/marrow",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/rix-blackstone.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Rix Blackstone",
+        "@id": "sa:character/rix-blackstone",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/thrace-grimhold.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Thrace Grimhold",
+        "@id": "sa:character/thrace-grimhold",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/Deeprunners-Union/vale-ashborn.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Vale Ashborn",
+        "@id": "sa:character/vale-ashborn",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
         "file": "Setting/Organizations/Exodian-Church/brother-keth-rail.json",
         "@type": "schema:Person",
         "rdfs:label": "Brother Keth Rail",
@@ -9172,6 +9916,38 @@
         ]
       },
       {
+        "file": "Setting/Organizations/Forge-Syndicate/brannik-emberjudge.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Brannik Emberjudge",
+        "@id": "sa:character/brannik-emberjudge",
+        "predicates": [
+          "rdfs:label",
+          "sa:race",
+          "sa:identity",
+          "schema:description",
+          "sa:thematics",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
+        "file": "Setting/Organizations/House-Valorian/lysandra-voss.json",
+        "@type": "schema:Person",
+        "rdfs:label": "Lysandra Voss",
+        "@id": "sa:character/lysandra-voss",
+        "predicates": [
+          "rdfs:label",
+          "sa:identity",
+          "schema:description",
+          "sa:nature",
+          "sa:mechanics",
+          "sa:relationships",
+          "sa:quotes"
+        ]
+      },
+      {
         "file": "Setting/Organizations/Velvet-Mask/mara-voss.json",
         "@type": "schema:Person",
         "rdfs:label": "Mara Voss",
@@ -9225,781 +10001,387 @@
         "file": "Setting/Organizations/Armanitech/armanitech.json",
         "@type": "sa:Organization",
         "rdfs:label": "Armanitech",
-        "@id": null,
+        "@id": "sa:org/armanitech",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sector's leading employe..."
+        "sa:description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sect..."
       },
       {
         "file": "Setting/Organizations/BrugsGobbos/brugs-gobbos.json",
         "@type": "sa:Organization",
         "rdfs:label": "Brug's Gobbos",
-        "@id": null,
+        "@id": "sa:org/brugs-gobbos",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that infests every hive c..."
+        "sa:description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that ..."
       },
       {
         "file": "Setting/Organizations/Concordat-Trading-House/concordat-trading-house.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Concordat Trading House",
-        "@id": null,
+        "@id": "sa:org/concordat-trading-house",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominates commerce through ..."
+        "sa:description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominat..."
       },
       {
         "file": "Setting/Organizations/Cult-of-the-Unbroken/cult-of-the-unbroken.json",
         "@type": "sa:Organization",
         "rdfs:label": "Cult of the Unbroken",
-        "@id": null,
+        "@id": "sa:org/cult-of-the-unbroken",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressions of devotion to X..."
+        "sa:description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressi..."
       },
       {
         "file": "Setting/Organizations/Deeprunners-Union/deeprunners-union.json",
         "@type": "sa:Organization",
         "rdfs:label": "Deeprunners Union",
-        "@id": null,
+        "@id": "sa:org/deeprunners-union",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and underground engineers ..."
+        "sa:description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and un..."
       },
       {
         "file": "Setting/Organizations/Everliving-Faith/everliving-faith.json",
         "@type": "sa:Organization",
         "rdfs:label": "Faith of the Everliving",
-        "@id": null,
+        "@id": "sa:org/everliving-faith",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith presents itself as a le..."
+        "sa:description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith pre..."
       },
       {
         "file": "Setting/Organizations/Exodian-Church/exodian-church.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Exodian Church",
-        "@id": null,
+        "@id": "sa:org/exodian-church",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the path to transcenden..."
+        "sa:description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the..."
       },
       {
         "file": "Setting/Organizations/Forge-Syndicate/forge-syndicate.json",
         "@type": "sa:Organization",
         "rdfs:label": "Forge Syndicate",
-        "@id": null,
+        "@id": "sa:org/forge-syndicate",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundries, and factories o..."
+        "sa:description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundr..."
       },
       {
         "file": "Setting/Organizations/House-Valorian/house-valorian.json",
         "@type": "sa:Organization",
         "rdfs:label": "House Valorian",
-        "@id": null,
+        "@id": "sa:org/house-valorian",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's founding. House Valor..."
+        "sa:description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's f..."
       },
       {
         "file": "Setting/Organizations/Luminous-Synthesis/luminous-synthesis.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Luminous Synthesis",
-        "@id": null,
+        "@id": "sa:org/luminous-synthesis",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven. The Synthesis contr..."
+        "sa:description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven...."
       },
       {
         "file": "Setting/Organizations/Velvet-Mask/velvet-mask.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Velvet Mask",
-        "@id": null,
+        "@id": "sa:org/velvet-mask",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, theft, black-market trad..."
+        "sa:description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, thef..."
       },
       {
         "file": "Setting/Organizations/Verdant-Collective/verdant-collective.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Verdant Collective",
-        "@id": null,
+        "@id": "sa:org/verdant-collective",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to understanding and cultivati..."
+        "sa:description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to underst..."
       }
     ],
-    "Person": [
-      {
-        "file": "Setting/Organizations/Armanitech/aurora-chen.json",
-        "@type": "Person",
-        "rdfs:label": "Aurora Chen: The Defector",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Armanitech/cassian-cole.json",
-        "@type": "Person",
-        "rdfs:label": "Cassian Cole: The Merchant",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Armanitech/dr-elias-vorn.json",
-        "@type": "Person",
-        "rdfs:label": "Dr. Elias Vorn: The Visionary",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Armanitech/kassandra-vex.json",
-        "@type": "Person",
-        "rdfs:label": "Kassandra Vex: The Executioner",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Armanitech/nathaniel-cross.json",
-        "@type": "Person",
-        "rdfs:label": "Nathaniel Cross: The Architect",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/BrugsGobbos/brug.json",
-        "@type": "Person",
-        "rdfs:label": "Brug",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "schema:description",
-          "schema:url",
-          "sa:thematics",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Concordat-Trading-House/dorn-bellisarius.json",
-        "@type": "Person",
-        "rdfs:label": "Dorn Bellisarius: The Restructor",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Concordat-Trading-House/kadesh-morvan.json",
-        "@type": "Person",
-        "rdfs:label": "Kadesh Morvan: The Fortress Keeper",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Concordat-Trading-House/kael-ironbound.json",
-        "@type": "Person",
-        "rdfs:label": "Kael Ironbound: The Mechanism",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Concordat-Trading-House/mira-strand.json",
-        "@type": "Person",
-        "rdfs:label": "Mira Strand: The Liquidator",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Concordat-Trading-House/petra-shinn.json",
-        "@type": "Person",
-        "rdfs:label": "Petra Shinn: The Web Master",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Concordat-Trading-House/selene-kross.json",
-        "@type": "Person",
-        "rdfs:label": "Selene Kross: The Vulture",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Concordat-Trading-House/thordis-ironforge-morvan.json",
-        "@type": "Person",
-        "rdfs:label": "Thordis Ironforge-Morvan: The Duchess",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json",
-        "@type": "Person",
-        "rdfs:label": "Drexl",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json",
-        "@type": "Person",
-        "rdfs:label": "Xanthia the Everliving",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Deeprunners-Union/marrow.json",
-        "@type": "Person",
-        "rdfs:label": "Marrow: The Navigator",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Deeprunners-Union/rix-blackstone.json",
-        "@type": "Person",
-        "rdfs:label": "Rix Blackstone: The Architect",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Deeprunners-Union/thrace-grimhold.json",
-        "@type": "Person",
-        "rdfs:label": "Thrace Grimhold: The Enforcer",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Deeprunners-Union/vale-ashborn.json",
-        "@type": "Person",
-        "rdfs:label": "Vale Ashborn: The Beautiful Guide",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/Forge-Syndicate/brannik-emberjudge.json",
-        "@type": "Person",
-        "rdfs:label": "Brannik Emberjudge",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:race",
-          "sa:identity",
-          "schema:description",
-          "sa:thematics",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      },
-      {
-        "file": "Setting/Organizations/House-Valorian/lysandra-voss.json",
-        "@type": "Person",
-        "rdfs:label": "Lysandra Voss",
-        "@id": null,
-        "predicates": [
-          "type",
-          "label",
-          "sa:identity",
-          "schema:description",
-          "sa:nature",
-          "sa:mechanics",
-          "sa:relationships",
-          "sa:quotes"
-        ]
-      }
-    ],
-    "CreativeWork": [
+    "schema:CreativeWork": [
       {
         "file": "Setting/Planets/Arcech/arcech.json",
-        "@type": "CreativeWork",
+        "@type": "schema:CreativeWork",
         "rdfs:label": "Arcech",
         "@id": "location:arcech",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "genre",
-          "keywords",
-          "url",
-          "author",
-          "about",
-          "locationCreated",
-          "hasPart",
-          "inLanguage",
-          "dateCreated",
-          "identifier"
-        ],
-        "description": "Arcech is a world of stark contrasts, where immense Hive cities rise from the surface into low orbit, crowned with satel..."
+          "rdfs:label",
+          "schema:description",
+          "schema:genre",
+          "schema:keywords",
+          "schema:url",
+          "schema:author",
+          "schema:about",
+          "schema:locationCreated",
+          "schema:hasPart",
+          "schema:inLanguage",
+          "schema:dateCreated",
+          "schema:identifier"
+        ]
       },
       {
         "file": "Setting/Planets/Arrur/arrur.json",
-        "@type": "CreativeWork",
+        "@type": "schema:CreativeWork",
         "rdfs:label": "Arrur",
         "@id": "location:arrur",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "genre",
-          "keywords",
-          "url",
-          "author",
-          "about",
-          "locationCreated",
-          "hasPart",
-          "inLanguage",
-          "dateCreated",
-          "identifier"
-        ],
-        "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and massive geological vio..."
+          "rdfs:label",
+          "schema:description",
+          "schema:genre",
+          "schema:keywords",
+          "schema:url",
+          "schema:author",
+          "schema:about",
+          "schema:locationCreated",
+          "schema:hasPart",
+          "schema:inLanguage",
+          "schema:dateCreated",
+          "schema:identifier"
+        ]
       }
     ],
-    "Place": [
+    "schema:Place": [
       {
         "file": "Setting/Planets/Arcech/Places/arcech-sylandris.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Arcech-Sylandris",
         "@id": "location:arcech-sylandris",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       },
       {
         "file": "Setting/Planets/Arcech/Places/blackwater.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Blackwater",
         "@id": "location:blackwater",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       },
       {
         "file": "Setting/Planets/Arcech/Places/emerald-heights.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Emerald Heights",
         "@id": "location:emerald-heights",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       },
       {
         "file": "Setting/Planets/Arcech/Places/ironhold.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Ironhold",
         "@id": "location:ironhold",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       },
       {
         "file": "Setting/Planets/Arcech/Places/skyhaven.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Skyhaven",
         "@id": "location:skyhaven",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       },
       {
         "file": "Setting/Planets/Arcech/Places/starfall.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Starfall",
         "@id": "location:starfall",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       },
       {
         "file": "Setting/Planets/Arrur/Places/ashcross.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Ashcross",
         "@id": "location:ashcross",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       },
       {
         "file": "Setting/Planets/Arrur/Places/bloodrift.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Bloodrift",
         "@id": "location:bloodrift",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace",
-          "attitude"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace",
+          "sa:attitude"
         ]
       },
       {
         "file": "Setting/Planets/Arrur/Places/drowned-bastion.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Drowned Bastion",
         "@id": "location:drowned-bastion",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Storm-battered cliffside city used as a penal colony and pirate port...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       },
       {
         "file": "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Hollow of the Last Joke",
         "@id": "location:hollow-of-the-last-joke",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza’s Grin, said to originate..."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       },
       {
         "file": "Setting/Planets/Arrur/Places/korvhal.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Korvhal",
         "@id": "location:korvhal",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through the highlands...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       },
       {
         "file": "Setting/Planets/Arrur/Places/skarths-hollow.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Skarth’s Hollow",
         "@id": "location:skarths-hollow",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone palisades...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       },
       {
         "file": "Setting/Planets/Arrur/Places/southern-mountains.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Southern Mountains",
         "@id": "location:southern-mountains",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace",
-          "attitude"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace",
+          "sa:attitude"
         ]
       },
       {
         "file": "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Teeth of Gorthuun",
         "@id": "location:teeth-of-gorthuun",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails in their presence...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       },
       {
         "file": "Setting/Planets/Arrur/Places/thakzas-grin.json",
-        "@type": "Place",
-        "rdfs:label": "Thakza’s Grin",
+        "@type": "schema:Place",
+        "rdfs:label": "Thakza's Grin",
         "@id": "location:thakzas-grin",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke across the highland..."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "sa:SkillCollection": [
@@ -11731,6 +12113,16 @@
           "rdfs:label",
           "sa:content"
         ]
+      },
+      {
+        "file": "rules.json",
+        "@type": "sa:Section",
+        "rdfs:label": "Starting Credits",
+        "@id": "sa:rules-starting-credits",
+        "predicates": [
+          "rdfs:label",
+          "sa:content"
+        ]
       }
     ],
     "Setting/Characters/alrik-blackvein.json": [
@@ -11937,25 +12329,23 @@
         "file": "Setting/Organizations/Armanitech/armanitech.json",
         "@type": "sa:Organization",
         "rdfs:label": "Armanitech",
-        "@id": null,
+        "@id": "sa:org/armanitech",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sector's leading employe..."
+        "sa:description": "A high-tech corporation with both commercial and covert operations across the sector. It is the sect..."
       }
     ],
     "Setting/Organizations/Armanitech/aurora-chen.json": [
       {
         "file": "Setting/Organizations/Armanitech/aurora-chen.json",
-        "@type": "Person",
-        "rdfs:label": "Aurora Chen: The Defector",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Aurora Chen",
+        "@id": "sa:character/aurora-chen",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -11969,12 +12359,11 @@
     "Setting/Organizations/Armanitech/cassian-cole.json": [
       {
         "file": "Setting/Organizations/Armanitech/cassian-cole.json",
-        "@type": "Person",
-        "rdfs:label": "Cassian Cole: The Merchant",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Cassian Cole",
+        "@id": "sa:character/cassian-cole",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -11988,12 +12377,11 @@
     "Setting/Organizations/Armanitech/dr-elias-vorn.json": [
       {
         "file": "Setting/Organizations/Armanitech/dr-elias-vorn.json",
-        "@type": "Person",
-        "rdfs:label": "Dr. Elias Vorn: The Visionary",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Dr. Elias Vorn",
+        "@id": "sa:character/dr-elias-vorn",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12007,12 +12395,11 @@
     "Setting/Organizations/Armanitech/kassandra-vex.json": [
       {
         "file": "Setting/Organizations/Armanitech/kassandra-vex.json",
-        "@type": "Person",
-        "rdfs:label": "Kassandra Vex: The Executioner",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Kassandra Vex",
+        "@id": "sa:character/kassandra-vex",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12026,12 +12413,11 @@
     "Setting/Organizations/Armanitech/nathaniel-cross.json": [
       {
         "file": "Setting/Organizations/Armanitech/nathaniel-cross.json",
-        "@type": "Person",
-        "rdfs:label": "Nathaniel Cross: The Architect",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Nathaniel Cross",
+        "@id": "sa:character/nathaniel-cross",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12045,12 +12431,11 @@
     "Setting/Organizations/BrugsGobbos/brug.json": [
       {
         "file": "Setting/Organizations/BrugsGobbos/brug.json",
-        "@type": "Person",
+        "@type": "schema:Person",
         "rdfs:label": "Brug",
-        "@id": null,
+        "@id": "sa:character/brug",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "schema:description",
           "schema:url",
           "sa:thematics",
@@ -12066,14 +12451,13 @@
         "file": "Setting/Organizations/BrugsGobbos/brugs-gobbos.json",
         "@type": "sa:Organization",
         "rdfs:label": "Brug's Gobbos",
-        "@id": null,
+        "@id": "sa:org/brugs-gobbos",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that infests every hive c..."
+        "sa:description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that ..."
       }
     ],
     "Setting/Organizations/Concordat-Trading-House/concordat-trading-house.json": [
@@ -12081,25 +12465,23 @@
         "file": "Setting/Organizations/Concordat-Trading-House/concordat-trading-house.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Concordat Trading House",
-        "@id": null,
+        "@id": "sa:org/concordat-trading-house",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominates commerce through ..."
+        "sa:description": "A merchant confederacy of trading families, shipping magnates, and interstellar brokers that dominat..."
       }
     ],
     "Setting/Organizations/Concordat-Trading-House/dorn-bellisarius.json": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/dorn-bellisarius.json",
-        "@type": "Person",
-        "rdfs:label": "Dorn Bellisarius: The Restructor",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Dorn Bellisarius",
+        "@id": "sa:character/dorn-bellisarius",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12112,12 +12494,11 @@
     "Setting/Organizations/Concordat-Trading-House/kadesh-morvan.json": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/kadesh-morvan.json",
-        "@type": "Person",
-        "rdfs:label": "Kadesh Morvan: The Fortress Keeper",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Kadesh Morvan",
+        "@id": "sa:character/kadesh-morvan",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12131,12 +12512,11 @@
     "Setting/Organizations/Concordat-Trading-House/kael-ironbound.json": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/kael-ironbound.json",
-        "@type": "Person",
-        "rdfs:label": "Kael Ironbound: The Mechanism",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Kael Ironbound",
+        "@id": "sa:character/kael-ironbound",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12150,12 +12530,11 @@
     "Setting/Organizations/Concordat-Trading-House/mira-strand.json": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/mira-strand.json",
-        "@type": "Person",
-        "rdfs:label": "Mira Strand: The Liquidator",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Mira Strand",
+        "@id": "sa:character/mira-strand",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12169,12 +12548,11 @@
     "Setting/Organizations/Concordat-Trading-House/petra-shinn.json": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/petra-shinn.json",
-        "@type": "Person",
-        "rdfs:label": "Petra Shinn: The Web Master",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Petra Shinn",
+        "@id": "sa:character/petra-shinn",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12188,12 +12566,11 @@
     "Setting/Organizations/Concordat-Trading-House/selene-kross.json": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/selene-kross.json",
-        "@type": "Person",
-        "rdfs:label": "Selene Kross: The Vulture",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Selene Kross",
+        "@id": "sa:character/selene-kross",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12207,12 +12584,11 @@
     "Setting/Organizations/Concordat-Trading-House/thordis-ironforge-morvan.json": [
       {
         "file": "Setting/Organizations/Concordat-Trading-House/thordis-ironforge-morvan.json",
-        "@type": "Person",
-        "rdfs:label": "Thordis Ironforge-Morvan: The Duchess",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Thordis Ironforge-Morvan",
+        "@id": "sa:character/thordis-ironforge-morvan",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12228,25 +12604,23 @@
         "file": "Setting/Organizations/Cult-of-the-Unbroken/cult-of-the-unbroken.json",
         "@type": "sa:Organization",
         "rdfs:label": "Cult of the Unbroken",
-        "@id": null,
+        "@id": "sa:org/cult-of-the-unbroken",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressions of devotion to X..."
+        "sa:description": "Not a single organization, but a catch-all term for all radical, militant, and unsanctioned expressi..."
       }
     ],
     "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json": [
       {
         "file": "Setting/Organizations/Cult-of-the-Unbroken/drexl-herald.json",
-        "@type": "Person",
+        "@type": "schema:Person",
         "rdfs:label": "Drexl",
-        "@id": null,
+        "@id": "sa:character/drexl",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:identity",
           "schema:description",
           "sa:nature",
@@ -12259,12 +12633,11 @@
     "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json": [
       {
         "file": "Setting/Organizations/Cult-of-the-Unbroken/xanthia-everliving.json",
-        "@type": "Person",
+        "@type": "schema:Person",
         "rdfs:label": "Xanthia the Everliving",
-        "@id": null,
+        "@id": "sa:character/xanthia-the-everliving",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:identity",
           "schema:description",
           "sa:nature",
@@ -12279,25 +12652,23 @@
         "file": "Setting/Organizations/Deeprunners-Union/deeprunners-union.json",
         "@type": "sa:Organization",
         "rdfs:label": "Deeprunners Union",
-        "@id": null,
+        "@id": "sa:org/deeprunners-union",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and underground engineers ..."
+        "sa:description": "A sprawling, loosely organized collective of tunnel-dwellers, maintenance workers, smugglers, and un..."
       }
     ],
     "Setting/Organizations/Deeprunners-Union/marrow.json": [
       {
         "file": "Setting/Organizations/Deeprunners-Union/marrow.json",
-        "@type": "Person",
-        "rdfs:label": "Marrow: The Navigator",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Marrow",
+        "@id": "sa:character/marrow",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12311,12 +12682,11 @@
     "Setting/Organizations/Deeprunners-Union/rix-blackstone.json": [
       {
         "file": "Setting/Organizations/Deeprunners-Union/rix-blackstone.json",
-        "@type": "Person",
-        "rdfs:label": "Rix Blackstone: The Architect",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Rix Blackstone",
+        "@id": "sa:character/rix-blackstone",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12330,12 +12700,11 @@
     "Setting/Organizations/Deeprunners-Union/thrace-grimhold.json": [
       {
         "file": "Setting/Organizations/Deeprunners-Union/thrace-grimhold.json",
-        "@type": "Person",
-        "rdfs:label": "Thrace Grimhold: The Enforcer",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Thrace Grimhold",
+        "@id": "sa:character/thrace-grimhold",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12349,12 +12718,11 @@
     "Setting/Organizations/Deeprunners-Union/vale-ashborn.json": [
       {
         "file": "Setting/Organizations/Deeprunners-Union/vale-ashborn.json",
-        "@type": "Person",
-        "rdfs:label": "Vale Ashborn: The Beautiful Guide",
-        "@id": null,
+        "@type": "schema:Person",
+        "rdfs:label": "Vale Ashborn",
+        "@id": "sa:character/vale-ashborn",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12370,14 +12738,13 @@
         "file": "Setting/Organizations/Everliving-Faith/everliving-faith.json",
         "@type": "sa:Organization",
         "rdfs:label": "Faith of the Everliving",
-        "@id": null,
+        "@id": "sa:org/everliving-faith",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith presents itself as a le..."
+        "sa:description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith pre..."
       }
     ],
     "Setting/Organizations/Exodian-Church/brother-keth-rail.json": [
@@ -12423,14 +12790,13 @@
         "file": "Setting/Organizations/Exodian-Church/exodian-church.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Exodian Church",
-        "@id": null,
+        "@id": "sa:org/exodian-church",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the path to transcenden..."
+        "sa:description": "A quasi-religious, tech-salvational movement that preaches the fusion of faith and technology as the..."
       }
     ],
     "Setting/Organizations/Exodian-Church/high-priest-orem-voss.json": [
@@ -12474,12 +12840,11 @@
     "Setting/Organizations/Forge-Syndicate/brannik-emberjudge.json": [
       {
         "file": "Setting/Organizations/Forge-Syndicate/brannik-emberjudge.json",
-        "@type": "Person",
+        "@type": "schema:Person",
         "rdfs:label": "Brannik Emberjudge",
-        "@id": null,
+        "@id": "sa:character/brannik-emberjudge",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:race",
           "sa:identity",
           "schema:description",
@@ -12496,14 +12861,13 @@
         "file": "Setting/Organizations/Forge-Syndicate/forge-syndicate.json",
         "@type": "sa:Organization",
         "rdfs:label": "Forge Syndicate",
-        "@id": null,
+        "@id": "sa:org/forge-syndicate",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundries, and factories o..."
+        "sa:description": "A sprawling industrial labor union and manufacturing cartel that controls the ore refineries, foundr..."
       }
     ],
     "Setting/Organizations/House-Valorian/house-valorian.json": [
@@ -12511,25 +12875,23 @@
         "file": "Setting/Organizations/House-Valorian/house-valorian.json",
         "@type": "sa:Organization",
         "rdfs:label": "House Valorian",
-        "@id": null,
+        "@id": "sa:org/house-valorian",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's founding. House Valor..."
+        "sa:description": "An ancient banking dynasty and landed aristocracy with roots stretching back to Arcech-Sylandris's f..."
       }
     ],
     "Setting/Organizations/House-Valorian/lysandra-voss.json": [
       {
         "file": "Setting/Organizations/House-Valorian/lysandra-voss.json",
-        "@type": "Person",
+        "@type": "schema:Person",
         "rdfs:label": "Lysandra Voss",
-        "@id": null,
+        "@id": "sa:character/lysandra-voss",
         "predicates": [
-          "type",
-          "label",
+          "rdfs:label",
           "sa:identity",
           "schema:description",
           "sa:nature",
@@ -12544,14 +12906,13 @@
         "file": "Setting/Organizations/Luminous-Synthesis/luminous-synthesis.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Luminous Synthesis",
-        "@id": null,
+        "@id": "sa:org/luminous-synthesis",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven. The Synthesis contr..."
+        "sa:description": "An exclusive cabal of Manfuctors and arcane scholars who dominate magical manufacturing in Skyhaven...."
       }
     ],
     "Setting/Organizations/Velvet-Mask/mara-voss.json": [
@@ -12595,14 +12956,13 @@
         "file": "Setting/Organizations/Velvet-Mask/velvet-mask.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Velvet Mask",
-        "@id": null,
+        "@id": "sa:org/velvet-mask",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, theft, black-market trad..."
+        "sa:description": "An intricate shadow-government controlling half of Blackwater's real economy through smuggling, thef..."
       }
     ],
     "Setting/Organizations/Velvet-Mask/vex-the-unseen-court.json": [
@@ -12628,312 +12988,285 @@
         "file": "Setting/Organizations/Verdant-Collective/verdant-collective.json",
         "@type": "sa:Organization",
         "rdfs:label": "The Verdant Collective",
-        "@id": null,
+        "@id": "sa:org/verdant-collective",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "role"
+          "rdfs:label",
+          "sa:description",
+          "sa:role"
         ],
-        "description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to understanding and cultivati..."
+        "sa:description": "A research consortium and ecological collective headquartered in Emerald Heights, devoted to underst..."
       }
     ],
     "Setting/Planets/Arcech/arcech.json": [
       {
         "file": "Setting/Planets/Arcech/arcech.json",
-        "@type": "CreativeWork",
+        "@type": "schema:CreativeWork",
         "rdfs:label": "Arcech",
         "@id": "location:arcech",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "genre",
-          "keywords",
-          "url",
-          "author",
-          "about",
-          "locationCreated",
-          "hasPart",
-          "inLanguage",
-          "dateCreated",
-          "identifier"
-        ],
-        "description": "Arcech is a world of stark contrasts, where immense Hive cities rise from the surface into low orbit, crowned with satel..."
+          "rdfs:label",
+          "schema:description",
+          "schema:genre",
+          "schema:keywords",
+          "schema:url",
+          "schema:author",
+          "schema:about",
+          "schema:locationCreated",
+          "schema:hasPart",
+          "schema:inLanguage",
+          "schema:dateCreated",
+          "schema:identifier"
+        ]
       }
     ],
     "Setting/Planets/Arcech/Places/arcech-sylandris.json": [
       {
         "file": "Setting/Planets/Arcech/Places/arcech-sylandris.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Arcech-Sylandris",
         "@id": "location:arcech-sylandris",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Setting/Planets/Arcech/Places/blackwater.json": [
       {
         "file": "Setting/Planets/Arcech/Places/blackwater.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Blackwater",
         "@id": "location:blackwater",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Setting/Planets/Arcech/Places/emerald-heights.json": [
       {
         "file": "Setting/Planets/Arcech/Places/emerald-heights.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Emerald Heights",
         "@id": "location:emerald-heights",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Setting/Planets/Arcech/Places/ironhold.json": [
       {
         "file": "Setting/Planets/Arcech/Places/ironhold.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Ironhold",
         "@id": "location:ironhold",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Setting/Planets/Arcech/Places/skyhaven.json": [
       {
         "file": "Setting/Planets/Arcech/Places/skyhaven.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Skyhaven",
         "@id": "location:skyhaven",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Setting/Planets/Arcech/Places/starfall.json": [
       {
         "file": "Setting/Planets/Arcech/Places/starfall.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Starfall",
         "@id": "location:starfall",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace"
         ]
       }
     ],
     "Setting/Planets/Arrur/arrur.json": [
       {
         "file": "Setting/Planets/Arrur/arrur.json",
-        "@type": "CreativeWork",
+        "@type": "schema:CreativeWork",
         "rdfs:label": "Arrur",
         "@id": "location:arrur",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "genre",
-          "keywords",
-          "url",
-          "author",
-          "about",
-          "locationCreated",
-          "hasPart",
-          "inLanguage",
-          "dateCreated",
-          "identifier"
-        ],
-        "description": "Arrur is the brutal, highland-dominated homeworld of the orcs, shaped by ancient godly wounds and massive geological vio..."
+          "rdfs:label",
+          "schema:description",
+          "schema:genre",
+          "schema:keywords",
+          "schema:url",
+          "schema:author",
+          "schema:about",
+          "schema:locationCreated",
+          "schema:hasPart",
+          "schema:inLanguage",
+          "schema:dateCreated",
+          "schema:identifier"
+        ]
       }
     ],
     "Setting/Planets/Arrur/Places/ashcross.json": [
       {
         "file": "Setting/Planets/Arrur/Places/ashcross.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Ashcross",
         "@id": "location:ashcross",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Setting/Planets/Arrur/Places/bloodrift.json": [
       {
         "file": "Setting/Planets/Arrur/Places/bloodrift.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Bloodrift",
         "@id": "location:bloodrift",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace",
-          "attitude"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace",
+          "sa:attitude"
         ]
       }
     ],
     "Setting/Planets/Arrur/Places/drowned-bastion.json": [
       {
         "file": "Setting/Planets/Arrur/Places/drowned-bastion.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Drowned Bastion",
         "@id": "location:drowned-bastion",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Storm-battered cliffside city used as a penal colony and pirate port...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json": [
       {
         "file": "Setting/Planets/Arrur/Places/hollow-of-the-last-joke.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Hollow of the Last Joke",
         "@id": "location:hollow-of-the-last-joke",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Sunken toxic marsh where the trickster god Zugthak fell. The source of the cursed river Thakza’s Grin, said to originate..."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Setting/Planets/Arrur/Places/korvhal.json": [
       {
         "file": "Setting/Planets/Arrur/Places/korvhal.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Korvhal",
         "@id": "location:korvhal",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Ancient mesa city with triple walls and deep wells. Known for its stability and trade routes through the highlands...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Setting/Planets/Arrur/Places/skarths-hollow.json": [
       {
         "file": "Setting/Planets/Arrur/Places/skarths-hollow.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Skarth’s Hollow",
         "@id": "location:skarths-hollow",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Collapsed highland town known for cliff wrestling and obsidian trade. Surrounded by stone and bone palisades...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Setting/Planets/Arrur/Places/southern-mountains.json": [
       {
         "file": "Setting/Planets/Arrur/Places/southern-mountains.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Southern Mountains",
         "@id": "location:southern-mountains",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace",
-          "containsLocation",
-          "containsPlace",
-          "attitude"
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace",
+          "sa:containsLocation",
+          "schema:containsPlace",
+          "sa:attitude"
         ]
       }
     ],
     "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json": [
       {
         "file": "Setting/Planets/Arrur/Places/teeth-of-gorthuun.json",
-        "@type": "Place",
+        "@type": "schema:Place",
         "rdfs:label": "Teeth of Gorthuun",
         "@id": "location:teeth-of-gorthuun",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "Jagged frozen mountains believed to be the fossilized teeth of the death god Gorthuun. Magic fails in their presence...."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "Setting/Planets/Arrur/Places/thakzas-grin.json": [
       {
         "file": "Setting/Planets/Arrur/Places/thakzas-grin.json",
-        "@type": "Place",
-        "rdfs:label": "Thakza’s Grin",
+        "@type": "schema:Place",
+        "rdfs:label": "Thakza's Grin",
         "@id": "location:thakzas-grin",
         "predicates": [
-          "type",
-          "label",
-          "description",
-          "containedInLocation",
-          "containedInPlace"
-        ],
-        "description": "A shimmering but toxic river that carries slow death and corruption from the Hollow of the Last Joke across the highland..."
+          "rdfs:label",
+          "schema:description",
+          "sa:containedInLocation",
+          "schema:containedInPlace"
+        ]
       }
     ],
     "skills.json": [
@@ -13587,23 +13920,22 @@
   },
   "summary": {
     "totalFiles": 108,
-    "totalResources": 198,
-    "uniqueTypes": 17,
+    "totalResources": 199,
+    "uniqueTypes": 16,
     "typeBreakdown": {
       "archetype:Archetype": 16,
       "sa:ActionList": 1,
       "sa:Basic": 1,
-      "sa:Section": 3,
+      "sa:Section": 4,
       "sa:Equipment": 4,
       "sa:Curio": 10,
       "sa:WondrousItem": 1,
       "sa:Feature": 29,
       "sa:Race": 12,
-      "schema:Person": 17,
+      "schema:Person": 38,
       "sa:Organization": 12,
-      "Person": 21,
-      "CreativeWork": 2,
-      "Place": 15,
+      "schema:CreativeWork": 2,
+      "schema:Place": 15,
       "sa:SkillCollection": 1,
       "sa:Skill": 51,
       "sa:Spells": 2

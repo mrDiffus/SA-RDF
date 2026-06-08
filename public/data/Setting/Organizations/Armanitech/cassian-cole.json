@@ -2,44 +2,46 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "Person",
-  "label": "Cassian Cole: The Merchant",
-  "sa:race": "Human",
-  "sa:identity": {
-    "label": "The Merchant",
-    "description": "Senior Vice President of Commercial Sales. The most successful Marketing Executive Armanitech has ever promoted. Personally responsible for 43% of civilian suit sales across the sector."
-  },
-  "schema:description": "Cassian Cole is precisely the kind of beautiful that is also dangerous—he was born with the features that people trust, voices they want to listen to, a smile that feels like personal recognition. He has spent thirty years learning to weaponize this. He does not seduce clients into purchases. He does not negotiate aggressively. He simply makes them feel like buying an Armanitech suit is an expression of their deepest aspirations. By the time they realize they have made a decision, the sale is already concluded.",
-  "sa:nature": {
-    "appearance": "Mid-forties, athletic build, the kind of face that has launched successful careers in entertainment across three systems. His hair is dark and waves slightly—possibly natural, probably maintained through careful biochemistry. He wears tailored suits that cost more than most ships. His watch is an Armanitech prototype only he owns. His shoes are silent when he walks.",
-    "affect": "Charismatic without being manic. He listens more than he speaks, which makes his speech feel precious. He remembers names—his clients feel seen by him. It is a technique so refined that it is difficult to detect as technique.",
-    "social_presence": "He is surrounded by people who believe they are his friends. His actual friends can be counted on one hand. He is aware of the distinction and genuinely content with it.",
-    "quarters": "He maintains residences on three planets, each the physical manifestation of conspicuous success. He rotates between them on a schedule that maximizes visibility. He has never lived in Armanitech housing."
-  },
-  "sa:mechanics": {
-    "sales_strategy": "He does not target wealthy clients—they can afford anything. He targets ambitious clients. People who see an Armanitech suit as a tool for becoming more than they are. He sells aspiration wearing a technical specification.",
-    "market_segment": "He has opened Armanitech to the middle class through financing schemes, status signaling, and the careful construction of Armanitech-as-lifestyle-brand. A Sector Executive in an AC 16 suit is demonstrating power. A successful merchant in an AC 12 suit is demonstrating membership in an aspirational community.",
-    "client_retention": "His customers do not just buy suits—they upgrade on schedule. They buy additional Armanitech products. They recommend Armanitech to their rivals because they like Cassian more than they resent the competition. This is the mechanism of his success.",
-    "territory_expansion": "He is currently penetrating markets in the outer rim where Armanitech has minimal presence. His strategy is deliberately slow—establish a sales presence, build relationships, demonstrate value, then expand. Nathaniel has given him seven years to achieve sector-wide market saturation. He will deliver in six.",
-    "commission_structure": "Cassian earns 10% of all revenue his division generates. Current annual income: approximately forty million credits. This is, technically, more than many Sector Executives. He does not contest this. He simply makes himself more valuable each year."
-  },
-  "sa:relationships": {
-    "nathaniel_cross": "Cassian has met the board three times. Each meeting was exactly thirty minutes. He has learned not to interpret this as coldness—Nathaniel respects results. Cassian delivers results. That is the entire relationship.",
-    "dr_elias_vorn": "Vorn is suspicious of Cassian because Cassian is successful through charm rather than brilliance. Cassian respects Vorn's work and has learned to translate technical specifications into emotional language. Vorn is gradually accepting that commercial success requires both.",
-    "clients": "He maintains relationships with high-value clients through a system of personal attention that is scaled to remain genuine. A client who buys significant volume receives quarterly briefings on upcoming products. A client who buys a single suit receives an annual message. He never forgets a face or a first purchase.",
-    "competitors": "Cassian views competition as aesthetic. Other suit manufacturers are not threats. They are ambient background noise that he is gradually drowning out through superior positioning and brand architecture. This perspective makes him patient in ways aggressively competitive people cannot be.",
-    "faith_of_everliving": "They are expanding aggressively on Arrur. Cassian has received feelers about selling Armanitech suits to their faction. He has not reported this to Nathaniel. He is considering whether it is profitable enough to warrant the risk."
-  },
-  "sa:quotes": [
-    "I do not sell suits. I sell the person you are trying to become.",
-    "The best sale is the one where the client believes they decided without influence. That is the only kind I make.",
-    "Every client is in a negotiation with themselves. My job is to make the winning choice feel inevitable."
+  "@graph": [
+    {
+      "@id": "sa:character/cassian-cole",
+      "@type": "schema:Person",
+      "rdfs:label": "Cassian Cole",
+      "sa:race": "Human",
+      "sa:identity": {
+        "rdfs:label": "The Merchant",
+        "schema:description": "Senior Vice President of Commercial Sales. The most successful Marketing Executive Armanitech has ever promoted. Personally responsible for 43% of civilian suit sales across the sector."
+      },
+      "schema:description": "Cassian Cole is precisely the kind of beautiful that is also dangerous—he was born with the features that people trust, voices they want to listen to, a smile that feels like personal recognition. He has spent thirty years learning to weaponize this. He does not seduce clients into purchases. He does not negotiate aggressively. He simply makes them feel like buying an Armanitech suit is an expression of their deepest aspirations. By the time they realize they have made a decision, the sale is already concluded.",
+      "sa:nature": {
+        "appearance": "Mid-forties, athletic build, the kind of face that has launched successful careers in entertainment across three systems. His hair is dark and waves slightly—possibly natural, probably maintained through careful biochemistry. He wears tailored suits that cost more than most ships. His watch is an Armanitech prototype only he owns. His shoes are silent when he walks.",
+        "affect": "Charismatic without being manic. He listens more than he speaks, which makes his speech feel precious. He remembers names—his clients feel seen by him. It is a technique so refined that it is difficult to detect as technique.",
+        "social_presence": "He is surrounded by people who believe they are his friends. His actual friends can be counted on one hand. He is aware of the distinction and genuinely content with it.",
+        "quarters": "He maintains residences on three planets, each the physical manifestation of conspicuous success. He rotates between them on a schedule that maximizes visibility. He has never lived in Armanitech housing."
+      },
+      "sa:mechanics": {
+        "sales_strategy": "He does not target wealthy clients—they can afford anything. He targets ambitious clients. People who see an Armanitech suit as a tool for becoming more than they are. He sells aspiration wearing a technical specification.",
+        "market_segment": "He has opened Armanitech to the middle class through financing schemes, status signaling, and the careful construction of Armanitech-as-lifestyle-brand. A Sector Executive in an AC 16 suit is demonstrating power. A successful merchant in an AC 12 suit is demonstrating membership in an aspirational community.",
+        "client_retention": "His customers do not just buy suits—they upgrade on schedule. They buy additional Armanitech products. They recommend Armanitech to their rivals because they like Cassian more than they resent the competition. This is the mechanism of his success.",
+        "territory_expansion": "He is currently penetrating markets in the outer rim where Armanitech has minimal presence. His strategy is deliberately slow—establish a sales presence, build relationships, demonstrate value, then expand. Nathaniel has given him seven years to achieve sector-wide market saturation. He will deliver in six.",
+        "commission_structure": "Cassian earns 10% of all revenue his division generates. Current annual income: approximately forty million credits. This is, technically, more than many Sector Executives. He does not contest this. He simply makes himself more valuable each year."
+      },
+      "sa:relationships": {
+        "nathaniel_cross": "Cassian has met the board three times. Each meeting was exactly thirty minutes. He has learned not to interpret this as coldness—Nathaniel respects results. Cassian delivers results. That is the entire relationship.",
+        "dr_elias_vorn": "Vorn is suspicious of Cassian because Cassian is successful through charm rather than brilliance. Cassian respects Vorn's work and has learned to translate technical specifications into emotional language. Vorn is gradually accepting that commercial success requires both.",
+        "clients": "He maintains relationships with high-value clients through a system of personal attention that is scaled to remain genuine. A client who buys significant volume receives quarterly briefings on upcoming products. A client who buys a single suit receives an annual message. He never forgets a face or a first purchase.",
+        "competitors": "Cassian views competition as aesthetic. Other suit manufacturers are not threats. They are ambient background noise that he is gradually drowning out through superior positioning and brand architecture. This perspective makes him patient in ways aggressively competitive people cannot be.",
+        "faith_of_everliving": "They are expanding aggressively on Arrur. Cassian has received feelers about selling Armanitech suits to their faction. He has not reported this to Nathaniel. He is considering whether it is profitable enough to warrant the risk."
+      },
+      "sa:quotes": [
+        "I do not sell suits. I sell the person you are trying to become.",
+        "The best sale is the one where the client believes they decided without influence. That is the only kind I make.",
+        "Every client is in a negotiation with themselves. My job is to make the winning choice feel inevitable."
+      ]
+    }
   ]
 }

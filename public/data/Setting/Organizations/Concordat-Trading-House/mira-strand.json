@@ -2,45 +2,47 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "Person",
-  "label": "Mira Strand: The Liquidator",
-  "sa:race": "Elf",
-  "sa:identity": {
-    "label": "The Liquidator",
-    "description": "The Concordat's most profitable Seat-Holder. She does not build empires—she extracts them. 51 years old, in her intellectual prime. She does not plan to die at her desk."
-  },
-  "schema:description": "Mira Strand does not build empires. She extracts them. She is the Concordat's most profitable Seat-Holder not because she creates value, but because she is brilliant at identifying it, isolating it, and converting it to liquid assets before the market realizes what she took. She is 51 years old—young by elven standards, still in her intellectual prime. She does not plan to die at her desk. She plans to die on a beach with better drugs than most planets can manufacture, surrounded by enough credits to rebuild if she needs to.",
-  "sa:nature": {
-    "appearance": "Mira dresses expensive and impractical—silk from distant planets, jewelry worth small ships. Her gray hair (now streaked silver by age and deliberate styling) is always perfectly maintained. Her hands are soft and graceful; she has not done manual labor in 20 years.",
-    "demeanor": "She moves like someone who owns the space she walks through—an elven elegance weaponized into authority.",
-    "quarters": "On The Dividend, her quarters are spare and functional; most of the luxury is invested in her wardrobe, her taste in rare wines, and her private pharmaceutical library.",
-    "social_structure": "She surrounds herself with beautiful, competent people who understand they are hired guards for her wealth, not family."
-  },
-  "sa:mechanics": {
-    "philosophy": "The Concordat is not a family legacy, it is a harvesting operation. Other Seat-Holders build dynasties; she builds exit strategies.",
-    "asset_mobility": "She owns The Dividend not out of honor but out of pragmatism—a ship can leave. A planetary headquarters cannot.",
-    "risk_tolerance": "Mira does not take calculated risks. She takes excessive risks and absorbs the losses. She operates at sufficient scale and liquidity that individual failures never threaten the whole.",
-    "real_power": "Not insight, but scale. Not strategy, but the financial capacity to absorb the consequences of miscalculation.",
-    "current_liquidation": "Over the next 18 months, she is liquidating the Strand family's non-mobile assets. Planetary warehouses sold to competitors (who inherit debt). Trade routes rerouted. Agreements dissolved. Everything converts to pure credits and portable tech."
-  },
-  "sa:relationships": {
-    "concordat": "She has no heirs because heirs are liabilities. She has no allies because allies expect loyalty. She has only contractors, and contractors can be replaced.",
-    "jovan_reesh": "The Dividend's captain. Former mercenary who understands that loyalty expires when payment does.",
-    "petra_shinn": "Director of Intelligence. Maintains the web of hundreds of free traders. Engineers compliance through precision and memory.",
-    "dorn_bellisarius": "Chief Acquisition Officer. Identifies targets for liquidation. Transforms instinct for acquisition into contractual reality.",
-    "faith_of_everliving": "Mira observes their expansion on Arrur with detached interest—an opportunity. Supply shortages mean demand spikes. Chaos means price inflation. She positions traders to profit from both sides.",
-    "covenant_structure": "Trust, not loyalty. The math always favors staying. They are contractors. They are excellent. They are irreplaceable until replaced."
-  },
-  "sa:quotes": [
-    "The Concordat is a harvesting operation. I am the reaper.",
-    "When the market shifts, I will be gone, carrying my wealth to some distant station.",
-    "Arcech's stability is irrelevant to me. Arcech's collapse is functionally the same—either way, I leave wealthier."
+  "@graph": [
+    {
+      "@id": "sa:character/mira-strand",
+      "@type": "schema:Person",
+      "rdfs:label": "Mira Strand",
+      "sa:race": "Elf",
+      "sa:identity": {
+        "rdfs:label": "The Liquidator",
+        "schema:description": "The Concordat's most profitable Seat-Holder. She does not build empires—she extracts them. 51 years old, in her intellectual prime. She does not plan to die at her desk."
+      },
+      "schema:description": "Mira Strand does not build empires. She extracts them. She is the Concordat's most profitable Seat-Holder not because she creates value, but because she is brilliant at identifying it, isolating it, and converting it to liquid assets before the market realizes what she took. She is 51 years old—young by elven standards, still in her intellectual prime. She does not plan to die at her desk. She plans to die on a beach with better drugs than most planets can manufacture, surrounded by enough credits to rebuild if she needs to.",
+      "sa:nature": {
+        "appearance": "Mira dresses expensive and impractical—silk from distant planets, jewelry worth small ships. Her gray hair (now streaked silver by age and deliberate styling) is always perfectly maintained. Her hands are soft and graceful; she has not done manual labor in 20 years.",
+        "demeanor": "She moves like someone who owns the space she walks through—an elven elegance weaponized into authority.",
+        "quarters": "On The Dividend, her quarters are spare and functional; most of the luxury is invested in her wardrobe, her taste in rare wines, and her private pharmaceutical library.",
+        "social_structure": "She surrounds herself with beautiful, competent people who understand they are hired guards for her wealth, not family."
+      },
+      "sa:mechanics": {
+        "philosophy": "The Concordat is not a family legacy, it is a harvesting operation. Other Seat-Holders build dynasties; she builds exit strategies.",
+        "asset_mobility": "She owns The Dividend not out of honor but out of pragmatism—a ship can leave. A planetary headquarters cannot.",
+        "risk_tolerance": "Mira does not take calculated risks. She takes excessive risks and absorbs the losses. She operates at sufficient scale and liquidity that individual failures never threaten the whole.",
+        "real_power": "Not insight, but scale. Not strategy, but the financial capacity to absorb the consequences of miscalculation.",
+        "current_liquidation": "Over the next 18 months, she is liquidating the Strand family's non-mobile assets. Planetary warehouses sold to competitors (who inherit debt). Trade routes rerouted. Agreements dissolved. Everything converts to pure credits and portable tech."
+      },
+      "sa:relationships": {
+        "concordat": "She has no heirs because heirs are liabilities. She has no allies because allies expect loyalty. She has only contractors, and contractors can be replaced.",
+        "jovan_reesh": "The Dividend's captain. Former mercenary who understands that loyalty expires when payment does.",
+        "petra_shinn": "Director of Intelligence. Maintains the web of hundreds of free traders. Engineers compliance through precision and memory.",
+        "dorn_bellisarius": "Chief Acquisition Officer. Identifies targets for liquidation. Transforms instinct for acquisition into contractual reality.",
+        "faith_of_everliving": "Mira observes their expansion on Arrur with detached interest—an opportunity. Supply shortages mean demand spikes. Chaos means price inflation. She positions traders to profit from both sides.",
+        "covenant_structure": "Trust, not loyalty. The math always favors staying. They are contractors. They are excellent. They are irreplaceable until replaced."
+      },
+      "sa:quotes": [
+        "The Concordat is a harvesting operation. I am the reaper.",
+        "When the market shifts, I will be gone, carrying my wealth to some distant station.",
+        "Arcech's stability is irrelevant to me. Arcech's collapse is functionally the same—either way, I leave wealthier."
+      ]
+    }
   ]
 }

@@ -2,43 +2,45 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "Person",
-  "label": "Rix Blackstone: The Architect",
-  "sa:race": "Dwarf",
-  "sa:identity": {
-    "label": "The Architect",
-    "description": "Senior High Tunneler and de facto leader of the Deeprunners Council. The oldest active member. Has mapped more tunnel networks than any other living dwarf. Remembers the old routes before the hive cities sealed the deep."
-  },
-  "schema:description": "Rix Blackstone is the closest thing the Deeprunners have to institutional memory. He is ancient by human standards (337 years old), ancient by dwarven standards (not particularly), and he moves through the tunnels like a dwarf moves through stone—with the sense that he is in communion with the structure itself. His beard is white, braided with tokens commemorating major discoveries. His hands are scarred from decades of cutting new routes. He speaks rarely, but when he does, the entire council listens as if receiving prophecy.",
-  "sa:nature": {
-    "appearance": "Dwarven, approximately 130 centimeters tall, built wide and solid like someone designed for underground navigation. His beard is spectacular—floor-length, white, braided with tokens of discovery (a piece of pre-city steel, a carved bone marker, a section of antique light fixture). His eyes are sharp and dark, capable of seeing detail in darkness. He wears practical tunnel gear decades out of fashion and refuses to upgrade.",
-    "demeanor": "Slow speech, decisive judgment, absolute certainty. He does not negotiate—he decides. The council has learned not to take offense at this because his decisions are inevitably correct within three to five years.",
-    "quarters": "He maintains a personal headquarters in the oldest section of the deep tunnels—a pre-city mining facility that predates the current hive by generations. It is filled with maps, historical records, and artifacts he has recovered. Entry is by appointment only. Most council members have never been there.",
-    "navigation": "He claims he can navigate the deep tunnels blindfolded, in darkness, listening only to stone resonance. No one has ever tested this claim. Everyone believes it."
-  },
-  "sa:mechanics": {
-    "knowledge_base": "He has personally mapped over 400 tunnel sectors across Arcech. His mental map of the underground is better than any written chart. Young runners study his published maps the way scholars study ancient texts.",
-    "discovery_protocol": "When a new tunnel section is opened—typically by construction accidents or structural collapse—Rix is the final authority on whether it is safe, viable, and worth mapping. His approval or rejection of a sector is the only rule the Deeprunners enforce universally.",
-    "strategic_vision": "While most High Tunnelers focus on their own sectors' profit, Rix maintains the view that the tunnel network is an ecosystem. He coordinates major expansion, prevents territorial conflicts between sectors, and maintains the code that allows the entire system to function as neutral ground.",
-    "historical_authority": "He periodically releases historical records of the deep—sketches of pre-city construction, theories about what the original builders intended, and warnings about sections that are structurally unstable. These releases are taken as gospel.",
-    "leadership_philosophy": "He leads through example and certainty. He does not threaten. He does not negotiate. He states what is true, and expects compliance because the alternative is structural chaos that benefits no one."
-  },
-  "sa:relationships": {
-    "deeprunners_council": "He is first among equals, but was never elected to a position above the other High Tunnelers. He simply carries such weight of respect that all other council decision-making defers to his judgment. The council structure technically has six High Tunnelers. Functionally, there is Rix and five people who implement his vision.",
-    "younger_tunnelers": "He is a mentor to Lead Guides who show promise. His mentorship is brutal—he demands they learn not just navigation, but history, structural engineering, and the philosophy of why the tunnels must remain neutral. Most cannot sustain the pace. Those who do become the best runners in the sector.",
-    "city_authorities": "The hive cities have attempted to negotiate directly with Rix multiple times. He refuses to meet them. He has established protocols by which hive authorities may contact the Deeprunners Council (always through intermediaries). He will not validate them with his presence.",
-    "faith_of_everliving": "They have inquired about expanding their territorial presence through deep tunnels. Rix has denied access. This decision has resulted in Faith operatives attempting to map tunnels without permission. He has declared them enemies of the code. The implications of this are still being understood."
-  },
-  "sa:quotes": [
-    "The tunnels remember things the world forgot. I remember things the tunnels forgot.",
-    "Neutral ground is the only ground that lasts. The moment we take sides, we become part of the conflict. Then we lose everything.",
-    "You navigate tunnels by listening to stone. If you cannot hear it, you are not ready for the deep routes."
+  "@graph": [
+    {
+      "@id": "sa:character/rix-blackstone",
+      "@type": "schema:Person",
+      "rdfs:label": "Rix Blackstone",
+      "sa:race": "Dwarf",
+      "sa:identity": {
+        "rdfs:label": "The Architect",
+        "schema:description": "Senior High Tunneler and de facto leader of the Deeprunners Council. The oldest active member. Has mapped more tunnel networks than any other living dwarf. Remembers the old routes before the hive cities sealed the deep."
+      },
+      "schema:description": "Rix Blackstone is the closest thing the Deeprunners have to institutional memory. He is ancient by human standards (337 years old), ancient by dwarven standards (not particularly), and he moves through the tunnels like a dwarf moves through stone—with the sense that he is in communion with the structure itself. His beard is white, braided with tokens commemorating major discoveries. His hands are scarred from decades of cutting new routes. He speaks rarely, but when he does, the entire council listens as if receiving prophecy.",
+      "sa:nature": {
+        "appearance": "Dwarven, approximately 130 centimeters tall, built wide and solid like someone designed for underground navigation. His beard is spectacular—floor-length, white, braided with tokens of discovery (a piece of pre-city steel, a carved bone marker, a section of antique light fixture). His eyes are sharp and dark, capable of seeing detail in darkness. He wears practical tunnel gear decades out of fashion and refuses to upgrade.",
+        "demeanor": "Slow speech, decisive judgment, absolute certainty. He does not negotiate—he decides. The council has learned not to take offense at this because his decisions are inevitably correct within three to five years.",
+        "quarters": "He maintains a personal headquarters in the oldest section of the deep tunnels—a pre-city mining facility that predates the current hive by generations. It is filled with maps, historical records, and artifacts he has recovered. Entry is by appointment only. Most council members have never been there.",
+        "navigation": "He claims he can navigate the deep tunnels blindfolded, in darkness, listening only to stone resonance. No one has ever tested this claim. Everyone believes it."
+      },
+      "sa:mechanics": {
+        "knowledge_base": "He has personally mapped over 400 tunnel sectors across Arcech. His mental map of the underground is better than any written chart. Young runners study his published maps the way scholars study ancient texts.",
+        "discovery_protocol": "When a new tunnel section is opened—typically by construction accidents or structural collapse—Rix is the final authority on whether it is safe, viable, and worth mapping. His approval or rejection of a sector is the only rule the Deeprunners enforce universally.",
+        "strategic_vision": "While most High Tunnelers focus on their own sectors' profit, Rix maintains the view that the tunnel network is an ecosystem. He coordinates major expansion, prevents territorial conflicts between sectors, and maintains the code that allows the entire system to function as neutral ground.",
+        "historical_authority": "He periodically releases historical records of the deep—sketches of pre-city construction, theories about what the original builders intended, and warnings about sections that are structurally unstable. These releases are taken as gospel.",
+        "leadership_philosophy": "He leads through example and certainty. He does not threaten. He does not negotiate. He states what is true, and expects compliance because the alternative is structural chaos that benefits no one."
+      },
+      "sa:relationships": {
+        "deeprunners_council": "He is first among equals, but was never elected to a position above the other High Tunnelers. He simply carries such weight of respect that all other council decision-making defers to his judgment. The council structure technically has six High Tunnelers. Functionally, there is Rix and five people who implement his vision.",
+        "younger_tunnelers": "He is a mentor to Lead Guides who show promise. His mentorship is brutal—he demands they learn not just navigation, but history, structural engineering, and the philosophy of why the tunnels must remain neutral. Most cannot sustain the pace. Those who do become the best runners in the sector.",
+        "city_authorities": "The hive cities have attempted to negotiate directly with Rix multiple times. He refuses to meet them. He has established protocols by which hive authorities may contact the Deeprunners Council (always through intermediaries). He will not validate them with his presence.",
+        "faith_of_everliving": "They have inquired about expanding their territorial presence through deep tunnels. Rix has denied access. This decision has resulted in Faith operatives attempting to map tunnels without permission. He has declared them enemies of the code. The implications of this are still being understood."
+      },
+      "sa:quotes": [
+        "The tunnels remember things the world forgot. I remember things the tunnels forgot.",
+        "Neutral ground is the only ground that lasts. The moment we take sides, we become part of the conflict. Then we lose everything.",
+        "You navigate tunnels by listening to stone. If you cannot hear it, you are not ready for the deep routes."
+      ]
+    }
   ]
 }

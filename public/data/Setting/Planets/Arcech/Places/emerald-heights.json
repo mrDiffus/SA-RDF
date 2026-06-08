@@ -1,99 +1,86 @@
 {
-  "@context": {
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "label": "rdfs:label",
-    "type": "@type",
-    "Location": "https://stellararcana.org/Location",
-    "Place": "https://schema.org/Place",
-    "description": "https://schema.org/description",
-    "containedInLocation": {
-      "@id": "https://stellararcana.org/containedInLocation",
-      "@type": "@id"
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "https://schema.org/",
+        "sa": "https://stellararcana.org/",
+        "location": "https://stellararcana.org/location/",
+        "@vocab": "https://stellararcana.org/"
     },
-    "containsLocation": {
-      "@id": "https://stellararcana.org/containsLocation",
-      "@container": "@list",
-      "@type": "@id"
-    },
-    "containsPlace": {
-      "@id": "https://schema.org/containsPlace",
-      "@container": "@list"
-    },
-    "containedInPlace": {
-      "@id": "https://schema.org/containedInPlace",
-      "@type": "@id"
-    }
-  },
-  "type": ["Place", "Location"],
-  "label": "Emerald Heights",
-  "description": [
-    "A research-focused hive city integrated into lush jungle canopy, where ancient trees rise taller than the city spires. Emerald Heights is dedicated to understanding and cultivating xenobiology, ecological engineering, and magical botany. The city is a living laboratory—every plant is catalogued, every organism studied, every ecosystem connected to human inquiry.",
-    "Population: ~175 million scientists, researchers, graduate students, and support staff. Diverse species composition; merit-based social hierarchy (education = status). High population of elves and forest-adapted races.",
-    "Geography: Vertical city woven into jungle canopy. Research facilities built into ancient trees and artificial platforms. Lower levels blend into wild forest. Upper levels are dominated by laboratories, greenhouses, and observatory platforms. Extensive bridge networks crossing above the jungle floor.",
-    "Economy: Biotech research, genetic patents, xenobiology contracts, and ecological consulting. Imports research funding and equipment; exports genetic breakthroughs, organism samples, and environmental reports. Substantial endowment from philanthropic institutions.",
-    "Culture: Academically driven, idealistic, protective of ecological integrity. Status measured by published research, discoveries, and reputation for scientific rigor. Strong anti-corporate bias. Collaborative but competitive peer networks.",
-    "Dominant Power: The Verdant Collective (research consortium with veto over biotech projects). Other presences: Corporately-funded research subsidiaries (tolerated but scrutinized), freelance scientists and poachers (hunted), Brug's Gobbos (shadow ecosystem traders)."
-  ],
-  "@id": "location:emerald-heights",
-  "containedInLocation": "location:arcech",
-  "containedInPlace": "location:arcech",
-  "containsLocation": [
-    {
-      "type": "Location",
-      "label": "The Canopy Laboratories",
-      "@id": "location:the-canopy-laboratories",
-      "description": "Primary research facilities built into massive tree structures and elevated platforms. Climate-controlled, vault-secured, houses cutting-edge xenobiology work."
-    },
-    {
-      "type": "Location",
-      "label": "The Specimen Gardens",
-      "@id": "location:the-specimen-gardens",
-      "description": "Living collections of extraterrestrial organisms, hybrid flora, and dangerous xenolife maintained under strict observation. Dangerous zone; research permits required."
-    },
-    {
-      "type": "Location",
-      "label": "The Academic Quarter",
-      "@id": "location:the-academic-quarter",
-      "description": "University campus, graduate research centers, lecture halls. Hub of intellectual life and publishing. Where reputations are made and theories debated."
-    },
-    {
-      "type": "Location",
-      "label": "The Greenhouse Rings",
-      "@id": "location:the-greenhouse-rings",
-      "description": "Massive transparent domes cultivating rare plants, fungi, and genetic experiments. Climate engineered to mimic alien worlds."
-    },
-    {
-      "type": "Location",
-      "label": "The Wild Margin",
-      "@id": "location:the-wild-margin",
-      "description": "Interface zone between controlled city and untamed jungle. Field research staging area; jungle survival training; occasional dangerous creature incursions."
-    }
-  ],
-  "containsPlace": [
-    {
-      "label": "The Canopy Laboratories",
-      "@id": "location:the-canopy-laboratories",
-      "description": "Primary research facilities built into massive tree structures and elevated platforms. Climate-controlled, vault-secured, houses cutting-edge xenobiology work."
-    },
-    {
-      "label": "The Specimen Gardens",
-      "@id": "location:the-specimen-gardens",
-      "description": "Living collections of extraterrestrial organisms, hybrid flora, and dangerous xenolife maintained under strict observation. Dangerous zone; research permits required."
-    },
-    {
-      "label": "The Academic Quarter",
-      "@id": "location:the-academic-quarter",
-      "description": "University campus, graduate research centers, lecture halls. Hub of intellectual life and publishing. Where reputations are made and theories debated."
-    },
-    {
-      "label": "The Greenhouse Rings",
-      "@id": "location:the-greenhouse-rings",
-      "description": "Massive transparent domes cultivating rare plants, fungi, and genetic experiments. Climate engineered to mimic alien worlds."
-    },
-    {
-      "label": "The Wild Margin",
-      "@id": "location:the-wild-margin",
-      "description": "Interface zone between controlled city and untamed jungle. Field research staging area; jungle survival training; occasional dangerous creature incursions."
-    }
-  ]
+    "@graph": [
+        {
+            "@id": "location:emerald-heights",
+            "@type": ["schema:Place", "sa:Location"],
+            "rdfs:label": "Emerald Heights",
+            "schema:description": [
+                "A research-focused hive city integrated into lush jungle canopy, where ancient trees rise taller than the city spires. Emerald Heights is dedicated to understanding and cultivating xenobiology, ecological engineering, and magical botany. The city is a living laboratory—every plant is catalogued, every organism studied, every ecosystem connected to human inquiry.",
+                "Population: ~175 million scientists, researchers, graduate students, and support staff. Diverse species composition; merit-based social hierarchy (education = status). High population of elves and forest-adapted races.",
+                "Geography: Vertical city woven into jungle canopy. Research facilities built into ancient trees and artificial platforms. Lower levels blend into wild forest. Upper levels are dominated by laboratories, greenhouses, and observatory platforms. Extensive bridge networks crossing above the jungle floor.",
+                "Economy: Biotech research, genetic patents, xenobiology contracts, and ecological consulting. Imports research funding and equipment; exports genetic breakthroughs, organism samples, and environmental reports. Substantial endowment from philanthropic institutions.",
+                "Culture: Academically driven, idealistic, protective of ecological integrity. Status measured by published research, discoveries, and reputation for scientific rigor. Strong anti-corporate bias. Collaborative but competitive peer networks.",
+                "Dominant Power: The Verdant Collective (research consortium with veto over biotech projects). Other presences: Corporately-funded research subsidiaries (tolerated but scrutinized), freelance scientists and poachers (hunted), Brug's Gobbos (shadow ecosystem traders)."
+            ],
+            "sa:containedInLocation": "location:arcech",
+            "schema:containedInPlace": "location:arcech",
+            "sa:containsLocation": [
+                {
+                    "@id": "location:the-canopy-laboratories",
+                    "@type": "sa:Location",
+                    "rdfs:label": "The Canopy Laboratories",
+                    "schema:description": "Primary research facilities built into massive tree structures and elevated platforms. Climate-controlled, vault-secured, houses cutting-edge xenobiology work."
+                },
+                {
+                    "@id": "location:the-specimen-gardens",
+                    "@type": "sa:Location",
+                    "rdfs:label": "The Specimen Gardens",
+                    "schema:description": "Living collections of extraterrestrial organisms, hybrid flora, and dangerous xenolife maintained under strict observation. Dangerous zone; research permits required."
+                },
+                {
+                    "@id": "location:the-academic-quarter",
+                    "@type": "sa:Location",
+                    "rdfs:label": "The Academic Quarter",
+                    "schema:description": "University campus, graduate research centers, lecture halls. Hub of intellectual life and publishing. Where reputations are made and theories debated."
+                },
+                {
+                    "@id": "location:the-greenhouse-rings",
+                    "@type": "sa:Location",
+                    "rdfs:label": "The Greenhouse Rings",
+                    "schema:description": "Massive transparent domes cultivating rare plants, fungi, and genetic experiments. Climate engineered to mimic alien worlds."
+                },
+                {
+                    "@id": "location:the-wild-margin",
+                    "@type": "sa:Location",
+                    "rdfs:label": "The Wild Margin",
+                    "schema:description": "Interface zone between controlled city and untamed jungle. Field research staging area; jungle survival training; occasional dangerous creature incursions."
+                }
+            ],
+            "schema:containsPlace": [
+                {
+                    "@id": "location:the-canopy-laboratories",
+                    "rdfs:label": "The Canopy Laboratories",
+                    "schema:description": "Primary research facilities built into massive tree structures and elevated platforms. Climate-controlled, vault-secured, houses cutting-edge xenobiology work."
+                },
+                {
+                    "@id": "location:the-specimen-gardens",
+                    "rdfs:label": "The Specimen Gardens",
+                    "schema:description": "Living collections of extraterrestrial organisms, hybrid flora, and dangerous xenolife maintained under strict observation. Dangerous zone; research permits required."
+                },
+                {
+                    "@id": "location:the-academic-quarter",
+                    "rdfs:label": "The Academic Quarter",
+                    "schema:description": "University campus, graduate research centers, lecture halls. Hub of intellectual life and publishing. Where reputations are made and theories debated."
+                },
+                {
+                    "@id": "location:the-greenhouse-rings",
+                    "rdfs:label": "The Greenhouse Rings",
+                    "schema:description": "Massive transparent domes cultivating rare plants, fungi, and genetic experiments. Climate engineered to mimic alien worlds."
+                },
+                {
+                    "@id": "location:the-wild-margin",
+                    "rdfs:label": "The Wild Margin",
+                    "schema:description": "Interface zone between controlled city and untamed jungle. Field research staging area; jungle survival training; occasional dangerous creature incursions."
+                }
+            ]
+        }
+    ]
 }

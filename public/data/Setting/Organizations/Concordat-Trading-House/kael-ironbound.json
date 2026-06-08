@@ -2,38 +2,40 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "Person",
-  "label": "Kael Ironbound: The Mechanism",
-  "sa:race": "Draegloth",
-  "sa:identity": {
-    "label": "The Mechanism",
-    "description": "Approximately 30% flesh and 70% machine. Does not remember what their actual body looks like. Does not care. What matters is function. What matters is the fight."
-  },
-  "schema:description": "Kael Ironbound was born a Draegloth. Kael Ironbound is, now, approximately 30% flesh and 70% machine. They have not shown their actual body to another living being in 20 years. They do not remember what it looks like. They do not care. What matters is function. What matters is the fight.",
-  "sa:nature": {
-    "composition": "Encased in armor—heavy, battle-scarred, utilitarian. The armor is not ornamental; it is load-bearing structure. Beneath it, reinforced mechanical joints articulate with mechanical precision. Optical sensors glow dull red where eyes once were. Vocalizer speakers handle communication (their voice is synthesized, unchanging).",
-    "physical_record": "The armor bears marks of a thousand conflicts: blast scorches, claw gouges, dents where shaped charges failed to penetrate. Does not sand them out or repair the cosmetic damage. The scarring is a record. It means something. No one knows what—Kael has not spoken the meaning aloud—but the scars persist as testimony to durability, to survival, to the capacity to take punishment and continue fighting.",
-    "sensory_signature": "When Kael moves, servos whine. When Kael breathes, pneumatic systems hiss. When Kael speaks, it comes through tinny vocalizers that make even casual conversation sound like orders being issued. No one who encounters Kael mistakes them for human. No one mistakes them for alive in the conventional sense. They are clearly something else—something between alive and alive, between pain and past pain, between present and the future they are actively seeking."
-  },
-  "sa:mechanics": {
-    "history": "Spent 40 years in hot combat, primarily mercenary work in sectors ravaged by inter-factional warfare. An exceptional Draegloth's natural predatory ferocity combined with tactical brilliance and an almost supernatural resilience. Enemies fell. Fortifications crumbled. Kael moved through war zones like catastrophe made flesh.",
-    "accumulated_damage": "Over decades of combat against superior numbers, better positioning, and firepower they could not match, they accumulated damage. A railgun round took the left leg. Acid took most of the right shoulder and arm. Shrapnel fragmented the spine. Blunt force trauma shattered ribs and organs.",
-    "replacement_strategy": "Most beings would have died. Kael did not have the biological capacity for surrender. So they replaced. Synthetic leg, reinforced. Mechanical arm, stronger than the original. Spinal reconstruction, titanium and servos. Internal organs replaced with mechanical substitutes that simply work, requiring no maintenance beyond regular recalibration.",
-    "psychological_shift": "With each replacement, Kael became less Draegloth and more Mechanism. And with each mechanical upgrade, a subtle change occurred: the pain diminished, but so did everything else. Kael remembers joy. Kael does not feel it anymore. Kael remembers fear. Kael does not feel it anymore. What remains is two drives, both perfectly clear: the urge to distribute suffering, and the growing certainty that the only worthy end is to meet an opponent who kills them."
-  },
-  "sa:relationships": {
-    "selene_kross": "Kael serves Selene not from loyalty but from professional respect. Selene is a predator. Selene takes. Selene does not hesitate. Kael understands this. In return, Selene does not ask Kael to pretend to be something other than what they are. She does not ask for friendship, does not feign emotion, does not pretend that Kael's existence is anything other than useful. This honesty is, in its way, the only relationship Kael has left that feels real.",
-    "operational_role": "Leads Selene's enforcement team—a small, elite unit of security specialists, bounty hunters, and mercenaries. Does not inspire loyalty through charisma. Inspires competence through example and cold professionalism. Does what is asked. Succeeds. Would let team members die if the mission requires loss. Would sacrifice team members to complete objectives. This is not cruelty. This is math."
-  },
-  "sa:quotes": [
-    "I no longer remember.",
-    "There is one worthy end, where I finally stop."
+  "@graph": [
+    {
+      "@id": "sa:character/kael-ironbound",
+      "@type": "schema:Person",
+      "rdfs:label": "Kael Ironbound",
+      "sa:race": "Draegloth",
+      "sa:identity": {
+        "rdfs:label": "The Mechanism",
+        "schema:description": "Approximately 30% flesh and 70% machine. Does not remember what their actual body looks like. Does not care. What matters is function. What matters is the fight."
+      },
+      "schema:description": "Kael Ironbound was born a Draegloth. Kael Ironbound is, now, approximately 30% flesh and 70% machine. They have not shown their actual body to another living being in 20 years. They do not remember what it looks like. They do not care. What matters is function. What matters is the fight.",
+      "sa:nature": {
+        "composition": "Encased in armor—heavy, battle-scarred, utilitarian. The armor is not ornamental; it is load-bearing structure. Beneath it, reinforced mechanical joints articulate with mechanical precision. Optical sensors glow dull red where eyes once were. Vocalizer speakers handle communication (their voice is synthesized, unchanging).",
+        "physical_record": "The armor bears marks of a thousand conflicts: blast scorches, claw gouges, dents where shaped charges failed to penetrate. Does not sand them out or repair the cosmetic damage. The scarring is a record. It means something. No one knows what—Kael has not spoken the meaning aloud—but the scars persist as testimony to durability, to survival, to the capacity to take punishment and continue fighting.",
+        "sensory_signature": "When Kael moves, servos whine. When Kael breathes, pneumatic systems hiss. When Kael speaks, it comes through tinny vocalizers that make even casual conversation sound like orders being issued. No one who encounters Kael mistakes them for human. No one mistakes them for alive in the conventional sense. They are clearly something else—something between alive and alive, between pain and past pain, between present and the future they are actively seeking."
+      },
+      "sa:mechanics": {
+        "history": "Spent 40 years in hot combat, primarily mercenary work in sectors ravaged by inter-factional warfare. An exceptional Draegloth's natural predatory ferocity combined with tactical brilliance and an almost supernatural resilience. Enemies fell. Fortifications crumbled. Kael moved through war zones like catastrophe made flesh.",
+        "accumulated_damage": "Over decades of combat against superior numbers, better positioning, and firepower they could not match, they accumulated damage. A railgun round took the left leg. Acid took most of the right shoulder and arm. Shrapnel fragmented the spine. Blunt force trauma shattered ribs and organs.",
+        "replacement_strategy": "Most beings would have died. Kael did not have the biological capacity for surrender. So they replaced. Synthetic leg, reinforced. Mechanical arm, stronger than the original. Spinal reconstruction, titanium and servos. Internal organs replaced with mechanical substitutes that simply work, requiring no maintenance beyond regular recalibration.",
+        "psychological_shift": "With each replacement, Kael became less Draegloth and more Mechanism. And with each mechanical upgrade, a subtle change occurred: the pain diminished, but so did everything else. Kael remembers joy. Kael does not feel it anymore. Kael remembers fear. Kael does not feel it anymore. What remains is two drives, both perfectly clear: the urge to distribute suffering, and the growing certainty that the only worthy end is to meet an opponent who kills them."
+      },
+      "sa:relationships": {
+        "selene_kross": "Kael serves Selene not from loyalty but from professional respect. Selene is a predator. Selene takes. Selene does not hesitate. Kael understands this. In return, Selene does not ask Kael to pretend to be something other than what they are. She does not ask for friendship, does not feign emotion, does not pretend that Kael's existence is anything other than useful. This honesty is, in its way, the only relationship Kael has left that feels real.",
+        "operational_role": "Leads Selene's enforcement team—a small, elite unit of security specialists, bounty hunters, and mercenaries. Does not inspire loyalty through charisma. Inspires competence through example and cold professionalism. Does what is asked. Succeeds. Would let team members die if the mission requires loss. Would sacrifice team members to complete objectives. This is not cruelty. This is math."
+      },
+      "sa:quotes": [
+        "I no longer remember.",
+        "There is one worthy end, where I finally stop."
+      ]
+    }
   ]
 }

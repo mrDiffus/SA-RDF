@@ -2,57 +2,56 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "requiredRenown": "sa:requiredRenown",
-    "prerequisites": "sa:prerequisites",
-    "role": "sa:role",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "sa:Organization",
-  "label": "Brug's Gobbos",
-  "description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that infests every hive city across Arcech. They have no true territory—they are impossible to eradicate because they don't compete for power; they feed off everyone else's power. Brug is the perpetual hive-mind—not one goblin, but a distributed collective intelligence with physical anchors (Brug-nodes) hidden in every city's underbelly. Where there is conflict, trade, salvage, or a need for deniable work, the Gobbos appear. They are the friction in every machine, the leak in every organization, the unexpected competitor at every deal. Other powers can slow them, but never stop them. Brug remembers every coin, every score, and every slight. The Gobbos expand like a fungal infection—persistent, profitable, and perpetually growing.",
-  "role": [
+  "@graph": [
     {
-      "type": "sa:Role",
-      "label": "Associate",
-      "requiredRenown": 3,
-      "prerequisites": "Demonstrated ability to consistently secure currency, equipment, ammunition, or valuable salvage for the clan.",
-      "description": [
-        "A non-goblinoid intermediary—dwarf quartermaster, fence-master, or exiled broker—acts as the prophylactic between you and Brug's distributed consciousness. You have not yet proven worthy of direct hivemind attention",
-        "Access to Brug's scattered networks for salvage procurement, ordnance acquisition, and equipment brokerage. Everything is useful if sold to the right buyer; Brug knows every buyer",
-        "Your transactions are recorded in Brug's economic memory—casual introductions at black-market posts, credit at every safe house in the sector",
-        "Licensed to operate under Brug's name in minor endeavors. The hivemind's reputation is currently your shield; misuse it, and that shield dissolves instantly"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "Trusted Associate",
-      "requiredRenown": 10,
-      "prerequisites": "Brought substantial wealth, rare equipment, weapons, or strategic assets into the clan's coffers. Demonstrated unwavering loyalty and sound judgment in representing the Gobbos.",
-      "description": [
-        "Brug has *noticed* you. A goblinoid emissary appears—sometimes the same goblin, sometimes different—but always the same unified consciousness speaking through them. Your name is now stitched into Brug's eternal synapses",
-        "You may petition Brug for: specialized salvage expeditions, elite mercenary assets (3d6 goblin soldiers with plasma ordnance and combat veterans), black-market procurement, or strategic deception. The hivemind loans these at terms calculated over decades",
-        "Brug's memory is eternal. Every debt, every favor, every slight is preserved in the distributed consciousness—you are now part of Brug's infinite accounting",
-        "Direct communication with Brug without intermediary buffer; find any goblin in a nest, and you are speaking to the hivemind itself",
-        "Protected by Brug's distributed wrath. Entities that move against you will find themselves hunted by an enemy that remembers every sleight, every ally, every hidden weakness, across centuries"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "Honorary Gobbo",
-      "requiredRenown": 30,
-      "prerequisites": "Brought immense wealth, power, and strategic advantage to the clan. If you were goblinoid, you would have been subsumed into Brug's collective mind cycles ago. No non-goblinoid has ever done what you have done for the Gobbos.",
-      "description": [
-        "Your story is woven into the fundamental thought-patterns of an eternal hivemind. Brug will remember you as you are now—perfectly preserved in synaptic memory—for as long as the hivemind persists. You have achieved a form of immortality no individual can attain alone",
-        "Brug consults you on existential matters: expansion strategies, cultural adaptation, the long war against entities that would subsume the hivemind. You are partner to an alien intelligence that expects to outlive galaxies",
-        "Command elite goblin assets: 5d6 battle-hardened soldiers (plasma shotguns 1d10 energy damage, combat armor AC 16) plus 1d4 bomb-specialists wielding volatile charges (8d6 fire damage in 30-foot burst, Reflex DC 15 half damage). Brug does not loan these; Brug extends them as an expression of shared interest",
-        "Unrestricted access to Brug's vaults—the scavenged refuse of a thousand worlds, half-sorted, waiting for minds inventive enough to find utility in it",
-        "Brug's eternal malice shields you. Any power that threatens to erase you from living memory will face the patient, distributed vendetta of a hivemind that has learned to hate things across centuries",
-        "You have become something beyond a partner. You are a *thought* in an eternal mind. Long after your body fails, Brug will carry you forward in its synapses—your legend immortalized in an intelligence that does not forget, cannot die, and will outlast empires"
+      "@id": "sa:org/brugs-gobbos",
+      "@type": "sa:Organization",
+      "rdfs:label": "Brug's Gobbos",
+      "sa:description": "A sprawling, parasitic network of goblinoid scavengers, thieves, mercenaries, and opportunists that infests every hive city across Arcech. They have no true territory—they are impossible to eradicate because they don't compete for power; they feed off everyone else's power. Brug is the perpetual hive-mind—not one goblin, but a distributed collective intelligence with physical anchors (Brug-nodes) hidden in every city's underbelly. Where there is conflict, trade, salvage, or a need for deniable work, the Gobbos appear. They are the friction in every machine, the leak in every organization, the unexpected competitor at every deal. Other powers can slow them, but never stop them. Brug remembers every coin, every score, and every slight. The Gobbos expand like a fungal infection—persistent, profitable, and perpetually growing.",
+      "sa:role": [
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Associate",
+          "sa:requiredRenown": 3,
+          "sa:prerequisites": "Demonstrated ability to consistently secure currency, equipment, ammunition, or valuable salvage for the clan.",
+          "sa:description": [
+            "A non-goblinoid intermediary—dwarf quartermaster, fence-master, or exiled broker—acts as the prophylactic between you and Brug's distributed consciousness. You have not yet proven worthy of direct hivemind attention",
+            "Access to Brug's scattered networks for salvage procurement, ordnance acquisition, and equipment brokerage. Everything is useful if sold to the right buyer; Brug knows every buyer",
+            "Your transactions are recorded in Brug's economic memory—casual introductions at black-market posts, credit at every safe house in the sector",
+            "Licensed to operate under Brug's name in minor endeavors. The hivemind's reputation is currently your shield; misuse it, and that shield dissolves instantly"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Trusted Associate",
+          "sa:requiredRenown": 10,
+          "sa:prerequisites": "Brought substantial wealth, rare equipment, weapons, or strategic assets into the clan's coffers. Demonstrated unwavering loyalty and sound judgment in representing the Gobbos.",
+          "sa:description": [
+            "Brug has *noticed* you. A goblinoid emissary appears—sometimes the same goblin, sometimes different—but always the same unified consciousness speaking through them. Your name is now stitched into Brug's eternal synapses",
+            "You may petition Brug for: specialized salvage expeditions, elite mercenary assets (3d6 goblin soldiers with plasma ordnance and combat veterans), black-market procurement, or strategic deception. The hivemind loans these at terms calculated over decades",
+            "Brug's memory is eternal. Every debt, every favor, every slight is preserved in the distributed consciousness—you are now part of Brug's infinite accounting",
+            "Direct communication with Brug without intermediary buffer; find any goblin in a nest, and you are speaking to the hivemind itself",
+            "Protected by Brug's distributed wrath. Entities that move against you will find themselves hunted by an enemy that remembers every sleight, every ally, every hidden weakness, across centuries"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Honorary Gobbo",
+          "sa:requiredRenown": 30,
+          "sa:prerequisites": "Brought immense wealth, power, and strategic advantage to the clan. If you were goblinoid, you would have been subsumed into Brug's collective mind cycles ago. No non-goblinoid has ever done what you have done for the Gobbos.",
+          "sa:description": [
+            "Your story is woven into the fundamental thought-patterns of an eternal hivemind. Brug will remember you as you are now—perfectly preserved in synaptic memory—for as long as the hivemind persists. You have achieved a form of immortality no individual can attain alone",
+            "Brug consults you on existential matters: expansion strategies, cultural adaptation, the long war against entities that would subsume the hivemind. You are partner to an alien intelligence that expects to outlive galaxies",
+            "Command elite goblin assets: 5d6 battle-hardened soldiers (plasma shotguns 1d10 energy damage, combat armor AC 16) plus 1d4 bomb-specialists wielding volatile charges (8d6 fire damage in 30-foot burst, Reflex DC 15 half damage). Brug does not loan these; Brug extends them as an expression of shared interest",
+            "Unrestricted access to Brug's vaults—the scavenged refuse of a thousand worlds, half-sorted, waiting for minds inventive enough to find utility in it",
+            "Brug's eternal malice shields you. Any power that threatens to erase you from living memory will face the patient, distributed vendetta of a hivemind that has learned to hate things across centuries",
+            "You have become something beyond a partner. You are a *thought* in an eternal mind. Long after your body fails, Brug will carry you forward in its synapses—your legend immortalized in an intelligence that does not forget, cannot die, and will outlast empires"
+          ]
+        }
       ]
     }
   ]

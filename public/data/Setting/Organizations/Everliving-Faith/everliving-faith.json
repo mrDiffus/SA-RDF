@@ -2,108 +2,107 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
     "schema": "https://schema.org/",
     "sa": "https://stellararcana.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "requiredRenown": "sa:requiredRenown",
-    "prerequisites": "sa:prerequisites",
-    "role": "sa:role",
-    "type": "@type"
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "sa:Organization",
-  "label": "Faith of the Everliving",
-  "description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith presents itself as a legitimate theology: the worship of eternal existence and the promise that faith grants transcendence. It maintains diplomatic presence on major worlds, operates vast temple compounds, and conducts missionary work through lawful channels. The Faith's official doctrine is moderate—appealing to the desperate, the dying, and the immortality-seekers, but not openly preaching conquest or forced conversion. However, the Faith benefits immeasurably from Cult destabilizations. When radical believers (the so-called Cult of the Unbroken) destabilize regions through terrorism and necromantic uprising, the official Faith arrives as the voice of order and spiritual salvation. 'These are not our people,' the Faith claims, while simultaneously converting the survivors with promises of peace through submission to Xanthia's eternal hierarchy. The Faith's leadership maintains deliberate ignorance of Drexl's operations across the sector—a willful blindness that allows them to expand without planetary suspicion. The relationship between official Faith and radical Cult is unspoken but symbiotic: chaos creates converts; converts become assets; assets become power.",
-  "role": [
+  "@graph": [
     {
-      "type": "sa:Role",
-      "label": "Catechist",
-      "requiredRenown": 2,
-      "prerequisites": "Passed basic theological training; demonstrated ability to teach Xanthian doctrine to newcomers.",
-      "description": [
-        "Convert individuals to the Faith through argument, example, and theological instruction",
-        "Conduct basic initiation ceremonies and ritual blessings",
-        "Access to canonical texts and authorized doctrine",
-        "Authority to speak for the Faith in local community contexts"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "Priest",
-      "requiredRenown": 8,
-      "prerequisites": "Years of service as Catechist; demonstrated theological mastery and moral authority within the Faith.",
-      "description": [
-        "Lead temple services and major ritual ceremonies",
-        "Perform marriages, dedications, and last rites in Xanthia's name",
-        "Oversee a congregation or monastery; manage Faith resources locally",
-        "Authority to discipline lower-ranked believers; interpret doctrine for your flock",
-        "Access to restricted theological texts and meditation practices"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "Theologian",
-      "requiredRenown": 12,
-      "prerequisites": "Mastery of Xanthian scripture; published or publicly recognized theological works; demonstrated ability to reconcile doctrine with worldly complexity.",
-      "description": [
-        "Refine and expand Xanthian theology; author new interpretations of sacred texts",
-        "Advise Church leadership on doctrinal questions and philosophical challenges",
-        "Train advanced priests and missionaries in theological subtlety",
-        "Authority to issue theological rulings affecting entire regions or populations",
-        "Access to the Archives—complete historical records of the Faith's teachings"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "Missionary",
-      "requiredRenown": 10,
-      "prerequisites": "Demonstration of conversion prowess; successful establishment of Faith communities on at least two worlds or regions.",
-      "description": [
-        "Establish new Faith temples and community centers on frontier worlds",
-        "Convert entire populations through superior theological persuasion",
-        "Lead expeditions to uncontacted regions; plant seeds of the Faith for later harvest",
-        "Requisition resources and diplomatic support from the main Church hierarchy",
-        "Authority to grant preliminary ordination to promising local converts"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "Inquisitor",
-      "requiredRenown": 15,
-      "prerequisites": "Demonstrated theological purity; successfully exposed heresy or corruption within the Faith; approved for investigative authority by senior Cardinal.",
-      "description": [
-        "Identify and correct theological deviations within the Faith",
-        "Investigate extremist movements claiming Xanthian alignment",
-        "Publicly distance the official Faith from radical 'misinterpretations'",
-        "Authority to excommunicate believers who deviate too far from doctrine",
-        "Access to sensitive files on radical Cult movements (which officially do not exist)"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "Cardinal",
-      "requiredRenown": 20,
-      "prerequisites": "Elevation by the Eternal Council; mastery of theology, administration, and geopolitics; proven loyalty to Xanthia's long-term vision.",
-      "description": [
-        "Govern entire sectors' Faith operations; manage resources, diplomacy, and doctrinal alignment across multiple worlds",
-        "Seat on the Eternal Council; influence over Faith-wide strategic decisions",
-        "Command regional missionary operations and priestly hierarchies",
-        "Authority to adjust doctrine for political expediency (with proper theological justification)",
-        "Access to restricted correspondence with other powers; secret intelligence networks"
-      ]
-    },
-    {
-      "type": "sa:Role",
-      "label": "High Pontiff",
-      "requiredRenown": 25,
-      "prerequisites": "Invitation only; chosen by the Eternal Council from among Cardinals; exceptional theological vision and absolute loyalty to Xanthia's will.",
-      "description": [
-        "Speak with the voice of Xanthia herself (or as close as the Faith claims)",
-        "Lead the Eternal Council; set Faith doctrine and strategic direction sector-wide",
-        "Authority over all missionary, military, and diplomatic operations",
-        "Rumored connection to immortality or direct revelation from Xanthia",
-        "Access to the most restricted archives and prophecies"
+      "@id": "sa:org/everliving-faith",
+      "@type": "sa:Organization",
+      "rdfs:label": "Faith of the Everliving",
+      "sa:description": "The official, sector-spanning religious institution devoted to Xanthia the Everliving. The Faith presents itself as a legitimate theology: the worship of eternal existence and the promise that faith grants transcendence. It maintains diplomatic presence on major worlds, operates vast temple compounds, and conducts missionary work through lawful channels. The Faith's official doctrine is moderate—appealing to the desperate, the dying, and the immortality-seekers, but not openly preaching conquest or forced conversion. However, the Faith benefits immeasurably from Cult destabilizations. When radical believers (the so-called Cult of the Unbroken) destabilize regions through terrorism and necromantic uprising, the official Faith arrives as the voice of order and spiritual salvation. 'These are not our people,' the Faith claims, while simultaneously converting the survivors with promises of peace through submission to Xanthia's eternal hierarchy. The Faith's leadership maintains deliberate ignorance of Drexl's operations across the sector—a willful blindness that allows them to expand without planetary suspicion. The relationship between official Faith and radical Cult is unspoken but symbiotic: chaos creates converts; converts become assets; assets become power.",
+      "sa:role": [
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Catechist",
+          "sa:requiredRenown": 2,
+          "sa:prerequisites": "Passed basic theological training; demonstrated ability to teach Xanthian doctrine to newcomers.",
+          "sa:description": [
+            "Convert individuals to the Faith through argument, example, and theological instruction",
+            "Conduct basic initiation ceremonies and ritual blessings",
+            "Access to canonical texts and authorized doctrine",
+            "Authority to speak for the Faith in local community contexts"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Priest",
+          "sa:requiredRenown": 8,
+          "sa:prerequisites": "Years of service as Catechist; demonstrated theological mastery and moral authority within the Faith.",
+          "sa:description": [
+            "Lead temple services and major ritual ceremonies",
+            "Perform marriages, dedications, and last rites in Xanthia's name",
+            "Oversee a congregation or monastery; manage Faith resources locally",
+            "Authority to discipline lower-ranked believers; interpret doctrine for your flock",
+            "Access to restricted theological texts and meditation practices"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Theologian",
+          "sa:requiredRenown": 12,
+          "sa:prerequisites": "Mastery of Xanthian scripture; published or publicly recognized theological works; demonstrated ability to reconcile doctrine with worldly complexity.",
+          "sa:description": [
+            "Refine and expand Xanthian theology; author new interpretations of sacred texts",
+            "Advise Church leadership on doctrinal questions and philosophical challenges",
+            "Train advanced priests and missionaries in theological subtlety",
+            "Authority to issue theological rulings affecting entire regions or populations",
+            "Access to the Archives—complete historical records of the Faith's teachings"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Missionary",
+          "sa:requiredRenown": 10,
+          "sa:prerequisites": "Demonstration of conversion prowess; successful establishment of Faith communities on at least two worlds or regions.",
+          "sa:description": [
+            "Establish new Faith temples and community centers on frontier worlds",
+            "Convert entire populations through superior theological persuasion",
+            "Lead expeditions to uncontacted regions; plant seeds of the Faith for later harvest",
+            "Requisition resources and diplomatic support from the main Church hierarchy",
+            "Authority to grant preliminary ordination to promising local converts"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Inquisitor",
+          "sa:requiredRenown": 15,
+          "sa:prerequisites": "Demonstrated theological purity; successfully exposed heresy or corruption within the Faith; approved for investigative authority by senior Cardinal.",
+          "sa:description": [
+            "Identify and correct theological deviations within the Faith",
+            "Investigate extremist movements claiming Xanthian alignment",
+            "Publicly distance the official Faith from radical 'misinterpretations'",
+            "Authority to excommunicate believers who deviate too far from doctrine",
+            "Access to sensitive files on radical Cult movements (which officially do not exist)"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "Cardinal",
+          "sa:requiredRenown": 20,
+          "sa:prerequisites": "Elevation by the Eternal Council; mastery of theology, administration, and geopolitics; proven loyalty to Xanthia's long-term vision.",
+          "sa:description": [
+            "Govern entire sectors' Faith operations; manage resources, diplomacy, and doctrinal alignment across multiple worlds",
+            "Seat on the Eternal Council; influence over Faith-wide strategic decisions",
+            "Command regional missionary operations and priestly hierarchies",
+            "Authority to adjust doctrine for political expediency (with proper theological justification)",
+            "Access to restricted correspondence with other powers; secret intelligence networks"
+          ]
+        },
+        {
+          "@type": "sa:Role",
+          "rdfs:label": "High Pontiff",
+          "sa:requiredRenown": 25,
+          "sa:prerequisites": "Invitation only; chosen by the Eternal Council from among Cardinals; exceptional theological vision and absolute loyalty to Xanthia's will.",
+          "sa:description": [
+            "Speak with the voice of Xanthia herself (or as close as the Faith claims)",
+            "Lead the Eternal Council; set Faith doctrine and strategic direction sector-wide",
+            "Authority over all missionary, military, and diplomatic operations",
+            "Rumored connection to immortality or direct revelation from Xanthia",
+            "Access to the most restricted archives and prophecies"
+          ]
+        }
       ]
     }
   ]

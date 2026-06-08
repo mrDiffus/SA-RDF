@@ -2,39 +2,40 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "Person",
-  "label": "Thordis Ironforge-Morvan: The Duchess",
-  "sa:race": "Dwarf",
-  "sa:identity": {
-    "label": "The Duchess",
-    "description": "A dwarven Duchess approaching her 400th year. An exceptional wizard specializing in life-extension magic. Married to Kadesh Morvan for 107 years. The only person in the sector who can keep him alive."
-  },
-  "schema:description": "Thordis is not the power behind the throne. She is the throne itself, and everyone is politely pretending not to notice. She allows—encourages, even—the assumption that she is ornamental. The trophy wife. Beautiful, glamorous, charming, content to stand beside her much-smaller husband and radiate elegant approval while he conducts business. She is exceptionally good at it. What makes her dangerous is that she is not pretending to be less intelligent than she is—she is genuinely playing a game she finds more amusing than direct power. She has already won the only leverage that matters.",
-  "sa:nature": {
-    "appearance": "A dwarven woman, fully 240 centimeters tall, organic, unaugmented, approaching her 400th year with the patient grace of a woman who has watched empires rise and fall. She dresses in elaborate gowns sized for dwarven proportions, wears crowns that would seem garish on anyone less substantial, and performs her role with genuine enjoyment.",
-    "age": "Approaching 400 years old. Ancient by mortal standards. Still in her intellectual and magical prime.",
-    "composition": "Unaugmented. Pure organic. Magical preservation through her own spellcraft."
-  },
-  "sa:mechanics": {
-    "life_extension_magic": "The only person alive who can cast the chronomantic ritual that keeps Kadesh alive. Every seven years, Kadesh requires a specific, complex, dangerous spell that extends his biological timeline, rewrites his cellular degradation, forces his aging back into lower gears. Only Thordis can cast it.",
-    "ritual_dependency": "She has never written the spell down. She refuses to teach it to anyone, even their children. This is not cruelty. This is math. She wants to be irreplaceable. She wants Kadesh dependent on her presence, not just her love.",
-    "magical_specialization": "Chronomancy and life-extension magic. The greatest practitioner in the sector."
-  },
-  "sa:relationships": {
-    "kadesh_morvan": "Married for 107 years. They genuinely enjoy each other. They speak in codes, dress up for each other, attend Concordat functions as a perfectly coordinated performance. They trade quips that sound innocuous to outsiders but carry edges only they understand. They are, by any meaningful measure, in love. This love is complicated by the fact that Thordis can end Kadesh's existence with a word, and they both know it.",
-    "morvan_family": "Wife to Kadesh. Mother to their children. Grandmother training the next generation. Her role is secure. Her power is absolute beneath the veneer of ornament.",
-    "faith_of_everliving": "Kadesh has begun asking her about the Faith. What they promise. Whether the spells would be simpler. Whether she might consider converting. This troubles her more than she admits. If he chooses the Faith's promise over her magic, she loses the only thing that has made her feel mortal—the knowledge that someone depends on her absolutely."
-  },
-  "sa:quotes": [
-    "A clone is as real as it needs to be.",
-    "I keep him alive because I choose to. And that choice—that is where my power lives."
+  "@graph": [
+    {
+      "@id": "sa:character/thordis-ironforge-morvan",
+      "@type": "schema:Person",
+      "rdfs:label": "Thordis Ironforge-Morvan",
+      "sa:race": "Dwarf",
+      "sa:identity": {
+        "rdfs:label": "The Duchess",
+        "schema:description": "A dwarven Duchess approaching her 400th year. An exceptional wizard specializing in life-extension magic. Married to Kadesh Morvan for 107 years. The only person in the sector who can keep him alive."
+      },
+      "schema:description": "Thordis is not the power behind the throne. She is the throne itself, and everyone is politely pretending not to notice. She allows—encourages, even—the assumption that she is ornamental. The trophy wife. Beautiful, glamorous, charming, content to stand beside her much-smaller husband and radiate elegant approval while he conducts business. She is exceptionally good at it. What makes her dangerous is that she is not pretending to be less intelligent than she is—she is genuinely playing a game she finds more amusing than direct power. She has already won the only leverage that matters.",
+      "sa:nature": {
+        "appearance": "A dwarven woman, fully 240 centimeters tall, organic, unaugmented, approaching her 400th year with the patient grace of a woman who has watched empires rise and fall. She dresses in elaborate gowns sized for dwarven proportions, wears crowns that would seem garish on anyone less substantial, and performs her role with genuine enjoyment.",
+        "age": "Approaching 400 years old. Ancient by mortal standards. Still in her intellectual and magical prime.",
+        "composition": "Unaugmented. Pure organic. Magical preservation through her own spellcraft."
+      },
+      "sa:mechanics": {
+        "life_extension_magic": "The only person alive who can cast the chronomantic ritual that keeps Kadesh alive. Every seven years, Kadesh requires a specific, complex, dangerous spell that extends his biological timeline, rewrites his cellular degradation, forces his aging back into lower gears. Only Thordis can cast it.",
+        "ritual_dependency": "She has never written the spell down. She refuses to teach it to anyone, even their children. This is not cruelty. This is math. She wants to be irreplaceable. She wants Kadesh dependent on her presence, not just her love.",
+        "magical_specialization": "Chronomancy and life-extension magic. The greatest practitioner in the sector."
+      },
+      "sa:relationships": {
+        "kadesh_morvan": "Married for 107 years. They genuinely enjoy each other. They speak in codes, dress up for each other, attend Concordat functions as a perfectly coordinated performance. They trade quips that sound innocuous to outsiders but carry edges only they understand. They are, by any meaningful measure, in love. This love is complicated by the fact that Thordis can end Kadesh's existence with a word, and they both know it.",
+        "morvan_family": "Wife to Kadesh. Mother to their children. Grandmother training the next generation. Her role is secure. Her power is absolute beneath the veneer of ornament.",
+        "faith_of_everliving": "Kadesh has begun asking her about the Faith. What they promise. Whether the spells would be simpler. Whether she might consider converting. This troubles her more than she admits. If he chooses the Faith's promise over her magic, she loses the only thing that has made her feel mortal—the knowledge that someone depends on her absolutely."
+      },
+      "sa:quotes": [
+        "A clone is as real as it needs to be.",
+        "I keep him alive because I choose to. And that choice—that is where my power lives."
+      ]
+    }
   ]
 }
-

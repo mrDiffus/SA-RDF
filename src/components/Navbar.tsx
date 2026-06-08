@@ -1,68 +1,63 @@
 import React from 'react';
-import { AppTab, getCollectionHref } from '../rdfNavigation';
-import { Shield, Zap, Users, Book, Sword, Globe, Building2, Star, ScrollText, BookOpen } from 'lucide-react';
+import { NavLink, useMatch } from 'react-router-dom';
+import { Shield } from 'lucide-react';
 
-interface NavbarProps {
-  activeTab: AppTab;
-  setActiveTab: (tab: AppTab) => void;
-}
+export default function Navbar() {
+  const onRules = useMatch({ path: '/rules/*', end: false });
+  const onRaces = useMatch({ path: '/races/*', end: false });
+  const onArchetypes = useMatch({ path: '/archetypes/*', end: false });
+  const onSpells = useMatch({ path: '/spells/*', end: false });
+  const onEquipment = useMatch({ path: '/equipment/*', end: false });
+  const onSkills = useMatch({ path: '/skills/*', end: false });
+  const onFeatures = useMatch({ path: '/features/*', end: false });
+  const onSetting = useMatch({ path: '/setting/*', end: false });
 
-const GAME_TABS = [
-  { id: 'rules' as AppTab, label: 'Rules', icon: Book },
-  { id: 'races' as AppTab, label: 'Races', icon: Users },
-  { id: 'archetypes' as AppTab, label: 'Archetypes', icon: Zap },
-  { id: 'general-features' as AppTab, label: 'Features', icon: Star },
-  { id: 'skills' as AppTab, label: 'Skills', icon: BookOpen },
-  { id: 'spells' as AppTab, label: 'Spells', icon: Zap },
-  { id: 'equipment' as AppTab, label: 'Equipment', icon: Sword },
-  { id: 'character-creation' as AppTab, label: 'Create Character', icon: Users },
-  { id: 'character-sheet' as AppTab, label: 'Character', icon: ScrollText },
-];
+  const isRules = !!(onRules || onRaces || onArchetypes || onSpells || onEquipment || onSkills || onFeatures);
+  const isSetting = !!onSetting;
 
-const LORE_TABS = [
-  { id: 'lore' as AppTab, label: 'Planets', icon: Globe },
-  { id: 'lore' as AppTab, label: 'Organizations', icon: Building2 },
-];
-
-const LORE_MODE_TABS: AppTab[] = ['lore'];
-
-export default function Navbar({ activeTab, setActiveTab }: NavbarProps) {
-  const isLoreMode = LORE_MODE_TABS.includes(activeTab);
-  const tabs = isLoreMode ? LORE_TABS : GAME_TABS;
+  const topLinkClass = (active: boolean) =>
+    `px-4 py-2 text-sm font-bold uppercase tracking-widest transition-colors rounded-md ${
+      active
+        ? 'text-white bg-zinc-800'
+        : 'text-zinc-400 hover:text-white hover:bg-zinc-800'
+    }`;
 
   return (
     <nav className="bg-zinc-900 border-b border-zinc-800 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center gap-8">
-            <a
-              href={getCollectionHref('home')}
+            <NavLink
+              to="/"
               className="flex items-center gap-2 hover:opacity-80 transition-opacity"
             >
               <Shield className="w-8 h-8 text-orange-500" />
               <span className="text-xl font-bold tracking-tighter text-white uppercase">Stellar Arcana</span>
-            </a>
-            <div className="hidden md:flex items-baseline space-x-4">
-              {isLoreMode && (
-                <span className="text-[10px] uppercase font-bold tracking-widest text-purple-500 mr-2 border border-purple-800 rounded px-2 py-1">
-                  Lore Archives
-                </span>
-              )}
-              {tabs.map((tab) => (
-                <a
-                  key={tab.label}
-                  href={getCollectionHref(tab.id)}
-                  className={`flex items-center gap-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    activeTab === tab.id
-                      ? 'bg-zinc-800 text-white'
-                      : 'text-zinc-400 hover:bg-zinc-800 hover:text-white'
-                  }`}
-                >
-                  <tab.icon className="w-4 h-4" />
-                  {tab.label}
-                </a>
-              ))}
+            </NavLink>
+
+            <div className="hidden md:flex items-center gap-1">
+              <NavLink to="/rules" className={() => topLinkClass(isRules)}>
+                Rules
+              </NavLink>
+              <NavLink to="/setting" className={() => topLinkClass(isSetting)}>
+                Setting
+              </NavLink>
             </div>
+          </div>
+
+          <div className="hidden md:flex items-center gap-2">
+            <NavLink
+              to="/character-creation"
+              className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-zinc-500 hover:text-zinc-300 border border-zinc-800 rounded hover:border-zinc-600 transition-colors"
+            >
+              Create Character
+            </NavLink>
+            <NavLink
+              to="/character-sheet"
+              className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-widest text-zinc-500 hover:text-zinc-300 border border-zinc-800 rounded hover:border-zinc-600 transition-colors"
+            >
+              Character Sheet
+            </NavLink>
           </div>
         </div>
       </div>

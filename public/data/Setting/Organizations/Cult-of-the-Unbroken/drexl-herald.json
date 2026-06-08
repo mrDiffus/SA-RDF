@@ -2,37 +2,38 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "Person",
-  "label": "Drexl",
-  "sa:identity": {
-    "label": "Herald",
-    "description": "Shadow nomenklatura in service only to Xanthia. He appears across the sector at moments of theological inflection points, orchestrating or amplifying Cult manifestations, reshaping them toward Xanthia's long game."
-  },
-  "schema:description": "Drexl is not a preacher, not a warlord, not a general—he is apparatus. He answers to no one in the Faith of the Everliving hierarchy. The Faith of the Everliving's diplomatic corps denies his existence entirely. When questioned about atrocities, they shrug: 'We have no authority over zealous believers.' Drexl is the why behind that plausible deniability. He is the invisible director of destabilizations the Faith of the Everliving benefits from, the enforcer of theological purity, and Xanthia's most trusted servant in the material realm.",
-  "sa:nature": {
-    "composition": "Heavy bone-and-brass armor underneath tattered ceremonial robes that reek of incense and embalming oils. A vox-amplified sermon mask that distorts his voice into something unnaturally resonant. A staff or censer fashioned from leviathan bone, constantly leaking necrotic green smoke. One hand visibly skeletal; his eyes glow with cold, intelligent necromantic fire.",
-    "presence": "Those who encounter him report the same detail: an absence, as if looking at him is like staring at a void that happens to be shaped like a man.",
-    "essence": "Drexl is not a preacher, not a warlord, not a general—he is apparatus. He appears across the sector at moments of theological inflection points."
-  },
-  "sa:mechanics": {
-    "method": "Drexl does not arrive as a preacher alone. He arrives with proof: resurrections, miracles, undead legions bound to his will. He does not create Cult cells—they arise naturally from faith. But he coordinates them, aligns them, weaponizes them toward Xanthia's long vision.",
-    "coordinated_destabilization": "A loose regional prayer circle becomes a militant crusade. A mercenary warband becomes a theological army. A village of desperate believers becomes a beachhead for conversion.",
-    "theological_innovation": "Drexl's genius is not raw necromantic might (though he possesses that). It is his ability to transfigure terror into faith, horror into meaning. He understands that Xanthia's strongest weapon is not magic—it is the promise of eternity. He makes that promise impossible to refuse."
-  },
-  "sa:relationships": {
-    "faith_of_everliving": "The Faith of the Everliving's leadership knows Drexl exists. They know what he does. They do not speak his name in official contexts. When pressed, their answer is always the same: 'Drexl is a myth, a cautionary tale fanatics tell in the dark.' This is both lie and truth. Drexl is the Faith of the Everliving's permission structure made manifest.",
-    "xanthia": "Drexl is Xanthia's most trusted servant in the material realm. He executes operations that advance her divinity across centuries, never stopping, never questioning, always serving."
-  },
-  "sa:quotes": [
-    "I am the reshaping of belief made flesh.",
-    "Terror is faith's first language."
+  "@graph": [
+    {
+      "@id": "sa:character/drexl",
+      "@type": "schema:Person",
+      "rdfs:label": "Drexl",
+      "sa:identity": {
+        "rdfs:label": "Herald",
+        "schema:description": "Shadow nomenklatura in service only to Xanthia. He appears across the sector at moments of theological inflection points, orchestrating or amplifying Cult manifestations, reshaping them toward Xanthia's long game."
+      },
+      "schema:description": "Drexl is not a preacher, not a warlord, not a general—he is apparatus. He answers to no one in the Faith of the Everliving hierarchy. The Faith of the Everliving's diplomatic corps denies his existence entirely. When questioned about atrocities, they shrug: 'We have no authority over zealous believers.' Drexl is the why behind that plausible deniability. He is the invisible director of destabilizations the Faith of the Everliving benefits from, the enforcer of theological purity, and Xanthia's most trusted servant in the material realm.",
+      "sa:nature": {
+        "composition": "Heavy bone-and-brass armor underneath tattered ceremonial robes that reek of incense and embalming oils. A vox-amplified sermon mask that distorts his voice into something unnaturally resonant. A staff or censer fashioned from leviathan bone, constantly leaking necrotic green smoke. One hand visibly skeletal; his eyes glow with cold, intelligent necromantic fire.",
+        "presence": "Those who encounter him report the same detail: an absence, as if looking at him is like staring at a void that happens to be shaped like a man.",
+        "essence": "Drexl is not a preacher, not a warlord, not a general—he is apparatus. He appears across the sector at moments of theological inflection points."
+      },
+      "sa:mechanics": {
+        "method": "Drexl does not arrive as a preacher alone. He arrives with proof: resurrections, miracles, undead legions bound to his will. He does not create Cult cells—they arise naturally from faith. But he coordinates them, aligns them, weaponizes them toward Xanthia's long vision.",
+        "coordinated_destabilization": "A loose regional prayer circle becomes a militant crusade. A mercenary warband becomes a theological army. A village of desperate believers becomes a beachhead for conversion.",
+        "theological_innovation": "Drexl's genius is not raw necromantic might (though he possesses that). It is his ability to transfigure terror into faith, horror into meaning. He understands that Xanthia's strongest weapon is not magic—it is the promise of eternity. He makes that promise impossible to refuse."
+      },
+      "sa:relationships": {
+        "faith_of_everliving": "The Faith of the Everliving's leadership knows Drexl exists. They know what he does. They do not speak his name in official contexts. When pressed, their answer is always the same: 'Drexl is a myth, a cautionary tale fanatics tell in the dark.' This is both lie and truth. Drexl is the Faith of the Everliving's permission structure made manifest.",
+        "xanthia": "Drexl is Xanthia's most trusted servant in the material realm. He executes operations that advance her divinity across centuries, never stopping, never questioning, always serving."
+      },
+      "sa:quotes": [
+        "I am the reshaping of belief made flesh.",
+        "Terror is faith's first language."
+      ]
+    }
   ]
 }
-

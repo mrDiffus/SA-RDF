@@ -2,42 +2,44 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "Person",
-  "label": "Selene Kross: The Vulture",
-  "sa:race": "Draegloth",
-  "sa:identity": {
-    "label": "The Vulture",
-    "description": "Draegloth predator. Eight feet tall, four arms, claws like sabers. Chose financial predation over conquest. Reads collapse patterns and positions to own everything when dust settles. Rose from nothing (bastard captain) to Seat-Holder in 15 years. She smells weakness, moves with predatory patience, closes deals with a toothy smile that reminds you exactly what she could do."
-  },
-  "schema:description": "Selene Kross is a Draegloth born into a body designed for conquest through violence—and she chose a different kind of predation instead. She does not build, does not preserve, does not feel guilt. She acquires. She reads collapse patterns, identifies weakness, positions fleets to own everything when markets shift. At 43 years old, she accumulated a Seat-Holder position in 15 years through an almost animalistic understanding of what prey looks like. Other Draegloths would think her soft, wasted on merchant work. Selene does not care. What matters is expansion—and expansion, for her, comes through the slow violence of financial leverage.",
-  "sa:nature": {
-    "draconic_nature": "Towering Draegloth. Eight feet tall, four arms, claws like sabers. Born into body designed for conquest through violence. She dresses her massive frame in fine clothes altered for her proportions. Moves with predatory grace.",
-    "psychological_profile": "Loves taking things from others. This is the core of her being. Does not hold grudges, does not nurse vendettas, feels no moral complexity. Does not care what other Draegloths think. Never cared. What matters is expansion at maximum velocity.",
-    "scars": "Small collection of scars from early fights (she lost these early in her rise). Never hides them. Each one a lesson in how to take better next time.",
-    "quarters": "Sparse on The Margin Call. No decoration, no comfort. Just data. Charts, debt instruments, family trees, supply contracts—three-dimensional map of who owes whom and what she means to take next."
-  },
-  "sa:mechanics": {
-    "method": "Hostile trade is theft at grand scale. Trade dispute? Loan credits to both sides at different rates—whoever wins, she wins more. Competitor's family collapses? She bought their debts at discount months earlier. When bankruptcy comes, she acquires best assets at fraction value. Not cruel. Cruelty requires emotional investment she does not possess.",
-    "arrur_positioning": "Watching Arrur burn with patient interest. Identified the pattern: Faith destabilizes supply chains, sector becomes scarce, everyone plays short-term margins. She accumulates supply contracts and leverage agreements with every producer on Arcech and three neighboring worlds. When Arrur's need becomes desperate, she will be only reliable supplier—and own the entire supply chain.",
-    "tactical_intelligence": "The Margin Call positioned as neutral observer, haunting outer rim of Arcech traffic. Employs finest information brokers in sector. Knows which families are overextended, which will collapse if single major deal fails. Knows before they do.",
-    "long_term_cycles": "Operates in 5–10 year cycles. Current cycle began 3 years ago with Faith trajectory recognition. In 7 more years when Arrur stabilizes, she will accumulate sufficient leverage to become indispensable broker or pivot to acquire assets from whoever loses. Wins either way. Never betting on single outcome. Betting on architecture of game."
-  },
-  "sa:relationships": {
-    "kael_ironbound": "Enforcer and security lead. Old Draegloth barely Draegloth anymore—more cybernetic than flesh through decades of combat against superior firepower. Kept alive by machinery and stubborn will. Kael's only drives: spread sufficient pain that universe feels it; find opponent worthy of final fight. Earned Kael's loyalty not through kindness but through shared understanding—both predators, both take, both accept cost. Will die for Selene through professional respect only dangerous things offer each other.",
-    "mira_strand": "Watches Mira's liquidation with amusement. Perfect scenario: when competitors see Mira selling cheap, they panic-sell, drive prices down. Kross buys.",
-    "kadesh_morvan": "Watches Morvan's stabilization with bemusement. Stability is boring. Boring is when real leverage happens below surface. Already purchased minority stakes in five Morvan operations. Does not plan control—plans to wait until Morvan makes mistake (all long-term players eventually do), then holds weapon that brings them down.",
-    "faith_expansion": "Sees Faith of the Everliving expansion as opportunity architecture. When Faith arrives at Arcech—she believes they will—port must transition from trade hub to mission supply base. Positioning Kross family to be that bridge. Making contact with Faith sympathizers, extending loans to fringe organizations, acquiring assets valuable under Faith doctrine."
-  },
-  "sa:quotes": [
-    "Moral complexity? I simply take what I want at the pace that maximizes acquisition.",
-    "A decade from now, the Concordat may discover it is controlled by a network of Kross family interests. I will have done it so cleanly no one notices.",
-    "I am not a storm. I am simply inevitable—the ground shifting beneath feet of everyone focused on the sky."
+  "@graph": [
+    {
+      "@id": "sa:character/selene-kross",
+      "@type": "schema:Person",
+      "rdfs:label": "Selene Kross",
+      "sa:race": "Draegloth",
+      "sa:identity": {
+        "rdfs:label": "The Vulture",
+        "schema:description": "Draegloth predator. Eight feet tall, four arms, claws like sabers. Chose financial predation over conquest. Reads collapse patterns and positions to own everything when dust settles. Rose from nothing (bastard captain) to Seat-Holder in 15 years. She smells weakness, moves with predatory patience, closes deals with a toothy smile that reminds you exactly what she could do."
+      },
+      "schema:description": "Selene Kross is a Draegloth born into a body designed for conquest through violence—and she chose a different kind of predation instead. She does not build, does not preserve, does not feel guilt. She acquires. She reads collapse patterns, identifies weakness, positions fleets to own everything when markets shift. At 43 years old, she accumulated a Seat-Holder position in 15 years through an almost animalistic understanding of what prey looks like. Other Draegloths would think her soft, wasted on merchant work. Selene does not care. What matters is expansion—and expansion, for her, comes through the slow violence of financial leverage.",
+      "sa:nature": {
+        "draconic_nature": "Towering Draegloth. Eight feet tall, four arms, claws like sabers. Born into body designed for conquest through violence. She dresses her massive frame in fine clothes altered for her proportions. Moves with predatory grace.",
+        "psychological_profile": "Loves taking things from others. This is the core of her being. Does not hold grudges, does not nurse vendettas, feels no moral complexity. Does not care what other Draegloths think. Never cared. What matters is expansion at maximum velocity.",
+        "scars": "Small collection of scars from early fights (she lost these early in her rise). Never hides them. Each one a lesson in how to take better next time.",
+        "quarters": "Sparse on The Margin Call. No decoration, no comfort. Just data. Charts, debt instruments, family trees, supply contracts—three-dimensional map of who owes whom and what she means to take next."
+      },
+      "sa:mechanics": {
+        "method": "Hostile trade is theft at grand scale. Trade dispute? Loan credits to both sides at different rates—whoever wins, she wins more. Competitor's family collapses? She bought their debts at discount months earlier. When bankruptcy comes, she acquires best assets at fraction value. Not cruel. Cruelty requires emotional investment she does not possess.",
+        "arrur_positioning": "Watching Arrur burn with patient interest. Identified the pattern: Faith destabilizes supply chains, sector becomes scarce, everyone plays short-term margins. She accumulates supply contracts and leverage agreements with every producer on Arcech and three neighboring worlds. When Arrur's need becomes desperate, she will be only reliable supplier—and own the entire supply chain.",
+        "tactical_intelligence": "The Margin Call positioned as neutral observer, haunting outer rim of Arcech traffic. Employs finest information brokers in sector. Knows which families are overextended, which will collapse if single major deal fails. Knows before they do.",
+        "long_term_cycles": "Operates in 5–10 year cycles. Current cycle began 3 years ago with Faith trajectory recognition. In 7 more years when Arrur stabilizes, she will accumulate sufficient leverage to become indispensable broker or pivot to acquire assets from whoever loses. Wins either way. Never betting on single outcome. Betting on architecture of game."
+      },
+      "sa:relationships": {
+        "kael_ironbound": "Enforcer and security lead. Old Draegloth barely Draegloth anymore—more cybernetic than flesh through decades of combat against superior firepower. Kept alive by machinery and stubborn will. Kael's only drives: spread sufficient pain that universe feels it; find opponent worthy of final fight. Earned Kael's loyalty not through kindness but through shared understanding—both predators, both take, both accept cost. Will die for Selene through professional respect only dangerous things offer each other.",
+        "mira_strand": "Watches Mira's liquidation with amusement. Perfect scenario: when competitors see Mira selling cheap, they panic-sell, drive prices down. Kross buys.",
+        "kadesh_morvan": "Watches Morvan's stabilization with bemusement. Stability is boring. Boring is when real leverage happens below surface. Already purchased minority stakes in five Morvan operations. Does not plan control—plans to wait until Morvan makes mistake (all long-term players eventually do), then holds weapon that brings them down.",
+        "faith_expansion": "Sees Faith of the Everliving expansion as opportunity architecture. When Faith arrives at Arcech—she believes they will—port must transition from trade hub to mission supply base. Positioning Kross family to be that bridge. Making contact with Faith sympathizers, extending loans to fringe organizations, acquiring assets valuable under Faith doctrine."
+      },
+      "sa:quotes": [
+        "Moral complexity? I simply take what I want at the pace that maximizes acquisition.",
+        "A decade from now, the Concordat may discover it is controlled by a network of Kross family interests. I will have done it so cleanly no one notices.",
+        "I am not a storm. I am simply inevitable—the ground shifting beneath feet of everyone focused on the sky."
+      ]
+    }
   ]
 }

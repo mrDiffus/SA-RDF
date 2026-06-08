@@ -1,23 +1,20 @@
 {
-  "@context": {
-    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "label": "rdfs:label",
-    "type": "@type",
-    "Location": "https://stellararcana.org/Location",
-    "Place": "https://schema.org/Place",
-    "containedInLocation": {
-      "@id": "https://stellararcana.org/containedInLocation",
-      "@type": "@id"
+    "@context": {
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "https://schema.org/",
+        "sa": "https://stellararcana.org/",
+        "location": "https://stellararcana.org/location/",
+        "@vocab": "https://stellararcana.org/"
     },
-    "containedInPlace": {
-      "@id": "https://schema.org/containedInPlace",
-      "@type": "@id"
-    }
-  },
-  "type": ["Place", "Location"],
-  "label": "Ashcross",
-  "description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock.",
-  "@id": "location:ashcross",
-  "containedInLocation": "location:arrur",
-  "containedInPlace": "location:arrur"
+    "@graph": [
+        {
+            "@id": "location:ashcross",
+            "@type": ["schema:Place", "sa:Location"],
+            "rdfs:label": "Ashcross",
+            "schema:description": "Volcanic plain town fortified with black slag bricks. Produces hardy crops and livestock.",
+            "sa:containedInLocation": "location:arrur",
+            "schema:containedInPlace": "location:arrur"
+        }
+    ]
 }

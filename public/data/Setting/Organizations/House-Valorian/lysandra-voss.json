@@ -2,40 +2,42 @@
   "@context": {
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-    "xsd": "http://www.w3.org/2001/XMLSchema#",
-    "sa": "https://stellararcana.org/",
     "schema": "https://schema.org/",
-    "label": "rdfs:label",
-    "description": "schema:description",
-    "type": "@type"
+    "sa": "https://stellararcana.org/",
+    "@vocab": "https://stellararcana.org/"
   },
-  "type": "Person",
-  "label": "Lysandra Voss",
-  "sa:identity": {
-    "label": "Security Chief",
-    "description": "House Valorian's armored response commander, responsible for estate defense, threat interdiction, discreet recoveries, and the quiet removal of problems before they become public embarrassments."
-  },
-  "schema:description": "Lysandra Voss is House Valorian's security chief and first response to any threat that cannot be solved with money, etiquette, or litigation. She wears full max-response armor adapted from elite estate security doctrine: layered composite plating, sealed life-support understructure, servo-assisted limbs, and a helmet suite capable of crowd control, hazard suppression, and target discrimination in smoke, panic, or orbital debris. Where House Valorian presents a polished face to the city, Lysandra is the reason that face stays unbroken. She secures vaults, escorts heirs, audits guard failures, and ensures inconvenient witnesses vanish into sealed records rather than public scandal.",
-  "sa:nature": {
-    "composition": "Full max-response armor in House Valorian colors: polished pale plating over black underlayers, reinforced pauldrons, sealed helm, and heavy servo articulation built for sustained violence and dignified presence. Every surface looks expensive, maintained, and deliberately intimidating.",
-    "presence": "She moves like a professional catastrophe—measured, quiet, and impossible to ignore. Staff lower their voices when she enters a room. Intruders usually stop moving before she finishes speaking.",
-    "essence": "A velvet-gloved shield over a knife. Lysandra protects House Valorian assets by making opposition look futile, costly, and legally regrettable."
-  },
-  "sa:mechanics": {
-    "method": "Lysandra runs layered security across high-value properties, transit routes, vault access, and family holdings. She prefers preventative control, then overwhelming force, then selective discretion.",
-    "response_protocols": "Can call in house guards, lockdown estate sectors, deny access to restricted zones, reroute evacuations, and coordinate with legal and financial teams to bury incidents under procedure.",
-    "operational_strength": "Specializes in anti-boarding defense, anti-raid response, witness containment, and extraction of protected Valorian personnel or assets. In a crisis she can turn an estate into a fortress within minutes.",
-    "soft_power": "Knows which threats should be crushed, which should be bought off, and which should be turned into examples. Her reports are often as dangerous as her weapons."
-  },
-  "sa:relationships": {
-    "house_valorian": "Trusted fixer and defense commander for the house's most sensitive holdings.",
-    "estate_council": "Respects them only when their decisions do not endanger security. Publicly deferential, privately contemptuous of avoidable risk.",
-    "heirs_and_patrons": "Protects them with ruthless efficiency, even when they mistake caution for servility.",
-    "external_threats": "Treats smugglers, corporate rivals, kidnappers, and political agitators as variations on the same problem: unauthorized access."
-  },
-  "sa:quotes": [
-    "You may leave with your dignity or your leverage. Choose quickly.",
-    "House Valorian does not bargain with breaches.",
-    "If the door is still standing, I was being polite."
+  "@graph": [
+    {
+      "@id": "sa:character/lysandra-voss",
+      "@type": "schema:Person",
+      "rdfs:label": "Lysandra Voss",
+      "sa:identity": {
+        "rdfs:label": "Security Chief",
+        "schema:description": "House Valorian's armored response commander, responsible for estate defense, threat interdiction, discreet recoveries, and the quiet removal of problems before they become public embarrassments."
+      },
+      "schema:description": "Lysandra Voss is House Valorian's security chief and first response to any threat that cannot be solved with money, etiquette, or litigation. She wears full max-response armor adapted from elite estate security doctrine: layered composite plating, sealed life-support understructure, servo-assisted limbs, and a helmet suite capable of crowd control, hazard suppression, and target discrimination in smoke, panic, or orbital debris. Where House Valorian presents a polished face to the city, Lysandra is the reason that face stays unbroken. She secures vaults, escorts heirs, audits guard failures, and ensures inconvenient witnesses vanish into sealed records rather than public scandal.",
+      "sa:nature": {
+        "composition": "Full max-response armor in House Valorian colors: polished pale plating over black underlayers, reinforced pauldrons, sealed helm, and heavy servo articulation built for sustained violence and dignified presence. Every surface looks expensive, maintained, and deliberately intimidating.",
+        "presence": "She moves like a professional catastrophe—measured, quiet, and impossible to ignore. Staff lower their voices when she enters a room. Intruders usually stop moving before she finishes speaking.",
+        "essence": "A velvet-gloved shield over a knife. Lysandra protects House Valorian assets by making opposition look futile, costly, and legally regrettable."
+      },
+      "sa:mechanics": {
+        "method": "Lysandra runs layered security across high-value properties, transit routes, vault access, and family holdings. She prefers preventative control, then overwhelming force, then selective discretion.",
+        "response_protocols": "Can call in house guards, lockdown estate sectors, deny access to restricted zones, reroute evacuations, and coordinate with legal and financial teams to bury incidents under procedure.",
+        "operational_strength": "Specializes in anti-boarding defense, anti-raid response, witness containment, and extraction of protected Valorian personnel or assets. In a crisis she can turn an estate into a fortress within minutes.",
+        "soft_power": "Knows which threats should be crushed, which should be bought off, and which should be turned into examples. Her reports are often as dangerous as her weapons."
+      },
+      "sa:relationships": {
+        "house_valorian": "Trusted fixer and defense commander for the house's most sensitive holdings.",
+        "estate_council": "Respects them only when their decisions do not endanger security. Publicly deferential, privately contemptuous of avoidable risk.",
+        "heirs_and_patrons": "Protects them with ruthless efficiency, even when they mistake caution for servility.",
+        "external_threats": "Treats smugglers, corporate rivals, kidnappers, and political agitators as variations on the same problem: unauthorized access."
+      },
+      "sa:quotes": [
+        "You may leave with your dignity or your leverage. Choose quickly.",
+        "House Valorian does not bargain with breaches.",
+        "If the door is still standing, I was being polite."
+      ]
+    }
   ]
 }
